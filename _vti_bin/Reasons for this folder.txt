@@ -1,0 +1,5 @@
+This folder and the 0 byte files within it, along with _vti_inf.html and MSOffice folder in the folder above this one, are 
+here to stop errors building up in the error log. Internet Explorer and some Microsoft Office 
+applications will request FrontPage extensions, regardless of whether it needs them or they are on the 
+server. This generates file could not be found errors. These dummy files elimanate those errors and keep 
+the logs clearer for real errors.

@@ -1,0 +1,323 @@
+2007-01-09 Tuesday 04:30  skodak
+
+	* filter.php: 
+	
+	MDL-8105 some more icon class fixes including new .iconhelp for
+	help and docs icon
+
+2007-01-09 Tuesday 03:34  skodak
+
+	* algebradebug.php: 
+	
+	MDL-7861 xhtml transient fixes for not closed input fields - I hope
+	all of them except imported libs are now fixed
+
+2007-01-05 Friday 07:38  skodak
+
+	* algebradebug.php: 
+	
+	MDL-7861 xhtml strict fixes - fixed all <br> in our code
+
+2006-11-26 Sunday 02:09  skodak
+
+	* filter.php: 
+	
+	MDL-7434 all images that convey information should have alt text to
+	convey that information - part 2
+
+2006-09-23 Saturday 17:38  skodak
+
+	* pix.php: 
+	
+	debugging and error reporting level fixes and improvements MDL-6671
+
+2006-09-19 Tuesday 12:31  toyomoyo
+
+	* filter.php: 
+	
+	took out a comment, for proper debugging use the new debugging()
+	function
+
+2006-09-18 Monday 21:26  moodler
+
+	* pix.php: 
+	
+	Fixed up some more debug statements
+
+2006-09-18 Monday 21:24  moodler
+
+	* pix.php: 
+	
+	Fixed a some debugging statements
+
+2006-09-08 Friday 16:46  toyomoyo
+
+	* filter.php: 
+	
+	adding capabilities
+
+2006-08-14 Monday 14:24  skodak
+
+	* algebradebug.php, pix.php: 
+	
+	prevent access to filters when disabled in filter settings SC#291;
+	merged from MOODLE_16_STABLE
+
+2006-08-14 Monday 14:22  skodak
+
+	* algebradebug.php, pix.php: 
+	
+	prevent access to filters when disabled in filter settings SC#291
+
+2006-06-30 Friday 21:46  skodak
+
+	* algebradebug.php: 
+	
+	slashargument fix for healthcenter, better diagnostic messages;
+	renamed file.php/pic.jpg option to file.php/1/pic.jpg because the
+	course number is mandatory; merged from MOODLE_16_STABLE
+
+2006-06-30 Friday 21:38  skodak
+
+	* algebradebug.php: 
+	
+	slashargument fix for healthcenter, better diagnostic messages;
+	renamed file.php/pic.jpg option to file.php/1/pic.jpg because the
+	course number is mandatory
+
+2005-06-25 Saturday 02:04  fiedorow
+
+	* filter.php, filter.php: 
+	
+	Compatibility fix for glossary
+
+2005-05-17 Tuesday 05:37  stronk7
+
+	* AlgParser.pm, algebradebug.php, filter.php: 
+	
+	Tabs are out
+
+2005-04-14 Thursday 21:39  fiedorow
+
+	* algebradebug.php: 
+	
+	Check slasharguments setting in algebradebug.php too
+
+2005-04-01 Friday 13:55  martinlanghoff
+
+	* filter.php: 
+	
+	Merged from MOODLE_14_STABLE - insert_record() - major efficiency
+	improvements for Postgres databases on insert. Also fixed many
+	calls to insert_record() which discard the returned record id to
+	not ask for the record id.
+
+2005-04-01 Friday 13:33  martinlanghoff
+
+	* filter.php: 
+	
+	insert_record() - major efficiency improvements for Postgres
+	databases on insert. Also fixed many calls to insert_record() which
+	discard the returned record id to not ask for the record id.
+
+2005-03-07 Monday 19:31  moodler
+
+	* pix.php: 
+	
+	Removed files/mimetype.php and put it into lib/filelib.php instead
+	where it always should have been.
+
+2005-02-14 Monday 01:04  fiedorow
+
+	* algebradebug.php: 
+	
+	Corrected file size message in debugger
+
+2005-02-11 Friday 06:19  fiedorow
+
+	* algebradebug.php, filter.php, pix.php: 
+	
+	various improvements: better debugging, image positioning, XHTML
+	validation
+
+2004-12-15 Wednesday 02:57  skodak
+
+	* pix.php: 
+	
+	new handling of uploaded files, please TEST, TEST, TEST
+
+2004-11-11 Thursday 15:03  moodler
+
+	* pix.php: 
+	
+	Merged from stable
+
+2004-11-04 Thursday 00:01  moodler
+
+	* pix.php: 
+	
+	Initialise some variables $cmd and $status  - thanks Petr
+
+2004-09-17 Friday 01:10  gustav_delius
+
+	* filter.php: 
+	
+	XHTML compliance - fixed (hopefully) all <img> tags - global
+	replace on <br> to <br /> - &amp; in URLs - got the forum module
+	XHTML compliant Julian Sedding
+
+2004-09-13 Monday 05:09  gustav_delius
+
+	* algebradebug.php, pix.php: 
+	
+	towards XHTML compliance
+
+2004-08-08 Sunday 14:57  moodler
+
+	* filter.php: 
+	
+	Improvement to filters, providing speed boost AND better
+	compatibility with Turck MMCache.
+	
+	Filter function must now have a particular name
+	
+	   eg resource_filter
+	
+	where "resource" is the name of the directory that filter.php is
+	in.
+
+2004-06-09 Wednesday 04:36  fiedorow
+
+	* algebradebug.php, filter.php: 
+	
+	Bug fix for Windows systems
+
+2004-04-26 Monday 23:20  fiedorow
+
+	* filter.php: 
+	
+	Commented out debugging code
+
+2004-04-05 Monday 10:46  fiedorow
+
+	* algebradebug.php: 
+	
+	Compatibility update for new mimetex version
+
+2004-03-31 Wednesday 01:11  fiedorow
+
+	* AlgParser.pm, algebradebug.php, filter.php: 
+	
+	Bug fix for incorrect handling of negatives in equations and
+	inequalities
+
+2004-03-29 Monday 06:35  fiedorow
+
+	* filter.php: 
+	
+	replaced js alert by popup
+
+2004-03-28 Sunday 02:33  fiedorow
+
+	* filter.php: 
+	
+	Expression image now links to TeX source or debug script
+
+2004-02-29 Sunday 22:24  fiedorow
+
+	* filter.php: 
+	
+	Remove nolink tags in glossaries
+
+2004-02-26 Thursday 11:25  fiedorow
+
+	* pix.php: 
+	
+	Bug fix: is_executable not available in Windows PHP 4.x
+
+2004-02-24 Tuesday 16:04  moodler
+
+	* pix.php: 
+	
+	Changed the logic around so that any binary called "mimetex" is
+	used in preference to any other pre-installed binary.
+	
+	This makes me happier about the FAT binary, because a leaner binary
+	can be installed without interfering with CVS etc.
+
+2004-02-24 Tuesday 02:48  fiedorow
+
+	* algebradebug.php: 
+	
+	Displays file permissions for mimetex and uses md5_file if
+	available
+
+2004-02-22 Sunday 07:34  fiedorow
+
+	* algebradebug.php, pix.php: 
+	
+	Fix for case when $CFG->dirroot contains spaces, especially for
+	Windows
+
+2004-02-21 Saturday 09:11  fiedorow
+
+	* AlgParser.pm: 
+	
+	Better way to eliminate superfluous parentheses in fractions
+
+2004-02-21 Saturday 03:24  fiedorow
+
+	* AlgParser.pm, algebradebug.php, filter.php: 
+	
+	Yip's additions for Greek letters and bug fixes
+
+2004-02-20 Friday 11:31  moodler
+
+	* pix.php: 
+	
+	Add some feedback and instructions for other platforms
+
+2004-02-20 Friday 11:12  moodler
+
+	* pix.php: 
+	
+	Added default platform
+
+2004-02-20 Friday 09:44  fiedorow
+
+	* algebradebug.php, filter.php, pix.php: 
+	
+	Improved debugging of mimetex
+
+2004-02-20 Friday 05:27  fiedorow
+
+	* algebradebug.php, filter.php: 
+	
+	Now strips outermost parentheses in denominators
+
+2004-02-20 Friday 02:03  fiedorow
+
+	* algebradebug.php, filter.php: 
+	
+	Added debugger for algebra filter
+
+2004-02-18 Wednesday 03:06  fiedorow
+
+	* filter.php: 
+	
+	Support for absolute value added
+
+2004-02-17 Tuesday 13:12  moodler
+
+	* algebra_filter.php, filter.php, mimetex.darwin, mimetex.exe,
+	mimetex.linux, pix.php: 
+	
+	Removed tex binaries and renamed main filter file
+
+2004-02-17 Tuesday 11:38  fiedorow
+
+	* AlgParser.pm, algebra2tex.pl, algebra_filter.php, mimetex.darwin,
+	mimetex.exe, mimetex.linux, pix.php: 
+	
+	Working version of algebra filter for Unix and Windows
+

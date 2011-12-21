@@ -1,0 +1,285 @@
+/*DEFAULT EASYVOTER SLIDE STYLE*/
+body{
+	height:100%;
+	background-color:#ffffff;
+	background-image:url(../images/default/background.gif);
+	background-repeat:repeat-y;
+	color:#000000;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+#quitpresentationaction,#closepreviewaction,#titleaction,#slidenameaction,#switchviewcontentaction,#switchviewresponsesaction,#slideplusheightaction,#slideminusheightaction{
+	float:right;
+	background-color:transparent;
+	color:#cccccc;
+	font-size:1em;
+	font-weight:bold;
+	cursor:pointer;
+}
+
+.plusminus,.close{
+	float:left;
+	width:34px;
+	height:34px;
+}
+
+#header{
+	text-align:center;
+}
+
+#title{
+	clear:both;
+	border-bottom:1px solid #cccccc;
+	background-color:transparent;
+	margin-top:10px;
+	margin-bottom:10px;
+	color:#737373;
+	font-size:2em;
+	overflow:auto;
+}
+
+#content{
+	width:99%;
+	height:100%;
+	border:0px none #ffffff;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	text-align:center;
+}
+
+#responses{
+	width:90%;
+	border:1px solid #cccccc;
+	border-bottom:0px none #ffffff;
+	margin:0px auto 0px auto;
+	background-color:#ffffff;
+	font-size:1.5em;
+	text-align:center;
+	overflow:auto;
+}
+
+#slidename{
+	width:90%;
+	border:1px solid #cccccc;
+	background-color:#dfdfdf;
+	background-image:url(../images/default/slidegradient.gif);
+	background-repeat:repeat-x;
+	margin:0px auto 0px auto;
+	color:#737373;
+	font-size:2em;
+	overflow:auto;
+}
+
+#slidecontent{
+	width:90%;
+	height:500px;
+	border:1px solid #cccccc;
+	border-top:0px none #ffffff;
+	margin:0px auto 0px auto;
+	background-color:#ffffff;
+	text-align:left;
+	overflow:auto;
+}
+
+#intro{
+	font-size:3em;
+}
+
+#footer{
+	position:absolute;
+	bottom:10px;
+	width:99%;
+	border:0px none #ffffff;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	text-align:center;
+}
+
+#navigation{
+	visibility:hidden;
+	border:1px solid #cccccc;
+	margin:10px auto 0px auto;
+	padding-top:10px;
+	background-color:#ffffff;
+	color:#737373;
+	font-size:2em;
+	overflow:hidden;
+}
+
+#slidenumbering{
+	position:absolute;
+	bottom:10px;
+	right:10px;
+	background-color:#ffffff;
+	font-size:1.5em;
+}
+
+.roundbutton{
+	float:left;
+	width:88px;
+	height:88px;
+	padding-top:15px;
+	background-color:#ffffff;
+	background-image:url(../images/default/round_button.gif);
+	background-repeat:no-repeat;
+	font-size:1.5em;
+	text-align:center;
+	cursor:pointer;
+}
+
+.squarebutton{
+	float:left;
+	width:155px;
+	height:71px;
+	padding-top:15px;
+	margin:0px 8px 0px 8px;/* should be margin:0px 10px 0px 10px; but 1px left either side for IE6*/
+	background-color:#ffffff;
+	background-image:url(../images/default/square_button.gif);
+	background-repeat:no-repeat;
+	font-size:1em;
+	text-align:center;
+	cursor:pointer;
+}
+
+.largesquarebutton,.infosquarebutton{
+	float:left;
+	width:340px;
+	height:71px;
+	padding-top:15px;
+	margin:0px 5px 0px 5px;
+	background-color:#ffffff;
+	background-image:url(../images/default/large_square_button.gif);
+	background-repeat:no-repeat;
+	font-size:1em;
+	text-align:center;
+}
+
+.infosquarebutton{
+	cursor:pointer;
+}
+
+.inputbutton{
+	cursor:pointer;
+}
+
+.greentext{
+	color:#48c223;
+}
+
+.bluetext{
+	color:#7481a3;
+}
+
+.redtext{
+	color:#a95151;
+}
+
+.yellowtext{
+	color:#b7b777;
+}
+
+#responsetable{
+	clear:both;
+	border:1px solid #cccccc;
+	margin:5px auto 5px auto;
+}
+
+#responsegraph{
+	border:1px solid #cccccc;
+	margin:10px auto 10px auto;
+	height:300px;
+	text-align:left;
+	vertical-align:bottom;;
+}
+
+#graphbottom{
+	bottom:0px;
+	margin-bottom:10px;
+}
+
+.bar0,.bar1,.bar2,.bar3,.graphtext{
+	width:100px;
+	border:1px solid #cccccc;
+	margin:5px 10px 5px 10px;
+	font-size:small;
+	text-align:center;
+}
+
+.bar0{
+	background-color:#48c223;
+}
+
+.bar1{
+	background-color:#7481a3;
+}
+
+.bar2{
+	background-color:#a95151;
+}
+
+.bar3{
+	background-color:#b7b777;
+}
+
+.graphtext{
+	float:left;
+}
+
+.thheading{
+	background-color:#dfdfdf;
+	background-image:url(../images/default/slidegradient.gif);
+	background-repeat:repeat-x;
+	color:#737373;
+}
+
+.trlight{
+	background-color:#ffffff;
+}
+
+.trdark{
+	background-color:#f0f0f0;
+}
+
+/*CSS FOR OPTIONS*/
+
+#optionstitle{
+	width:90%;
+	border:1px solid #cccccc;
+	background-color:#dfdfdf;
+	margin:0px auto 0px auto;
+	background-image:url(../images/default/slidegradient.gif);
+	background-repeat:repeat-x;
+	color:#737373;
+	font-size:2em;
+	overflow:auto;
+}
+
+#optionscontent{
+	width:90%;
+	border:1px solid #cccccc;
+	border-top:0px none #ffffff;
+	margin:0px auto 0px auto;
+	background-color:#ffffff;
+}
+
+fieldset{
+	border:0px none #ffffff;
+	margin:20px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+}
+
+legend{
+	display:none;
+}
+
+label{
+	font-size:1.5em;
+}
+
+select{
+	margin:0px 0px 10px 0px;
+}
+
+.error{
+	font-size:1.5em;
+}

@@ -1,0 +1,2824 @@
+2007-01-22 Monday 07:49  stronk7
+
+	* version.php, db/install.xml, db/upgrade.php: 
+	
+	Convert DB lang fields to 30cc. Part of MDL-7157
+
+2007-01-19 Friday 18:29  skodak
+
+	* gui_header_js/chatinput.php: 
+	
+	MDL-8223 - last global $course hacks removed
+
+2007-01-15 Monday 02:58  stronk7
+
+	* db/: mysql.sql, postgres7.sql: 
+	
+	Deleting deprecated .sql files. MDL-7264 Byeeez!
+
+2007-01-14 Sunday 04:13  stronk7
+
+	* config.html: 
+	
+	Now all the modules global config pages are valid XML. Related to
+	MDL-7861
+
+2007-01-12 Friday 03:47  skodak
+
+	* mod_form.php: 
+	
+	fixed text field widths in new forms
+
+2007-01-11 Thursday 16:06  moodler
+
+	* view.php: 
+	
+	FIxed up the intro boxes  XHTML Strict
+
+2007-01-09 Tuesday 12:50  toyomoyo
+
+	* lib.php, report.php: 
+	
+	MDL-7861, chat realated xhtml strict fixes, changed stlye in
+	notice_yesno
+
+2007-01-05 Friday 12:51  jamiesensei
+
+	* mod_form.php: 
+	
+	added helpbuttons to htmleditors where needed. Further work on
+	htmleditor helpbutton code.
+
+2007-01-05 Friday 05:39  skodak
+
+	* view.php: 
+	
+	fixed potential problems with undefined $USER->screenreader
+
+2007-01-05 Friday 05:32  skodak
+
+	* config.html, gui_header_js/chatinput.php: 
+	
+	MDL-8062 1.3 Remove name attribute from <form> and fix focus
+	everywhere - more changes ahead
+
+2007-01-05 Friday 02:24  skodak
+
+	* pagelib.php: 
+	
+	MDL-8050 1.2 Remove all target="_top" - refactoring of previous
+	commit
+
+2007-01-04 Thursday 09:13  toyomoyo
+
+	* view.php: 
+	
+	users with screenreader flag set should only see 1 link to manual
+	refresh chat rooms
+
+2007-01-04 Thursday 04:35  skodak
+
+	* gui_basic/index.php: 
+	
+	MDL-8062 chat, login page and messaging - removed name attribute
+	from some <form>s and fixed focus; changed set_focus() JS to accept
+	element ID == the $focus parameter in print_header() + other minor
+	Strict XHTML fixes
+
+2007-01-04 Thursday 03:33  skodak
+
+	* lib.php: 
+	
+	MDL-8049 Remove all language=Javascript from javascript includes
+
+2007-01-04 Thursday 03:24  skodak
+
+	* pagelib.php: 
+	
+	MDL-8050 1.2 Remove all target="_top"
+
+2007-01-03 Wednesday 22:44  moodler
+
+	* chatd.php, gui_header_js/chatinput.php, gui_header_js/insert.php,
+	gui_header_js/jsupdated.php, gui_header_js/users.php: 
+	
+	Bend over for XHTML 1.0 Strict ...  MDL-8049
+	
+	Removed Javascript language attribute tags and added CDATA
+
+2007-01-03 Wednesday 12:55  moodler
+
+	* gui_header_js/index.php, gui_sockets/index.php: 
+	
+	Checking in Nick Freear's changes and evolution of Julette White's
+	code with a few modifications made to the install process) for
+	further work in HEAD.
+	
+	See MDL-7380 for details.
+
+2007-01-01 Monday 21:26  skodak
+
+	* gui_header_js/: jsupdate.php, jsupdated.php: 
+	
+	MDL-8028 Add separate addslashes_js function for javascript quoting
+
+2006-12-31 Sunday 05:10  skodak
+
+	* lib.php: 
+	
+	MDL-8029 obsoleted ob_end_clean() emulation removed from chat
+
+2006-12-31 Sunday 03:45  skodak
+
+	* lib.php, view.php, gui_basic/index.php: 
+	
+	MDL-8022 Chat accessibility - new gui_basic should integrated and
+	fully working now + improved print_user_picture() to allow images
+	with empty alt to prevent repetitive reading of usernames in jaws
+	when username is printed next to avatar
+
+2006-12-30 Saturday 02:33  skodak
+
+	* lib.php, gui_basic/index.php, gui_header_js/insert.php: 
+	
+	MDL-8022 chat accessiblity - new gui_basic that can be used as
+	fallback or accessible option to gui_header_js - it is not
+	compatible with chat daemon - todo: CSS styling, beeping, JS
+	fallback code in view.php and noframes fallback in gui_header_js -
+	minor changes in messaging language strings - minor coding style
+	improvements
+
+2006-12-28 Thursday 17:32  jamiesensei
+
+	* mod_form.php: 
+	
+	changes to how we generate the id attribute of forms and the naming
+	convention of forms migrate blog edit to formslib
+
+2006-12-22 Friday 13:42  moodler
+
+	* view.php, gui_header_js/chatinput.php, gui_header_js/chatmsg.php,
+	gui_header_js/insert.php, gui_header_js/jsupdate.php,
+	gui_header_js/jsupdated.php, gui_header_js/users.php: 
+	
+	Fixed lots of XHTML errors but still not working correctly in
+	Strict
+
+2006-12-22 Friday 13:01  moodler
+
+	* lib.php: 
+	
+	Added CDATA to Javascript
+
+2006-12-21 Thursday 20:18  nfreear
+
+	* gui_sockets/index.php, gui_header_js/index.php: 
+	
+	Integration 3 - groups in core, modules, calendar... (Part of
+	MDL-7380, new groups)
+
+2006-12-19 Tuesday 15:03  jamiesensei
+
+	* mod_form.php: 
+	
+	
+	* Added setAdvanced functionality see
+	http://docs.moodle.org/en/Development:lib/formslib.php_setAdvanced
+	* Added MoodleQuickForm method closeHeaderBefore($elementName);
+	http://docs.moodle.org/en/Development:lib/formslib.php_Form_Definit
+	ion#Use_Fieldsets_to_group_Form_Elements * Added moodleform method
+	add_action_buttons(); see
+	http://docs.moodle.org/en/Development:lib/formslib.php_Form_Definit
+	ion#add_action_buttons.28.24cancel_.3D_true.2C_.24revert_.3D_true.2
+	C_.24submitlabel.3Dnull.29.3B * is_cancelled method added to
+	moodleform
+	http://docs.moodle.org/en/Development:lib/formslib.php_Usage#Basic_
+	Usage_in_A_Normal_Page * added hidden labels to elements within
+	groups such as the date_selector select boxes and other elements in
+	'groups' * quiz/mod.html migrated to formslib * glossary/edit.html
+	migrated to formslib * extended registerNoSubmitButton()
+	functionality to automatically add js to onclick to bypass client
+	side js input validation.  * added no_submit_button_pressed()
+	function that can be used in a similar way to is_cancelled() as a
+	test in the main script to see if some button in the page has been
+	pressed that is a submit button that is used for some dynamic
+	functionality within the form and not to submit the data for the
+	whole form.  * added new condition for disabledIf which allows to
+	disable another form element if no options are selected from within
+	a select element.  * added default 'action' for moodleform  -
+	strip_querystring(qualified_me())
+	http://docs.moodle.org/en/Development:lib/formslib.php_Usage#Basic_
+	Usage_in_A_Normal_Page
+
+2006-12-18 Monday 09:56  toyomoyo
+
+	* gui_header_js/: chatinput.php, users.php: 
+	
+	fixing broken xhtml
+
+2006-12-14 Thursday 20:44  jamiesensei
+
+	* mod_form.php: 
+	
+	added setAdvanced MoodleQuickForm method. And added
+	closeHeaderAfter method
+
+2006-12-05 Tuesday 19:58  jamiesensei
+
+	* mod_form.php: 
+	
+	changed name of reset element in form from 'reset' to 'resetbutton'
+	so that the element name doesn't conflict with js form method
+	reset.
+
+2006-12-04 Monday 17:36  jamiesensei
+
+	* mod_form.php: 
+	
+	added new 'cancel' element type and introduced new is_cancelled()
+	MoodleQuickForm method.  also used new cancel button in all
+	mod_forms as well as a 'Revert' button and reworked logic about
+	where to go on cancel or after submission for modedit.php
+
+2006-11-25 Saturday 00:38  jamiesensei
+
+	* mod_form.php: 
+	
+	changed name of submit buttons to submitbutton instead of sumbit as
+	submit was conflicting with method form.submit()
+
+2006-11-24 Friday 14:39  jamiesensei
+
+	* mod_form.php: 
+	
+	some restructuring of formslib - moving moodleform_mod definition
+	to new file course\moodleform_mod.php and some changes to
+	moodleform_mod standard elements setup and moodleform disabledIf
+	API
+
+2006-11-24 Friday 12:19  toyomoyo
+
+	* gui_header_js/chatinput.php: 
+	
+	merged fix for MDL-7448, added enableForm() call to prevent chat
+	lock up
+
+2006-11-24 Friday 12:17  moodler
+
+	* gui_header_js/chatinput.php: 
+	
+	fix for MDL-7448, added enableForm() call to prevent chat lock up.
+	Thanks Kok Chee Kean!
+
+2006-11-12 Sunday 01:23  skodak
+
+	* gui_sockets/index.php, gui_header_js/index.php,
+	gui_header_js/jsupdate.php, gui_header_js/jsupdated.php: 
+	
+	we are going 100% unicode now - removed use of $CFG->unicodedb and
+	current_charset(); MDL-7439 - part 2, only hotpot and wiki left
+
+2006-11-10 Friday 02:25  jamiesensei
+
+	* lib.php, mod.html, mod_form.php: 
+	
+	add code to redirect to modedit.php from course/mod.php for
+	activities adding / updating using new formslib migrated
+	chat/mod.html to formslib definition of form is in
+	chat/mod_form.php
+
+2006-11-09 Thursday 15:21  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	drop utf8 support from HEAD MDL-6332
+
+2006-11-01 Wednesday 05:07  skodak
+
+	* lib.php, report.php, gui_header_js/insert.php: 
+	
+	fixed capabilities in chat recent activity, removed broken
+	optimization from message insert, fixed closing of box MDL-7313;
+	merged from MOODLE_17_STABLE
+
+2006-11-01 Wednesday 05:05  skodak
+
+	* lib.php, report.php, gui_header_js/insert.php: 
+	
+	fixed capabilities in chat recent activity, removed broken
+	optimization from message insert, fixed closing of box MDL-7313
+
+2006-10-27 Friday 06:46  stronk7
+
+	* db/postgres7.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+	
+	Merged from MOODLE_17_STABLE
+
+2006-10-27 Friday 06:39  stronk7
+
+	* db/mysql.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+	
+	Merged from MOODLE_17_STABLE
+
+2006-10-27 Friday 06:29  stronk7
+
+	* db/postgres7.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+
+2006-10-27 Friday 06:25  stronk7
+
+	* db/mysql.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+
+2006-10-27 Friday 04:08  skodak
+
+	* restorelib.php: 
+	
+	fixed whitespace merge
+
+2006-10-27 Friday 01:43  stronk7
+
+	* db/upgrade.php: 
+	
+	New upgrade.php file added for this module. MDL-7214
+	
+	Merged from HEAD
+
+2006-10-27 Friday 01:33  stronk7
+
+	* db/upgrade.php: 
+	
+	file upgrade.php was added on branch MOODLE_17_STABLE on 2006-10-26
+	17:43:05 +0000
+
+2006-10-27 Friday 01:33  stronk7
+
+	* db/upgrade.php: 
+	
+	New upgrade.php file added for this module. MDL-7214
+
+2006-10-25 Wednesday 16:51  moodler
+
+	* lib.php: 
+	
+	Merged fixes for AS keywords   MDL-7207
+
+2006-10-25 Wednesday 16:50  moodler
+
+	* lib.php: 
+	
+	Removed use of table as xxx   MDL-7207
+
+2006-10-25 Wednesday 06:00  stronk7
+
+	* lib.php: 
+	
+	DeLIMITing Moodle core. Now the new $limitfrom, $limitnum
+	parameters are used instead. MDL-7168
+	
+	Merged from MOODLE_17_STABLE
+
+2006-10-25 Wednesday 05:55  stronk7
+
+	* lib.php: 
+	
+	DeLIMITing Moodle core. Now the new $limitfrom, $limitnum
+	parameters are used instead. MDL-7168
+
+2006-10-22 Sunday 02:28  stronk7
+
+	* db/: oci8po.php, oci8po.sql, oci8po.php, oci8po.sql: 
+	
+	Deleting some old oci8po files from CVS.
+
+2006-10-17 Tuesday 18:05  thompson697
+
+	* restorelib.php: 
+	
+	Apply modularity to the creation of the log file during restore to
+	a new course.  Remove the responsibility for loging the application
+	of the course start date offset, from activity modules to the
+	backup module.	Merged from stable branch
+
+2006-10-17 Tuesday 15:24  vyshane
+
+	* restorelib.php: 
+	
+	Fix for MDL-6363
+
+2006-10-17 Tuesday 15:19  vyshane
+
+	* restorelib.php: 
+	
+	Merged from 1.6. Fixes for MDL-6363
+
+2006-10-17 Tuesday 15:16  vyshane
+
+	* restorelib.php: 
+	
+	Fixes for MDL-6363
+
+2006-10-16 Monday 18:40  thompson697
+
+	* restorelib.php: 
+	
+	Apply modularity to the creation of the log file during restore to
+	a new course.  Remove the responsibility for loging the application
+	of the course start date offset, from activity modules to the
+	backup module.
+
+2006-10-11 Wednesday 14:21  moodler
+
+	* db/access.php: 
+	
+	Merged fixes for MDL-6907 from stable
+
+2006-10-11 Wednesday 14:16  moodler
+
+	* db/access.php: 
+	
+	All the PREVENTS from the legacy roles have been removed (and thus
+	are treated as INHERIT by default).
+	
+	See MDL-6907 for details.
+
+2006-10-04 Wednesday 22:50  thompson697
+
+	* restorelib.php: 
+	
+	Change creation of restorelog file location to protected backupdata
+	folder.  Reassign style and language links
+
+2006-10-04 Wednesday 20:59  moodler
+
+	* gui_header_js/insert.php: 
+	
+	Merged fixes from HEAD, bug MDL-6791
+
+2006-10-04 Wednesday 20:58  moodler
+
+	* gui_header_js/insert.php: 
+	
+	Committed a fix for streaming chat from Dan Polawski, MDL-6791
+	
+	Seems to help!
+
+2006-09-21 Thursday 05:00  skodak
+
+	* db/access.php: 
+	
+	major whitespace cleanup - fixed trailng whitespace in new files
+	and admin area
+
+2006-09-21 Thursday 03:46  skodak
+
+	* gui_header_js/chatmsg.php, db/oci8po.sql,
+	gui_sockets/chatinput.php: 
+	
+	major whitespace cleanup - fixed \r\n line-ending
+
+2006-09-19 Tuesday 05:32  skodak
+
+	* version.php, db/access.php: 
+	
+	added capabilty risks into access.php and GUI for define role and
+	override; minor fixes for capability types in forum
+
+2006-09-18 Monday 17:13  moodler
+
+	* restorelib.php: 
+	
+	FIxed to use the new debugging function
+
+2006-09-13 Wednesday 21:19  thompson697
+
+	* restorelib.php: 
+	
+	Complete work on Roll Forwards - Restore from previous semester
+	(MDL-5532) * Add fields to restore form to enable changes to Short
+	Name, Full Name and Start Date * Start Date offset added to Restore
+	process * Created Restorelog file in Course files area * Activity
+	Modules use offset to change dates * Activity Modules write changes
+	to Restorelog
+
+2006-09-12 Tuesday 16:22  moodler
+
+	* version.php: 
+	
+	Small bump for guest role fix
+
+2006-09-12 Tuesday 15:10  moodler
+
+	* version.php: 
+	
+	Reload the guest role using new defaults
+
+2006-09-12 Tuesday 13:58  moodler
+
+	* db/access.php: 
+	
+	Changed some default permissions for the guest role
+
+2006-09-11 Monday 16:56  toyomoyo
+
+	* lib.php: 
+	
+	adding capabilities
+
+2006-08-29 Tuesday 16:43  toyomoyo
+
+	* gui_header_js/index.php, gui_sockets/index.php: 
+	
+	adding some capabilities
+
+2006-08-14 Monday 13:55  moodler
+
+	* lib.php, report.php, view.php, gui_header_js/index.php: 
+	
+	SWEEPING CLEANUP
+	
+	The API was changed slightly so that has_capability now takes the
+	whole $context object (we almost always have it anyway)
+	
+	The $kill thing was removed.   If you want to assert a capability
+	then use:
+	
+	    require_capability('capname', $context);
+	
+	with optional variables to modify the error message
+	
+	Misc bugs here and there also removed and code tidied
+
+2006-08-10 Thursday 23:51  skodak
+
+	* report.php, version.php, view.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283; backported from HEAD
+
+2006-08-10 Thursday 23:31  skodak
+
+	* version.php, view.php, report.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283; backported from HEAD
+
+2006-08-09 Wednesday 21:45  moodler
+
+	* lib.php, report.php, view.php, gui_header_js/index.php: 
+	
+	Removed tabs
+
+2006-08-09 Wednesday 06:09  skodak
+
+	* report.php, version.php, view.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283
+
+2006-08-09 Wednesday 00:59  stronk7
+
+	* db/install.xml: 
+	
+	Initial XMLDB schema for chat tables. Using FKs where they are
+	obvious.
+
+2006-08-08 Tuesday 13:13  moodler
+
+	* lib.php, report.php, version.php, view.php, db/access.php,
+	gui_header_js/index.php: 
+	
+	ROLES AND PERMISSIONS  - FIRST CHECK-IN
+	=======================================
+	
+	WARNING:  DEV IS CURRENTLY VERY UNSTABLE.
+	
+	This is a mega-checkin of the new Roles system.   A lot of changes
+	have been made in core and modules.
+	
+	Currently there are a lot of rough edges and known problems.  We
+	are working hard on these .. .the reason for getting this into HEAD
+	at this stage is enable us to move faster (our branch was diverging
+	from HEAD too much).
+	
+	Please keep an eye on http://docs.moodle.org/en/Roles for current
+	status and information for developers on how to use the new Roles
+	system.
+
+2006-08-04 Friday 13:51  vyshane
+
+	* db/access.php: 
+	
+	Renamed legacyroles to legacy
+
+2006-08-01 Tuesday 15:34  vyshane
+
+	* db/access.php: 
+	
+	Capability definitions for the chat module.
+
+2006-08-01 Tuesday 15:34  vyshane
+
+	* db/access.php: 
+	
+	file access.php was initially added on branch MOODLE_17_ROLES.
+
+2006-07-30 Sunday 18:39  skodak
+
+	* lib.php: 
+	
+	Bug #6176 - locale setting on config variables page not functioning
+	correctly; merged from MOODLE_16_STABLE
+
+2006-07-30 Sunday 18:30  skodak
+
+	* lib.php: 
+	
+	Bug #6176 - locale setting on config variables page not functioning
+	correctly
+
+2006-07-12 Wednesday 10:29  martinlanghoff
+
+	* gui_header_js/: chatinput.php, insert.php: 
+	
+	chat: Prevent user from submitting a 2nd message before his 1st is
+	received.
+	
+	Some users reported that mod/chat was silently dropping some
+	messages. The user's browser may not be able to keep up with the
+	rate at which he submits chat messages. This update keeps things
+	sane.
+	
+	Merged from MOODLE_16_STABLE
+	
+	Author: Donal McMullan <donal@catalyst.net.nz>
+
+2006-07-12 Wednesday 10:28  martinlanghoff
+
+	* gui_header_js/: chatinput.php, insert.php: 
+	
+	chat: Prevent user from submitting a 2nd message before his 1st is
+	received.
+	
+	Some users reported that mod/chat was silently dropping some
+	messages. The user's browser may not be able to keep up with the
+	rate at which he submits chat messages. This update keeps things
+	sane.
+	
+	Author: Donal McMullan <donal@catalyst.net.nz>
+
+2006-07-12 Wednesday 02:24  vyshane
+
+	* lib.php, report.php, view.php: 
+	
+	Updated capability names
+
+2006-07-12 Wednesday 02:21  vyshane
+
+	* gui_header_js/index.php: 
+	
+	Updated capability name
+
+2006-06-30 Friday 16:48  toyomoyo
+
+	* view.php: 
+	
+	more changes
+
+2006-06-27 Tuesday 16:08  toyomoyo
+
+	* lib.php, report.php, view.php, gui_header_js/index.php: 
+	
+	chat module capabilities update
+
+2006-06-09 Friday 18:04  stronk7
+
+	* lib.php: 
+	
+	Moving from lastIP to lastip everywhere. Bug 5763. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=5763)
+	
+	Merged from MOODLE_16_STABLE
+
+2006-06-09 Friday 18:00  stronk7
+
+	* lib.php: 
+	
+	Moving from lastIP to lastip everywhere. Bug 5763. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=5763)
+
+2006-05-16 Tuesday 05:36  skodak
+
+	* view.php: 
+	
+	fixed problem when set both loginhttps and https in wwwroot, closes
+	bug #5507 and #3848; merged from MOODLE_16_STABLE
+
+2006-05-16 Tuesday 05:32  skodak
+
+	* view.php: 
+	
+	fixed problem when set both loginhttps and https in wwwroot, closes
+	bug #5507 and #3848
+
+2006-05-02 Tuesday 13:20  martinlanghoff
+
+	* lib.php: 
+	
+	mod/chat - fix another instance where empty $USER->lastIP was
+	affecting us
+	
+	The original commit was:
+	
+	mod/chat - use empty value instead of erroring out if $USER->lastIP
+	and getremoteaddr() don't yield any interesting value
+	
+	Sometimes we can't get any useful IP for the user -- and this may
+	even be a valid situation. So fudge an empty value -- the DB needs
+	it as the IP field is NOT NULL.
+
+2006-04-24 Monday 16:43  vyshane
+
+	* db/: mysql.php, oci8po.sql, postgres7.php: 
+	
+	Inserts for log_display.
+
+2006-04-24 Monday 16:00  toyomoyo
+
+	* db/postgres7.sql: 
+	
+	new format for log_display
+
+2006-04-24 Monday 15:58  toyomoyo
+
+	* db/mysql.sql: 
+	
+	changing new format for log_display
+
+2006-04-24 Monday 04:58  skodak
+
+	* view.php: 
+	
+	block editing now uses PARAM_BOOL
+
+2006-04-21 Friday 06:40  martinlanghoff
+
+	* gui_header_js/jsupdate.php: 
+	
+	Backported from HEAD: Skodak's short tag fixes.
+
+2006-04-20 Thursday 05:22  martinlanghoff
+
+	* lib.php: 
+	
+	mod/chat - use empty value instead of erroring out if $USER->lastIP
+	and getremoteaddr() don't yield any interesting value
+	
+	Sometimes we can't get any useful IP for the user -- and this may
+	even be a valid situation. So fudge an empty value -- the DB needs
+	it as the IP field is NOT NULL.
+
+2006-04-19 Wednesday 10:20  martinlanghoff
+
+	* config.html, lib.php, gui_header_js/index.php,
+	gui_header_js/jsupdated.php: 
+	
+	mod/chat: Normal method - introducing "Stream" updates.
+	
+	This is an alternative version of jsupdate.php that acts as a
+	long-running daemon. It will feed/stall/feed JS updates to the
+	client. From the module configuration select "Stream" updates.
+	
+	The client connection is not forever though. Once we reach
+	CHAT_MAX_CLIENT_UPDATES (currently 1000), it will force the client
+	to re-fetch it.
+	
+	This buys us all the benefits that chatd has, minus the setup, as
+	we are using apache to do the daemon handling.
+	
+	Chat still defaults to the normal update method, which is now
+	optimised to take advantage of keepalives -- so this change is
+	safe. The instructions in the config page also indicate that this
+	mode may not be well supported everywhere. It hasn't been tested on
+	IIS for starters.
+	
+	In terms of relative cost -- if each hit on jsupdate.php incurs on
+	~20 db queries and delivers one update to the client, each hit on
+	jsupdate takes ~20 queries, and then roughly 2~3 queries to serve
+	each of the next 1000 updates. On busy sites, the difference is
+	huge.
+	
+	There is still room for enhancements in both keepalive and stream
+	update methods. I am pretty sure we can trim DB queries more.
+
+2006-04-19 Wednesday 06:40  martinlanghoff
+
+	* lib.php: 
+	
+	mod/chat - cope with missing $USER->lastIP
+	
+	$USER->lastIP is sometimes not set properly during login, fetch it
+	if we can or error out clearly -- we won't be able to login the
+	user to the chat if we don't have an IP address to match him/her
+	against.
+
+2006-04-18 Tuesday 15:28  moodler
+
+	* lib.php: 
+	
+	A little HTML hint since styles are not working here for me somehow
+
+2006-04-18 Tuesday 15:14  moodler
+
+	* lib.php, report.php: 
+	
+	More efficient chat listings (less database calling)
+
+2006-04-18 Tuesday 05:06  martinlanghoff
+
+	* gui_header_js/jsupdate.php: 
+	
+	mod/chat: Normal method -- collate 2 SELECTs into one
+	
+	We really don't need to ask about the user table _twice_ here. Just
+	ask for the right fields, and done.
+
+2006-04-18 Tuesday 05:05  martinlanghoff
+
+	* gui_header_js/: jsupdate.php, users.php: 
+	
+	mod/chat: Normal method -- faster, lighter DB updates
+	
+	Use set_field() keyed on PK instead of update_record() or
+	set_field() keyed on non-PKs.
+
+2006-04-18 Tuesday 05:05  martinlanghoff
+
+	* gui_header_js/users.php: 
+	
+	mod/chat - Normal method - users pane only uses keepalive when
+	refreshing fast
+	
+	To avoid wasting server resources, user's pane now only uses
+	keepalive when the refresh is lower than apache's timeout.
+
+2006-04-18 Tuesday 05:04  martinlanghoff
+
+	* gui_header_js/users.php: 
+	
+	mod/chat - Normal method now supports HTTP Keep-Alive - users pane
+	
+	User's pane now also uses keepalives -- if the refresh freq is
+	below the disconnect timeout, then it is a win. Otherwise it wastes
+	memory at the server end.
+
+2006-04-18 Tuesday 05:04  martinlanghoff
+
+	* gui_header_js/jsupdate.php: 
+	
+	mod/chat - Normal method now support HTTP Keep-Alive
+	
+	By using output buffering, we now support HTTP Keep-Alive, which
+	means that each client gets tightly bound to a single apache child
+	- this means that we get
+	
+	 + lower resource usage on the webserver
+	 + _much_ lower resource usage on webserver and dbserver if
+	pconnects are used
+	 + a good case for further caching (memcache/mmcache)
+	
+	Using ab via localhost or fast LAN using keepalives is actually
+	slower from the client perspective -- still lighter on the server.
+	Via slower links (DSL/modem) the responses are faster.
+
+2006-04-18 Tuesday 05:03  martinlanghoff
+
+	* gui_header_js/: chatinput.php, insert.php, jsupdate.php: 
+	
+	mod/chat: make http-chat more database friendly and change msg
+	insertion to use POST
+	
+	+ we are now more conservative in the fields it asks from the db +
+	also more conservative with upates to chat_users + messages are now
+	added via POST requests instead of GET
+
+2006-04-17 Monday 00:03  moodler
+
+	* gui_header_js/jsupdate.php: 
+	
+	Character set fix for bug 5010
+
+2006-04-17 Monday 00:01  moodler
+
+	* gui_header_js/jsupdate.php: 
+	
+	Fix for chat character sets   bug 5010
+
+2006-04-12 Wednesday 00:13  stronk7
+
+	* restorelib.php: 
+	
+	htmlentities() to s()
+
+2006-03-29 Wednesday 07:31  stronk7
+
+	* restorelib.php: 
+	
+	Typo.
+
+2006-03-24 Friday 22:44  moodler
+
+	* lib.php: 
+	
+	Fixed a typo
+
+2006-03-15 Wednesday 12:01  moodler
+
+	* lib.php: 
+	
+	iFIx up some styles for the MyMoodle overview
+
+2006-03-15 Wednesday 06:28  patrickslee
+
+	* lib.php: 
+	
+	Chat module support for my moodle page
+
+2006-03-10 Friday 11:43  patrickslee
+
+	* db/migrate2utf8.php: 
+	
+	UTF8 migration - now supporting PostgreSQL
+
+2006-03-08 Wednesday 05:46  skodak
+
+	* gui_header_js/jsupdate.php: 
+	
+	short php tags once more
+
+2006-03-08 Wednesday 05:35  skodak
+
+	* db/migrate2utf8.php: 
+	
+	short php tags
+
+2006-02-24 Friday 16:13  toyomoyo
+
+	* db/migrate2utf8.php: 
+	
+	see changes for admin/utfdbmigrate.php
+
+2006-02-23 Thursday 11:16  toyomoyo
+
+	* lib.php: 
+	
+	case sensitive IP
+
+2006-01-31 Tuesday 10:07  moodler
+
+	* db/migrate2utf8.php: 
+	
+	changed to use utfconvert function
+
+2006-01-17 Tuesday 15:19  moodler
+
+	* db/mysql.sql: 
+	
+	Added default values where needed for columns in the MySQL creation
+	script mysql.sql.  Added default values to migrate2utf8.xml, for
+	any varchar and text field types, if the default values for these
+	fields were not defined as '' in the MySQL table creation script.
+	
+	Committed by vyshane
+
+2006-01-16 Monday 05:09  mjollnir_
+
+	* restorelib.php: 
+	
+	Abstracted a bit of the restore procedure to allow for silent
+	restoring.  Added new function, import_backup_file_silently Changed
+	everything that prints stuff to check for a constant first. 
+	Backup_flush checks a different constant, this is so that output
+	can still get flushed to the browser when necessary but not print
+	<li>s everywhere.  Please test this!
+
+2006-01-13 Friday 11:45  mjollnir_
+
+	* backuplib.php, restorelib.php: 
+	
+	Granular backup & restore: This patch allows the much requested
+	selection of individual instances of modules within a course to
+	backup and restore.  It needs A LOT of testing and probably some
+	prettyifying too.
+
+2006-01-13 Friday 11:09  mjollnir_
+
+	* lib.php: 
+	
+	Fixing up a problem in chat login - ip address is lastip not lastIP
+	- member variables are case sensitive
+
+2006-01-12 Thursday 10:35  toyomoyo
+
+	* db/migrate2utf8.xml: 
+	
+	some bug fixes
+
+2006-01-11 Wednesday 09:46  toyomoyo
+
+	* db/migrate2utf8.php: 
+	
+	added 2 fields in xml, addindex and dropindex, and bug fixes
+
+2006-01-09 Monday 14:06  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	utf8 migration support scripts
+
+2006-01-06 Friday 00:31  stronk7
+
+	* gui_header_js/index.php, gui_header_js/jsupdate.php,
+	gui_sockets/index.php: 
+	
+	And chat is using current_charset() too.
+	
+	Merged from MOODLE_16_UTF8. Abandoning the branch.
+
+2005-12-14 Wednesday 12:15  patrickslee
+
+	* lib.php: 
+	
+	Merged with MOODLE_16_MULTIENROL_MP1
+
+2005-12-11 Sunday 08:27  stronk7
+
+	* gui_header_js/index.php, gui_header_js/jsupdate.php,
+	gui_sockets/index.php: 
+	
+	And chat is using current_charset() too.
+
+2005-10-25 Tuesday 09:56  defacer
+
+	* lib.php: 
+	
+	
+	Merging from HEAD:
+	
+	A slight improvement for my last edit, which could trigger a small
+	bug.
+	
+	I should go out and drink more often, it helps debugging! ;-)
+
+2005-10-25 Tuesday 09:55  defacer
+
+	* lib.php: 
+	
+	
+	A slight improvement for my last edit, which could trigger a small
+	bug.
+	
+	I should go out and drink more often, it helps debugging! ;-)
+
+2005-10-25 Tuesday 01:31  defacer
+
+	* lib.php: 
+	
+	
+	Merging from HEAD:
+	
+	Fix for bug 3794:
+	
+	Times in chat messages are now displayed correctly to all users,
+	with each user's timezone and DST status taken into account.
+
+2005-10-25 Tuesday 01:30  defacer
+
+	* lib.php: 
+	
+	
+	Fix for bug 3794:
+	
+	Times in chat messages are now displayed correctly to all users,
+	with each user's timezone and DST status taken into account.
+
+2005-09-11 Sunday 06:57  stronk7
+
+	* gui_header_js/: chatinput.php, jsupdate.php, users.php: 
+	
+	Extended theme support to the chat window. Bug 3376. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=3376)
+	
+	Merged from MOODLE_15_STABLE
+
+2005-09-11 Sunday 06:53  stronk7
+
+	* lib.php: 
+	
+	Extended theme support to the chat window. Bug 3376. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=3376)
+	
+	Merged from MOODLE_15_STABLE
+
+2005-09-11 Sunday 06:48  stronk7
+
+	* lib.php, gui_header_js/chatinput.php, gui_header_js/jsupdate.php,
+	gui_header_js/users.php: 
+	
+	Extended theme support to the chat window. Bug 3376. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=3376)
+
+2005-09-01 Thursday 12:14  mjollnir_
+
+	* lib.php: 
+	
+	Initial checkin of stats (from processing the log table).  I will
+	write up some information about it for the developers wiki.
+
+2005-08-16 Tuesday 07:17  patrickslee
+
+	* db/postgres7.php: 
+	
+	Mass cleanup of bad postgres upgrade scripts(merged from 15_stable)
+
+2005-08-16 Tuesday 06:30  patrickslee
+
+	* db/postgres7.php: 
+	
+	Mass cleanup of bad postgres upgrade scripts
+
+2005-08-04 Thursday 02:28  stronk7
+
+	* restorelib.php: 
+	
+	Now chat-talk log actions are restored properly.  Part of bug 3582.
+	 (http://moodle.org/bugs/bug.php?op=show&bugid=3852)
+	
+	Merged from MOODLE_15_STABLE
+
+2005-08-04 Thursday 02:27  stronk7
+
+	* restorelib.php: 
+	
+	Now chat-talk log actions are restored properly.  Part of bug 3582.
+	 (http://moodle.org/bugs/bug.php?op=show&bugid=3852)
+
+2005-07-16 Saturday 00:30  moodler
+
+	* lib.php: 
+	
+	Avoid using $USER->lastIP, to avoid wierd case problem with
+	different db
+	
+	    http://moodle.org/mod/forum/discuss.php?d=18662
+
+2005-07-12 Tuesday 16:00  moodler
+
+	* restorelib.php: 
+	
+	Merged SC139 from stable
+
+2005-07-12 Tuesday 15:52  moodler
+
+	* restorelib.php: 
+	
+	Escaped text output during relinking, as per SC 139
+
+2005-07-08 Friday 11:51  defacer
+
+	* chatd.php: 
+	
+	
+	Merging from STABLE:
+	
+	Three improvements:
+	
+	1. $nomoodlecookie = true. I just found out about this
+	undocumented(?) hack(?)    in lib/setup.php which is the perfect
+	way to suppress some warnings. We    don't need a session cookie
+	for the chatd.
+	
+	2. If allow_call_time_pass_reference is Off, socket_getpeername
+	can't work.
+	
+	3. Suppress "call time pass by reference is deprecated" messages
+	for    socket_getpeername, we don't have any choice here.
+
+2005-07-08 Friday 11:50  defacer
+
+	* chatd.php: 
+	
+	
+	Three improvements:
+	
+	1. $nomoodlecookie = true. I just found out about this
+	undocumented(?) hack(?)    in lib/setup.php which is the perfect
+	way to suppress some warnings. We    don't need a session cookie
+	for the chatd.
+	
+	2. If allow_call_time_pass_reference is Off, socket_getpeername
+	can't work.
+	
+	3. Suppress "call time pass by reference is deprecated" messages
+	for    socket_getpeername, we don't have any choice here.
+
+2005-07-05 Tuesday 02:55  stronk7
+
+	* backuplib.php, restorelib.php: 
+	
+	Improved automatic relinking in backup and restore. Credits go to
+	skodak.  Complete refactoring of the system that was really awful
+	(my fault!).  Now everything is in its place and working like a
+	charm, making things really easier to be implemented and amplied.
+	Bug 3678 (http://moodle.org/bugs/bug.php?op=show&bugid=3678)
+	(http://moodle.org/mod/forum/discuss.php?d=26530)
+	
+	Note: Everything is merged from stable but the quiz module because
+	it has other changes not merged for now. I've skyped a message to
+	Gustav about it.
+	
+	Merged from MOODLE_15_STABLE
+
+2005-07-05 Tuesday 01:34  stronk7
+
+	* backuplib.php, restorelib.php: 
+	
+	Improved automatic relinking in backup and restore. Credits go to
+	skodak.  Complete refactoring of the system that was really awful
+	(my fault!).  Now everything is in its place and working like a
+	charm, making things really easier to be implemented and amplied.
+	Bug 3678 (http://moodle.org/bugs/bug.php?op=show&bugid=3678)
+	(http://moodle.org/mod/forum/discuss.php?d=26530)
+
+2005-05-17 Tuesday 06:12  stronk7
+
+	* config.html: 
+	
+	Tabs are out
+
+2005-04-27 Wednesday 11:44  defacer
+
+	* view.php: 
+	
+	
+	Simply usertimezone(), baby! ;-)
+
+2005-04-26 Tuesday 03:10  moodler
+
+	* view.php: 
+	
+	No chat for you!   (guests)
+
+2005-04-26 Tuesday 00:40  moodler
+
+	* view.php: 
+	
+	Fix chat display to show timezones correctly
+
+2005-04-25 Monday 03:18  skodak
+
+	* lib.php: 
+	
+	fixed compatibiltiy with PHP 4.1.0
+
+2005-04-13 Wednesday 15:45  moodler
+
+	* view.php: 
+	
+	Added some reportlink classed to the report links
+
+2005-04-08 Friday 15:42  moodler
+
+	* lib.php: 
+	
+	Renamed get_user_timezone to get_user_timezone_offset, because Jon
+	has plans for that function name
+
+2005-04-02 Saturday 08:33  stronk7
+
+	* restorelib.php: 
+	
+	chat-report log action is now restored properly.
+
+2005-04-01 Friday 13:55  martinlanghoff
+
+	* chatd.php: 
+	
+	Merged from MOODLE_14_STABLE - insert_record() - major efficiency
+	improvements for Postgres databases on insert. Also fixed many
+	calls to insert_record() which discard the returned record id to
+	not ask for the record id.
+
+2005-04-01 Friday 13:33  martinlanghoff
+
+	* chatd.php: 
+	
+	insert_record() - major efficiency improvements for Postgres
+	databases on insert. Also fixed many calls to insert_record() which
+	discard the returned record id to not ask for the record id.
+
+2005-03-27 Sunday 19:36  stronk7
+
+	* index.php, lib.php, pagelib.php, report.php, restorelib.php,
+	view.php, gui_header_js/index.php, gui_sockets/index.php: 
+	
+	Now chat->name works under filterall.
+
+2005-03-27 Sunday 13:56  moodler
+
+	* lib.php: 
+	
+	WHen deleting a chat, delete the messages etc too.  Bug 2792
+
+2005-03-16 Wednesday 11:26  defacer
+
+	* pagelib.php, view.php: 
+	
+	
+	Respect $CFG->showblocksonmodpages.
+
+2005-03-14 Monday 09:34  moodler
+
+	* pagelib.php: 
+	
+	New strings to turn Blocks editing on and off
+
+2005-03-14 Monday 00:17  moodler
+
+	* view.php: 
+	
+	Standardise the intro box using an ID
+
+2005-03-13 Sunday 05:26  skodak
+
+	* lib.php: 
+	
+	SERVER_ADDR is not defined in IIS, changing initial value to
+	127.0.0.1
+
+2005-03-10 Thursday 21:30  moodler
+
+	* lib.php, version.php: 
+	
+	Variety of small fixes, but mostly related to how the recent
+	activity block is constructed.	A new function exists to pump these
+	notes out in a standard way :  print_recent_activity_note.
+	
+	Module dependencies also updated because of this.
+
+2005-03-03 Thursday 06:35  defacer
+
+	* pagelib.php: 
+	
+	
+	Fix for bug 2669:
+	
+	Quizzes and Chats in the front page had the site shortname twice in
+	the navbar.
+
+2005-03-02 Wednesday 13:56  defacer
+
+	* view.php: 
+	
+	
+	You know you are beyond hope of redemption when you make "API
+	uniformity" changes. ;-)
+
+2005-03-02 Wednesday 13:47  defacer
+
+	* view.php: 
+	
+	
+	Since $PAGE knows where the adminblock should be printed, let it do
+	the printing.
+
+2005-03-02 Wednesday 13:19  defacer
+
+	* view.php: 
+	
+	
+	Simplifying to death using the new blocks_setup()
+
+2005-02-28 Monday 12:23  defacer
+
+	* lib.php: 
+	
+	
+	Added require_once for pagelib.php.
+	
+	Now deleting courses with these activities in works just fine once
+	more!
+
+2005-02-28 Monday 12:18  defacer
+
+	* lib.php: 
+	
+	
+	Each mod is responsible to deleting its own blocks; what I had in
+	mind for centralizing this wouldn't work out. Use the flexible
+	page_import_types so that we don't create one more dependency when
+	writing new code.
+
+2005-02-28 Monday 11:59  defacer
+
+	* pagelib.php: 
+	
+	
+	Add hooks for exporting the page types used by each module.
+
+2005-02-25 Friday 20:40  moodler
+
+	* gui_header_js/users.php: 
+	
+	FIxed popup window for users in chat window
+
+2005-02-25 Friday 20:35  moodler
+
+	* gui_header_js/jsupdate.php: 
+	
+	Er, last fix was in wrong frame.  :-)
+
+2005-02-25 Friday 20:28  moodler
+
+	* gui_header_js/jsupdate.php: 
+	
+	Try to make all links "pop out" of the frame
+
+2005-02-16 Wednesday 18:40  gustav_delius
+
+	* report.php, gui_header_js/index.php, gui_sockets/index.php,
+	version.php, view.php: 
+	
+	In order to ensure that when a teacher hides a resource or an
+	activity that students really can't get at it, even if they know
+	the direct links to its pages, I have given an optional third
+	argument $cm to the functions  require_login() and
+	require_course_login(). Pages showing information about a
+	particular course module now pass the course module object in this
+	third argument. The login functions will then test if either the
+	course module is visible or the user is a teacher. If neither is
+	the case then the user is redirected to the course homepage after
+	being shown a message "Sorry, this activity is currently hidden".
+	
+	(While I was at it I also turned the autologinguests off for most
+	module pages, except on the index.php pages and the view.php pages
+	for those modules that allow guests)
+
+2005-02-14 Monday 00:30  skodak
+
+	* gui_header_js/jsupdate.php: 
+	
+	added style sheet to message panel
+
+2005-02-13 Sunday 08:42  stronk7
+
+	* lib.php: 
+	
+	Now retrieving only needed fields!
+
+2005-02-13 Sunday 05:41  gustav_delius
+
+	* mod.html: 
+	
+	Activities can now be hidden/shown from the activity editing page.
+	Also for modules that know about groups the groupmode can be set
+	from there. See bug 2533. This required adding to the mod.html
+	files calls to new functions print_visible_setting() and
+	print_groupmode_setting() which are combined in
+	print_standard_coursemodule_settings().
+	
+	The visibility of coursemodules is now always set through the
+	function set_coursemodule_visible() in order to make sure that the
+	associated events get updated in the calendar appropriately.
+	
+	If moving a coursemodule to a hidden section then the module is set
+	to hidden as well and its events are hidden in the calendar.
+	
+	If deleting a coursemodule its events are deleted from the
+	calendar.
+	
+	The function choose_from_menu() has an extra optional argument
+	$disabled which, when set to true, will disable the menu.
+	
+	For the sake of consistency the function set_groupmode_for_module
+	has been renamed to set_coursemodule_groupmode and the functions
+	show_course_module() and hide_course_module() have been combined to
+	set_coursemodule_visible().
+
+2005-02-12 Saturday 19:37  defacer
+
+	* view.php: 
+	
+	
+	Vastly improved styles, lots of inline styles removed, markup
+	improved.
+
+2005-02-12 Saturday 18:54  skodak
+
+	* chatd.php, lib.php, gui_sockets/chatinput.php,
+	gui_sockets/index.php: 
+	
+	Chatd cleanup finished, from now on only bug fixing.
+
+2005-02-11 Friday 03:25  skodak
+
+	* gui_header_js/jsupdate.php: 
+	
+	FF issue seems to be solved by explicit call to document.close()
+
+2005-02-11 Friday 03:14  skodak
+
+	* gui_header_js/chatmsg.php, gui_header_js/index.php,
+	gui_header_js/jsupdate.php, gui_sockets/index.php, lib.php: 
+	
+	fixed deleting of old users when using chatd, other minor fixes,
+	reverting of changes in chatmsg - found some weird problems in FF
+
+2005-02-11 Friday 02:22  moodler
+
+	* chatd.php, lib.php: 
+	
+	Removed some THEME
+
+2005-02-10 Thursday 09:59  defacer
+
+	* pagelib.php, view.php: 
+	
+	
+	Bringing Quiz in line with Martin's "make Chat into a showcase for
+	pages" idea.
+
+2005-02-10 Thursday 00:44  moodler
+
+	* pagelib.php, view.php: 
+	
+	Moved chat PAGE stuff out of core as an example
+
+2005-02-09 Wednesday 23:47  defacer
+
+	* view.php: 
+	
+	
+	
+	Voila! Blocks support now in chats!
+
+2005-02-09 Wednesday 05:30  skodak
+
+	* gui_header_js/index.php, gui_sockets/index.php: 
+	
+	fixed problems with forced course language
+
+2005-02-09 Wednesday 05:23  skodak
+
+	* gui_header_js/chatinput.php, gui_header_js/chatmsg.php,
+	gui_header_js/jsupdate.php, lib.php: 
+	
+	fixed typos in chat_force_language(), added encoding to message
+	page, minor cleanup
+
+2005-02-08 Tuesday 17:23  moodler
+
+	* config.html: 
+	
+	Fixed up some layout issues in the configuration files
+
+2005-02-08 Tuesday 07:33  stronk7
+
+	* restorelib.php: 
+	
+	Some minor changes to each module to XHTMLise the restore process
+
+2005-02-08 Tuesday 04:33  skodak
+
+	* gui_header_js/chatinput.php, gui_header_js/index.php,
+	gui_header_js/insert.php, gui_header_js/jsupdate.php,
+	gui_header_js/users.php, lib.php: 
+	
+	maybe fixed double posts, fixed javascript errors, solved problems
+	with reloading
+
+2005-02-06 Sunday 18:06  skodak
+
+	* chatd.php: 
+	
+	detection of oversized requests from clients
+
+2005-02-06 Sunday 18:02  skodak
+
+	* chatd.php: 
+	
+	increased maximum socket read size to prevent empty pages and
+	repeated messages - merged from STABLE
+
+2005-02-05 Saturday 06:58  skodak
+
+	* gui_sockets/chatinput.php: 
+	
+	typo in javascript code, message submit did not work :-(
+
+2005-02-05 Saturday 05:14  skodak
+
+	* chatd.php, lib.php: 
+	
+	reverted some unfinished changes in chatd - enter message
+
+2005-02-04 Friday 08:43  skodak
+
+	* db/: mysql.php, postgres7.php: 
+	
+	update code clarification - thanks Eloy!
+
+2005-02-04 Friday 04:39  skodak
+
+	* chatd.php, index.php, lib.php, mod.html, drawboard.php,
+	insert.php, report.php, users.php, version.php, view.php,
+	db/mysql.php, db/mysql.sql, db/oci8po.sql, db/postgres7.php,
+	db/postgres7.sql, gui_header_js/chatinput.php,
+	gui_header_js/index.php, gui_header_js/insert.php,
+	gui_header_js/jsupdate.php, gui_header_js/users.php,
+	gui_sockets/chatinput.php, gui_sockets/index.php: 
+	
+	radical chat clean up, see forum for details
+
+2005-01-25 Tuesday 17:39  moodler
+
+	* mod.html: 
+	
+	Changes for XHTML and accessibility compatibility.  Tidied up
+	layout and other minor changes.
+
+2005-01-23 Sunday 02:53  stronk7
+
+	* mod.html: 
+	
+	Modify sesskey behaviour. SC#73
+
+2005-01-21 Friday 12:38  moodler
+
+	* mod.html: 
+	
+	Minor change
+
+2005-01-18 Tuesday 06:26  defacer
+
+	* chatd.php: 
+	
+	Better comments and some more diagnostic messages to help with bug
+	hunting.
+	
+	Also changed a > to >= to make the polling interval precice to the
+	second.
+
+2004-12-16 Thursday 08:41  defacer
+
+	* chatd.php: 
+	
+	
+	Merging fix for bug 2285 from HEAD, it works as it should.
+
+2004-12-15 Wednesday 15:08  defacer
+
+	* chatd.php: 
+	
+	
+	Fix for bug 2285: chatd shows all chat users as present in every
+	chatroom
+	
+	Should be fixed, but needs testing.
+
+2004-12-08 Wednesday 21:47  moodler
+
+	* report.php: 
+	
+	FIx for display of first session, from stable
+
+2004-12-08 Wednesday 21:45  moodler
+
+	* report.php: 
+	
+	If the first chat session was a real one with more than one person,
+	then the logs for it are now displayed in the list of sessions.
+
+2004-11-23 Tuesday 10:05  mjollnir_
+
+	* report.php: 
+	
+	Merged from MOODLE_14_STABLE: More small sql tweaks to avoid
+	invalid postgres sql
+
+2004-11-23 Tuesday 09:58  mjollnir_
+
+	* report.php: 
+	
+	More small sql tweaks to avoid invalid postgres sql
+
+2004-11-19 Friday 10:30  mjollnir_
+
+	* version.php: 
+	
+	Fixed another version problem, this time not _as_ serious as just
+	in UNSTABLE DEVELOPMENT
+
+2004-11-19 Friday 03:08  stronk7
+
+	* version.php, db/mysql.php, db/postgres7.php: 
+	
+	2004121100 downto 2004060401 (version never changes in STABLE
+	branches)
+
+2004-11-18 Thursday 10:37  mjollnir_
+
+	* db/: mysql.php, postgres7.php: 
+	
+	Replaced prefix_ with CFG->prefix for DROP of indexes before
+	creation because of being inside execute_sql rather than
+	modify_database - chat module
+
+2004-11-18 Thursday 06:54  mjollnir_
+
+	* version.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	Merged from MOODLE_14_STABLE: Indexes for chat and version bump
+
+2004-11-18 Thursday 06:53  mjollnir_
+
+	* version.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	Indexes for chat and version bump
+
+2004-10-24 Sunday 03:21  skodak
+
+	* lib.php: 
+	
+	merged from 14_STABLE - fixed warning in Activity report/Outline
+
+2004-10-24 Sunday 03:07  skodak
+
+	* lib.php: 
+	
+	fixed warning in Activity report/Outline
+
+2004-10-19 Tuesday 18:34  moodler
+
+	* lib.php, mod.html, report.php: 
+	
+	Changes for XHTML and accessibility compliance
+
+2004-10-04 Monday 00:40  defacer
+
+	* chatd.php: 
+	
+	Undoing an incorrect instance of htmlentity encoding a &. Probably
+	got in with all the XHTML frenzy. Thanks to Daryl for helping to
+	debug this! :-)
+
+2004-10-03 Sunday 17:48  stronk7
+
+	* config.html: 
+	
+	admin/module.php is now using sesskey.
+	
+	Merged from MOODLE_14_STABLE
+
+2004-10-03 Sunday 17:44  stronk7
+
+	* config.html: 
+	
+	admin/module.php is now using sesskey.
+
+2004-09-21 Tuesday 19:41  gustav_delius
+
+	* chatd.php, users.php, gui_header_js/jsupdate.php: 
+	
+	Resolved problems with previous replacement of & to &amp; and fixed
+	redirect() to entity encode the inut where needed.  Julian Sedding
+
+2004-09-17 Friday 01:13  gustav_delius
+
+	* chatd.php, insert.php, lib.php, report.php, users.php, view.php,
+	gui_header_js/index.php, gui_header_js/jsupdate.php: 
+	
+	XHTML compliance - fixed (hopefully) all <img> tags - global
+	replace on <br> to <br /> - &amp; in URLs - got the forum module
+	XHTML compliant Julian Sedding
+
+2004-09-13 Monday 06:23  gustav_delius
+
+	* config.html, lib.php, mod.html, gui_header_js/chatinput.php,
+	gui_sockets/chatinput.php: 
+	
+	closed some input tags
+
+2004-09-12 Sunday 22:59  gustav_delius
+
+	* backuplib.php, chatd.php, config.html, drawboard.php, index.php,
+	lib.php, mod.html, report.php, restorelib.php, users.php,
+	version.php, view.php, db/mysql.php, db/oci8po.php,
+	db/postgres7.php, gui_header_js/index.php,
+	gui_header_js/jsupdate.php, gui_sockets/index.php: 
+	
+	fixed capitalization and quoting of attribute values
+
+2004-09-12 Sunday 22:41  gustav_delius
+
+	* restorelib.php: 
+	
+	closed <input /> <br /> <hr />
+
+2004-09-09 Thursday 18:58  defacer
+
+	* chatd.php: 
+	
+	Merging addslashes() change from stable.
+
+2004-09-09 Thursday 18:56  defacer
+
+	* chatd.php: 
+	
+	addslashes() on messages from users before inserting into db.
+
+2004-08-31 Tuesday 18:47  defacer
+
+	* lib.php: 
+	
+	Merging changes from MOODLE_14_STABLE
+
+2004-08-28 Saturday 16:04  moodler
+
+	* lib.php: 
+	
+	Fix from a while back
+
+2004-08-28 Saturday 15:57  moodler
+
+	* insert.php: 
+	
+	Merged changes from trunk
+
+2004-08-28 Saturday 15:56  moodler
+
+	* insert.php: 
+	
+	Fix bug 1787 where clean_text is applied on input with slashes
+	added
+
+2004-08-26 Thursday 18:44  defacer
+
+	* chatd.php, config.html, lib.php, gui_sockets/chatinput.php: 
+	
+	Merging latest changes from MOODLE_14_STABLE
+
+2004-08-26 Thursday 17:57  defacer
+
+	* chatd.php, gui_sockets/chatinput.php: 
+	
+	Small fixes and improvements.
+
+2004-08-26 Thursday 16:48  defacer
+
+	* chatd.php: 
+	
+	
+	1. Code restructuring 2. Small logic fixes (e.g. only delete
+	chat_user records WHERE type='sockets') 3. More informative
+	messages when rejecting connections for some reason 4. Better
+	handling of updating chat_user records (lastping updated correctly)
+	5. Custom error handling, so that PHP errors show up in the
+	trace()s
+
+2004-08-25 Wednesday 22:20  moodler
+
+	* chatd.php: 
+	
+	Course passed properly to messages
+	
+	Old chat_users all deleted on startup
+
+2004-08-25 Wednesday 21:37  moodler
+
+	* lib.php: 
+	
+	FIx for recent activity when sockets being used
+
+2004-08-25 Wednesday 20:13  defacer
+
+	* chatd.php, config.html: 
+	
+	*** TRANSLATOR ALERT ***
+	
+	This commit contains changes and additions to the chat language
+	file.
+	
+	Better display and explanations for the chat config screen. Final
+	tweaks to chatd now that we know which settings we 'll be using and
+	how.
+
+2004-08-25 Wednesday 19:00  defacer
+
+	* gui_sockets/: chatinput.php, index.php: 
+	
+	Merging latest changes from MOODLE_14_STABLE.
+
+2004-08-25 Wednesday 18:57  defacer
+
+	* gui_sockets/chatinput.php: 
+	
+	Second part of changes. Doing this slowly to keep integrity between
+	this branch and HEAD.
+
+2004-08-25 Wednesday 18:52  defacer
+
+	* lib.php: 
+	
+	Merging MOODLE_14_STABLE changes.
+
+2004-08-25 Wednesday 18:46  defacer
+
+	* chatd.php: 
+	
+	Manually committing a copy from the 14_STABLE branch to sort out a
+	tagging problem I talked with Gustav about yesterday.
+
+2004-08-25 Wednesday 18:45  defacer
+
+	* chatd.php: 
+	
+	Lots and lots of improvements! Foremost changes are: 1. The users
+	window is now provided with BOTH JavaScript and HTTP refresh
+	mechanisms 2. The daemon now reliably detects disconnected users
+	even in the absence of chat    activity. Coupled with the fact that
+	the "users in chats" lists are now manipulated	  only by chatd,
+	they have reached 100% accuracy. Even better than the "normal"	 
+	version, since you can leave your chat open (and idle) for as long
+	as you want    _without_ being disconnected.  3. Better OOP.
+
+2004-08-25 Wednesday 02:38  gustav_delius
+
+	* version.php: 
+	
+	Merging from stable branch
+
+2004-08-24 Tuesday 23:14  gustav_delius
+
+	* version.php: 
+	
+	reduced $module->requires to 052505 after Martin put my new
+	functions into that version.
+
+2004-08-24 Tuesday 22:28  defacer
+
+	* chatd.php, gui_sockets/chatinput.php, gui_sockets/index.php: 
+	
+	Still better handling of console output, and starting to experiment
+	with the new idea of "externally" refreshing the users window for
+	reliability.
+
+2004-08-24 Tuesday 22:02  defacer
+
+	* gui_sockets/index.php: 
+	
+	Adding ID attributes to the frames. Better than NAMEs, for one, and
+	also I have a devious idea to vanquish user window dropouts once
+	and for all...
+
+2004-08-24 Tuesday 21:58  defacer
+
+	* chatd.php, lib.php: 
+	
+	Improvements in the way that STDOUT output is handled (turns out
+	the constant exists in PHP >= 4.3 and it's not defined() at all).
+	
+	Don't let delete_old_users() kill sockets-type clients, we can do
+	that on our own, thank you.
+	
+	Comment some trace()s.
+
+2004-08-24 Tuesday 20:44  defacer
+
+	* chatd.php: 
+	
+	Merging updates from MOODLE_14_STABLE
+
+2004-08-24 Tuesday 20:22  defacer
+
+	* chatd.php: 
+	
+	Brand new spiffy shining bright!
+	
+	1. REAL support for command-line parameters! Pretty good too!	
+	(actually don't tell Jon, it gets to his head) 2. Can you show the
+	"users in chat" normally now? Please?
+
+2004-08-24 Tuesday 18:13  gustav_delius
+
+	* version.php: 
+	
+	All the modules in which I made changes require the latest version
+	of datalib.php.
+
+2004-08-23 Monday 23:42  defacer
+
+	* chatd.php: 
+	
+	Please deliver me from my own incompetence...
+
+2004-08-23 Monday 23:35  defacer
+
+	* chatd.php: 
+	
+	Quirks-related fixes...
+
+2004-08-23 Monday 23:25  defacer
+
+	* chatd.php: 
+	
+	Preliminary support for browser quirks, for now just targeting
+	Safari
+
+2004-08-23 Monday 23:03  defacer
+
+	* chatd.php: 
+	
+	More goodness! Goodness is on discount here in Greece! :P
+
+2004-08-23 Monday 22:40  moodler
+
+	* chatd.php, lib.php, gui_sockets/index.php: 
+	
+	Miscellaneous fixes from the PJ man
+
+2004-08-23 Monday 16:48  defacer
+
+	* chatd.php, lib.php: 
+	
+	Making chatd more eager to update the users' status, and lib.php
+	slightly less eager to declare them dead. Should solve the "active
+	users are not shown at the chat index page" problem.
+	
+	Also, fixing a notice.
+
+2004-08-23 Monday 01:03  defacer
+
+	* gui_header_js/chatinput.php: 
+	
+	Fix for bug 1759:
+	
+	One notice in debug mode removed.
+
+2004-08-22 Sunday 22:38  gustav_delius
+
+	* index.php, view.php: 
+	
+	All modules are now suitable for the site page. They now all follow
+	the same rules, namely that any students enrolled in at least one
+	course is considered to be a student on the site.
+	
+	All the page headers work correctly also on the site course.
+	
+	On the site page the modules don't require login unless necessary
+	or required by $CFG->forcelogin.
+
+2004-08-22 Sunday 05:18  gustav_delius
+
+	* view.php: 
+	
+	print notice when guest views chat.
+
+2004-08-22 Sunday 04:59  gustav_delius
+
+	* lib.php: 
+	
+	removed some notices
+
+2004-08-22 Sunday 04:25  gustav_delius
+
+	* view.php: 
+	
+	removed notice
+
+2004-08-22 Sunday 04:20  gustav_delius
+
+	* index.php, report.php, view.php: 
+	
+	Removed notices by introducing new function print_header_simple()
+	which works on site as well as in courses without extra logic.
+
+2004-08-21 Saturday 04:12  gustav_delius
+
+	* view.php: 
+	
+	introduced the fullname() function in a lot of places. Still not
+	complete though, especially in sorting.
+
+2004-08-15 Sunday 00:45  moodler
+
+	* chatd.php, gui_sockets/chatinput.php: 
+	
+	Latest goodness from PJ the MAN!
+
+2004-08-14 Saturday 20:41  moodler
+
+	* mod.html: 
+	
+	Fixed some notices
+
+2004-08-14 Saturday 20:37  moodler
+
+	* chatd.php: 
+	
+	Trivial fix to ID
+
+2004-08-12 Thursday 20:36  moodler
+
+	* chatd.php: 
+	
+	Add version number
+
+2004-08-12 Thursday 20:31  moodler
+
+	* chatd.php: 
+	
+	Some cleanups from Jon ... beeps now work
+
+2004-08-11 Wednesday 22:45  moodler
+
+	* chatd.php, lib.php, gui_sockets/index.php: 
+	
+	Latest changes to the chat daemon ... user window now working
+	
+	  Needs:    - testing
+		    - beeps in daemon mode  (you can type "beep all"
+	though)
+
+2004-08-10 Tuesday 21:50  moodler
+
+	* chatd.php, lib.php: 
+	
+	Latest fixes from Jon ... it's much more stable now!
+	
+	... the only thing remaining is that the user window is still done
+	old-style, and not yet converted over to the new -style daemon
+
+2004-08-08 Sunday 21:46  moodler
+
+	* users.php: 
+	
+	Update user time
+
+2004-07-31 Saturday 00:16  moodler
+
+	* README.txt: 
+	
+	Info about using socket server
+
+2004-07-30 Friday 23:48  moodler
+
+	* config.html: 
+	
+	Fixed a typo
+
+2004-07-30 Friday 23:37  moodler
+
+	* config.html: 
+	
+	New config for socket chat
+
+2004-07-30 Friday 23:36  moodler
+
+	* insert.php, lib.php, view.php: 
+	
+	New stuff to support socket mode
+
+2004-07-30 Friday 23:34  moodler
+
+	* gui_sockets/arscd.php: 
+	
+	Removing this file
+
+2004-07-30 Friday 23:33  moodler
+
+	* gui_sockets/: chatinput.php, index.php: 
+	
+	New versions for socket-based chat
+
+2004-07-30 Friday 23:32  moodler
+
+	* chatd.php: 
+	
+	This version sort of works.  Still needs some polishing.
+
+2004-06-04 Friday 15:28  moodler
+
+	* version.php: 
+	
+	MOdules are dependent on this version of course/mod.php
+
+2004-06-04 Friday 14:17  moodler
+
+	* mod.html, version.php: 
+	
+	BRANCH MERGE
+	
+	These are the changes from MOODLE_13_STABLE, merged into trunk
+	
+	The tag MOODLE_13_MERGED on the MOODLE_13_STABLE branch now refers
+	to this point
+	
+	The biggest changes here are the fixes for HTML editor in all
+	standard modules
+
+2004-06-03 Thursday 21:07  moodler
+
+	* mod.html, version.php: 
+	
+	OK, for bug fixes this is a pretty big checkin!!   :-/
+	
+	I finally was able to see the HTML Editor bug in IE/XP that
+	everyone was talking about, and it's a very serious bug as it makes
+	Moodle 1.3 almost unusable for these people.  :-(  :-(
+	
+	So, I eventually found out that the problem is that the Javascript
+	that attaches the editor has troubles when it is embedded within
+	the table						    that
+	course/mod.php puts around the mod.html forms in each module. 
+	(Only in IE and only sometimes, mind you).
+	
+	While testing I also had a good look at a long standing issue which
+	is the inconsistency of the mod.html forms when using the editor.
+	
+	So, to fix both I decided to put the HTML editor calls OUTSIDE the
+	mod.html in the mod.php file.  This means that all modules get the
+	HTML editor by default on all text areas during activity module
+	setup by default.
+	
+	I've been running through this for the past few hours and it seems
+	pretty stable now and a lot more consistent, so I'm checking it in
+	as big fix towards the Moodle 1.3.1 we have to have.
+	
+	Unfortunately it also means the API has changed a bit  ... I had to
+	update all the module dependencies to this exact version (or
+	later).
+	
+	Please test this "stable" version hard using the standard modules
+	only and I'll merge these changes over to the trunk in a day or so
+	and update all known third-party modules.
+
+2004-05-18 Tuesday 22:16  moodler
+
+	* gui_sockets/arscd.php: 
+	
+	Suppress some errors in set_time_limit	... (these scripts aren't
+	used yet)
+
+2004-05-18 Tuesday 00:24  moodler
+
+	* lib.php: 
+	
+	Delete events when activity is deleted
+
+2004-05-05 Wednesday 16:19  moodler
+
+	* lib.php: 
+	
+	Hide users in "hidden" chats from students.    bug 1308
+
+2004-05-05 Wednesday 15:07  gustav_delius
+
+	* lib.php: 
+	
+	Events associated to hidden activities are now invisible in
+	calendar, using new field 'visible' in table 'event' which is
+	updated each time a course module is hidden or unhidden.
+
+2004-04-30 Friday 20:40  moodler
+
+	* insert.php, version.php, db/mysql.php, db/mysql.sql,
+	db/postgres7.php, db/postgres7.sql: 
+	
+	Chat now logs "talk" events ... which also updates last access in
+	the course so chatters appear in the online users block so Tom is
+	happy.	:-)
+	
+	Seriously though, it's good to have talking events in the log.
+
+2004-04-26 Monday 10:54  moodler
+
+	* lib.php: 
+	
+	FIx to help PostgreSQL .... fix from Bruno Vernier     Bug 1270
+
+2004-04-25 Sunday 11:05  moodler
+
+	* lib.php, version.php, db/mysql.php, db/postgres7.php: 
+	
+	Calendar support for the Chat module
+
+2004-04-08 Thursday 23:12  moodler
+
+	* lib.php, users.php, view.php, gui_header_js/index.php: 
+	
+	Fixes when displaying lists of users in group mode
+
+2004-04-08 Thursday 22:35  moodler
+
+	* view.php: 
+	
+	A small fix to show the right users on the view page when groups
+	are being used
+
+2004-04-08 Thursday 22:28  moodler
+
+	* gui_header_js/index.php: 
+	
+	Ack!  Stupid typo fixed - thanks, Bobo!
+
+2004-03-29 Monday 14:02  moodler
+
+	* lib.php: 
+	
+	Fixed Tim's bug with the chat not updating  - bug 1151
+	
+	His chat->intro had 'quotes' in it
+
+2004-03-27 Saturday 21:08  paca70
+
+	* db/postgres7.sql: 
+	
+	Added default values
+
+2004-03-12 Friday 21:29  moodler
+
+	* gui_header_js/index.php: 
+	
+	Get coursemodule so the groups checking works correctly
+
+2004-03-09 Tuesday 16:41  moodler
+
+	* lib.php: 
+	
+	POssible fix for bug 1109
+
+2004-02-24 Tuesday 23:45  stronk7
+
+	* backuplib.php, restorelib.php: 
+	
+	Now message->groupid is supported in backup & restore.
+
+2004-02-24 Tuesday 15:21  moodler
+
+	* report.php: 
+	
+	Some fixes for delete groups sessions
+
+2004-02-24 Tuesday 15:00  moodler
+
+	* report.php, view.php: 
+	
+	Moving headings
+
+2004-02-24 Tuesday 14:35  moodler
+
+	* insert.php, lib.php, report.php, users.php, version.php,
+	view.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql, gui_header_js/chatinput.php,
+	gui_header_js/index.php, gui_header_js/jsupdate.php: 
+	
+	Preliminary support for groups in Chat.
+	
+	It's not well tested yet - I'm hoping to do some testing on
+	moodle.org with some real people and get this refined enough for
+	the Beta release later today.
+
+2004-02-17 Tuesday 03:31  stronk7
+
+	* report.php: 
+	
+	Added missing cmid parameter when calling add_to_log() function.
+
+2004-02-17 Tuesday 01:39  moodler
+
+	* lib.php, view.php, gui_header_js/jsupdate.php: 
+	
+	Chat room text is now filtered
+
+2004-02-15 Sunday 08:54  stronk7
+
+	* restorelib.php: 
+	
+	Now chat logs are included in restore. I've decided to start with
+	this simple module to be ready for the difficults... :-)
+
+2004-02-07 Saturday 20:27  moodler
+
+	* view.php: 
+	
+	Added timezone display to reduce confusion
+
+2004-02-01 Sunday 12:42  moodler
+
+	* version.php: 
+	
+	Updating version numbers of all Modules to make things a bit
+	clearer
+
+2004-01-31 Saturday 23:24  moodler
+
+	* version.php: 
+	
+	All modules now require the very latest because of the changes to
+	add_to_log
+
+2004-01-31 Saturday 23:22  moodler
+
+	* view.php: 
+	
+	Upgraded add_to_log to send cm->id
+
+2004-01-28 Wednesday 12:27  moodler
+
+	* version.php: 
+	
+	Define minimum required versions of Moodle
+
+2004-01-26 Monday 20:27  moodler
+
+	* index.php: 
+	
+	Added dividers and improved display of section
+
+2004-01-16 Friday 21:14  moodler
+
+	* report.php: 
+	
+	
+	Chat sessions can now be deleted
+
+2004-01-15 Thursday 16:44  moodler
+
+	* lib.php: 
+	
+	Don't show old chat users in recent activity
+
+2003-11-28 Friday 23:37  moodler
+
+	* report.php: 
+	
+	Make sure teacher override is there
+
+2003-11-28 Friday 23:35  moodler
+
+	* lib.php, report.php, users.php: 
+	
+	DIsplay names using the fullname function
+
+2003-11-03 Monday 18:22  moodler
+
+	* report.php, view.php, gui_header_js/index.php: 
+	
+	Keep guests out of chat
+
+2003-11-03 Monday 10:59  moodler
+
+	* db/mysql.php: 
+	
+	Removed blank lines at the end (!)
+
+2003-09-29 Monday 23:27  stronk7
+
+	* lib.php: 
+	
+	Simply, move the XXXX_get_participants() function from bottom to
+	the common function area.  See bug 807
+
+2003-09-29 Monday 00:49  stronk7
+
+	* index.php: 
+	
+	Now the JumpMenu is showed when listing activities of this module. 
+	See Bug 803
+
+2003-09-28 Sunday 18:17  stronk7
+
+	* index.php: 
+	
+	Now, when listing activities, entries are dimmed if they are hidden
+	(teacher view). See bug 802.
+
+2003-09-25 Thursday 09:05  les_kopari
+
+	* db/oci8po.php: 
+	
+	Initial add for Oracle.
+
+2003-09-13 Saturday 15:56  les_kopari
+
+	* db/oci8po.sql: 
+	
+	Oracle tables, etc converted from mysql, plus test transactions.
+
+2003-09-09 Tuesday 20:32  moodler
+
+	* mod.html: 
+	
+	Fixed some PHP short_tags
+
+2003-09-05 Friday 06:08  stronk7
+
+	* lib.php: 
+	
+	Included chat_get_participants() function.
+
+2003-08-31 Sunday 08:40  moodler
+
+	* db/: postgres7.php, postgres7.sql: 
+	
+	Ouch!!	Missing PostgreSQL files for chat module
+
+2003-08-25 Monday 10:48  moodler
+
+	* restorelib.php: 
+	
+	Fixed some array indices
+
+2003-08-23 Saturday 22:03  moodler
+
+	* config.html, lib.php, users.php, gui_header_js/jsupdate.php: 
+	
+	COnfiguration variables can now be edited via GUI
+
+2003-08-21 Thursday 11:16  moodler
+
+	* lib.php: 
+	
+	No need for grades with chat
+
+2003-08-11 Monday 23:06  moodler
+
+	* README.txt, gui_header_js/chatinput.php: 
+	
+	Added a simple help popup for chat
+
+2003-08-11 Monday 21:47  moodler
+
+	* README.txt: 
+	
+	Updated status and plans for chat module
+
+2003-08-09 Saturday 18:11  moodler
+
+	* index.php: 
+	
+	Minor formatting fixes
+
+2003-08-04 Monday 06:46  stronk7
+
+	* restorelib.php: 
+	
+	Now chats are restored too !! :-)
+
+2003-08-04 Monday 06:24  stronk7
+
+	* backuplib.php: 
+	
+	Now chats are backuped too !! :-)
+
+2003-07-25 Friday 17:01  moodler
+
+	* lib.php: 
+	
+	A better way of doing chat_get_latest_message() that doesn't
+	conflict with the debugging in get_record_sql
+
+2003-07-25 Friday 16:19  moodler
+
+	* lib.php: 
+	
+	FIxed the LIMIT bug I just made ... need to find a better way as
+	this sets off get_record alarms
+
+2003-07-25 Friday 16:18  moodler
+
+	* gui_header_js/jsupdate.php: 
+	
+	No need for body colour
+
+2003-07-25 Friday 14:47  moodler
+
+	* lib.php, mod.html, version.php, view.php, db/mysql.php,
+	db/mysql.sql, gui_header_js/index.php: 
+	
+	New feature - chat scheduling.	Can now set a time for the next
+	chat, as well as rotating weekly or daily period.
+	
+	Also some small fixes.
+
+2003-07-24 Thursday 10:25  moodler
+
+	* lib.php, report.php, users.php, view.php: 
+	
+	Some improved popup windows / links for user pictures
+
+2003-07-22 Tuesday 10:00  moodler
+
+	* users.php: 
+	
+	Fixed a typo
+
+2003-07-22 Tuesday 09:58  moodler
+
+	* users.php: 
+	
+	Slightly more robust in case it can't find users.  See bug 562.
+
+2003-07-21 Monday 13:31  moodler
+
+	* report.php: 
+	
+	Better formatting on IE
+
+2003-07-21 Monday 13:13  moodler
+
+	* view.php: 
+	
+	Spacers look funny on IE
+
+2003-07-21 Monday 13:08  moodler
+
+	* report.php: 
+	
+	Was cropping first/last message - fixed now
+
+2003-07-21 Monday 13:05  moodler
+
+	* view.php: 
+	
+	Put link at the top
+
+2003-07-21 Monday 13:03  moodler
+
+	* view.php: 
+	
+	Add a display of current users on the view page
+
+2003-07-21 Monday 12:20  moodler
+
+	* report.php: 
+	
+	Make session link translatable
+
+2003-07-21 Monday 12:08  moodler
+
+	* report.php: 
+	
+	Ah!  Now we're getting somewhere - chat reports look quite nice
+	now!
+
+2003-07-21 Monday 11:37  moodler
+
+	* report.php: 
+	
+	A bit more usable now
+
+2003-07-21 Monday 11:16  moodler
+
+	* insert.php, lib.php, mod.html, report.php, version.php, view.php,
+	db/mysql.php, db/mysql.sql: 
+	
+	Some new code related to the new reports - uploading for testing on
+	other server - still very early
+
+2003-07-21 Monday 09:35  moodler
+
+	* lib.php: 
+	
+	Only show "recent activity" for chats in the current course.
+
+2003-07-12 Saturday 13:19  moodler
+
+	* index.php: 
+	
+	When displaying index lists of a particular module's activities,
+	ensure that the order they are displayed in is always the same as
+	the order they have been defined in.   See bug 553.
+	
+	This involved API changes to the function
+	get_all_instances_in_course()
+
+2003-07-10 Thursday 14:42  moodler
+
+	* lib.php: 
+	
+	Force unique entries in list
+
+2003-07-10 Thursday 14:38  moodler
+
+	* gui_header_js/jsupdate.php: 
+	
+	Need to escape slashes here
+
+2003-07-10 Thursday 12:49  moodler
+
+	* lib.php: 
+	
+	Minor formatting fix
+
+2003-07-10 Thursday 12:46  moodler
+
+	* lib.php: 
+	
+	Chat now prints something useful under recent activity
+
+2003-07-09 Wednesday 21:09  moodler
+
+	* users.php: 
+	
+	Right ping now
+
+2003-07-09 Wednesday 21:07  moodler
+
+	* users.php: 
+	
+	A beep is a ping.  ;-)
+
+2003-07-09 Wednesday 20:55  moodler
+
+	* view.php: 
+	
+	Slightly better window name
+
+2003-07-09 Wednesday 20:53  moodler
+
+	* lib.php, users.php, gui_header_js/jsupdate.php: 
+	
+	Simple beeping is now added ... users can now beep each other and
+	also beep everyone using "beep all"
+	
+	There are no controls as yet to disable beeping on a per-user basis
+	but this would come next
+
+2003-07-09 Wednesday 20:37  moodler
+
+	* beep.wav: 
+	
+	A default beep
+
+2003-07-09 Wednesday 12:27  moodler
+
+	* users.php, view.php: 
+	
+	Add a notification when people have left
+
+2003-07-09 Wednesday 12:17  moodler
+
+	* lib.php: 
+	
+	Added emoting (both the MOO style with a : and the IRC style /me )
+
+2003-07-07 Monday 21:23  moodler
+
+	* lib.php: 
+	
+	Added parsing of links
+
+2003-07-07 Monday 20:12  moodler
+
+	* view.php: 
+	
+	Stuff
+
+2003-07-07 Monday 20:11  moodler
+
+	* view.php: 
+	
+	Show the intro text now
+
+2003-07-07 Monday 17:45  moodler
+
+	* insert.php, lib.php, users.php, gui_header_js/chatinput.php,
+	gui_header_js/index.php, gui_header_js/jsupdate.php: 
+	
+	Some minor improvements
+
+2003-07-07 Monday 14:44  moodler
+
+	* README.txt, drawboard.php, empty.php, icon.gif, index.php,
+	insert.php, lib.php, mod.html, users.php, version.php, view.php,
+	db/mysql.php, db/mysql.sql, gui_header_js/chatinput.php,
+	gui_header_js/chatmsg.php, gui_header_js/index.php,
+	gui_header_js/jsupdate.php, gui_sockets/arscd.php,
+	gui_sockets/chatinput.php, gui_sockets/index.php: 
+	
+	Very early version of new chat module, made by Martin using ARSC as
+	an inspiration.
+	
+	Works OK already on most newish browsers .. see mod/chat/README.txt
+	for details.
+

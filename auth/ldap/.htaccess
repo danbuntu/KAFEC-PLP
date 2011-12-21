@@ -1,0 +1,9 @@
+<Files ntlmsso_magic.php>
+       AuthName "Moodle at My College"
+       AuthType SSPI
+       SSPIAuth On
+       SSPIOfferBasic Off
+       SSPIAuthoritative On
+       SSPIDomain midkent.ac.uk
+       require valid-user
+   </Files>

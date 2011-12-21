@@ -1,0 +1,2398 @@
+2007-01-21 Sunday 16:27  jamiesensei
+
+	* lib.php, mod_form.php: 
+	
+	fixes to wiki form checkboxes value saving
+
+2007-01-19 Friday 23:25  sam_marshall
+
+	* view.php: 
+	
+	MDL-8227 - Made wiki locking only apply to group being edited!
+
+2007-01-19 Friday 20:48  sam_marshall
+
+	* view.php: 
+	
+	MDL-8225 Made it not display wiki title twice in navigation, when
+	first page has same name as title.
+
+2007-01-19 Friday 18:35  jamiesensei
+
+	* mod_form.php: 
+	
+	fix for syntax error trying to call hardFreeze on element instead
+	of form object.
+
+2007-01-19 Friday 16:10  jamiesensei
+
+	* mod.html, mod_form.php: 
+	
+	migrated wiki form to formslib
+
+2007-01-16 Tuesday 01:42  sam_marshall
+
+	* ewiki/plugins/moodle/f_fixhtml.php: 
+	
+	MDL-8185: Changed wiki html tag balancer to leave CDATA sections
+	alone
+
+2007-01-15 Monday 02:58  stronk7
+
+	* db/: mysql.sql, postgres7.sql: 
+	
+	Deleting deprecated .sql files. MDL-7264 Byeeez!
+
+2007-01-13 Saturday 08:52  stronk7
+
+	* ewikimoodlelib.php: 
+	
+	Some more uses of $CFG->dbfamily. MDL-7061
+
+2007-01-11 Thursday 16:06  moodler
+
+	* view.php: 
+	
+	FIxed up the intro boxes  XHTML Strict
+
+2007-01-10 Wednesday 11:07  toyomoyo
+
+	* lib.php, mod.html, removepages.html, revertpages.html,
+	setpageflags.html, strippages.html,
+	ewiki/plugins/moodle/moodle_wikidump.php,
+	ewiki/plugins/moodle/wantedpages.php: 
+	
+	MDL-7861 xhtml strict fixes for wiki
+
+2007-01-09 Tuesday 18:08  skodak
+
+	* ewiki/plugins/moodle/downloads.php: 
+	
+	MDL-7861xhtml strict fixes
+
+2007-01-09 Tuesday 18:08  skodak
+
+	* ewiki/plugins/moodle/downloads.php: 
+	
+	fixed typo in prev commit
+
+2007-01-09 Tuesday 16:21  toyomoyo
+
+	* admin.php, checklinks.html, lib.php, mod.html, removepages.html,
+	revertpages.html, setpageflags.html, strippages.html, view.php,
+	wiki_styles.php, ewiki/ewiki.php, ewiki/plugins/email_protect.php,
+	ewiki/plugins/moodle/downloads.php: 
+	
+	MDL-7861 related problems for wiki. use_html_editor() call in
+	ewiki.php is probably causing additional problems.
+
+2007-01-09 Tuesday 04:30  skodak
+
+	* ewiki/plugins/moodle/downloads.php: 
+	
+	MDL-8105 some more icon class fixes including new .iconhelp for
+	help and docs icon
+
+2007-01-09 Tuesday 03:34  skodak
+
+	* ewiki/plugins/moodle/downloads.php: 
+	
+	MDL-7861 xhtml transient fixes for not closed input fields - I hope
+	all of them except imported libs are now fixed
+
+2007-01-05 Friday 07:59  skodak
+
+	* admin.php, checklinks.html, index.php, lib.php, removepages.html,
+	revertpages.html, setpageflags.html, strippages.html: 
+	
+	MDL-7861 xhtml strict fixes - fixed capital letter tags and
+	attributes
+
+2007-01-05 Friday 07:38  skodak
+
+	* ewiki/fragments/wiki_format.inc: 
+	
+	MDL-7861 xhtml strict fixes - fixed all <br> in our code
+
+2007-01-05 Friday 05:32  skodak
+
+	* lib.php, mod.html, view.php, admin.php: 
+	
+	MDL-8062 1.3 Remove name attribute from <form> and fix focus
+	everywhere - more changes ahead
+
+2007-01-03 Wednesday 22:45  moodler
+
+	* ewiki/: ewiki.php, fragments/homepage.src: 
+	
+	Bend over for XHTML 1.0 Strict ...  MDL-8049
+	
+	Removed Javascript language attribute tags and added CDATA
+
+2007-01-03 Wednesday 12:55  moodler
+
+	* lib.php: 
+	
+	Checking in Nick Freear's changes and evolution of Julette White's
+	code with a few modifications made to the install process) for
+	further work in HEAD.
+	
+	See MDL-7380 for details.
+
+2006-12-21 Thursday 22:07  nfreear
+
+	* lib.php: 
+	
+	Fixed bugs. Integration 3 - groups in core, modules, calendar...
+	(Part of MDL-7380, new groups)
+
+2006-12-21 Thursday 20:18  nfreear
+
+	* lib.php: 
+	
+	Integration 3 - groups in core, modules, calendar... (Part of
+	MDL-7380, new groups)
+
+2006-12-21 Thursday 14:01  toyomoyo
+
+	* view.php: 
+	
+	MDL-7861, fixng broken xhtml
+
+2006-11-09 Thursday 15:21  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	drop utf8 support from HEAD MDL-6332
+
+2006-11-02 Thursday 16:50  toyomoyo
+
+	* lib.php: 
+	
+	merged fix for MDL-6721 wiki broken for SPG
+
+2006-11-02 Thursday 16:49  toyomoyo
+
+	* lib.php: 
+	
+	fix for MDL-6721, wiki broken for SPG
+
+2006-11-01 Wednesday 03:17  stronk7
+
+	* ewikimoodlelib.php: 
+	
+	Fixed searches, list of results and simplified SQL logic. All those
+	while trying to fix one LCASE() use. MDL-7310
+	
+	Merged from MOODLE_17_STABLE
+
+2006-11-01 Wednesday 03:15  stronk7
+
+	* ewikimoodlelib.php: 
+	
+	Fixed searches, list of results and simplified SQL logic. All those
+	while trying to fix one LCASE() use. MDL-7310
+
+2006-11-01 Wednesday 01:51  stronk7
+
+	* ewiki/ewiki.php: 
+	
+	Now wiki supports Unicode searches
+	
+	Merged from MOODLE_17_STABLE
+
+2006-11-01 Wednesday 01:47  stronk7
+
+	* ewiki/ewiki.php: 
+	
+	Now wiki supports Unicode searches
+
+2006-10-29 Sunday 21:31  moodler
+
+	* view.php: 
+	
+	Merged fix for MDL-7248 from stable
+
+2006-10-29 Sunday 18:07  andreabix
+
+	* view.php: 
+	
+	Fix bug MDL-7248
+
+2006-10-27 Friday 06:46  stronk7
+
+	* db/postgres7.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+	
+	Merged from MOODLE_17_STABLE
+
+2006-10-27 Friday 06:39  stronk7
+
+	* db/mysql.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+	
+	Merged from MOODLE_17_STABLE
+
+2006-10-27 Friday 06:29  stronk7
+
+	* db/postgres7.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+
+2006-10-27 Friday 06:25  stronk7
+
+	* db/mysql.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+
+2006-10-27 Friday 01:43  stronk7
+
+	* db/upgrade.php: 
+	
+	New upgrade.php file added for this module. MDL-7214
+	
+	Merged from HEAD
+
+2006-10-27 Friday 01:33  stronk7
+
+	* db/upgrade.php: 
+	
+	file upgrade.php was added on branch MOODLE_17_STABLE on 2006-10-26
+	17:43:09 +0000
+
+2006-10-27 Friday 01:33  stronk7
+
+	* db/upgrade.php: 
+	
+	New upgrade.php file added for this module. MDL-7214
+
+2006-10-17 Tuesday 18:05  thompson697
+
+	* restorelib.php: 
+	
+	Apply modularity to the creation of the log file during restore to
+	a new course.  Remove the responsibility for loging the application
+	of the course start date offset, from activity modules to the
+	backup module.	Merged from stable branch
+
+2006-10-17 Tuesday 15:22  vyshane
+
+	* restorelib.php: 
+	
+	Fix for MDL-6363
+
+2006-10-17 Tuesday 15:19  vyshane
+
+	* restorelib.php: 
+	
+	Merged from 1.6. Fixes for MDL-6363
+
+2006-10-17 Tuesday 15:16  vyshane
+
+	* restorelib.php: 
+	
+	Fixes for MDL-6363
+
+2006-10-16 Monday 18:40  thompson697
+
+	* restorelib.php: 
+	
+	Apply modularity to the creation of the log file during restore to
+	a new course.  Remove the responsibility for loging the application
+	of the course start date offset, from activity modules to the
+	backup module.
+
+2006-10-11 Wednesday 14:22  moodler
+
+	* db/access.php: 
+	
+	Merged fixes for MDL-6907 from stable
+
+2006-10-11 Wednesday 14:16  moodler
+
+	* db/access.php: 
+	
+	All the PREVENTS from the legacy roles have been removed (and thus
+	are treated as INHERIT by default).
+	
+	See MDL-6907 for details.
+
+2006-10-11 Wednesday 01:23  sam_marshall
+
+	* view.php: 
+	
+	Wiki: fixed issue if you tried to set a page content to completely
+	blank (you need to switch the html editor into text mode to get
+	this, otherwise it puts in <br/>, but one of our QA people managed
+	to find it anyway).
+	
+	Also corrected whitespace on some of the lock stuff (weird - how
+	did those tabs get in there? hrm)
+
+2006-10-11 Wednesday 01:15  sam_marshall
+
+	* view.php: 
+	
+	Wiki: fixed issue if you tried to set a page content to completely
+	blank (you need to switch the html editor into text mode to get
+	this, otherwise it puts in <br/>, but one of our QA people managed
+	to find it anyway).
+	
+	Also corrected whitespace on some of the lock stuff (weird - how
+	did those tabs get in there? hrm)
+
+2006-10-09 Monday 22:29  sam_marshall
+
+	* lib.php, view.php: 
+	
+	Wiki: some changes to improve error messages and (slightly)
+	behaviour when in group mode
+
+2006-10-06 Friday 23:26  stronk7
+
+	* db/migrate2utf8.xml: 
+	
+	One malformed XML was preventing wiki_logs to be properly
+	UTF8-ised. MDL-6854
+
+2006-10-06 Friday 14:04  toyomoyo
+
+	* db/migrate2utf8.xml: 
+	
+	fix for MDL-6859, MDL-6860
+
+2006-10-04 Wednesday 22:50  thompson697
+
+	* restorelib.php: 
+	
+	Change creation of restorelog file location to protected backupdata
+	folder.  Reassign style and language links
+
+2006-10-04 Wednesday 18:20  sam_marshall
+
+	* checklinks.html, removepages.html, revertpages.html,
+	setpageflags.html, strippages.html: 
+	
+	[MDL-6701] Added closing </form> tags in wiki admin pages (the
+	pages are still not xhtml, but...)
+
+2006-10-04 Wednesday 18:11  sam_marshall
+
+	* admin.php: 
+	
+	Wiki: list of pages to strip in the 'are you sure' message was
+	incorrectly URL-encoded on display to user, this fix removes url
+	encoding and html-encodes it instead
+
+2006-10-04 Wednesday 18:03  sam_marshall
+
+	* ewikimoodlelib.php: 
+	
+	Wiki - fixed 'Strip versions' that didn't work in postgres because
+	of GROUP BY a select alias not being allowed. (Even tested in mysql
+	this time...)
+
+2006-10-01 Sunday 20:04  skodak
+
+	* db/postgres7.php: 
+	
+	Recent wiki table changes have problems on PostgreSQL 7.4 MDL-6724
+
+2006-09-27 Wednesday 19:22  sam_marshall
+
+	* lib.php, view.php: 
+	
+	Wiki: Improve page locking to make it more robust and support
+	non-javascript users (not very friendlily, though...)
+
+2006-09-27 Wednesday 19:21  sam_marshall
+
+	* ewikimoodlelib.php: 
+	
+	Wiki: correct behaviour in Postgres with pages that have ' in name
+
+2006-09-27 Wednesday 19:21  sam_marshall
+
+	* db/postgres7.php, version.php: 
+	
+	Wiki: correct column type on Postgres update (fixes Search and
+	Links tabs, matches what's in install.xml anyhow)
+
+2006-09-27 Wednesday 19:20  sam_marshall
+
+	* ewiki/ewiki.php: 
+	
+	Wiki: Fix wiki-linking to not be case-sensitive.
+
+2006-09-27 Wednesday 16:49  moodler
+
+	* mod.html: 
+	
+	CHecking Enrique Castro's fix for MDL-6366, to help wiki pagenames
+	not get reset
+
+2006-09-26 Tuesday 05:37  stronk7
+
+	* db/install.xml: 
+	
+	Some notes:
+	
+	- Foreign keys are really cool (at the XMLDB Editor). Define them
+	as necessary   as they allow as one "formal" structure of the DB.
+	They won't cause problems   on generation, mainly because only the
+	underlying index will be created.  - Please, put comments inside
+	each table/field/key/index field, mainly because   XML comments
+	will be deleted if the file is edited by - The XMLDB Editor. Please
+	use it ;-) - Also, one unique index was wrong in the XML file,
+	fixed now.
+
+2006-09-26 Tuesday 01:49  sam_marshall
+
+	* db/mysql.php: 
+	
+	change from UNIQUE KEY to UNIQUE INDEX
+
+2006-09-26 Tuesday 01:47  sam_marshall
+
+	* lib.php: 
+	
+	(prev. wiki fix) Fixed broken constant defines
+
+2006-09-26 Tuesday 01:42  sam_marshall
+
+	* confirmlock.php, lib.php, overridelock.php, version.php,
+	view.php, db/access.php, db/install.xml, db/mysql.php,
+	db/postgres7.php: 
+	
+	Wiki enhancement: edit locking (uses AJAX)
+
+2006-09-24 Sunday 22:01  vyshane
+
+	* lib.php: 
+	
+	Changed <module>_print_recent_activity() functions so that they
+	don't use $isteacher. However, I've left the $isteacher parameter
+	in the functions, for backward compatibility so as not to break
+	thrid party modules. Should we remove the parameter now?
+
+2006-09-22 Friday 11:14  vyshane
+
+	* view.php, db/access.php: 
+	
+	Removed mod/wiki:view
+
+2006-09-21 Thursday 05:00  skodak
+
+	* db/access.php: 
+	
+	major whitespace cleanup - fixed trailng whitespace in new files
+	and admin area
+
+2006-09-21 Thursday 04:31  skodak
+
+	* TODO.txt, ewiki/plugins/moodle/downloads.php,
+	ewiki/plugins/moodle/moodle_binary_store.php,
+	ewiki/plugins/moodle/moodle_wikidump.php,
+	ewiki/fragments/calendar.css, ewiki/fragments/core.css,
+	ewiki/plugins/pluginloader.php: 
+	
+	major whitespace cleanup - fixed tabs
+
+2006-09-20 Wednesday 14:59  skodak
+
+	* lib.php: 
+	
+	mostly removed old isadmin() calls
+
+2006-09-19 Tuesday 05:32  skodak
+
+	* version.php, db/access.php: 
+	
+	added capabilty risks into access.php and GUI for define role and
+	override; minor fixes for capability types in forum
+
+2006-09-18 Monday 17:13  moodler
+
+	* restorelib.php: 
+	
+	FIxed to use the new debugging function
+
+2006-09-13 Wednesday 21:19  thompson697
+
+	* restorelib.php: 
+	
+	Complete work on Roll Forwards - Restore from previous semester
+	(MDL-5532) * Add fields to restore form to enable changes to Short
+	Name, Full Name and Start Date * Start Date offset added to Restore
+	process * Created Restorelog file in Course files area * Activity
+	Modules use offset to change dates * Activity Modules write changes
+	to Restorelog
+
+2006-09-13 Wednesday 05:07  skodak
+
+	* lib.php, version.php, db/access.php: 
+	
+	fixed group management in wiki
+
+2006-09-12 Tuesday 16:22  moodler
+
+	* version.php: 
+	
+	Small bump for guest role fix
+
+2006-09-12 Tuesday 15:10  moodler
+
+	* version.php: 
+	
+	Reload the guest role using new defaults
+
+2006-09-12 Tuesday 13:58  moodler
+
+	* db/access.php: 
+	
+	Changed some default permissions for the guest role
+
+2006-09-12 Tuesday 04:01  skodak
+
+	* lib.php: 
+	
+	wiki now using new groups parameter in get_users_by_capability()
+
+2006-09-11 Monday 03:44  skodak
+
+	* admin.php, lib.php, mod.html, test.php, version.php, view.php,
+	db/access.php, ewiki/plugins/moodle/moodle_wikidump.php: 
+	
+	basic conversion of old wiki to new roles framework
+
+2006-08-13 Sunday 15:01  moodler
+
+	* admin.php: 
+	
+	Removed all of the "Restricted users" hack because Roles can do it
+	all better.
+
+2006-08-13 Sunday 06:19  stronk7
+
+	* db/install.xml: 
+	
+	Initial version of the XMLDB file for this plugin
+
+2006-08-10 Thursday 23:51  skodak
+
+	* version.php, admin.php, view.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283; backported from HEAD
+
+2006-08-10 Thursday 23:30  skodak
+
+	* admin.php, version.php, view.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283; backported from HEAD
+
+2006-08-09 Wednesday 21:45  moodler
+
+	* view.php, ewiki/ewiki.php: 
+	
+	Removed tabs
+
+2006-08-09 Wednesday 06:09  skodak
+
+	* admin.php, version.php, view.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283
+
+2006-08-08 Tuesday 13:13  moodler
+
+	* version.php: 
+	
+	ROLES AND PERMISSIONS  - FIRST CHECK-IN
+	=======================================
+	
+	WARNING:  DEV IS CURRENTLY VERY UNSTABLE.
+	
+	This is a mega-checkin of the new Roles system.   A lot of changes
+	have been made in core and modules.
+	
+	Currently there are a lot of rough edges and known problems.  We
+	are working hard on these .. .the reason for getting this into HEAD
+	at this stage is enable us to move faster (our branch was diverging
+	from HEAD too much).
+	
+	Please keep an eye on http://docs.moodle.org/en/Roles for current
+	status and information for developers on how to use the new Roles
+	system.
+
+2006-08-01 Tuesday 02:21  skodak
+
+	* db/postgres7.php: 
+	
+	merging changes from MOODLE_16_STABLE
+
+2006-07-31 Monday 13:38  martinlanghoff
+
+	* db/postgres7.php: 
+	
+	Bug #6147 - Upgrade from 1.5.x breaks with Postgres 7.4.x
+	
+	Even though Postgres 7.4.x is officially supported, several upgrade
+	scripts use syntax that only works in Postgres 8.x. and it's
+	impossible to finish the upgrade.
+	
+	The attached patch fixes those scripts.
+	
+	Saludos. Iñaki.
+	
+	Author: Iñaki Arenaza Review: Jun Yamog, Martin Langhoff
+
+2006-07-31 Monday 12:55  martinlanghoff
+
+	* view.php, view.php: 
+	
+	wiki: Added a link to force reloading of the page (WR#515)
+	
+	The link allows the page to be reloaded, which saves people from
+	only seeing the cached copy. This is the equivalent of doing
+	Shift+Reload in most browsers.
+	
+	Author: Luke Hudson <luke@catalyst.net.nz>
+
+2006-07-12 Wednesday 01:15  mchampan
+
+	* lib.php: 
+	
+	Search functions moved from mod/name/lib.php to
+	search/documents/mod_document.php.  Pagination added to query page.
+	Various small changes and amendments.
+
+2006-07-06 Thursday 13:08  martinlanghoff
+
+	* view.php: 
+	
+	wiki: Fix for broken view on new (empty) wiki pages.
+	
+	The wiki should display the 'edit' screen when a user tries to view
+	a page that doesn't exist. This output should not be filtered.
+	
+	Merged from MOODLE_16_STABLE
+	
+	Author: Donal McMullan
+
+2006-07-06 Thursday 13:06  martinlanghoff
+
+	* view.php: 
+	
+	wiki: Fix for broken view on new (empty) wiki pages.
+	
+	The wiki should display the 'edit' screen when a user tries to view
+	a page that doesn't exist. This output should not be filtered.
+	
+	Author: Donal McMullan
+
+2006-07-05 Wednesday 22:37  mchampan
+
+	* lib.php: 
+	
+	Cleaned up files, fixed some discrepancies and made sure strings
+	that needed escaping used the correct function. Add description
+	comments to files.
+
+2006-06-26 Monday 07:07  mchampan
+
+	* lib.php: 
+	
+	Initial commit
+
+2006-05-17 Wednesday 14:29  martinlanghoff
+
+	* version.php, db/postgres7.php, db/postgres7.sql: 
+	
+	moodle16cleanup: mod/wiki synch upgrade script and .sql with mysql
+	counterpart, drop the not null constraint to sync with
+	postgres7.sql
+
+2006-05-17 Wednesday 14:17  martinlanghoff
+
+	* version.php, db/postgres7.php, db/postgres7.sql: 
+	
+	moodle16cleanup: mod/wiki synch upgrade script and .sql with mysql
+	counterpart, drop the not null constraint to sync with
+	postgres7.sql
+
+2006-04-28 Friday 11:18  toyomoyo
+
+	* version.php, db/mysql.php: 
+	
+	bug fix for 5303. hope i didn't break anything >_<
+
+2006-04-26 Wednesday 13:48  toyomoyo
+
+	* version.php, db/mysql.php, db/mysql.sql: 
+	
+	trying to change all the default NULL fields to NOT NULL default
+	'0'/'', hope i didn't mess up. Please report any bugs asap!
+
+2006-04-12 Wednesday 00:23  stronk7
+
+	* restorelib.php: 
+	
+	htmlentities() to s()
+
+2006-04-05 Wednesday 15:46  gustav_delius
+
+	* index.php: 
+	
+	Fixed call to required_param()
+
+2006-03-29 Wednesday 13:16  patrickslee
+
+	* db/postgres7.php: 
+	
+	Completed postgres binary upgrade block for wiki module
+
+2006-03-29 Wednesday 12:48  patrickslee
+
+	* version.php, db/postgres7.php, db/postgres7.sql: 
+	
+	Convert fields refs and content in wiki_pages to binary for
+	postgres
+
+2006-03-10 Friday 11:43  patrickslee
+
+	* db/migrate2utf8.php: 
+	
+	UTF8 migration - now supporting PostgreSQL
+
+2006-03-08 Wednesday 05:35  skodak
+
+	* db/migrate2utf8.php: 
+	
+	short php tags
+
+2006-02-24 Friday 16:13  toyomoyo
+
+	* db/migrate2utf8.php: 
+	
+	see changes for admin/utfdbmigrate.php
+
+2006-02-06 Monday 09:51  moodler
+
+	* db/migrate2utf8.xml: 
+	
+	fixing typos
+
+2006-01-31 Tuesday 10:09  moodler
+
+	* db/migrate2utf8.php: 
+	
+	changed to use utfconvert function
+
+2006-01-28 Saturday 07:01  stronk7
+
+	* view.php, ewiki/fragments/strip_wonderful_slashes.php: 
+	
+	Solving double addslashes to DB when the site is running with
+	magic_quotes_gpc() disabled (because Moodle addslashes to
+	everything). Not a pretty hack, but it seems to work. 
+	(http://moodle.org/mod/forum/discuss.php?d=38127)
+	
+	Merged from MOODLE_15_STABLE
+
+2006-01-28 Saturday 06:59  stronk7
+
+	* view.php, ewiki/fragments/strip_wonderful_slashes.php: 
+	
+	Solving double addslashes to DB when the site is running with
+	magic_quotes_gpc() disabled (because Moodle addslashes to
+	everything). Not a pretty hack, but it seems to work. 
+	(http://moodle.org/mod/forum/discuss.php?d=38127)
+
+2006-01-23 Monday 07:54  stronk7
+
+	* ewikimoodlelib.php: 
+	
+	Avoid one wrong primarykey parameter that, after latest changes to
+	insert_record() was breaking the wiki module completely!
+
+2006-01-23 Monday 04:27  stronk7
+
+	* view.php: 
+	
+	There! :-P :-D (just looking for one BIG problem in wiki - pagename
+	is lost, so page is never detected, so the edit page is showed once
+	and again and again, and again.......)
+
+2006-01-19 Thursday 15:26  moodler
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	bug fixes
+
+2006-01-17 Tuesday 15:36  moodler
+
+	* db/: migrate2utf8.xml, mysql.sql: 
+	
+	Added default values where needed for columns in the MySQL creation
+	script mysql.sql.  Added default values to migrate2utf8.xml, for
+	any varchar and text field types, if the default values for these
+	fields were not defined as '' in the MySQL table creation script.
+	
+	Committed by vyshane
+
+2006-01-16 Monday 05:09  mjollnir_
+
+	* restorelib.php: 
+	
+	Abstracted a bit of the restore procedure to allow for silent
+	restoring.  Added new function, import_backup_file_silently Changed
+	everything that prints stuff to check for a constant first. 
+	Backup_flush checks a different constant, this is so that output
+	can still get flushed to the browser when necessary but not print
+	<li>s everywhere.  Please test this!
+
+2006-01-15 Sunday 19:58  stronk7
+
+	* ewiki/ewiki.php: 
+	
+	Now ewiki supports initial load of contents from course file area. 
+	Original preg_match() was a bit strange so I've replaced it with
+	clean_filename() + !is_dir() check. Bug 3830. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=3830)
+	
+	Merged from MOODLE_15_STABLE
+
+2006-01-15 Sunday 19:55  stronk7
+
+	* ewiki/ewiki.php: 
+	
+	Now ewiki supports initial load of contents from course file area. 
+	Original preg_match() was a bit strange so I've replaced it with
+	clean_filename() + !is_dir() check. Bug 3830. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=3830)
+
+2006-01-13 Friday 15:24  toyomoyo
+
+	* db/migrate2utf8.php: 
+	
+	more bug fixes =(
+
+2006-01-13 Friday 11:45  mjollnir_
+
+	* backuplib.php, restorelib.php: 
+	
+	Granular backup & restore: This patch allows the much requested
+	selection of individual instances of modules within a course to
+	backup and restore.  It needs A LOT of testing and probably some
+	prettyifying too.
+
+2006-01-11 Wednesday 09:46  toyomoyo
+
+	* db/migrate2utf8.xml: 
+	
+	added 2 fields in xml, addindex and dropindex, and bug fixes
+
+2006-01-09 Monday 14:06  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	utf8 migration support scripts
+
+2006-01-06 Friday 00:53  stronk7
+
+	* lib.php, ewiki/ewiki.php, ewiki/fragments/wiki_format.inc,
+	ewiki/plugins/email_protect.php: 
+	
+	Now ewiki should work pretty fine under any charset. UTF-8
+	included, of course!
+	
+	Merged from MOODLE_16_UTF8. Abandoning the branch.
+
+2005-12-21 Wednesday 11:26  toyomoyo
+
+	* view.php: 
+	
+	merged, wrong param type for $page
+
+2005-12-21 Wednesday 11:24  toyomoyo
+
+	* view.php: 
+	
+	fixes a bug, wrong param type for $page
+
+2005-12-16 Friday 15:19  toyomoyo
+
+	* admin.php: 
+	
+	merged, fixed a bug that student can't remove wiki pages in group
+	mode
+
+2005-12-16 Friday 15:12  toyomoyo
+
+	* admin.php: 
+	
+	fixes a bug that students in group can not remove page
+
+2005-12-14 Wednesday 12:15  patrickslee
+
+	* admin.php, ewikimoodlelib.php, lib.php, mod.html, view.php,
+	ewiki/ewiki.php, ewiki/plugins/moodle/diff.php: 
+	
+	Merged with MOODLE_16_MULTIENROL_MP1
+
+2005-12-12 Monday 05:29  mjollnir_
+
+	* mod.html: 
+	
+	Merged from MOODLE_15_STABLE: Fixing a fatal error in updating a
+	wiki (lib.php included twice )
+
+2005-12-12 Monday 05:29  mjollnir_
+
+	* mod.html: 
+	
+	Fixing a fatal error in updating a wiki (lib.php included twice )
+
+2005-12-11 Sunday 04:17  stronk7
+
+	* lib.php, ewiki/ewiki.php, ewiki/fragments/wiki_format.inc,
+	ewiki/plugins/email_protect.php: 
+	
+	Now ewiki should work pretty fine under any charset. UTF-8
+	included, of course!
+
+2005-12-07 Wednesday 14:20  moodler
+
+	* view.php, view.php: 
+	
+	Replaced optional_var with optional_param
+
+2005-11-08 Tuesday 15:19  moodler
+
+	* lib.php, view.php: 
+	
+	BIG FEATURE  - MULTIPLE GROUPS
+	
+	Users can now be assigned to multiple groups.  Thanks Yu! Break out
+	the Bob Marley!!
+	
+	Otherwise groups work more or less like they did before.
+	
+	This has been pretty well tested by Yu and myself, but since Yu
+	started uncovering lots of existing groups bugs it's possible there
+	may be still a few corner cases still lurking here and there.
+	
+	Please help test this thoroughly for 1.6!!
+
+2005-11-04 Friday 07:47  skodak
+
+	* admin.php, ewiki/ewiki.php, ewiki/plugins/moodle/diff.php: 
+	
+	fixed input validation in admin and formating+cleaning in diff and
+	editing SC#160; merged from MOODLE_15_STABLE
+
+2005-11-04 Friday 07:38  skodak
+
+	* admin.php, ewiki/ewiki.php, ewiki/plugins/moodle/diff.php: 
+	
+	fixed input validation in admin and formating+cleaning in diff and
+	editing SC#160
+
+2005-11-02 Wednesday 01:47  stronk7
+
+	* ewiki/ewiki.php: 
+	
+	Changed one call to gethostbyaddr() to use numeric ip instead. Such
+	information is only stored in DB (page->author) and not critical at
+	all. Suggested by Derry in
+	http://moodle.org/mod/forum/discuss.php?d=32171 because it was
+	causing important delays when clients weren't DNS-registered.
+	
+	Merged from MOODLE_15_STABLE
+
+2005-11-02 Wednesday 01:45  stronk7
+
+	* ewiki/ewiki.php: 
+	
+	Changed one call to gethostbyaddr() to use numeric ip instead. Such
+	information is only stored in DB (page->author) and not critical at
+	all. Suggested by Derry in
+	http://moodle.org/mod/forum/discuss.php?d=32171 because it was
+	causing important delays when clients weren't DNS-registered.
+
+2005-10-15 Saturday 18:25  stronk7
+
+	* ewikimoodlelib.php: 
+	
+	Commiting some old unmerged changes.
+
+2005-09-01 Thursday 12:14  mjollnir_
+
+	* lib.php: 
+	
+	Initial checkin of stats (from processing the log table).  I will
+	write up some information about it for the developers wiki.
+
+2005-08-09 Tuesday 12:50  mjollnir_
+
+	* ewikimoodlelib.php: 
+	
+	Fixing another group by postgres error. You can't put fields into
+	the select that aren't in the group by unless they're functions
+	like max
+
+2005-07-24 Sunday 18:29  stronk7
+
+	* ewiki/plugins/moodle/: diff.php, downloads.php, f_fixhtml.php,
+	moodle_binary_store.php, moodle_highlight.php,
+	moodle_rescue_html.php, moodle_wikidump.php, sitemap.php,
+	wantedpages.php: 
+	
+	Added the $Id$ tag
+	
+	Merged from MOODLE_15_STABLE
+
+2005-07-24 Sunday 18:27  stronk7
+
+	* ewiki/plugins/moodle/: diff.php, downloads.php, f_fixhtml.php,
+	moodle_binary_store.php, moodle_highlight.php,
+	moodle_rescue_html.php, moodle_wikidump.php, sitemap.php,
+	wantedpages.php: 
+	
+	Added the $Id$ tag
+
+2005-07-22 Friday 07:40  stronk7
+
+	* ewiki/ewiki.php: 
+	
+	Now paging of older versions is showed and working properly. It was
+	really buggy! One string added to wiki lang file too. Bug 3750. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=3750)
+	
+	Merged from MOODLE_15_STABLE
+
+2005-07-22 Friday 07:38  stronk7
+
+	* ewiki/ewiki.php: 
+	
+	Now paging of older versions is showed and working properly. It was
+	really buggy! One string added to wiki lang file too. Bug 3750. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=3750)
+
+2005-07-12 Tuesday 16:00  moodler
+
+	* restorelib.php: 
+	
+	Merged SC139 from stable
+
+2005-07-12 Tuesday 15:53  moodler
+
+	* restorelib.php: 
+	
+	Escaped text output during relinking, as per SC 139
+
+2005-07-10 Sunday 00:41  stronk7
+
+	* ewiki/plugins/moodle/f_fixhtml.php: 
+	
+	The hardcoded limit of 1000 was breaking long pages display in
+	Moodle.  I've changed it to a variable limit depending of the page
+	lenght. Bug 3039. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=3039)
+	
+	Merged from MOODLE_15_STABLE
+
+2005-07-10 Sunday 00:39  stronk7
+
+	* ewiki/plugins/moodle/f_fixhtml.php: 
+	
+	The hardcode limit of 1000 was breaking long pages display in
+	Moodle.  I've changed it to a variable limit depending of the page
+	lenght. Bug 3039. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=3039)
+
+2005-07-05 Tuesday 16:29  skodak
+
+	* ewiki/plugins/moodle/downloads.php: 
+	
+	fixed comments - SC #61; merged from MOODLE_15_STABLE
+
+2005-07-05 Tuesday 16:27  skodak
+
+	* ewiki/plugins/moodle/downloads.php: 
+	
+	fixed comments - SC #61
+
+2005-07-05 Tuesday 16:18  skodak
+
+	* lib.php: 
+	
+	fixed searching - SC #61; merged from MOODLE_15_STABLE
+
+2005-07-05 Tuesday 16:17  skodak
+
+	* lib.php: 
+	
+	fixed searching - SC #61
+
+2005-07-05 Tuesday 02:56  stronk7
+
+	* backuplib.php, restorelib.php: 
+	
+	Improved automatic relinking in backup and restore. Credits go to
+	skodak.  Complete refactoring of the system that was really awful
+	(my fault!).  Now everything is in its place and working like a
+	charm, making things really easier to be implemented and amplied.
+	Bug 3678 (http://moodle.org/bugs/bug.php?op=show&bugid=3678)
+	(http://moodle.org/mod/forum/discuss.php?d=26530)
+	
+	Note: Everything is merged from stable but the quiz module because
+	it has other changes not merged for now. I've skyped a message to
+	Gustav about it.
+	
+	Merged from MOODLE_15_STABLE
+
+2005-07-05 Tuesday 01:34  stronk7
+
+	* backuplib.php, restorelib.php: 
+	
+	Improved automatic relinking in backup and restore. Credits go to
+	skodak.  Complete refactoring of the system that was really awful
+	(my fault!).  Now everything is in its place and working like a
+	charm, making things really easier to be implemented and amplied.
+	Bug 3678 (http://moodle.org/bugs/bug.php?op=show&bugid=3678)
+	(http://moodle.org/mod/forum/discuss.php?d=26530)
+
+2005-05-07 Saturday 01:57  stronk7
+
+	* filter.php: 
+	
+	New lightspeed wiki filter (using the static and nothingtodo
+	technologies now)
+
+2005-05-04 Wednesday 18:45  moodler
+
+	* view.php: 
+	
+	Fix for the jumpy flickering HTML editor!
+
+2005-04-30 Saturday 07:24  moodler
+
+	* view.php: 
+	
+	Only add a Wiki edit log entry when we have submitted changes. (SE)
+
+2005-04-11 Monday 00:47  stronk7
+
+	* mod.html: 
+	
+	Deleted one debug message and added one minor change.
+
+2005-04-10 Sunday 23:30  stronk7
+
+	* admin.php, index.php, mod.html, restorelib.php, view.php,
+	ewiki/ewiki.php, ewiki/plugins/moodle/moodle_wikidump.php: 
+	
+	Now wiki->name supports $CFG->filterall (specifying a multilang
+	name allows to have different start pages too!)
+	
+	I've found some bad XHTML in this module and some inconsistencies
+	with different cased page-names. Are wikipages different if their
+	name case is different? If no, we should fix it.
+
+2005-04-03 Sunday 01:37  stronk7
+
+	* ewiki/ewiki.php: 
+	
+	Replacing some HTTP_POST_VARS uses because it doesn't work always!
+	Using data_submitted() or $_POST
+
+2005-04-02 Saturday 19:54  moodler
+
+	* ewiki/ewiki.php: 
+	
+	Replace HTTP_POST_VARS and HTTP_GET_VARS with _POST and _GET
+
+2005-03-15 Tuesday 17:58  moodler
+
+	* view.php: 
+	
+	Now uses the new tab structure (SE)
+
+2005-03-15 Tuesday 16:38  moodler
+
+	* filter.php: 
+	
+	Simplify autolink styles to "modulename autolink"
+
+2005-03-14 Monday 00:25  moodler
+
+	* index.php: 
+	
+	Removed some redundant wrappers
+
+2005-03-14 Monday 00:17  moodler
+
+	* view.php: 
+	
+	Standardise the intro box using an ID
+
+2005-03-10 Thursday 22:11  moodler
+
+	* view.php: 
+	
+	Better logging and recent activity
+
+2005-03-10 Thursday 21:30  moodler
+
+	* lib.php, version.php: 
+	
+	Variety of small fixes, but mostly related to how the recent
+	activity block is constructed.	A new function exists to pump these
+	notes out in a standard way :  print_recent_activity_note.
+	
+	Module dependencies also updated because of this.
+
+2005-03-09 Wednesday 23:14  paca70
+
+	* ewikimoodlelib.php: 
+	
+	Merged postgresql fixes from MOODLE_14_STABLE(Revision 1.2.4.1) to
+	HEAD.
+
+2005-03-08 Tuesday 15:47  moodler
+
+	* filter.php: 
+	
+	Fixed a bug that was using all versions of each page in the filter
+	process.  Now only one instance of each page is used. (SE)
+
+2005-03-07 Monday 23:11  moodler
+
+	* ewiki/plugins/moodle/downloads.php: 
+	
+	Fixed four more references to mimetypes.php (bug 2690)	Thanks,
+	Gustav!
+
+2005-03-07 Monday 14:32  moodler
+
+	* ewiki/ewiki.php: 
+	
+	Minor formatting changes ... put a table around the htmleditor area
+	to rein it in.
+
+2005-03-07 Monday 14:00  moodler
+
+	* ewiki/plugins/moodle/downloads.php: 
+	
+	Merged fix from stable for dates
+
+2005-03-07 Monday 13:57  moodler
+
+	* ewiki/plugins/moodle/downloads.php: 
+	
+	FIxed a date formatting bug
+
+2005-03-05 Saturday 12:14  mchurch
+
+	* ewikimoodlelib.php, lib.php, view.php: 
+	
+	Added the 'get_recent_activity' function (see bug 1897).
+
+2005-03-04 Friday 18:11  moodler
+
+	* filter.php: 
+	
+	Rewritten to use the new generic filter function. (SE)
+
+2005-02-27 Sunday 09:47  stronk7
+
+	* lib.php, mod.html, view.php: 
+	
+	Some $ME are now out!
+	
+	Merged from MOODLE_14_STABLE
+
+2005-02-27 Sunday 09:15  stronk7
+
+	* lib.php, mod.html, view.php: 
+	
+	Some $ME are now out!
+
+2005-02-25 Friday 08:11  stronk7
+
+	* view.php: 
+	
+	Avoid some notices breaking image display and correct redirects.
+	Bug 2638.  (http://moodle.org/bugs/bug.php?op=show&bugid=2638)
+	
+	Merged from MOODLE_14_STABLE
+
+2005-02-25 Friday 08:10  stronk7
+
+	* view.php: 
+	
+	Avoid some notices breaking image display and correct redirects.
+	Bug 2638.  (http://moodle.org/bugs/bug.php?op=show&bugid=2638)
+
+2005-02-25 Friday 07:50  stronk7
+
+	* lib.php: 
+	
+	Now the get_participants() standard function is working inside wiki
+	module
+	
+	Merged from MOODLE_14_STABLE
+
+2005-02-25 Friday 07:48  stronk7
+
+	* lib.php: 
+	
+	Now the get_participants() standard function is working inside wiki
+	module
+
+2005-02-23 Wednesday 07:37  stronk7
+
+	* ewiki/ewiki.php: 
+	
+	When any URL is going to be used in a Location header or in a
+	meta-refresh, both Safari and Firefox, seems to fail using &amp; as
+	parameter separator. Bug 2620. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=2620)
+
+2005-02-22 Tuesday 01:55  stronk7
+
+	* backuplib.php, ewikimoodlelib.php, restorelib.php, version.php,
+	db/mysql.php, db/mysql.sql, db/postgres7.php, db/postgres7.sql: 
+	
+	Major rework of the wiki backup/restore.
+	
+	It wasn' working fine because the wiki_pages table hadn't an id
+	(primary key) field.
+	
+	I've created, in the upgrade process, a temporary table to copy all
+	the wiki_pages records and then, drop and create again the table.
+	
+	Tested under MySQL. Need to be tested (both creation and upgrade)
+	under PostgreSQL!!!
+	
+	Minor modifications to ewikimoodlelib.php to work with this new id
+	field too. Seems to work although deeper tests will be welcome
+	(attachements, binary contents...)
+	
+	Cross your fingers! ;-)
+
+2005-02-19 Saturday 02:18  mchurch
+
+	* mod.html: 
+	
+	Fixed help button layout in accordance with standard modules (bug
+	2556).
+
+2005-02-19 Saturday 02:10  mchurch
+
+	* mod.html: 
+	
+	Fixed help button position in accordance with other modules. see
+	bug 2556.
+
+2005-02-18 Friday 03:19  gustav_delius
+
+	* mod.html: 
+	
+	Give groupmode selection to mod.html for all modules that use
+	groupmode. Also fix bug 2576
+
+2005-02-16 Wednesday 18:40  gustav_delius
+
+	* admin.php, version.php, view.php: 
+	
+	In order to ensure that when a teacher hides a resource or an
+	activity that students really can't get at it, even if they know
+	the direct links to its pages, I have given an optional third
+	argument $cm to the functions  require_login() and
+	require_course_login(). Pages showing information about a
+	particular course module now pass the course module object in this
+	third argument. The login functions will then test if either the
+	course module is visible or the user is a teacher. If neither is
+	the case then the user is redirected to the course homepage after
+	being shown a message "Sorry, this activity is currently hidden".
+	
+	(While I was at it I also turned the autologinguests off for most
+	module pages, except on the index.php pages and the view.php pages
+	for those modules that allow guests)
+
+2005-02-13 Sunday 05:41  gustav_delius
+
+	* mod.html: 
+	
+	Activities can now be hidden/shown from the activity editing page.
+	Also for modules that know about groups the groupmode can be set
+	from there. See bug 2533. This required adding to the mod.html
+	files calls to new functions print_visible_setting() and
+	print_groupmode_setting() which are combined in
+	print_standard_coursemodule_settings().
+	
+	The visibility of coursemodules is now always set through the
+	function set_coursemodule_visible() in order to make sure that the
+	associated events get updated in the calendar appropriately.
+	
+	If moving a coursemodule to a hidden section then the module is set
+	to hidden as well and its events are hidden in the calendar.
+	
+	If deleting a coursemodule its events are deleted from the
+	calendar.
+	
+	The function choose_from_menu() has an extra optional argument
+	$disabled which, when set to true, will disable the menu.
+	
+	For the sake of consistency the function set_groupmode_for_module
+	has been renamed to set_coursemodule_groupmode and the functions
+	show_course_module() and hide_course_module() have been combined to
+	set_coursemodule_visible().
+
+2005-02-10 Thursday 18:41  moodler
+
+	* admin.php, view.php, wiki_styles.php: 
+	
+	Removing the THEME variable and adding in classes where appropriate
+
+2005-02-08 Tuesday 07:33  stronk7
+
+	* restorelib.php: 
+	
+	Some minor changes to each module to XHTMLise the restore process
+
+2005-01-30 Sunday 22:21  julmis
+
+	* filter.php: 
+	
+	Adding <span class="nolink"> excluding.
+
+2005-01-23 Sunday 02:53  stronk7
+
+	* mod.html: 
+	
+	Modify sesskey behaviour. SC#73
+
+2005-01-19 Wednesday 17:26  urs_hunkler
+
+	* index.php, view.php: 
+	
+	_ added the div framework
+
+2005-01-16 Sunday 05:59  gustav_delius
+
+	* view.php: 
+	
+	corrected typo in previous commit
+
+2005-01-16 Sunday 05:55  gustav_delius
+
+	* view.php: 
+	
+	fixed bug 1887
+
+2005-01-16 Sunday 05:49  gustav_delius
+
+	* backuplib.php, restorelib.php: 
+	
+	implemented fix for restore problem given in bug #1589
+
+2004-12-16 Thursday 05:59  skodak
+
+	* ewiki/plugins/moodle/moodle_wikidump.php: 
+	
+	merged from MOODLE_14_STABLE; updated zipping code - see bug #2228
+
+2004-12-16 Thursday 05:57  skodak
+
+	* ewiki/plugins/moodle/moodle_wikidump.php: 
+	
+	updated zipping code - see bug #2228
+
+2004-12-09 Thursday 06:05  mchurch
+
+	* ewiki/plugins/moodle/f_fixhtml.php: 
+	
+	Modified to ouput proper XHTML - especially if it already was
+	XHTML.	See bug #2230.
+
+2004-12-09 Thursday 05:58  mchurch
+
+	* ewiki/plugins/moodle/f_fixhtml.php: 
+	
+	Modified to ouput proper XHTML - especially if it already was
+	XHTML.	See bug #2230.
+
+2004-11-26 Friday 16:38  moodler
+
+	* mod.html, view.php, ewiki/ewiki.php: 
+	
+	Changes for XHTML and accessibility compatibility
+
+2004-11-24 Wednesday 06:40  mjollnir_
+
+	* version.php, db/postgres7.php: 
+	
+	Merged from MOODlE_14_STABLE: Attempt to fix bad constraint name in
+	wiki and version bump (honoring partial freeze) and requires bump
+	(needs changes in execute_sql to not show adodb feedback)
+
+2004-11-24 Wednesday 06:40  mjollnir_
+
+	* version.php, db/postgres7.php: 
+	
+	Attempt to fix bad constraint name in wiki and version bump
+	(honoring partial freeze) and requires bump (needs changes in
+	execute_sql to not show adodb feedback)
+
+2004-11-24 Wednesday 05:34  paca70
+
+	* ewiki/ewiki.php: 
+	
+	Fixed typo. Time to sleep...
+
+2004-11-24 Wednesday 05:29  paca70
+
+	* ewiki/ewiki.php: 
+	
+	Closed bug #2209 Don't replace & if it's part of encoded character.
+
+2004-11-22 Monday 05:16  mjollnir_
+
+	* version.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	Merged from MOODLE_14_STABLE: Indexes for wiki and version bump
+	(honoring partial freeze)
+
+2004-11-22 Monday 05:07  mjollnir_
+
+	* version.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	Indexes for wiki and version bump (honoring partial freeze)
+
+2004-11-11 Thursday 16:03  moodler
+
+	* wikifiles.php: 
+	
+	Replaced buggy old script with a script
+
+2004-11-08 Monday 13:32  mjollnir_
+
+	* ewiki/: ewiki.php, plugins/moodle/downloads.php,
+	plugins/moodle/moodle_binary_store.php: 
+	
+	Wiki integration with upload class.  Changes in two upload forms
+	and in moodle_binary_store.php - moodle_binary_store_file
+	
+	These patches are maintained in an publicly accessible Arch
+	repository, see:
+	http://lists.eduforge.org/cgi-bin/archzoom.cgi/arch-eduforge@cataly
+	st.net.nz--2004-MIRROR/moodle--eduforge--1.3.3
+	
+	Index of arch patches in this commit:
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	363	Penny Leach <penny@catalyst.net.nz>	wiki integration
+	with upload class. 
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	364	Penny Leach <penny@catalyst.net.nz>	fixed lost submit
+	button from last wiki upload patch, also fixed bug related to
+	generating db id for attached files
+	
+	Full logs:
+	
+	Revision: moodle--eduforge--1.3.3--patch-363 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Nov  8 11:18:08 NZDT 2004
+	Standard-date: 2004-11-07 22:18:08 GMT Modified-files:
+	mod/wiki/ewiki/ewiki.php    
+	mod/wiki/ewiki/plugins/moodle/downloads.php    
+	mod/wiki/ewiki/plugins/moodle/moodle_binary_store.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	363 Summary: wiki integration with upload class.  Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-364 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Nov  8 16:01:29 NZDT 2004
+	Standard-date: 2004-11-08 03:01:29 GMT Modified-files:
+	mod/wiki/ewiki/plugins/moodle/downloads.php    
+	mod/wiki/ewiki/plugins/moodle/moodle_binary_store.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	364 Summary: fixed lost submit button from last wiki upload patch,
+	also fixed bug related to generating db id for attached files
+	Keywords:
+
+2004-11-02 Tuesday 20:53  moodler
+
+	* mod.html, version.php, wikifiles.php: 
+	
+	Updated Resource, Wiki and Scorm to use the new files/index.php to
+	choose files.	The old coursefiles.php is obsolete.
+
+2004-11-02 Tuesday 20:02  moodler
+
+	* mod.html, version.php, wikifiles.php: 
+	
+	files/index.php now allows choosing and it makes the
+	coursefiles.php scripts unnecessary.
+	
+	Wiki, Resource and Scorm now use the new method, so their versions
+	have been bumped.
+
+2004-10-26 Tuesday 15:42  moodler
+
+	* lib.php: 
+	
+	Merged fix from stable
+
+2004-10-26 Tuesday 15:40  moodler
+
+	* lib.php: 
+	
+	Add slashes to wiki names when creating new entries.
+
+2004-10-25 Monday 05:08  skodak
+
+	* lib.php: 
+	
+	merged from 14_STABLE - fixed warning in Activity report/Outline -
+	oops, wrong line
+
+2004-10-25 Monday 05:00  skodak
+
+	* lib.php: 
+	
+	fixed warning in Activity report/Outline - oops, wrong line
+
+2004-10-24 Sunday 03:21  skodak
+
+	* lib.php: 
+	
+	merged from 14_STABLE - fixed warning in Activity report/Outline
+
+2004-10-24 Sunday 03:07  skodak
+
+	* lib.php: 
+	
+	fixed warning in Activity report/Outline
+
+2004-10-18 Monday 07:16  stronk7
+
+	* wikifiles.php: 
+	
+	Now Wiki's FileManager is using central zip & unzip functions.
+	
+	Merged from MOODLE_14_STABLE
+
+2004-10-18 Monday 07:14  stronk7
+
+	* wikifiles.php: 
+	
+	Now Wiki's FileManager is using central zip & unzip functions.
+
+2004-10-01 Friday 10:19  moodler
+
+	* admin.php: 
+	
+	Merged from stable
+
+2004-10-01 Friday 10:18  moodler
+
+	* admin.php: 
+	
+	Clean action so it isn't shown raw in error messages
+
+2004-09-24 Friday 16:20  paca70
+
+	* db/postgres7.sql: 
+	
+	Fixes for new postgresql database creation
+
+2004-09-24 Friday 15:49  paca70
+
+	* db/postgres7.sql: 
+	
+	Fixes for new postgres database creation
+
+2004-09-21 Tuesday 19:41  gustav_delius
+
+	* admin.php, lib.php, view.php: 
+	
+	Resolved problems with previous replacement of & to &amp; and fixed
+	redirect() to entity encode the inut where needed.  Julian Sedding
+
+2004-09-19 Sunday 06:36  skodak
+
+	* checklinks.html, removepages.html, revertpages.html,
+	setpageflags.html, strippages.html: 
+	
+	short php tags - Bug #1956
+
+2004-09-19 Sunday 06:31  skodak
+
+	* checklinks.html, removepages.html, revertpages.html,
+	setpageflags.html, strippages.html: 
+	
+	short php tags - Bug #1956
+
+2004-09-17 Friday 01:13  gustav_delius
+
+	* admin.php, filter.php, index.php, lib.php, view.php,
+	wikifiles.php, ewiki/ewiki.php, ewiki/plugins/moodle/downloads.php:
+	
+	
+	XHTML compliance - fixed (hopefully) all <img> tags - global
+	replace on <br> to <br /> - &amp; in URLs - got the forum module
+	XHTML compliant Julian Sedding
+
+2004-09-16 Thursday 06:07  mjollnir_
+
+	* wikifiles.php: 
+	
+	Integration of new centralised upload code with wiki/wikifiles.php
+	- this is the choose initial page part, not the upload a page into
+	the wiki part.
+	
+	These patches are maintained in an publicly accessible Arch
+	repository, see:
+	http://lists.eduforge.org/cgi-bin/archzoom.cgi/arch-eduforge@cataly
+	st.net.nz--2004-MIRROR/moodle--eduforge--1.3.3
+	
+	Index of arch patches in this commit:
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	63     2004-09-15 21:56:38 GMT	   Penny Leach
+	<penny@catalyst.net.nz>     wikifiles integration with upload class
+	- this is just the initial page part, not the upload a file into
+	the wiki parg
+	
+	Full logs:
+	
+	Revision: moodle--eduforge--1.3.3--patch-63 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Thu Sep 16 09:56:38 NZST 2004
+	Standard-date: 2004-09-15 21:56:38 GMT Modified-files:
+	mod/wiki/wikifiles.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	63 Summary: wikifiles integration with upload class - this is just
+	the initial page part, not the upload a file into the wiki parg
+	Keywords:
+
+2004-09-14 Tuesday 07:09  mchurch
+
+	* lib.php: 
+	
+	Fixed strip_pages bug.
+
+2004-09-14 Tuesday 07:03  mchurch
+
+	* admin.php, lib.php: 
+	
+	Fixed strip_pages bug.
+
+2004-09-12 Sunday 22:41  gustav_delius
+
+	* admin.php, checklinks.html, ewikimoodlelib.php, lib.php,
+	mod.html, removepages.html, restorelib.php, revertpages.html,
+	setpageflags.html, strippages.html, test.php, view.php,
+	wikifiles.php, ewiki/ewiki.php, ewiki/plugins/aview/backlinks.php,
+	ewiki/plugins/aview/downloads.php, ewiki/plugins/email_protect.php,
+	ewiki/plugins/init.php, ewiki/plugins/markup/footnotes.php,
+	ewiki/plugins/moodle/diff.php, ewiki/plugins/moodle/downloads.php,
+	ewiki/plugins/moodle/moodle_wikidump.php: 
+	
+	closed <input /> <br /> <hr />
+
+2004-09-11 Saturday 02:38  mchurch
+
+	* ewiki/plugins/moodle/moodle_wikidump.php: 
+	
+	Fixed a bug in export caused by the removal of email filters.
+
+2004-09-11 Saturday 02:34  mchurch
+
+	* ewiki/plugins/moodle/moodle_wikidump.php: 
+	
+	Fixed a bug to export caused by removal of the email filters.
+
+2004-09-09 Thursday 23:57  moodler
+
+	* view.php: 
+	
+	Undoing the commenting-out I did earlier, since the problem was
+	something else.
+
+2004-09-09 Thursday 20:52  mchurch
+
+	* view.php: 
+	
+	Fixed potential undefined variable.
+
+2004-09-09 Thursday 20:47  mchurch
+
+	* view.php: 
+	
+	Fixed potential undefined variable warning.
+
+2004-09-09 Thursday 12:49  moodler
+
+	* view.php: 
+	
+	For some reason this include_once doesn't work ... I can't see why
+	though!?
+	
+	It's only included once and mentioned once throughout the all the
+	wiki code, but I have a site which errors-out with a redeclaration
+	error ...
+	
+	This plugin doesn't seem to be needed for highlighting of search 
+	anyway so I'll uncomment it for now.
+
+2004-09-04 Saturday 19:30  paca70
+
+	* ewiki/: ewiki.php, plugins/email_protect.php: 
+	
+	Use getremoteaddr() in place of getenv("REMOTE_ADDR") and
+	$_SERVER["REMOTE_ADDR"]
+
+2004-09-04 Saturday 05:25  skaldrom
+
+	* view.php: 
+	
+	Reactivated Cancel when editing.
+
+2004-09-04 Saturday 05:05  skaldrom
+
+	* lib.php, view.php: 
+	
+	Removed Wikinews
+
+2004-09-04 Saturday 05:02  skaldrom
+
+	* admin.php, filter.php, lib.php, view.php: 
+	
+	Fix for Bug #1603 - Shortening URLs in Wiki pages
+	
+	- Renamed wikipage in page (URL and variable) - When groupid or
+	userid is 0, it is not shown anymore (I hope I have changed all
+	places)
+
+2004-09-04 Saturday 04:01  skaldrom
+
+	* view.php, ewiki/plugins/moodle/moodle_wikidump.php: 
+	
+	Fix for Bug #1820 - wiki export does not keep correct links Create
+	filenames with + (next+page.html).
+
+2004-09-03 Friday 03:20  mchurch
+
+	* view.php, ewiki/ewiki.php: 
+	
+	Fixed some problems affecting wiki ** and ## formatting tags.
+
+2004-09-03 Friday 02:43  mchurch
+
+	* view.php, ewiki/ewiki.php: 
+	
+	Fixed some formatting issues that prevented ** and ## from working.
+
+2004-09-01 Wednesday 09:08  mchurch
+
+	* filter.php: 
+	
+	Fixed a malformed if statement around 'get_site()'.
+
+2004-08-29 Sunday 22:15  gustav_delius
+
+	* filter.php, lib.php, wikifiles.php: 
+	
+	removed unnecessary calls to get_site()
+
+2004-08-28 Saturday 23:10  mchurch
+
+	* ewikimoodlelib.php: 
+	
+	Fixed some SQL statements so they work with PostGreSQL as well as
+	MySQL.	Fix provided by paca.
+
+2004-08-26 Thursday 23:23  moodler
+
+	* backuplib.php, view.php, ewiki/plugins/aview/downloads.php,
+	ewiki/plugins/moodle/diff.php, ewiki/plugins/moodle/downloads.php: 
+	
+	Merged changes from stable
+
+2004-08-26 Thursday 18:58  stronk7
+
+	* restorelib.php: 
+	
+	Merged from 14_STABLE Bug 1788
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1788)
+
+2004-08-26 Thursday 18:56  stronk7
+
+	* restorelib.php: 
+	
+	Recode page->userid at restore time.
+
+2004-08-26 Thursday 04:31  mchurch
+
+	* ewiki/plugins/moodle/diff.php: 
+	
+	Updated diff functions to handle HTML formatting a little better.
+
+2004-08-25 Wednesday 21:39  mchurch
+
+	* ewiki/plugins/moodle/downloads.php: 
+	
+	Reorganized the attachment details page a bit, and added author
+	info.
+
+2004-08-25 Wednesday 21:18  mchurch
+
+	* ewiki/plugins/aview/downloads.php: 
+	
+	Changed attachment section on content page to only display if there
+	are attachments, and then only as a link to the attachments control
+	page.
+
+2004-08-25 Wednesday 12:48  moodler
+
+	* backuplib.php, restorelib.php: 
+	
+	Added USERID field to restore/backup	bug 1788
+
+2004-08-25 Wednesday 12:19  mchurch
+
+	* ewiki/plugins/: aview/downloads.php, moodle/downloads.php: 
+	
+	Restoring summary view to attachments view.
+
+2004-08-25 Wednesday 11:19  moodler
+
+	* ewiki/plugins/aview/downloads.php: 
+	
+	Hiding attachment listing altogether
+
+2004-08-25 Wednesday 11:00  moodler
+
+	* view.php: 
+	
+	Fixed my bug with the missing Attachments tab
+
+2004-08-25 Wednesday 10:51  mchurch
+
+	* ewiki/plugins/moodle/downloads.php: 
+	
+	Cleaned up attachment section of view page.
+
+2004-08-25 Wednesday 02:38  gustav_delius
+
+	* ewiki/ewiki.php: 
+	
+	Merging from stable branch
+
+2004-08-24 Tuesday 21:39  mchurch
+
+	* view.php, ewiki/ewiki.php: 
+	
+	Set Moodle filtering for wiki text only.
+
+2004-08-24 Tuesday 20:50  gustav_delius
+
+	* view.php, view.php: 
+	
+	disabled email_protect plugin, see Bug #1775
+
+2004-08-24 Tuesday 18:13  gustav_delius
+
+	* version.php: 
+	
+	All the modules in which I made changes require the latest version
+	of datalib.php.
+
+2004-08-24 Tuesday 15:03  moodler
+
+	* lib.php, view.php: 
+	
+	Merged some changes
+
+2004-08-24 Tuesday 14:48  moodler
+
+	* view.php, ewiki/ewiki.php: 
+	
+	Merged some changes from HEAD
+
+2004-08-24 Tuesday 08:08  mchurch
+
+	* view.php: 
+	
+	Bug #1611 - Fixed the editing of wiki pages containing apostrophes.
+
+2004-08-24 Tuesday 05:56  mchurch
+
+	* view.php, ewiki/ewiki.php: 
+	
+	Fixed filtering of wiki output to only apply to wiki text pages and
+	not action pages.
+
+2004-08-24 Tuesday 05:27  gustav_delius
+
+	* lib.php: 
+	
+	fixed small typo
+
+2004-08-24 Tuesday 05:26  gustav_delius
+
+	* view.php: 
+	
+	fixed bug 1748
+
+2004-08-23 Monday 17:04  moodler
+
+	* version.php, db/mysql.php, db/postgres7.php, ewiki/ewiki.php: 
+	
+	Attempt to extract the user from the old author field when
+	upgrading
+
+2004-08-23 Monday 00:41  moodler
+
+	* version.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql, ewiki/ewiki.php: 
+	
+	Database now stores userid, and page info is now more Moodley (plus
+	it doesn't show IP information to everyone!)
+	
+	All old authors are not currently displayed  (I chose not to) This
+	is easy to fix if people want it, since the old author string is
+	still there in the database.
+
+2004-08-22 Sunday 22:38  gustav_delius
+
+	* index.php: 
+	
+	All modules are now suitable for the site page. They now all follow
+	the same rules, namely that any students enrolled in at least one
+	course is considered to be a student on the site.
+	
+	All the page headers work correctly also on the site course.
+	
+	On the site page the modules don't require login unless necessary
+	or required by $CFG->forcelogin.
+
+2004-08-22 Sunday 04:20  gustav_delius
+
+	* admin.php, index.php, view.php: 
+	
+	Removed notices by introducing new function print_header_simple()
+	which works on site as well as in courses without extra logic.
+
+2004-08-22 Sunday 00:26  gustav_delius
+
+	* lib.php: 
+	
+	improved documentation for wiki types
+
+2004-08-21 Saturday 23:52  gustav_delius
+
+	* mod.html: 
+	
+	removed some hard-coded strings and a warning from setup page
+
+2004-08-18 Wednesday 00:31  moodler
+
+	* view.php: 
+	
+	DIsabling formatting for now, until we can separate out wiki
+	content from wiki forms etc ... and only apply formatting to the
+	content.
+
+2004-08-18 Wednesday 00:20  moodler
+
+	* lib.php, view.php: 
+	
+	Interface tweaks
+
+2004-08-18 Wednesday 00:12  moodler
+
+	* view.php: 
+	
+	The little edit icon was becoming very annoying :-)
+	
+	How about these tabs?
+
+2004-08-17 Tuesday 22:44  moodler
+
+	* wikifiles.php, ewiki/ewiki.php: 
+	
+	Fixed HTML editor and some PHP5 notices
+
+2004-08-08 Sunday 14:57  moodler
+
+	* filter.php: 
+	
+	Improvement to filters, providing speed boost AND better
+	compatibility with Turck MMCache.
+	
+	Filter function must now have a particular name
+	
+	   eg resource_filter
+	
+	where "resource" is the name of the directory that filter.php is
+	in.
+
+2004-07-30 Friday 19:09  paca70
+
+	* version.php, db/postgres7.php, db/postgres7.sql: 
+	
+	More updates, but wiki is still working only partical.
+
+2004-07-30 Friday 18:42  paca70
+
+	* version.php, db/postgres7.php, db/postgres7.sql: 
+	
+	Fixed uncorrect primary key for postgresql.
+
+2004-07-28 Wednesday 16:51  paca70
+
+	* db/: postgres7.php, postgres7.sql: 
+	
+	Wery quickly tested and untested  versions for Postgresql.
+
+2004-06-24 Thursday 23:56  mchurch
+
+	* lib.php, mod.html, version.php, view.php, db/mysql.php,
+	db/mysql.sql, ewiki/ewiki.php: 
+	
+	Added a per-wiki option to allow disabling of automatic camel case
+	linking.  If pages have been created using camel case, and this
+	option is activated, those pages remain, but may not be linkable.
+	If the option is disabled, they will be linked again.
+
+2004-06-24 Thursday 21:27  mchurch
+
+	* WARNING.txt: 
+	
+	Removing non-production warning. This is no longer valid.
+
+2004-06-15 Tuesday 05:20  skaldrom
+
+	* ewiki/plugins/moodle/moodle_wikidump.php: 
+	
+	Added new Headers from the Erfurtwiki-Project
+
+2004-06-15 Tuesday 04:56  skaldrom
+
+	* TODO.txt, mod.html: 
+	
+	Fixed more uninitialized variables (Bug #1557 - EWIKI_NAME already
+	defined)
+
+2004-06-14 Monday 03:41  mchurch
+
+	* filter.php, lib.php, mod.html, version.php, view.php,
+	db/mysql.php, db/mysql.sql: 
+	
+	Added options to select or deselect administration flags for
+	students.
+
+2004-06-12 Saturday 06:40  skaldrom
+
+	* ewiki/ewiki.php: 
+	
+	Fixed Bug #1548 - Empty lines inserted when using HTML Editor
+
+2004-06-10 Thursday 19:42  skaldrom
+
+	* admin.php, lib.php, view.php, ewiki/ewiki.php,
+	ewiki/plugins/moodle/downloads.php: 
+	
+	Warnings eliminated and made a fix for Bug #1557 - EWIKI_NAME
+	already defined
+
+2004-06-10 Thursday 06:50  gustav_delius
+
+	* lib.php: 
+	
+	made sure that ungraded modules would not show up in gradebook
+
+2004-06-09 Wednesday 04:24  skaldrom
+
+	* ewiki/ewiki.php: 
+	
+	Fix for Bug #1543 - wiki requires PHP >= 4.3
+
+2004-06-09 Wednesday 04:22  skaldrom
+
+	* TODO.txt, admin.php, ewiki/ewiki.php,
+	ewiki/plugins/moodle/diff.php: 
+	
+	Better fix for Bug #1530 - Wiki diffs useless when using HTML
+	editor
+
+2004-06-07 Monday 02:37  skaldrom
+
+	* admin.php, ewiki/plugins/moodle/diff.php,
+	ewiki/plugins/moodle/moodle_wikidump.php: 
+	
+	Better Logging
+
+2004-06-07 Monday 01:48  skaldrom
+
+	* admin.php: 
+	
+	Security-check was wrong.
+
+2004-06-06 Sunday 23:38  skaldrom
+
+	* ewiki/plugins/moodle/diff.php: 
+	
+	May fix Bug #1530 - Wiki diffs useless when using HTML editor.
+
+2004-06-06 Sunday 23:37  skaldrom
+
+	* TODO.txt, admin.php, view.php: 
+	
+	Made diff more usable for HTML: may fix Bug #1530 - Wiki diffs
+	useless when using HTML editor
+
+2004-06-06 Sunday 21:12  skaldrom
+
+	* TODO.txt: 
+	
+	Update
+
+2004-06-06 Sunday 20:07  skaldrom
+
+	* admin.php, ewikimoodlelib.php, lib.php, view.php,
+	ewiki/ewiki.php, ewiki/plugins/aview/backlinks.php,
+	ewiki/plugins/moodle/moodle_binary_store.php,
+	ewiki/plugins/moodle/moodle_wikidump.php,
+	ewiki/plugins/moodle/sitemap.php: 
+	
+	Export mechanism and Administration restriction.
+
+2004-06-05 Saturday 23:34  gustav_delius
+
+	* ewiki/plugins/aview/backlinks.php: 
+	
+	Fixed bug 1532, backlink now translatable
+
+2004-06-05 Saturday 04:23  skaldrom
+
+	* view.php: 
+	
+	Stopped ewiki guessing the URL: Some users were kicked back to the
+	homepage after editing.
+
+2004-06-04 Friday 15:28  moodler
+
+	* version.php: 
+	
+	MOdules are dependent on this version of course/mod.php
+
+2004-06-04 Friday 15:04  moodler
+
+	* mod.html: 
+	
+	Allow editor on Wiki summary
+
+2004-06-03 Thursday 21:40  mchurch
+
+	* view.php: 
+	
+	Changed multiple occurrences of help icon in non-HTML modes, to one
+	occurrence for all modes.
+
+2004-06-03 Thursday 20:13  mchurch
+
+	* wikifiles.php: 
+	
+	Changed use of PHP_SELF to $ME.
+
+2004-06-03 Thursday 07:14  mchurch
+
+	* mod.html: 
+	
+	Fixed use of '- or -' string to a language file string. Added back
+	lost initialcontent help file.
+
+2004-06-03 Thursday 05:32  mchurch
+
+	* view.php: 
+	
+	Added 'HowToWiki' help file to view wiki screen.
+
+2004-06-03 Thursday 04:58  skaldrom
+
+	* lib.php, view.php: 
+	
+	Reinserted Sitemap and made a better page-title.
+
+2004-06-03 Thursday 04:35  skaldrom
+
+	* ewiki/plugins/: aview/downloads.php, lib/mime_magic.php: 
+	
+	reimport
+
+2004-06-03 Thursday 03:00  mchurch
+
+	* lib.php: 
+	
+	Removed requirement for a wiki activity's page name to be in
+	CamelCase, per bug report 1355.
+
+2004-06-03 Thursday 02:17  mchurch
+
+	* ewiki/plugins/: aview/backlinks.php, feature/imgresize_gd.php,
+	markup/footnotes.php, page/orphanedpages.php, page/pageindex.php: 
+	
+	Replaced some needed plugins.
+
+2004-06-02 Wednesday 21:21  moodler
+
+	* view.php: 
+	
+	Centralise summary box
+
+2004-06-02 Wednesday 20:45  moodler
+
+	* TODO.txt, WARNING.txt, admin.php, backuplib.php, checklinks.html,
+	ewikimoodlelib.php, filter.php, icon.gif, index.php, lib.php,
+	mod.html, removepages.html, restorelib.php, revertpages.html,
+	setpageflags.html, strippages.html, test.php, version.php,
+	view.php, wiki_styles.php, wikifiles.php, db/mysql.php,
+	db/mysql.sql, ewiki/CREDITS, ewiki/INSTALL, ewiki/README,
+	ewiki/README.de, ewiki/UPGRADE, ewiki/ewiki.php,
+	ewiki/fragments/README, ewiki/fragments/auth.php,
+	ewiki/fragments/binary.php, ewiki/fragments/calendar.css,
+	ewiki/fragments/core.css, ewiki/fragments/funcs.inc,
+	ewiki/fragments/homepage.src, ewiki/fragments/htaccess,
+	ewiki/fragments/mkhuge, ewiki/fragments/nuke_mod_wiki_index,
+	ewiki/fragments/strip_wonderful_slashes.php,
+	ewiki/fragments/wiki_format.inc, ewiki/plugins/email_protect.php,
+	ewiki/plugins/init.php, ewiki/plugins/jump.php,
+	ewiki/plugins/notify.php, ewiki/plugins/patchsaving.php,
+	ewiki/plugins/pluginloader.php, ewiki/plugins/spages.php,
+	ewiki/plugins/moodle/downloads.php,
+	ewiki/plugins/moodle/f_fixhtml.php,
+	ewiki/plugins/moodle/moodle_binary_store.php,
+	ewiki/plugins/moodle/moodle_highlight.php,
+	ewiki/plugins/moodle/moodle_rescue_html.php,
+	ewiki/plugins/moodle/sitemap.php,
+	ewiki/plugins/moodle/wantedpages.php: 
+	
+	Wiki module, copied from contrib/wiki.
+	
+	I've left out stuff that didn't seem necessary ... including a lot
+	of the Wiki plugins which were quote large... I'm not sure if this
+	is currently working ... I'm about to try it out.
+

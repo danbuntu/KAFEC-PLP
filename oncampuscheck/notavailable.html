@@ -1,0 +1,18 @@
+<table width="90%" border="0" cellpadding="5" align="center" class="loginbox">
+
+  <tr>
+    <td width="50%" align="center" valign="top" class="content left">
+      <p>
+        This page cannot be accessed while 
+        <?php
+          if (isset($_GET["site"])) {
+            echo $_GET["site"];
+          } else {
+            echo 'off';
+          }
+        ?>
+         campus.
+      </p></br>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,1946 @@
+2007-01-15 Monday 02:58  stronk7
+
+	* db/: mysql.sql, postgres7.sql: 
+	
+	Deleting deprecated .sql files. MDL-7264 Byeeez!
+
+2007-01-12 Friday 03:47  skodak
+
+	* mod_form.php: 
+	
+	fixed text field widths in new forms
+
+2007-01-11 Thursday 16:06  moodler
+
+	* view.php: 
+	
+	FIxed up the intro boxes  XHTML Strict
+
+2007-01-05 Friday 12:51  jamiesensei
+
+	* mod_form.php: 
+	
+	added helpbuttons to htmleditors where needed. Further work on
+	htmleditor helpbutton code.
+
+2007-01-05 Friday 05:33  skodak
+
+	* edit.html: 
+	
+	MDL-8062 1.3 Remove name attribute from <form> and fix focus
+	everywhere - more changes ahead
+
+2007-01-03 Wednesday 12:55  moodler
+
+	* lib.php, view.php: 
+	
+	Checking in Nick Freear's changes and evolution of Julette White's
+	code with a few modifications made to the install process) for
+	further work in HEAD.
+	
+	See MDL-7380 for details.
+
+2006-12-28 Thursday 17:32  jamiesensei
+
+	* mod_form.php: 
+	
+	changes to how we generate the id attribute of forms and the naming
+	convention of forms migrate blog edit to formslib
+
+2006-12-21 Thursday 20:18  nfreear
+
+	* view.php: 
+	
+	Integration 3 - groups in core, modules, calendar... (Part of
+	MDL-7380, new groups)
+
+2006-12-19 Tuesday 15:03  jamiesensei
+
+	* mod_form.php: 
+	
+	
+	* Added setAdvanced functionality see
+	http://docs.moodle.org/en/Development:lib/formslib.php_setAdvanced
+	* Added MoodleQuickForm method closeHeaderBefore($elementName);
+	http://docs.moodle.org/en/Development:lib/formslib.php_Form_Definit
+	ion#Use_Fieldsets_to_group_Form_Elements * Added moodleform method
+	add_action_buttons(); see
+	http://docs.moodle.org/en/Development:lib/formslib.php_Form_Definit
+	ion#add_action_buttons.28.24cancel_.3D_true.2C_.24revert_.3D_true.2
+	C_.24submitlabel.3Dnull.29.3B * is_cancelled method added to
+	moodleform
+	http://docs.moodle.org/en/Development:lib/formslib.php_Usage#Basic_
+	Usage_in_A_Normal_Page * added hidden labels to elements within
+	groups such as the date_selector select boxes and other elements in
+	'groups' * quiz/mod.html migrated to formslib * glossary/edit.html
+	migrated to formslib * extended registerNoSubmitButton()
+	functionality to automatically add js to onclick to bypass client
+	side js input validation.  * added no_submit_button_pressed()
+	function that can be used in a similar way to is_cancelled() as a
+	test in the main script to see if some button in the page has been
+	pressed that is a submit button that is used for some dynamic
+	functionality within the form and not to submit the data for the
+	whole form.  * added new condition for disabledIf which allows to
+	disable another form element if no options are selected from within
+	a select element.  * added default 'action' for moodleform  -
+	strip_querystring(qualified_me())
+	http://docs.moodle.org/en/Development:lib/formslib.php_Usage#Basic_
+	Usage_in_A_Normal_Page
+
+2006-12-14 Thursday 20:44  jamiesensei
+
+	* mod_form.php: 
+	
+	added setAdvanced MoodleQuickForm method. And added
+	closeHeaderAfter method
+
+2006-12-13 Wednesday 19:54  nfreear
+
+	* lib.php: 
+	
+	Functions to return SQL fragments for groups. Modules, core... no
+	longer need to refer directly to groups DB tables. (Part of
+	MDL-7380, new groups)
+
+2006-12-04 Monday 17:36  jamiesensei
+
+	* mod_form.php: 
+	
+	added new 'cancel' element type and introduced new is_cancelled()
+	MoodleQuickForm method.  also used new cancel button in all
+	mod_forms as well as a 'Revert' button and reworked logic about
+	where to go on cancel or after submission for modedit.php
+
+2006-11-25 Saturday 00:38  jamiesensei
+
+	* mod_form.php: 
+	
+	changed name of submit buttons to submitbutton instead of sumbit as
+	submit was conflicting with method form.submit()
+
+2006-11-24 Friday 14:39  jamiesensei
+
+	* mod_form.php: 
+	
+	some restructuring of formslib - moving moodleform_mod definition
+	to new file course\moodleform_mod.php and some changes to
+	moodleform_mod standard elements setup and moodleform disabledIf
+	API
+
+2006-11-15 Wednesday 15:49  jamiesensei
+
+	* mod_form.php: 
+	
+	little bit of clean up. removed extra global var and format element
+	helpbutton is now included in element definition.
+
+2006-11-14 Tuesday 14:01  jamiesensei
+
+	* mod.html, mod_form.php: 
+	
+	migrated journal/mod.html to formslib
+
+2006-11-09 Thursday 15:21  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	drop utf8 support from HEAD MDL-6332
+
+2006-11-07 Tuesday 08:09  mjollnir_
+
+	* db/: mysql.php, postgres7.php: 
+	
+	Merged from MOODLE_17_STABLE: fixed the journal upgrade. renaming a
+	null column to not null is unhappy
+
+2006-11-07 Tuesday 08:09  mjollnir_
+
+	* db/: mysql.php, postgres7.php: 
+	
+	fixed the journal upgrade. renaming a null column to not null is
+	unhappy
+
+2006-10-30 Monday 19:16  skodak
+
+	* lib.php, view.php: 
+	
+	Journal Module fixes fro 1.7 MDL-7159; merged from MOODLE_17_STABLE
+
+2006-10-30 Monday 19:11  skodak
+
+	* lib.php, view.php: 
+	
+	Journal Module fixes fro 1.7 MDL-7159
+
+2006-10-27 Friday 06:46  stronk7
+
+	* db/postgres7.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+	
+	Merged from MOODLE_17_STABLE
+
+2006-10-27 Friday 06:39  stronk7
+
+	* db/mysql.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+	
+	Merged from MOODLE_17_STABLE
+
+2006-10-27 Friday 06:29  stronk7
+
+	* db/postgres7.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+
+2006-10-27 Friday 06:25  stronk7
+
+	* db/mysql.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+
+2006-10-27 Friday 01:43  stronk7
+
+	* db/upgrade.php: 
+	
+	New upgrade.php file added for this module. MDL-7214
+	
+	Merged from HEAD
+
+2006-10-27 Friday 01:33  stronk7
+
+	* db/upgrade.php: 
+	
+	file upgrade.php was added on branch MOODLE_17_STABLE on 2006-10-26
+	17:43:07 +0000
+
+2006-10-27 Friday 01:33  stronk7
+
+	* db/upgrade.php: 
+	
+	New upgrade.php file added for this module. MDL-7214
+
+2006-10-22 Sunday 02:28  stronk7
+
+	* db/: oci8po.php, oci8po.sql, oci8po.php, oci8po.sql: 
+	
+	Deleting some old oci8po files from CVS.
+
+2006-10-17 Tuesday 18:05  thompson697
+
+	* restorelib.php: 
+	
+	Apply modularity to the creation of the log file during restore to
+	a new course.  Remove the responsibility for loging the application
+	of the course start date offset, from activity modules to the
+	backup module.	Merged from stable branch
+
+2006-10-16 Monday 18:40  thompson697
+
+	* restorelib.php: 
+	
+	Apply modularity to the creation of the log file during restore to
+	a new course.  Remove the responsibility for loging the application
+	of the course start date offset, from activity modules to the
+	backup module.
+
+2006-10-04 Wednesday 22:50  thompson697
+
+	* restorelib.php: 
+	
+	Change creation of restorelog file location to protected backupdata
+	folder.  Reassign style and language links
+
+2006-09-27 Wednesday 03:18  skodak
+
+	* restorelib.php: 
+	
+	fixed legacy comment upgrade code in assignment and journal
+
+2006-09-24 Sunday 22:01  vyshane
+
+	* lib.php: 
+	
+	Changed <module>_print_recent_activity() functions so that they
+	don't use $isteacher. However, I've left the $isteacher parameter
+	in the functions, for backward compatibility so as not to break
+	thrid party modules. Should we remove the parameter now?
+
+2006-09-21 Thursday 17:54  stronk7
+
+	* backuplib.php, lib.php, report.php, restorelib.php, version.php,
+	view.php, db/install.xml, db/migrate2utf8.xml, db/mysql.php,
+	db/mysql.sql, db/postgres7.php, db/postgres7.sql: 
+	
+	Last reserved word is out now! journal_entries->comment to
+	entrycomment
+	
+	Only 2 tables have reserved names but they aren't a problem if we
+	force $CFG->prefix always
+
+2006-09-21 Thursday 03:46  skodak
+
+	* db/: mysql.sql, oci8po.sql: 
+	
+	major whitespace cleanup - fixed \r\n line-ending
+
+2006-09-13 Wednesday 21:19  thompson697
+
+	* restorelib.php: 
+	
+	Complete work on Roll Forwards - Restore from previous semester
+	(MDL-5532) * Add fields to restore form to enable changes to Short
+	Name, Full Name and Start Date * Start Date offset added to Restore
+	process * Created Restorelog file in Course files area * Activity
+	Modules use offset to change dates * Activity Modules write changes
+	to Restorelog
+
+2006-09-12 Tuesday 16:22  moodler
+
+	* version.php: 
+	
+	Small bump for guest role fix
+
+2006-09-12 Tuesday 15:10  moodler
+
+	* version.php: 
+	
+	Reload the guest role using new defaults
+
+2006-08-12 Saturday 01:31  stronk7
+
+	* db/install.xml: 
+	
+	Oops, filled now. I forgot to save changes before commit.
+
+2006-08-12 Saturday 01:29  stronk7
+
+	* db/install.xml: 
+	
+	XMLDB schema initial commit for the journal module
+
+2006-08-10 Thursday 23:51  skodak
+
+	* edit.php, version.php, view.php, report.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283; backported from HEAD
+
+2006-08-10 Thursday 23:30  skodak
+
+	* edit.php, report.php, version.php, view.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283; backported from HEAD
+
+2006-08-09 Wednesday 06:09  skodak
+
+	* edit.php, report.php, version.php, view.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283
+
+2006-08-08 Tuesday 13:13  moodler
+
+	* version.php: 
+	
+	ROLES AND PERMISSIONS  - FIRST CHECK-IN
+	=======================================
+	
+	WARNING:  DEV IS CURRENTLY VERY UNSTABLE.
+	
+	This is a mega-checkin of the new Roles system.   A lot of changes
+	have been made in core and modules.
+	
+	Currently there are a lot of rough edges and known problems.  We
+	are working hard on these .. .the reason for getting this into HEAD
+	at this stage is enable us to move faster (our branch was diverging
+	from HEAD too much).
+	
+	Please keep an eye on http://docs.moodle.org/en/Roles for current
+	status and information for developers on how to use the new Roles
+	system.
+
+2006-04-28 Friday 11:18  toyomoyo
+
+	* version.php, db/mysql.php: 
+	
+	bug fix for 5303. hope i didn't break anything >_<
+
+2006-04-26 Wednesday 13:48  toyomoyo
+
+	* version.php, db/mysql.php, db/mysql.sql: 
+	
+	trying to change all the default NULL fields to NOT NULL default
+	'0'/'', hope i didn't mess up. Please report any bugs asap!
+
+2006-04-24 Monday 16:26  vyshane
+
+	* db/: mysql.sql, oci8po.sql, postgres7.sql: 
+	
+	Fixed inserts for log_display.
+
+2006-04-05 Wednesday 15:46  gustav_delius
+
+	* edit.php, index.php, report.php, view.php: 
+	
+	Fixed call to required_param()
+
+2006-04-05 Wednesday 14:41  moodler
+
+	* db/postgres7.php: 
+	
+	FIxing some blank lines as per bug 5095
+
+2006-03-29 Wednesday 07:31  stronk7
+
+	* restorelib.php: 
+	
+	Typo.
+
+2006-03-10 Friday 11:43  patrickslee
+
+	* db/migrate2utf8.php: 
+	
+	UTF8 migration - now supporting PostgreSQL
+
+2006-03-08 Wednesday 05:35  skodak
+
+	* db/migrate2utf8.php: 
+	
+	short php tags
+
+2006-03-07 Tuesday 10:20  patrickslee
+
+	* db/migrate2utf8.xml: 
+	
+	Added missing alias in SQL statements
+
+2006-02-24 Friday 16:13  toyomoyo
+
+	* db/migrate2utf8.php: 
+	
+	see changes for admin/utfdbmigrate.php
+
+2006-01-31 Tuesday 10:08  moodler
+
+	* db/migrate2utf8.php: 
+	
+	changed to use utfconvert function
+
+2006-01-25 Wednesday 14:11  moodler
+
+	* db/migrate2utf8.php: 
+	
+	bug fixning
+
+2006-01-17 Tuesday 15:27  moodler
+
+	* db/mysql.sql: 
+	
+	Added default values where needed for columns in the MySQL creation
+	script mysql.sql.  Added default values to migrate2utf8.xml, for
+	any varchar and text field types, if the default values for these
+	fields were not defined as '' in the MySQL table creation script.
+	
+	Committed by vyshane
+
+2006-01-16 Monday 05:09  mjollnir_
+
+	* restorelib.php: 
+	
+	Abstracted a bit of the restore procedure to allow for silent
+	restoring.  Added new function, import_backup_file_silently Changed
+	everything that prints stuff to check for a constant first. 
+	Backup_flush checks a different constant, this is so that output
+	can still get flushed to the browser when necessary but not print
+	<li>s everywhere.  Please test this!
+
+2006-01-13 Friday 15:24  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	more bug fixes =(
+
+2006-01-13 Friday 11:45  mjollnir_
+
+	* backuplib.php, restorelib.php: 
+	
+	Granular backup & restore: This patch allows the much requested
+	selection of individual instances of modules within a course to
+	backup and restore.  It needs A LOT of testing and probably some
+	prettyifying too.
+
+2006-01-09 Monday 14:06  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	utf8 migration support scripts
+
+2005-09-01 Thursday 12:14  mjollnir_
+
+	* lib.php: 
+	
+	Initial checkin of stats (from processing the log table).  I will
+	write up some information about it for the developers wiki.
+
+2005-07-12 Tuesday 15:11  moodler
+
+	* defaults.php: 
+	
+	No journal on new installs, merged from stable
+
+2005-07-12 Tuesday 15:10  moodler
+
+	* defaults.php: 
+	
+	Journal is disabled by default on new installations
+
+2005-07-12 Tuesday 15:10  moodler
+
+	* defaults.php: 
+	
+	file defaults.php was initially added on branch MOODLE_15_STABLE.
+
+2005-05-18 Wednesday 03:55  moodler
+
+	* edit.html, lib.php: 
+	
+	Very quick fix to remove notices (but loses some colors)
+
+2005-05-17 Tuesday 06:22  stronk7
+
+	* lib.php: 
+	
+	Tabs are out
+
+2005-04-29 Friday 18:35  stronk7
+
+	* edit.php: 
+	
+	This clean_text() shouldn't be here. Primary I changed it to
+	param_clean(PARAM_HTMLTEXT) but examining how other modules do the
+	work, I've deleted it finally.
+
+2005-04-13 Wednesday 15:45  moodler
+
+	* view.php: 
+	
+	Added some reportlink classed to the report links
+
+2005-04-13 Wednesday 07:42  stronk7
+
+	* restorelib.php: 
+	
+	Now all the wiki formated texts are converted to markdown by the
+	restore process. Such conversion is performed for every backup file
+	prior to 2005041100.  Wiki internal links are dinamically changed
+	and then, converted to Markdown. Bye, Wiki! ;-)
+
+2005-04-13 Wednesday 03:59  thepurpleblob
+
+	* db/: mysql.php, postgres7.php: 
+	
+	Whoops - forgot the db prefix in the where clause
+
+2005-04-12 Tuesday 23:26  thepurpleblob
+
+	* lib.php: 
+	
+	Whoops - new strings now taken from correct lang file.
+
+2005-04-12 Tuesday 22:10  thepurpleblob
+
+	* lib.php: 
+	
+	Made mail subject line text in language pack, not hardcoded.
+
+2005-04-11 Monday 21:38  thepurpleblob
+
+	* version.php: 
+	
+	Now 2005041100: Wiki-like formatted text converted to Markdown
+
+2005-04-11 Monday 21:37  thepurpleblob
+
+	* db/: mysql.php, postgres7.php: 
+	
+	Wiki-like format converted to Markdown in journal intro and journal
+	entries
+
+2005-04-11 Monday 06:38  stronk7
+
+	* lib.php: 
+	
+	Now Journal mails support filterall.
+
+2005-03-31 Thursday 03:26  stronk7
+
+	* edit.php, lib.php, report.php, restorelib.php, view.php: 
+	
+	Now journal->name supports filterall.
+
+2005-03-24 Thursday 21:59  moodler
+
+	* lib.php, view.php: 
+	
+	Some more CSS changes (SE)
+
+2005-03-24 Thursday 20:43  moodler
+
+	* edit.html, lib.php, mod.html, view.php: 
+	
+	Changes for XHTML, accessibility compatibility.  Removed THEME
+	variable, inserted CSS classes where appropriate. (SE)
+
+2005-03-14 Monday 00:17  moodler
+
+	* view.php: 
+	
+	Standardise the intro box using an ID
+
+2005-03-10 Thursday 21:30  moodler
+
+	* lib.php, version.php: 
+	
+	Variety of small fixes, but mostly related to how the recent
+	activity block is constructed.	A new function exists to pump these
+	notes out in a standard way :  print_recent_activity_note.
+	
+	Module dependencies also updated because of this.
+
+2005-03-09 Wednesday 04:56  mjollnir_
+
+	* lib.php: 
+	
+	Merged from MOODLE_14_STABLE: Add new line after url in journal
+	mailout to prevent  /mod/journal/view.php?id=1----- type requests
+
+2005-03-09 Wednesday 04:56  mjollnir_
+
+	* lib.php: 
+	
+	Add new line after url in journal mailout to prevent 
+	/mod/journal/view.php?id=1----- type requests
+
+2005-02-16 Wednesday 18:40  gustav_delius
+
+	* edit.php, report.php, version.php, view.php: 
+	
+	In order to ensure that when a teacher hides a resource or an
+	activity that students really can't get at it, even if they know
+	the direct links to its pages, I have given an optional third
+	argument $cm to the functions  require_login() and
+	require_course_login(). Pages showing information about a
+	particular course module now pass the course module object in this
+	third argument. The login functions will then test if either the
+	course module is visible or the user is a teacher. If neither is
+	the case then the user is redirected to the course homepage after
+	being shown a message "Sorry, this activity is currently hidden".
+	
+	(While I was at it I also turned the autologinguests off for most
+	module pages, except on the index.php pages and the view.php pages
+	for those modules that allow guests)
+
+2005-02-13 Sunday 08:42  stronk7
+
+	* lib.php: 
+	
+	Now retrieving only needed fields!
+
+2005-02-13 Sunday 05:41  gustav_delius
+
+	* mod.html: 
+	
+	Activities can now be hidden/shown from the activity editing page.
+	Also for modules that know about groups the groupmode can be set
+	from there. See bug 2533. This required adding to the mod.html
+	files calls to new functions print_visible_setting() and
+	print_groupmode_setting() which are combined in
+	print_standard_coursemodule_settings().
+	
+	The visibility of coursemodules is now always set through the
+	function set_coursemodule_visible() in order to make sure that the
+	associated events get updated in the calendar appropriately.
+	
+	If moving a coursemodule to a hidden section then the module is set
+	to hidden as well and its events are hidden in the calendar.
+	
+	If deleting a coursemodule its events are deleted from the
+	calendar.
+	
+	The function choose_from_menu() has an extra optional argument
+	$disabled which, when set to true, will disable the menu.
+	
+	For the sake of consistency the function set_groupmode_for_module
+	has been renamed to set_coursemodule_groupmode and the functions
+	show_course_module() and hide_course_module() have been combined to
+	set_coursemodule_visible().
+
+2005-02-08 Tuesday 07:33  stronk7
+
+	* restorelib.php: 
+	
+	Some minor changes to each module to XHTMLise the restore process
+
+2005-01-23 Sunday 02:53  stronk7
+
+	* mod.html: 
+	
+	Modify sesskey behaviour. SC#73
+
+2004-11-19 Friday 10:02  mjollnir_
+
+	* version.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	Merged from MOODLE_14_STABLE: Indexes for journal and version bump
+	(honoring partial freeze)
+
+2004-11-19 Friday 06:40  mjollnir_
+
+	* version.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	Indexes for journal and version bump (honoring partial freeze)
+
+2004-10-08 Friday 21:58  moodler
+
+	* lib.php: 
+	
+	Minor changes for XHTML compatibility
+
+2004-09-13 Monday 06:29  gustav_delius
+
+	* lib.php: 
+	
+	closed some br tags
+
+2004-09-13 Monday 00:14  gustav_delius
+
+	* backuplib.php, edit.html, edit.php, index.php, lib.php, mod.html,
+	report.php, restorelib.php, version.php, view.php, db/mysql.php,
+	db/oci8po.php, db/postgres7.php: 
+	
+	fixed capitalization and quoting of attribute values
+
+2004-09-12 Sunday 22:41  gustav_delius
+
+	* edit.html, lib.php, mod.html, report.php, restorelib.php: 
+	
+	closed <input /> <br /> <hr />
+
+2004-08-30 Monday 14:29  moodler
+
+	* report.php: 
+	
+	Merged fixes from stable
+
+2004-08-30 Monday 14:28  moodler
+
+	* report.php: 
+	
+	Fixed some notices ... bug 1846 .. Thanks Bruno!
+
+2004-08-29 Sunday 22:15  gustav_delius
+
+	* lib.php: 
+	
+	removed unnecessary calls to get_site()
+
+2004-08-25 Wednesday 13:07  moodler
+
+	* edit.php: 
+	
+	Removing some cleaning see bug 1787
+
+2004-08-25 Wednesday 02:38  gustav_delius
+
+	* version.php: 
+	
+	Merging from stable branch
+
+2004-08-24 Tuesday 23:14  gustav_delius
+
+	* version.php: 
+	
+	reduced $module->requires to 052505 after Martin put my new
+	functions into that version.
+
+2004-08-24 Tuesday 18:13  gustav_delius
+
+	* version.php: 
+	
+	All the modules in which I made changes require the latest version
+	of datalib.php.
+
+2004-08-22 Sunday 22:38  gustav_delius
+
+	* edit.php, index.php, lib.php, report.php: 
+	
+	All modules are now suitable for the site page. They now all follow
+	the same rules, namely that any students enrolled in at least one
+	course is considered to be a student on the site.
+	
+	All the page headers work correctly also on the site course.
+	
+	On the site page the modules don't require login unless necessary
+	or required by $CFG->forcelogin.
+
+2004-08-22 Sunday 04:20  gustav_delius
+
+	* index.php, view.php: 
+	
+	Removed notices by introducing new function print_header_simple()
+	which works on site as well as in courses without extra logic.
+
+2004-06-04 Friday 15:28  moodler
+
+	* version.php: 
+	
+	MOdules are dependent on this version of course/mod.php
+
+2004-06-04 Friday 14:17  moodler
+
+	* edit.php, mod.html, version.php: 
+	
+	BRANCH MERGE
+	
+	These are the changes from MOODLE_13_STABLE, merged into trunk
+	
+	The tag MOODLE_13_MERGED on the MOODLE_13_STABLE branch now refers
+	to this point
+	
+	The biggest changes here are the fixes for HTML editor in all
+	standard modules
+
+2004-06-03 Thursday 21:07  moodler
+
+	* edit.php, mod.html, version.php: 
+	
+	OK, for bug fixes this is a pretty big checkin!!   :-/
+	
+	I finally was able to see the HTML Editor bug in IE/XP that
+	everyone was talking about, and it's a very serious bug as it makes
+	Moodle 1.3 almost unusable for these people.  :-(  :-(
+	
+	So, I eventually found out that the problem is that the Javascript
+	that attaches the editor has troubles when it is embedded within
+	the table						    that
+	course/mod.php puts around the mod.html forms in each module. 
+	(Only in IE and only sometimes, mind you).
+	
+	While testing I also had a good look at a long standing issue which
+	is the inconsistency of the mod.html forms when using the editor.
+	
+	So, to fix both I decided to put the HTML editor calls OUTSIDE the
+	mod.html in the mod.php file.  This means that all modules get the
+	HTML editor by default on all text areas during activity module
+	setup by default.
+	
+	I've been running through this for the past few hours and it seems
+	pretty stable now and a lot more consistent, so I'm checking it in
+	as big fix towards the Moodle 1.3.1 we have to have.
+	
+	Unfortunately it also means the API has changed a bit  ... I had to
+	update all the module dependencies to this exact version (or
+	later).
+	
+	Please test this "stable" version hard using the standard modules
+	only and I'll merge these changes over to the trunk in a day or so
+	and update all known third-party modules.
+
+2004-05-16 Sunday 08:36  stronk7
+
+	* lib.php: 
+	
+	Step 2 of Bug 1223 done. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1223)
+
+2004-05-16 Sunday 07:18  stronk7
+
+	* lib.php: 
+	
+	Step 1 of Bug 1223 done. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1223)
+
+2004-04-30 Friday 12:50  moodler
+
+	* lib.php: 
+	
+	Can use $CFG->journal_showrecentactivity to hide recent activity
+	for journals
+
+2004-03-14 Sunday 00:15  moodler
+
+	* lib.php, view.php: 
+	
+	New function journal_count_entries() and more accurate counting of
+	journal entries for different grouping scenarios
+
+2004-03-13 Saturday 22:24  moodler
+
+	* report.php: 
+	
+	Function name change ... hope it doesn't break any third-party
+	code, sorry if it does!
+	
+	  get_users_in_group --->  get_group_users
+	
+	  ... more consistent with other functions
+
+2004-02-19 Thursday 06:30  stronk7
+
+	* restorelib.php: 
+	
+	Now journal logs are restored too :-)
+
+2004-02-15 Sunday 22:51  moodler
+
+	* report.php: 
+	
+	Fixed bug getting group users
+
+2004-02-15 Sunday 15:17  moodler
+
+	* report.php: 
+	
+	Use the new short way of setting up groups
+
+2004-02-14 Saturday 16:52  moodler
+
+	* report.php: 
+	
+	Group suport for Journals.
+	
+	This module also has a crappy interface and must be fixed.  But not
+	today.
+
+2004-02-14 Saturday 16:17  moodler
+
+	* view.php: 
+	
+	Working around that PHP bug  - thanks for the confirmation Henrik!
+
+2004-02-13 Friday 11:40  moodler
+
+	* view.php: 
+	
+	Don't print blank journal intros
+
+2004-02-08 Sunday 17:47  moodler
+
+	* lib.php, view.php: 
+	
+	Use format_text instead of text_to_html (so filtering works)
+
+2004-02-05 Thursday 16:36  moodler
+
+	* db/: mysql.php, postgres7.php: 
+	
+	Removing old log upgrades (too slow)
+
+2004-02-05 Thursday 13:16  moodler
+
+	* edit.php, report.php, version.php, db/mysql.php,
+	db/postgres7.php: 
+	
+	UPgrade logs to new format
+
+2004-02-01 Sunday 12:42  moodler
+
+	* version.php: 
+	
+	Updating version numbers of all Modules to make things a bit
+	clearer
+
+2004-01-31 Saturday 23:24  moodler
+
+	* version.php: 
+	
+	All modules now require the very latest because of the changes to
+	add_to_log
+
+2004-01-31 Saturday 23:22  moodler
+
+	* view.php: 
+	
+	Upgraded add_to_log to send cm->id
+
+2004-01-31 Saturday 13:55  moodler
+
+	* report.php: 
+	
+	Fixed some hard-coded strings
+	http://moodle.org/bugs/bug.php?op=show&bugid=1011
+
+2004-01-30 Friday 12:02  moodler
+
+	* report.php: 
+	
+	Simplified logic a bit
+
+2004-01-30 Friday 12:01  moodler
+
+	* lib.php: 
+	
+	Fixed typo bug when getting users
+
+2004-01-30 Friday 09:57  moodler
+
+	* lib.php: 
+	
+	Don't always use arraymerge in journal_get_users_done() - was
+	causing bad data sometimes ...
+
+2004-01-28 Wednesday 12:27  moodler
+
+	* version.php: 
+	
+	Define minimum required versions of Moodle
+
+2004-01-26 Monday 04:34  gustav_delius
+
+	* lib.php, view.php: 
+	
+	replaced incorrectly closed html tags, see bug 365
+
+2004-01-14 Wednesday 10:24  moodler
+
+	* backuplib.php, edit.php, lib.php, mod.html, restorelib.php,
+	version.php, view.php, db/mysql.php, db/mysql.sql,
+	db/postgres7.php, db/postgres7.sql: 
+	
+	Journal questions can now use HTML editor, plus new field
+	'introformat'
+
+2004-01-12 Monday 10:36  moodler
+
+	* lib.php: 
+	
+	Bug #966 - journal_grades should return NULL if no grade
+
+2003-11-28 Friday 23:45  moodler
+
+	* lib.php: 
+	
+	Use fullname function for displaying names
+
+2003-11-10 Monday 09:49  moodler
+
+	* edit.php: 
+	
+	Removed text focus to avoid errors in IE
+
+2003-11-04 Tuesday 00:27  moodler
+
+	* edit.html: 
+	
+	Just moodling ... tidied up the horrible interface a little
+
+2003-11-04 Tuesday 00:12  moodler
+
+	* edit.html, edit.php: 
+	
+	Some fixes for using the new editor
+
+2003-11-03 Monday 10:59  moodler
+
+	* db/mysql.php: 
+	
+	Removed blank lines at the end (!)
+
+2003-10-31 Friday 11:25  moodler
+
+	* lib.php: 
+	
+	Undoing Greg's UNION hack ... it was causing problems on Mysql 3
+
+2003-10-23 Thursday 04:06  gregb_cc
+
+	* lib.php: 
+	
+	This is a massive speed increase in journal_get_users_done.
+	
+	The fix requires UNION support in the database.  I've added a
+	simple little test to see if UNION queries work.
+	
+	This change very much needs to be tested out by someone using MySQL
+	3.  If it tests out there successfully, the supports_union code
+	should be moved out of this file and into datalib.  Ideally,
+	someone will extend that test and creatle get_records_union_sql, a
+	function that would split up UNION queries for databases that don't
+	support them and do an array_merge (and proper sorting, which is
+	missing from my fix) on the result sets.
+
+2003-09-29 Monday 23:27  stronk7
+
+	* lib.php: 
+	
+	Simply, move the XXXX_get_participants() function from bottom to
+	the common function area.  See bug 807
+
+2003-09-25 Thursday 07:15  les_kopari
+
+	* db/oci8po.php: 
+	
+	Sorry...brainphart...corrected glossary to journal.
+
+2003-09-25 Thursday 07:09  les_kopari
+
+	* db/oci8po.php: 
+	
+	Initial add for Oracle...does nothing.
+
+2003-09-13 Saturday 16:02  les_kopari
+
+	* db/oci8po.sql: 
+	
+	Oracle tables, etc converted from mysql, plus test transactions.
+
+2003-09-09 Tuesday 20:32  moodler
+
+	* edit.html: 
+	
+	Fixed some PHP short_tags
+
+2003-09-08 Monday 05:36  stronk7
+
+	* lib.php: 
+	
+	Included journal_get_participants() function.
+
+2003-09-02 Tuesday 10:02  moodler
+
+	* view.php: 
+	
+	Typo in date calculation!
+
+2003-08-27 Wednesday 17:03  moodler
+
+	* lib.php, view.php: 
+	
+	More cleanups for teacher view in particular
+
+2003-08-27 Wednesday 16:28  moodler
+
+	* index.php: 
+	
+	Slight tidy
+
+2003-08-27 Wednesday 16:13  moodler
+
+	* index.php, lib.php: 
+	
+	Fairly radical improvement to the Journal index, putting all the
+	information on one page.
+
+2003-08-25 Monday 10:48  moodler
+
+	* restorelib.php: 
+	
+	Fixed some array indices
+
+2003-08-20 Wednesday 23:01  moodler
+
+	* lib.php: 
+	
+	More robust when a journal is unused
+
+2003-08-20 Wednesday 20:03  moodler
+
+	* mod.html: 
+	
+	Forgot to check this slight fix in to fix the default days
+
+2003-08-18 Monday 18:41  stronk7
+
+	* restorelib.php: 
+	
+	Now scales are restored in journals too !!
+
+2003-08-18 Monday 13:47  moodler
+
+	* lib.php, mod.html, report.php, version.php, view.php,
+	db/mysql.php, db/mysql.sql, db/postgres7.php, db/postgres7.sql: 
+	
+	Journal grading is now also all converted over to use scales as
+	well as numerical grades
+
+2003-07-29 Tuesday 03:32  stronk7
+
+	* restorelib.php: 
+	
+	Added language support
+
+2003-07-12 Saturday 13:19  moodler
+
+	* index.php: 
+	
+	When displaying index lists of a particular module's activities,
+	ensure that the order they are displayed in is always the same as
+	the order they have been defined in.   See bug 553.
+	
+	This involved API changes to the function
+	get_all_instances_in_course()
+
+2003-07-09 Wednesday 12:40  moodler
+
+	* backuplib.php, restorelib.php: 
+	
+	Moving the backup libraries for each module into their new homes.
+	
+	There's some beer and pies in the fridge, guys, settle in.
+
+2003-06-16 Monday 22:40  moodler
+
+	* mod.html: 
+	
+	Some fixes to avoid pointless uses of $ME
+
+2003-06-14 Saturday 00:08  moodler
+
+	* edit.html: 
+	
+	Slightly bigger window
+
+2003-06-06 Friday 21:53  moodler
+
+	* edit.php: 
+	
+	Fixed focus
+
+2003-05-20 Tuesday 16:03  moodler
+
+	* mod.html: 
+	
+	Minor code cleanups
+	
+	  - lowercasing
+	  - removing short php tags
+	  - adding some emoticon help here and there
+
+2003-05-16 Friday 02:03  moodler
+
+	* view.php: 
+	
+	I knew there was something else I'd forgotten!
+	
+	Added a check to all modules (well view.php anyway) to check
+	whether a module is hidden or not.  If it is, then students get a
+	message.
+
+2003-05-14 Wednesday 00:02  moodler
+
+	* lib.php: 
+	
+	Mail-outs for assignment and journal module are now translatable.
+
+2003-05-09 Friday 00:09  moodler
+
+	* edit.html: 
+	
+	New pop-up help page about smileys - clicking on the smiley inserts
+	it into the form using Javascript!
+	
+	Also rationalised and patched some of the other help about text
+	formats.
+	
+	LANGUAGE EDITORS MAY WANT TO RE-CHECK:
+	
+	   lang/en/help/textformat.html
+
+2003-04-26 Saturday 23:08  moodler
+
+	* lib.php: 
+	
+	Trying a different tack for recent_activity since the old way was
+	still producing too much data and overflowing PHP memory on busier
+	sites (eg moodle.org).
+	
+	Now, there are more database queries, which is unfortunate, but the
+	data is much more specific, and no sorting needs to be done, so
+	this is a performance boost.
+	
+	I don't know how these will cancel out ... my guess is that very
+	small sites may be very slightly slower on the course page, but
+	that large sites will be much faster.
+	
+	Let's see.
+
+2003-04-26 Saturday 20:59  moodler
+
+	* lib.php: 
+	
+	Performance improvements
+	
+	  - better checking of data before processing
+	  - used logs are removed to avoid re-processing by other modules
+
+2003-04-26 Saturday 20:38  moodler
+
+	* index.php: 
+	
+	No changes, just rearranges
+
+2003-04-26 Saturday 20:17  moodler
+
+	* lib.php: 
+	
+	Cleaned up definition of constant COURSE_* values in course/lib.php
+	
+	Moved COURSE_TEACHER_COLOR out to style sheets where it belongs
+	(.teacheronly)
+	
+	Added some efficiency when printing recent activity
+	
+	 - don't print more than one weeks worth of updates
+	  - don't keep re-parsing logs once they've been used
+
+2003-04-26 Saturday 18:14  stronk7
+
+	* lib.php: 
+	
+	Show activity log only from visible journals. Bug #367.
+
+2003-04-21 Monday 16:08  moodler
+
+	* lib.php, report.php: 
+	
+	Robustness fixes
+
+2003-04-09 Wednesday 21:41  moodler
+
+	* mod.html: 
+	
+	empty()  -->  !isset()
+
+2003-03-12 Wednesday 15:49  moodler
+
+	* lib.php: 
+	
+	Whoops!  Accidentally checked in a quick hack I did for someone.
+
+2003-03-12 Wednesday 15:36  moodler
+
+	* lib.php: 
+	
+	Modified Greg's work to:
+	
+	  - rename the main_frame variable to framename, because it
+	       - might have caused some confusion
+	       - none of the global variables have underscores
+	  - put the config in the config table, with a default of _top
+
+2003-01-15 Wednesday 18:55  moodler
+
+	* lib.php: 
+	
+	
+	Displayed time formats are now stored in lang files (see the new
+	strftime* strings) so they can be customised per language
+
+2003-01-06 Monday 10:56  moodler
+
+	* report.php: 
+	
+	More rogue strings
+
+2003-01-05 Sunday 22:19  moodler
+
+	* edit.php, index.php, report.php, view.php: 
+	
+	Clean sweep through all the important changing all include(),
+	include_once() and require() to require_once()
+
+2003-01-05 Sunday 14:45  moodler
+
+	* edit.php: 
+	
+	OK a number of small changes here.
+	
+	Firstly, I'm replacing all use of old-style global variables like
+	$HTTY_REFERER with their new-style equivalent
+	$_SERVER["HTTP_REFERER"] Also using $_POST instead $HTTP_POST_VARS 
+	etc
+	
+	Secondly, if gdversion == 0 (ie GD is not installed) then:
+	
+	 - users are not even allowed to upload new images
+	 - graphs now just print a message instead of failing.
+	
+	this allows Moodle to still be used even if GD is not present
+
+2003-01-02 Thursday 22:49  moodler
+
+	* edit.php, report.php: 
+	
+	buggy_referer is dead!	 Long live buggy_referer!
+	
+	Should be fixed now.  As a bonus, I've removed all the uses of
+	HTTP_POST_VARS from all scripts.
+	
+	All forms should use the new data_submitted() function to collect
+	form data (it does the match_referer thing internally now).
+	
+	Much nicer.
+
+2003-01-01 Wednesday 21:17  moodler
+
+	* mod.html: 
+	
+	Robustness fixes
+
+2003-01-01 Wednesday 15:18  moodler
+
+	* index.php: 
+	
+	Robustness
+
+2002-12-30 Monday 23:47  moodler
+
+	* edit.php: 
+	
+	Little robustness fixes
+
+2002-12-30 Monday 01:32  moodler
+
+	* index.php: 
+	
+	Various little fixes to remove warnings (usually about empty
+	variables) when error_reporting is turned up to 15 or so ... more
+	of these to come ...
+
+2002-12-23 Monday 19:47  moodler
+
+	* db/postgres7.sql: 
+	
+	More fixes for postgreSQL etc
+
+2002-12-23 Monday 17:39  moodler
+
+	* edit.php, index.php, lib.php, report.php, version.php, view.php,
+	db/mysql.php, db/mysql.sql, db/postgres7.php, db/postgres7.sql: 
+	
+	Changes throughout Moodle to remove any reserved words from the
+	Moodle tables.
+	
+	ie user -> userid in many tables, plus in user_students    start ->
+	starttime and end -> endtime
+	
+	I've just done all this as carefully as I could ... I don't think I
+	missed anything but it's pretty intensive work and I'd be fooling
+	myself if I didn't think I'd missed a couple.
+	
+	Note that this version should pretty much be able to bootstrap
+	itself using PostgreSQL now ... but this is untested
+
+2002-12-20 Friday 22:44  moodler
+
+	* edit.php, index.php, lib.php, report.php, view.php, db/mysql.sql:
+	
+	
+	Many many changes lumped in here ... not finished yet either.
+	
+	Basically all the Database functions are in lib/datalib.php and the
+	web functions are all in lib/weblib.php, so moodlelib.php is much
+	thinner than it was.
+	
+	Data functions have been extended ... most old calls will still
+	work, but now many more SQL commands can be performed using the
+	datalib functions rather than using SQL.  I'm currently moving
+	through the whole tree replacing SQL calls or at least
+	concentrating them in one section of mod/xxx/lib.php
+	
+	Still working on forums, quizzes, surveys, resources.
+	
+	The tree is currently not full working ... some things are
+	half-completed ... will resume tomorrow.
+
+2002-12-15 Sunday 10:41  moodler
+
+	* db/: postgres7.php, postgres7.sql: 
+	
+	Database and upgrade files for PostgreSQL 7 support!
+
+2002-12-13 Friday 17:06  moodler
+
+	* edit.html, edit.php, mod.html: 
+	
+	New consistent help buttons for textarea fields throughout all
+	modules
+
+2002-11-26 Tuesday 10:29  moodler
+
+	* lib.php: 
+	
+	For the case when there are forums using ratings, but no ratings,
+	and the teacher is looking at grades, don't try and loop on an
+	empty array
+
+2002-11-19 Tuesday 22:27  moodler
+
+	* lib.php: 
+	
+	Changed all references of %e to %d to fix strftime on Windows
+
+2002-11-10 Sunday 19:44  moodler
+
+	* edit.php: 
+	
+	Added navmenu for journal edit page
+
+2002-11-10 Sunday 16:43  moodler
+
+	* index.php: 
+	
+	Added navmenu in more places
+
+2002-11-10 Sunday 15:37  moodler
+
+	* view.php: 
+	
+	Changes to enable jumping between activity modules, using a new
+	menu in the upper-right corner.   Caution: Not well tested at this
+	stage.
+
+2002-11-06 Wednesday 15:40  moodler
+
+	* index.php: 
+	
+	Language fixes
+
+2002-10-21 Monday 14:42  moodler
+
+	* lib.php: 
+	
+	Added journal_grades() so journals show up in the Grades page
+
+2002-10-18 Friday 17:38  moodler
+
+	* edit.html: 
+	
+	Better help with text formats
+
+2002-10-16 Wednesday 15:18  moodler
+
+	* lib.php: 
+	
+	Actually, let's include journals that have no feedback yet as well.
+
+2002-10-16 Wednesday 15:15  moodler
+
+	* lib.php: 
+	
+	When a teacher is giving feedback, entries that have been modified
+	since the last time a teacher has given feedback are highlighted.
+
+2002-10-16 Wednesday 12:51  moodler
+
+	* mod.html, view.php: 
+	
+	Cleaned up some buttons ...
+
+2002-10-12 Saturday 23:01  moodler
+
+	* edit.html, lib.php: 
+	
+	Tweaks to use new javascript-printing function etc
+
+2002-10-12 Saturday 15:23  moodler
+
+	* edit.html: 
+	
+	Moved the object code out into a function print_textarea
+
+2002-10-12 Saturday 14:20  moodler
+
+	* edit.html, edit.php, lib.php, version.php, view.php,
+	db/mysql.php, db/mysql.sql: 
+	
+	Added richtext to Journal entries.
+
+2002-10-06 Sunday 01:20  moodler
+
+	* version.php, db/mysql.php: 
+	
+	Moved upgrade functions into db/mysql.sql
+
+2002-09-24 Tuesday 17:06  martin
+
+	* view.php: 
+	
+	Prevent guests even seeing the edit button
+
+2002-09-22 Sunday 12:29  martin
+
+	* lib.php: 
+	
+	Some comments to indicate standard and other functions
+
+2002-09-22 Sunday 11:17  martin
+
+	* view.php: 
+	
+	Whoops typo - left in some old stuff
+
+2002-09-22 Sunday 11:16  martin
+
+	* view.php: 
+	
+	SHow number of journal entries in the teacher link to report
+
+2002-09-22 Sunday 11:13  martin
+
+	* lib.php: 
+	
+	Use log URL for link to journal
+
+2002-09-22 Sunday 01:11  martin
+
+	* lib.php: 
+	
+	Changes to print_recent_activity in course/lib.php.  It is now more
+	modular (at slight cost to performance) and every modules can now
+	have a module_print_recent_activity() function.  This function
+	takes a list of logs, searches for things to display and does so.
+	
+	So far I've done forum and journal functions
+
+2002-09-21 Saturday 16:40  martin
+
+	* lib.php: 
+	
+	Make sure user language works OK (it does now)
+
+2002-09-21 Saturday 15:46  martin
+
+	* lib.php: 
+	
+	Make sure mailouts are in the user's chosen language
+
+2002-08-19 Monday 00:39  martin
+
+	* version.php: 
+	
+	Updated versions in preparation for 1.0 release tomorrow
+
+2002-08-17 Saturday 16:59  martin
+
+	* mod.html: 
+	
+	Some more missed language strings
+
+2002-08-12 Monday 17:38  martin
+
+	* edit.html, edit.php, index.php, lib.php, mod.html, report.php,
+	view.php: 
+	
+	More language fixes
+
+2002-08-05 Monday 16:40  martin
+
+	* lib.php: 
+	
+	Cron tidy-ups
+
+2002-08-05 Monday 02:19  martin
+
+	* view.php: 
+	
+	WHoops - typo on function call
+
+2002-08-05 Monday 01:24  martin
+
+	* lib.php: 
+	
+	More tweaks to feedback display (consistency with forum posts)
+
+2002-08-05 Monday 01:13  martin
+
+	* lib.php: 
+	
+	Fixes in display of standard user_complete and user_outline
+	functions for journal, forum and assignments
+
+2002-08-05 Monday 00:42  martin
+
+	* version.php: 
+	
+	Updated version numbers
+
+2002-08-05 Monday 00:20  martin
+
+	* lib.php, report.php: 
+	
+	Misc small changes while I was working on assignments
+
+2002-08-04 Sunday 15:06  martin
+
+	* lib.php, view.php: 
+	
+	Moved a function to lib.php
+
+2002-08-03 Saturday 16:16  martin
+
+	* index.php, view.php: 
+	
+	Lots of work on site display, over many files.	Improved front page
+	and display of site modules.
+
+2002-08-03 Saturday 10:29  martin
+
+	* lib.php, mod.php: 
+	
+	Moved all mod.php functions from modules into lib.php, and updated
+	course/mod.php to use them there.  No longer need module/mod.php
+
+2002-08-03 Saturday 01:42  martin
+
+	* version.php: 
+	
+	Removed fullname and search fields from modules table.	Fullname is
+	now derived from the string 'modulename' in the lang files for each
+	module.
+
+2002-07-31 Wednesday 22:19  martin
+
+	* module.php, version.php: 
+	
+	OK, some massive changes with many files removed or changed.
+	
+	Basically the changes are:
+	
+	 - I've merged the 'discuss' module into the forum module
+	   which makes the interface MUCH clearer for everyone
+	 - I've added a new 'single' forum type that replicates
+	   what the old discuss course modules used to look like.
+	 - I've got rid of the "discussion" forum type - it will
+	   still exist in upgraded courses but as a normal forum.
+	 - the 'discuss' module is completely deleted - gone.
+	 - the 'chat' module is completely deleted - gone.
+	 - The upgrading system has been improved, and all code
+	   is stored in version.php.
+	 - I've put in upgrading commands to do the best I can
+	   (right now) to upgrade courses that used the discuss
+	   module.  It should mostly work, just leaving some
+	   "orphan" coursemodules on you course front page.  You
+	   can easily delete these using the little 'x'.
+	   I may have forgotten something  - I've only tested on
+	   my testing server and I'm about to test on my production
+	   server to see how it goes.
+	 - Forums have a lot of little new features and fixes.	The
+	   main one is the subscription process.  Teachers can 'force'
+	   subscriptions on any forum.	This disallows everyone from
+	   choosing their own mail subscription - it's just on.
+	 - The assignment module is half-finished and not working yet
+	
+	I've still some massive changes to do, mostly involving making all
+	the lib.php function names more standardised, so consider this is
+	an interim checkin to do some tests.
+
+2002-07-29 Monday 21:03  martin
+
+	* report.php: 
+	
+	OK, this is working now
+
+2002-07-29 Monday 18:12  martin
+
+	* report.php: 
+	
+	hmm wierd bug on production server but not testing ... this is to
+	test that
+
+2002-07-29 Monday 17:48  martin
+
+	* lib.php, report.php: 
+	
+	Fixes to journal reporting
+
+2002-07-29 Monday 15:26  martin
+
+	* lib.php: 
+	
+	Slightly bigger textarea for teacher feedback
+
+2002-07-29 Monday 15:21  martin
+
+	* lib.php, report.php: 
+	
+	Improvements to report.php ... clearer code, new functions in
+	lib.php and now the journal entries are sorted with the newest at
+	the top.
+
+2002-07-29 Monday 14:34  martin
+
+	* mod.php: 
+	
+	modernised the code to use newer database functions - no change in
+	functionality
+
+2002-07-29 Monday 14:20  martin
+
+	* view.php: 
+	
+	Added word count
+
+2002-07-27 Saturday 15:22  martin
+
+	* lib.php: 
+	
+	Fix to account for people not in course
+
+2002-07-27 Saturday 14:58  martin
+
+	* lib.php, db/mysql.sql: 
+	
+	Implemented journal feedback notification (mailouts)
+
+2002-07-27 Saturday 14:07  martin
+
+	* module.php: 
+	
+	Changes to suit new upgrading procedure (admin/index.html)
+
+2002-07-26 Friday 10:15  martin
+
+	* mod.html: 
+	
+	Fixed 0 days -> ALways Open
+
+2002-07-25 Thursday 21:48  martin
+
+	* lib.php, user.php: 
+	
+	Got rid of the user.php code fragments and implemented much cleaner
+	system which certain-named functions in lib.php ... called from
+	/course/user.php
+
+2002-07-24 Wednesday 02:02  martin
+
+	* user.php, view.php: 
+	
+	Formatting fixes for ratings
+
+2002-07-24 Wednesday 01:56  martin
+
+	* report.php, view.php: 
+	
+	Allow teachers to be marked, and allow ratings to be ignored
+
+2002-07-24 Wednesday 01:04  martin
+
+	* user.php: 
+	
+	Fixes to Activity reports
+
+2002-07-24 Wednesday 00:24  martin
+
+	* user.php: 
+	
+	Part of "contributions" overhaul in course/user.php
+
+2002-07-21 Sunday 02:20  martin
+
+	* index.php: 
+	
+	Slight formatting tweaks (forum index)
+
+2002-07-04 Thursday 15:48  martin
+
+	* view.php: 
+	
+	Fix to update_module_icon (to pass the courseid)
+
+2002-06-25 Tuesday 19:49  martin
+
+	* index.php, mod.html, user.php, view.php: 
+	
+	Major changes throughout to change "week" notation to "section"
+	notation.  Sections covers "weeks", "topics" and anything else that
+	may come along.  Note, again, some databases have changed esp
+	course_weeks -> course_sections and several fields called "week"
+	are now "section.  Also course no longer has an enddate, but
+	instead has a numsections field.
+
+2002-06-19 Wednesday 13:05  martin
+
+	* report.php: 
+	
+	Bugfix in crumbs
+
+2002-06-09 Sunday 22:14  martin
+
+	* edit.php, view.php: 
+	
+	Changes to support guest user across any course (guest/guest)
+
+2002-06-08 Saturday 14:52  martin
+
+	* view.php: 
+	
+	Changes to put update/edit icons in the headers of module and
+	course pages
+
+2002-06-05 Wednesday 11:22  martin
+
+	* new.php: 
+	
+	Old new.php system is replaced by print_recent_activity() in
+	course/lib.php
+
+2002-06-05 Wednesday 11:15  martin
+
+	* lib.php, new.php, report.php, user.php, view.php: 
+	
+	Changes related to timezone display.  Datetime display now uses
+	userdate() which itself uses the USER variable timezone to alter
+	the displayed time.
+
+2002-05-31 Friday 17:14  martin
+
+	* db/mysql.sql: 
+	
+	Added new entries for log_display table.  These are used to define
+	what to display for any given logged item.
+
+2002-05-31 Friday 17:07  martin
+
+	* edit.php, index.php, install.sql, mod.html, report.php, view.php:
+	
+	
+	Various small fixes across all modules.  Most notable was the
+	revised use of add_to_log, and the new logging format.
+
+2002-05-31 Friday 17:03  martin
+
+	* db/mysql.sql: 
+	
+	This is the new format for database schema.  Each module has a db
+	directory with one file per database.  All these are called from
+	admin/index.php and work in concert with lib/db.
+
+2002-01-07 Monday 23:00  martin
+
+	* user.php: 
+	
+	Added date stamp on journal entries
+
+2001-11-22 Thursday 14:23  martin
+
+	* edit.html, edit.php, icon.gif, index.php, install.sql, lib.php,
+	mod.html, mod.php, module.php, new.php, report.php, user.php,
+	view.php: 
+	
+	moodle
+
+2001-11-22 Thursday 14:23  martin
+
+	* edit.html, edit.php, icon.gif, index.php, install.sql, lib.php,
+	mod.html, mod.php, module.php, new.php, report.php, user.php,
+	view.php: 
+	
+	Initial revision
+

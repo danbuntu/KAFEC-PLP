@@ -1,0 +1,2103 @@
+2007-01-15 Monday 02:58  stronk7
+
+	* db/: mysql.sql, postgres7.sql: 
+	
+	Deleting deprecated .sql files. MDL-7264 Byeeez!
+
+2007-01-11 Thursday 16:06  moodler
+
+	* view.php: 
+	
+	FIxed up the intro boxes  XHTML Strict
+
+2007-01-10 Wednesday 16:29  toyomoyo
+
+	* assess.php, assessment_grading_form.html, assessments.php,
+	index.php, lib.php, locallib.php, mod.html, submissions.php,
+	view.php, viewassessment.php: 
+	
+	MDL-7861, fixes for workshop
+
+2007-01-08 Monday 17:14  skodak
+
+	* lib.php, submissions.php, view.php, locallib.php: 
+	
+	MDL-7861 new class .icon and .iconsmall
+
+2007-01-07 Sunday 03:23  skodak
+
+	* locallib.php, submissions.php, assessments.php: 
+	
+	MDL-8062 Remove name attribute from <form> and related javascript
+	code cleanup (tested with FF, IE, Konq and Opera)
+
+2007-01-05 Friday 05:32  skodak
+
+	* locallib.php, mod.html, submissions.php,
+	assessment_grading_form.html, assessments.php, view.php: 
+	
+	MDL-8062 1.3 Remove name attribute from <form> and fix focus
+	everywhere - more changes ahead
+
+2007-01-05 Friday 02:23  skodak
+
+	* assess.php, submissions.php, view.php: 
+	
+	MDL-8050 1.2 Remove all target="_top" - refactoring of previous
+	commit
+
+2007-01-04 Thursday 13:32  toyomoyo
+
+	* assessments.php, submissions.php, view.php: 
+	
+	MDL-7861, fixing xhtml
+
+2007-01-02 Tuesday 12:37  toyomoyo
+
+	* view.php: 
+	
+	MDL-7861, fixing missing tag
+
+2006-12-21 Thursday 13:48  toyomoyo
+
+	* assessments.php, view.php: 
+	
+	MDL-7861, fixing xhtml strict problem
+
+2006-11-27 Monday 00:20  skodak
+
+	* submissions.php, locallib.php: 
+	
+	MDL-7434 all images that convey information should have alt text to
+	convey that information - part 3
+
+2006-11-12 Sunday 16:55  skodak
+
+	* assessments.php: 
+	
+	fixed obsoleted use of course->category to find site course - now
+	used SITEID instead MDL-1899
+
+2006-11-12 Sunday 01:23  skodak
+
+	* assess.php, viewassessment.php: 
+	
+	we are going 100% unicode now - removed use of $CFG->unicodedb and
+	current_charset(); MDL-7439 - part 2, only hotpot and wiki left
+
+2006-11-09 Thursday 15:21  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	drop utf8 support from HEAD MDL-6332
+
+2006-10-29 Sunday 15:23  moodler
+
+	* lib.php: 
+	
+	Merged some performance improvements from stable
+
+2006-10-29 Sunday 15:22  moodler
+
+	* lib.php: 
+	
+	Enable record caching for workshop cron (which is sloow)
+
+2006-10-27 Friday 06:46  stronk7
+
+	* db/postgres7.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+	
+	Merged from MOODLE_17_STABLE
+
+2006-10-27 Friday 06:39  stronk7
+
+	* db/mysql.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+	
+	Merged from MOODLE_17_STABLE
+
+2006-10-27 Friday 06:29  stronk7
+
+	* db/postgres7.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+
+2006-10-27 Friday 06:25  stronk7
+
+	* db/mysql.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+
+2006-10-27 Friday 01:43  stronk7
+
+	* db/upgrade.php: 
+	
+	New upgrade.php file added for this module. MDL-7214
+	
+	Merged from HEAD
+
+2006-10-27 Friday 01:33  stronk7
+
+	* db/upgrade.php: 
+	
+	file upgrade.php was added on branch MOODLE_17_STABLE on 2006-10-26
+	17:43:11 +0000
+
+2006-10-27 Friday 01:33  stronk7
+
+	* db/upgrade.php: 
+	
+	New upgrade.php file added for this module. MDL-7214
+
+2006-10-22 Sunday 02:28  stronk7
+
+	* db/: oci8po.php, oci8po.sql, oci8po.php, oci8po.sql: 
+	
+	Deleting some old oci8po files from CVS.
+
+2006-10-17 Tuesday 18:05  thompson697
+
+	* restorelib.php: 
+	
+	Apply modularity to the creation of the log file during restore to
+	a new course.  Remove the responsibility for loging the application
+	of the course start date offset, from activity modules to the
+	backup module.	Merged from stable branch
+
+2006-10-16 Monday 18:40  thompson697
+
+	* restorelib.php: 
+	
+	Apply modularity to the creation of the log file during restore to
+	a new course.  Remove the responsibility for loging the application
+	of the course start date offset, from activity modules to the
+	backup module.
+
+2006-10-11 Wednesday 14:22  moodler
+
+	* db/access.php: 
+	
+	Merged fixes for MDL-6907 from stable
+
+2006-10-11 Wednesday 14:16  moodler
+
+	* db/access.php: 
+	
+	All the PREVENTS from the legacy roles have been removed (and thus
+	are treated as INHERIT by default).
+	
+	See MDL-6907 for details.
+
+2006-10-04 Wednesday 22:50  thompson697
+
+	* restorelib.php: 
+	
+	Change creation of restorelog file location to protected backupdata
+	folder.  Reassign style and language links
+
+2006-09-24 Sunday 22:01  vyshane
+
+	* lib.php: 
+	
+	Changed <module>_print_recent_activity() functions so that they
+	don't use $isteacher. However, I've left the $isteacher parameter
+	in the functions, for backward compatibility so as not to break
+	thrid party modules. Should we remove the parameter now?
+
+2006-09-22 Friday 11:28  vyshane
+
+	* assess.php, assessments.php, submissions.php, upload.php,
+	view.php, db/access.php: 
+	
+	Removed mod/workshop:view
+
+2006-09-21 Thursday 05:00  skodak
+
+	* db/access.php: 
+	
+	major whitespace cleanup - fixed trailng whitespace in new files
+	and admin area
+
+2006-09-21 Thursday 03:20  skodak
+
+	* db/oci8po.sql: 
+	
+	test commit for lineending cleanup
+
+2006-09-19 Tuesday 05:32  skodak
+
+	* db/access.php, version.php: 
+	
+	added capabilty risks into access.php and GUI for define role and
+	override; minor fixes for capability types in forum
+
+2006-09-18 Monday 17:13  moodler
+
+	* restorelib.php: 
+	
+	FIxed to use the new debugging function
+
+2006-09-13 Wednesday 21:19  thompson697
+
+	* restorelib.php: 
+	
+	Complete work on Roll Forwards - Restore from previous semester
+	(MDL-5532) * Add fields to restore form to enable changes to Short
+	Name, Full Name and Start Date * Start Date offset added to Restore
+	process * Created Restorelog file in Course files area * Activity
+	Modules use offset to change dates * Activity Modules write changes
+	to Restorelog
+
+2006-09-13 Wednesday 05:09  skodak
+
+	* lib.php: 
+	
+	partially fixed group management in workshop
+
+2006-09-12 Tuesday 16:22  moodler
+
+	* version.php: 
+	
+	Small bump for guest role fix
+
+2006-09-12 Tuesday 15:10  moodler
+
+	* version.php: 
+	
+	Reload the guest role using new defaults
+
+2006-09-12 Tuesday 13:58  moodler
+
+	* db/access.php: 
+	
+	Changed some default permissions for the guest role
+
+2006-09-11 Monday 23:38  stronk7
+
+	* db/postgres7.sql: 
+	
+	teachergraded belongs to workshop_assessments, not to workshop. ;-)
+
+2006-09-11 Monday 23:33  stronk7
+
+	* db/install.xml: 
+	
+	teachergraded belongs to workshop_assessments, not to
+	workshop_submissions ;-)
+
+2006-09-06 Wednesday 16:41  skodak
+
+	* assess.php, assessments.php, index.php, lib.php, locallib.php,
+	submissions.php, upload.php, version.php, view.php,
+	viewassessment.php, db/access.php, db/install.xml, db/mysql.php,
+	db/mysql.sql, db/postgres7.php, db/postgres7.sql: 
+	
+	initial conversion of workshop to new roles and capabilities
+	framework; groups are not functional yet (did they ever work
+	properly ?)
+
+2006-08-13 Sunday 06:19  stronk7
+
+	* db/install.xml: 
+	
+	Initial version of the XMLDB file for this plugin
+
+2006-08-10 Thursday 23:51  skodak
+
+	* assessments.php, submissions.php, upload.php, version.php,
+	view.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283; backported from HEAD
+
+2006-08-10 Thursday 23:30  skodak
+
+	* assessments.php, submissions.php, version.php, view.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283; backported from HEAD
+
+2006-08-09 Wednesday 06:09  skodak
+
+	* assessments.php, submissions.php, version.php, view.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283
+
+2006-08-08 Tuesday 13:13  moodler
+
+	* version.php: 
+	
+	ROLES AND PERMISSIONS  - FIRST CHECK-IN
+	=======================================
+	
+	WARNING:  DEV IS CURRENTLY VERY UNSTABLE.
+	
+	This is a mega-checkin of the new Roles system.   A lot of changes
+	have been made in core and modules.
+	
+	Currently there are a lot of rough edges and known problems.  We
+	are working hard on these .. .the reason for getting this into HEAD
+	at this stage is enable us to move faster (our branch was diverging
+	from HEAD too much).
+	
+	Please keep an eye on http://docs.moodle.org/en/Roles for current
+	status and information for developers on how to use the new Roles
+	system.
+
+2006-06-01 Thursday 22:50  skodak
+
+	* assess.php, viewassessment.php: 
+	
+	Bug #5684 - frameset page in UTF8 doesn't appear on IE; merged from
+	MOODLE_16_STABLE
+
+2006-06-01 Thursday 22:49  skodak
+
+	* assess.php, viewassessment.php: 
+	
+	Bug #5684 - frameset page in UTF8 doesn't appear on IE
+
+2006-04-24 Monday 17:13  vyshane
+
+	* db/postgres7.php: 
+	
+	Fixed inserts for log_display.
+
+2006-04-24 Monday 16:10  toyomoyo
+
+	* db/: mysql.sql, oci8po.sql, postgres7.sql: 
+	
+	changed formats for log_display table
+
+2006-04-20 Thursday 04:21  skodak
+
+	* assessments.php: 
+	
+	some extra cleaning of comments and feedback before storage.
+	normaly the text is cleaned before display, this is just a
+	preventive measure because I did not want to study this code all
+	day ;-)
+
+2006-04-20 Thursday 03:48  skodak
+
+	* viewassessment.php, assess.php, assessments.php, submissions.php,
+	upload.php, view.php: 
+	
+	Security related parameter cleanup in workshop code, please test
+	it. No bug fixes...
+
+2006-04-12 Wednesday 00:23  stronk7
+
+	* restorelib.php: 
+	
+	htmlentities() to s()
+
+2006-04-05 Wednesday 14:41  moodler
+
+	* db/postgres7.php: 
+	
+	FIxing some blank lines as per bug 5095
+
+2006-04-05 Wednesday 14:14  moodler
+
+	* db/postgres7.php: 
+	
+	FIxed blank trailing lines  (bug 5095)
+
+2006-03-29 Wednesday 07:31  stronk7
+
+	* restorelib.php: 
+	
+	Typo.
+
+2006-03-10 Friday 11:43  patrickslee
+
+	* db/migrate2utf8.php: 
+	
+	UTF8 migration - now supporting PostgreSQL
+
+2006-03-08 Wednesday 05:35  skodak
+
+	* db/migrate2utf8.php: 
+	
+	short php tags
+
+2006-02-24 Friday 16:13  toyomoyo
+
+	* db/migrate2utf8.php: 
+	
+	see changes for admin/utfdbmigrate.php
+
+2006-01-31 Tuesday 10:13  moodler
+
+	* db/migrate2utf8.php: 
+	
+	changed to use utfconvert function
+
+2006-01-20 Friday 10:50  moodler
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	bug fixes
+
+2006-01-17 Tuesday 15:37  moodler
+
+	* db/mysql.sql: 
+	
+	Added default values where needed for columns in the MySQL creation
+	script mysql.sql.  Added default values to migrate2utf8.xml, for
+	any varchar and text field types, if the default values for these
+	fields were not defined as '' in the MySQL table creation script.
+	
+	Committed by vyshane
+
+2006-01-16 Monday 05:09  mjollnir_
+
+	* restorelib.php: 
+	
+	Abstracted a bit of the restore procedure to allow for silent
+	restoring.  Added new function, import_backup_file_silently Changed
+	everything that prints stuff to check for a constant first. 
+	Backup_flush checks a different constant, this is so that output
+	can still get flushed to the browser when necessary but not print
+	<li>s everywhere.  Please test this!
+
+2006-01-13 Friday 11:45  mjollnir_
+
+	* backuplib.php, restorelib.php: 
+	
+	Granular backup & restore: This patch allows the much requested
+	selection of individual instances of modules within a course to
+	backup and restore.  It needs A LOT of testing and probably some
+	prettyifying too.
+
+2006-01-12 Thursday 10:35  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	some bug fixes
+
+2006-01-09 Monday 14:06  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	utf8 migration support scripts
+
+2005-12-14 Wednesday 12:15  patrickslee
+
+	* assess.php, assessments.php, lib.php, locallib.php,
+	restorelib.php, submissions.php, upload.php, view.php,
+	viewassessment.php, db/postgres7.php: 
+	
+	Merged with MOODLE_16_MULTIENROL_MP1
+
+2005-11-23 Wednesday 17:46  stronk7
+
+	* restorelib.php: 
+	
+	Log actions must be strored to DB without &amp; print_log() takes
+	care of it! Bug 3853. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=3853)
+	
+	Merged from MOODLE_15_STABLE
+
+2005-11-23 Wednesday 17:39  stronk7
+
+	* restorelib.php: 
+	
+	Log actions must be strored to DB without &amp; print_log() takes
+	care of it! Bug 3853. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=3853)
+
+2005-10-21 Friday 15:11  gustav_delius
+
+	* locallib.php: 
+	
+	Many links to assess.php were missing $cm->id
+
+2005-10-15 Saturday 18:40  stronk7
+
+	* assess.php, assessments.php, lib.php, submissions.php,
+	upload.php, view.php, viewassessment.php: 
+	
+	Solve some wrong CVS Id tags
+	
+	Merged from MOODLE_15_STABLE
+
+2005-10-15 Saturday 18:37  stronk7
+
+	* assess.php, assessments.php, lib.php, submissions.php,
+	upload.php, view.php, viewassessment.php: 
+	
+	Solve some wrong CVS Id tags
+
+2005-10-15 Saturday 18:30  stronk7
+
+	* lib.php: 
+	
+	Commiting some old unmerged changes.
+
+2005-10-12 Wednesday 10:15  mjollnir_
+
+	* db/postgres7.php: 
+	
+	Merged from MOODLE_15_STABLE: Execute some updates silently
+	(dropping non existent columns in workshop) bug 2964
+
+2005-10-12 Wednesday 10:15  mjollnir_
+
+	* db/postgres7.php: 
+	
+	Execute some updates silently (dropping non existent columns in
+	workshop) bug 2964
+
+2005-09-23 Friday 17:23  moodler
+
+	* lib.php: 
+	
+	Removed error() from a place that was actually being called from
+	workshop_cron and thus stopping cron sometimes.
+	
+	Also some code layout cleanup
+
+2005-09-01 Thursday 12:14  mjollnir_
+
+	* lib.php: 
+	
+	Initial checkin of stats (from processing the log table).  I will
+	write up some information about it for the developers wiki.
+
+2005-08-16 Tuesday 07:17  patrickslee
+
+	* db/: postgres7.php, postgres7.sql: 
+	
+	Mass cleanup of bad postgres upgrade scripts(merged from 15_stable)
+
+2005-08-16 Tuesday 06:30  patrickslee
+
+	* db/: postgres7.php, postgres7.sql: 
+	
+	Mass cleanup of bad postgres upgrade scripts
+
+2005-07-28 Thursday 12:03  patrickslee
+
+	* db/postgres7.php: 
+	
+	Duplicate process in postgres upgrade file
+
+2005-07-28 Thursday 06:30  patrickslee
+
+	* db/postgres7.sql: 
+	
+	Sorry, typo on last revision
+
+2005-07-28 Thursday 06:16  patrickslee
+
+	* db/: postgres7.php, postgres7.sql: 
+	
+	We have extremely crappy support for postgres7 in those modules in
+	14_STABLE, someone forgot to backport from HEAD?
+
+2005-07-12 Tuesday 16:00  moodler
+
+	* restorelib.php: 
+	
+	Merged SC139 from stable
+
+2005-07-12 Tuesday 15:53  moodler
+
+	* restorelib.php: 
+	
+	Escaped text output during relinking, as per SC 139
+
+2005-07-06 Wednesday 23:31  thepurpleblob
+
+	* assess.php, assessments.php, index.php, submissions.php,
+	upload.php, view.php, viewassessment.php: 
+	
+	_variable() functions, _GET, _POST etc. changed to appropriate
+	_param() style functions.
+
+2005-07-06 Wednesday 21:44  thepurpleblob
+
+	* mod.html: 
+	
+	Fixed language string for show league tables.
+
+2005-07-06 Wednesday 20:14  thepurpleblob
+
+	* mod.html: 
+	
+	Upload limit now takes account of course upload limit.	Bug #3247
+
+2005-07-06 Wednesday 19:13  thepurpleblob
+
+	* mod.html: 
+	
+	Help for 'use password' points to 'password' help as 'use password'
+	had no help.
+
+2005-07-05 Tuesday 06:25  stronk7
+
+	* backuplib.php, restorelib.php: 
+	
+	Now workshop are working under the new system to relink. Bug 3678. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=3678)
+	
+	Merged from MOODLE_15_STABLE
+
+2005-07-05 Tuesday 06:23  stronk7
+
+	* backuplib.php, restorelib.php: 
+	
+	Now workshop are working under the new system to relink. Bug 3678. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=3678)
+
+2005-05-03 Tuesday 16:16  moodler
+
+	* lib.php: 
+	
+	Fixed a notice
+
+2005-04-26 Tuesday 19:59  moodler
+
+	* lib.php: 
+	
+	FIxed a notice
+
+2005-04-21 Thursday 15:19  moodler
+
+	* lib.php, locallib.php, styles.php: 
+	
+	workshop_user_complete now prints out something meaningful. Bug
+	2931.  General tidy up.  CSS styles added. (SE)
+
+2005-04-19 Tuesday 09:34  mjollnir_
+
+	* db/postgres7.php: 
+	
+	Fixes for workshop upgrade in postgres
+
+2005-04-15 Friday 19:32  gustav_delius
+
+	* db/: mysql.php, postgres7.php: 
+	
+	This should fix bug 2938
+
+2005-04-13 Wednesday 07:42  stronk7
+
+	* restorelib.php: 
+	
+	Now all the wiki formated texts are converted to markdown by the
+	restore process. Such conversion is performed for every backup file
+	prior to 2005041100.  Wiki internal links are dinamically changed
+	and then, converted to Markdown. Bye, Wiki! ;-)
+
+2005-04-12 Tuesday 15:15  thepurpleblob
+
+	* version.php: 
+	
+	Update wiki-like text format to markdown.
+
+2005-04-12 Tuesday 15:14  thepurpleblob
+
+	* db/: mysql.php, postgres7.php: 
+	
+	Update wiki-like text format to Markdown.
+
+2005-04-11 Monday 02:43  stronk7
+
+	* assessments.php: 
+	
+	Argh! Simply forget my previous commit. I was mixing 1.4 and 1.5 in
+	my tests! Sorry! Under 1.4.x, assessments.php is always called from
+	itself.
+
+2005-04-11 Monday 02:36  stronk7
+
+	* assessments.php: 
+	
+	Whorkshop assessments weren't working in 1.4.4+ with secure forms
+	enabled.  this script can be called from a different one
+	(assess.php), so I've used the 'nomatch' trick.
+
+2005-04-11 Monday 02:22  stronk7
+
+	* assess.php, assessments.php, index.php, lib.php, locallib.php,
+	restorelib.php, submissions.php, upload.php, view.php,
+	viewassessment.php: 
+	
+	Finally we have to use the 'nomatch' because we can come from other
+	script (assess.php).
+	
+	filterall work in progress.
+
+2005-04-03 Sunday 07:19  stronk7
+
+	* lib.php: 
+	
+	Now xxx_print_recent_mod_activity() supports filterall. 
+	(assignment, forum, quiz and workshop)
+
+2005-04-03 Sunday 02:24  stronk7
+
+	* upload.php: 
+	
+	Replace $HTTP_POST_FILES to $_FILES because the old one is
+	"deprecated" in new PHP versions.
+	
+	Perhaps I should have used the upload manager but I'm not really
+	sure if it's fully available under 14_STABLE and viewing other
+	modules they use the $_FILES global, so I use such variable here
+	too!
+
+2005-04-03 Sunday 01:45  stronk7
+
+	* assessments.php: 
+	
+	Replacing some HTTP_POST_VARS uses because it doesn't work always!
+	Using data_submitted() or $_POST
+	
+	Merged form MOODLE_14_STABLE
+
+2005-04-03 Sunday 01:37  stronk7
+
+	* assessments.php: 
+	
+	Replacing some HTTP_POST_VARS uses because it doesn't work always!
+	Using data_submitted() or $_POST
+
+2005-04-02 Saturday 19:32  stronk7
+
+	* lib.php: 
+	
+	Now course/recent.php works under PHP5.  See bug 2828
+	(http://moodle.org/bugs/bug.php?op=show&bugid=2828)
+	
+	Merged from MOODLE_14_STABLE
+
+2005-04-02 Saturday 19:24  stronk7
+
+	* lib.php: 
+	
+	Now course/recent.php works under PHP5.  See bug 2828
+	(http://moodle.org/bugs/bug.php?op=show&bugid=2828)
+
+2005-03-14 Monday 00:17  moodler
+
+	* view.php: 
+	
+	Standardise the intro box using an ID
+
+2005-03-13 Sunday 08:12  stronk7
+
+	* restorelib.php: 
+	
+	Workshop module backup & restore now working completely. Upgrade
+	logic added.
+
+2005-03-12 Saturday 02:38  stronk7
+
+	* viewassessment.php: 
+	
+	Solved one problem causing the redirect to framed view not sending
+	all the variables to the script, so the agree system, wasn't
+	working at all.  Bug 2724
+	(http://moodle.org/bugs/bug.php?op=show&bugid=2724)
+
+2005-03-11 Friday 01:39  stronk7
+
+	* backuplib.php: 
+	
+	"graphical" structure updated plus some minor indent in XML
+
+2005-03-10 Thursday 22:11  moodler
+
+	* mod.html, view.php: 
+	
+	Some layout fixes
+
+2005-03-10 Thursday 21:30  moodler
+
+	* lib.php, locallib.php, version.php: 
+	
+	Variety of small fixes, but mostly related to how the recent
+	activity block is constructed.	A new function exists to pump these
+	notes out in a standard way :  print_recent_activity_note.
+	
+	Module dependencies also updated because of this.
+
+2005-03-10 Thursday 08:28  stronk7
+
+	* assessments.php: 
+	
+	HTTP_POST_VARS present some problems under PHP5 (deprecated,
+	configuration needed). Used $_POST (with data_submitted(), if
+	possible) instead.  NOTE: Detected in a lot of places!
+
+2005-03-10 Thursday 08:15  stronk7
+
+	* backuplib.php: 
+	
+	Some minor changes. Backup tested and seems ok (restore remaining).
+
+2005-03-07 Monday 19:32  moodler
+
+	* lib.php: 
+	
+	Removed files/mimetype.php and put it into lib/filelib.php instead
+	where it always should have been.
+
+2005-02-18 Friday 03:19  gustav_delius
+
+	* mod.html: 
+	
+	Give groupmode selection to mod.html for all modules that use
+	groupmode. Also fix bug 2576
+
+2005-02-16 Wednesday 18:40  gustav_delius
+
+	* assess.php, assessments.php, index.php, submissions.php,
+	upload.php, version.php, view.php, viewassessment.php: 
+	
+	In order to ensure that when a teacher hides a resource or an
+	activity that students really can't get at it, even if they know
+	the direct links to its pages, I have given an optional third
+	argument $cm to the functions  require_login() and
+	require_course_login(). Pages showing information about a
+	particular course module now pass the course module object in this
+	third argument. The login functions will then test if either the
+	course module is visible or the user is a teacher. If neither is
+	the case then the user is redirected to the course homepage after
+	being shown a message "Sorry, this activity is currently hidden".
+	
+	(While I was at it I also turned the autologinguests off for most
+	module pages, except on the index.php pages and the view.php pages
+	for those modules that allow guests)
+
+2005-02-13 Sunday 21:12  gustav_delius
+
+	* assess.php, assessments.php, submissions.php, upload.php,
+	view.php, viewassessment.php: 
+	
+	Added visibility check to all workshop pages, see bug 2450.
+
+2005-02-13 Sunday 08:42  stronk7
+
+	* lib.php: 
+	
+	Now retrieving only needed fields!
+
+2005-02-13 Sunday 05:41  gustav_delius
+
+	* mod.html: 
+	
+	Activities can now be hidden/shown from the activity editing page.
+	Also for modules that know about groups the groupmode can be set
+	from there. See bug 2533. This required adding to the mod.html
+	files calls to new functions print_visible_setting() and
+	print_groupmode_setting() which are combined in
+	print_standard_coursemodule_settings().
+	
+	The visibility of coursemodules is now always set through the
+	function set_coursemodule_visible() in order to make sure that the
+	associated events get updated in the calendar appropriately.
+	
+	If moving a coursemodule to a hidden section then the module is set
+	to hidden as well and its events are hidden in the calendar.
+	
+	If deleting a coursemodule its events are deleted from the
+	calendar.
+	
+	The function choose_from_menu() has an extra optional argument
+	$disabled which, when set to true, will disable the menu.
+	
+	For the sake of consistency the function set_groupmode_for_module
+	has been renamed to set_coursemodule_groupmode and the functions
+	show_course_module() and hide_course_module() have been combined to
+	set_coursemodule_visible().
+
+2005-02-10 Thursday 18:41  moodler
+
+	* assessments.php, lib.php, locallib.php: 
+	
+	Removing the THEME variable and adding in classes where appropriate
+
+2005-02-08 Tuesday 07:33  stronk7
+
+	* restorelib.php: 
+	
+	Some minor changes to each module to XHTMLise the restore process
+
+2005-01-23 Sunday 02:53  stronk7
+
+	* mod.html: 
+	
+	Modify sesskey behaviour. SC#73
+
+2005-01-12 Wednesday 15:53  moodler
+
+	* Overview.html, todo.txt: 
+	
+	Removed some old docs
+
+2005-01-12 Wednesday 15:52  moodler
+
+	* icon.png, icon1.gif, icon2.gif, icon2.png, icon3.gif, icon4.gif,
+	icon5.gif: 
+	
+	Removing some old icons
+
+2005-01-11 Tuesday 16:38  moodler
+
+	* assess.php, locallib.php, submissions.php, view.php,
+	viewassessment.php: 
+	
+	Changes for XHTML and accessibility compatibility
+
+2005-01-11 Tuesday 15:07  moodler
+
+	* mod.html: 
+	
+	Fixed typo
+
+2005-01-11 Tuesday 05:31  skodak
+
+	* db/postgres7.sql: 
+	
+	fixed typos
+
+2004-12-14 Tuesday 02:32  defacer
+
+	* db/: mysql.php, postgres7.php: 
+	
+	Fixed some warnings for foreach() on empty array, when upgrading a
+	site with no workshops in it.
+
+2004-12-12 Sunday 19:20  gustav_delius
+
+	* assessment_grading_form.html, assessments.php, lib.php,
+	locallib.php, submissions.php, assess.php, version.php, view.php,
+	viewassessment.php: 
+	
+	More changes to the user interface. See
+	http://moodle.org/mod/forum/view.php?id=740.
+
+2004-12-09 Thursday 17:33  gustav_delius
+
+	* assessments.php, assessment_grading_form.html, lib.php,
+	locallib.php, submissions.php, upload.php, version.php, view.php,
+	db/mysql.php, db/postgres7.php: 
+	
+	Now teachers can again grade assessments. Also various tweaks of
+	admin interface. This is work in progress. Heavy testing and
+	further development will take place during the coming days, so
+	consider this code as unstable.
+
+2004-12-08 Wednesday 18:39  gustav_delius
+
+	* lib.php: 
+	
+	fixed cutoffime misprint
+
+2004-12-08 Wednesday 18:09  gustav_delius
+
+	* submissions.php: 
+	
+	fixed missing ) and undefined $timenow
+
+2004-12-08 Wednesday 16:29  gustav_delius
+
+	* lib.php: 
+	
+	removed duplicated sentences from emails
+
+2004-12-07 Tuesday 15:41  gustav_delius
+
+	* lib.php: 
+	
+	Fixed date check
+
+2004-12-07 Tuesday 04:20  gustav_delius
+
+	* locallib.php: 
+	
+	use filter_text instead of text_to_html
+
+2004-12-05 Sunday 19:48  gustav_delius
+
+	* assessments.php, backuplib.php, index.php, lib.php, locallib.php,
+	mod.html, restorelib.php, submissions.php, upload.php, version.php,
+	view.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	Workshop module now works with dates rather than phases, see
+	http://moodle.org/mod/forum/discuss.php?d=15541.
+
+2004-11-26 Friday 17:33  moodler
+
+	* assessments.php, locallib.php, view.php: 
+	
+	Changes for XHTML and accessibility compatibility
+
+2004-11-26 Friday 16:39  moodler
+
+	* mod.html: 
+	
+	Changes for XHTML and accessibility compatibility
+
+2004-11-25 Thursday 05:21  mjollnir_
+
+	* db/mysql.php: 
+	
+	Removing duplicate index for workshop_grades assessmentid
+
+2004-11-24 Wednesday 04:52  rkingdon
+
+	* index.php, lib.php, view.php: 
+	
+	Cron routine does not send "graded" emails until releasegrades
+	date; grades are "not available" in index page until after the
+	relaesegrades date; phasing of three phase workshop tidied up.
+
+2004-11-23 Tuesday 03:09  rkingdon
+
+	* view.php: 
+	
+	Fixes teacher's view of 3 phase workshops.
+
+2004-11-22 Monday 06:03  mjollnir_
+
+	* version.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	Merged from MOODLE_14_STABLE: Indexes for workshop and version bump
+	(honoring partial freeze)
+
+2004-11-22 Monday 05:39  mjollnir_
+
+	* version.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	Indexes for workshop and version bump (honoring partial freeze)
+
+2004-11-21 Sunday 23:01  paca70
+
+	* db/: postgres7.php, postgres7.sql: 
+	
+	Updates for postgres
+
+2004-11-18 Thursday 12:24  rkingdon
+
+	* locallib.php, view.php: 
+	
+	Allow student submissions to be edited/deleted in the Submission
+	phase of workshops.
+
+2004-11-17 Wednesday 11:17  mjollnir_
+
+	* db/mysql.sql: 
+	
+	Bug fix for sql for new workshop tables for mysql
+
+2004-11-17 Wednesday 04:49  rkingdon
+
+	* locallib.php: 
+	
+	Stock comments can now contain single quotes.
+
+2004-11-16 Tuesday 03:10  rkingdon
+
+	* assessments.php: 
+	
+	Fixed some error messages in assessments.php which gave the wrong
+	table  (workshop_elements) should be workshop_grades.
+
+2004-11-16 Tuesday 02:18  rkingdon
+
+	* upload.php: 
+	
+	Fixed bug in the "checking for a rapid submission" code.
+
+2004-11-13 Saturday 09:00  rkingdon
+
+	* lib.php, locallib.php: 
+	
+	Display of current/final grades now has the individual lists order
+	by grade.
+
+2004-11-13 Saturday 03:30  rkingdon
+
+	* lib.php: 
+	
+	Version 2004111000. This removes the unnecesary emails about
+	grading of assessments.
+
+2004-11-13 Saturday 01:28  rkingdon
+
+	* assessments.php, backuplib.php, index.php, lib.php, locallib.php,
+	mod.html, restorelib.php, submissions.php, upload.php, version.php,
+	view.php, db/mysql.php, db/mysql.sql: 
+	
+	Version 2004111000 of workshop.
+
+2004-11-08 Monday 13:26  mjollnir_
+
+	* db/postgres7.sql: 
+	
+	few wayward typos breaking postgres workshop install
+
+2004-10-18 Monday 00:35  rkingdon
+
+	* lib.php, locallib.php: 
+	
+	The first and second assessments of each submission are now
+	"graded" by the workshop cron function. They are given the maximum
+	grading grade.
+
+2004-10-17 Sunday 23:53  rkingdon
+
+	* locallib.php, view.php: 
+	
+	Non-editing teachers not allowed to change wthe workshop phase nor
+	delete teacher submissions.
+
+2004-10-13 Wednesday 03:38  rkingdon
+
+	* index.php: 
+	
+	On the Workshops submissions with no assessments are flagged as
+	such rather than given a zero grade.
+
+2004-10-08 Friday 21:58  moodler
+
+	* lib.php: 
+	
+	Minor changes for XHTML compatibility
+
+2004-10-03 Sunday 00:04  rkingdon
+
+	* assessments.php, view.php: 
+	
+	Corrected password protected workshops (they showed the
+	assignment!); minor html additional to edit assessments page.
+
+2004-09-30 Thursday 19:29  paca70
+
+	* db/: postgres7.php, postgres7.sql: 
+	
+	Updates for postges
+
+2004-09-30 Thursday 05:28  rkingdon
+
+	* lib.php, locallib.php, mod.html: 
+	
+	Minor tidy of "not graded" workshops to supress grades appearing in
+	student pages.
+
+2004-09-30 Thursday 00:52  rkingdon
+
+	* assessments.php, lib.php, locallib.php: 
+	
+	Allow teachers to edit examples from Admin page; Count of ungraded
+	asessment now excludes warm and hot assessments; change a &amp;
+	back to a & in a redirect call.
+
+2004-09-29 Wednesday 00:30  rkingdon
+
+	* backuplib.php, restorelib.php: 
+	
+	New fields in version 2004092700.
+
+2004-09-28 Tuesday 23:49  rkingdon
+
+	* index.php, lib.php, locallib.php, mod.html, submissions.php,
+	upload.php, version.php, view.php, db/mysql.php, db/mysql.sql: 
+	
+	Version 2004092700 - tidy up of simple assignment case; addition of
+	password and submission late flag.
+
+2004-09-28 Tuesday 01:46  rkingdon
+
+	* submissions.php: 
+	
+	Added code for remove attachments
+
+2004-09-27 Monday 22:41  rkingdon
+
+	* assessments.php, backuplib.php, index.php, lib.php, locallib.php,
+	mod.html, restorelib.php, submissions.php, upload.php, version.php,
+	view.php, db/mysql.php, db/mysql.sql: 
+	
+	Version 2004092400 - in line student submission (plus attachments);
+	addition of on-the-fly grading of assessments; some bugs cleared.
+
+2004-09-24 Friday 15:49  paca70
+
+	* db/postgres7.sql: 
+	
+	Fixes for new postgres database creation
+
+2004-09-21 Tuesday 01:48  paca70
+
+	* db/: postgres7.php, postgres7.sql: 
+	
+	Postgres updates
+
+2004-09-20 Monday 22:59  rkingdon
+
+	* lib.php, locallib.php, mod.html, view.php: 
+	
+	Fixed bug #1952; fixed bug in upload form; and assessment form now
+	displays the correct grade.
+
+2004-09-19 Sunday 06:36  skodak
+
+	* mod.html: 
+	
+	short php tags - Bug #1956
+
+2004-09-17 Friday 13:46  mjollnir_
+
+	* version.php: 
+	
+	bumps for version and requires for modules that use new upload
+	class
+
+2004-09-17 Friday 01:13  gustav_delius
+
+	* assessments.php, lib.php, locallib.php, restorelib.php,
+	submissions.php, view.php: 
+	
+	XHTML compliance - fixed (hopefully) all <img> tags - global
+	replace on <br> to <br /> - &amp; in URLs - got the forum module
+	XHTML compliant Julian Sedding
+
+2004-09-15 Wednesday 08:03  mjollnir_
+
+	* locallib.php, upload.php: 
+	
+	Integration of new centralised file upload code with workshop
+	module.
+	
+	These patches are maintained in an publicly accessible Arch
+	repository, see:
+	http://lists.eduforge.org/cgi-bin/archzoom.cgi/arch-eduforge@cataly
+	st.net.nz--2004-MIRROR/moodle--eduforge--1.3.3
+	
+	Index of arch patches in this commit:
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	57     2004-09-14 23:37:49 GMT	   Penny Leach
+	<penny@catalyst.net.nz>     added important instruction to
+	handlevirus.php
+	
+	Full logs:
+	
+	Revision: moodle--eduforge--1.3.3--patch-57 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Wed Sep 15 11:37:49 NZST 2004
+	Standard-date: 2004-09-14 23:37:49 GMT Modified-files:
+	admin/handlevirus.php	  mod/workshop/locallib.php
+	mod/workshop/upload.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	57 Summary: added important instruction to handlevirus.php
+	Keywords:
+
+2004-09-15 Wednesday 03:52  gustav_delius
+
+	* assessments.php, index.php, lib.php, locallib.php, mod.html,
+	submissions.php, upload.php, view.php: 
+	
+	towards XHTML compliance
+
+2004-09-13 Monday 06:29  gustav_delius
+
+	* assessments.php, locallib.php, mod.html, submissions.php,
+	view.php: 
+	
+	closed some br tags
+
+2004-09-13 Monday 05:43  gustav_delius
+
+	* assessments.php, backuplib.php, index.php, lib.php, locallib.php,
+	mod.html, restorelib.php, submissions.php, upload.php, version.php,
+	view.php, db/mysql.php, db/oci8po.php, db/postgres7.php: 
+	
+	towards XHTML compliance
+
+2004-09-12 Sunday 22:41  gustav_delius
+
+	* Overview.html, assessments.php, lib.php, locallib.php, mod.html,
+	restorelib.php, submissions.php: 
+	
+	closed <input /> <br /> <hr />
+
+2004-09-10 Friday 02:47  rkingdon
+
+	* locallib.php: 
+	
+	Fixed bug in resumitting work - datalib now looks at record->id
+	value.
+
+2004-09-08 Wednesday 14:43  moodler
+
+	* lib.php, locallib.php: 
+	
+	Repeated fixes made in stable:
+	
+	  - moved two functions from locallib.php to lib.php
+	  - include mimetypes.php so mimeinfo works
+
+2004-09-08 Wednesday 14:40  moodler
+
+	* lib.php, locallib.php: 
+	
+	Moved these functions from locallib.php to lib.php so that
+	Workshops work under recent activity
+	
+	   workshop_get_recent_mod_activity()
+	   workshop_print_recent_mod_activity()
+	
+	Also fixed a problem with mimeinfo being called from locallib.php
+	without having included the mimetypes.php library
+
+2004-09-08 Wednesday 00:17  rkingdon
+
+	* assessments.php, backuplib.php, index.php, lib.php, locallib.php,
+	mod.html, restorelib.php, submissions.php, upload.php, version.php,
+	view.php, db/mysql.php, db/mysql.sql: 
+	
+	Version 2004081100: auto grading of assessments.
+
+2004-08-29 Sunday 22:15  gustav_delius
+
+	* lib.php, locallib.php: 
+	
+	removed unnecessary calls to get_site()
+
+2004-08-27 Friday 06:22  gustav_delius
+
+	* submissions.php: 
+	
+	fixed my own typo, bug 1798
+
+2004-08-27 Friday 06:17  gustav_delius
+
+	* submissions.php: 
+	
+	fixed my own typo, bug 1798
+
+2004-08-25 Wednesday 02:38  gustav_delius
+
+	* version.php: 
+	
+	Merging from stable branch
+
+2004-08-24 Tuesday 23:14  gustav_delius
+
+	* version.php: 
+	
+	reduced $module->requires to 052505 after Martin put my new
+	functions into that version.
+
+2004-08-24 Tuesday 18:13  gustav_delius
+
+	* version.php: 
+	
+	All the modules in which I made changes require the latest version
+	of datalib.php.
+
+2004-08-22 Sunday 22:38  gustav_delius
+
+	* lib.php, locallib.php: 
+	
+	All modules are now suitable for the site page. They now all follow
+	the same rules, namely that any students enrolled in at least one
+	course is considered to be a student on the site.
+	
+	All the page headers work correctly also on the site course.
+	
+	On the site page the modules don't require login unless necessary
+	or required by $CFG->forcelogin.
+
+2004-08-22 Sunday 04:20  gustav_delius
+
+	* index.php, submissions.php, upload.php, view.php: 
+	
+	Removed notices by introducing new function print_header_simple()
+	which works on site as well as in courses without extra logic.
+
+2004-08-21 Saturday 04:12  gustav_delius
+
+	* assessments.php, submissions.php: 
+	
+	introduced the fullname() function in a lot of places. Still not
+	complete though, especially in sorting.
+
+2004-08-17 Tuesday 13:19  moodler
+
+	* lib.php, locallib.php, submissions.php: 
+	
+	Convert firstname lastname to fullname() calls, fixing bug 1726
+
+2004-08-10 Tuesday 03:18  paca70
+
+	* lib.php: 
+	
+	
+	Thanks vernier at vc dot bc dot ca
+
+2004-06-18 Friday 22:23  rkingdon
+
+	* lib.php, locallib.php: 
+	
+	Moved back a few functions from locallib.php to lib.php
+
+2004-06-18 Friday 17:24  rkingdon
+
+	* assessments.php, index.php, lib.php, locallib.php,
+	submissions.php, upload.php, view.php: 
+	
+	Split lib.php into locallib.php and lib.php; Fixed bug # 1435;
+	Possibly fixed bug #1489
+
+2004-06-09 Wednesday 05:23  gustav_delius
+
+	* lib.php: 
+	
+	fixed problems with undefined $USER->id in recent activity block
+	when no user logged in.
+
+2004-06-04 Friday 15:28  moodler
+
+	* version.php: 
+	
+	MOdules are dependent on this version of course/mod.php
+
+2004-06-04 Friday 14:17  moodler
+
+	* mod.html, version.php: 
+	
+	BRANCH MERGE
+	
+	These are the changes from MOODLE_13_STABLE, merged into trunk
+	
+	The tag MOODLE_13_MERGED on the MOODLE_13_STABLE branch now refers
+	to this point
+	
+	The biggest changes here are the fixes for HTML editor in all
+	standard modules
+
+2004-06-03 Thursday 21:07  moodler
+
+	* mod.html, version.php: 
+	
+	OK, for bug fixes this is a pretty big checkin!!   :-/
+	
+	I finally was able to see the HTML Editor bug in IE/XP that
+	everyone was talking about, and it's a very serious bug as it makes
+	Moodle 1.3 almost unusable for these people.  :-(  :-(
+	
+	So, I eventually found out that the problem is that the Javascript
+	that attaches the editor has troubles when it is embedded within
+	the table						    that
+	course/mod.php puts around the mod.html forms in each module. 
+	(Only in IE and only sometimes, mind you).
+	
+	While testing I also had a good look at a long standing issue which
+	is the inconsistency of the mod.html forms when using the editor.
+	
+	So, to fix both I decided to put the HTML editor calls OUTSIDE the
+	mod.html in the mod.php file.  This means that all modules get the
+	HTML editor by default on all text areas during activity module
+	setup by default.
+	
+	I've been running through this for the past few hours and it seems
+	pretty stable now and a lot more consistent, so I'm checking it in
+	as big fix towards the Moodle 1.3.1 we have to have.
+	
+	Unfortunately it also means the API has changed a bit  ... I had to
+	update all the module dependencies to this exact version (or
+	later).
+	
+	Please test this "stable" version hard using the standard modules
+	only and I'll merge these changes over to the trunk in a day or so
+	and update all known third-party modules.
+
+2004-05-21 Friday 21:20  moodler
+
+	* lib.php, version.php, db/mysql.php, db/postgres7.php: 
+	
+	Workshop now supports calendar events for the deadline date
+
+2004-05-18 Tuesday 22:14  moodler
+
+	* submissions.php: 
+	
+	Suppress warnings on set_time_limit
+
+2004-04-24 Saturday 20:47  moodler
+
+	* lib.php: 
+	
+	New functions by Jenny Watt, to make workshops show up on Recent
+	Activity
+	
+	 workshop_get_recent_mod_activity()
+	 workshop_print_recent_mod_activity()
+	
+	 Thanks, Jenny!
+
+2004-03-14 Sunday 16:59  paca70
+
+	* db/postgres7.sql: 
+	
+	Added default values
+
+2004-03-12 Friday 23:28  rkingdon
+
+	* lib.php, submissions.php: 
+	
+	Fixed Bugs #1059 and #1061.
+
+2004-02-16 Monday 17:24  moodler
+
+	* lib.php: 
+	
+	Fixed some old pix paths
+
+2004-02-16 Monday 05:18  stronk7
+
+	* restorelib.php: 
+	
+	Now logs from: - Assignments - Choices - Workshops are restored
+	too.
+
+2004-02-16 Monday 04:07  stronk7
+
+	* upload.php: 
+	
+	Modified calls to add_to_log() function to include cmid at the end.
+	It was missing in "resubmit" logs.
+
+2004-02-16 Monday 04:03  stronk7
+
+	* assessments.php, submissions.php: 
+	
+	Modified calls to add_to_log() function to include cmid at the end.
+	It was missing in "over allocatio" and "grade" logs.
+
+2004-02-16 Monday 03:37  stronk7
+
+	* assessments.php, submissions.php, upload.php: 
+	
+	Modified calls to add_to_log() function to include cmid at the end.
+	It was missing in "league_table", "submit" and "assess" logs.
+
+2004-02-09 Monday 22:37  moodler
+
+	* lib.php: 
+	
+	Give new windows different names so they can be compared more
+	easily
+
+2004-02-01 Sunday 12:42  moodler
+
+	* version.php: 
+	
+	Updating version numbers of all Modules to make things a bit
+	clearer
+
+2004-01-31 Saturday 23:25  moodler
+
+	* version.php: 
+	
+	All modules now require the very latest because of the changes to
+	add_to_log
+
+2004-01-31 Saturday 23:22  moodler
+
+	* view.php: 
+	
+	Upgraded add_to_log to send cm->id
+
+2004-01-28 Wednesday 12:27  moodler
+
+	* version.php: 
+	
+	Define minimum required versions of Moodle
+
+2004-01-21 Wednesday 01:25  rkingdon
+
+	* lib.php, submissions.php, upload.php, view.php: 
+	
+	Fix bug in Analysis of Assessments
+
+2004-01-06 Tuesday 02:21  stronk7
+
+	* backuplib.php, restorelib.php: 
+	
+	Added support to teacherloading, assessmentstodrop and donotuse
+	fields in workshop module.
+
+2003-12-24 Wednesday 22:49  rkingdon
+
+	* restorelib.php: 
+	
+	Fixes to restore.
+
+2003-12-08 Monday 21:03  moodler
+
+	* lib.php: 
+	
+	Fixing a typo I spotted in the CVS diffs.  :-)
+
+2003-12-08 Monday 17:22  rkingdon
+
+	* lib.php: 
+	
+	Fixed bug #863.
+
+2003-12-06 Saturday 01:55  rkingdon
+
+	* lib.php, submissions.php: 
+	
+	Added the setting of League Table options to the Administration
+	page.
+
+2003-12-05 Friday 02:45  rkingdon
+
+	* submissions.php: 
+	
+	Correction to Final Grades.
+
+2003-12-01 Monday 20:19  rkingdon
+
+	* lib.php, submissions.php, version.php, view.php, db/mysql.php,
+	db/mysql.sql: 
+	
+	New version (2003113000), Analysis of Assessments added.
+
+2003-11-20 Thursday 01:54  rkingdon
+
+	* assessments.php: 
+	
+	Bug fixed in assesssubmission code.
+
+2003-11-14 Friday 00:22  rkingdon
+
+	* assessments.php, lib.php, restorelib.php: 
+	
+	Some minor improvements, see Workshop Forum.
+
+2003-11-03 Monday 21:21  moodler
+
+	* db/postgres7.sql: 
+	
+	SERIAL8 -> SERIAL
+
+2003-11-03 Monday 10:59  moodler
+
+	* db/mysql.php: 
+	
+	Removed blank lines at the end (!)
+
+2003-10-19 Sunday 13:24  moodler
+
+	* lib.php: 
+	
+	Some small style changes for tabs
+
+2003-10-17 Friday 01:17  rkingdon
+
+	* submissions.php: 
+	
+	Fixed bug stopping the calculation of final grades.
+
+2003-10-13 Monday 23:23  rkingdon
+
+	* lib.php: 
+	
+	Change to workshop_grades - only return grades when in the final
+	phase (phase 6).
+
+2003-10-13 Monday 22:56  rkingdon
+
+	* index.php, lib.php, view.php: 
+	
+	Workshop now has 6 phases. The phase is show on the Workshops page
+	(index.php).  Administration page now excludes "hot" assessments
+	(peer assessments which have been allocated but not yet made).
+
+2003-10-09 Thursday 02:15  rkingdon
+
+	* index.php, lib.php, upload.php, version.php, view.php,
+	db/mysql.php, db/mysql.sql: 
+	
+	Cosmetic change to index.php list; Logging of phase changes in a
+	workshop; tidy up of log_display entries - thus the new version;
+
+2003-10-07 Tuesday 20:14  stronk7
+
+	* backuplib.php, restorelib.php: 
+	
+	Now assessment->resubmission is in backup/restore too.
+
+2003-10-07 Tuesday 03:30  rkingdon
+
+	* assessments.php, lib.php: 
+	
+	Fixed links in email messages.
+
+2003-10-06 Monday 03:00  rkingdon
+
+	* assessments.php, lib.php, upload.php, version.php, view.php,
+	db/mysql.php, db/mysql.sql, db/oci8po.sql, db/postgres7.sql: 
+	
+	Version 2003100200: improved handling of resubmissions (new field
+	added to workshop_assessments)
+
+2003-10-02 Thursday 00:50  rkingdon
+
+	* lib.php: 
+	
+	Replace Literal string "Weight": fixes bug #799
+
+2003-09-29 Monday 23:27  stronk7
+
+	* lib.php: 
+	
+	Simply, move the XXXX_get_participants() function from bottom to
+	the common function area.  See bug 807
+
+2003-09-28 Sunday 18:57  stronk7
+
+	* index.php: 
+	
+	Now, when listing activities, entries are dimmed if they are hidden
+	(teacher view). See bug 802.
+
+2003-09-27 Saturday 08:10  rkingdon
+
+	* assessments.php, lib.php, db/mysql.sql: 
+	
+	Recent Activity fixed; Student names removed from emails.
+
+2003-09-26 Friday 03:40  stronk7
+
+	* backuplib.php: 
+	
+	Fixed small error in overallocation field !! :-)
+
+2003-09-26 Friday 03:14  rkingdon
+
+	* backuplib.php, restorelib.php, db/oci8po.sql, db/postgres7.sql: 
+	
+	Addition of the overallocation field to the workshop table.
+
+2003-09-26 Friday 01:32  rkingdon
+
+	* lib.php, submissions.php, version.php, view.php, db/mysql.php,
+	db/mysql.sql: 
+	
+	Changes to handling of peer assessments allocation; over allocation
+	option added; new assessment phase added; options added to control
+	the length of the league table and the display of name in the
+	league table.
+
+2003-09-25 Thursday 10:11  les_kopari
+
+	* db/oci8po.php: 
+	
+	Initial add for Oracle.
+
+2003-09-13 Saturday 16:05  les_kopari
+
+	* db/oci8po.sql: 
+	
+	Oracle tables, etc converted from mysql, plus test transactions.
+
+2003-09-11 Thursday 21:21  moodler
+
+	* mod.html: 
+	
+	More short tags
+
+2003-09-09 Tuesday 20:32  moodler
+
+	* assessments.php, mod.html: 
+	
+	Fixed some PHP short_tags
+
+2003-09-09 Tuesday 01:16  rkingdon
+
+	* lib.php: 
+	
+	Fix a bug in final grades when users submit more than one piece of
+	work (some grades were appearing as zero); workshop_user_outline
+	now returns number of submissions and date of last submission.
+
+2003-09-08 Monday 06:21  stronk7
+
+	* lib.php: 
+	
+	Included workshop_get_participants() function.
+
+2003-09-03 Wednesday 04:23  rkingdon
+
+	* assessments.php, lib.php: 
+	
+	Tidy up the handling of "hanging" assessments.
+
+2003-08-30 Saturday 01:46  rkingdon
+
+	* lib.php, submissions.php: 
+	
+	Fix bug when deleting a submission. Very recent assessments were
+	not deleted. Now all assessments of the deleted submission are
+	deleted including the "hot" ones.
+
+2003-08-29 Friday 02:19  rkingdon
+
+	* assessments.php, lib.php: 
+	
+	Addition of returnto parameter to workshop_print_assessment
+	function to allow return to original pages when making assessemnts;
+	clearing (trival) unassigned variable bug in the same function.
+
+2003-08-28 Thursday 02:20  rkingdon
+
+	* lib.php: 
+	
+	Removal of hard-wired strings in Scales.
+
+2003-08-28 Thursday 01:13  rkingdon
+
+	* lib.php, view.php: 
+	
+	Fixed unassigned variables in function
+	workshop_print_assignment_info
+
+2003-08-27 Wednesday 23:39  rkingdon
+
+	* assessments.php, lib.php, mod.html, view.php: 
+	
+	Addition of Mail strings to cron routine; More help in admin page;
+	bug clearance.
+
+2003-08-27 Wednesday 01:51  moodler
+
+	* lib.php: 
+	
+	Deleted error_reporting(15)!   Just turn debugging on, Ray!  :-)
+
+2003-08-26 Tuesday 06:40  stronk7
+
+	* restorelib.php: 
+	
+	Now restoring workshops are working too !! Now all is ready to be
+	1.1 Beta 1.  Congratulations everybody !! Anyway, some polish must
+	be done, friends...
+
+2003-08-26 Tuesday 03:58  stronk7
+
+	* backuplib.php: 
+	
+	Now workshops backup are included too !! Only one step to Beta !!
+	(workshop restore) Tomorrow, I hope.. :-)
+
+2003-08-23 Saturday 23:57  rkingdon
+
+	* lib.php, submissions.php, view.php: 
+	
+	Fixing Bug #653.
+
+2003-08-23 Saturday 01:31  rkingdon
+
+	* assessments.php, lib.php, submissions.php, version.php, view.php,
+	db/mysql.php, db/mysql.sql: 
+	
+	Added League Table of Submissions (Final Phase); Rubric Assessment
+	Strategy; Grace time for new submissions; changed elementid to
+	elementno in rubrics table.
+
+2003-08-22 Friday 16:08  rkingdon
+
+	* lib.php, view.php: 
+	
+	Fix bug in Workshops with no teacher submissions.
+
+2003-08-21 Thursday 20:12  moodler
+
+	* assessments.php: 
+	
+	Initialising $navigation.   Again.  :-)
+
+2003-08-19 Tuesday 00:43  rkingdon
+
+	* assessments.php, lib.php, submissions.php, view.php: 
+	
+	Minor bug fixes; additions to teachers admin screen; minor changes
+	to operation of pre-submission assessments.
+
+2003-08-18 Monday 23:17  moodler
+
+	* assessments.php: 
+	
+	Just an uninitialised variable.
+
+2003-08-09 Saturday 01:38  moodler
+
+	* lib.php: 
+	
+	Some fixes to make report  work at least ... complete mode needs
+	work
+
+2003-08-09 Saturday 01:01  moodler
+
+	* lib.php: 
+	
+	Fix for the bug causing an error on the user activity page - made a
+	new function workshop_get_student_submission() based on the version
+	in 'assignment' ... haven't looked at the functionality yet.
+
+2003-07-29 Tuesday 01:37  rkingdon
+
+	* assessments.php, lib.php, submissions.php, todo.txt, view.php: 
+	
+	Minor errors fixed; Student can delete submissions and assessments;
+	Teachers see student names; Tabbed Admin screen.
+
+2003-07-17 Thursday 03:47  rkingdon
+
+	* lib.php: 
+	
+	Removal of debugging code; fixed bug in _get_student_submissions
+	routine
+
+2003-07-15 Tuesday 23:24  rkingdon
+
+	* assessments.php, lib.php, submissions.php, todo.txt, upload.php,
+	version.php, view.php, db/mysql.php, db/mysql.sql: 
+	
+	Minor corrections, addition of rubics table - July 2003
+
+2003-07-12 Saturday 13:19  moodler
+
+	* index.php: 
+	
+	When displaying index lists of a particular module's activities,
+	ensure that the order they are displayed in is always the same as
+	the order they have been defined in.   See bug 553.
+	
+	This involved API changes to the function
+	get_all_instances_in_course()
+
+2003-06-16 Monday 22:40  moodler
+
+	* mod.html: 
+	
+	Some fixes to avoid pointless uses of $ME
+
+2003-05-21 Wednesday 16:13  moodler
+
+	* icon.gif: 
+	
+	Ray prefers icon3.gif
+
+2003-05-19 Monday 02:23  paca70
+
+	* db/: postgres7.php, postgres7.sql: 
+	
+	Some additions for postgresql
+
+2003-05-18 Sunday 22:38  moodler
+
+	* lib.php: 
+	
+	Added a stub for workshop_get_submission to stop errors on activity
+	reports
+
+2003-05-18 Sunday 17:28  moodler
+
+	* icon.gif, icon1.gif, icon3.gif, icon4.gif, icon5.gif: 
+	
+	Some alternative icons for the workshop module!
+	
+	Any comments, votes?
+
+2003-05-16 Friday 02:03  moodler
+
+	* view.php: 
+	
+	I knew there was something else I'd forgotten!
+	
+	Added a check to all modules (well view.php anyway) to check
+	whether a module is hidden or not.  If it is, then students get a
+	message.
+
+2003-05-14 Wednesday 11:23  moodler
+
+	* lib.php: 
+	
+	Fixed links in emails
+
+2003-05-14 Wednesday 00:37  rkingdon
+
+	* assessments.php, index.php, lib.php, submissions.php, todo.txt: 
+	
+	Addition of teacher admin features
+
+2003-05-13 Tuesday 05:18  rkingdon
+
+	* assessments.php, index.php, lib.php, submissions.php, view.php: 
+	
+	Correcting bugs in agreement of assessment and for self assessed
+	submissions
+
+2003-05-10 Saturday 06:13  rkingdon
+
+	* db/mysql.sql: 
+	
+	Corrected bug in SQL for workshop_comments table
+
+2003-05-09 Friday 04:24  rkingdon
+
+	* assessments.php, index.php, lib.php, mod.html, submissions.php,
+	todo.txt, version.php, view.php, db/mysql.php, db/mysql.sql: 
+	
+	version 1.1 with peer agreement
+
+2003-05-06 Tuesday 11:33  moodler
+
+	* lib.php: 
+	
+	Minor fixes for re-inclusion and also links in email
+
+2003-05-04 Sunday 18:45  paca70
+
+	* db/postgres7.sql: 
+	
+	Added transaction around table creation
+
+2003-05-04 Sunday 16:56  paca70
+
+	* db/: postgres7.php, postgres7.sql: 
+	
+	First versions for postgres7
+
+2003-05-01 Thursday 21:16  moodler
+
+	* Overview.html, assessments.php, icon.gif, icon.png, icon2.gif,
+	icon2.png, index.php, lib.php, mod.html, submissions.php, todo.txt,
+	upload.php, version.php, view.php, db/mysql.php, db/mysql.sql: 
+	
+	Workshop module from Ray Kingdon
+	
+	This version is still beta!
+

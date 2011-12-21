@@ -1,0 +1,9 @@
+2004-09-23 Thursday 20:33  moodler
+
+	* filter.php: 
+	
+	Tidy filter from Hannes Gassert <hannes at mediagonal dot ch>
+	
+	If you have Tidy installed as part of your PHP, you can use this
+	filter to convert all user text into XHTML on the fly.
+

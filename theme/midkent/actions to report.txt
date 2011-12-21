@@ -1,0 +1,14 @@
+closed the edutext call
+
+added disk space and moved moodle database OWN063391 - noted problem with windows 7
+
+Moved addtional modules to moodle and tested
+
+
+
+
+
+
+
+phone number and press set
+

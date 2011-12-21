@@ -1,0 +1,189 @@
+/**
+ * Send-message stylesheet for the
+ * Devil's Web Window, Internet Explorer 666
+ * @author Greg J Preece <support@txttools.co.uk>
+ * @copyright Copyright &copy; 2010 txttools Ltd. All rights reserved.
+ * @version 2010070912
+ * @since 2010070812
+ */
+
+div#slideWrapper{
+    width               :   90%;
+    height              :   560px;
+    position            :   relative;
+    overflow            :   hidden;
+    margin-left         :   auto;
+    margin-right        :   auto;
+    padding             :   0;
+    border              :   1px #000000 solid;
+}
+
+div#slidePlate {
+    width               :   400%;
+    height              :   560px;
+    position            :   absolute;
+    padding             :   0;
+}
+
+.slide {
+    width               :   25%;
+    height              :   558px;
+    text-align          :   center;
+    float               :   left;
+    padding             :   0;
+    position            :   relative;
+}
+
+p.prevNext {
+    position            :   absolute;
+    width               :   100%;
+    text-align          :   justify;
+    font-size           :   large;
+    font-weight         :   bold;
+    bottom              :   0;
+    left                :   0;
+}
+
+p.prevNext span.nextButton {
+    margin              :   0;
+    text-align          :   right;
+    float               :   right;
+    width               :   20%;
+}
+
+p.prevNext span.prevButton,
+p.prevNext span.nextButton{
+    cursor              :   pointer;
+}
+
+div.slide fieldset {
+    width               :   600px;
+    margin-left         :   auto;
+    margin-right        :   auto;
+}
+
+ul#tabs-nav {
+    width               :   50%;
+    padding             :   0;
+    margin-top          :   0;
+    margin-bottom       :   1em;
+    margin-left         :   auto;
+    margin-right        :   auto;
+}
+
+ul#tabs-nav li {
+    list-style          :   none;
+    margin-left         :   0;
+    margin-right        :   0;
+    padding-left        :   10px;
+    padding-right       :   10px;
+    border-right        :   1px dashed #000000;
+    border-left         :   1px dashed #000000;
+    cursor              :   pointer;
+    color               :   #000000;
+    background-color    :   #FFFFFF;
+}
+
+ul#tabs-nav li.selected {
+    font-weight         :   bold;
+    color               :   #FFFFFF;
+    background-color    :   #000000;
+}
+
+select.sourceBox {
+    width               :   100%;
+}
+
+div.sendtab {
+    clear               :   both;
+}
+
+div#leftPane {
+    width               :   35%;
+    float               :   left;
+}
+
+div#centrePane {
+    width               :   25%;
+    float               :   left;
+    margin              :   0 auto;
+    text-align          :   center;
+    padding-top         :   4em;
+}
+
+div#rightPane {
+    float               :   right;
+    width               :   35%;
+}
+
+option.mdltxt_opt_user {
+    background-color    :   #6DD95F;
+}
+
+option.mdltxt_opt_userGroup {
+    background-color    :   #37A828;
+}
+
+option.mdltxt_opt_abContact {
+    background-color    :   #91C8ED;
+}
+
+option.mdltxt_opt_abGroup {
+    background-color    :   #389CDE;
+}
+
+option.mdltxt_opt_add {
+    background-color    :   #FFFFFF;
+}
+
+select#finalRecipients {
+    width               :   100%;
+}
+
+input.submit {
+    background-color    :   transparent;
+    font-weight         :   bold;
+    border              :   1px #000000 solid;
+}
+
+/*
+ * NAVIGATOR STYLING
+ */
+
+#navWrapper {
+    width               :   90%;
+    margin              :   0 auto;
+    clear               :   both;
+}
+
+ul#navigator {
+    clear               :   both;
+    color               :   #000000;
+    background-color    :   #FFFFFF;
+    width               :   100%;
+    margin              :   0;
+    padding             :   0;
+    text-align          :   center;
+}
+
+#navigator li{
+    margin              :   0;
+    display             :   inline;
+    height              :   30px;
+    padding             :   5px 5px 0 5px;
+    list-style          :   none;
+    text-align          :   center;
+    cursor              :   pointer;
+    color               :   #000000;
+    background-color    :   #FFFFFF;
+    border              :   1px #000000 solid;
+}
+
+#navigator li.menuCurrent {
+    color               :   #FFFFFF;
+    background-color    :   #000000;
+}
+
+#navigator li.done{
+    background-color    :   #00D8FF;
+}

@@ -1,0 +1,54 @@
+body {
+	font-size:0.9em;
+}
+h1 {
+	font-size: 1.0em;
+}
+.popup {
+	display:none;
+	background-color:white;
+	border:1px dotted black; 
+	z-index:60; 
+	padding:10px;
+	position: absolute;
+	width:250px;
+	top: 250px !important;
+}
+
+#itemControls {
+	float:left;
+	display:none;
+	margin-left:5px;
+}
+
+#id_items {
+	float:left;
+	width:15em;
+	z-index:0;
+}
+
+#collectioncontrols input{
+	width:30px;
+}
+
+#id_remove {
+	margin-top:7px;
+}
+
+#categorygroup .fgroup
+{
+	overflow:auto;
+	height:100px;
+}
+
+#categorygroup .fgroup span
+{
+	width:10em;
+	float:left;
+}
+
+#categorygroup .fgroup span input
+{
+	float:left;
+	display:block;
+}

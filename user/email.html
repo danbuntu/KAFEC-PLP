@@ -1,0 +1,36 @@
+<form name="theform" method="post" action="sendemail.php">
+<input type="hidden" name="id" value="<?php p($id) ?>" />
+<input type="hidden" name="returnto" value="<?php p($returnto) ?>" />
+<input type="hidden" name="deluser" value="" />
+<table align="center"><tr><th colspan="4"><?php print_string('currentlyselectedusers'); ?></th></tr>
+<?php
+    if (count($SESSION->emailto[$id])) {
+        if (!$course->teacher) {
+            $course->teacher = get_string('defaultcourseteacher');
+        }
+        foreach ($SESSION->emailto[$id] as $user) {
+            echo '<tr><td>'.fullname($user,true).'</td><td>'.$user->email.'</td><td>';
+            if ($user->teacher) {
+                echo '<img src="'.$CFG->pixpath.'/t/user.gif" alt="'.$course->teacher.'" title="'.$course->teacher.'"/>';
+            }
+            if ($user->emailstop) {
+                $error = get_string('emaildisable');
+            } elseif (empty($user->email)) {
+                $error = get_string('emailempty');
+            }
+            if (!empty($error)) {
+                echo '<img src="'.$CFG->pixpath.'/t/emailno.gif" alt="'.$error.'" title="'.$error.'"/>';
+                unset($error);
+            } else {
+                $mailto .= fullname($user,true).' <'.$user->email.'>;';
+            }
+            echo '</td><td><input type="submit" onClick="this.form.deluser.value='.$user->id.';" value="remove" /></td></tr>';
+        }
+        echo '<tr><td><br /><a href="mailto:'.$mailto.'">Click here to email the above people</a></td></tr>';
+    }
+    else {
+        echo '<tr><td colspan="3" align="center">'.get_string('nousersyet').'</td></tr>';
+    }
+?>
+</table>
+</form>

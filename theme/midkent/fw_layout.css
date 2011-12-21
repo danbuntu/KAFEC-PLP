@@ -1,0 +1,368 @@
+/* Core */
+
+body {
+    margin: 5px;
+}
+
+
+h1.main,
+h2.main,
+h3.main,
+h4.main,
+h5.main,
+h6.main {
+  text-align: left;
+  padding-left: 5px;
+} 
+
+h1, h2, h3, h4 {
+  text-align: left;
+  padding-left: 5px;
+}
+  
+h1, h2, h3 {
+  border-width: 0px;
+  border-style: solid; 
+}
+
+h4 {
+  border-bottom-style: solid;
+  border-bottom-width:1px; 
+}
+
+.fronthead {
+  font-size:1.3em;
+  letter-spacing:0.04em;
+}
+
+.fronttext {
+  margin-top:5px;
+  margin-left:20px;
+  margin-right:10px;
+  margin-bottom:20px;
+}
+
+div.frontblock {
+  margin-top: 12px;
+  margin-bottom: 25px;
+  border: #DDD solid 1px;
+  -moz-border-radius-bottomleft: 20px;
+  -moz-border-radius-bottomright: 20px;
+  font-size: 0.95em;
+}
+
+h1.frontblock {
+  border: #DDD solid 1px;
+  background-image: url(gradient.jpg);  
+  background-position: top;  
+  background-repeat: repeat-x;  
+  padding: 1px 10px;
+  display: inline;
+  position: relative;
+  top: -0.5em;
+  left: 8px;
+  font-weight: normal;
+}
+
+p.fronttext.p1 {
+  min-height: 90px;
+}
+p.fronttext.p2 {
+  min-height: 90px;
+}
+p.fronttext.p3 {
+  min-height: 125px;
+}
+p.fronttext.p4 {
+  min-height: 105px;
+}
+
+input {
+  
+}
+
+.generalbox {
+  border-width:1px; 
+  border-style:solid;
+}
+
+.sitetopiccontent {
+  border-width:1px;
+  border-style:solid;
+}
+
+/***
+ *** Header
+ ***/
+
+#header-home {
+  /* padding:1em 0.5em; */
+  height:100px;
+  border-width:1px;
+  border-style:solid;
+  
+}
+
+#header {
+  height:55px;
+  border-width:1px;
+  border-style:solid;
+}
+
+.headermenu {
+  height:55px;
+  float:right;
+  text-align:right;
+  /* Change this url to add an image to the top right for a theme 
+  background-image: url(x.gif); */
+}
+
+.navbar {
+  margin-right: 5px;
+  width: 100%; 
+  padding:0px;
+  height: 25px;
+  border-width:1px;
+  border-style:solid;
+}
+
+.accessibility {
+  background-color: #D2EFFF;
+  font-weight: bold;
+  width: 250px;
+  height: 80px;
+  border-width: 1px;
+  border-style: solid;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: absolute;
+  align: right;
+  opactity: .80;
+  filter:alpha(opacity=80);
+  -moz-opacity:.80;
+  top: 50px;
+  right: 50px;
+  text-decoration: none;
+  display: none;
+}
+
+.accessibilityshadow {
+  background-color: #000000;
+  width: 250px;
+  height: 100px;
+  position: absolute;
+  align: right;
+  opactity: .20;
+  filter:alpha(opacity=20);
+  -moz-opacity:.20;
+  top: 55px;
+  right: 45px;
+  display: none;
+}
+
+.accessibilitycloseX {
+  position:absolute;
+  right:10px;
+}
+
+.breadcrumb {
+ padding-top: 6px;
+ padding-left: 5px;
+ }
+ 
+.navbar .navbutton {
+  padding-right: 3px;
+  padding-top: 2px;
+ }
+
+
+/***
+ *** Login
+ ***/
+
+TABLE.loginbox {
+  margin-top: 20px;
+  }
+
+.loginbox .header {
+  border-width:1px;
+  border-style:solid;
+  border-bottom-width: 0px;
+}
+
+.loginbox .content {
+  border-top-width: 0px;
+}
+
+
+/***
+ *** Footer
+ ***/
+
+#footer {
+  text-align:left;
+  margin-top: 5px;
+}
+
+
+/***
+ *** Blocks
+ ***/
+
+
+.sideblock .footer {
+  border-top-width:1px;
+  border-top-style:dashed;
+}
+
+a.skip-block, .skip-block {
+  display:block;
+  width:2em; 
+  height:1px;
+}
+.sideblock .skip-block {
+  height:4px;
+}
+.skip-block-to {
+  font-size:1px;
+}
+  
+
+/***
+ *** Calendar
+ ***/
+ 
+ table.minicalendar {
+  width: 100%;
+  margin:10px auto;
+  padding:2px;
+  border-width:1px;
+  border-style:solid;
+  border-collapse:separate;
+  border-spacing:1px !important;
+}
+
+table.minicalendar tr.weekdays th {
+   border-style: none;
+}
+
+table.minicalendar tr td.day {
+  border-style: solid;
+  border-width: 1px;
+}
+
+table.calendarmonth {
+  border-collapse:separate;
+  border-spacing:1px !important;
+}
+
+table.calendarmonth tr td  {
+  border-style: solid;
+  border-width: 1px;
+}
+
+
+/***
+ *** Course
+ ***/
+ 
+.headingblock {
+  border-width:1px;
+  border-style:solid;
+  padding:5px;
+  background-image: url(pix/grad/center_header_gradiant.jpg);
+}
+
+
+.categorybox .category,
+.categorybox .category {
+  border-bottom: solid;
+  border-width: 1px;
+  padding-top: 7px;
+}
+
+#course-view .section .left {
+  border-right-width: 1px;
+  border-right-style: dashed;
+}
+
+#course-view .section.hidden .content,
+#course-view .section.hidden .side {
+  border-width: 1px;
+  border-style: dashed;
+}
+
+.reflection {
+  filter: flipv alpha(Opacity=60, FinishOpacity=0, Style=1, StartX=0, StartY=0, FinishX=0, FinishY=40);
+}
+
+.reflectionsmall {
+  filter: flipv alpha(Opacity=60, FinishOpacity=0, Style=1, StartX=0, StartY=0, FinishX=0, FinishY=25);
+}
+
+
+/* ILP SETTINGS */
+
+/*
+* @copyright &copy; 2007 University of London Computer Centre
+* @author http://www.ulcc.ac.uk, http://moodle.ulcc.ac.uk
+* @license http://www.gnu.org/copyleft/gpl.html GNU Public License
+* @package ILP
+*/
+
+/* General page setting */
+#blocks-ilp-view div#content {padding-left: 10px; padding-right: 10px;}
+#blocks-ilp-view table td{margin:3px; padding:5px; }
+#blocks-ilp-view table.generalbox { width:99%; }
+#blocks-ilp-view div.generalbox {margin:3px; padding:5px;}
+#blocks-ilp-view div.generalbox h2 {margin:0; padding:0}
+
+/* Add new post button */
+div.addbox { text-align:center; margin:5px; }
+div.addbox a { border: 1px solid #000; padding:5px; }
+
+/* Comments box */
+.ilpcenter { text-align:center; }
+.ilpcomment { width:85%; text-align:left; font-size:0.8em; margin-top:3px; margin-bottom:3px; padding:3px; }
+.ilpcomment .commands { font-size: 0.9em; padding-top: 0.5em; text-align:right; clear: both; }
+
+/* Student Status Colours */
+h1.status-0, h2.status-0, h3.status-0, span.status-0 { color: #00984b; }
+h1.status-1, h2.status-1, h3.status-1, span.status-1 { color: #ff7e00; }
+h1.status-2, h2.status-2, h3.status-2, span.status-2 { color: #ff0000; }
+span.status-0, span.status-1, span.status-2 { font-weight:bold; }
+
+/* Use full-size profile image */
+#blocks-ilp-view .userpicture { width: 100px; height: 100px; }
+
+/* YUI Grid http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css */
+
+ilp_post,.yui-t4 {margin:auto;text-align:left;width:99%;*width:99%;}
+.ilp_post { margin:3px; }
+.yui-t4 {border: 1px solid #ccc; padding:3px; }
+.yui-b{position:relative;}
+.yui-b{_position:static;}
+.yui-main .yui-b{position:static;}
+.yui-main{width:100%;}
+.yui-t4 .yui-main {float:left;margin-right:-25em;}
+.yui-t4 .yui-b{float:right;width:15.8456em;*width:15.50em;}
+.yui-t4 .yui-main .yui-b{margin-right:16.8456em;*margin-right:16.55em;}
+.yui-main .yui-b{float:none;width:auto;}
+.yui-gd .yui-u{float:left;}
+.yui-gd div.first{float:left;}
+.yui-gd .yui-u{width:16%;margin-left:1.99%; }
+.yui-gd .yui-u{width:80%;border-right:1px dashed #ccc;border-left:1px dashed #ccc; padding-left:2px;}
+.yui-gd div.first{width:15%;border:none;}
+.yui-gd div.first{margin-left:0;}
+
+.yui-t4 .yui-b img.achieved {position: absolute; bottom:0; right:0}
+.yui-t4 .yui-b ul {margin: 5px 0 5px 0; padding-left: 0; border: none;}
+.yui-t4 .yui-b ul li { margin-left: 0; padding-left: 2px; border: none; list-style: none;}
+.yui-t4 .yui-b ul li:before { content: "\0020 \0020 \0020 \00BB \0020"; }
+.yui-t4 .yui-b .commands { font-size: 0.8em; padding-top: 0em; clear: both; }
+.yui-t4 .yui-b form {display:inline;}
+.yui-t4 .yui-b form select, .yui-t4 .yui-b form input {font-size:0.8em;}
+
+.bd:after,.yui-gd:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.bd,.yui-gd{zoom:1;} 

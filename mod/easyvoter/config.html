@@ -1,0 +1,38 @@
+<form method="post" action="module.php" id="form">
+<div>
+<input type="hidden" name="sesskey" value="<?php echo $USER->sesskey ?>" />
+
+<table cellpadding="9" cellspacing="0" >
+<tr valign="top">
+    <td align="right"><?php print_string('easyvotermaxparticipants', 'easyvoter') ?></td>
+    <td>
+        <input type="text" name="easyvoter_maxparticipants" value="<?php echo $CFG->easyvoter_maxparticipants ?>" size="3" maxlength="3" />
+    </td>
+    <td>
+        <?php print_string('easyvotermaxpartdesc', 'easyvoter') ?>
+    </td>
+</tr><tr>
+    <td align="right"><?php print_string('easyvoterrefreshrate', 'easyvoter') ?></td>
+    <td>
+        <input type="text" name="easyvoter_refreshrate" value="<?php echo $CFG->easyvoter_refreshrate ?>" size="7" maxlength="7" />
+    </td>
+    <td>
+        <?php print_string('easyvoterrefreshratedesc', 'easyvoter') ?>
+    </td>
+</tr><tr>
+    <td align="right"><?php print_string('easyvoteridle', 'easyvoter') ?></td>
+    <td>
+        <input type="text" name="easyvoter_idle" value="<?php echo $CFG->easyvoter_idle ?>" size="4" maxlength="4" />
+    </td>
+    <td>
+        <?php print_string('easyvoteridledesc', 'easyvoter') ?>
+    </td>
+</tr>
+<tr>
+    <td colspan="3" align="center">
+        <input type="submit" value="<?php print_string("savechanges") ?>" />
+    </td>
+</tr>
+</table>
+</div>
+</form>

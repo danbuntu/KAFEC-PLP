@@ -1,0 +1,11 @@
+* Open user/index.php
+* Search for $displaylist = array();
+* Add the following to the list of ifs:
+        if (has_capability('moodle/course:bulkmessaging', $context)) {
+
+			$displaylist['sendemail.php'] = 'Send email';
+
+        }
+
+* Open user/action_redir.php
+* Add 'sendemail.php' to the $actions array

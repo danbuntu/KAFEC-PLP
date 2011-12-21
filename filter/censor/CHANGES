@@ -1,0 +1,135 @@
+2007-01-14 Sunday 04:15  stronk7
+
+	* filterconfig.html: 
+	
+	Now all the filters global config pages are valid XML. Related to
+	MDL-7861
+
+2006-02-07 Tuesday 00:36  thepurpleblob
+
+	* filterconfig.html: 
+	
+	Added ability to reset to default. Bug #4123
+
+2005-08-26 Friday 16:33  thepurpleblob
+
+	* README.txt, filter.php, filterconfig.html: 
+	
+	If no custom list is specified, the default list from the language
+	pack will be used instead. It works out-of-the-box (again!).
+
+2005-07-30 Saturday 23:54  moodler
+
+	* filter.php: 
+	
+	Merged from stable
+
+2005-07-30 Saturday 16:54  moodler
+
+	* filter.php: 
+	
+	Added original word as title to the blacked-out version.  This is
+	because the filter can obscure actual important words by mistake
+	(eg Dickens) and there needs to be some way to recover the meaning.
+
+2005-07-26 Tuesday 21:06  thepurpleblob
+
+	* README.txt, filterconfig.html: 
+	
+	Added configuration screen for bad words list.
+
+2005-07-26 Tuesday 21:05  thepurpleblob
+
+	* filter.php: 
+	
+	Provide setup screen for the censor bad words list. Note that for
+	decencies sake, I have decided to start with a blank word list
+	rather than use the provided one which may shock the unwary!
+
+2005-06-23 Thursday 07:34  stronk7
+
+	* filter.php: 
+	
+	Changed to use the new replacementphrase attribute so bad words are
+	replaced with a strlen(phrase) number of **** characters. Bug 3605
+	(http://moodle.org/bugs/bug.php?op=show&bugid=3605)
+	
+	Merged from MOODLE_15_STABLE
+
+2005-06-23 Thursday 07:33  stronk7
+
+	* filter.php: 
+	
+	Changed to use the new replacementphrase attribute so bad words are
+	replaced with a strlen(phrase) number of **** characters. Bug 3605.
+	 (http://moodle.org/bugs/bug.php?op=show&bugid=3605)
+
+2005-05-08 Sunday 23:10  moodler
+
+	* filter.php: 
+	
+	Moved badwords list to censor.php file	(bug 3164)
+
+2005-03-26 Saturday 11:03  ikawhero
+
+	* filter.php: 
+	
+	Just so we can put spaces in the bad words string.
+
+2005-03-05 Saturday 19:53  moodler
+
+	* filter.php: 
+	
+	Modern version	:-)
+
+2005-03-05 Saturday 11:41  moodler
+
+	* filter.php: 
+	
+	Use a customised style for censored words
+
+2005-03-05 Saturday 11:32  moodler
+
+	* filter.php: 
+	
+	Improved censor
+	
+	  - now blacks out words using styles
+	  - gets the words from the language pack
+
+2004-08-08 Sunday 14:57  moodler
+
+	* filter.php: 
+	
+	Improvement to filters, providing speed boost AND better
+	compatibility with Turck MMCache.
+	
+	Filter function must now have a particular name
+	
+	   eg resource_filter
+	
+	where "resource" is the name of the directory that filter.php is
+	in.
+
+2004-02-17 Tuesday 13:22  moodler
+
+	* censor.php, filter.php: 
+	
+	Changed the name of all filters to be consistent.
+	
+	Removed texh filter
+
+2003-10-16 Thursday 17:39  moodler
+
+	* README.txt: 
+	
+	Add a simple README
+
+2003-10-16 Thursday 17:33  moodler
+
+	* censor.php: 
+	
+	A very simple filter to censor "bad" words.
+	
+	Also provides an example of how to write filters.
+

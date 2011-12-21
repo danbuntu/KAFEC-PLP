@@ -1,0 +1,71 @@
+
+#content {
+	border-left: 18px #26B1E0 solid;
+	border-right: 18px #26B1E0 solid;
+}
+
+#content .layout-table {
+	border-left: 0px;
+}
+
+#files-index #bluepage {
+	
+}
+
+#bluepage {
+   width: auto;
+
+
+}
+
+#course-category {
+
+}
+
+#files-index #content {
+	
+}
+
+#files-index #page {
+	
+}
+
+.headermenu {
+	position: absolute;
+	align: top;
+	right: 30px;
+}
+
+.sideblock {
+  overflow: hidden;
+}
+
+.sideblock .content {
+  word-wrap: break-word;
+}
+
+.clearer {
+    height: -10px;
+
+}
+
+#content {}
+
+
+#content {
+
+}
+
+#layout-table {
+
+}
+
+#page {
+    width: auto;
+}
+
+#footer {
+    height: auto;
+}
+
+

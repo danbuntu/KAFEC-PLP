@@ -1,0 +1,3598 @@
+2007-01-16 Tuesday 23:36  jamiesensei
+
+	* mod_form.php: 
+	
+	changed name of moodleform_mod method 'defaults_preprocessing' to
+	'data_preprocessing' in line with change of set_defaults name to
+	set_data.
+
+2007-01-15 Monday 02:58  stronk7
+
+	* db/: mysql.sql, postgres7.sql: 
+	
+	Deleting deprecated .sql files. MDL-7264 Byeeez!
+
+2007-01-12 Friday 14:57  vyshane
+
+	* mediafile.php: 
+	
+	xhtml fixes related to MDL-7861.
+
+2007-01-12 Friday 03:47  skodak
+
+	* mod_form.php: 
+	
+	fixed text field widths in new forms
+
+2007-01-11 Thursday 16:51  vyshane
+
+	* edit.php, locallib.php, view.php, viewstart.html,
+	action/addbranchtable.php, action/addpage.php, action/editpage.php:
+	
+	
+	xhtml fixes for MDL-7861.
+
+2007-01-09 Tuesday 03:34  skodak
+
+	* highscores.php: 
+	
+	MDL-7861 xhtml transient fixes for not closed input fields - I hope
+	all of them except imported libs are now fixed
+
+2007-01-08 Monday 17:14  skodak
+
+	* locallib.php: 
+	
+	MDL-7861 new class .icon and .iconsmall
+
+2007-01-07 Sunday 03:23  skodak
+
+	* action/continue.html, view.php: 
+	
+	MDL-8062 Remove name attribute from <form> and related javascript
+	code cleanup (tested with FF, IE, Konq and Opera)
+
+2007-01-05 Friday 07:38  skodak
+
+	* reformat.php, restorelib.php: 
+	
+	MDL-7861 xhtml strict fixes - fixed all <br> in our code
+
+2007-01-05 Friday 05:32  skodak
+
+	* action/addbranchtable.php, action/addpage.php,
+	action/continue.html, action/editpage.php, essay.php,
+	highscores.php, importppt.php, report.php, view.php: 
+	
+	MDL-8062 1.3 Remove name attribute from <form> and fix focus
+	everywhere - more changes ahead
+
+2007-01-05 Friday 02:24  skodak
+
+	* locallib.php: 
+	
+	MDL-8050 1.2 Remove all target="_top" - refactoring of previous
+	commit
+
+2007-01-04 Thursday 03:33  skodak
+
+	* locallib.php, timer.js: 
+	
+	MDL-8049 Remove all language=Javascript from javascript includes
+
+2007-01-04 Thursday 03:24  skodak
+
+	* locallib.php: 
+	
+	MDL-8050 1.2 Remove all target="_top"
+
+2007-01-03 Wednesday 15:29  toyomoyo
+
+	* view.php, action/addpage.php, action/editpage.php: 
+	
+	MDL-7861, fixing various xhtml strict issues and formatting
+
+2007-01-03 Wednesday 12:55  moodler
+
+	* mod_form.php: 
+	
+	Checking in Nick Freear's changes and evolution of Julette White's
+	code with a few modifications made to the install process) for
+	further work in HEAD.
+	
+	See MDL-7380 for details.
+
+2006-12-31 Sunday 01:29  mark-nielsen
+
+	* locallib.php, styles.php, view.php, viewend.html, viewstart.html,
+	action/continue.html, action/continue.php: 
+	
+	modified some strings to add more meaning to buttons and links left
+	menu, clock and media file all display like blocks some general
+	code cleanup eg: went through several of the todo's in the code
+
+2006-12-28 Thursday 17:32  jamiesensei
+
+	* mod_form.php: 
+	
+	changes to how we generate the id attribute of forms and the naming
+	convention of forms migrate blog edit to formslib
+
+2006-12-22 Friday 15:19  toyomoyo
+
+	* action/: addpage.php, editpage.php: 
+	
+	MDL-7861, fixing xhtml tags
+
+2006-12-22 Friday 14:31  toyomoyo
+
+	* locallib.php, action/addpage.php: 
+	
+	MDL-7861, fixing tags
+
+2006-12-22 Friday 13:58  toyomoyo
+
+	* edit.php: 
+	
+	MDL-7861, fixing broken tags
+
+2006-12-22 Friday 13:20  toyomoyo
+
+	* action/editpage.php: 
+	
+	fixing broken tags for MDL-7861
+
+2006-12-20 Wednesday 10:17  toyomoyo
+
+	* edit.php, locallib.php, action/addbranchtable.php: 
+	
+	MDL-7861 fixng lesson xhtml tags
+
+2006-12-20 Wednesday 10:00  toyomoyo
+
+	* importppt.php: 
+	
+	fixing xhtml tags MDL-7861
+
+2006-12-20 Wednesday 09:49  toyomoyo
+
+	* import.php: 
+	
+	MDL-7861 fixing broken xhtml in lesson
+
+2006-12-19 Tuesday 15:03  jamiesensei
+
+	* mod_form.php: 
+	
+	
+	* Added setAdvanced functionality see
+	http://docs.moodle.org/en/Development:lib/formslib.php_setAdvanced
+	* Added MoodleQuickForm method closeHeaderBefore($elementName);
+	http://docs.moodle.org/en/Development:lib/formslib.php_Form_Definit
+	ion#Use_Fieldsets_to_group_Form_Elements * Added moodleform method
+	add_action_buttons(); see
+	http://docs.moodle.org/en/Development:lib/formslib.php_Form_Definit
+	ion#add_action_buttons.28.24cancel_.3D_true.2C_.24revert_.3D_true.2
+	C_.24submitlabel.3Dnull.29.3B * is_cancelled method added to
+	moodleform
+	http://docs.moodle.org/en/Development:lib/formslib.php_Usage#Basic_
+	Usage_in_A_Normal_Page * added hidden labels to elements within
+	groups such as the date_selector select boxes and other elements in
+	'groups' * quiz/mod.html migrated to formslib * glossary/edit.html
+	migrated to formslib * extended registerNoSubmitButton()
+	functionality to automatically add js to onclick to bypass client
+	side js input validation.  * added no_submit_button_pressed()
+	function that can be used in a similar way to is_cancelled() as a
+	test in the main script to see if some button in the page has been
+	pressed that is a submit button that is used for some dynamic
+	functionality within the form and not to submit the data for the
+	whole form.  * added new condition for disabledIf which allows to
+	disable another form element if no options are selected from within
+	a select element.  * added default 'action' for moodleform  -
+	strip_querystring(qualified_me())
+	http://docs.moodle.org/en/Development:lib/formslib.php_Usage#Basic_
+	Usage_in_A_Normal_Page
+
+2006-12-19 Tuesday 10:34  toyomoyo
+
+	* locallib.php: 
+	
+	no need to use javascript for a submit button
+
+2006-12-19 Tuesday 09:52  toyomoyo
+
+	* locallib.php, viewend.html: 
+	
+	MDL-7861, fixing xhtml for lesson. When in strict mode, javascript
+	button is not working
+
+2006-12-18 Monday 14:13  toyomoyo
+
+	* locallib.php, view.php: 
+	
+	MLD-7861, making moodle xhtml strict. There are still errors in
+	lesson mod
+
+2006-12-14 Thursday 20:44  jamiesensei
+
+	* mod_form.php: 
+	
+	added setAdvanced MoodleQuickForm method. And added
+	closeHeaderAfter method
+
+2006-12-13 Wednesday 16:24  toyomoyo
+
+	* edit.php, viewend.html, action/continue.html: 
+	
+	accessiblity, associating <th> with respective row or col
+
+2006-12-13 Wednesday 06:06  skodak
+
+	* action/editpage.php: 
+	
+	MDL-7909 add optional id parameter to choose_from_menu() and
+	print_textarea() + minor quoting improvement in choose_from_menu()
+
+2006-12-12 Tuesday 02:44  mark-nielsen
+
+	* view.php: 
+	
+	Merged in changes for MDL-7477 fix
+
+2006-12-12 Tuesday 02:42  mark-nielsen
+
+	* view.php: 
+	
+	Fix for MDL-7477
+
+2006-12-09 Saturday 02:48  mark-nielsen
+
+	* mediafile.php: 
+	
+	Merged in fix for MDL-7418
+
+2006-12-09 Saturday 02:45  mark-nielsen
+
+	* mediafile.php: 
+	
+	Fixed MDL-7418: added support for images and added a default
+	support which is that the file is available for download
+
+2006-12-06 Wednesday 10:26  mark-nielsen
+
+	* viewend.html: 
+	
+	Merged changes from MOODLE_17_STABLE
+
+2006-12-06 Wednesday 10:25  mark-nielsen
+
+	* viewend.html: 
+	
+	Media file link was being squished.  Gave it 150px space
+
+2006-12-06 Wednesday 10:04  mark-nielsen
+
+	* report.php, view.php, action/continue.php: 
+	
+	Merged in changes from MOODLE_17_STABLE for bug MDL-2006
+
+2006-12-06 Wednesday 09:59  mark-nielsen
+
+	* report.php, view.php, action/continue.php: 
+	
+	Fix for MDL-2006
+
+2006-12-06 Wednesday 09:45  mark-nielsen
+
+	* action/continue.php: 
+	
+	Changed the fix to match what is in HEAD
+
+2006-12-06 Wednesday 09:35  mark-nielsen
+
+	* action/continue.php: 
+	
+	Bug fix: student response was not displaying for numerical
+	questions, this bug does not exist in 1.7
+
+2006-12-05 Tuesday 21:21  jamiesensei
+
+	* action/editpage.php: 
+	
+	petr's patch to fix problem with htmlarea breaking clientside
+	validation. Also using id's with same naming convention as formslib
+	for htmlareas.
+
+2006-12-04 Monday 17:36  jamiesensei
+
+	* mod_form.php: 
+	
+	added new 'cancel' element type and introduced new is_cancelled()
+	MoodleQuickForm method.  also used new cancel button in all
+	mod_forms as well as a 'Revert' button and reworked logic about
+	where to go on cancel or after submission for modedit.php
+
+2006-11-28 Tuesday 13:54  mark-nielsen
+
+	* index.php, lib.php: 
+	
+	Merged changes from MOODLE_17_STABLE for MDL-7707
+
+2006-11-28 Tuesday 13:45  mark-nielsen
+
+	* index.php, lib.php: 
+	
+	Fix for MDL-7707.  Also had to update index.php to show students
+	the same score as in the gradebook.
+
+2006-11-25 Saturday 00:38  jamiesensei
+
+	* mod_form.php: 
+	
+	changed name of submit buttons to submitbutton instead of sumbit as
+	submit was conflicting with method form.submit()
+
+2006-11-24 Friday 14:39  jamiesensei
+
+	* lib.php, mod_form.php: 
+	
+	some restructuring of formslib - moving moodleform_mod definition
+	to new file course\moodleform_mod.php and some changes to
+	moodleform_mod standard elements setup and moodleform disabledIf
+	API
+
+2006-11-15 Wednesday 15:44  jamiesensei
+
+	* lib.php, mod.html, mod_form.php: 
+	
+	migrated mod/lesson/mod.html to formslib
+
+2006-11-12 Sunday 16:55  skodak
+
+	* locallib.php, index.php: 
+	
+	fixed obsoleted use of course->category to find site course - now
+	used SITEID instead MDL-1899
+
+2006-11-09 Thursday 15:21  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	drop utf8 support from HEAD MDL-6332
+
+2006-11-02 Thursday 10:17  toyomoyo
+
+	* essay.php, report.php: 
+	
+	merged fix for MDL-7112 select distinct on text field
+
+2006-11-02 Thursday 10:16  toyomoyo
+
+	* essay.php, report.php: 
+	
+	fix for MDL-7112 select distinct on text fields
+
+2006-11-01 Wednesday 06:02  skodak
+
+	* edit.php, essay.php: 
+	
+	fixed incorrect use of require_capability() in lesson mod MDL-7314;
+	merged from MOODLE_17_STABLE
+
+2006-11-01 Wednesday 06:01  skodak
+
+	* edit.php, essay.php: 
+	
+	fixed incorrect use of require_capability() in lesson mod MDL-7314
+
+2006-10-30 Monday 19:00  sam_marshall
+
+	* action/: continue.php, continue.php: 
+	
+	[MDL-7287] Lesson - tweaked continue.php to include a file via
+	filesystem not HTTP because I couldn't see any reason to do it the
+	latter way and it breaks under our loadbalancing system
+
+2006-10-27 Friday 06:46  stronk7
+
+	* db/postgres7.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+	
+	Merged from MOODLE_17_STABLE
+
+2006-10-27 Friday 06:39  stronk7
+
+	* db/mysql.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+	
+	Merged from MOODLE_17_STABLE
+
+2006-10-27 Friday 06:29  stronk7
+
+	* db/postgres7.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+
+2006-10-27 Friday 06:25  stronk7
+
+	* db/mysql.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+
+2006-10-27 Friday 01:43  stronk7
+
+	* db/upgrade.php: 
+	
+	New upgrade.php file added for this module. MDL-7214
+	
+	Merged from HEAD
+
+2006-10-27 Friday 01:33  stronk7
+
+	* db/upgrade.php: 
+	
+	file upgrade.php was added on branch MOODLE_17_STABLE on 2006-10-26
+	17:43:08 +0000
+
+2006-10-27 Friday 01:33  stronk7
+
+	* db/upgrade.php: 
+	
+	New upgrade.php file added for this module. MDL-7214
+
+2006-10-17 Tuesday 18:05  thompson697
+
+	* restorelib.php: 
+	
+	Apply modularity to the creation of the log file during restore to
+	a new course.  Remove the responsibility for loging the application
+	of the course start date offset, from activity modules to the
+	backup module.	Merged from stable branch
+
+2006-10-16 Monday 18:40  thompson697
+
+	* restorelib.php: 
+	
+	Apply modularity to the creation of the log file during restore to
+	a new course.  Remove the responsibility for loging the application
+	of the course start date offset, from activity modules to the
+	backup module.
+
+2006-10-12 Thursday 11:36  toyomoyo
+
+	* restorelib.php: 
+	
+	merged fix warnings during restore
+
+2006-10-12 Thursday 11:36  toyomoyo
+
+	* restorelib.php: 
+	
+	fix warnings during restore
+
+2006-10-11 Wednesday 14:22  moodler
+
+	* db/access.php: 
+	
+	Merged fixes for MDL-6907 from stable
+
+2006-10-11 Wednesday 14:16  moodler
+
+	* db/access.php: 
+	
+	All the PREVENTS from the legacy roles have been removed (and thus
+	are treated as INHERIT by default).
+	
+	See MDL-6907 for details.
+
+2006-10-06 Friday 23:03  stronk7
+
+	* db/migrate2utf8.php: 
+	
+	Typo recently introduced. MDL-6336 (merged from MOODLE_16_STABLE)
+
+2006-10-06 Friday 23:00  stronk7
+
+	* db/migrate2utf8.php: 
+	
+	Typo recently introduced. MDL-6336
+
+2006-10-06 Friday 16:26  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml, migrate2utf8.php,
+	migrate2utf8.xml: 
+	
+	fix for MDL-6336
+
+2006-10-04 Wednesday 22:50  thompson697
+
+	* restorelib.php: 
+	
+	Change creation of restorelog file location to protected backupdata
+	folder.  Reassign style and language links
+
+2006-10-01 Sunday 03:49  mark-nielsen
+
+	* backuplib.php, format.php, import.php, importppt.php, index.php,
+	lesson.php, lib.php, locallib.php, mediafile.php, mod.html,
+	reformat.php, restorelib.php, version.php, action/addcluster.php,
+	action/addendofbranch.php, action/addendofcluster.php,
+	action/confirmdelete.php, action/continue.php, action/delete.php,
+	action/insertpage.php, action/move.php, action/moveit.php,
+	action/updatepage.php: 
+	
+	NO CODE CHANGES.  Just added PHPdoc comments at the top of lesson
+	files.
+
+2006-10-01 Sunday 03:24  mark-nielsen
+
+	* mod.html: 
+	
+	Bug Fix: The dependency drop-down was displaying incorrectly. 
+	Fixed up code to use API to gather Lessons correctly.
+
+2006-10-01 Sunday 03:00  mark-nielsen
+
+	* view.php: 
+	
+	BugFix for MDL-6730: now blank lessons redirect to edit.php where
+	the user is prompted by a menu of options.
+
+2006-09-26 Tuesday 13:11  martinlanghoff
+
+	* report.php: 
+	
+	mod/lesson, mod/quiz: remove deprecated sql_paging_limit(), use
+	offset, limit parameters
+
+2006-09-24 Sunday 14:03  mark-nielsen
+
+	* lib.php: 
+	
+	MDL-6628 bug fix
+
+2006-09-24 Sunday 03:57  mark-nielsen
+
+	* lib.php: 
+	
+	Fix for MDL-6628: the lesson object was not being cloned correctly.
+
+2006-09-24 Sunday 03:32  mark-nielsen
+
+	* view.php: 
+	
+	Moved endofbranch redirect up to avoid double printing of messages.
+
+2006-09-24 Sunday 02:51  mark-nielsen
+
+	* mod.html: 
+	
+	Fixed alignment issue in IE
+
+2006-09-24 Sunday 02:45  mark-nielsen
+
+	* locallib.php, styles.php, view.php: 
+	
+	Fixed branch table buttons to work with JavaScript turned off. 
+	This fix lead to some minor changes to the button output, but
+	hopefully simplified things.
+	
+	Also, removed .hidden-label class because it was no longer in use
+	due to label fixes earlier.
+
+2006-09-23 Saturday 09:01  mark-nielsen
+
+	* mod.html: 
+	
+	Fixed a label
+
+2006-09-22 Friday 10:58  vyshane
+
+	* highscores.php, mediafile.php, view.php, db/access.php: 
+	
+	Removed mod/lesson:view
+
+2006-09-21 Thursday 05:00  skodak
+
+	* db/access.php: 
+	
+	major whitespace cleanup - fixed trailng whitespace in new files
+	and admin area
+
+2006-09-19 Tuesday 13:57  mark-nielsen
+
+	* edit.php: 
+	
+	Attempted to improve the display of the table in collapsed view
+
+2006-09-19 Tuesday 13:11  mark-nielsen
+
+	* report.php: 
+	
+	Fix for the instance mentioned in MDL-3058
+
+2006-09-19 Tuesday 12:49  mark-nielsen
+
+	* action/addpage.php: 
+	
+	Got ahead of myself, fixed by bug fix
+
+2006-09-19 Tuesday 12:48  mark-nielsen
+
+	* report.php: 
+	
+	Notice fix in report for numerical question types
+
+2006-09-19 Tuesday 12:45  mark-nielsen
+
+	* action/: addpage.php, continue.php: 
+	
+	Fix in addpage.php when one deletes all pages in a lesson then adds
+	a new one Fix numerical questions were not displaying the student's
+	answer in the feedback
+
+2006-09-19 Tuesday 12:06  mark-nielsen
+
+	* locallib.php, action/addbranchtable.php, action/addpage.php,
+	action/editpage.php: 
+	
+	Saw several problems with lesson_choose_from_menu, so finally
+	replaced its use with choose_from_menu in lib/weblib.php
+
+2006-09-19 Tuesday 11:47  mark-nielsen
+
+	* action/: addbranchtable.php, addpage.php, editpage.php: 
+	
+	Removed hard-coded strings and fixed labels
+
+2006-09-19 Tuesday 10:54  mark-nielsen
+
+	* action/addbranchtable.php: 
+	
+	Removed a hard-coded string and added PHPdoc comments for the page
+
+2006-09-19 Tuesday 10:48  mark-nielsen
+
+	* view.php: 
+	
+	removed some unecessary comments
+
+2006-09-19 Tuesday 10:41  mark-nielsen
+
+	* view.php: 
+	
+	Fixed a bug when detecting a user as eligible for posting their
+	name for high scores
+
+2006-09-19 Tuesday 10:29  mark-nielsen
+
+	* view.php: 
+	
+	Fixed alignment problem with the buttons for password protected
+	lessons
+
+2006-09-19 Tuesday 05:32  skodak
+
+	* db/access.php, version.php: 
+	
+	added capabilty risks into access.php and GUI for define role and
+	override; minor fixes for capability types in forum
+
+2006-09-18 Monday 17:13  moodler
+
+	* edit.php, restorelib.php: 
+	
+	FIxed to use the new debugging function
+
+2006-09-18 Monday 09:31  mark-nielsen
+
+	* backuplib.php, locallib.php, mod.html, restorelib.php,
+	version.php, action/continue.php, db/install.xml, db/mysql.php,
+	db/mysql.sql, db/postgres7.php, db/postgres7.sql: 
+	
+	Added display default feedback in lesson settings Led to reducing
+	some redundant code in action/continue.php Also, a bug fix in
+	locallib.php for function lesson_print_submit_link (needed to add
+	slashes or else js would break)
+
+2006-09-13 Wednesday 21:19  thompson697
+
+	* restorelib.php: 
+	
+	Complete work on Roll Forwards - Restore from previous semester
+	(MDL-5532) * Add fields to restore form to enable changes to Short
+	Name, Full Name and Start Date * Start Date offset added to Restore
+	process * Created Restorelog file in Course files area * Activity
+	Modules use offset to change dates * Activity Modules write changes
+	to Restorelog
+
+2006-09-13 Wednesday 11:42  mark-nielsen
+
+	* edit.php, essay.php, locallib.php, report.php, styles.php,
+	action/addcluster.php, action/addendofbranch.php,
+	action/addendofcluster.php, action/delete.php,
+	action/insertpage.php, action/moveit.php, action/updatepage.php: 
+	
+	Added some more stats to reports, added more actions to collapsed
+	view and increased speed of lesson by using lesson_set_message()
+	and redirects with 0 second delays.
+
+2006-09-12 Tuesday 16:22  moodler
+
+	* version.php: 
+	
+	Small bump for guest role fix
+
+2006-09-12 Tuesday 15:10  moodler
+
+	* version.php: 
+	
+	Reload the guest role using new defaults
+
+2006-09-12 Tuesday 13:58  moodler
+
+	* db/access.php: 
+	
+	Changed some default permissions for the guest role
+
+2006-09-11 Monday 06:50  mark-nielsen
+
+	* edit.php: 
+	
+	Very minor changes
+
+2006-09-11 Monday 06:47  mark-nielsen
+
+	* edit.php, locallib.php, styles.php, tabs.php: 
+	
+	Started to rework the overall page editing interface for teachers.
+
+2006-09-11 Monday 03:09  mark-nielsen
+
+	* view.php: 
+	
+	Minor changes
+
+2006-09-11 Monday 02:50  mark-nielsen
+
+	* viewstart.html, action/continue.php: 
+	
+	Fixed display bug for branch tables and moved message setting to
+	the bottom of continue.php to prevent double message setting when a
+	redirect is called.
+
+2006-09-11 Monday 02:41  mark-nielsen
+
+	* edit.php, locallib.php, tabs.php, view.php, action/continue.html,
+	action/continue.php, action/updatepage.php: 
+	
+	Removed action set to navigation because view.php no longer uses
+	action
+
+2006-09-11 Monday 02:19  mark-nielsen
+
+	* locallib.php, view.php, viewend.html, viewstart.html,
+	action/continue.php: 
+	
+	Started to separate out logic and presentation in view.php. 
+	Decided to wrap the question printing with HTML templates
+	(viewstart.html and viewend.html) Still needs a lot of work
+
+2006-09-10 Sunday 10:38  mark-nielsen
+
+	* essay.php, highscores.php, locallib.php, tabs.php, view.php: 
+	
+	Started to reorganize view.php
+
+2006-09-10 Sunday 10:09  mark-nielsen
+
+	* edit.php, locallib.php, tabs.php, view.php,
+	action/addcluster.php, action/addendofbranch.php,
+	action/addendofcluster.php, action/delete.php,
+	action/insertpage.php, action/moveit.php, action/updatepage.php: 
+	
+	Moved teacherview (lesson editing) out of view.php into edit.php
+	
+	No code improvements in edit.php as of now.  Just works ;)
+
+2006-09-10 Sunday 09:43  mark-nielsen
+
+	* report.php: 
+	
+	Fixed sesskey problem
+
+2006-09-10 Sunday 09:40  mark-nielsen
+
+	* report.php: 
+	
+	Added proper page comments and inform user when attempts have been
+	deleted
+
+2006-09-10 Sunday 09:30  mark-nielsen
+
+	* report.php, tabs.php: 
+	
+	Updated to use new handy library functions
+
+2006-09-10 Sunday 09:20  mark-nielsen
+
+	* highscores.php, lesson.php, locallib.php, tabs.php, view.php,
+	action/continue.php: 
+	
+	Moved high scores logic out of view.php into highscores.php
+	Changed: now need to enter password on password protected lessons
+	before being able to view high scores Added logs to high scores and
+	reworked logic
+
+2006-09-10 Sunday 06:33  mark-nielsen
+
+	* action/: continue.html, continue.php: 
+	
+	Fixed some formatting when clock is not displayed Messages are now
+	printed out on continue.php
+
+2006-09-10 Sunday 06:23  mark-nielsen
+
+	* locallib.php, view.php, action/continue.html: 
+	
+	Forgot the lesson_ prefix
+
+2006-09-10 Sunday 06:20  mark-nielsen
+
+	* locallib.php, timer.js, view.php, action/continue.html: 
+	
+	Improved clock output and works when javascript is disabled
+
+2006-09-10 Sunday 05:39  mark-nielsen
+
+	* locallib.php, styles.php, view.php, action/continue.html: 
+	
+	Lesson buttons should now work with javascript disabled Also
+	improved the layout of action/continue.html
+
+2006-09-10 Sunday 01:25  mark-nielsen
+
+	* action/continue.php: 
+	
+	MDL-5430 - branch table redirect problem
+
+2006-09-09 Saturday 10:10  mark-nielsen
+
+	* action/: continue.html, continue.php: 
+	
+	Cleaned up output to user.  Still needs a lot of work.
+
+2006-09-09 Saturday 09:58  mark-nielsen
+
+	* essay.php, lib.php, locallib.php, styles.php, tabs.php, view.php:
+	
+	
+	Removed essay grading code from view.php into essay.php.
+
+2006-09-09 Saturday 07:17  mark-nielsen
+
+	* import.php, importppt.php, index.php, lesson.php, locallib.php,
+	mediafile.php, report.php, styles.php, tabs.php, version.php,
+	view.php, action/continue.html, action/continue.php, db/access.php:
+	
+	
+	MDL-6477: Added roles support.
+	
+	Also added lesson_set_message() and lesson_print_message() to
+	locallib.php Also fixed problem in continue.html with not printing
+	nextpageid
+
+2006-09-09 Saturday 02:01  mark-nielsen
+
+	* view.php: 
+	
+	Security fix for grading Essays.  Mentioned in MDL-6477
+
+2006-09-06 Wednesday 12:04  mark-nielsen
+
+	* lesson.php, action/addbranchtable.php, action/addcluster.php,
+	action/addendofbranch.php, action/addendofcluster.php,
+	action/addpage.php, action/confirmdelete.php, action/continue.html,
+	action/continue.php, action/delete.php, action/editpage.php,
+	action/insertpage.php, action/move.php, action/moveit.php,
+	action/updatepage.php: 
+	
+	Added $Id$ to files Header is not printed for all actions.  Related
+	to MDL-5403 Some redundant code removed First attempt at separating
+	logic and presentation in action continue (continue.html)
+
+2006-09-06 Wednesday 12:02  mark-nielsen
+
+	* locallib.php: 
+	
+	Added function for printing a standard header for lesson Added
+	function for fetching course module, course and lesson based on
+	course module id or lesson id
+
+2006-08-29 Tuesday 04:02  mark-nielsen
+
+	* import.php: 
+	
+	Merged bug fix for MDL-6325
+
+2006-08-29 Tuesday 04:01  mark-nielsen
+
+	* import.php: 
+	
+	MDL-6325 Bug Fix
+
+2006-08-26 Saturday 06:53  mark-nielsen
+
+	* locallib.php: 
+	
+	Merged bug fix for bug MDL-6323
+
+2006-08-26 Saturday 06:51  mark-nielsen
+
+	* locallib.php: 
+	
+	MDL-6323 - Fixed - changed feedback to response
+
+2006-08-26 Saturday 02:33  mark-nielsen
+
+	* action/: insertpage.php, updatepage.php: 
+	
+	Merged differences from MOODLE_16_STABLE into HEAD
+
+2006-08-26 Saturday 02:27  mark-nielsen
+
+	* action/: insertpage.php, updatepage.php: 
+	
+	Removed undefined index notices by using empty to make sure the
+	index exists
+
+2006-08-26 Saturday 01:02  stronk7
+
+	* db/install.xml: 
+	
+	Solved one wrong field declaration in lesson_grades
+
+2006-08-12 Saturday 01:56  stronk7
+
+	* db/install.xml: 
+	
+	XMLDB schema initial commit for the lesson module
+
+2006-08-10 Thursday 23:51  skodak
+
+	* import.php, lesson.php, report.php, version.php, view.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283; backported from HEAD
+
+2006-08-10 Thursday 23:30  skodak
+
+	* import.php, importppt.php, lesson.php, mediafile.php, report.php,
+	version.php, view.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283; backported from HEAD
+
+2006-08-09 Wednesday 21:45  moodler
+
+	* mediafile.php, mod.html: 
+	
+	Removed tabs
+
+2006-08-09 Wednesday 06:09  skodak
+
+	* import.php, importppt.php, lesson.php, mediafile.php, report.php,
+	version.php, view.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283
+
+2006-08-08 Tuesday 13:13  moodler
+
+	* version.php: 
+	
+	ROLES AND PERMISSIONS  - FIRST CHECK-IN
+	=======================================
+	
+	WARNING:  DEV IS CURRENTLY VERY UNSTABLE.
+	
+	This is a mega-checkin of the new Roles system.   A lot of changes
+	have been made in core and modules.
+	
+	Currently there are a lot of rough edges and known problems.  We
+	are working hard on these .. .the reason for getting this into HEAD
+	at this stage is enable us to move faster (our branch was diverging
+	from HEAD too much).
+	
+	Please keep an eye on http://docs.moodle.org/en/Roles for current
+	status and information for developers on how to use the new Roles
+	system.
+
+2006-08-01 Tuesday 02:13  skodak
+
+	* view.php, db/postgres7.php: 
+	
+	merging changes from MOODLE_16_STABLE
+
+2006-07-31 Monday 13:38  martinlanghoff
+
+	* db/postgres7.php: 
+	
+	Bug #6147 - Upgrade from 1.5.x breaks with Postgres 7.4.x
+	
+	Even though Postgres 7.4.x is officially supported, several upgrade
+	scripts use syntax that only works in Postgres 8.x. and it's
+	impossible to finish the upgrade.
+	
+	The attached patch fixes those scripts.
+	
+	Saludos. Iñaki.
+	
+	Author: Iñaki Arenaza Review: Jun Yamog, Martin Langhoff
+
+2006-07-13 Thursday 08:34  mark-nielsen
+
+	* view.php: 
+	
+	[BugFix] Bug #5466 - Cluster and End of Cluster pages no longer
+	display scores in extended editing view.  Also added page type
+	display for cluster and end of cluster pages in the extended
+	editing view (which is displayed for all other pages as well).
+
+2006-07-11 Tuesday 06:39  skodak
+
+	* view.php: 
+	
+	Bug #5988 - Branch Tables in 1.6+ (Lesson Module); merged from
+	MOODLE_16_STABLE
+
+2006-07-11 Tuesday 06:38  skodak
+
+	* view.php: 
+	
+	Bug #5988 - Branch Tables in 1.6+ (Lesson Module)
+
+2006-07-11 Tuesday 05:52  skodak
+
+	* locallib.php: 
+	
+	Bug #5732 - Lesson Scores &quot;out of XX&quot; marks report
+	incorrect mark; merged from MOODLE_16_STABLE
+
+2006-07-11 Tuesday 05:51  skodak
+
+	* locallib.php: 
+	
+	Bug #5732 - Lesson Scores &quot;out of XX&quot; marks report
+	incorrect mark
+
+2006-06-06 Tuesday 16:53  skodak
+
+	* importppt.php: 
+	
+	Bug #5444 - Import PowerPoint - PHP5 clone bug; merged from
+	MOODLE_16_STABLE
+
+2006-06-06 Tuesday 16:52  skodak
+
+	* importppt.php: 
+	
+	Bug #5444 - Import PowerPoint - PHP5 clone bug
+
+2006-05-30 Tuesday 10:51  toyomoyo
+
+	* db/migrate2utf8.xml: 
+	
+	merged fix for 5648, utf8 migration problem
+
+2006-05-30 Tuesday 10:50  toyomoyo
+
+	* db/migrate2utf8.xml: 
+	
+	fix for 5648, utf-8  migration bug
+
+2006-05-26 Friday 19:47  skodak
+
+	* lib.php: 
+	
+	sanitize submitted numerical values; merged from MOODLE_16_STABLE
+
+2006-05-26 Friday 19:46  skodak
+
+	* lib.php: 
+	
+	sanitize submitted numerical values
+
+2006-05-25 Thursday 16:13  skodak
+
+	* action/continue.php: 
+	
+	Bug #5566 - wrong display of student's answers in MATCHING question
+	type; merged from MOODLE_16_STABLE
+
+2006-05-25 Thursday 16:12  skodak
+
+	* action/continue.php: 
+	
+	Bug #5566 - wrong display of student's answers in MATCHING question
+	type
+
+2006-05-19 Friday 09:05  mark-nielsen
+
+	* locallib.php, view.php, action/continue.php: 
+	
+	[Merged][BugFix] Bug #5405 - made a new function that grades a
+	lesson for a specific user's attempt.  This is then used for
+	grading lessons at the end of a lesson, for ongoing score feature
+	and for updating the grade for essay question grading.
+	
+	This new grading algorithm now enforces the lesson setting Max
+	attempts when custom scoring is turned Off
+	
+	Changed the reporting of minquestions setting to match the help
+	file.  Now it is question based instead of attempt based.
+	
+	Changed the reporting of ongoing score to use the new grade
+	function.
+
+2006-05-19 Friday 08:59  mark-nielsen
+
+	* locallib.php, view.php, action/continue.php: 
+	
+	[BugFix] Bug #5405 - made a new function that grades a lesson for a
+	specific user's attempt.  This is then used for grad ing lessons at
+	the end of a lesson, for ongoing score feature and for updating the
+	grade for essay question grading.
+	
+	This new grading algorithm now enforces the lesson setting Max
+	attempts when custom scoring is turned Off
+	
+	Changed the reporting of minquestions setting to match the help
+	file.  Now it is question based instead of attempt based .
+	
+	Changed the reporting of ongoing score to use the new grade
+	function.
+
+2006-05-17 Wednesday 14:42  martinlanghoff
+
+	* db/postgres7.php: 
+	
+	mod/choice mod/lesson mod/scorm moodle16cleanup: Added notification
+	for cleanup that may fail if one is starting fresh from moodle
+	1.5.3+, previous cleanup before 1.5.3 is not needed
+
+2006-05-17 Wednesday 14:34  martinlanghoff
+
+	* version.php, db/postgres7.php, db/postgres7.sql: 
+	
+	moodle16cleanup: mod/lesson drop unused table lesson_essay, set the
+	correct column datatype and default value
+
+2006-05-17 Wednesday 14:25  martinlanghoff
+
+	* db/postgres7.php: 
+	
+	mod/choice mod/lesson mod/scorm moodle16cleanup: Added notification
+	for cleanup that may fail if one is starting fresh from moodle
+	1.5.3+, previous cleanup before 1.5.3 is not needed
+
+2006-05-17 Wednesday 14:19  martinlanghoff
+
+	* version.php, db/postgres7.php, db/postgres7.sql: 
+	
+	moodle16cleanup: mod/lesson drop unused table lesson_essay, set the
+	correct column datatype and default value
+
+2006-05-16 Tuesday 11:06  mark-nielsen
+
+	* action/continue.php: 
+	
+	[Merged][BugFix] Bug 5485 - problem with regular expressions with
+	simple analysis
+
+2006-05-16 Tuesday 11:04  mark-nielsen
+
+	* action/continue.php: 
+	
+	[BugFix] Bug 5485 - problem with regular expressions with simple
+	analysis
+
+2006-05-16 Tuesday 03:14  mark-nielsen
+
+	* lesson.php, locallib.php, view.php: 
+	
+	[BugFix] Bug 5505 - function lesson_print_tree now checks for
+	teacher editing priv before printing editing icons.  Had to change
+	arguments for this function as well which is the edit in view.php.
+	
+	lesson.php how checks for teacher editing priv for all actions
+	except for continue.  This is just in case the user hacks the URL.
+
+2006-05-16 Tuesday 03:05  mark-nielsen
+
+	* lesson.php, locallib.php, view.php: 
+	
+	[BugFix] Bug 5505 - function lesson_print_tree now checks for
+	teacher editing priv before printing editing icons.  Had to change
+	arguments for this function as well which is the edit in view.php.
+	
+	lesson.php how checks for teacher editing priv for all actions
+	except for continue.  This is just in case the user hacks the URL.
+
+2006-05-03 Wednesday 01:05  mark-nielsen
+
+	* styles.php, view.php: 
+	
+	[BugFix] Bug #5396 - Found that the css float was causing the odd
+	problem.  Removed extra styles for the button layout and changed
+	the divs around the buttons to spans
+	
+	Also improved some logic in the button processing for branch tables
+
+2006-05-02 Tuesday 03:02  michaelpenne
+
+	* backuplib.php, restorelib.php, version.php, db/mysql.php,
+	db/mysql.sql, db/postgres7.php, db/postgres7.sql: 
+	
+	lesson_default table had become out of synch with the lesson table.
+	 Needed to add new columns.
+	
+	Updated backup and restore to include the new values
+	
+	Fixed a bug in restore where it would restore 1 lesson_default per
+	lesson.  Now only stores one per course.
+	
+	Went through all the backuplib.php, restorelib.php, mysql.sql and
+	postgres7.sql to make sure everything was in synch and being backed
+	up and restored.
+
+2006-04-29 Saturday 15:37  mark-nielsen
+
+	* report.php: 
+	
+	Moved the require login and isteacher checks to infront of the form
+	data processing
+
+2006-04-29 Saturday 09:37  mark-nielsen
+
+	* lib.php, mod.html, report.php, view.php: 
+	
+	[Removed] the Delete user attempts option in the Lesson settings
+	(changes to mod and lib) [Added] new functionality to report.php to
+	delete individual student attempts [Fixed] High scores text in
+	view.php when no high scores were recorded needed to be centered
+
+2006-04-28 Friday 00:48  mark-nielsen
+
+	* report.php: 
+	
+	[Fix] Notices were being printed in PHP5 for NULL objects. 
+	Checking for NULL now before using in multichoice and truefalse
+	questions
+
+2006-04-28 Friday 00:20  mark-nielsen
+
+	* lib.php: 
+	
+	[Fix] Error with PHP5.	Needed to clone the lesson object before
+	saving the $default object
+
+2006-04-24 Monday 16:30  vyshane
+
+	* db/: mysql.php, mysql.sql, postgres7.php, postgres7.sql: 
+	
+	Fixed inserts for log_display.
+
+2006-04-13 Thursday 11:19  vyshane
+
+	* db/postgres7.sql: 
+	
+	Added default values for not nulls.
+
+2006-04-13 Thursday 11:16  vyshane
+
+	* db/postgres7.php: 
+	
+	Added default values for not nulls
+
+2006-04-13 Thursday 11:11  vyshane
+
+	* db/mysql.php: 
+	
+	Added default values for not nulls.
+
+2006-04-12 Wednesday 00:15  stronk7
+
+	* importppt.php, restorelib.php: 
+	
+	htmlentities() to s()
+
+2006-04-08 Saturday 23:53  urs_hunkler
+
+	* styles.php: 
+	
+	corrected font-style: none to normal
+
+2006-04-07 Friday 07:03  mark-nielsen
+
+	* view.php: 
+	
+	[BugFix] Action was using global variables - now is fetched with
+	optional_param
+
+2006-04-05 Wednesday 15:46  gustav_delius
+
+	* index.php: 
+	
+	Fixed call to required_param()
+
+2006-03-29 Wednesday 07:31  stronk7
+
+	* restorelib.php: 
+	
+	Typo.
+
+2006-03-28 Tuesday 08:37  michaelpenne
+
+	* view.php: 
+	
+	[BugFix] Multiple essays were not showing for grading:
+	http://moodle.org/mod/forum/discuss.php?d=41999#195580
+
+2006-03-28 Tuesday 08:30  michaelpenne
+
+	* view.php: 
+	
+	[BugFix] Multiple essays were not showing for grading:
+	http://moodle.org/mod/forum/discuss.php?d=41999#195580
+
+2006-03-26 Sunday 08:10  mark-nielsen
+
+	* format.php, import.php, locallib.php: 
+	
+	[Fixed] Import.  Updated code to work with /question instead of
+	/mod/quiz.  Lead to a few interal bug fixes.  Also moved two hard
+	coded strings to the lang file.
+
+2006-03-26 Sunday 05:38  mark-nielsen
+
+	* backuplib.php, import.php, lesson.php, locallib.php, mod.html,
+	report.php, restorelib.php, tabs.php, version.php, view.php,
+	action/addbranchtable.php, action/addpage.php, action/continue.php,
+	action/delete.php, action/editpage.php, db/mysql.php, db/mysql.sql,
+	db/postgres7.php, db/postgres7.sql: 
+	
+	[New Feature] Tabbed navigation added to lesson (similar to quiz)
+	[Added] Graceful fails added to view.php, essay grading, and
+	reports [Changed] got rid of a lot of references to
+	$_POST/GET/REQUEST [Fixed] In reports, it required teacheredit,
+	should only be teacher [Changed] High scores - teachers can
+	actually see them!  Also, improved output by using print_table and
+	print_heading [Changed] Grade essays now uses fullname() to print
+	user names
+
+2006-03-19 Sunday 10:16  mark-nielsen
+
+	* action/updatepage.php: 
+	
+	[Fixed] this page was shooting of warnings for unset variable
+	score.	Now checks to make sure score is set before using it.
+
+2006-03-19 Sunday 10:08  mark-nielsen
+
+	* view.php, action/continue.php: 
+	
+	cleaned up the left menu feature output by removing an unused form
+	and several unnecessary string concatenations
+
+2006-03-19 Sunday 09:53  mark-nielsen
+
+	* styles.php, view.php: 
+	
+	[Changed] The print_simple_box_start/stop changes conflicted
+	greatly with the display of branch table buttons (the box printed
+	above the buttons some how :( )  To fix this, the tables were taken
+	out and divs were used instead to display and arrange the buttons. 
+	This turns out to be a good thing because now the user has more
+	control over the buttons via style sheet.  Also did some extra
+	clean up in the section of code printing the branch table.  [Added]
+	new styles to styles.php to help display the buttons correctly.
+
+2006-03-17 Friday 11:37  mark-nielsen
+
+	* locallib.php, view.php, action/continue.php: 
+	
+	[Changed] function execute_teacherwarning to function
+	lesson_display_teacher_warning because it was violating the
+	function naming policy
+
+2006-03-17 Friday 11:31  mark-nielsen
+
+	* locallib.php: 
+	
+	[Added] added phpdoc comments to locallib.php
+
+2006-03-11 Saturday 08:23  michaelpenne
+
+	* action/: editpage.php, updatepage.php: 
+	
+	[BugFix] Bug #4852 - HTML editor problems
+
+2006-03-10 Friday 11:43  patrickslee
+
+	* db/migrate2utf8.php: 
+	
+	UTF8 migration - now supporting PostgreSQL
+
+2006-03-09 Thursday 15:53  vyshane
+
+	* action/: addbranchtable.php, addpage.php: 
+	
+	Added $CFG->pagepath so that the Moodle Doc URLs are generated
+	properly for this section.
+
+2006-03-09 Thursday 10:26  michaelpenne
+
+	* lib.php: 
+	
+	[Added] Added function lesson_delete_course() to clean up the
+	lesson_default table
+
+2006-03-08 Wednesday 05:34  skodak
+
+	* db/migrate2utf8.php: 
+	
+	short php tags
+
+2006-03-04 Saturday 20:37  skodak
+
+	* import.php: 
+	
+	incorrect usage of clean_filename() replaced with
+	clean_param($text, PARAM_SAFEDIR)
+
+2006-02-25 Saturday 05:31  michaelpenne
+
+	* styles.php, action/continue.php: 
+	
+	[Fix] Removed htmlentities on student answer.
+
+2006-02-25 Saturday 05:26  michaelpenne
+
+	* index.php, index.php: 
+	
+	[Fix] $navigation and $grade_value were undefined when lesson was
+	added to site main page
+
+2006-02-25 Saturday 04:25  michaelpenne
+
+	* view.php: 
+	
+	[BugFix] Bug #4174 - Lesson Essay Question Can't be Graded when
+	attempt not finished
+
+2006-02-25 Saturday 04:17  michaelpenne
+
+	* styles.php: 
+	
+	Removed correct and incorrect colors.
+
+2006-02-25 Saturday 04:17  michaelpenne
+
+	* view.php: 
+	
+	[BugFix] Bug #4174 - Lesson Essay Question Can't be Graded when
+	attempt not finished
+
+2006-02-25 Saturday 03:19  michaelpenne
+
+	* action/insertpage.php: 
+	
+	[BugFix] Bug #4216 - cancel button
+
+2006-02-25 Saturday 03:09  michaelpenne
+
+	* action/insertpage.php: 
+	
+	[BugFix] Bug #4216 - cancel button
+
+2006-02-24 Friday 16:13  toyomoyo
+
+	* db/migrate2utf8.php: 
+	
+	see changes for admin/utfdbmigrate.php
+
+2006-02-23 Thursday 08:41  michaelpenne
+
+	* styles.php, action/continue.php: 
+	
+	[Added] Added Regular Expression support for short answers by
+	Joseph RÃ©zeau.  Discussion:
+	http://moodle.org/mod/forum/discuss.php?d=38544
+	
+	[Changed] Some display information has been changed, now prints
+	page contents, user answer, and response
+
+2006-02-09 Thursday 04:38  michaelpenne
+
+	* action/updatepage.php: 
+	
+	[Fixed] Bug #1187
+
+2006-02-07 Tuesday 04:49  michaelpenne
+
+	* mod.html, view.php: 
+	
+	[Fixed] Activity linking was not useing the course module id
+	correctly.
+
+2006-01-31 Tuesday 10:09  moodler
+
+	* db/migrate2utf8.php: 
+	
+	changed to use utfconvert function
+
+2006-01-24 Tuesday 08:45  michaelpenne
+
+	* action/: continue.php, continue.php: 
+	
+	[Fixed] A problem with storing the answerid for numerical
+	questions.  Discussion here:
+	http://moodle.org/mod/forum/discuss.php?d=37537
+
+2006-01-19 Thursday 14:45  moodler
+
+	* db/migrate2utf8.php: 
+	
+	a lot of bug fixes
+
+2006-01-17 Tuesday 15:30  moodler
+
+	* db/: migrate2utf8.xml, mysql.sql: 
+	
+	Added default values where needed for columns in the MySQL creation
+	script mysql.sql.  Added default values to migrate2utf8.xml, for
+	any varchar and text field types, if the default values for these
+	fields were not defined as '' in the MySQL table creation script.
+	
+	Committed by vyshane
+
+2006-01-16 Monday 05:09  mjollnir_
+
+	* restorelib.php: 
+	
+	Abstracted a bit of the restore procedure to allow for silent
+	restoring.  Added new function, import_backup_file_silently Changed
+	everything that prints stuff to check for a constant first. 
+	Backup_flush checks a different constant, this is so that output
+	can still get flushed to the browser when necessary but not print
+	<li>s everywhere.  Please test this!
+
+2006-01-14 Saturday 05:57  michaelpenne
+
+	* mod.html: 
+	
+	[Fixed] Fails gracefully when no course modules are found.
+	
+	[Fixed] Does not remove other modules from the activity link
+	options due to same ids.
+
+2006-01-14 Saturday 05:24  michaelpenne
+
+	* view.php: 
+	
+	[Fixed] Display error in Windows IE.  Slideshow div would move on
+	link rollover.	This is now fixed.
+
+2006-01-14 Saturday 03:51  michaelpenne
+
+	* view.php, action/editpage.php, action/updatepage.php: 
+	
+	[Changed/BugFix] Now when a teacher edits a page with the "Edit
+	page contents" button and then saves or cancels, s/he gets
+	redirected back to the lesson navigation.  This will help to
+	streamline the editing.
+	
+	[Fixed] The cancel button on the edit page now works.
+	
+	[Fixed] "Edit page contents" button works on the first page now.
+
+2006-01-14 Saturday 02:41  michaelpenne
+
+	* view.php, action/editpage.php, action/updatepage.php: 
+	
+	[Changed] Now when a teacher edits a page with the "Edit page
+	contents" button and then saves or cancels, s/he gets redirected
+	back to the lesson navigation.	This will help to streamline the
+	editing
+	
+	[Fixed] The cancel button on the edit page now works.
+
+2006-01-13 Friday 15:24  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	more bug fixes =(
+
+2006-01-13 Friday 11:45  mjollnir_
+
+	* backuplib.php, restorelib.php: 
+	
+	Granular backup & restore: This patch allows the much requested
+	selection of individual instances of modules within a course to
+	backup and restore.  It needs A LOT of testing and probably some
+	prettyifying too.
+
+2006-01-12 Thursday 10:35  toyomoyo
+
+	* db/migrate2utf8.xml: 
+	
+	some bug fixes
+
+2006-01-11 Wednesday 09:46  toyomoyo
+
+	* db/migrate2utf8.xml: 
+	
+	added 2 fields in xml, addindex and dropindex, and bug fixes
+
+2006-01-09 Monday 14:06  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	utf8 migration support scripts
+
+2005-12-14 Wednesday 12:15  patrickslee
+
+	* lesson.php, lib.php, locallib.php, mediafile.php, mod.html,
+	styles.php, version.php, view.php, action/addbranchtable.php,
+	action/addpage.php, action/continue.php, action/editpage.php,
+	action/insertpage.php, action/updatepage.php, db/mysql.php,
+	db/mysql.sql, db/postgres7.php, db/postgres7.sql: 
+	
+	Merged with MOODLE_16_MULTIENROL_MP1
+
+2005-11-24 Thursday 06:31  defacer
+
+	* view.php: 
+	
+	
+	XHTML fix
+
+2005-11-24 Thursday 06:14  defacer
+
+	* mod.html: 
+	
+	
+	Fixing invalind value for cellpadding ("5px")
+
+2005-11-24 Thursday 06:11  defacer
+
+	* mod.html: 
+	
+	
+	Fixing defaults (copy/paste error) -- this printed notices with
+	debug=on and actually mangled the "create lesson instance" query so
+	badly that you could not add lessons!
+
+2005-11-17 Thursday 06:35  michaelpenne
+
+	* locallib.php, styles.php, view.php, action/continue.php,
+	db/mysql.php, db/postgres7.php: 
+	
+	BUG FIX: progress bar now does not break when student reviews the
+	lesson.  BUG FIX: matching question type upgrade script now
+	supports quotes.
+	
+	CHANGED: Improved labels for form elements to improve
+	accessibility.
+	
+	NEW: added a skip navigation link for left menu.
+
+2005-11-08 Tuesday 03:56  michaelpenne
+
+	* mod.html, version.php, view.php, db/mysql.php, db/mysql.sql,
+	db/postgres7.php, db/postgres7.sql: 
+	
+	NEW FEATURE: Activity Link allows the teacher to display a link to
+	another activity, which is in the same course, at the end of the
+	Lesson.
+
+2005-11-03 Thursday 05:22  michaelpenne
+
+	* mod.html: 
+	
+	The Lesson dependency help button was pointing to the wrong help
+	file.
+
+2005-10-29 Saturday 06:45  michaelpenne
+
+	* mediafile.php, mod.html, styles.php, version.php, view.php,
+	db/mysql.php, db/mysql.sql, db/postgres7.php, db/postgres7.sql: 
+	
+	NEW FEATURE: Media file now works with web pages and with text and
+	html files.  Also, the pop-up window size is configurable as well
+	as an optional close button at the bottom of the window.
+
+2005-10-29 Saturday 02:55  michaelpenne
+
+	* view.php: 
+	
+	BUG FIX: Double print of content in branch tables with slide show
+	on
+
+2005-10-27 Thursday 07:11  michaelpenne
+
+	* action/continue.php: 
+	
+	BUG FIX: essay response was still hard coded in.  Replaced it with
+	a get_string call
+
+2005-10-27 Thursday 05:48  michaelpenne
+
+	* view.php: 
+	
+	reverted back some divs, minor change
+
+2005-10-27 Thursday 05:43  michaelpenne
+
+	* view.php, action/continue.php: 
+	
+	BUG FIX: if one is a teacher, the left menu is always displayed.
+
+2005-10-25 Tuesday 07:06  michaelpenne
+
+	* lesson.php, lib.php, locallib.php, mod.html, styles.php,
+	version.php, view.php, action/addbranchtable.php,
+	action/addpage.php, action/continue.php, action/editpage.php,
+	action/insertpage.php, action/updatepage.php, db/mysql.php,
+	db/mysql.sql, db/postgres7.php, db/postgres7.sql: 
+	
+	NEW: Progress bar option.  Now a progress bar can be optionally
+	displayed at the bottom of the lesson page.  NEW: Display Left Menu
+	IF.  The left menu will only display if the student has a grade
+	better than the one set in the lesson settings.  This is nice to
+	allow only students who are reviewing the lesson to have access to
+	the left menu.
+	
+	BUG FIX: In Windows IE, the content was being aligned center.  Now,
+	the content is explicitly aligned to left as default.  BUG FIX:
+	High Scores variable was not spelled correctly at the End of
+	Lesson.
+	
+	ADDED: Div tags around branch tables.  This will allow users to
+	choose to display them or not or move them around
+	
+	CHANGED: converted more of the links to the stylized button.  Also,
+	removed a lot of forms and javascript and replaced it with links
+	with the variables in the href.  CHANGED: the slide show styles
+	have been moved to the style sheet.  CHANGED: removed the CDC
+	comments
+	
+	Other minor changes have been made to the code as well.
+
+2005-10-15 Saturday 03:25  michaelpenne
+
+	* view.php, view.php: 
+	
+	Removed a notice warning when lessons are created in a course with
+	no category (eg: home page)
+
+2005-10-08 Saturday 04:33  michaelpenne
+
+	* view.php, view.php: 
+	
+	Reverted grading back to 1.4.X for when custom scoring is turned
+	OFF
+
+2005-10-06 Thursday 06:45  michaelpenne
+
+	* locallib.php, styles.php, view.php, action/continue.php: 
+	
+	Recoded most of the left menu: Got rid of a table Restructured and
+	added more div tags in the left menu (much more logical) Reworked
+	the styles for the left menu in the styles sheet (everything should
+	be customizable via style sheet) More compatible with MacIE5 Added
+	styles to the individual links in the menu (allows styling the for
+	currently selected page and for all the rest) Cleaned up the left
+	menu link generation in locallib.php
+
+2005-10-04 Tuesday 05:29  michaelpenne
+
+	* report.php, view.php, action/continue.php, action/insertpage.php,
+	action/updatepage.php: 
+	
+	Removed filtering on page contents, answers and responses for
+	lesson pages and their answers (this includes removing parameter
+	cleaning and noclean in format_text).
+	
+	Also, fixed some warning errors in action/updatepage.php.
+
+2005-10-04 Tuesday 03:46  michaelpenne
+
+	* view.php: 
+	
+	BIG FIX: "Edit Page Contents" button for when $pageid is empty
+	(first page)
+
+2005-09-29 Thursday 05:55  michaelpenne
+
+	* styles.php, view.php, action/continue.php: 
+	
+	Switched buttons in lesson navigation to stylized links similar
+	(well, the same rather for default) to the home button in the
+	footer.  This will allow for easy (hopefully) personalized
+	customization of the buttons in lesson (ex: background images,
+	colors, etc).
+	
+	styles.php: added new styles, added comments and cleaned it up
+	view.php: converted the buttons for each question type to the new
+	button standard.  Also recoded branch table button layout
+	generation.  action/continue.php: updated the buttons there as
+	well.
+
+2005-09-22 Thursday 05:00  michaelpenne
+
+	* view.php, styles.php: 
+	
+	Added styles to the next and previous buttons on branch tables to
+	allow customization
+
+2005-09-01 Thursday 12:14  mjollnir_
+
+	* lib.php: 
+	
+	Initial checkin of stats (from processing the log table).  I will
+	write up some information about it for the developers wiki.
+
+2005-08-30 Tuesday 06:04  michaelpenne
+
+	* view.php, view.php: 
+	
+	FIXED: Removed Notice Warning.	Sometimes an attempt's answerid
+	field is not set because the answer that the student entered does
+	not match any of the answers for the question.	This error comes up
+	for Numerical and Short answer question types.
+
+2005-08-30 Tuesday 03:45  michaelpenne
+
+	* report.php: 
+	
+	FIXED: Bug with reporting numerical question types.
+
+2005-08-30 Tuesday 03:37  michaelpenne
+
+	* report.php: 
+	
+	FIXED: Bug with reporting numerical question types.
+
+2005-08-16 Tuesday 07:17  patrickslee
+
+	* db/postgres7.php: 
+	
+	Mass cleanup of bad postgres upgrade scripts(merged from 15_stable)
+
+2005-08-16 Tuesday 06:30  patrickslee
+
+	* db/postgres7.php: 
+	
+	Mass cleanup of bad postgres upgrade scripts
+
+2005-07-28 Thursday 06:16  patrickslee
+
+	* db/postgres7.sql: 
+	
+	We have extremely crappy support for postgres7 in those modules in
+	14_STABLE, someone forgot to backport from HEAD?
+
+2005-07-26 Tuesday 02:50  michaelpenne
+
+	* view.php: 
+	
+	removed a condition in an if statement that does not belong.  This
+	is another part of the fix for this forum post:
+	http://moodle.org/mod/forum/discuss.php?d=27908
+
+2005-07-23 Saturday 06:01  michaelpenne
+
+	* view.php: 
+	
+	Removed development code that accidentally got committed.  Sorry. 
+	It appears the code was only in mod/lesson/view.php and
+	lang/en/lesson.php
+
+2005-07-23 Saturday 05:09  michaelpenne
+
+	* importppt.php: 
+	
+	Fixed a path problem that occurs while unzipping
+
+2005-07-15 Friday 04:00  michaelpenne
+
+	* db/mysql.php, locallib.php, restorelib.php, db/postgres7.php: 
+	
+	I think I have a solution for the problems with matching question
+	type and upgrading moodle from 1.4.x to 1.5+.
+	
+	View bug 3468 and this forum post for more information:
+	http://moodle.org/mod/forum/discuss.php?d=27354
+
+2005-07-15 Friday 03:06  michaelpenne
+
+	* importppt.php: 
+	
+	attempted to make the unzipping process and initial file reading
+	more robust
+
+2005-07-13 Wednesday 07:07  michaelpenne
+
+	* view.php, view.php: 
+	
+	Bug 3531 fixed
+
+2005-07-12 Tuesday 16:00  moodler
+
+	* restorelib.php: 
+	
+	Merged SC139 from stable
+
+2005-07-12 Tuesday 15:53  moodler
+
+	* restorelib.php: 
+	
+	Escaped text output during relinking, as per SC 139
+
+2005-07-05 Tuesday 02:56  stronk7
+
+	* backuplib.php, restorelib.php: 
+	
+	Improved automatic relinking in backup and restore. Credits go to
+	skodak.  Complete refactoring of the system that was really awful
+	(my fault!).  Now everything is in its place and working like a
+	charm, making things really easier to be implemented and amplied.
+	Bug 3678 (http://moodle.org/bugs/bug.php?op=show&bugid=3678)
+	(http://moodle.org/mod/forum/discuss.php?d=26530)
+	
+	Note: Everything is merged from stable but the quiz module because
+	it has other changes not merged for now. I've skyped a message to
+	Gustav about it.
+	
+	Merged from MOODLE_15_STABLE
+
+2005-07-05 Tuesday 01:34  stronk7
+
+	* backuplib.php, restorelib.php: 
+	
+	Improved automatic relinking in backup and restore. Credits go to
+	skodak.  Complete refactoring of the system that was really awful
+	(my fault!).  Now everything is in its place and working like a
+	charm, making things really easier to be implemented and amplied.
+	Bug 3678 (http://moodle.org/bugs/bug.php?op=show&bugid=3678)
+	(http://moodle.org/mod/forum/discuss.php?d=26530)
+
+2005-07-01 Friday 05:11  michaelpenne
+
+	* backuplib.php, lib.php, mod.html, restorelib.php, version.php,
+	view.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	New Feature: Lesson Dependency
+	
+	In a lesson's settings one can now set the current lesson to be
+	dependent on another lesson in the same course.  Then, the user can
+	set the conditions for the dependency.	Currently the conditions
+	are time spent, grade better than X, and completed (yes/no).
+
+2005-06-30 Thursday 07:11  michaelpenne
+
+	* import.php: 
+	
+	Forgot to add a require for lesson's locallib.php and change a
+	require from quiz's lib.php to quiz's locallib.php
+
+2005-06-30 Thursday 07:05  michaelpenne
+
+	* locallib.php: 
+	
+	Numerical import was still looking at min/max arrays.  I changed it
+	so numerical will now subtract the tolerance from the answer to get
+	the min and add the tolerance to the answer to get the max
+
+2005-06-30 Thursday 07:05  michaelpenne
+
+	* import.php: 
+	
+	FIXED: was calling an old quiz class name for importing.  Updated
+	it to call the new class name
+
+2005-06-30 Thursday 07:02  michaelpenne
+
+	* locallib.php: 
+	
+	Numerical import was still looking at min/max arrays.  I changed it
+	so numerical will now subtract the tolerance from the answer to get
+	the min and add the tolerance to the answer to get the max
+
+2005-06-30 Thursday 07:00  michaelpenne
+
+	* import.php: 
+	
+	FIXED: was calling an old quiz class name for importing.  Updated
+	it to call the new class name
+
+2005-06-30 Thursday 02:49  michaelpenne
+
+	* view.php: 
+	
+	Display bug with lesson branch tables with slideshow mode on
+
+2005-06-30 Thursday 02:08  michaelpenne
+
+	* view.php, view.php: 
+	
+	FIXED: at End of Lesson with review on produced two warnings.  Now
+	they are gone
+
+2005-06-22 Wednesday 06:36  michaelpenne
+
+	* action/: continue.php, continue.php: 
+	
+	Made the shortanswer qtype grading much more reliable.	Change to
+	preg_match to speed things up.	Also do a  preg_quote on the
+	teacher supplied answer to prevent confusion in the preg_match
+	statements (before + signs and the like were causing the preg_match
+	statements to fail).
+
+2005-06-22 Wednesday 05:56  michaelpenne
+
+	* action/continue.php: 
+	
+	Bug Fix:  The code for dealing with the * character for shortanswer
+	question type was lost.  I downloaded 1.4.5+ and merged the
+	shortanswer grading code into 1.6 dev.
+
+2005-06-22 Wednesday 05:45  michaelpenne
+
+	* action/continue.php: 
+	
+	Bug Fix:  The code for dealing with the * character for shortanswer
+	question type was lost.  I downloaded 1.4.5+ and merged the
+	shortanswer grading code into 1.6 dev.
+
+2005-06-17 Friday 05:18  michaelpenne
+
+	* view.php: 
+	
+	changed the name for the popups, IE was failing with long names
+
+2005-06-17 Friday 01:41  michaelpenne
+
+	* view.php: 
+	
+	took out the 80%, not sure if it should be there or not ;)
+
+2005-06-17 Friday 01:38  michaelpenne
+
+	* view.php: 
+	
+	with slideshow off: set the width for print_simple_box to 80% for
+	the page content
+
+2005-06-17 Friday 01:17  michaelpenne
+
+	* mediafile.php: 
+	
+	now passes the media files name to the print header function
+
+2005-06-16 Thursday 07:41  michaelpenne
+
+	* action/continue.php: 
+	
+	Fixed a problem with quotes in short answers
+	
+	and
+	
+	Fixed a bug with clusters.  If you enter a cluster after a page it
+	would throw a navigation error.  It now enters the cluster
+	properly.
+
+2005-06-16 Thursday 07:35  michaelpenne
+
+	* backuplib.php, mod.html, restorelib.php, version.php, view.php,
+	db/mysql.php, db/mysql.sql, db/postgres7.php, db/postgres7.sql: 
+	
+	Minor changes to support the new media file feature.
+
+2005-06-16 Thursday 07:29  michaelpenne
+
+	* mediafile.php: 
+	
+	This file is used as a popup to play a media file defined in the
+	lesson settings.
+	
+	This file still needs some testing before it is ready for prime
+	time.
+
+2005-06-16 Thursday 06:51  michaelpenne
+
+	* action/continue.php: 
+	
+	Fixed a problem with quotes in short answers
+
+2005-06-16 Thursday 06:34  michaelpenne
+
+	* action/continue.php: 
+	
+	Fixed a bug with clusters.  If you enter a cluster after a page it
+	would throw a navigation error.  It now enters the cluster
+	properly.
+
+2005-06-16 Thursday 03:28  urs_hunkler
+
+	* styles.php: 
+	
+	Merged from 1.5: corrected the CSS. It is not enough to set the
+	outer class once at the begining of a comma separated list of CSS
+	stylings. Every item must contain the full series of classes or
+	ids, only the properties are following once.
+
+2005-06-16 Thursday 03:26  urs_hunkler
+
+	* styles.php: 
+	
+	corrected the CSS. It is not enough to set the outer class once at
+	the begining of a comma separated list of CSS stylings. Every item
+	must contain the full series of classes or ids, only the properties
+	are following once.
+
+2005-06-15 Wednesday 01:40  michaelpenne
+
+	* report.php, report.php: 
+	
+	put in two !== instead of != to compare NULL values
+
+2005-06-10 Friday 05:54  michaelpenne
+
+	* report.php, report.php: 
+	
+	Bug: fixed a problem with the date completed value and a problem
+	with processing shortanswer/numerical question types
+
+2005-06-10 Friday 05:24  michaelpenne
+
+	* locallib.php, report.php, version.php, view.php, db/mysql.php,
+	db/mysql.sql, db/postgres7.php, db/postgres7.sql, locallib.php,
+	report.php, version.php, view.php, db/mysql.php, db/mysql.sql,
+	db/postgres7.php, db/postgres7.sql: 
+	
+	Discovered a bug with lesson grades.  While calculating the grade,
+	intval was used to truncate the decimals from the grade.  intavl is
+	now replaced with round.  round will now round the grade to 5
+	decimal places.  The database only holds int(3).  So, this has been
+	changed to float to hold decimal numbers.  We have found this to be
+	much more accurate when converting the stored percentage in the
+	database back to a point value (before this fix, users were getting
+	numbers like 46.5 points instead of their original 47 points due to
+	an inaccurate percent value).  Files changed for this fix include:
+	locallib.php report.php version.php view.php db/mysql.php
+	db/mysql.sql db/postgres7.php db/postgres7.sql
+
+2005-06-09 Thursday 01:33  michaelpenne
+
+	* importppt.php: 
+	
+	Before, importppt would look for outline.htm to determine the order
+	of the slides.	If outline.htm is not found, it would fail.  Now if
+	outline.htm is not found importppt will scan the directory for any
+	file that starts with slide.  This change was added to support
+	powerpoint 2000
+
+2005-06-08 Wednesday 04:56  michaelpenne
+
+	* action/: editpage.php, editpage.php: 
+	
+	Bug 1650 fixed: help button calling the wrong help file
+
+2005-06-08 Wednesday 04:47  michaelpenne
+
+	* index.php, index.php: 
+	
+	Bug 3022 Fixed: got rid of uppercase tags
+
+2005-06-07 Tuesday 02:30  michaelpenne
+
+	* action/updatepage.php: 
+	
+	BUG FIX for Bug #3059: if there is not a response to an answer, the
+	response gets set to an empty string
+
+2005-06-07 Tuesday 02:26  michaelpenne
+
+	* action/updatepage.php: 
+	
+	BUG FIX for Bug #3059: if there is not a response to an answer, the
+	response gets set to an empty string
+
+2005-06-07 Tuesday 01:35  michaelpenne
+
+	* view.php: 
+	
+	bug fix: updated the link to the grade book
+
+2005-06-07 Tuesday 01:23  michaelpenne
+
+	* view.php: 
+	
+	updated the link to the grade book
+
+2005-05-28 Saturday 06:28  michaelpenne
+
+	* importppt.php: 
+	
+	forgot to escape some "
+
+2005-05-28 Saturday 06:14  michaelpenne
+
+	* importppt.php: 
+	
+	added an alt tag for images (nothing meaningful though)
+
+2005-05-28 Saturday 04:50  michaelpenne
+
+	* importppt.php: 
+	
+	strips end lines properly now.	Directory fixes for book imports
+
+2005-05-27 Friday 07:41  michaelpenne
+
+	* importppt.php: 
+	
+	now creates lesson directory in moddata for the images.  also
+	supports the different slasharguments for files
+
+2005-05-27 Friday 05:38  michaelpenne
+
+	* importppt.php: 
+	
+	more flexible to catch more content for importing
+
+2005-05-25 Wednesday 05:21  michaelpenne
+
+	* view.php: 
+	
+	added a > to a table tag
+
+2005-05-25 Wednesday 05:02  michaelpenne
+
+	* importppt.php: 
+	
+	changed an include from lib.php to locallib.php and converted some
+	numbers to constants
+
+2005-05-25 Wednesday 04:28  michaelpenne
+
+	* view.php: 
+	
+	when editing a lesson for the first time, added a link to
+	importppt.php in the list of options
+
+2005-05-25 Wednesday 04:26  michaelpenne
+
+	* importppt.php: 
+	
+	new import script to import powerpoint slides (exported as html)
+
+2005-05-17 Tuesday 06:41  stronk7
+
+	* lesson.php, lib.php, locallib.php, report.php, timer.js,
+	view.php, action/addbranchtable.php, action/addendofbranch.php,
+	action/addpage.php, action/confirmdelete.php, action/continue.php,
+	action/delete.php, action/editpage.php, action/insertpage.php,
+	action/updatepage.php: 
+	
+	Tabs are out.  (all the module was using them, please change your
+	editor settings to 4 spaces)
+
+2005-05-09 Monday 10:29  michaelpenne
+
+	* action/updatepage.php: 
+	
+	FIXED: loss content on editing a page
+
+2005-05-07 Saturday 07:57  michaelpenne
+
+	* view.php: 
+	
+	highscores will not display with practice lesson on because no
+	grade records are entered.  Also, on teacher view, when the
+	question content is printed it uses FORMAT_HTML now
+
+2005-05-04 Wednesday 07:30  michaelpenne
+
+	* locallib.php, view.php, action/addbranchtable.php,
+	action/addpage.php, action/editpage.php: 
+	
+	tried to make editing a lesson look nicer.  Added generalbox class
+	to tables and used tabs for selecting question types
+
+2005-05-04 Wednesday 06:26  michaelpenne
+
+	* view.php: 
+	
+	moved View Lesson Statistics and Grade Essay Questions links in
+	teacher view to top right corner.  Also, lesson stats link displays
+	how many users have taken the lesson and grade essay link displays
+	how many essays need to be graded and how many essays that need to
+	be sent out still
+
+2005-05-04 Wednesday 06:22  michaelpenne
+
+	* mod.html: 
+	
+	added div with class mod-lesson around the form to hide a label
+
+2005-05-04 Wednesday 05:16  michaelpenne
+
+	* action/: insertpage.php, updatepage.php: 
+	
+	added addslashes to title, content, answer and response fields to
+	help deal with quotes after a clean_param()
+
+2005-04-30 Saturday 02:32  stronk7
+
+	* report.php, view.php: 
+	
+	Some changes to add format_text() to answers and feedback across
+	all the module.
+	
+	Note: Essay questions and their teacher's feedback. I'm not pretty
+	sure it they should support the format_text() too. And currently,
+	they are cleaned at input, so it is impossible to write <lang> or
+	<span> tags with them!
+
+2005-04-27 Wednesday 06:30  stronk7
+
+	* locallib.php, report.php, view.php, action/addpage.php,
+	action/confirmdelete.php, action/editpage.php,
+	action/insertpage.php, action/move.php, action/moveit.php: 
+	
+	Now lesson_pages->title supports filterall
+
+2005-04-27 Wednesday 05:24  michaelpenne
+
+	* view.php: 
+	
+	FIX: removed the unsetting of a SESSION variable that kept track of
+	logins for lesson (password protected).  This allows for reviewing
+	of lessons that have passwords.  Only downside, once logged in to a
+	lesson, dont need to reenter password for that login session. 
+	Prolly not a problem
+
+2005-04-27 Wednesday 04:37  michaelpenne
+
+	* view.php, action/continue.php: 
+	
+	FIX: quotes in matching questions were not grading correctly.  Used
+	htmlspecialchars on the values in the select box in view.php and
+	then use stripslashes on the answers in continue.php
+
+2005-04-27 Wednesday 03:08  stronk7
+
+	* action/: editpage.php, updatepage.php: 
+	
+	Page titles can contain now HTML. Needed to be able to apply the
+	filterall thing here.
+
+2005-04-25 Monday 00:46  stronk7
+
+	* import.php, index.php, lesson.php, lib.php, report.php,
+	restorelib.php, view.php: 
+	
+	Now lesson->name supports filterall
+
+2005-04-25 Monday 00:10  stronk7
+
+	* lib.php: 
+	
+	Events created by the lesson module were double-slashed.
+
+2005-04-13 Wednesday 08:01  michaelpenne
+
+	* action/: addpage.php, editpage.php: 
+	
+	FIXED: questiontypes help button was looking for the wrong help
+	file
+
+2005-04-09 Saturday 05:38  michaelpenne
+
+	* lib.php: 
+	
+	added calendar event code to add, update, and delete instance
+
+2005-04-06 Wednesday 06:42  michaelpenne
+
+	* view.php: 
+	
+	now if you leave the lesson the the middle of a bunch of branch
+	tables, you will return to the last one you answered.  Also, if
+	show grades is off in course settings, the lesson will process and
+	store the grade for the  student but then redirect the student to
+	the course page immediatly.
+
+2005-03-30 Wednesday 11:16  moodler
+
+	* styles.php: 
+	
+	Removed obselete THEME and sme spacing
+
+2005-03-30 Wednesday 11:07  moodler
+
+	* lesson.php, mod.html, styles.php, view.php: 
+	
+	Security fixes
+	
+	Fixed up styles handling to be more standard (the themes include
+	them already so no need for modules to do it)
+
+2005-03-30 Wednesday 10:59  moodler
+
+	* lesson.php, action/addbranchtable.php, action/addcluster.php,
+	action/addendofbranch.php, action/addendofcluster.php,
+	action/addpage.php, action/confirmdelete.php, action/continue.php,
+	action/delete.php, action/editpage.php, action/insertpage.php,
+	action/move.php, action/moveit.php, action/updatepage.php: 
+	
+	Naming, people, naming ... keep it clear but minim
+
+2005-03-30 Wednesday 08:49  michaelpenne
+
+	* lesson.php: 
+	
+	all the actions in lesson.php are now defined in
+	mod/lesson/lessonactions/
+
+2005-03-30 Wednesday 06:38  michaelpenne
+
+	* lesson.php: 
+	
+	on multichoice questions with multianswer, the code was not
+	cleaning the variables correctly.  Now sends the array through a
+	foreach and then clean_param on each element in the array.  Fix is
+	around line 855.
+
+2005-03-30 Wednesday 06:04  michaelpenne
+
+	* locallib.php: 
+	
+	on line 1030, there was a division by zero when a student has not
+	viewed any pages.  Now it checks to makes sure $nviewed != 0. This
+	is for the ongoing score feature.
+
+2005-03-15 Tuesday 06:18  michaelpenne
+
+	* report.php: 
+	
+	changed how data is passed from overview to detailed view and fixed
+	the timeout issue
+
+2005-03-13 Sunday 02:00  stronk7
+
+	* view.php: 
+	
+	Now hidden lessons cannot be viewed.  Thanks to Javier Gil
+	detecting it. Bug 2733. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=2733)
+
+2005-03-13 Sunday 01:54  stronk7
+
+	* view.php: 
+	
+	Opps. 2nd try to hide lessons under 1.4. I was supposing that some
+	new code under 1.5 require_login() was working here too! Bug 2733. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=2733)
+
+2005-03-13 Sunday 01:20  stronk7
+
+	* view.php: 
+	
+	Now hidden lessons cannot be viewed.  Thanks to Javier Gil
+	detecting it. Bug 2733. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=2733)
+
+2005-03-12 Saturday 07:15  michaelpenne
+
+	* timer.js: 
+	
+	changed the math for calculating the time left in a lesson to be
+	more compatible with browsers
+
+2005-03-11 Friday 06:43  michaelpenne
+
+	* lib.php: 
+	
+	updated lesson_delete_instance to delete records from timer,
+	branch, and high_scores tables
+
+2005-03-11 Friday 04:51  michaelpenne
+
+	* locallib.php: 
+	
+	removed lesson_clean_data_submitted() function.  Removed all
+	instances of its use before I did this
+
+2005-03-11 Friday 04:42  michaelpenne
+
+	* view.php: 
+	
+	updategrade now cleans params correctly now (i hope)
+
+2005-03-11 Friday 04:34  michaelpenne
+
+	* lesson.php: 
+	
+	insertpage and updatepage now clean params correctly (i hope)
+
+2005-03-07 Monday 09:30  stronk7
+
+	* backuplib.php, restorelib.php: 
+	
+	Some minor XML indentation, some changes in the XML structure and
+	some important bugs. Now everything seems to work properly with
+	lessons and backup/restore.
+	
+	Only 1 pending change: Should the answer->grade field in old
+	backups   go to the new score field??????
+
+2005-03-05 Saturday 11:14  moodler
+
+	* filter.php, locallib.php: 
+	
+	Removed filter and put badwords list in string files
+
+2005-03-05 Saturday 08:09  stronk7
+
+	* filter.php, index.php, lesson.php, lib.php, locallib.php,
+	mod.html, reformat.php, report.php, styles.php, timer.js, view.php,
+	db/mysql.php, db/mysql.sql, db/postgres7.php, db/postgres7.sql: 
+	
+	Bye. Now all those tabs are out
+
+2005-03-04 Friday 08:30  stronk7
+
+	* backuplib.php, restorelib.php: 
+	
+	Simple replace of tabs to spaces!!
+
+2005-03-04 Friday 07:39  stronk7
+
+	* backuplib.php, restorelib.php: 
+	
+	Minor changes: Corrected some indentation and change a bit the
+	method used to store (oldid,newid) pairs to be a bit more standard.
+	
+	I was ABSOLUTELY wrong! Lessons backup and restore are working fine
+	under 1.4. Ray & Michael work rocks!!
+
+2005-02-27 Sunday 08:12  stronk7
+
+	* mod.html: 
+	
+	Some $ME are now out!
+	
+	Merged from MOODLE_14_STABLE
+
+2005-02-27 Sunday 08:08  stronk7
+
+	* mod.html: 
+	
+	Some $ME are now out!
+
+2005-02-26 Saturday 03:28  michaelpenne
+
+	* lib.php: 
+	
+	delete user attempts now deletes a users grades, attempts, and time
+	recrods.  The email it sends is nicer as well
+
+2005-02-26 Saturday 03:12  michaelpenne
+
+	* report.php: 
+	
+	updated report to find the times in timer table, now much more
+	accurate.  Also fixed a sesskey problem
+
+2005-02-26 Saturday 03:11  michaelpenne
+
+	* lesson.php: 
+	
+	updated the time code to refect the new view
+
+2005-02-26 Saturday 03:10  michaelpenne
+
+	* view.php: 
+	
+	changed the time code, now the timer table keeps track of time
+	spent per attempt per lesson for each student.	It is also used for
+	timed tests. Also, moved check navigation link so it wont show up
+	when there are no lesson pages.
+
+2005-02-24 Thursday 06:24  michaelpenne
+
+	* lesson.php: 
+	
+	removed an echo and a comment
+
+2005-02-23 Wednesday 08:56  michaelpenne
+
+	* mod.html: 
+	
+	woops, took out gustavs change, yah cvs
+
+2005-02-23 Wednesday 08:52  michaelpenne
+
+	* lesson.php, mod.html, styles.php, view.php: 
+	
+	fixed up leftmenu some more
+
+2005-02-16 Wednesday 18:40  gustav_delius
+
+	* import.php, lesson.php, report.php, version.php, view.php: 
+	
+	In order to ensure that when a teacher hides a resource or an
+	activity that students really can't get at it, even if they know
+	the direct links to its pages, I have given an optional third
+	argument $cm to the functions  require_login() and
+	require_course_login(). Pages showing information about a
+	particular course module now pass the course module object in this
+	third argument. The login functions will then test if either the
+	course module is visible or the user is a teacher. If neither is
+	the case then the user is redirected to the course homepage after
+	being shown a message "Sorry, this activity is currently hidden".
+	
+	(While I was at it I also turned the autologinguests off for most
+	module pages, except on the index.php pages and the view.php pages
+	for those modules that allow guests)
+
+2005-02-13 Sunday 08:42  stronk7
+
+	* lib.php: 
+	
+	Now retrieving only needed fields!
+
+2005-02-13 Sunday 05:41  gustav_delius
+
+	* mod.html: 
+	
+	Activities can now be hidden/shown from the activity editing page.
+	Also for modules that know about groups the groupmode can be set
+	from there. See bug 2533. This required adding to the mod.html
+	files calls to new functions print_visible_setting() and
+	print_groupmode_setting() which are combined in
+	print_standard_coursemodule_settings().
+	
+	The visibility of coursemodules is now always set through the
+	function set_coursemodule_visible() in order to make sure that the
+	associated events get updated in the calendar appropriately.
+	
+	If moving a coursemodule to a hidden section then the module is set
+	to hidden as well and its events are hidden in the calendar.
+	
+	If deleting a coursemodule its events are deleted from the
+	calendar.
+	
+	The function choose_from_menu() has an extra optional argument
+	$disabled which, when set to true, will disable the menu.
+	
+	For the sake of consistency the function set_groupmode_for_module
+	has been renamed to set_coursemodule_groupmode and the functions
+	show_course_module() and hide_course_module() have been combined to
+	set_coursemodule_visible().
+
+2005-02-10 Thursday 06:36  michaelpenne
+
+	* mod.html, reformat.php: 
+	
+	array/object initialization
+
+2005-02-10 Thursday 06:34  michaelpenne
+
+	* lesson.php: 
+	
+	array/object initialization and made essay question type work with
+	unanswered lesson flow
+
+2005-02-10 Thursday 06:32  michaelpenne
+
+	* index.php, locallib.php, format.php: 
+	
+	array/object initialization
+
+2005-02-10 Thursday 06:31  michaelpenne
+
+	* view.php: 
+	
+	I think just array/object initialization
+
+2005-02-10 Thursday 06:29  michaelpenne
+
+	* report.php: 
+	
+	initialized arrays and objects, fixed a few bugs
+
+2005-02-09 Wednesday 23:36  moodler
+
+	* import.php, lesson.php, report.php, styles.php, view.php: 
+	
+	Removed $THEMEs and stuff.
+	
+	I'm a little worried about this spaghetti code ... it's a mess!
+
+2005-02-09 Wednesday 23:21  moodler
+
+	* lesson.php, view.php: 
+	
+	Improved feedback after an action (on redirect) and also put a
+	navigation check link up the top.
+
+2005-02-08 Tuesday 07:33  stronk7
+
+	* restorelib.php: 
+	
+	Some minor changes to each module to XHTMLise the restore process
+
+2005-02-05 Saturday 03:39  michaelpenne
+
+	* view.php: 
+	
+	re-arranged a lot of code.  Only branch tables appear in slide show
+	mode.  Display left and slideshow works with tables now instead of
+	stylesheets (helps with browser compatibility).  Some XHTML fixes. 
+	Fixed grading essay questions for non-custom scoreing.	Reformated
+	a lot of output
+
+2005-02-05 Saturday 03:35  michaelpenne
+
+	* styles.php: 
+	
+	removed a lot of styles because left menu and slideshow work in a
+	table instead of styles.  This helps with compatibility with more
+	browsers
+
+2005-02-05 Saturday 03:34  michaelpenne
+
+	* timer.js: 
+	
+	fixed the clock formating.
+
+2005-02-05 Saturday 03:33  michaelpenne
+
+	* import.php: 
+	
+	this is Petrs security fix for import
+
+2005-02-05 Saturday 03:31  michaelpenne
+
+	* report.php: 
+	
+	fixed a clean param function call
+
+2005-02-05 Saturday 03:30  michaelpenne
+
+	* lesson.php: 
+	
+	most changes in continue section.  Took it out of slideshow.  Made
+	some display changes with display left (not style sheet dependent
+	now)
+
+2005-01-29 Saturday 18:17  moodler
+
+	* view.php: 
+	
+	Removed unmatched closing tag
+
+2005-01-29 Saturday 03:31  michaelpenne
+
+	* db/mysql.php: 
+	
+	fixed some prefixes, not sure how this didnt get noticed before ;)
+
+2005-01-28 Friday 05:36  michaelpenne
+
+	* lesson.php: 
+	
+	variable cleaning and sesskey updates
+
+2005-01-28 Friday 05:35  michaelpenne
+
+	* locallib.php: 
+	
+	made a change to lesson_clean_data_submitted and added some xhtml
+	compliance fixes
+
+2005-01-28 Friday 05:33  michaelpenne
+
+	* mod.html: 
+	
+	uncommented the require style sheet (was there a problem?), also
+	rearranged lesson settings into categories.
+
+2005-01-28 Friday 05:30  michaelpenne
+
+	* view.php, import.php: 
+	
+	variable cleaning and sesskey updates
+
+2005-01-26 Wednesday 08:30  michaelpenne
+
+	* locallib.php: 
+	
+	added function lesson_clean_data_submitted(), this cleans the
+	object made from data_submitted() function (forgot comments before)
+
+2005-01-26 Wednesday 08:25  michaelpenne
+
+	* locallib.php: 
+	
+	added function lesson_clean_data_submitted(), this cleans the
+	object made from data_submitted() function
+
+2005-01-26 Wednesday 08:22  michaelpenne
+
+	* lesson.php: 
+	
+	security updates: parameter cleaning
+
+2005-01-23 Sunday 02:53  stronk7
+
+	* mod.html: 
+	
+	Modify sesskey behaviour. SC#73
+
+2005-01-22 Saturday 07:13  michaelpenne
+
+	* view.php: 
+	
+	corrected the sesskey code
+
+2005-01-22 Saturday 03:02  michaelpenne
+
+	* view.php: 
+	
+	added sesskey code to remove the sesskey error from updating the
+	lesson from view.php
+
+2004-12-07 Tuesday 04:33  michaelpenne
+
+	* report.php: 
+	
+	fix class stats for essay questions
+
+2004-12-02 Thursday 05:02  michaelpenne
+
+	* lesson.php: 
+	
+	updated essay and short answer code to work with quotes (single and
+	double)
+
+2004-12-02 Thursday 05:00  michaelpenne
+
+	* view.php: 
+	
+	updated essay code to work with quotes being used in user answer
+	and teacher response
+
+2004-11-19 Friday 11:13  mjollnir_
+
+	* version.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	Merged from MOODLE_14_STABLE: Indexes for lesson and version bump
+	(honoring partial freeze)
+
+2004-11-19 Friday 11:00  mjollnir_
+
+	* version.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	Indexes for lesson and version bump (honoring partial freeze)
+
+2004-11-17 Wednesday 09:05  michaelpenne
+
+	* locallib.php: 
+	
+	updated lesson_calculate_ongoing_score to match the grading
+	algorithm used in view.php.  Also suppressed a warning in
+	lesson_print_tree_link_menu function.
+
+2004-11-17 Wednesday 09:02  michaelpenne
+
+	* view.php: 
+	
+	Changed the grading algorithm.	Now it divides points earned by
+	total points possible.	Before was dividing points earned by max
+	grade.	Also updated essay grading to work much more reliably and
+	fixed some formatting problems with essay emails.
+
+2004-11-04 Thursday 17:24  moodler
+
+	* locallib.php, mod.html, view.php: 
+	
+	Some XHTML compatibility changes
+
+2004-11-04 Thursday 16:55  moodler
+
+	* db/mysql.php: 
+	
+	Fixed missing prefix
+
+2004-11-02 Tuesday 16:51  paca70
+
+	* db/: mysql.sql, postgres7.php, postgres7.sql: 
+	
+	Corrected typo in mysql.sql Added support for postgresql.  BTW is
+	it posible to use table_column() function also with mysql, that
+	would make mysql-code easily portable to other database-files.
+
+2004-11-02 Tuesday 04:47  michaelpenne
+
+	* db/mysql.sql: 
+	
+	added fields: useranswer field in lesson_attempts, and added
+	modattempts to lesson and lesson_default tables, and removed essay
+	table creation
+
+2004-11-02 Tuesday 04:44  michaelpenne
+
+	* db/mysql.php: 
+	
+	added alter table commands to insert useranswer field in
+	lesson_attempts, and added modattempts to lesson and lesson_default
+	tables
+
+2004-11-02 Tuesday 04:41  michaelpenne
+
+	* view.php: 
+	
+	added a link to report, changed conditions for displaying essay
+	link, modified the essay functions to reflect the new view of an
+	essay question, and updated view.php to work with modattempts
+	option
+
+2004-11-02 Tuesday 04:39  michaelpenne
+
+	* timer.js: 
+	
+	moved output from inside this file, to lesson.php and view.php. 
+	Also now uses lang file.
+
+2004-11-02 Tuesday 04:37  michaelpenne
+
+	* restorelib.php: 
+	
+	can restore the new backup code now
+
+2004-11-02 Tuesday 04:35  michaelpenne
+
+	* report.php: 
+	
+	report displays statistics regarding users attempts for a
+	particular lesson. If a student has attempted a lesson, a link will
+	appear when you edit the lesson to view statistics.  This feature
+	works best with the newest version of lesson because lesson now
+	retains more information regarding how the user answered a given
+	question.  Old lesson attempts will not display correctly.
+
+2004-11-02 Tuesday 04:27  michaelpenne
+
+	* mod.html: 
+	
+	added a new setting which is modattempts
+
+2004-11-02 Tuesday 04:25  michaelpenne
+
+	* lib.php: 
+	
+	on line #277, return null instead of throwing an error
+
+2004-11-02 Tuesday 04:21  michaelpenne
+
+	* version.php: 
+	
+	increased the lesson version number
+
+2004-11-02 Tuesday 04:18  michaelpenne
+
+	* locallib.php: 
+	
+	changed lesson_calculate_ongoing_score function and added some
+	comments
+
+2004-11-02 Tuesday 04:15  michaelpenne
+
+	* lesson.php: 
+	
+	endofcluster pages are not displayed anymore, shortanswer wrong
+	answers are interpreted correctly, added user answer tracking to
+	attempts so it can be used later by report.php, essays are no
+	longer insterted into an essay table... now kept in the useranswer
+	field in attempts, fixed a problem with grading numerical
+	questions, modified to work with modattempts option, fixed a
+	problem with grading matching questions and fixed addpage so that
+	it displays multichoice with the multianswer option
+
+2004-11-02 Tuesday 03:53  michaelpenne
+
+	* backuplib.php: 
+	
+	backup now actually backs up.  Includes all of our database changes
+
+2004-10-22 Friday 22:56  paca70
+
+	* db/: postgres7.php, postgres7.sql: 
+	
+	Upgrades for protgresql.
+
+2004-09-29 Wednesday 14:58  moodler
+
+	* import.php: 
+	
+	Merged fix from stable
+
+2004-09-29 Wednesday 14:56  moodler
+
+	* import.php: 
+	
+	Safer processing of pathnames
+
+2004-09-29 Wednesday 03:22  michaelpenne
+
+	* view.php: 
+	
+	fixed a wrong lang call on line #1176
+
+2004-09-29 Wednesday 03:15  michaelpenne
+
+	* locallib.php: 
+	
+	changed $pages[$count][0] to $pageid on line #617
+
+2004-09-25 Saturday 07:10  dhawes
+
+	* view.php: 
+	
+	Some double quote strings converted to single quote literals and
+	conversion of many tabs to spaces - inspired by error in
+	associative array dereferencing found by ottenhoff and noted in
+	comment to bug 1981
+
+2004-09-24 Friday 04:30  michaelpenne
+
+	* locallib.php: 
+	
+	put in Sebastien Michels change on line #911
+
+2004-09-23 Thursday 03:14  michaelpenne
+
+	* locallib.php: 
+	
+	Fixed a bug regarding cluster jumps.  Before, if end of cluster's
+	jump was next page, it would throw an error.
+
+2004-09-22 Wednesday 06:16  michaelpenne
+
+	* db/mysql.php: 
+	
+	changed the order of db updates.  now the order is old to new.
+
+2004-09-22 Wednesday 06:15  michaelpenne
+
+	* view.php: 
+	
+	added an include for lib.php changed the display of page titles
+	changed matching such that if two matching items match to the same
+	answer, that answer only apprears once in the drop down menu. 
+	Changed how the grade essay question link apprears.  Only appears
+	if there is an essay to grade.
+
+2004-09-22 Wednesday 06:13  michaelpenne
+
+	* mod.html: 
+	
+	added option to delete a users attempt records.  Sends an email if
+	delete was seccessful or not.
+
+2004-09-22 Wednesday 06:12  michaelpenne
+
+	* lib.php: 
+	
+	added code to handle deleting of user attempts
+
+2004-09-22 Wednesday 06:11  michaelpenne
+
+	* lesson.php: 
+	
+	Fixed some problems with matching
+
+2004-09-21 Tuesday 19:41  gustav_delius
+
+	* restorelib.php: 
+	
+	Resolved problems with previous replacement of & to &amp; and fixed
+	redirect() to entity encode the inut where needed.  Julian Sedding
+
+2004-09-20 Monday 20:47  moodler
+
+	* lesson.php: 
+	
+	Should always use p() function when printing variables
+
+2004-09-19 Sunday 22:00  moodler
+
+	* view.php: 
+	
+	Strip tags from heading before calling print_heading_with_help
+
+2004-09-19 Sunday 12:30  moodler
+
+	* view.php: 
+	
+	Pass formatoptions when formatting text so that it's not cleaned
+
+2004-09-17 Friday 13:46  mjollnir_
+
+	* version.php: 
+	
+	bumps for version and requires for modules that use new upload
+	class
+
+2004-09-17 Friday 01:13  gustav_delius
+
+	* lesson.php, restorelib.php, view.php: 
+	
+	XHTML compliance - fixed (hopefully) all <img> tags - global
+	replace on <br> to <br /> - &amp; in URLs - got the forum module
+	XHTML compliant Julian Sedding
+
+2004-09-17 Friday 00:20  michaelpenne
+
+	* db/mysql.php: 
+	
+	Fixed the primary key problem in the mysql.
+
+2004-09-16 Thursday 12:33  mjollnir_
+
+	* import.php: 
+	
+	Integration of upload code with lesson	- html form
+	
+	These patches are maintained in an publicly accessible Arch
+	repository, see:
+	http://lists.eduforge.org/cgi-bin/archzoom.cgi/arch-eduforge@cataly
+	st.net.nz--2004-MIRROR/moodle--eduforge--1.3.3
+	
+	Index of arch patches in this commit:
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	69     2004-09-16 04:31:47 GMT	   Penny Leach
+	<penny@catalyst.net.nz>     added the upload class stuff for the
+	upload form for lesson
+	
+	Full logs:
+	
+	Revision: moodle--eduforge--1.3.3--patch-69 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Thu Sep 16 16:31:47 NZST 2004
+	Standard-date: 2004-09-16 04:31:47 GMT Modified-files:
+	mod/lesson/import.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	69 Summary: added the upload class stuff for the upload form for
+	lesson Keywords:
+
+2004-09-16 Thursday 12:25  mjollnir_
+
+	* import.php: 
+	
+	Integration of upload code with lesson.
+	
+	These patches are maintained in an publicly accessible Arch
+	repository, see:
+	http://lists.eduforge.org/cgi-bin/archzoom.cgi/arch-eduforge@cataly
+	st.net.nz--2004-MIRROR/moodle--eduforge--1.3.3
+	
+	Index of arch patches in this commit:
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	68     2004-09-16 04:22:37 GMT	   Penny Leach
+	<penny@catalyst.net.nz>     upload class integration with lesson
+	
+	Full logs:
+	
+	Revision: moodle--eduforge--1.3.3--patch-68 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Thu Sep 16 16:22:37 NZST 2004
+	Standard-date: 2004-09-16 04:22:37 GMT Modified-files:
+	mod/lesson/import.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	68 Summary: upload class integration with lesson Keywords:
+
+2004-09-16 Thursday 04:32  michaelpenne
+
+	* backuplib.php, format.php, import.php, index.php, lesson.php,
+	filter.php, lib.php, locallib.php, mod.html, reformat.php,
+	restorelib.php, styles.php, timer.js, version.php, view.php,
+	db/mysql.php, db/mysql.sql, db/postgres7.php: 
+	
+	Added a lot of new features to lesson mod.  Check them out :)
+	MarkNielsen
+
+2004-09-15 Wednesday 04:39  gustav_delius
+
+	* lib.php: 
+	
+	towards XHTML compliance
+
+2004-09-13 Monday 00:24  gustav_delius
+
+	* backuplib.php, format.php, import.php, index.php, lesson.php,
+	lib.php, mod.html, restorelib.php, version.php, view.php,
+	db/mysql.php, db/postgres7.php: 
+	
+	fixed capitalization and quoting of attribute values
+
+2004-09-12 Sunday 22:41  gustav_delius
+
+	* format.php, import.php, lesson.php, mod.html, restorelib.php,
+	view.php: 
+	
+	closed <input /> <br /> <hr />
+
+2004-09-11 Saturday 05:38  rkingdon
+
+	* lesson.php: 
+	
+	Slightly improved version for checking short answers.
+
+2004-09-11 Saturday 04:58  rkingdon
+
+	* lesson.php: 
+	
+	Correction to Short answers, now checks the answers in order (first
+	to last) and stops checking if a match is found.
+
+2004-08-25 Wednesday 02:38  gustav_delius
+
+	* version.php: 
+	
+	Merging from stable branch
+
+2004-08-24 Tuesday 23:14  gustav_delius
+
+	* version.php: 
+	
+	reduced $module->requires to 052505 after Martin put my new
+	functions into that version.
+
+2004-08-24 Tuesday 18:13  gustav_delius
+
+	* version.php: 
+	
+	All the modules in which I made changes require the latest version
+	of datalib.php.
+
+2004-08-22 Sunday 22:38  gustav_delius
+
+	* import.php, index.php: 
+	
+	All modules are now suitable for the site page. They now all follow
+	the same rules, namely that any students enrolled in at least one
+	course is considered to be a student on the site.
+	
+	All the page headers work correctly also on the site course.
+	
+	On the site page the modules don't require login unless necessary
+	or required by $CFG->forcelogin.
+
+2004-08-22 Sunday 04:20  gustav_delius
+
+	* index.php, view.php: 
+	
+	Removed notices by introducing new function print_header_simple()
+	which works on site as well as in courses without extra logic.
+
+2004-08-10 Tuesday 01:04  rkingdon
+
+	* lesson.php: 
+	
+	Fixed bug #1615.
+
+2004-08-05 Thursday 02:13  julmis
+
+	* view.php: 
+	
+	Move use_html_editor() outside of <form> area.	Gives IE more time
+	to load the page. (body missing problem).
+
+2004-06-17 Thursday 03:29  rkingdon
+
+	* view.php: 
+	
+	Fixed bug #1568.
+
+2004-06-17 Thursday 01:18  rkingdon
+
+	* lesson.php: 
+	
+	Addition of * wild card to Short Answers.
+
+2004-06-10 Thursday 06:50  gustav_delius
+
+	* lib.php: 
+	
+	made sure that ungraded modules would not show up in gradebook
+
+2004-06-04 Friday 15:28  moodler
+
+	* version.php: 
+	
+	MOdules are dependent on this version of course/mod.php
+
+2004-06-04 Friday 14:17  moodler
+
+	* mod.html, version.php: 
+	
+	BRANCH MERGE
+	
+	These are the changes from MOODLE_13_STABLE, merged into trunk
+	
+	The tag MOODLE_13_MERGED on the MOODLE_13_STABLE branch now refers
+	to this point
+	
+	The biggest changes here are the fixes for HTML editor in all
+	standard modules
+
+2004-06-03 Thursday 21:07  moodler
+
+	* mod.html, version.php: 
+	
+	OK, for bug fixes this is a pretty big checkin!!   :-/
+	
+	I finally was able to see the HTML Editor bug in IE/XP that
+	everyone was talking about, and it's a very serious bug as it makes
+	Moodle 1.3 almost unusable for these people.  :-(  :-(
+	
+	So, I eventually found out that the problem is that the Javascript
+	that attaches the editor has troubles when it is embedded within
+	the table						    that
+	course/mod.php puts around the mod.html forms in each module. 
+	(Only in IE and only sometimes, mind you).
+	
+	While testing I also had a good look at a long standing issue which
+	is the inconsistency of the mod.html forms when using the editor.
+	
+	So, to fix both I decided to put the HTML editor calls OUTSIDE the
+	mod.html in the mod.php file.  This means that all modules get the
+	HTML editor by default on all text areas during activity module
+	setup by default.
+	
+	I've been running through this for the past few hours and it seems
+	pretty stable now and a lot more consistent, so I'm checking it in
+	as big fix towards the Moodle 1.3.1 we have to have.
+	
+	Unfortunately it also means the API has changed a bit  ... I had to
+	update all the module dependencies to this exact version (or
+	later).
+	
+	Please test this "stable" version hard using the standard modules
+	only and I'll merge these changes over to the trunk in a day or so
+	and update all known third-party modules.
+
+2004-05-25 Tuesday 17:49  defacer
+
+	* lib.php: 
+	
+	Fixing a harmless warning in debug mode.
+
+2004-04-03 Saturday 00:16  rkingdon
+
+	* db/: mysql.php, postgres7.php: 
+	
+	Correcting field name usemaxgrade in update files.
+
+2004-04-02 Friday 23:54  rkingdon
+
+	* view.php: 
+	
+	Fix bug when the last page of a lesson has no question.
+
+2004-04-02 Friday 00:56  rkingdon
+
+	* backuplib.php, lesson.php, lib.php, restorelib.php, version.php,
+	view.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	Optional use of the HTML editor.
+
+2004-04-01 Thursday 00:00  paca70
+
+	* db/postgres7.php: 
+	
+	Replaced ` with "  CVS:
+	-------------------------------------------------------------------
+	---
+
+2004-03-27 Saturday 13:01  rkingdon
+
+	* db/: postgres7.php, postgres7.sql: 
+	
+	Version 2 and 3 updates.
+
+2004-03-27 Saturday 12:15  rkingdon
+
+	* backuplib.php, import.php, index.php, lesson.php, lib.php,
+	mod.html, restorelib.php, version.php, view.php, db/mysql.php,
+	db/mysql.sql: 
+	
+	Version 3 update
+
+2004-03-25 Thursday 16:14  moodler
+
+	* lesson.php: 
+	
+	Use the data_submitted() function to get POST data ... allows
+	checking etc
+
+2004-03-20 Saturday 21:16  moodler
+
+	* version.php, db/mysql.php: 
+	
+	Fix up some old Beta sites that may have lessons
+
+2004-03-12 Friday 23:32  rkingdon
+
+	* lesson.php, view.php: 
+	
+	Fixed Bug 1132.
+
+2004-02-27 Friday 01:19  rkingdon
+
+	* db/mysql.sql: 
+	
+	Corrected typo.
+
+2004-02-27 Friday 00:54  rkingdon
+
+	* backuplib.php, format.php, import.php, lesson.php, lib.php,
+	mod.html, restorelib.php, version.php, view.php, db/mysql.php,
+	db/mysql.sql: 
+	
+	Support for extra question types added; Flash Card style lessons
+	now an option.
+
+2004-02-23 Monday 03:19  stronk7
+
+	* db/mysql.sql: 
+	
+	Opps, returning to version 1.3 (before I put two lines in CVS by
+	mistake). I'll inform Ray about that needed actions and let him to
+	decide. Sorry :-(
+
+2004-02-23 Monday 03:11  stronk7
+
+	* restorelib.php, db/mysql.sql: 
+	
+	Now lesson logs are restored too!!
+
+2004-02-23 Monday 03:10  stronk7
+
+	* view.php: 
+	
+	Some minor changes because the:
+	/mod/lesson/view.php?id=XXX&action=navigation&pageid=ZZZZZ was not
+	working fine.  I'm not really sure if the modifications I've done
+	(basically removing POST['pageid'] use has other implications.	So,
+	Ray, if you can check it....  Ciao :-)
+
+2004-02-23 Monday 02:15  stronk7
+
+	* backuplib.php, lib.php, restorelib.php: 
+	
+	Added the lesson_get_participants() function to properly detect all
+	the needed users with data in the activity in order to be able to
+	backup them.
+
+2004-02-19 Thursday 17:03  paca70
+
+	* db/: postgres7.php, postgres7.sql: 
+	
+	First versions for postgres7.
+
+2004-02-18 Wednesday 20:12  rkingdon
+
+	* view.php: 
+	
+	Fixed restart bug - continue now handle through POST not GET.
+
+2004-02-17 Tuesday 19:11  rkingdon
+
+	* lesson.php, view.php: 
+	
+	Added sanity check before calculating grade.
+
+2004-02-17 Tuesday 08:54  rkingdon
+
+	* lesson.php, view.php: 
+	
+	Only teacher's with edit privileges see the edit links; Navigation
+	now uses POSTS rather than GETS.
+
+2004-02-17 Tuesday 00:08  rkingdon
+
+	* lesson.php: 
+	
+	Moveit action: Removed debug messages; added redirect.
+
+2004-02-16 Monday 20:20  moodler
+
+	* version.php, view.php, db/mysql.php, db/mysql.sql: 
+	
+	SOme improvements to logging
+
+2004-02-16 Monday 20:02  moodler
+
+	* index.php: 
+	
+	Fixed header on table
+
+2004-02-16 Monday 19:59  moodler
+
+	* icon.gif: 
+	
+	Didn't look so good as the "L"
+
+2004-02-16 Monday 19:56  moodler
+
+	* icon.gif: 
+	
+	Slightly different icon ... now it looks like an "L"  :-)
+
+2004-02-16 Monday 16:45  moodler
+
+	* db/mysql.sql: 
+	
+	Log display
+
+2004-02-16 Monday 16:43  moodler
+
+	* view.php: 
+	
+	Fixed logs
+
+2004-02-16 Monday 14:13  moodler
+
+	* icon.gif: 
+	
+	First cut at a new icon
+
+2004-02-16 Monday 14:06  moodler
+
+	* lesson.php: 
+	
+	Removed the debugging statement
+
+2004-02-16 Monday 13:59  moodler
+
+	* view.php: 
+	
+	Add some formatting to the answers
+
+2004-02-16 Monday 13:41  moodler
+
+	* backuplib.php, icon.gif, index.php, lesson.php, lib.php,
+	mod.html, restorelib.php, version.php, view.php, db/mysql.php,
+	db/mysql.sql: 
+	
+	Adding the Lesson module to the main CVS.   Nice job Ray!
+	
+	Still needs PostgreSQL support and wider testing
+

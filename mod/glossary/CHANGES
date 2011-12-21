@@ -1,0 +1,6064 @@
+2007-01-16 Tuesday 23:36  jamiesensei
+
+	* mod_form.php: 
+	
+	changed name of moodleform_mod method 'defaults_preprocessing' to
+	'data_preprocessing' in line with change of set_defaults name to
+	set_data.
+
+2007-01-15 Monday 02:58  stronk7
+
+	* db/: mysql.sql, postgres7.sql: 
+	
+	Deleting deprecated .sql files. MDL-7264 Byeeez!
+
+2007-01-14 Sunday 04:13  stronk7
+
+	* config.html, formats.php: 
+	
+	Now all the modules global config pages are valid XML. Related to
+	MDL-7861
+
+2007-01-13 Saturday 08:32  stronk7
+
+	* lib.php, sql.php: 
+	
+	Some more uses of $CFG->dbfamily. MDL-7061
+
+2007-01-13 Saturday 02:52  skodak
+
+	* comment.php, edit.php: 
+	
+	MDL-8166 rename in/out methods in formslib - HQ consensus
+
+2007-01-12 Friday 14:57  toyomoyo
+
+	* comments.php, editcategories.html, editcategories.php,
+	exportentry.php, import.php, lib.php, view.php,
+	formats/TEMPLATE/TEMPLATE_format.php,
+	formats/encyclopedia/encyclopedia_format.php,
+	formats/entrylist/entrylist_format.php, formats/faq/faq_format.php,
+	formats/fullwithauthor/fullwithauthor_format.php: 
+	
+	MDL-7861, xhtml strict related changes for glossary
+
+2007-01-12 Friday 03:47  skodak
+
+	* mod_form.php: 
+	
+	fixed text field widths in new forms
+
+2007-01-11 Thursday 16:06  moodler
+
+	* view.php: 
+	
+	FIxed up the intro boxes  XHTML Strict
+
+2007-01-09 Tuesday 04:38  skodak
+
+	* lib.php: 
+	
+	MDL-7861 still some icons left ;grr previous commid had wrong MDL
+	id
+
+2007-01-09 Tuesday 04:30  skodak
+
+	* config.html, view.php: 
+	
+	MDL-8105 some more icon class fixes including new .iconhelp for
+	help and docs icon
+
+2007-01-09 Tuesday 03:34  skodak
+
+	* config.html: 
+	
+	MDL-7861 xhtml transient fixes for not closed input fields - I hope
+	all of them except imported libs are now fixed
+
+2007-01-08 Monday 17:14  skodak
+
+	* comments.php, editcategories.php, lib.php: 
+	
+	MDL-7861 new class .icon and .iconsmall
+
+2007-01-05 Friday 12:51  jamiesensei
+
+	* comment_form.php, edit_form.php, mod_form.php: 
+	
+	added helpbuttons to htmleditors where needed. Further work on
+	htmleditor helpbutton code.
+
+2007-01-05 Friday 07:38  skodak
+
+	* editcategories.php: 
+	
+	MDL-7861 xhtml strict fixes - fixed all <br> in our code
+
+2007-01-05 Friday 05:32  skodak
+
+	* formats.php, import.html, config.html, editcategories.html,
+	editcategories.php, view.php: 
+	
+	MDL-8062 1.3 Remove name attribute from <form> and fix focus
+	everywhere - more changes ahead
+
+2006-12-29 Friday 05:21  skodak
+
+	* edit.php, lib.php, edit_form.php: 
+	
+	MDL-8015 improved file uploading - changed file upload api in
+	formslib - fixed blog attachments and related code in file.php -
+	fixed glossary attachments - fixed embedded images in forum posts
+	and blogs - only gif, png and jpeg; the problme was that svg were
+	embedded using img tag which was wrong, the same applied to other
+	picture formats unsupported by browsers (please note that student
+	submitted svg should be never embedded in moodle page for security
+	reasons) - other minor fixes
+
+2006-12-28 Thursday 23:43  jamiesensei
+
+	* comment.php, edit.php: 
+	
+	fixing all the form names as per new class naming convention (PHP
+	class names are also used for html id for styling)
+
+2006-12-28 Thursday 17:32  jamiesensei
+
+	* comment_form.php, edit_form.php, mod_form.php: 
+	
+	changes to how we generate the id attribute of forms and the naming
+	convention of forms migrate blog edit to formslib
+
+2006-12-22 Friday 12:23  toyomoyo
+
+	* mod_form.php: 
+	
+	taking out unwanted/broken strings from mod_form to make form xhtml
+	strict MDL-7861
+
+2006-12-19 Tuesday 15:03  jamiesensei
+
+	* comment_form.php, edit.html, edit.php, edit_form.php,
+	mod_form.php: 
+	
+	
+	* Added setAdvanced functionality see
+	http://docs.moodle.org/en/Development:lib/formslib.php_setAdvanced
+	* Added MoodleQuickForm method closeHeaderBefore($elementName);
+	http://docs.moodle.org/en/Development:lib/formslib.php_Form_Definit
+	ion#Use_Fieldsets_to_group_Form_Elements * Added moodleform method
+	add_action_buttons(); see
+	http://docs.moodle.org/en/Development:lib/formslib.php_Form_Definit
+	ion#add_action_buttons.28.24cancel_.3D_true.2C_.24revert_.3D_true.2
+	C_.24submitlabel.3Dnull.29.3B * is_cancelled method added to
+	moodleform
+	http://docs.moodle.org/en/Development:lib/formslib.php_Usage#Basic_
+	Usage_in_A_Normal_Page * added hidden labels to elements within
+	groups such as the date_selector select boxes and other elements in
+	'groups' * quiz/mod.html migrated to formslib * glossary/edit.html
+	migrated to formslib * extended registerNoSubmitButton()
+	functionality to automatically add js to onclick to bypass client
+	side js input validation.  * added no_submit_button_pressed()
+	function that can be used in a similar way to is_cancelled() as a
+	test in the main script to see if some button in the page has been
+	pressed that is a submit button that is used for some dynamic
+	functionality within the form and not to submit the data for the
+	whole form.  * added new condition for disabledIf which allows to
+	disable another form element if no options are selected from within
+	a select element.  * added default 'action' for moodleform  -
+	strip_querystring(qualified_me())
+	http://docs.moodle.org/en/Development:lib/formslib.php_Usage#Basic_
+	Usage_in_A_Normal_Page
+
+2006-12-14 Thursday 20:44  jamiesensei
+
+	* mod_form.php: 
+	
+	added setAdvanced MoodleQuickForm method. And added
+	closeHeaderAfter method
+
+2006-12-13 Wednesday 16:24  toyomoyo
+
+	* report.php: 
+	
+	accessiblity, associating <th> with respective row or col
+
+2006-12-05 Tuesday 17:44  skodak
+
+	* comment.php, comment_form.php: 
+	
+	added cancel button to glossary comment form and fixed
+	initialization of button arrays MDL-7778
+
+2006-12-04 Monday 17:36  jamiesensei
+
+	* comment_form.php, mod_form.php: 
+	
+	added new 'cancel' element type and introduced new is_cancelled()
+	MoodleQuickForm method.  also used new cancel button in all
+	mod_forms as well as a 'Revert' button and reworked logic about
+	where to go on cancel or after submission for modedit.php
+
+2006-11-30 Thursday 17:57  skodak
+
+	* editcategories.php, view.php: 
+	
+	minor xhtml fixes
+
+2006-11-28 Tuesday 16:24  skodak
+
+	* edit.html, import.html: 
+	
+	Place information before controls on upload forms MDL-7491
+
+2006-11-27 Monday 00:20  skodak
+
+	* comments.php, config.html, lib.php, view.php: 
+	
+	MDL-7434 all images that convey information should have alt text to
+	convey that information - part 3
+
+2006-11-25 Saturday 00:38  jamiesensei
+
+	* comment_form.php, mod_form.php: 
+	
+	changed name of submit buttons to submitbutton instead of sumbit as
+	submit was conflicting with method form.submit()
+
+2006-11-24 Friday 14:39  jamiesensei
+
+	* mod_form.php: 
+	
+	some restructuring of formslib - moving moodleform_mod definition
+	to new file course\moodleform_mod.php and some changes to
+	moodleform_mod standard elements setup and moodleform disabledIf
+	API
+
+2006-11-23 Thursday 00:54  jamiesensei
+
+	* mod_form.php: 
+	
+	added dependencies to form
+
+2006-11-15 Wednesday 11:15  toyomoyo
+
+	* backuplib.php, deleteentry.php, import.php, lib.php,
+	restorelib.php, version.php, db/install.xml, db/upgrade.php: 
+	
+	dropping studentcanpost in glossary, MDL_7170
+
+2006-11-14 Tuesday 13:38  jamiesensei
+
+	* mod_form.php: 
+	
+	range third parameter doesn't work pre PHP 5.0 removed the use of
+	this.
+
+2006-11-13 Monday 15:56  jamiesensei
+
+	* mod.html: 
+	
+	removing mod.html migrated to formslib
+
+2006-11-13 Monday 15:52  jamiesensei
+
+	* lib.php, mod.html, mod_form.php: 
+	
+	glossary form migrated to formslib and other formslib forms now
+	using $COURSE global
+
+2006-11-13 Monday 10:20  toyomoyo
+
+	* lib.php: 
+	
+	fix for MDL-7474, provide alt text for ascending/descending icons
+	in glossary
+
+2006-11-13 Monday 10:07  toyomoyo
+
+	* view.php: 
+	
+	fix for MDL-7473, adding alt tag for printer friendly version
+
+2006-11-12 Sunday 16:55  skodak
+
+	* export.php, showentry.php, view.php: 
+	
+	fixed obsoleted use of course->category to find site course - now
+	used SITEID instead MDL-1899
+
+2006-11-12 Sunday 01:23  skodak
+
+	* lib.php, print.php, sql.php, view.php: 
+	
+	we are going 100% unicode now - removed use of $CFG->unicodedb and
+	current_charset(); MDL-7439 - part 2, only hotpot and wiki left
+
+2006-11-10 Friday 05:34  skodak
+
+	* comment_form.php: 
+	
+	tiny coding style fix
+
+2006-11-09 Thursday 15:21  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	drop utf8 support from HEAD MDL-6332
+
+2006-11-01 Wednesday 04:38  stronk7
+
+	* sql.php: 
+	
+	Prevent +/- operators (REGEXP) on glossary searches for MSSQL and
+	Oracle. MDL-7312
+	
+	Merged from MOODLE_17_STABLE
+
+2006-11-01 Wednesday 04:36  stronk7
+
+	* sql.php: 
+	
+	Prevent +/- operators (REGEXP) on glossary searches for MSSQL and
+	Oracle. MDL-7312
+
+2006-11-01 Wednesday 04:34  stronk7
+
+	* lib.php: 
+	
+	Prevent +/- operators (REGEXP) on glossary searches for MSSQL and
+	Oracle. MDL-7312
+	
+	Merged from MOODLE_17_STABLE
+
+2006-11-01 Wednesday 04:33  stronk7
+
+	* lib.php: 
+	
+	Prevent +/- operators (REGEXP) on glossary searches for MSSQL and
+	Oracle. MDL-7312
+
+2006-10-31 Tuesday 03:32  stronk7
+
+	* print.php, sql.php, view.php: 
+	
+	Fixing display of pivots when they are author names
+	
+	Merged from MOODLE_17_STABLE
+
+2006-10-31 Tuesday 03:31  stronk7
+
+	* print.php, sql.php, view.php: 
+	
+	Fixing display of pivots when they are author names
+
+2006-10-31 Tuesday 03:02  stronk7
+
+	* print.php, sql.php, view.php: 
+	
+	Fixing some queries with duplicate column names. MDL-7294
+	
+	Merged from MOODLE_17_STABLE
+
+2006-10-31 Tuesday 03:01  stronk7
+
+	* print.php, sql.php, view.php: 
+	
+	Fixing some queries with duplicate column names. MDL-7294
+
+2006-10-31 Tuesday 02:34  stronk7
+
+	* sql.php: 
+	
+	Now glossary is using the proper sql_substr() function
+	
+	Merged from MOODLE_17_STABLE
+
+2006-10-31 Tuesday 02:33  stronk7
+
+	* sql.php: 
+	
+	Now glossary is using the proper sql_substr() function
+
+2006-10-31 Tuesday 01:58  stronk7
+
+	* edit.php, exportentry.php, import.php, sql.php, edit.php,
+	exportentry.php, import.php, sql.php: 
+	
+	Now lcase() and ucase() are out from glossary
+
+2006-10-31 Tuesday 01:46  stronk7
+
+	* sql.php: 
+	
+	sql_as() is deprecated. Column aliases ALWAYS must use the AS
+	keyword.
+	
+	Merged from MOODLE_17_STABLE
+
+2006-10-31 Tuesday 01:43  stronk7
+
+	* sql.php: 
+	
+	sql_as() is deprecated. Column aliases ALWAYS must use the AS
+	keyword.
+
+2006-10-30 Monday 11:38  toyomoyo
+
+	* print.php, sql.php, view.php: 
+	
+	merged fix for MDL-7267, fixing keywords pivot
+
+2006-10-30 Monday 11:36  toyomoyo
+
+	* print.php, sql.php, view.php: 
+	
+	fixing keyword pivot by changing into glossarypivot, MDL-7267
+
+2006-10-29 Sunday 18:19  jamiesensei
+
+	* comment_form.php: 
+	
+	added help button for format drop down
+
+2006-10-29 Sunday 05:55  skodak
+
+	* comment.php, comment_form.php, comments.php, lib.php: 
+	
+	MDL-6940 - I decided to rewrite the glossary comments UI, the
+	original code (pre 1.8) was not nice at all, it is IMHO more
+	readable now and the forms implementation could be greatly
+	simplified; this can also serve as sample trusttext implementation
+	outside of forms code
+
+2006-10-27 Friday 01:43  stronk7
+
+	* db/upgrade.php: 
+	
+	New upgrade.php file added for this module. MDL-7214
+	
+	Merged from HEAD
+
+2006-10-27 Friday 01:33  stronk7
+
+	* db/upgrade.php: 
+	
+	New upgrade.php file added for this module. MDL-7214
+
+2006-10-26 Thursday 15:59  jamiesensei
+
+	* comment.php, comment_form.php, comment.html: 
+	
+	migrated comment.php over to using new formslib.
+
+2006-10-26 Thursday 07:29  stronk7
+
+	* db/: mysql.php, postgres7.php, upgrade.php: 
+	
+	First model of new upgrade.php scripts and comments in old ones. 
+	Need validation before extending them everywhere across core.
+	MDL-7214
+	
+	Merged from MOODLE_17_STABLE
+
+2006-10-26 Thursday 07:26  stronk7
+
+	* db/: mysql.php, postgres7.php, upgrade.php: 
+	
+	First model of new upgrade.php scripts and comments in old ones. 
+	Need validation before extending them everywhere across core.
+	MDL-7214
+
+2006-10-26 Thursday 07:26  stronk7
+
+	* db/upgrade.php: 
+	
+	file upgrade.php was initially added on branch MOODLE_17_STABLE.
+
+2006-10-25 Wednesday 17:04  moodler
+
+	* filter.php: 
+	
+	Merged AS keyword fixes from stable  MDL-7207
+
+2006-10-25 Wednesday 17:02  moodler
+
+	* filter.php: 
+	
+	More rogue AS keywords	 MDL-7207
+
+2006-10-25 Wednesday 06:00  stronk7
+
+	* sql.php: 
+	
+	DeLIMITing Moodle core. Now the new $limitfrom, $limitnum
+	parameters are used instead. MDL-7168
+	
+	Merged from MOODLE_17_STABLE
+
+2006-10-25 Wednesday 05:55  stronk7
+
+	* sql.php: 
+	
+	DeLIMITing Moodle core. Now the new $limitfrom, $limitnum
+	parameters are used instead. MDL-7168
+
+2006-10-24 Tuesday 16:06  skodak
+
+	* version.php, db/access.php: 
+	
+	fixed risks associated with capabilitites in modules MDL-7174;
+	merged from MOODLE_17_STABLE
+
+2006-10-24 Tuesday 16:04  skodak
+
+	* version.php, db/access.php: 
+	
+	fixed risks associated with capabilitites in modules MDL-7174
+
+2006-10-23 Monday 10:49  toyomoyo
+
+	* lib.php: 
+	
+	merged replacing studentcanpost with capability
+
+2006-10-23 Monday 10:48  toyomoyo
+
+	* lib.php: 
+	
+	replacing studentcanpost with capability
+
+2006-10-23 Monday 10:25  toyomoyo
+
+	* config.html, mod.html: 
+	
+	merged, student_can_post should be done properly using capabilities
+
+2006-10-23 Monday 10:24  toyomoyo
+
+	* config.html, mod.html: 
+	
+	student_can_post should be done properly using capabilities
+
+2006-10-22 Sunday 05:15  skodak
+
+	* rsslib.php: 
+	
+	Seeing ####TRUSTTEXT#### in RSS feeds MDL-7147 - fixed RSS feeds in
+	glossary; merged from MOODLE_17_STABLE
+
+2006-10-22 Sunday 05:14  skodak
+
+	* rsslib.php: 
+	
+	Seeing ####TRUSTTEXT#### in RSS feeds MDL-7147 - fixed RSS feeds in
+	glossary
+
+2006-10-22 Sunday 02:28  stronk7
+
+	* db/: oci8po.php, oci8po.sql, oci8po.php, oci8po.sql: 
+	
+	Deleting some old oci8po files from CVS.
+
+2006-10-20 Friday 15:01  toyomoyo
+
+	* edit.php: 
+	
+	merged fix for MDL-7106, glossary capability check
+
+2006-10-20 Friday 15:00  toyomoyo
+
+	* edit.php: 
+	
+	fix for MDL-7106, glossary capability check
+
+2006-10-19 Thursday 04:22  skodak
+
+	* comment.php: 
+	
+	improved validation when deleting comments from glossary SC#325 ;
+	backported from MOODLE_17_STABLE
+
+2006-10-19 Thursday 04:21  skodak
+
+	* comment.php: 
+	
+	improved validation when deleting comments from glossary SC#325 ;
+	merged from MOODLE_17_STABLE
+
+2006-10-19 Thursday 04:20  skodak
+
+	* comment.php: 
+	
+	improved validation when deleting comments from glossary SC#325
+
+2006-10-17 Tuesday 18:05  thompson697
+
+	* restorelib.php: 
+	
+	Apply modularity to the creation of the log file during restore to
+	a new course.  Remove the responsibility for loging the application
+	of the course start date offset, from activity modules to the
+	backup module.	Merged from stable branch
+
+2006-10-16 Monday 18:40  thompson697
+
+	* restorelib.php: 
+	
+	Apply modularity to the creation of the log file during restore to
+	a new course.  Remove the responsibility for loging the application
+	of the course start date offset, from activity modules to the
+	backup module.
+
+2006-10-12 Thursday 16:26  toyomoyo
+
+	* restorelib.php: 
+	
+	merged fix for warnings
+
+2006-10-12 Thursday 16:25  toyomoyo
+
+	* restorelib.php: 
+	
+	fixing warnings
+
+2006-10-12 Thursday 11:30  toyomoyo
+
+	* restorelib.php: 
+	
+	merged fix warnings during restore
+
+2006-10-12 Thursday 11:30  toyomoyo
+
+	* restorelib.php: 
+	
+	fixing warnings during restore
+
+2006-10-11 Wednesday 14:22  moodler
+
+	* db/access.php: 
+	
+	Merged fixes for MDL-6907 from stable
+
+2006-10-11 Wednesday 14:16  moodler
+
+	* db/access.php: 
+	
+	All the PREVENTS from the legacy roles have been removed (and thus
+	are treated as INHERIT by default).
+	
+	See MDL-6907 for details.
+
+2006-10-05 Thursday 11:26  toyomoyo
+
+	* view.php: 
+	
+	removing some debugging statements
+
+2006-10-04 Wednesday 22:50  thompson697
+
+	* restorelib.php: 
+	
+	Change creation of restorelog file location to protected backupdata
+	folder.  Reassign style and language links
+
+2006-10-02 Monday 03:35  skodak
+
+	* editcategories.php: 
+	
+	Cannot add glossary category MDL-6713
+
+2006-09-26 Tuesday 13:08  martinlanghoff
+
+	* sql.php: 
+	
+	data, forum, glossary: use sql_ilike() for a portable LIKE operator
+
+2006-09-26 Tuesday 13:06  martinlanghoff
+
+	* sql.php: 
+	
+	mod/glossary, mod/hotpot: use sql_concat() and sql_concat_join()
+	
+	Cleaned up several dbtype conditionals too.
+
+2006-09-24 Sunday 22:01  vyshane
+
+	* lib.php: 
+	
+	Changed <module>_print_recent_activity() functions so that they
+	don't use $isteacher. However, I've left the $isteacher parameter
+	in the functions, for backward compatibility so as not to break
+	thrid party modules. Should we remove the parameter now?
+
+2006-09-23 Saturday 17:38  skodak
+
+	* exportfile.php: 
+	
+	debugging and error reporting level fixes and improvements MDL-6671
+
+2006-09-22 Friday 10:52  vyshane
+
+	* deleteentry.php, index.php, sql.php, view.php, db/access.php: 
+	
+	Removed 'mod/glossary:view' capability
+
+2006-09-21 Thursday 05:00  skodak
+
+	* db/access.php: 
+	
+	major whitespace cleanup - fixed trailng whitespace in new files
+	and admin area
+
+2006-09-19 Tuesday 17:16  toyomoyo
+
+	* formats.php, lib.php, mod.html, view.php: 
+	
+	replacing deprecated funciton calls with capability calls
+
+2006-09-19 Tuesday 05:32  skodak
+
+	* db/access.php, version.php: 
+	
+	added capabilty risks into access.php and GUI for define role and
+	override; minor fixes for capability types in forum
+
+2006-09-18 Monday 17:13  moodler
+
+	* restorelib.php, rsslib.php: 
+	
+	FIxed to use the new debugging function
+
+2006-09-13 Wednesday 21:19  thompson697
+
+	* restorelib.php: 
+	
+	Complete work on Roll Forwards - Restore from previous semester
+	(MDL-5532) * Add fields to restore form to enable changes to Short
+	Name, Full Name and Start Date * Start Date offset added to Restore
+	process * Created Restorelog file in Course files area * Activity
+	Modules use offset to change dates * Activity Modules write changes
+	to Restorelog
+
+2006-09-12 Tuesday 16:22  moodler
+
+	* version.php: 
+	
+	Small bump for guest role fix
+
+2006-09-12 Tuesday 15:10  moodler
+
+	* version.php: 
+	
+	Reload the guest role using new defaults
+
+2006-09-12 Tuesday 13:58  moodler
+
+	* db/access.php: 
+	
+	Changed some default permissions for the guest role
+
+2006-09-06 Wednesday 16:55  toyomoyo
+
+	* view.php: 
+	
+	adding capabilities
+
+2006-09-06 Wednesday 10:14  toyomoyo
+
+	* lib.php: 
+	
+	replacing isteacher with viewfullname capability
+
+2006-09-05 Tuesday 06:45  stronk7
+
+	* editcategories.php: 
+	
+	Don't use db_lowercase() anymore.
+
+2006-09-05 Tuesday 06:42  stronk7
+
+	* sql.php: 
+	
+	Using the standard sql_as() function, although it could be not
+	used.
+
+2006-09-05 Tuesday 04:37  stronk7
+
+	* backuplib.php, comment.php, lib.php, restorelib.php, version.php,
+	db/install.xml, db/migrate2utf8.xml, db/mysql.php, db/mysql.sql,
+	db/postgres7.php, db/postgres7.sql: 
+	
+	One less reserved word. glossary->comment is out!
+
+2006-09-02 Saturday 19:44  skodak
+
+	* sql.php: 
+	
+	replace all uses of isset($USER->id) with empty() to allow proper
+	operation of $CFG->notloggedinroleid hack
+
+2006-08-30 Wednesday 16:43  toyomoyo
+
+	* lib.php, showentry.php, view.php: 
+	
+	added some capabilities
+
+2006-08-28 Monday 02:38  skodak
+
+	* comment.html, edit.html: 
+	
+	fixed cosmetic typo - missing semicolon before closing tag
+
+2006-08-27 Sunday 03:38  skodak
+
+	* lib.php: 
+	
+	fixed warning in glossary recent activity from deteted entries
+
+2006-08-27 Sunday 03:19  skodak
+
+	* deleteentry.php, index.php, lib.php, print.php,
+	formats/TEMPLATE/TEMPLATE_format.php,
+	formats/encyclopedia/encyclopedia_format.php,
+	formats/fullwithauthor/fullwithauthor_format.php: 
+	
+	removing some isteacher()s from glossary
+
+2006-08-27 Sunday 02:08  skodak
+
+	* version.php, db/mysql.php, db/postgres7.php: 
+	
+	trusttext cleaning in glossary upgrade - definitions and comments
+
+2006-08-26 Saturday 21:00  skodak
+
+	* edit.php, comment.html, import.php, lib.php, comment.php,
+	edit.html: 
+	
+	trusttext:  * proposed by Martin Dougiamas  * implemented by skodak
+	
+	Usage: 1/ change enabletrusttext to yes in site settings (it is off
+	by default) or set it in config.php 2/ assign
+	moodle/site:trustcontent capability to users whose text submitted
+	in glossary entries, comments, forum posts etc. should not be
+	cleaned == they can use javascript or any other forbidden tags in
+	glossary and forums...
+	
+	done:  * core  * glossary (without proper upgrade)
+	
+	to do:	* data cleaning in upgrades  * forum, blocks and some other
+	places (MD decides)
+
+2006-08-23 Wednesday 13:52  toyomoyo
+
+	* db/access.php: 
+	
+	fixing a typo
+
+2006-08-14 Monday 13:55  moodler
+
+	* approve.php, comment.php, comments.php, deleteentry.php,
+	edit.php, editcategories.php, export.php, exportentry.php,
+	exportfile.php, import.php, lib.php, report.php, tabs.html,
+	view.php: 
+	
+	SWEEPING CLEANUP
+	
+	The API was changed slightly so that has_capability now takes the
+	whole $context object (we almost always have it anyway)
+	
+	The $kill thing was removed.   If you want to assert a capability
+	then use:
+	
+	    require_capability('capname', $context);
+	
+	with optional variables to modify the error message
+	
+	Misc bugs here and there also removed and code tidied
+
+2006-08-12 Saturday 01:11  stronk7
+
+	* db/install.xml: 
+	
+	XMLDB schema initial commit for the glossary module
+
+2006-08-10 Thursday 23:51  skodak
+
+	* approve.php, deleteentry.php, edit.php, editcategories.php,
+	export.php, import.php, view.php, comment.php, comments.php,
+	exportentry.php, print.php, version.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283; backported from HEAD
+
+2006-08-10 Thursday 23:30  skodak
+
+	* approve.php, comments.php, deleteentry.php, edit.php,
+	editcategories.php, export.php, exportentry.php, exportfile.php,
+	import.php, view.php, comment.php, print.php, version.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283; backported from HEAD
+
+2006-08-09 Wednesday 21:45  moodler
+
+	* approve.php, comment.php, comments.php, deleteentry.php,
+	edit.php, editcategories.php, export.php, exportentry.php,
+	exportfile.php, import.php, lib.php, report.php, tabs.html,
+	view.php: 
+	
+	Removed tabs
+
+2006-08-09 Wednesday 06:09  skodak
+
+	* approve.php, comments.php, deleteentry.php, edit.php,
+	editcategories.php, export.php, exportentry.php, exportfile.php,
+	import.php, print.php, view.php, comment.php, version.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283
+
+2006-08-08 Tuesday 13:13  moodler
+
+	* approve.php, comment.php, comments.php, deleteentry.php,
+	edit.php, editcategories.php, export.php, exportentry.php,
+	exportfile.php, import.php, lib.php, report.php, tabs.html,
+	version.php, view.php, db/access.php: 
+	
+	ROLES AND PERMISSIONS  - FIRST CHECK-IN
+	=======================================
+	
+	WARNING:  DEV IS CURRENTLY VERY UNSTABLE.
+	
+	This is a mega-checkin of the new Roles system.   A lot of changes
+	have been made in core and modules.
+	
+	Currently there are a lot of rough edges and known problems.  We
+	are working hard on these .. .the reason for getting this into HEAD
+	at this stage is enable us to move faster (our branch was diverging
+	from HEAD too much).
+	
+	Please keep an eye on http://docs.moodle.org/en/Roles for current
+	status and information for developers on how to use the new Roles
+	system.
+
+2006-08-04 Friday 13:56  vyshane
+
+	* db/access.php: 
+	
+	Renamed legacyroles to legacy
+
+2006-08-01 Tuesday 15:31  vyshane
+
+	* db/access.php: 
+	
+	Capability definitions for the glossary module.
+
+2006-08-01 Tuesday 15:31  vyshane
+
+	* db/access.php: 
+	
+	file access.php was initially added on branch MOODLE_17_ROLES.
+
+2006-08-01 Tuesday 15:29  vyshane
+
+	* lib.php: 
+	
+	Renamed mod/glossary:readrate capability to mod/glossary:viewrating
+
+2006-07-31 Monday 06:23  skodak
+
+	* edit.php, exportentry.php: 
+	
+	Bug #6170 - Glossary bug: it displays nothing when autolinking to
+	non-ascii text and other minor cleanup
+
+2006-07-31 Monday 06:22  skodak
+
+	* edit.php, exportentry.php, import.php, lib.php: 
+	
+	Bug #6170 - Glossary bug: it displays nothing when autolinking to
+	non-ascii text and other minor cleanup; merged from
+	MOODLE_16_STABLE
+
+2006-07-31 Monday 06:18  skodak
+
+	* edit.php, exportentry.php, import.php, lib.php: 
+	
+	Bug #6170 - Glossary bug: it displays nothing when autolinking to
+	non-ascii text and other minor cleanup
+
+2006-07-26 Wednesday 11:20  toyomoyo
+
+	* view.php: 
+	
+	some changes + modified participants page
+
+2006-07-17 Monday 21:35  skodak
+
+	* import.html: 
+	
+	Bug #6129 - Incorrect glossary import file size limit; merged from
+	MOODLE_16_STABLE
+
+2006-07-17 Monday 21:34  skodak
+
+	* import.html: 
+	
+	Bug #6129 - Incorrect glossary import file size limit
+
+2006-07-16 Sunday 17:01  stronk7
+
+	* showentry.php: 
+	
+	Close properly the showentry page. Bug 5986. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=5986)
+	
+	Merged from MOODLE_16_STABLE
+
+2006-07-16 Sunday 16:59  stronk7
+
+	* showentry.php: 
+	
+	Close properly the showentry page. Bug 5986. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=5986)
+
+2006-07-13 Thursday 04:29  skodak
+
+	* sql.php: 
+	
+	Bug #6087 - alphabetic problem in glossary; merged from
+	MOODLE_16_STABLE
+
+2006-07-13 Thursday 04:28  skodak
+
+	* sql.php: 
+	
+	Bug #6087 - alphabetic problem in glossary
+
+2006-07-12 Wednesday 03:15  vyshane
+
+	* approve.php, comment.php, comments.php, deleteentry.php,
+	edit.php, editcategories.php, export.php, exportentry.php,
+	exportfile.php, import.php, lib.php, report.php, tabs.html,
+	view.php: 
+	
+	Updated capability names
+
+2006-07-08 Saturday 03:54  skodak
+
+	* import.php: 
+	
+	Bug #6050 - import glossary entries to new glossary not creating
+	new glossary; merged from MOODLE_16_STABLE
+
+2006-07-08 Saturday 03:53  skodak
+
+	* import.php: 
+	
+	Bug #6050 - import glossary entries to new glossary not creating
+	new glossary
+
+2006-07-07 Friday 05:27  skodak
+
+	* export.php: 
+	
+	fixed warning in glossary export, merged from MOODLE_16_STABLE
+
+2006-07-07 Friday 05:25  skodak
+
+	* export.php: 
+	
+	fixed warning in glossary export
+
+2006-06-29 Thursday 16:56  toyomoyo
+
+	* approve.php, comment.php, comments.php, deleteentry.php,
+	edit.php, editcategories.php, export.php, exportentry.php,
+	exportfile.php, import.php, lib.php, report.php, tabs.html,
+	view.php: 
+	
+	some changes
+
+2006-05-26 Friday 19:39  skodak
+
+	* lib.php: 
+	
+	sanitize submitted numerical values; merged from MOODLE_16_STABLE
+
+2006-05-26 Friday 19:38  skodak
+
+	* lib.php: 
+	
+	sanitize submitted numerical values
+
+2006-05-23 Tuesday 17:47  skodak
+
+	* tabs.html: 
+	
+	make sure variables are properly cleaned; merged from
+	MOODLE_16_STABLE
+
+2006-05-23 Tuesday 17:46  skodak
+
+	* tabs.html: 
+	
+	make sure variables are properly cleaned
+
+2006-05-23 Tuesday 01:59  stronk7
+
+	* sql.php: 
+	
+	proper initialisation of sqlsortkey SC#258
+	
+	Merged from HEAD
+
+2006-05-23 Tuesday 00:54  skodak
+
+	* report.php: 
+	
+	fixed register globals issues for $sort SC #256; merged from
+	MOODLE_16_STABLE
+
+2006-05-23 Tuesday 00:51  skodak
+
+	* report.php: 
+	
+	fixed register globals issues for $sort SC #256
+
+2006-05-21 Sunday 15:42  skodak
+
+	* sql.php: 
+	
+	proper initialisation of sqlsortkey SC#258; merged from
+	MOODLE_16_STABLE
+
+2006-05-21 Sunday 15:42  skodak
+
+	* sql.php: 
+	
+	proper initialisation of sqlsortkey SC#258
+
+2006-05-07 Sunday 18:49  stronk7
+
+	* print.php: 
+	
+	glossary print view is now valid XHTML.
+	
+	Merged from MOODLE_16_STABLE
+
+2006-05-07 Sunday 18:48  stronk7
+
+	* print.php: 
+	
+	glossary print view is now valid XHTML.
+
+2006-04-30 Sunday 18:07  stronk7
+
+	* showentry.php: 
+	
+	Too much restrictive optional_param was producing some undesired
+	efects with formats. Bug 4858. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=4858)
+	
+	Merged from MOODLE_15_STABLE
+
+2006-04-30 Sunday 18:05  stronk7
+
+	* showentry.php: 
+	
+	One debug line killed! :-/
+
+2006-04-30 Sunday 18:02  stronk7
+
+	* showentry.php: 
+	
+	Too much restrictive optional_param was producing some undesired
+	efects with formats. Bug 4858. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=4858)
+
+2006-04-30 Sunday 17:44  stronk7
+
+	* formats/entrylist/entrylist_format.php: 
+	
+	entrylist format now show the 'send ratings' button.  Bug 4915. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=4915)
+	
+	Merged from HEAD
+
+2006-04-30 Sunday 17:41  stronk7
+
+	* formats/entrylist/entrylist_format.php: 
+	
+	entrylist format now show the 'send ratings' button.  Bug 4915. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=4915)
+
+2006-04-24 Monday 17:06  vyshane
+
+	* db/mysql.php: 
+	
+	Fixed inserts for log_display.
+
+2006-04-24 Monday 16:23  vyshane
+
+	* db/: mysql.php, mysql.sql, oci8po.sql, postgres7.php,
+	postgres7.sql: 
+	
+	Fixed inserts for log_display table.
+
+2006-04-23 Sunday 01:33  skodak
+
+	* lib.php: 
+	
+	fixed typo, undefined $ents
+
+2006-04-18 Tuesday 15:22  toyomoyo
+
+	* db/migrate2utf8.xml: 
+	
+	fix for 5207
+
+2006-04-16 Sunday 03:28  stronk7
+
+	* deleteentry.php, exportentry.php: 
+	
+	Two more uses of format_string() agains entry->concept
+
+2006-04-16 Sunday 03:24  stronk7
+
+	* comments.php: 
+	
+	Filter one more string if filterall is enabled.
+
+2006-04-12 Wednesday 00:13  stronk7
+
+	* restorelib.php: 
+	
+	htmlentities() to s()
+
+2006-04-09 Sunday 19:06  stronk7
+
+	* sql.php: 
+	
+	Suppress pivot output from Date view. It hasn't too much sense
+	there.
+
+2006-04-09 Sunday 18:59  stronk7
+
+	* print.php, view.php: 
+	
+	Solve some upperpivot notices and wrong behaviours. More coming...
+
+2006-04-09 Sunday 18:45  stronk7
+
+	* tabs.html, view.php: 
+	
+	Some defaults applied to paramenters was preventing defaults based
+	on formats to work properly.
+
+2006-04-09 Sunday 17:11  stronk7
+
+	* view.php: 
+	
+	Now searchbox table is closed by hand, because
+	print_simple_box_xxx() methods (div based) were breaking things a
+	bit here. Bug 5087)
+	(http://moodle.org/bugs/bug.php?op=show&bugid=5087)
+
+2006-03-29 Wednesday 07:31  stronk7
+
+	* restorelib.php: 
+	
+	Typo.
+
+2006-03-22 Wednesday 04:08  stronk7
+
+	* editcategories.php: 
+	
+	Some excess of security was causing Bug 4713. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=4713)
+	
+	Merged from MOODLE_15_STABLE
+
+2006-03-22 Wednesday 04:07  stronk7
+
+	* editcategories.php: 
+	
+	Some excess of security was causing Bug 4713. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=4713)
+
+2006-03-16 Thursday 02:11  skodak
+
+	* showentry.php: 
+	
+	fixed typo PARAM_CLEAR; backported from HEAD
+
+2006-03-16 Thursday 02:08  skodak
+
+	* showentry.php: 
+	
+	fixed typo PARAM_CLEAR
+
+2006-03-10 Friday 11:43  patrickslee
+
+	* db/migrate2utf8.php: 
+	
+	UTF8 migration - now supporting PostgreSQL
+
+2006-03-08 Wednesday 19:20  skodak
+
+	* lib.php: 
+	
+	fixed missing global $CFG - anyway it worked even without it :-D
+
+2006-03-08 Wednesday 08:08  skodak
+
+	* exportentry.php: 
+	
+	lots of incorrect required_param()'s - there MUST be only two
+	parameters not three!!
+
+2006-03-08 Wednesday 05:35  skodak
+
+	* db/migrate2utf8.php: 
+	
+	short php tags
+
+2006-03-07 Tuesday 04:30  skodak
+
+	* lib.php: 
+	
+	fixed coding style of unicode db detection
+
+2006-03-04 Saturday 20:37  skodak
+
+	* exportfile.php: 
+	
+	incorrect usage of clean_filename() replaced with
+	clean_param($text, PARAM_SAFEDIR)
+
+2006-03-04 Saturday 04:12  skodak
+
+	* export.php: 
+	
+	table tag typo
+
+2006-03-04 Saturday 03:49  skodak
+
+	* export.php, exportfile.php, import.php, lib.php: 
+	
+	utf8 related cleanup in glossary import and export code - please
+	test
+
+2006-02-24 Friday 16:13  toyomoyo
+
+	* db/migrate2utf8.php: 
+	
+	see changes for admin/utfdbmigrate.php
+
+2006-01-31 Tuesday 10:08  moodler
+
+	* db/migrate2utf8.php: 
+	
+	changed to use utfconvert function
+
+2006-01-19 Thursday 13:28  moodler
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	bug fixes
+
+2006-01-17 Tuesday 15:23  moodler
+
+	* db/: migrate2utf8.xml, mysql.sql: 
+	
+	Added default values where needed for columns in the MySQL creation
+	script mysql.sql.  Added default values to migrate2utf8.xml, for
+	any varchar and text field types, if the default values for these
+	fields were not defined as '' in the MySQL table creation script.
+	
+	Committed by vyshane
+
+2006-01-16 Monday 05:09  mjollnir_
+
+	* restorelib.php: 
+	
+	Abstracted a bit of the restore procedure to allow for silent
+	restoring.  Added new function, import_backup_file_silently Changed
+	everything that prints stuff to check for a constant first. 
+	Backup_flush checks a different constant, this is so that output
+	can still get flushed to the browser when necessary but not print
+	<li>s everywhere.  Please test this!
+
+2006-01-13 Friday 11:45  mjollnir_
+
+	* backuplib.php, restorelib.php: 
+	
+	Granular backup & restore: This patch allows the much requested
+	selection of individual instances of modules within a course to
+	backup and restore.  It needs A LOT of testing and probably some
+	prettyifying too.
+
+2006-01-12 Thursday 10:35  toyomoyo
+
+	* db/migrate2utf8.xml: 
+	
+	some bug fixes
+
+2006-01-11 Wednesday 09:46  toyomoyo
+
+	* db/migrate2utf8.xml: 
+	
+	added 2 fields in xml, addindex and dropindex, and bug fixes
+
+2006-01-09 Monday 14:06  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	utf8 migration support scripts
+
+2006-01-07 Saturday 20:31  stronk7
+
+	* showentry.php: 
+	
+	We were being too much strict and concepts can contain quotes and
+	other characters. Bug 4543. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=4543)
+	
+	Merged from MOODLE_15_STABLE
+
+2006-01-07 Saturday 20:29  stronk7
+
+	* showentry.php: 
+	
+	We were beint too much extrict and concepts can contain quotes and
+	other characters. Bug 4543. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=4543)
+
+2006-01-07 Saturday 20:11  stronk7
+
+	* print.php, view.php: 
+	
+	Now glossary pivot should be working fine under every charset.
+
+2006-01-06 Friday 00:35  stronk7
+
+	* view.php: 
+	
+	Now the group by initial should work under multibyte strings.
+	
+	Merged from MOODLE_16_UTF8. Abandoning the branch.
+
+2005-12-16 Friday 02:57  stronk7
+
+	* view.php: 
+	
+	Now the group by initial should work under multibyte strings.
+
+2005-12-14 Wednesday 12:15  patrickslee
+
+	* approve.php, comment.html, comment.php, comments.php,
+	deleteentry.php, edit.html, edit.php, editcategories.php,
+	export.php, exportentry.php, formats.php, import.php, index.php,
+	print.php, rate.php, report.php, restorelib.php, showentry.php,
+	sql.php, view.php: 
+	
+	Merged with MOODLE_16_MULTIENROL_MP1
+
+2005-12-07 Wednesday 13:58  moodler
+
+	* approve.php, comment.php, comments.php, deleteentry.php,
+	edit.php, editcategories.php, export.php, exportentry.php,
+	formats.php, import.php, index.php, print.php, rate.php,
+	report.php, showentry.php, view.php: 
+	
+	Replaced optional_var with optional_param
+
+2005-12-07 Wednesday 13:57  moodler
+
+	* approve.php, comment.php, comments.php, deleteentry.php,
+	edit.php, editcategories.php, export.php, exportentry.php,
+	formats.php, import.php, index.php, print.php, rate.php,
+	report.php, showentry.php, view.php: 
+	
+	eplaced optional_var with optional_param
+
+2005-11-23 Wednesday 17:46  stronk7
+
+	* restorelib.php: 
+	
+	Log actions must be strored to DB without &amp; print_log() takes
+	care of it! Bug 3853. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=3853)
+	
+	Merged from MOODLE_15_STABLE
+
+2005-11-23 Wednesday 17:39  stronk7
+
+	* restorelib.php: 
+	
+	Log actions must be strored to DB without &amp; print_log() takes
+	care of it! Bug 3853. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=3853)
+
+2005-11-07 Monday 04:06  stronk7
+
+	* sql.php, view.php: 
+	
+	Now both empty search strings and 1 letter search strings works
+	fine in the glossary. Terms are hilighted properly (but 1 letter
+	terms, because it's a hilight limitation). Bug 4274. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=4274)
+	
+	Merged from MOODLE_15_STABLE
+
+2005-11-07 Monday 04:00  stronk7
+
+	* sql.php, view.php: 
+	
+	Now both empty search strings and 1 letter search strings works
+	fine in the glossary. Terms are hilighted properly (but 1 letter
+	terms, because it's a hilight limitation). Bug 4274. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=4274)
+
+2005-10-30 Sunday 05:40  skodak
+
+	* comment.html, edit.html: 
+	
+	fixed cleaning before editing SC#163; merged from MOODLE_15_STABLE
+
+2005-10-30 Sunday 05:38  skodak
+
+	* comment.html, edit.html: 
+	
+	fixed cleaning before editing SC#163
+
+2005-10-13 Thursday 03:25  stronk7
+
+	* import.php: 
+	
+	SC#162
+	
+	Merged from MOODLE_15_STABLE
+
+2005-10-13 Thursday 03:24  stronk7
+
+	* import.php: 
+	
+	SC#162
+
+2005-10-06 Thursday 02:27  stronk7
+
+	* deleteentry.php, exportentry.php: 
+	
+	Now entries containing apostrophes can be exported to main glossay
+	and deleted without problems. Bug 4136. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=4136)
+	
+	Merged from MOODLE_15_STABLE
+
+2005-10-06 Thursday 02:23  stronk7
+
+	* deleteentry.php, exportentry.php: 
+	
+	Now entries containing apostrophes can be exported to main glossay
+	and deleted without problems. Bug 4136. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=4136)
+
+2005-09-21 Wednesday 01:19  stronk7
+
+	* view.php: 
+	
+	Now the ALL link in the paging bar is under the glossary->showall
+	setting control. Bug 4072. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=4072)
+	
+	Merged from MOODLE_15_STABLE
+
+2005-09-21 Wednesday 00:59  stronk7
+
+	* view.php: 
+	
+	Now the ALL link in the paging bar is under the glossary->showall
+	setting control. Bug 4072. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=4072)
+
+2005-09-01 Thursday 12:14  mjollnir_
+
+	* lib.php: 
+	
+	Initial checkin of stats (from processing the log table).  I will
+	write up some information about it for the developers wiki.
+
+2005-08-16 Tuesday 07:17  patrickslee
+
+	* db/postgres7.php: 
+	
+	Mass cleanup of bad postgres upgrade scripts(merged from 15_stable)
+
+2005-08-16 Tuesday 06:30  patrickslee
+
+	* db/postgres7.php: 
+	
+	Mass cleanup of bad postgres upgrade scripts
+
+2005-07-13 Wednesday 02:53  skodak
+
+	* lib.php: 
+	
+	removed file pop-ups 2; merged from MOODLE_15_STABLE
+
+2005-07-13 Wednesday 02:51  skodak
+
+	* lib.php: 
+	
+	removed file pop-ups 2
+
+2005-07-12 Tuesday 23:37  skodak
+
+	* lib.php: 
+	
+	removed file pop-ups; merged from MOODLE_15_STABLE
+
+2005-07-12 Tuesday 23:36  skodak
+
+	* lib.php: 
+	
+	removed file pop-ups
+
+2005-07-12 Tuesday 16:00  moodler
+
+	* restorelib.php: 
+	
+	Merged SC139 from stable
+
+2005-07-12 Tuesday 15:52  moodler
+
+	* restorelib.php: 
+	
+	Escaped text output during relinking, as per SC 139
+
+2005-07-05 Tuesday 02:55  stronk7
+
+	* backuplib.php, restorelib.php,
+	formats/encyclopedia/encyclopedia_format.php,
+	formats/TEMPLATE/TEMPLATE_format.php,
+	formats/fullwithauthor/fullwithauthor_format.php: 
+	
+	Improved automatic relinking in backup and restore. Credits go to
+	skodak.  Complete refactoring of the system that was really awful
+	(my fault!).  Now everything is in its place and working like a
+	charm, making things really easier to be implemented and amplied.
+	Bug 3678 (http://moodle.org/bugs/bug.php?op=show&bugid=3678)
+	(http://moodle.org/mod/forum/discuss.php?d=26530)
+	
+	Note: Everything is merged from stable but the quiz module because
+	it has other changes not merged for now. I've skyped a message to
+	Gustav about it.
+	
+	Merged from MOODLE_15_STABLE
+
+2005-07-05 Tuesday 01:34  stronk7
+
+	* backuplib.php, restorelib.php: 
+	
+	Improved automatic relinking in backup and restore. Credits go to
+	skodak.  Complete refactoring of the system that was really awful
+	(my fault!).  Now everything is in its place and working like a
+	charm, making things really easier to be implemented and amplied.
+	Bug 3678 (http://moodle.org/bugs/bug.php?op=show&bugid=3678)
+	(http://moodle.org/mod/forum/discuss.php?d=26530)
+
+2005-06-27 Monday 00:45  stronk7
+
+	* formats/entrylist/entrylist_format.php: 
+	
+	Avoid some backslashes causing problems with some browsers. Bug
+	3463.  (http://moodle.org/bugs/bug.php?op=show&bugid=3463)
+	
+	Merged from MOODLE_15_STABLE
+
+2005-06-27 Monday 00:43  stronk7
+
+	* formats/entrylist/entrylist_format.php: 
+	
+	Avoid some backslashes causing problems with some browsers. Bug
+	3463.  (http://moodle.org/bugs/bug.php?op=show&bugid=3463)
+
+2005-06-26 Sunday 17:34  stronk7
+
+	* comment.php: 
+	
+	Now the entry being commented is showed when adding comments for
+	non-approved entries. Bug 3638. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=3638)
+	
+	Merged from MOODLE_15_STABLE
+
+2005-06-26 Sunday 17:31  stronk7
+
+	* comment.php: 
+	
+	Now the entry being commented is showed when adding comments for
+	non-approved entries. Bug 3638. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=3638)
+
+2005-06-20 Monday 01:33  stronk7
+
+	* report.php: 
+	
+	Now glossary ratings display user links in a new page.
+	
+	Merged from MOODLE_15_STABLE
+
+2005-06-20 Monday 01:32  stronk7
+
+	* report.php: 
+	
+	Now glossary ratings display user links in a new page.
+
+2005-06-20 Monday 00:50  stronk7
+
+	* lib.php, formats/faq/faq_format.php,
+	formats/fullwithoutauthor/fullwithoutauthor_format.php: 
+	
+	Using the time CSS class properly.
+	
+	Merged from MOODLE_15_STABLE
+
+2005-06-20 Monday 00:45  stronk7
+
+	* lib.php, formats/faq/faq_format.php,
+	formats/fullwithoutauthor/fullwithoutauthor_format.php: 
+	
+	Using the time class properly.
+
+2005-06-19 Sunday 23:26  stronk7
+
+	* formats/: TEMPLATE/TEMPLATE_format.php,
+	encyclopedia/encyclopedia_format.php,
+	fullwithauthor/fullwithauthor_format.php: 
+	
+	Now the name of the authors is a link to the user page.  To be a
+	bit more like forum posts Bug 2809. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=2809)
+	
+	Merged from MOODLE_15_STABLE
+
+2005-06-19 Sunday 23:23  stronk7
+
+	* formats/: TEMPLATE/TEMPLATE_format.php,
+	encyclopedia/encyclopedia_format.php,
+	fullwithauthor/fullwithauthor_format.php: 
+	
+	Now the name of the authors is a link to the user page.  To be a
+	bit more like forum posts Bug 2809. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=2809)
+
+2005-06-19 Sunday 22:46  stronk7
+
+	* view.php: 
+	
+	Now + and - search terms are properly highlighted under glossary
+	searches. This was broken recently solving some non-iso problems.
+	
+	Merged from MOODLE_15_STABLE
+
+2005-06-19 Sunday 22:44  stronk7
+
+	* view.php: 
+	
+	Now + and - search terms are properly highlighted under glossary
+	searches. This was broken recently solving some non-iso problems.
+
+2005-06-14 Tuesday 03:37  stronk7
+
+	* report.php: 
+	
+	Added some header clasees to 1 table.
+	
+	Merged from MOODLE_15_STABLE
+
+2005-06-14 Tuesday 03:35  stronk7
+
+	* report.php: 
+	
+	Adding some header classes for 1 table.
+
+2005-06-10 Friday 07:51  stronk7
+
+	* formats/entrylist/entrylist_format.php: 
+	
+	Some classes and styles added to show everything properly.
+	
+	Merged from MOODLE_15_STABLE
+
+2005-06-10 Friday 07:50  stronk7
+
+	* formats/entrylist/entrylist_format.php: 
+	
+	Some classes and styles added to show everything properly.
+
+2005-06-10 Friday 07:41  stronk7
+
+	* formats/entrylist/entrylist_format.php: 
+	
+	Added one deleted br...
+	
+	Merged from MOODLE_15_STABLE
+
+2005-06-10 Friday 07:39  stronk7
+
+	* formats/entrylist/entrylist_format.php: 
+	
+	Added one deleted br...
+
+2005-06-10 Friday 07:32  stronk7
+
+	* formats/entrylist/entrylist_format.php: 
+	
+	Now icons, comments and ratings are showed properly in entrylist
+	format.  Bug 3455
+	(http://moodle.org/bugs/bug.php?op=show&bugid=3455)
+	
+	Merged from MOODLE_15_STABLE
+
+2005-06-10 Friday 07:30  stronk7
+
+	* formats/entrylist/entrylist_format.php: 
+	
+	Now icons, comments and ratings are showed properly in entrylist
+	format.  Bug 3455
+	(http://moodle.org/bugs/bug.php?op=show&bugid=3455)
+
+2005-06-10 Friday 07:29  stronk7
+
+	* lib.php: 
+	
+	Separate icons a bit...
+	
+	Merged from MOODLE_15_STABLE
+
+2005-06-10 Friday 07:27  stronk7
+
+	* lib.php: 
+	
+	Separate icons a bit...
+
+2005-05-27 Friday 22:58  moodler
+
+	* filter.php: 
+	
+	Merged extra style from stable
+
+2005-05-27 Friday 22:56  moodler
+
+	* filter.php: 
+	
+	Added an extra style based on the glossary id which might allow
+	some nice effects.  This idea should probably be extended later,
+	perhaps with the ability to define the style in the glossary
+	itself.
+
+2005-05-17 Tuesday 06:21  stronk7
+
+	* TODO.txt, backuplib.php, comment.html, config.html,
+	editcategories.html, lib.php, restorelib.php, db/mysql.php,
+	formats/fullwithauthor/fullwithauthor_format.php,
+	formats/fullwithoutauthor/fullwithoutauthor_format.php: 
+	
+	Tabs are out
+
+2005-04-28 Thursday 00:04  stronk7
+
+	* lib.php: 
+	
+	When we are printing a definition, avoiding concepts and aliases of
+	he entry itself, take out all the <a>...<a> tags too!. Bug 3056. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=3056)
+
+2005-04-23 Saturday 05:24  moodler
+
+	* filter.php: 
+	
+	Two more typos!!   Big ones!
+
+2005-04-23 Saturday 05:13  urs_hunkler
+
+	* view.php: 
+	
+	changed inline styles to classes to be able to handle the font
+	sizes with the CSS files,
+
+2005-04-23 Saturday 03:49  moodler
+
+	* filter.php: 
+	
+	Whoops, another typo
+
+2005-04-23 Saturday 03:11  moodler
+
+	* filter.php: 
+	
+	Typo
+
+2005-04-21 Thursday 17:04  moodler
+
+	* filter.php: 
+	
+	Yay!  New super-fast glossary filter!
+	
+	This is shaving some very significant time from my pages, even with
+	caching turned off.   :-D
+
+2005-04-20 Wednesday 21:52  moodler
+
+	* filter.php: 
+	
+	Added some reminders of an important problem we need to fix
+
+2005-04-20 Wednesday 07:36  stronk7
+
+	* view.php: 
+	
+	Now the fullsearch check is enabled by default (perhaps it should
+	be erased!)
+
+2005-04-19 Tuesday 08:16  stronk7
+
+	* version.php: 
+	
+	Changed the wrong line. Solved.
+
+2005-04-19 Tuesday 08:14  stronk7
+
+	* sql.php, version.php, view.php: 
+	
+	Now glossary searches are full searches (like 1.4 forums).
+
+2005-04-19 Tuesday 02:54  stronk7
+
+	* edit.php: 
+	
+	Now the edit entry form shows tabs and html editor properly after
+	some error has been entered.
+
+2005-04-15 Friday 07:20  stronk7
+
+	* print.php, view.php: 
+	
+	Bug 2918. Change proposed by t.imoto. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=2918)
+	
+	Merged from MOODLE_14_STABLE
+
+2005-04-15 Friday 07:13  stronk7
+
+	* print.php, view.php: 
+	
+	Bug 2918. Change proposed by t.imoto. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=2918)
+
+2005-04-14 Thursday 01:04  stronk7
+
+	* view.php: 
+	
+	Avoid one debug
+
+2005-04-13 Wednesday 15:45  moodler
+
+	* view.php: 
+	
+	Added some reportlink classed to the report links
+
+2005-04-13 Wednesday 07:42  stronk7
+
+	* restorelib.php: 
+	
+	Now all the wiki formated texts are converted to markdown by the
+	restore process. Such conversion is performed for every backup file
+	prior to 2005041100.  Wiki internal links are dinamically changed
+	and then, converted to Markdown. Bye, Wiki! ;-)
+
+2005-04-13 Wednesday 04:02  thepurpleblob
+
+	* db/: mysql.php, postgres7.php: 
+	
+	Whoops - forgot the db prefix in the where clause
+
+2005-04-11 Monday 21:27  thepurpleblob
+
+	* version.php: 
+	
+	Now 2005041100: Update wiki-like formatted text to Markdown
+
+2005-04-11 Monday 21:26  thepurpleblob
+
+	* db/: mysql.php, postgres7.php: 
+	
+	Update wiki-like to Markdown in glossary entries and glossary
+	comments.
+
+2005-04-01 Friday 13:55  martinlanghoff
+
+	* edit.php: 
+	
+	Merged from MOODLE_14_STABLE - insert_record() - major efficiency
+	improvements for Postgres databases on insert. Also fixed many
+	calls to insert_record() which discard the returned record id to
+	not ask for the record id.
+
+2005-04-01 Friday 13:33  martinlanghoff
+
+	* edit.php: 
+	
+	insert_record() - major efficiency improvements for Postgres
+	databases on insert. Also fixed many calls to insert_record() which
+	discard the returned record id to not ask for the record id.
+
+2005-03-31 Thursday 02:18  stronk7
+
+	* tabs.html: 
+	
+	The waiting for approval tab was using some html and it broke tabs.
+	Changed the tab caption to plain text.
+
+2005-03-31 Thursday 01:59  stronk7
+
+	* lib.php: 
+	
+	Now some potential tab missing problem is solved. It causes some
+	problems with loooong tabs but Martin is solving it just now (long
+	images).
+
+2005-03-30 Wednesday 19:14  stronk7
+
+	* comment.php, comments.php, deleteentry.php, edit.php,
+	editcategories.php, export.php, exportentry.php, import.php,
+	index.php, lib.php, print.php, restorelib.php, rsslib.php,
+	showentry.php, view.php: 
+	
+	Now glossary->name is working under filterall. It was really
+	complex!
+	
+	Just thinking about to add support for filterall inside:    -
+	category->name	  - concept->name    - filter!
+
+2005-03-22 Tuesday 17:48  moodler
+
+	* formats.php, view.php: 
+	
+	Changing some styles (SE)
+
+2005-03-18 Friday 04:59  moodler
+
+	* formats/encyclopedia/encyclopedia_format.php: 
+	
+	Small class changes (SE)
+
+2005-03-18 Friday 04:58  moodler
+
+	* view.php: 
+	
+	Remove old div wrapper
+
+2005-03-15 Tuesday 17:47  moodler
+
+	* lib.php: 
+	
+	Don't echo print_tabs
+
+2005-03-15 Tuesday 17:25  moodler
+
+	* lib.php: 
+	
+	Using the new tab code (SE)
+
+2005-03-15 Tuesday 16:38  moodler
+
+	* filter.php: 
+	
+	Simplify autolink styles to "modulename autolink"
+
+2005-03-14 Monday 00:25  moodler
+
+	* edit.php, export.php, import.php, index.php: 
+	
+	Removed some redundant wrappers
+
+2005-03-14 Monday 00:17  moodler
+
+	* view.php: 
+	
+	Standardise the intro box using an ID
+
+2005-03-13 Sunday 08:50  stronk7
+
+	* restorelib.php: 
+	
+	Added support for glossary "view entry" log action.
+
+2005-03-12 Saturday 04:55  bawjaws
+
+	* filter.php: 
+	
+	change class from 'autolink' to 'glossary-autolink' to
+	differentiate (at least potentially) from other autolinks.
+
+2005-03-10 Thursday 22:37  moodler
+
+	* lib.php, showentry.php, version.php, db/mysql.php, db/mysql.sql,
+	db/postgres7.php, db/postgres7.sql: 
+	
+	New log entry to show when a glossary entry is viewed
+
+2005-03-10 Thursday 21:30  moodler
+
+	* lib.php, version.php: 
+	
+	Variety of small fixes, but mostly related to how the recent
+	activity block is constructed.	A new function exists to pump these
+	notes out in a standard way :  print_recent_activity_note.
+	
+	Module dependencies also updated because of this.
+
+2005-03-10 Thursday 16:32  moodler
+
+	* lib.php, tabs.html: 
+	
+	Removing THEME variable and replacing with CSS (SE)
+
+2005-03-08 Tuesday 17:44  moodler
+
+	* lib.php: 
+	
+	Some more style stuff (SE)
+
+2005-03-08 Tuesday 16:23  moodler
+
+	* edit.html: 
+	
+	Link to new help file
+
+2005-03-08 Tuesday 15:48  moodler
+
+	* filter.php: 
+	
+	Duplicate entries are now removed. (SE)
+
+2005-03-07 Monday 19:31  moodler
+
+	* lib.php: 
+	
+	Removed files/mimetype.php and put it into lib/filelib.php instead
+	where it always should have been.
+
+2005-03-04 Friday 18:11  moodler
+
+	* filter.php: 
+	
+	Rewritten to use the new generic filter function. (SE)
+
+2005-03-01 Tuesday 16:42  moodler
+
+	* filter.php: 
+	
+	Filter will now not link within the head tags
+
+2005-03-01 Tuesday 16:10  moodler
+
+	* edit.php: 
+	
+	Fixed up the display after adding/editing new entries to make it
+	more standard.	Also shuffled a little code to make it easier ofr
+	me to read.
+
+2005-02-27 Sunday 08:07  stronk7
+
+	* mod.html: 
+	
+	Some $ME are now out!
+	
+	Merged from MOODLE_14_STABLE
+
+2005-02-27 Sunday 08:05  stronk7
+
+	* mod.html: 
+	
+	Some $ME are now out!
+
+2005-02-26 Saturday 07:18  ikawhero
+
+	* filter.php: 
+	
+	Fixed incorrect order of rebuilding excluded text
+
+2005-02-25 Friday 20:36  moodler
+
+	* lib.php, formats/encyclopedia/encyclopedia_format.php,
+	formats/fullwithauthor/fullwithauthor_format.php,
+	formats/fullwithoutauthor/fullwithoutauthor_format.php: 
+	
+	Removing the old <nolink> tags. In some cases using both <span
+	class="nolink"> and <nolink> together was causing some problems.
+	(SE)
+
+2005-02-25 Friday 19:09  moodler
+
+	* formats/: continuous/continuous_format.php,
+	dictionary/dictionary_format.php,
+	encyclopedia/encyclopedia_format.php,
+	entrylist/entrylist_format.php, faq/faq_format.php,
+	fullwithauthor/fullwithauthor_format.php,
+	fullwithoutauthor/fullwithoutauthor_format.php: 
+	
+	Even more style changes. (SE)
+
+2005-02-25 Friday 17:16  moodler
+
+	* lib.php, view.php, formats/continuous/continuous_format.php,
+	formats/dictionary/dictionary_format.php,
+	formats/encyclopedia/encyclopedia_format.php,
+	formats/entrylist/entrylist_format.php, formats/faq/faq_format.php,
+	formats/fullwithauthor/fullwithauthor_format.php,
+	formats/fullwithoutauthor/fullwithoutauthor_format.php: 
+	
+	More style changes. Will it ever end? (SE)
+
+2005-02-25 Friday 15:58  moodler
+
+	* lib.php, formats/TEMPLATE/TEMPLATE_format.php,
+	formats/continuous/continuous_format.php,
+	formats/dictionary/dictionary_format.php,
+	formats/encyclopedia/encyclopedia_format.php,
+	formats/entrylist/entrylist_format.php, formats/faq/faq_format.php,
+	formats/fullwithauthor/fullwithauthor_format.php,
+	formats/fullwithoutauthor/fullwithoutauthor_format.php: 
+	
+	More CSS style changes. General tidy up, changed " to ' where
+	appropriate.
+
+2005-02-22 Tuesday 18:37  moodler
+
+	* formats/: fullwithauthor/fullwithauthor_format.php,
+	fullwithoutauthor/fullwithoutauthor_format.php: 
+	
+	More CSS and general tidying up.
+
+2005-02-22 Tuesday 16:29  moodler
+
+	* report.php: 
+	
+	Added styles and cleaned up some code for XHTML compatibility
+
+2005-02-22 Tuesday 15:30  moodler
+
+	* edit.html: 
+	
+	Some more tidying up
+
+2005-02-18 Friday 09:15  stronk7
+
+	* lib.php, rate.php: 
+	
+	Now 0 rates are supported in glossary. Bug 2582
+	(http://moodle.org/bugs/bug.php?op=show&bugid=2582)
+	
+	Merged from HEAD
+
+2005-02-18 Friday 09:00  stronk7
+
+	* lib.php, rate.php: 
+	
+	Now 0 rates are supported in glossary. Bug 2582
+	(http://moodle.org/bugs/bug.php?op=show&bugid=2582)
+
+2005-02-18 Friday 08:23  stronk7
+
+	* rate.php: 
+	
+	ARGGG. I spent 1 hour discovering where was the error!! Under PHP5
+	we must cast objects to arrays to use them in loops.  But what is
+	really annoying is that, instead of return an error, PHP returns
+	the 1st element! This should close bug 2581. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=2581)
+	
+	Merged from HEAD
+
+2005-02-18 Friday 08:19  stronk7
+
+	* rate.php: 
+	
+	ARGGG. I spent 1 hour discovering where was the error!! Under PHP5
+	we must cast objects to arrays to use them in loops.  But what is
+	really annoying is that, instead of return an error, PHP returns
+	the 1st element! This should close bug 2581. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=2581)
+
+2005-02-18 Friday 03:45  stronk7
+
+	* mod.html: 
+	
+	Now globalglossary is working! Bug 2577
+	(http://moodle.org/bugs/bug.php?op=show&bugid=2577)
+
+2005-02-18 Friday 03:28  stronk7
+
+	* filter.php: 
+	
+	Now the glossary filter only links to concepts in visible
+	glossaries (for everybody!)
+	
+	Bug 2566 (http://moodle.org/bugs/bug.php?op=show&bugid=2566)
+
+2005-02-18 Friday 02:58  stronk7
+
+	* lib.php: 
+	
+	Done. Now:
+	
+	- students only view entries from visible glossaries.  - teachers
+	view any entry from their course and only visible from global
+	glossaries.  - admins view any entry from any course and any entry
+	from global glossaries too.
+	
+	Part of bug 2566
+	(http://moodle.org/bugs/bug.php?op=show&bugid=2566)
+
+2005-02-17 Thursday 17:22  moodler
+
+	* lib.php, formats/continuous/continuous_format.php,
+	formats/dictionary/dictionary_format.php,
+	formats/encyclopedia/encyclopedia_format.php: 
+	
+	Some more styles
+
+2005-02-17 Thursday 16:38  moodler
+
+	* comment.html, comment.php, comments.php, edit.php,
+	editcategories.html, editcategories.php, exportentry.php,
+	formats.php, lib.php, db/mysql.php, db/postgres7.php,
+	formats/TEMPLATE/TEMPLATE_format.php,
+	formats/continuous/continuous_format.php,
+	formats/dictionary/dictionary_format.php,
+	formats/encyclopedia/encyclopedia_format.php,
+	formats/entrylist/entrylist_format.php, formats/faq/faq_format.php,
+	formats/fullwithauthor/fullwithauthor_format.php,
+	formats/fullwithoutauthor/fullwithoutauthor_format.php: 
+	
+	Removal of THEME, added some classes, general tidy up.
+
+2005-02-16 Wednesday 18:40  gustav_delius
+
+	* approve.php, comment.php, comments.php, deleteentry.php,
+	edit.php, editcategories.php, export.php, formats.php, import.php,
+	print.php, rate.php, showentry.php, version.php: 
+	
+	In order to ensure that when a teacher hides a resource or an
+	activity that students really can't get at it, even if they know
+	the direct links to its pages, I have given an optional third
+	argument $cm to the functions  require_login() and
+	require_course_login(). Pages showing information about a
+	particular course module now pass the course module object in this
+	third argument. The login functions will then test if either the
+	course module is visible or the user is a teacher. If neither is
+	the case then the user is redirected to the course homepage after
+	being shown a message "Sorry, this activity is currently hidden".
+	
+	(While I was at it I also turned the autologinguests off for most
+	module pages, except on the index.php pages and the view.php pages
+	for those modules that allow guests)
+
+2005-02-13 Sunday 08:42  stronk7
+
+	* lib.php: 
+	
+	Now retrieving only needed fields!
+
+2005-02-13 Sunday 05:41  gustav_delius
+
+	* mod.html: 
+	
+	Activities can now be hidden/shown from the activity editing page.
+	Also for modules that know about groups the groupmode can be set
+	from there. See bug 2533. This required adding to the mod.html
+	files calls to new functions print_visible_setting() and
+	print_groupmode_setting() which are combined in
+	print_standard_coursemodule_settings().
+	
+	The visibility of coursemodules is now always set through the
+	function set_coursemodule_visible() in order to make sure that the
+	associated events get updated in the calendar appropriately.
+	
+	If moving a coursemodule to a hidden section then the module is set
+	to hidden as well and its events are hidden in the calendar.
+	
+	If deleting a coursemodule its events are deleted from the
+	calendar.
+	
+	The function choose_from_menu() has an extra optional argument
+	$disabled which, when set to true, will disable the menu.
+	
+	For the sake of consistency the function set_groupmode_for_module
+	has been renamed to set_coursemodule_groupmode and the functions
+	show_course_module() and hide_course_module() have been combined to
+	set_coursemodule_visible().
+
+2005-02-10 Thursday 18:41  moodler
+
+	* view.php: 
+	
+	Removing the THEME variable and adding in classes where appropriate
+
+2005-02-08 Tuesday 17:23  moodler
+
+	* config.html: 
+	
+	Fixed up some layout issues in the configuration files
+
+2005-02-08 Tuesday 07:33  stronk7
+
+	* restorelib.php: 
+	
+	Some minor changes to each module to XHTMLise the restore process
+
+2005-02-04 Friday 07:19  stronk7
+
+	* edit.php: 
+	
+	Moving some strings to make them available in all the script. Not
+	really sure about changes introduced in version 1.42! Penny?
+
+2005-01-30 Sunday 00:45  julmis
+
+	* filter.php: 
+	
+	Adding <span class="nolink"> filter. It doesn't break in editor.
+
+2005-01-25 Tuesday 17:39  moodler
+
+	* mod.html: 
+	
+	Changes for XHTML and accessibility compatibility.  Tidied up
+	layout and other minor changes.
+
+2005-01-25 Tuesday 14:09  moodler
+
+	* index.php, view.php: 
+	
+	Moved rsslib.php from the rss directory to the lib directory with
+	the other libraries
+
+2005-01-23 Sunday 02:53  stronk7
+
+	* mod.html: 
+	
+	Modify sesskey behaviour. SC#73
+
+2005-01-19 Wednesday 20:02  urs_hunkler
+
+	* formats/faq/faq_format.php: 
+	
+	_ added the DIV framework for new CSS
+
+2005-01-19 Wednesday 19:57  urs_hunkler
+
+	* edit.php, export.php, import.php, index.php, view.php: 
+	
+	_ added the DIV framework for new CSS
+
+2005-01-18 Tuesday 14:57  ikawhero
+
+	* filter.php: 
+	
+	General removal of <nolink> tags for XHTML compatibility.  Moved
+	from the glossary filter as the filter may not be enabled.
+
+2005-01-14 Friday 16:36  stronk7
+
+	* filter.php: 
+	
+	One space out
+
+2005-01-14 Friday 16:28  stronk7
+
+	* filter.php: 
+	
+	Remove one notice in PHP5. From HEAD.
+
+2005-01-13 Thursday 18:08  moodler
+
+	* edit.html, edit.php, export.php, filter.php, import.html,
+	import.php, lib.php, tabs.html, view.php,
+	formats/continuous/continuous_format.php,
+	formats/dictionary/dictionary_format.php,
+	formats/encyclopedia/encyclopedia_format.php,
+	formats/entrylist/entrylist_format.php, formats/faq/faq_format.php,
+	formats/fullwithauthor/fullwithauthor_format.php,
+	formats/fullwithoutauthor/fullwithoutauthor_format.php: 
+	
+	Changes for XHTML compatibility and other HTML code cleanup
+
+2005-01-12 Wednesday 08:52  stronk7
+
+	* backuplib.php, filter.php, mod.html, print.php, restorelib.php,
+	version.php, view.php, db/mysql.php, db/mysql.sql,
+	db/postgres7.php, db/postgres7.sql: 
+	
+	Now print-view availability for students can be configured by
+	glossary.  Bug 2080
+	(http://moodle.org/bugs/bug.php?op=show&bugid=2080)
+
+2005-01-11 Tuesday 20:40  stronk7
+
+	* version.php, db/mysql.php, db/postgres7.php: 
+	
+	Delete orphaned categories remaining in server. Bug 2140
+	(http://moodle.org/bugs/bug.php?op=show&bugid=2140)
+
+2005-01-11 Tuesday 19:24  stronk7
+
+	* lib.php: 
+	
+	Maintain whitespace when importing glossary entries. I forgot to
+	commit this! Bug 2310.
+	
+	Merged from MOODLE_14_STABLE
+
+2005-01-11 Tuesday 19:22  stronk7
+
+	* lib.php: 
+	
+	Maintain whitespace when importing glossary entries. I forgot to
+	commit this! Bug 2310.
+
+2005-01-01 Saturday 00:12  fiedorow
+
+	* formats.php: 
+	
+	fixing a couple of instances of hardcoded /admin/
+
+2004-12-31 Friday 02:36  fiedorow
+
+	* formats.php: 
+	
+	fixing some instances of hardcoded /admin/
+
+2004-12-22 Wednesday 10:59  moodler
+
+	* tabs.html: 
+	
+	More XHTML from Shane
+
+2004-12-22 Wednesday 10:53  moodler
+
+	* lib.php: 
+	
+	Some leftover XHTML changes ...
+
+2004-12-22 Wednesday 10:51  moodler
+
+	* view.php: 
+	
+	Checking in some old changes from Shane, I think ... just spacing
+	...
+
+2004-12-19 Sunday 04:29  stronk7
+
+	* formats/entrylist/entrylist_format.php: 
+	
+	The entrylist format now shows the approval button.  Bug 2291. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=2291)
+	
+	Merged from MOODLE_14_STABLE
+
+2004-12-19 Sunday 04:26  stronk7
+
+	* formats/entrylist/entrylist_format.php: 
+	
+	The entrylist format now shows the approval button.  Bug 2291. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=2291)
+
+2004-12-15 Wednesday 17:03  stronk7
+
+	* lib.php, print.php, view.php: 
+	
+	Some checks are now done. SC#18.
+	
+	Merged from MOODLE_14_STABLE
+
+2004-12-15 Wednesday 17:01  stronk7
+
+	* lib.php, print.php, view.php: 
+	
+	Some checks are now done. SC#18.
+
+2004-12-11 Saturday 08:54  stronk7
+
+	* sql.php: 
+	
+	Now search function look into aliases too.
+	
+	Bug 2242 (http://moodle.org/bugs/bug.php?op=show&bugid=2242)
+	
+	Merged from MOODLE_14_STABLE
+
+2004-12-11 Saturday 08:52  stronk7
+
+	* sql.php: 
+	
+	Now search function look into aliases too.
+	
+	Bug 2242 (http://moodle.org/bugs/bug.php?op=show&bugid=2242)
+
+2004-11-29 Monday 07:54  stronk7
+
+	* print.php, sql.php, view.php: 
+	
+	Changed some parameters. SC#33.
+	
+	Merged from MOODLE_14_STABLE
+
+2004-11-29 Monday 07:51  stronk7
+
+	* print.php, sql.php, view.php: 
+	
+	Changed some parameters. SC#33.
+
+2004-11-26 Friday 09:22  stronk7
+
+	* lib.php, formats/encyclopedia/encyclopedia_format.php: 
+	
+	Solve some visualisation issues in encyclopedia format. I think
+	that now it will be correct!
+	
+	Merged from MOODLE_14_STABLE
+
+2004-11-26 Friday 09:16  stronk7
+
+	* lib.php, formats/encyclopedia/encyclopedia_format.php: 
+	
+	Solve some visualisation issues in encyclopedia format. I think
+	that now it will be correct!
+
+2004-11-25 Thursday 07:37  stronk7
+
+	* lib.php, view.php: 
+	
+	New paging system for glosaries.  100% compatible with Moodle's
+	one.  Supports more options. Perhaps we could use it sitewide.
+	
+	Merged from MOODLE_14_STABLE
+
+2004-11-25 Thursday 07:27  stronk7
+
+	* lib.php, view.php: 
+	
+	New paging system for glosaries.  100% compatible with Moodle's
+	one.  Supports more options. Perhaps we could use it sitewide.
+
+2004-11-25 Thursday 07:24  mjollnir_
+
+	* sql.php: 
+	
+	Merged from MOODLE_14_STABLE: Fix for postgres-invalid-sql (must
+	have AS between field and alias)
+
+2004-11-25 Thursday 07:23  mjollnir_
+
+	* sql.php: 
+	
+	Fix for postgres-invalid-sql (must have AS between field and alias)
+
+2004-11-24 Wednesday 07:16  mjollnir_
+
+	* version.php: 
+	
+	Merged from MOODLE_14_STABLE: Requires bump for glossary for last
+	patch - needs db_lowercase and db_uppercase
+
+2004-11-24 Wednesday 07:15  mjollnir_
+
+	* version.php: 
+	
+	Requires bump for glossary for last patch - needs db_lowercase and
+	db_uppercase
+
+2004-11-24 Wednesday 07:05  mjollnir_
+
+	* editcategories.php: 
+	
+	Merged from MOODLE_14_STABLE: Fixing use of UCASE and LCASE in
+	glossary which are not postgres friendly - two new functions in
+	datalib, db_uppercase and db_lowercase which return the
+	database-correct functions to use. Some were already fixed in HEAD
+	- those have been left as they were
+
+2004-11-24 Wednesday 06:58  mjollnir_
+
+	* edit.php, editcategories.php, exportentry.php, import.php,
+	sql.php: 
+	
+	Fixing use of UCASE and LCASE in glossary which are not postgres
+	friendly - two new functions in datalib, db_uppercase and
+	db_lowercase which return the database-correct functions to use
+
+2004-11-19 Friday 03:11  moodler
+
+	* version.php, db/mysql.php, db/postgres7.php: 
+	
+	Downgrading / repairing large version numbers
+
+2004-11-18 Thursday 12:38  mjollnir_
+
+	* version.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	Merged from MOODlE_14_STABLE: Indexes for glossary and version bump
+
+2004-11-18 Thursday 12:38  mjollnir_
+
+	* version.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	Indexes for glossary and version bump
+
+2004-11-17 Wednesday 08:14  stronk7
+
+	* approve.php, comment.php, deleteentry.php, edit.php,
+	editcategories.php, exportentry.php, formats.php, print.php,
+	view.php: 
+	
+	Just changing some parameters stuff to new functions...  See SC and
+	Bug 1837
+	
+	Merged from MOODLE_14_STABLE
+
+2004-11-17 Wednesday 08:06  stronk7
+
+	* approve.php, comment.php, deleteentry.php, edit.php,
+	editcategories.php, exportentry.php, formats.php, print.php,
+	view.php: 
+	
+	Just changing some parameters stuff to new functions...  See SC and
+	Bug 1837
+
+2004-11-17 Wednesday 07:36  stronk7
+
+	* print.php, view.php: 
+	
+	Print view isn't accesible if the activity is hidden.
+	
+	Bug 1837 (http://moodle.org/bugs/bug.php?op=show&bugid=1837)
+	
+	Merged from MOODLE_14_STABLE
+
+2004-11-17 Wednesday 07:34  stronk7
+
+	* print.php, view.php: 
+	
+	Print view isn't accesible if the activity is hidden.
+	
+	Bug 1837 (http://moodle.org/bugs/bug.php?op=show&bugid=1837)
+
+2004-11-17 Wednesday 07:12  stronk7
+
+	* print.php: 
+	
+	Header is out and "Site:" is in.
+	
+	Partially solved Bug 1837
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1837)
+	
+	Merged from MOODLE_14_STABLE
+
+2004-11-17 Wednesday 07:09  stronk7
+
+	* print.php: 
+	
+	Header is out and "Site:" is in.
+	
+	Partially solved Bug 1837
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1837)
+
+2004-11-10 Wednesday 07:23  stronk7
+
+	* lib.php, print.php, version.php,
+	formats/TEMPLATE/TEMPLATE_format.php,
+	formats/continuous/continuous_format.php,
+	formats/dictionary/dictionary_format.php,
+	formats/encyclopedia/encyclopedia_format.php,
+	formats/entrylist/entrylist_format.php, formats/faq/faq_format.php,
+	formats/fullwithauthor/fullwithauthor_format.php,
+	formats/fullwithoutauthor/fullwithoutauthor_format.php: 
+	
+	Old-awaiting for 1.4.2 release changes in the glossary.  Now, print
+	view is different for each format (consistent with it).  New,
+	custom formats can, optionally, define their print view. Else the
+	default one will be used.  With this, 1.4.x glossary developments
+	are finished and we can start solving some pending things in 1.5...
+	
+	Merged from MOODLE_14_STABLE
+
+2004-11-10 Wednesday 05:02  mjollnir_
+
+	* lib.php: 
+	
+	glossary attachments fix to allow optional file upload
+
+2004-11-10 Wednesday 02:36  stronk7
+
+	* lib.php, print.php, version.php,
+	formats/TEMPLATE/TEMPLATE_format.php,
+	formats/continuous/continuous_format.php,
+	formats/dictionary/dictionary_format.php,
+	formats/encyclopedia/encyclopedia_format.php,
+	formats/entrylist/entrylist_format.php, formats/faq/faq_format.php,
+	formats/fullwithauthor/fullwithauthor_format.php,
+	formats/fullwithoutauthor/fullwithoutauthor_format.php: 
+	
+	Old-awaiting for 1.4.2 release changes in the glossary.  Now, print
+	view is different for each format (consistent with it).  New,
+	custom formats can, optionally, define their print view. Else the
+	default one will be used.  With this, 1.4.x glossary developments
+	are finished and we can start solving some pending things in 1.5...
+
+2004-11-02 Tuesday 04:50  stronk7
+
+	* lib.php: 
+	
+	Bug 2140 solved partially. Now categories are deleted properly.
+	
+	Delete of orphan categories will be done later...
+	
+	Merged from MOODLE_14_STABLE
+
+2004-11-02 Tuesday 04:47  stronk7
+
+	* lib.php: 
+	
+	Bug 2140 solved partially. Now categories are deleted properly.
+	
+	Delete of orphan categories will be done later...
+
+2004-10-26 Tuesday 17:28  moodler
+
+	* mod.html, tabs.html, view.php: 
+	
+	More changes for XHTML compatibility
+
+2004-10-23 Saturday 01:03  paca70
+
+	* edit.php, exportentry.php, import.php, sql.php: 
+	
+	Some fixes for postgresql
+
+2004-10-08 Friday 21:58  moodler
+
+	* lib.php: 
+	
+	Minor changes for XHTML compatibility
+
+2004-10-06 Wednesday 07:21  stronk7
+
+	* index.php, view.php: 
+	
+	Now RSS links ae showed properly in SITE course when user isn't
+	logged.
+	
+	Solve a problem with if($USER) under PHP5.
+
+2004-10-06 Wednesday 06:51  stronk7
+
+	* index.php, view.php: 
+	
+	Now RSS links ae showed properly in SITE course when user isn't
+	logged.
+	
+	Solve a problem with if($USER) under PHP5.
+
+2004-10-05 Tuesday 06:21  stronk7
+
+	* index.php, view.php: 
+	
+	Now RSS links are displayed ok in SITEID course.
+	
+	Bug 2048.  (http://moodle.org/bugs/bug.php?op=show&bugid=2048)
+	
+	Merged from MOODLE_14_STABLE
+
+2004-10-05 Tuesday 06:04  stronk7
+
+	* index.php, view.php: 
+	
+	Now RSS links are displayed ok in SITEID course.
+	
+	Bug 2048.  (http://moodle.org/bugs/bug.php?op=show&bugid=2048)
+
+2004-10-03 Sunday 17:48  stronk7
+
+	* config.html, formats.php: 
+	
+	admin/module.php is now using sesskey.
+	
+	Merged from MOODLE_14_STABLE
+
+2004-10-03 Sunday 17:44  stronk7
+
+	* config.html, formats.php: 
+	
+	admin/module.php is now using sesskey.
+
+2004-10-01 Friday 18:32  stronk7
+
+	* edit.html, edit.php, editcategories.php: 
+	
+	Some clear_text() and format_text() calls added.
+	
+	Merged from MOODLE_14_STABLE
+
+2004-10-01 Friday 18:26  stronk7
+
+	* edit.html, editcategories.php: 
+	
+	More format_text() calls...
+
+2004-10-01 Friday 17:49  stronk7
+
+	* editcategories.php: 
+	
+	Clean text for category->name
+
+2004-10-01 Friday 17:46  stronk7
+
+	* edit.php: 
+	
+	clean_text() from entry->concept and aliases!!
+
+2004-10-01 Friday 17:02  stronk7
+
+	* version.php: 
+	
+	Undo las changes. Point releases are only for STABLE branches.
+
+2004-10-01 Friday 16:36  stronk7
+
+	* version.php, version.php: 
+	
+	New version syntax.
+
+2004-09-30 Thursday 16:42  moodler
+
+	* filter.php: 
+	
+	Some changes for XHTML and accessibility compliance
+
+2004-09-29 Wednesday 15:56  moodler
+
+	* rsslib.php: 
+	
+	Merged SQL fixes from stable
+
+2004-09-29 Wednesday 15:52  moodler
+
+	* rsslib.php: 
+	
+	Fixed SQL for PostgreSQL  (need to always use AS)
+
+2004-09-29 Wednesday 07:20  stronk7
+
+	* sql.php: 
+	
+	Merged quotes from MOODLE_14_STABLE
+
+2004-09-29 Wednesday 07:14  stronk7
+
+	* sql.php: 
+	
+	Quoted some parameters as they must be. Thanks skodak!
+
+2004-09-21 Tuesday 19:41  gustav_delius
+
+	* restorelib.php, rsslib.php: 
+	
+	Resolved problems with previous replacement of & to &amp; and fixed
+	redirect() to entity encode the inut where needed.  Julian Sedding
+
+2004-09-17 Friday 13:46  mjollnir_
+
+	* version.php: 
+	
+	bumps for version and requires for modules that use new upload
+	class
+
+2004-09-17 Friday 01:13  gustav_delius
+
+	* approve.php, comment.html, comment.php, comments.php,
+	config.html, deleteentry.php, edit.html, edit.php,
+	editcategories.php, exportentry.php, filter.php, lib.php, mod.html,
+	report.php, restorelib.php, rsslib.php, view.php,
+	formats/entrylist/entrylist_format.php: 
+	
+	XHTML compliance - fixed (hopefully) all <img> tags - global
+	replace on <br> to <br /> - &amp; in URLs - got the forum module
+	XHTML compliant Julian Sedding
+
+2004-09-15 Wednesday 06:58  mjollnir_
+
+	* edit.html, edit.php, import.html, import.php, lib.php: 
+	
+	Centralised file upload code, integration with clam AV, integration
+	with some modules: assignment, exercise, forum, glossaryt,
+	resource, scorm (more to come soon).
+	
+	These patches are maintained in an publicly accessible Arch
+	repository, see:
+	http://lists.eduforge.org/cgi-bin/archzoom.cgi/arch-eduforge@cataly
+	st.net.nz--2004-MIRROR/moodle--eduforge--1.3.3
+	
+	Index of arch patches in this commit:
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	15     final touches to sears stuff until testing can begin,
+	beginning of magical uploadey wrappery function goodness
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	18     Virus scanning on upload
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	19     made emacs use spaces instead of tabs and fixed
+	lib/moodlelib.php where it was bad in the new functions; few
+	wording changes, added in support for clamdscan
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	20     handlevirus.php = new script to handle output of clamscan
+	(designed for cron clamscan), changes to strings for emailing out
+	virus notifications, changes to moodlelib - slightly different
+	notice reporting in handle_infected_file and new function for
+	replacing file with message
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	21     refactor to filter out invalid lines in input to handlevirus
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	22     modified assignment to use hande_file_upload
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	25     bug fix for handle_file_upload
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	26     Small fix for non thinking brain doing something silly
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	35     small fix to switch order of items in drop down to allow
+	sensible defaults
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	36     small changes to strings file
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	38     taken stuff out of moodlelib to put in upload class
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	39     new upload class -in a changeset by itself just in case -
+	not quite finished
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	40     tweaks to upload class - clam_scan_file can now take a path
+	as an argument, not just an entry from _FILES, there is better
+	handling of failure and notification, more allowance for module
+	writers to keep control in general. Also slightly nicer strings
+	entries for a few things
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	41     upload class integration with assignment module, bug fix,
+	slight tweak
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	42     small changes to uploadlib, integration with assessment and
+	assignment
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	44     tweaks for assessment and assignment for uploading
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	48     integration with exercise module
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	49     integration of virus stuff with forum module
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	50     integration of upload class and glossary module
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	51     just in case glossary_move_attachments is ever used, we
+	change the log entries before we move the files. also  moved
+	clam_log_upload out of the class
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	52     virus scanning for imports for glossary
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	53     relog entries when moving files attached to forum posts
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	54     resource module integration with virus scanning
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	55     scorm integration with upload/virus class
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	56     fix for handlevirus.php since upload class changes
+	
+	Full logs:
+	
+	Revision: moodle--eduforge--1.3.3--patch-15 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Wed Sep  1 17:28:13 NZST 2004
+	Standard-date: 2004-09-01 05:28:13 GMT Modified-files:
+	lang/en/moodle.php lib/moodlelib.php	 mod/assessment/sears.php
+	mod/assessment/upload.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	15 Summary: final touches to sears stuff until testing can begin,
+	beginning of magical uploadey wrappery function goodness Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-18 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Thu Sep  2 15:49:54 NZST 2004
+	Standard-date: 2004-09-02 03:49:54 GMT Modified-files:
+	admin/config.html lang/en/moodle.php	 lib/moodlelib.php
+	mod/assessment/upload.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	18 Summary: Virus scanning on upload Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-19 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Thu Sep  2 17:06:14 NZST 2004
+	Standard-date: 2004-09-02 05:06:14 GMT Modified-files:
+	lang/en/moodle.php lib/moodlelib.php	 mod/assessment/upload.php
+	New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	19 Summary: made emacs use spaces instead of tabs and fixed
+	lib/moodlelib.php where it was bad in the new functions; few
+	wording changes, added in support for clamdscan Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-20 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Fri Sep  3 16:06:05 NZST 2004
+	Standard-date: 2004-09-03 04:06:05 GMT New-files:
+	admin/.arch-ids/handlevirus.php.id     admin/handlevirus.php
+	Modified-files: lang/en/moodle.php lib/moodlelib.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	20 Summary: handlevirus.php = new script to handle output of
+	clamscan (designed for cron clamscan), changes to strings for
+	emailing out virus notifications, changes to moodlelib - slightly
+	different notice reporting in handle_infected_file and new function
+	for replacing file with message Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-21 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep  6 11:37:31 NZST 2004
+	Standard-date: 2004-09-05 23:37:31 GMT Modified-files:
+	admin/handlevirus.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	21 Summary: refactor to filter out invalid lines in input to
+	handlevirus Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-22 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep  6 13:07:48 NZST 2004
+	Standard-date: 2004-09-06 01:07:48 GMT Modified-files:
+	mod/assignment/upload.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	22 Summary: modified assignment to use hande_file_upload Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-25 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep  6 16:32:11 NZST 2004
+	Standard-date: 2004-09-06 04:32:11 GMT Modified-files:
+	lib/moodlelib.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	25 Summary: bug fix for handle_file_upload Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-26 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep  6 16:51:50 NZST 2004
+	Standard-date: 2004-09-06 04:51:50 GMT Modified-files:
+	lib/moodlelib.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	26 Summary: Small fix for non thinking brain doing something silly
+	Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-35 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Fri Sep 10 10:09:53 NZST 2004
+	Standard-date: 2004-09-09 22:09:53 GMT Modified-files:
+	admin/config.html New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	35 Summary: small fix to switch order of items in drop down to
+	allow sensible defaults Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-36 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Fri Sep 10 10:11:29 NZST 2004
+	Standard-date: 2004-09-09 22:11:29 GMT Modified-files:
+	lang/en/moodle.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	36 Summary: small changes to strings file Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-38 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Fri Sep 10 10:17:24 NZST 2004
+	Standard-date: 2004-09-09 22:17:24 GMT Modified-files:
+	lib/moodlelib.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	38 Summary: taken stuff out of moodlelib to put in upload class
+	Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-39 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Fri Sep 10 10:21:21 NZST 2004
+	Standard-date: 2004-09-09 22:21:21 GMT New-files:
+	lib/.arch-ids/uploadlib.php.id lib/uploadlib.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	39 Summary: new upload class -in a changeset by itself just in case
+	- not quite finished Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-40 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Fri Sep 10 11:58:24 NZST 2004
+	Standard-date: 2004-09-09 23:58:24 GMT Modified-files:
+	lang/en/moodle.php lib/uploadlib.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	40 Summary: tweaks to upload class - clam_scan_file can now take a
+	path as an argument, not just an entry from _FILES, there is better
+	handling of failure and notification, more allowance for module
+	writers to keep control in general. Also slightly nicer strings
+	entries for a few things Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-41 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Fri Sep 10 12:38:02 NZST 2004
+	Standard-date: 2004-09-10 00:38:02 GMT Modified-files:
+	lib/uploadlib.php mod/assignment/upload.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	41 Summary: upload class integration with assignment module, bug
+	fix, slight tweak Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-42 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Fri Sep 10 15:30:20 NZST 2004
+	Standard-date: 2004-09-10 03:30:20 GMT Modified-files:
+	lib/uploadlib.php mod/assessment/upload.php    
+	mod/assessment/view.php mod/assignment/upload.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	42 Summary: small changes to uploadlib, integration with assessment
+	and assignment Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-44 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Fri Sep 10 16:54:40 NZST 2004
+	Standard-date: 2004-09-10 04:54:40 GMT Modified-files:
+	mod/assessment/lib.php	   mod/assignment/lib.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	44 Summary: tweaks for assessment and assignment for uploading
+	Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-48 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep 13 09:57:03 NZST 2004
+	Standard-date: 2004-09-12 21:57:03 GMT Modified-files:
+	lang/en/moodle.php     mod/exercise/locallib.php
+	mod/exercise/upload.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	48 Summary: integration with exercise module Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-49 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep 13 11:35:46 NZST 2004
+	Standard-date: 2004-09-12 23:35:46 GMT Modified-files:
+	mod/forum/lib.php mod/forum/post.html New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	49 Summary: integration of virus stuff with forum module Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-50 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep 13 14:00:29 NZST 2004
+	Standard-date: 2004-09-13 02:00:29 GMT Modified-files:
+	lang/en/glossary.php mod/glossary/edit.html    
+	mod/glossary/edit.php mod/glossary/lib.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	50 Summary: integration of upload class and glossary module
+	Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-51 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep 13 15:13:02 NZST 2004
+	Standard-date: 2004-09-13 03:13:02 GMT Modified-files:
+	lib/uploadlib.php mod/glossary/lib.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	51 Summary: just in case glossary_move_attachments is ever used, we
+	change the log entries before we move the files. also  moved
+	clam_log_upload out of the class Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-52 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep 13 15:26:56 NZST 2004
+	Standard-date: 2004-09-13 03:26:56 GMT Modified-files:
+	mod/glossary/import.html     mod/glossary/import.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	52 Summary: virus scanning for imports for glossary Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-53 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep 13 16:02:22 NZST 2004
+	Standard-date: 2004-09-13 04:02:22 GMT Modified-files:
+	mod/forum/lib.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	53 Summary: relog entries when moving files attached to forum posts
+	Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-54 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep 13 16:58:37 NZST 2004
+	Standard-date: 2004-09-13 04:58:37 GMT Modified-files:
+	mod/resource/coursefiles.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	54 Summary: resource module integration with virus scanning
+	Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-55 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Tue Sep 14 16:15:47 NZST 2004
+	Standard-date: 2004-09-14 04:15:47 GMT Modified-files:
+	mod/scorm/coursefiles.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	55 Summary: scorm integration with upload/virus class Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-56 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Wed Sep 15 10:33:23 NZST 2004
+	Standard-date: 2004-09-14 22:33:23 GMT Modified-files:
+	admin/handlevirus.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	56 Summary: fix for handlevirus.php since upload class changes
+	Keywords:
+
+2004-09-15 Wednesday 04:39  gustav_delius
+
+	* config.html, edit.html, editcategories.html, formats.php,
+	import.html, mod.html: 
+	
+	towards XHTML compliance
+
+2004-09-13 Monday 00:08  gustav_delius
+
+	* backuplib.php, comment.html, comment.php, comments.php,
+	config.html, deleteentry.php, edit.html, edit.php,
+	editcategories.html, editcategories.php, export.php,
+	exportentry.php, filter.php, formats.php, import.html, import.php,
+	index.php, lib.php, mod.html, print.php, rate.php, report.php,
+	restorelib.php, rsslib.php, showentry.php, tabs.html, version.php,
+	view.php, db/mysql.php, db/oci8po.php,
+	formats/TEMPLATE/TEMPLATE_format.php,
+	formats/continuous/continuous_format.php,
+	formats/dictionary/dictionary_format.php,
+	formats/encyclopedia/encyclopedia_format.php,
+	formats/entrylist/entrylist_format.php, formats/faq/faq_format.php,
+	formats/fullwithauthor/fullwithauthor_format.php,
+	formats/fullwithoutauthor/fullwithoutauthor_format.php: 
+	
+	fixed capitalization and quoting of attribute values
+
+2004-09-12 Sunday 22:41  gustav_delius
+
+	* comment.html, comment.php, config.html, edit.html,
+	editcategories.html, editcategories.php, exportentry.php,
+	formats.php, import.html, lib.php, mod.html, print.php,
+	restorelib.php, tabs.html, view.php: 
+	
+	closed <input /> <br /> <hr />
+
+2004-09-10 Friday 02:31  stronk7
+
+	* print.php, sql.php, view.php: 
+	
+	Important changes about how view.php (and print.php) retrieve
+	records from BD to be displayed. Some SQL statements have been
+	modified to get target records, avoiding a lot of post-processing
+	causing some bugs like Bug 1912
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1912)
+	
+	Merged from MOODLE_14_STABLE
+
+2004-09-10 Friday 02:25  stronk7
+
+	* print.php, sql.php, view.php: 
+	
+	Important changes about how view.php (and print.php) retrieve
+	records from BD to be displayed. Some SQL statements have been
+	modified to get target records, avoiding a lot of post-processing
+	causing some bugs like Bug 1912
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1912)
+
+2004-09-09 Thursday 17:06  stronk7
+
+	* editcategories.php: 
+	
+	Solved an small issue when "not clasified" was selected and we
+	tried to edit categories.
+	
+	Merged from MOODLE_14_STABLE
+
+2004-09-09 Thursday 16:39  stronk7
+
+	* editcategories.php: 
+	
+	Solved an small issue when "not clasified" was selected and we
+	tried to edit categories.
+
+2004-09-09 Thursday 16:35  stronk7
+
+	* editcategories.php: 
+	
+	Simply reformated before solving some bugs to have ideas clearer.
+
+2004-09-06 Monday 15:54  stronk7
+
+	* sql.php: 
+	
+	Now entries are showed correctly in categories view if they belong
+	to multiple categories.
+	
+	Bug 1903 (http://moodle.org/bugs/bug.php?op=show&bugid=1903)
+	
+	Merged from MOODLE_14_STABLE
+
+2004-09-06 Monday 15:43  stronk7
+
+	* sql.php: 
+	
+	Now entries are showed correctly in categories view if they belong
+	to multiple categories.
+	
+	Bug 1903 (http://moodle.org/bugs/bug.php?op=show&bugid=1903)
+
+2004-08-30 Monday 22:42  stronk7
+
+	* print.php: 
+	
+	Bug 1831 (http://moodle.org/bugs/bug.php?op=show&bugid=1831)
+	
+	Merged from MOODLE_14_STABLE
+
+2004-08-30 Monday 22:40  stronk7
+
+	* print.php: 
+	
+	Bug 1831 (http://moodle.org/bugs/bug.php?op=show&bugid=1831)
+
+2004-08-30 Monday 07:28  stronk7
+
+	* editcategories.php: 
+	
+	Check that glossary is correct before edit categories.
+	
+	Bug 1838 (http://moodle.org/bugs/bug.php?op=show&bugid=1838)
+	
+	Merged from MOODLE_14_STABLE
+
+2004-08-30 Monday 07:26  stronk7
+
+	* editcategories.php: 
+	
+	Check that glossary is correct before edit categories.
+	
+	Bug 1838 (http://moodle.org/bugs/bug.php?op=show&bugid=1838)
+
+2004-08-30 Monday 06:57  stronk7
+
+	* approve.php, comment.php, deleteentry.php, edit.php,
+	editcategories.php, exportentry.php, formats.php, print.php,
+	view.php: 
+	
+	strip_tags() to some parameters. Thanks skodak.
+	
+	Bug 1836 (http://moodle.org/bugs/bug.php?op=show&bugid=1836)
+	
+	Merged from MOODLE_14_STABLE
+
+2004-08-30 Monday 06:46  stronk7
+
+	* approve.php, comment.php, deleteentry.php, edit.php,
+	editcategories.php, exportentry.php, formats.php, print.php,
+	view.php: 
+	
+	strip_tags() to some parameters. Thanks skodak.
+	
+	Bug 1836 (http://moodle.org/bugs/bug.php?op=show&bugid=1836)
+
+2004-08-30 Monday 06:04  stronk7
+
+	* report.php: 
+	
+	Typo. Thanks to skodak.  Bug 1839
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1839)
+	
+	Merged from MOODLE_14_STABLE
+
+2004-08-30 Monday 06:03  stronk7
+
+	* report.php: 
+	
+	Typo. Thanks to skodak.  Bug 1839
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1839)
+
+2004-08-29 Sunday 22:15  gustav_delius
+
+	* filter.php: 
+	
+	removed unnecessary calls to get_site()
+
+2004-08-29 Sunday 08:14  stronk7
+
+	* edit.html: 
+	
+	Define a bit better the 'automatic link' feature at glossary and
+	entry levels.
+	
+	Bug 1745 (http://moodle.org/bugs/bug.php?op=show&bugid=1745)
+	
+	Merged from MOODLE_14_STABLE
+
+2004-08-29 Sunday 08:06  stronk7
+
+	* edit.html: 
+	
+	Define a bit better the 'automatic link' feature at glossary and
+	entry levels.
+	
+	Bug 1745 (http://moodle.org/bugs/bug.php?op=show&bugid=1745)
+
+2004-08-29 Sunday 07:22  stronk7
+
+	* edit.php: 
+	
+	If we are updating an entry, compare current session user with
+	existing entry user to avoid some potential problems if
+	secureforms=off Perhaps too much security? Anyway thanks to skodak
+	
+	(Bug 1823) (http://moodle.org/bugs/bug.php?op=show&bugid=1823)
+	
+	Merged from MOODLE_14_STABLE
+
+2004-08-29 Sunday 07:20  stronk7
+
+	* edit.php: 
+	
+	If we are updating an entry, compare current session user with
+	existing entry user to avoid some potential problems if
+	secureforms=off Perhaps too much security? Anyway thanks to skodak
+	
+	(Bug 1823) (http://moodle.org/bugs/bug.php?op=show&bugid=1823)
+
+2004-08-29 Sunday 04:00  stronk7
+
+	* edit.php: 
+	
+	Avoid one notice
+	
+	Merged from MOODLE_14_STABLE
+
+2004-08-29 Sunday 03:58  stronk7
+
+	* edit.php: 
+	
+	Avoid one notice
+
+2004-08-29 Sunday 03:48  stronk7
+
+	* comment.html: 
+	
+	HTML editor (format popup) display wrong in glossary comments
+	
+	Bug 1826 (http://moodle.org/bugs/bug.php?op=show&bugid=1826)
+	
+	Merged from MOODLE_14_STABLE
+
+2004-08-29 Sunday 03:45  stronk7
+
+	* comment.html: 
+	
+	HTML editor (format popup) display wrong in glossary comments
+	
+	Bug 1826 (http://moodle.org/bugs/bug.php?op=show&bugid=1826)
+
+2004-08-29 Sunday 03:15  stronk7
+
+	* comment.php, deleteentry.php, edit.php, lib.php: 
+	
+	Now students cannot add/edit/delete entries if
+	glossary->studentcanpost = 0 using manual URLs.
+	
+	Merged from MOODLE_14_STABLE
+
+2004-08-29 Sunday 03:10  stronk7
+
+	* comment.php, deleteentry.php, edit.php, lib.php: 
+	
+	Now students cannot add/edit/delete entries if
+	glossary->studentcanpost = 0 using manual URLs.
+
+2004-08-29 Sunday 02:34  stronk7
+
+	* comment.php, comments.php, lib.php: 
+	
+	- students cannot add/edit/delete comments if it isn't allowed -
+	students can view comments if they exist - teachers bypass the
+	commentsallowed field always (this can be useful to create
+	glossaries with public comments from the teacher).  - buttons are
+	showed correctly.
+	
+	Bug 1814 (http://moodle.org/bugs/bug.php?op=show&bugid=1814)
+	
+	Merged from MOODLE_14_STABLE
+
+2004-08-29 Sunday 02:30  stronk7
+
+	* comment.php, comments.php, lib.php: 
+	
+	- students cannot add/edit/delete comments if it isn't allowed -
+	students can view comments if they exist - teachers bypass the
+	commentsallowed field always (this can be useful to create
+	glossaries with public comments from the teacher).  - buttons are
+	showed correctly.
+	
+	Bug 1814 (http://moodle.org/bugs/bug.php?op=show&bugid=1814)
+
+2004-08-28 Saturday 19:25  stronk7
+
+	* edit.php: 
+	
+	Merged from MOODLE_14_STABLE
+
+2004-08-28 Saturday 19:23  stronk7
+
+	* edit.php: 
+	
+	changed timemodified to timecreated
+
+2004-08-28 Saturday 19:13  stronk7
+
+	* comment.php: 
+	
+	Now action is checked and defaults to edit.  Thanks skodak!
+	
+	Bug 1813 (http://moodle.org/bugs/bug.php?op=show&bugid=1813)
+	
+	Merged from MOODLE_14_STABLE
+
+2004-08-28 Saturday 19:11  stronk7
+
+	* comment.php: 
+	
+	Now action is checked and defaults to edit.  Thanks skodak!
+	
+	Bug 1813 (http://moodle.org/bugs/bug.php?op=show&bugid=1813)
+
+2004-08-28 Saturday 18:56  stronk7
+
+	* edit.php, lib.php: 
+	
+	Now maxeditingtime for entries work againt timecreated instead of
+	timemodified.  Thanks skodak!
+	
+	Bug 1822 (http://moodle.org/bugs/bug.php?op=show&bugid=1822)
+	
+	Merged from MOODLE_14_STABLE
+
+2004-08-28 Saturday 18:52  stronk7
+
+	* edit.php, lib.php: 
+	
+	Now maxeditingtime for entries work againt timecreated instead of
+	timemodified.  Thanks skodak!
+	
+	Bug 1822 (http://moodle.org/bugs/bug.php?op=show&bugid=1822)
+
+2004-08-28 Saturday 08:28  stronk7
+
+	* comment.php, deleteentry.php, edit.php, lib.php: 
+	
+	Some important changes arrive:	  - 'editalways' applied to
+	comments.     - some minor notices out.     - security bug solved: 
+	      + users cannot edit any comment now.	  + users cannot
+	delete any comment now.        + users cannot edit any entry now.  
+	     + users cannot delete any antry now.
+	
+	Thanks to skodak, discovering the bug!!!
+	
+	Merged from MOODLE_14_STABLE
+
+2004-08-28 Saturday 08:23  stronk7
+
+	* comment.php, deleteentry.php, edit.php, lib.php: 
+	
+	Some important changes arrive:	  - 'editalways' applied to
+	comments.     - some minor notices out.     - security bug solved: 
+	      + users cannot edit any comment now.	  + users cannot
+	delete any comment now.        + users cannot edit any entry now.  
+	     + users cannot delete any antry now.
+	
+	Thanks to skodak, discovering the bug!!!
+
+2004-08-28 Saturday 01:21  stronk7
+
+	* lib.php: 
+	
+	Init 2 arrays
+	
+	Merged from MOODLE_14_STABLE
+
+2004-08-28 Saturday 01:20  stronk7
+
+	* lib.php: 
+	
+	Init 2 arrays
+
+2004-08-28 Saturday 00:49  stronk7
+
+	* lib.php: 
+	
+	Now, terms being defined in URLs aren't broken by the <nolink> tag.
+	
+	Bug 1790 (http://moodle.org/bugs/bug.php?op=show&bugid=1790)
+	
+	Merged from MOODLE_14_STABLE
+
+2004-08-28 Saturday 00:46  stronk7
+
+	* lib.php: 
+	
+	Now, terms being defined in URLs aren't broken by the <nolink> tag.
+	
+	Bug 1790 (http://moodle.org/bugs/bug.php?op=show&bugid=1790)
+
+2004-08-27 Friday 17:12  stronk7
+
+	* deleteentry.php, deleteentry.php: 
+	
+	Error when sending a delete-entry action to logs...
+
+2004-08-27 Friday 08:59  stronk7
+
+	* edit.html: 
+	
+	Another duplicated tag....now it's really well-formed :-)
+	
+	Meged from MOODLE_14_STABLE
+
+2004-08-27 Friday 08:57  stronk7
+
+	* edit.html: 
+	
+	Another duplicated tag....now it's really well-formed :-)
+
+2004-08-27 Friday 08:52  stronk7
+
+	* edit.html: 
+	
+	Found it!!!! A missing </select> was the cause to the wrong display
+	under Safari!!!
+	
+	Merged from MOODLE_14_STABLE
+
+2004-08-27 Friday 08:50  stronk7
+
+	* edit.html: 
+	
+	Found it!!!! A missing </select> was the cause to the wrong display
+	under Safari!!!
+
+2004-08-27 Friday 08:07  stronk7
+
+	* edit.html, edit.php: 
+	
+	Solved some inconsistencies when using the HTML editor and the
+	format menu!!
+	
+	Merged from MOODLE_14_STABLE
+
+2004-08-27 Friday 08:00  stronk7
+
+	* edit.html, edit.php: 
+	
+	Solved some inconsistencies when using the HTML editor and the
+	format menu!!
+	
+	One Curiosity: I've discovered a bug in Safari Browser. Edit any
+	multi-line definition entry and you will see it without line breaks
+	(not using the HTML editor). I've tried moving that textarea to
+	other positions in the page and then it works.
+
+2004-08-27 Friday 05:39  stronk7
+
+	* lib.php: 
+	
+	Notice out.
+	
+	Merged from MOODLE_14_STABLE
+
+2004-08-27 Friday 05:37  stronk7
+
+	* lib.php: 
+	
+	One notice
+
+2004-08-26 Thursday 23:21  moodler
+
+	* lib.php, showentry.php, view.php: 
+	
+	Merged from stable
+
+2004-08-25 Wednesday 16:15  moodler
+
+	* lib.php, showentry.php: 
+	
+	I was trying to make the glossary link open in the parent window,
+	but I could not get it to work all the time.
+
+2004-08-25 Wednesday 15:39  moodler
+
+	* view.php: 
+	
+	Fixed tabs links when glossary called without id
+
+2004-08-25 Wednesday 15:36  moodler
+
+	* lib.php, showentry.php: 
+	
+	Fixed showentry for POstgreSQLo Moved SQL to its own function in
+	lib.php Added links to glossary for each entry
+
+2004-08-25 Wednesday 06:59  stronk7
+
+	* comment.php, edit.php: 
+	
+	Don't clean posted text on input (will be cleaned on output).
+	
+	Merged from MOODLE_14_STABLE
+
+2004-08-25 Wednesday 06:56  stronk7
+
+	* comment.php, edit.php: 
+	
+	Don't clean posted text on input (will be cleaned on output).
+
+2004-08-25 Wednesday 04:59  stronk7
+
+	* lib.php: 
+	
+	one more warning out
+	
+	Merged from MOODLE_14_STABLE
+
+2004-08-25 Wednesday 04:55  stronk7
+
+	* lib.php: 
+	
+	one more warning out
+
+2004-08-25 Wednesday 04:40  stronk7
+
+	* mod.html: 
+	
+	Avoid some warnings Bug 1729
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1729)
+	
+	Merged from MOODLE_14_STABLE
+
+2004-08-25 Wednesday 04:35  stronk7
+
+	* mod.html: 
+	
+	Avoid some warnings Bug 1729
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1729)
+
+2004-08-24 Tuesday 19:24  stronk7
+
+	* lib.php: 
+	
+	Now some CFG->glossary_XXXX variables are checked in lib.php Bug
+	1764 (http://moodle.org/bugs/bug.php?op=show&bugid=1764)
+	
+	Merged from MOODLE_14_STABLE
+
+2004-08-24 Tuesday 19:20  stronk7
+
+	* lib.php: 
+	
+	Now some CFG->glossary_XXXX are checked in lib.php.  Bug 1764
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1764)
+
+2004-08-24 Tuesday 18:13  gustav_delius
+
+	* version.php: 
+	
+	All the modules in which I made changes require the latest version
+	of datalib.php.
+
+2004-08-22 Sunday 22:38  gustav_delius
+
+	* edit.php, formats.php, index.php, print.php, sql.php, view.php: 
+	
+	All modules are now suitable for the site page. They now all follow
+	the same rules, namely that any students enrolled in at least one
+	course is considered to be a student on the site.
+	
+	All the page headers work correctly also on the site course.
+	
+	On the site page the modules don't require login unless necessary
+	or required by $CFG->forcelogin.
+
+2004-08-22 Sunday 18:42  julmis
+
+	* edit.php: 
+	
+	Fixing Bug #1765 (mystery fix).
+
+2004-08-22 Sunday 18:41  julmis
+
+	* edit.html: 
+	
+	Fixing Bug #1765 (mystery fix)
+
+2004-08-22 Sunday 04:20  gustav_delius
+
+	* comment.php, comments.php, deleteentry.php, editcategories.php,
+	exportentry.php, import.php, index.php: 
+	
+	Removed notices by introducing new function print_header_simple()
+	which works on site as well as in courses without extra logic.
+
+2004-08-21 Saturday 04:12  gustav_delius
+
+	* report.php: 
+	
+	introduced the fullname() function in a lot of places. Still not
+	complete though, especially in sorting.
+
+2004-08-12 Thursday 23:59  moodler
+
+	* db/: mysql.php, postgres7.php: 
+	
+	Made the glossary upgrade use less memory   bug 985
+
+2004-08-10 Tuesday 03:20  stronk7
+
+	* restorelib.php, version.php, db/mysql.php, db/postgres7.php: 
+	
+	Now upgrade and restore processes enable editalways for old
+	secondary glossaries. Smooth transition. Thanks, Martin! :-)
+	
+	Bug 1445 (http://moodle.org/bugs/bug.php?op=show&bugid=1445)
+
+2004-08-09 Monday 23:04  stronk7
+
+	* backuplib.php, lib.php, mod.html, restorelib.php, version.php,
+	db/mysql.php, db/mysql.sql, db/oci8po.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	Now editalways is working in glossaries.
+	
+	Decide if an entry is editable: -It isn't a imported entry (so
+	nobody can edit a imported (from secondary to main) entry)) and
+	-The user is teacher or he is a student with time permissions (edit
+	period or editalways defined).
+	
+	Bug 1445 (http://moodle.org/bugs/bug.php?op=show&bugid=1445)
+
+2004-08-09 Monday 09:39  moodler
+
+	* formats/README.txt: 
+	
+	Fixed some typos etc.	:-)
+
+2004-08-09 Monday 02:44  stronk7
+
+	* index.php: 
+	
+	Now the RSS link is showed in the list of glossaries.
+	
+	Bug 1706 (http://moodle.org/bugs/bug.php?op=show&bugid=1706)
+
+2004-08-09 Monday 02:31  stronk7
+
+	* mod.html: 
+	
+	Avoid one notice when creating a new glossary.
+
+2004-08-08 Sunday 14:57  moodler
+
+	* filter.php: 
+	
+	Improvement to filters, providing speed boost AND better
+	compatibility with Turck MMCache.
+	
+	Filter function must now have a particular name
+	
+	   eg resource_filter
+	
+	where "resource" is the name of the directory that filter.php is
+	in.
+
+2004-08-06 Friday 04:10  stronk7
+
+	* rsslib.php: 
+	
+	Applied the same checks than to the forum to generate glossary rss
+	feeds only when necessary.  My only dude is if we should use the
+	modification time instead of the creation time (here and in
+	forums...).
+
+2004-08-04 Wednesday 01:27  stronk7
+
+	* TODO.txt: 
+	
+	TODO updated.
+
+2004-08-03 Tuesday 05:53  stronk7
+
+	* formats/: README.txt, TEMPLATE/TEMPLATE_format.php: 
+	
+	TEMPLATE format for glossaries. It is self-documented, but some
+	review will be welcome...ciao :-)
+
+2004-08-03 Tuesday 05:44  stronk7
+
+	* lib.php: 
+	
+	Some changes to the formats plugin detection function and minor
+	changes to some functions.
+
+2004-08-03 Tuesday 05:41  stronk7
+
+	* mod.html: 
+	
+	Reload current glossary format from DB, because the plugin system
+	can changed it automatically.
+
+2004-08-03 Tuesday 02:22  stronk7
+
+	* formats/: fullwithoutauthor/fullwithoutauthor_format.php,
+	encyclopedia/encyclopedia_format.php, faq/faq_format.php,
+	fullwithauthor/fullwithauthor_format.php: 
+	
+	Modified pending formats to be more structured. No visual changes.
+
+2004-08-01 Sunday 08:17  stronk7
+
+	* lib.php: 
+	
+	Minor changes to make things into formats easier.
+
+2004-08-01 Sunday 08:16  stronk7
+
+	* formats/: continuous/continuous_format.php,
+	fullwithauthor/fullwithauthor_format.php,
+	fullwithoutauthor/fullwithoutauthor_format.php: 
+	
+	More glossary formats checked and slighty modified...
+
+2004-08-01 Sunday 00:03  stronk7
+
+	* restorelib.php: 
+	
+	Small typo
+
+2004-07-30 Friday 02:04  stronk7
+
+	* restorelib.php: 
+	
+	Now glossary module backups from a 1.4 version can be restored in a
+	1.3.  Only two combinations aren't 100% compatible:	- Program
+	resources.	- Text without format in 1.4 is changed to type 4
+	(plain text)  Bug 1676
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1676)
+
+2004-07-28 Wednesday 16:51  paca70
+
+	* db/postgres7.php: 
+	
+	Wery quickly tested and untested  versions for Postgresql.
+
+2004-07-28 Wednesday 01:19  stronk7
+
+	* TODO.txt, config.html, formats.php, lib.php, mod.html, print.php,
+	restorelib.php, showentry.php, sql.php, tabs.html, version.php,
+	view.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql, formats/continuous/continuous_format.php,
+	formats/dictionary/dictionary_format.php,
+	formats/encyclopedia/encyclopedia_format.php,
+	formats/entrylist/entrylist_format.php, formats/faq/faq_format.php,
+	formats/fullwithauthor/fullwithauthor_format.php,
+	formats/fullwithoutauthor/fullwithoutauthor_format.php: 
+	
+	Bulk changes to support plugin-formats in glossaries.  See the
+	TODO.txt to get details about pending tasks.  The db upgrade should
+	work fine (not tested under postgresql).  The plugin architecture
+	is finished too.  See Bug 936. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=936)
+
+2004-07-28 Wednesday 01:13  stronk7
+
+	* formats/: 1.php, 2.php, 3.php, 4.php, 5.php, 6.php: 
+	
+	Removed old glossary formats.  Part of the new formats plugin
+	structure.  See Bug 936
+	(http://moodle.org/bugs/bug.php?op=show&bugid=936)
+
+2004-07-24 Saturday 01:37  stronk7
+
+	* version.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	Changed glossary_alias->alias from text to varchar(255).  Not
+	mandatory but...  See Bug 1398
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1398)
+
+2004-07-16 Friday 21:06  moodler
+
+	* mod.html, mod.html: 
+	
+	Fixed typo for globalglossary
+
+2004-07-13 Tuesday 01:11  stronk7
+
+	* lib.php, formats/6.php: 
+	
+	Now, for glossaries using the 'Entry List' format, their
+	entry->description is viewable with the standard popup window.
+	
+	Bug 1636 (http://moodle.org/bugs/bug.php?op=show&bugid=1636)
+	
+	Merged from MOODLE_13_STABLE
+
+2004-07-13 Tuesday 01:08  stronk7
+
+	* lib.php, formats/6.php: 
+	
+	Now, for glossaries using the 'Entry List' format, their
+	entry->description is viewable with the standard popup window.
+	
+	Bug 1636 (http://moodle.org/bugs/bug.php?op=show&bugid=1636)
+
+2004-07-13 Tuesday 00:35  stronk7
+
+	* sql.php: 
+	
+	In 'categories view' (all and only one), now attachements, edit,
+	comment and delete are working properly. Thanks to
+	frank@nomios.de!! See bug 1632
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1632)
+	
+	Merged from MOODLE_13_STABLE
+
+2004-07-13 Tuesday 00:33  stronk7
+
+	* sql.php: 
+	
+	In 'categories view' (all and only one), now attachements, edit,
+	comment and delete are working properly. Thanks to
+	frank@nomios.de!! See bug 1632
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1632)
+
+2004-07-02 Friday 04:07  stronk7
+
+	* import.html, import.php, lib.php: 
+	
+	Some polishing of "TAB" chars in source code done.  Minor changes
+	in glossary export/import to include the displayformat field. 
+	Added a new feature (it was hidden and uncompleted in source code):
+	Import a glossary file, creating automatically a new glossary
+	activity.  Bug 1606. 
+	http://moodle.org/bugs/bug.php?op=show&bugid=1606
+	
+	Merged from MOODLE_13_STABLE
+
+2004-07-02 Friday 02:56  stronk7
+
+	* import.php: 
+	
+	Minor copy/paste bug solved... :-)
+
+2004-07-02 Friday 02:52  stronk7
+
+	* import.html, import.php, lib.php: 
+	
+	Some polishing of "TAB" chars in source code done.  Minor changes
+	in glossary export/import to include the displayformat field. 
+	Added a new feature (it was hidden and uncompleted in source code):
+	Import a glossary file, creating automatically a new glossary
+	activity.  Bug 1606. 
+	http://moodle.org/bugs/bug.php?op=show&bugid=1606
+
+2004-06-29 Tuesday 07:58  stronk7
+
+	* import.php: 
+	
+	Take care of empty aliases in glossary xml files when importing
+	them.  See bug 1599. Thanks to skodak. :-)
+	http://moodle.org/bugs/bug.php?op=show&bugid=1599
+	
+	Merged from MOODLE_13_STABLE.
+
+2004-06-29 Tuesday 07:54  stronk7
+
+	* import.php: 
+	
+	Take care of empty aliases in glossary xml files when importing
+	them.  See bug 1599. Thanks to skodak. :-)
+	http://moodle.org/bugs/bug.php?op=show&bugid=1599
+
+2004-06-07 Monday 16:43  moodler
+
+	* lib.php: 
+	
+	Merged bug fix for global glossary flag from MOODLE_13_STABLE to
+	trunk
+
+2004-06-07 Monday 16:40  moodler
+
+	* lib.php: 
+	
+	A glossary marked global can now be unmarked again later
+
+2004-06-04 Friday 15:28  moodler
+
+	* version.php: 
+	
+	MOdules are dependent on this version of course/mod.php
+
+2004-06-04 Friday 14:17  moodler
+
+	* comment.php, mod.html, version.php: 
+	
+	BRANCH MERGE
+	
+	These are the changes from MOODLE_13_STABLE, merged into trunk
+	
+	The tag MOODLE_13_MERGED on the MOODLE_13_STABLE branch now refers
+	to this point
+	
+	The biggest changes here are the fixes for HTML editor in all
+	standard modules
+
+2004-06-03 Thursday 21:07  moodler
+
+	* comment.php, mod.html, version.php: 
+	
+	OK, for bug fixes this is a pretty big checkin!!   :-/
+	
+	I finally was able to see the HTML Editor bug in IE/XP that
+	everyone was talking about, and it's a very serious bug as it makes
+	Moodle 1.3 almost unusable for these people.  :-(  :-(
+	
+	So, I eventually found out that the problem is that the Javascript
+	that attaches the editor has troubles when it is embedded within
+	the table						    that
+	course/mod.php puts around the mod.html forms in each module. 
+	(Only in IE and only sometimes, mind you).
+	
+	While testing I also had a good look at a long standing issue which
+	is the inconsistency of the mod.html forms when using the editor.
+	
+	So, to fix both I decided to put the HTML editor calls OUTSIDE the
+	mod.html in the mod.php file.  This means that all modules get the
+	HTML editor by default on all text areas during activity module
+	setup by default.
+	
+	I've been running through this for the past few hours and it seems
+	pretty stable now and a lot more consistent, so I'm checking it in
+	as big fix towards the Moodle 1.3.1 we have to have.
+	
+	Unfortunately it also means the API has changed a bit  ... I had to
+	update all the module dependencies to this exact version (or
+	later).
+	
+	Please test this "stable" version hard using the standard modules
+	only and I'll merge these changes over to the trunk in a day or so
+	and update all known third-party modules.
+
+2004-05-30 Sunday 09:00  stronk7
+
+	* filter.php: 
+	
+	Solved bug 1491 in all the "linking" filters. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1491) Bugfix 001
+
+2004-05-30 Sunday 08:28  stronk7
+
+	* filter.php: 
+	
+	Solved bug 1491 in all the "linking" filters. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1491) Bugfix 001
+
+2004-05-28 Friday 07:32  stronk7
+
+	* filter.php: 
+	
+	Applied some changes to filter (not commited before 1.3 due its
+	proximity).  I think it solves Bug 1487 and makes things a bit
+	clear in this filter... 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1487)
+
+2004-05-24 Monday 08:10  stronk7
+
+	* rsslib.php: 
+	
+	Now only approved entries are showed in RSS feeds...
+
+2004-05-24 Monday 02:54  stronk7
+
+	* filter.php: 
+	
+	Now integers < 1000 in conceps and aliases are avoided in the
+	filter. Bug 1446. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1446)
+
+2004-05-22 Saturday 03:24  stronk7
+
+	* view.php: 
+	
+	Now paging will mantain the "fullsearch" option.  Bug 1438. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1438)
+
+2004-05-22 Saturday 02:56  stronk7
+
+	* lib.php: 
+	
+	Escape "/" char in preg_quote(). Bug 1436. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1436)
+
+2004-05-21 Friday 07:07  stronk7
+
+	* sql.php: 
+	
+	Avoid one more notice...
+
+2004-05-21 Friday 07:04  stronk7
+
+	* editcategories.html: 
+	
+	Solved one bug causing category->name to be cleared when editing
+	them.
+
+2004-05-21 Friday 03:51  stronk7
+
+	* lib.php, sql.php, tabs.html, view.php: 
+	
+	Solve some notice with debug = on.  Thanks to skodak. Bug 1405. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1405)
+
+2004-05-21 Friday 02:19  stronk7
+
+	* backuplib.php: 
+	
+	Now in glossary module, preferences->backup_users = 2 (none users)
+	has precedence over include teacher entries in the backup. Used to
+	support the glossary module in "none users" backups. See bug 1420. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1420)
+
+2004-05-20 Thursday 11:37  moodler
+
+	* filter.php: 
+	
+	A problem with brackets was reported, but I couldn't duplicate it.
+	
+	Just in case, I've added an escape for them.
+
+2004-05-20 Thursday 07:34  stronk7
+
+	* edit.html: 
+	
+	Hi !! Solved one bug before being posted to the Bugs System.
+	Incredible !!! (http://moodle.org/mod/forum/discuss.php?d=8089) :-D
+
+2004-05-16 Sunday 08:35  stronk7
+
+	* lib.php: 
+	
+	Step 2 of Bug 1223 done. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1223)
+
+2004-05-16 Sunday 07:18  stronk7
+
+	* lib.php: 
+	
+	Step 1 of Bug 1223 done. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1223)
+
+2004-05-16 Sunday 01:34  stronk7
+
+	* lib.php: 
+	
+	Now entry->concept is always printed in FORMAT_MOODLE format,
+	instead of using the entry->format field. This should close Bug
+	1298.  (http://moodle.org/bugs/bug.php?op=show&bugid=1298)
+
+2004-05-16 Sunday 01:27  stronk7
+
+	* print.php, showentry.php, view.php: 
+	
+	Opps. I forgot to commit this files yesterday... :-( This close Bug
+	1370 (http://moodle.org/bugs/bug.php?op=show&bugid=1370)
+
+2004-05-15 Saturday 03:36  stronk7
+
+	* editcategories.html, export.php, exportentry.php, formats.php,
+	import.php, mod.html, print.php, rate.php, report.php,
+	showentry.php, tabs.html, view.php, db/mysql.php, db/oci8po.php,
+	db/postgres7.php: 
+	
+	Added missing Id: cvs tag. Bug 1394
+	http://moodle.org/bugs/bug.php?op=show&bugid=1394
+
+2004-05-15 Saturday 03:29  stronk7
+
+	* approve.php: 
+	
+	Added missing Id: cvs tag. Bug 1394
+	http://moodle.org/bugs/bug.php?op=show&bugid=1394
+
+2004-05-15 Saturday 03:14  stronk7
+
+	* edit.php, version.php, db/mysql.php, db/postgres7.php: 
+	
+	Upgraded glossary to 2004051400. The process will launch an update
+	of entry->concept and alias->alias to trim them.  This should close
+	bug 985 forever... 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=985)
+
+2004-05-15 Saturday 02:37  stronk7
+
+	* backuplib.php, edit.php, import.php, lib.php, restorelib.php: 
+	
+	Now, the entry->concept and alias->alias fields are trimmed in
+	edit, import, export, backup and restore.  To solve bug 985
+	(http://moodle.org/bugs/bug.php?op=show&bugid=985)
+
+2004-05-15 Saturday 01:23  stronk7
+
+	* sql.php: 
+	
+	Reverted to revision 1.8 (left join) to continue working in bug
+	985.
+
+2004-05-14 Friday 03:27  stronk7
+
+	* sql.php: 
+	
+	Now the show=concept|alias has been decoupled into 2 sql statements
+	to make it works under every MySQL version.  Hope this close Bug
+	985 forever...
+
+2004-05-13 Thursday 04:39  stronk7
+
+	* sql.php: 
+	
+	Bug 1296 solved.  Now duplicate entries are showed in all the
+	lists. Simply I've changed the fields order in select statements to
+	make entryid (unique) the first.
+	
+	Not detected negative consequences...ciao :-)
+	http://moodle.org/bugs/bug.php?op=show&bugid=1296
+
+2004-05-13 Thursday 03:03  stronk7
+
+	* config.html: 
+	
+	Added some harcoded strings in glossary module (Bug 1062)
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1062)
+
+2004-05-13 Thursday 02:44  stronk7
+
+	* sql.php: 
+	
+	Solved bug 985. Now "show" will work with aliases and with concepts
+	with and without aliases. Changed the cuery to a left join to be
+	able to process entries without aliases. This type of operation
+	should be changed to boolean queries sometime in MySQL 4!! Test
+	it!! http://moodle.org/bugs/bug.php?op=show&bugid=985
+
+2004-05-13 Thursday 01:59  stronk7
+
+	* print.php: 
+	
+	Solved bug 1378. Missing encoding in glossary/print.php
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1378)
+
+2004-05-13 Thursday 00:55  stronk7
+
+	* comment.html, edit.html, editcategories.html, mod.html: 
+	
+	Changed some incorrect <?= tags to <php p()...	Skodak has found
+	more incorrect tags. See bug 1376
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1376)
+
+2004-05-12 Wednesday 06:38  stronk7
+
+	* lib.php, view.php, formats/2.php, formats/3.php, formats/4.php,
+	formats/5.php: 
+	
+	Solved bug 1086.  Please, verify (and close) it. Patch submitted by
+	Petr Skoda. Thanks! I've modified some lines in formats to avoid
+	some Notices and make everything display more consistent. Please,
+	test it!!
+
+2004-05-12 Wednesday 03:59  stronk7
+
+	* lib.php: 
+	
+	Now, concept and aliases are not linked when viewing entry itself.
+	This will close bugs 1145 and 1295.  Thanks to Petr Skoda and his
+	patch!
+
+2004-05-12 Wednesday 02:06  stronk7
+
+	* lib.php: 
+	
+	Now concepts are not enclosed by paragraph tags. Bug 1298.
+
+2004-05-12 Wednesday 01:31  stronk7
+
+	* lib.php: 
+	
+	Now glossary concepts are not linked (bug 1366).  Patch submitted
+	by Petr Skoda.
+
+2004-05-11 Tuesday 02:24  stronk7
+
+	* config.html: 
+	
+	Solved another notice in glossary config page with
+	glossary_entbypage
+
+2004-05-11 Tuesday 02:10  stronk7
+
+	* edit.html, edit.php: 
+	
+	Solved some notices (debug mode) when creating new entries...
+
+2004-05-10 Monday 07:10  stronk7
+
+	* mod.html: 
+	
+	Included some missing colons...I forgot.
+
+2004-05-10 Monday 06:27  stronk7
+
+	* backuplib.php, restorelib.php: 
+	
+	Now glossary->rsstype and glossary->rssarticles are in backup &
+	restore.  Added two missing strings too.
+
+2004-05-10 Monday 06:20  stronk7
+
+	* config.html, mod.html, rsslib.php, version.php, view.php,
+	db/mysql.php, db/mysql.sql, db/oci8po.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	Now glossaries can produce RSS feeds too !! Some strings (RSS
+	related) has been moved from forum.php to moodle.php to avoid
+	suplicating them once per module.  It seems to work fine, please
+	test...:-)
+
+2004-05-09 Sunday 04:52  gustav_delius
+
+	* tabs.html: 
+	
+	removed some undefined variable errors. However there are lots of
+	them in edit.html, see bug 1344
+
+2004-05-09 Sunday 04:47  gustav_delius
+
+	* edit.html: 
+	
+	category list now sorted when adding entry, thanks to Bernard, bug
+	1010
+
+2004-05-02 Sunday 10:25  moodler
+
+	* showentry.php: 
+	
+	Some fixes to headers
+
+2004-05-02 Sunday 10:13  moodler
+
+	* showentry.php: 
+	
+	Don't require login to site level glossary entries
+
+2004-04-24 Saturday 08:48  stronk7
+
+	* import.php: 
+	
+	Now encoding some fields to be non-ASCII aware. Thanks to Petr
+	Skoda.	See bug 1266
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1266&pos=14). 
+	Applied the same patch to alias too!!
+
+2004-04-18 Sunday 13:54  moodler
+
+	* lib.php, view.php: 
+	
+	SOme fixes for
+	
+	  - the URL used in recent activity links
+	  - the display of single entries
+
+2004-04-07 Wednesday 16:33  moodler
+
+	* lib.php: 
+	
+	More robust handling when creating glossary export files
+
+2004-04-03 Saturday 21:03  moodler
+
+	* deleteentry.php, deleteentry.html: 
+	
+	Started out with a small user interface fix (to use standard
+	functions) and ended up cleaning up the code quite a bit
+
+2004-03-31 Wednesday 16:34  moodler
+
+	* lib.php, view.php, formats/1.php, formats/4.php: 
+	
+	Some fixes to highlighting ... it is now performed AFTER the
+	format_text.
+	
+	This means that searches can no longer mess up the TeX formatting.
+	
+	Also, the concept names are now formatted, allowing multilang, TeX
+	etc
+
+2004-03-31 Wednesday 16:14  moodler
+
+	* view.php: 
+	
+	Make searching parameters sticky
+
+2004-03-31 Wednesday 16:05  moodler
+
+	* formats/: 3.php, 4.php, 5.php, 6.php: 
+	
+	Fixed missing argument $ratings
+
+2004-03-31 Wednesday 15:46  moodler
+
+	* filter.php: 
+	
+	Escape some concept strings that can cause trouble in eregi
+
+2004-03-10 Wednesday 00:30  moodler
+
+	* filter.php: 
+	
+	Fixed a little bug when glossary filter called from front page or
+	anywhere else a course is not defined
+
+2004-02-22 Sunday 08:20  moodler
+
+	* dynalink.php, filter.php, version.php, db/mysql.php,
+	db/postgres7.php: 
+	
+	Renamed dynalink.php to filter.php for consistency with other
+	filters
+
+2004-02-21 Saturday 21:21  willcast
+
+	* dynalink.php, sql.php: 
+	
+	- Dealing with incompatibilities related to posgresql.
+
+2004-02-21 Saturday 21:05  willcast
+
+	* lib.php, sql.php: 
+	
+	- Fixing come incompatilities with PostgreSQL.
+	
+	THANKS TO ULRIK PETERSON!
+
+2004-02-21 Saturday 10:48  willcast
+
+	* dynalink.php: 
+	
+	- Linking global categories from within courses now works.
+
+2004-02-21 Saturday 09:16  willcast
+
+	* dynalink.php: 
+	
+	- Linking global categories from within courses now works.
+
+2004-02-20 Friday 12:14  moodler
+
+	* dynalink.php: 
+	
+	Making the link title look a bit nicer for long strings with spaces
+	etc
+
+2004-02-20 Friday 03:07  paca70
+
+	* db/postgres7.sql: 
+	
+	Fixed INT4 SERIAL
+
+2004-02-19 Thursday 17:54  paca70
+
+	* db/postgres7.sql: 
+	
+	Removed signed/unsigned definations (Thanks to Ulrik Petersen  to
+	pointing this out)
+
+2004-02-19 Thursday 06:29  stronk7
+
+	* restorelib.php: 
+	
+	Now glossary logs are restored too !! :-)
+
+2004-02-19 Thursday 05:50  stronk7
+
+	* comment.php: 
+	
+	Little bug storing wrong comment->id in the info field when
+	performing the "delete comment" action. Now it works fine. :-)
+
+2004-02-19 Thursday 04:52  stronk7
+
+	* approve.php, comment.php, comments.php, deleteentry.php,
+	edit.php: 
+	
+	Added the cmid field to some add_to_log() calls. To use it when
+	restoring logs. Now I think that everything is ready !! :-)
+
+2004-02-19 Thursday 04:02  stronk7
+
+	* editcategories.php: 
+	
+	Added cmid to some add_to_log() function calls.  Needed to be able
+	to restore logs properly. :-)
+
+2004-02-17 Tuesday 01:32  moodler
+
+	* lib.php: 
+	
+	Global not defined
+
+2004-02-16 Monday 17:24  moodler
+
+	* lib.php: 
+	
+	Fixed some old pix paths
+
+2004-02-13 Friday 06:42  willcast
+
+	* db/postgres7.sql: 
+	
+	Adding missing columns... and tables for PosgresSQL squema
+
+2004-02-01 Sunday 12:42  moodler
+
+	* version.php: 
+	
+	Updating version numbers of all Modules to make things a bit
+	clearer
+
+2004-01-31 Saturday 23:24  moodler
+
+	* version.php: 
+	
+	All modules now require the very latest because of the changes to
+	add_to_log
+
+2004-01-31 Saturday 23:22  moodler
+
+	* view.php: 
+	
+	Upgraded add_to_log to send cm->id
+
+2004-01-30 Friday 15:29  moodler
+
+	* showentry.php: 
+	
+	No functional change, just me moodling
+
+2004-01-28 Wednesday 12:27  moodler
+
+	* version.php: 
+	
+	Define minimum required versions of Moodle
+
+2004-01-26 Monday 20:21  moodler
+
+	* index.php: 
+	
+	New dividers
+
+2004-01-26 Monday 04:34  gustav_delius
+
+	* edit.html, formats.php, import.html, lib.php, mod.html,
+	print.php: 
+	
+	replaced incorrectly closed html tags, see bug 365
+
+2004-01-25 Sunday 12:05  willcast
+
+	* dynalink.php, lib.php: 
+	
+	- Solving bug 995:    Blank aliases caused the autolinking feature
+	to mess the whole thing...
+
+2004-01-17 Saturday 18:18  moodler
+
+	* showentry.php: 
+	
+	A very quick and dirty try .... Williams?  What do you think?
+
+2004-01-16 Friday 19:39  moodler
+
+	* showentry.php: 
+	
+	Require user to login to see glossary entries (if a course is
+	specified)
+
+2004-01-13 Tuesday 21:48  willcast
+
+	* edit.html: 
+	
+	- Solving bug 971:    Some default settings override db fields when
+	editing an entry.
+
+2003-12-11 Thursday 00:36  moodler
+
+	* view.php: 
+	
+	A little spacing on the display
+
+2003-12-11 Thursday 00:29  moodler
+
+	* comment.html, comment.php, comments.php: 
+	
+	Hope you don't mind, Will, but I had to do some cleaning up of the
+	comments pages
+	
+	   - comments look more like forums
+	   - glossary entry is displayed consistently
+	   - workflow makes more sense to me at least (more like forums)
+	   - code is shorter   :-)
+
+2003-12-11 Thursday 00:06  moodler
+
+	* comments.php, lib.php: 
+	
+	Simplification of the comments page and more forum-like comments
+
+2003-12-10 Wednesday 16:47  moodler
+
+	* lib.php: 
+	
+	FIxed size of comment icon
+
+2003-12-10 Wednesday 16:44  moodler
+
+	* edit.html: 
+	
+	Whoops left a typo
+
+2003-12-10 Wednesday 16:43  moodler
+
+	* edit.html: 
+	
+	Changed some font size
+
+2003-12-07 Sunday 13:57  moodler
+
+	* comment.gif, comments.php: 
+	
+	New, smaller comment icon
+
+2003-12-04 Thursday 02:33  willcast
+
+	* lib.php: 
+	
+	- First step towards Tom Murdock's suggestions on a global search
+	feature (if it is ever implented)...
+	
+	Added a new funtion: module_search( $course, $searchterms,
+	$extended, $glossary = NULL)
+	
+	It returns all entries that matches the specified criteria in any
+	glossaries within a given $course. It performs an $extended search
+	if necessary.
+	
+	It restrict the search to only one $glossary if specified
+	(currently used by the internal search function of the module).
+
+2003-12-03 Wednesday 02:53  willcast
+
+	* edit.html: 
+	
+	- Bringing order to chaos (thanks Martin)
+
+2003-12-02 Tuesday 22:43  willcast
+
+	* lib.php: 
+	
+	- Missing a $firstname $lastname... :(	Changed to fullname
+
+2003-12-02 Tuesday 22:32  willcast
+
+	* deleteentry.php, edit.html, lib.php: 
+	
+	- Some fixes when deleting entries and glossaries.  - Changing the
+	way the comments are shown - Saving a couple of lines in the Add
+	Entry screen.
+
+2003-11-27 Thursday 21:32  willcast
+
+	* db/mysql.php, version.php: 
+	
+	- Deleting inconsistent records on glossary_alias due to the last
+	fixed bug.
+
+2003-11-27 Thursday 13:25  willcast
+
+	* edit.php: 
+	
+	- Fixing bug regarding the aliases (pointed out by Sho Fukamachi
+	also)
+
+2003-11-26 Wednesday 22:42  willcast
+
+	* view.php: 
+	
+	- Fixing typo (pointed out by Sho Fukamachi)
+
+2003-11-26 Wednesday 22:38  willcast
+
+	* export.php, lib.php: 
+	
+	- Removing tags from glossary name when exporting the entries.
+
+2003-11-26 Wednesday 01:44  willcast
+
+	* dynalink.php, edit.php, lib.php, view.php: 
+	
+	- Fixed two bugs: Teacher's modified or added entries were being
+	set as not approved if the default approval status is off.  - Fixed
+	bug when trying to display entries with ? in the definitions or
+	aliases.
+
+2003-11-26 Wednesday 00:37  willcast
+
+	* lib.php: 
+	
+	- Student can't edit their own entries solved.
+
+2003-11-23 Sunday 10:46  willcast
+
+	* lib.php: 
+	
+	- Properly deleting attached files when a glossary is deleted.
+
+2003-11-23 Sunday 09:01  willcast
+
+	* lib.php, view.php: 
+	
+	- Minor fix (locating the send ratings button correctely when the
+	mode is entry.)
+
+2003-11-23 Sunday 04:02  stronk7
+
+	* backuplib.php, restorelib.php: 
+	
+	Now glossary_ratings are in backup/restore too. !! Solved one
+	errors with glossary_alias.  Updated "graphical structure" of the
+	module.
+
+2003-11-22 Saturday 06:51  stronk7
+
+	* restorelib.php: 
+	
+	Some needed scales recoding previous to ratings... :-)
+
+2003-11-22 Saturday 03:04  willcast
+
+	* config.html: 
+	
+	- Minor fix (removing a notice)
+
+2003-11-22 Saturday 03:00  willcast
+
+	* db/mysql.php: 
+	
+	- Compatibility issue. (Eloy, try this one).
+
+2003-11-22 Saturday 02:42  willcast
+
+	* backuplib.php, restorelib.php: 
+	
+	- Grading enabled.... finally.
+
+2003-11-22 Saturday 02:29  willcast
+
+	* TODO.txt, lib.php, mod.html, version.php, view.php, db/mysql.php,
+	db/mysql.sql, formats/2.php, formats/3.php, formats/4.php,
+	formats/5.php, formats/6.php, rate.php, report.php: 
+	
+	- Grading enabled.... finally.
+
+2003-11-21 Friday 13:24  moodler
+
+	* config.html, lib.php, view.php: 
+	
+	Remove evil styles ;-)
+
+2003-11-21 Friday 12:55  willcast
+
+	* lib.php, view.php: 
+	
+	- Removing my nice black lines around the tabs.. sniff... sniff
+	
+	8D
+
+2003-11-21 Friday 11:33  willcast
+
+	* dynalink.php, lib.php, sql.php, tabs.html, view.php: 
+	
+	- Removing some Notices.. Thanks to Eloy for leting me know!
+
+2003-11-21 Friday 11:00  willcast
+
+	* lib.php: 
+	
+	- Found the bug with the Edit Categories button. Fixed.
+
+2003-11-21 Friday 10:50  willcast
+
+	* lib.php, print.php, sql.php, view.php: 
+	
+	- Fixing minor bugs... Nothing related with the problems the
+	glossary is presenting right now in moodle.org... :(
+
+2003-11-21 Friday 07:37  willcast
+
+	* dynalink.php, tabs.html: 
+	
+	- Adding slashes to [,] and other characters to allow autolinking.
+
+2003-11-20 Thursday 10:26  willcast
+
+	* tabs.html: 
+	
+	- fixed little bug on url called by the alphabet tab.
+
+2003-11-20 Thursday 01:47  willcast
+
+	* view.php: 
+	
+	- Case sensitive search when click on a letter, fixed.	- Adding a
+	display format manager. It controls the behavior of the display
+	format when the user enter the glossary and when an auto-link is
+	shown.	- Adding support to the new fullname function.
+
+2003-11-20 Thursday 01:36  willcast
+
+	* TODO.txt, config.html, dynalink.php, edit.php, formats.php,
+	lib.php, mod.html, print.php, sql.php, version.php, view.php,
+	db/mysql.php, db/mysql.sql, formats/2.php, formats/3.php,
+	formats/6.php: 
+	
+	- Case sensitive search when click on a letter, fixed.	- Adding a
+	display format manager. It controls the behavior of the display
+	format when the user enter the glossary and when an auto-link is
+	shown.	- Adding support to the new fullname function.
+
+2003-11-18 Tuesday 22:29  willcast
+
+	* lib.php: 
+	
+	- Messing of A and IMG tags because of auto-linking fixed
+
+2003-11-18 Tuesday 21:49  willcast
+
+	* print.php, sql.php, view.php: 
+	
+	- Improved printer-friendly version - Cosmetic change in the main
+	view of a glossary.
+
+2003-11-18 Tuesday 11:41  willcast
+
+	* lib.php: 
+	
+	- Adding View comments link to the new display format
+
+2003-11-18 Tuesday 11:25  willcast
+
+	* lib.php, view.php, formats/6.php: 
+	
+	- Adding View comments link to the new display format
+
+2003-11-18 Tuesday 10:28  willcast
+
+	* comments.php, lib.php: 
+	
+	- Using user-defined functions to display comments properly.  -
+	Adding a default view to auto-linked entries when the new display
+	format is used (temporarly until the display format manager is
+	done)
+
+2003-11-18 Tuesday 09:07  willcast
+
+	* formats/6.php: 
+	
+	- Nice default view to the new format display.
+
+2003-11-18 Tuesday 08:45  willcast
+
+	* formats/6.php: 
+	
+	- New display format: Entry list (please, fix the translation if it
+	is wrong).
+
+2003-11-18 Tuesday 08:41  willcast
+
+	* lib.php, showentry.php, view.php: 
+	
+	- Now you can override the display format of a glossary (useful to
+	certain display format -asked by Tom Murdock-, automatic linking,
+	etc)
+
+2003-11-17 Monday 20:40  willcast
+
+	* edit.html: 
+	
+	- Fixed bug regarding default setting' variable names
+
+2003-11-17 Monday 11:08  willcast
+
+	* backuplib.php, restorelib.php: 
+	
+	- Backup/restore of the new field entbypage
+
+2003-11-17 Monday 01:13  willcast
+
+	* lib.php, view.php: 
+	
+	- Improved browse by author.  - view.php?id=cm&show=[concept |
+	alias ] done.
+
+2003-11-16 Sunday 10:58  willcast
+
+	* TODO.txt: 
+	
+	- Todo list.
+
+2003-11-16 Sunday 10:53  willcast
+
+	* view.php: 
+	
+	- Fixing a bug: Group breaks even when the only thing that change
+	between an entry and the previous is its case.
+
+2003-11-15 Saturday 23:55  willcast
+
+	* approve.php, backuplib.php, comment.php, config.html,
+	deleteentry.html, deleteentry.php, dynalink.php, edit.html,
+	edit.php, editcategories.html, editcategories.php, export.php,
+	exportentry.php, import.php, lib.php, mod.html, print.php,
+	restorelib.php, showentry.php, tabs.html, version.php, view.php,
+	db/mysql.php, db/mysql.sql, db/postgres7.sql, formats/2.php,
+	formats/3.php, formats/4.php, formats/5.php: 
+	
+	- Rewrite of the internal API in order to, hopefully, create an
+	easy way to handle the flow of data internally and externally.	-
+	Adding a new frame: Browse by Author - A new, friendly way to show
+	entries (asked by Martin): view?id=cm&mode=term&hook=[concept |
+	alias ] - Handling user activies, outline and complete.  - Properly
+	showing new entries in recent activity box.  - Adding a flag to
+	categories to specify if a category should or should not be
+	automatically linked.  - Adding some missing strings and files as
+	well.  - Adding a field to each glossary that specify how many
+	entries by pages it should show.
+
+2003-11-15 Saturday 01:18  moodler
+
+	* dynalink.php: 
+	
+	No need to strip slashes in a filter ...
+
+2003-11-12 Wednesday 14:21  moodler
+
+	* dynalink.php: 
+	
+	urlencode the dynalinks so they don't give errors if they have
+	quotes in them etc
+
+2003-11-11 Tuesday 14:27  moodler
+
+	* edit.html, edit.php: 
+	
+	Undoing my changes to the editing functions, because it removed
+	backward compatibility with 1.1.1 ... this way it works on both.
+
+2003-11-09 Sunday 20:35  willcast
+
+	* import.php: 
+	
+	- BUg when importing aliases
+
+2003-11-09 Sunday 11:54  moodler
+
+	* edit.php: 
+	
+	Removed focus from header
+
+2003-11-09 Sunday 11:35  moodler
+
+	* print.php, view.php: 
+	
+	if the glossary is at site-level then don't require a login
+
+2003-11-09 Sunday 11:29  willcast
+
+	* showentry.php: 
+	
+	- Setting as optional the course id so, by default, it look for
+	entries in global glossaries (unless a glossary is specify that
+	will search in both).
+
+2003-11-09 Sunday 11:26  moodler
+
+	* editcategories.html, editcategories.php: 
+	
+	Minimal formatting changes to center things
+
+2003-11-09 Sunday 11:16  moodler
+
+	* edit.html, edit.php: 
+	
+	Some cosmetic changes to the code to use the new html editor
+	functions.
+	
+	No change in functionality at all.
+	
+	I was in the area trying to fix a bug on this page that only shows
+	up in Internet Explorer (something to do with editor)
+
+2003-11-08 Saturday 00:04  willcast
+
+	* lib.php: 
+	
+	- Missed that one.
+
+2003-11-07 Friday 23:58  willcast
+
+	* backuplib.php, import.php, lib.php, restorelib.php: 
+	
+	- Backup/restore and Import/export aliases.
+
+2003-11-06 Thursday 23:07  willcast
+
+	* export.php, lib.php: 
+	
+	- Allowing to selectively export categories or entries based on
+	current frame and view.
+
+2003-11-06 Thursday 00:41  willcast
+
+	* db/postgres7.sql: 
+	
+	- Removing tinyints from Postgresql's db squema.
+
+2003-11-05 Wednesday 23:27  willcast
+
+	* print.php: 
+	
+	- Fixed bug (printing-friendly version of an empty glossary)
+
+2003-11-05 Wednesday 20:46  willcast
+
+	* README.txt, lib.php, formats/2.php, formats/3.php, formats/4.php,
+	formats/5.php: 
+	
+	- Aliases are now shown when displaying entries
+
+2003-11-05 Wednesday 11:30  willcast
+
+	* icon.gif: 
+	
+	- New icon... :)
+
+2003-11-05 Wednesday 08:06  willcast
+
+	* TODO.txt, edit.html, edit.php, version.php, db/mysql.php,
+	db/mysql.sql, db/postgres7.sql: 
+	
+	- Adding aliases
+
+2003-11-05 Wednesday 02:38  willcast
+
+	* config.html, view.php: 
+	
+	- Adding paging when the number of entries shown is greater than
+	$CFG->glossary_entbypage - Adding $CFG->glossary_entbypage to
+	config.html
+
+2003-11-04 Tuesday 23:04  willcast
+
+	* dynalink.php, import.php: 
+	
+	- Solving problems when trying to autolink entries with apostrophes
+	on it - Idem, when importing entries.
+
+2003-11-04 Tuesday 20:36  moodler
+
+	* lib.php, view.php: 
+	
+	Glossary now gets the alphabet string from moodle.php instead of
+	glossary.php
+
+2003-11-04 Tuesday 11:53  willcast
+
+	* export.php, import.html, import.php, lib.php, tabs.html: 
+	
+	- Basic export/import functionality.. Does not export nor import
+	the attached files.
+
+2003-11-03 Monday 10:59  moodler
+
+	* db/mysql.php: 
+	
+	Removed blank lines at the end (!)
+
+2003-11-03 Monday 10:26  willcast
+
+	* dynalink.php, edit.html, edit.php, export.php, lib.php,
+	print.php, tabs.html, view.php: 
+	
+	- Cosmetic changes... Changing the Add Entry button for a new tab -
+	Creating two new tabs for the future export/import features.  -
+	Improving a little the Printer-Friendly version (now it shows what
+	you were watching in the previous frame)
+
+2003-11-02 Sunday 10:40  willcast
+
+	* mod.html: 
+	
+	- Typo
+
+2003-11-02 Sunday 10:37  willcast
+
+	* README.txt, config.html, edit.html, mod.html: 
+	
+	- Applying proper coding conventions to the default settings'
+	variables
+
+2003-11-02 Sunday 09:47  willcast
+
+	* TODO.txt, config.html, edit.html, edit.php, mod.html: 
+	
+	- The admin can define default values for glossary and entries'
+	settings via the admin modules interface.
+
+2003-11-02 Sunday 04:27  willcast
+
+	* TODO.txt, approve.php, edit.php, editcategories.php, export.php,
+	lib.php, print.gif, print.php, view.php: 
+	
+	- Printer-friendly version of the glossary - First step in the
+	export/import feature (export is done) - Minor changes here and
+	there
+
+2003-10-31 Friday 23:26  willcast
+
+	* lib.php, version.php, db/mysql.php: 
+	
+	- Important update: I did not delete categories nor comments once a
+	glossary has been deleted. Fixed now.
+
+2003-10-31 Friday 21:40  willcast
+
+	* lib.php: 
+	
+	Bug fixed: - Updating a Default Approval Status from NO to YES in a
+	glossary, now approve automatically all entries waiting for
+	approval.
+
+2003-10-31 Friday 16:47  stronk7
+
+	* backuplib.php, restorelib.php: 
+	
+	globalglossary is included now in backup/restore. :-)
+
+2003-10-30 Thursday 07:33  willcast
+
+	* dynalink.php, edit.html, edit.php, lib.php, mod.html,
+	showentry.php, version.php, db/mysql.php, db/mysql.sql,
+	db/postgres7.sql: 
+	
+	- Global glossaries now available. All current rules apply to its
+	entries.
+
+2003-10-29 Wednesday 00:10  willcast
+
+	* deleteentry.html, edit.html, edit.php, index.php, lib.php,
+	view.php, formats/2.php, formats/3.php, formats/4.php,
+	formats/5.php: 
+	
+	- New encapsulated functions in order to make easier to create new
+	display formats - Fixed problem when showing 'ALL' in alphabet
+	frame - Disabled unnecessary fields when selecting DO NOT
+	AUTOMATICALY LINK THIS ENTRY in the adde entry screen
+
+2003-10-28 Tuesday 01:31  stronk7
+
+	* restorelib.php: 
+	
+	Take out some debug info. Forgot it in previous commit.
+
+2003-10-27 Monday 22:25  moodler
+
+	* mod.html: 
+	
+	A little typo hiding the continuous format
+
+2003-10-26 Sunday 16:14  moodler
+
+	* index.php: 
+	
+	In the index, show how many entries there are in each glossary
+
+2003-10-26 Sunday 16:06  moodler
+
+	* view.php: 
+	
+	Use format_text for consistency
+
+2003-10-25 Saturday 10:53  moodler
+
+	* mod.html: 
+	
+	Now uses choose_from_menu() for the format display, and the items
+	are now sorted.
+	
+	The other items could be easily done with choose_from_menu() too 
+	;-)
+
+2003-10-22 Wednesday 12:15  willcast
+
+	* approve.php, dynalink.php, edit.php, editcategories.html,
+	editcategories.php, lib.php, view.php: 
+	
+	- Added a new frame: Browse by date.  - Removing unnecesary double
+	quotes (not all of them yet)
+
+2003-10-22 Wednesday 04:45  willcast
+
+	* dynalink.php, mod.html: 
+	
+	- Sorting entries by the length of the concept so large concepts
+	could be linked first if they exist in the text to parse (avoiding
+	that smaller concepts "gain control" over the larges one).  -
+	Setting hard=coded default settings to glossary (will be replaced
+	soon by global default settings)
+
+2003-10-22 Wednesday 02:32  willcast
+
+	* comment.php: 
+	
+	- Preventing guest for posting comments on entries
+
+2003-10-22 Wednesday 00:30  willcast
+
+	* approve.php, dynalink.php: 
+	
+	- Fixed bug the dealing with concepts that contains slashes
+
+2003-10-21 Tuesday 21:27  willcast
+
+	* dynalink.php, edit.php, lib.php, showentry.php, view.php: 
+	
+	- Fixed some bugs detected with Jeff's glossary (mostly with
+	dynalink link feature)
+
+2003-10-21 Tuesday 17:49  stronk7
+
+	* restorelib.php: 
+	
+	Small typo :-)
+
+2003-10-21 Tuesday 13:19  willcast
+
+	* backuplib.php, restorelib.php: 
+	
+	- Backup/Restore of the new field
+
+2003-10-21 Tuesday 12:55  willcast
+
+	* approve.php, check.gif, comment.html, comment.php,
+	deleteentry.php, dynalink.php, edit.html, edit.php, lib.php,
+	mod.html, version.php, view.php, db/mysql.php, db/mysql.sql,
+	formats/2.php, formats/3.php, formats/4.php, formats/5.php: 
+	
+	- Cleaning a lot of code in edit.php and view.php - Removing more
+	notices when debug is ON - Added a new feature: Now the entries
+	have a default approval status... Not approved entries are shown on
+	a teachers-only frame from which they can be approved or not prior
+	to be visible by everyone.
+
+2003-10-21 Tuesday 00:42  willcast
+
+	* deleteentry.php, dynalink.php, lib.php: 
+	
+	- Removing notices when debug is on - Deleting entries with
+	attachments now delete the attachments properly
+
+2003-10-20 Monday 06:24  stronk7
+
+	* restorelib.php: 
+	
+	Now, glossary_comments are in restore too !! :-)
+
+2003-10-20 Monday 06:00  stronk7
+
+	* backuplib.php: 
+	
+	Splited one function into two :-)
+
+2003-10-20 Monday 05:38  stronk7
+
+	* backuplib.php: 
+	
+	Now glossary_comments are in backup.  Solved one issue when
+	exporting categories.
+
+2003-10-20 Monday 02:04  willcast
+
+	* backuplib.php, restorelib.php: 
+	
+	- Backing up new fields...  - No restoring yet... :(
+
+2003-10-19 Sunday 23:49  willcast
+
+	* backuplib.php: 
+	
+	- Fixed bug related to comments when doing a backup...
+
+2003-10-19 Sunday 13:07  moodler
+
+	* lib.php: 
+	
+	More styles -- missed the target last time!
+
+2003-10-19 Sunday 13:02  moodler
+
+	* lib.php: 
+	
+	Added styles to tabs
+
+2003-10-19 Sunday 11:48  willcast
+
+	* asc.gif, desc.gif: 
+	
+	- A couple of icons that I forgot to include
+
+2003-10-19 Sunday 11:40  willcast
+
+	* lib.php, mod.html, version.php, view.php, db/mysql.php: 
+	
+	- Adding two more display formats: Continuous and FAQ - Fixed bug
+	818: Adding a new view: Sorted (by creation date or by last
+	modified.
+
+2003-10-19 Sunday 11:28  moodler
+
+	* formats/: 2.php, 3.php: 
+	
+	FIxed styles
+
+2003-10-19 Sunday 04:37  willcast
+
+	* showentry.php: 
+	
+	- Fixed another bug when showing "dynaentries" (it does not take in
+	count the case sensitive setting)
+
+2003-10-19 Sunday 04:21  willcast
+
+	* lib.php, showentry.php, showentry.php: 
+	
+	- Fixed bug when showing "dynaentries" (it showed all concepts no
+	matter the course nor its dynasetting)
+
+2003-10-18 Saturday 21:48  willcast
+
+	* lib.php: 
+	
+	- Housekeeping... :(
+
+2003-10-18 Saturday 21:43  willcast
+
+	* deleteentry.php, lib.php: 
+	
+	- Housekeeping... :)
+
+2003-10-18 Saturday 21:33  willcast
+
+	* deleteentry.php, lib.php: 
+	
+	- Fixed a problem when showing the icons in entries with inline
+	images.  - Fixed a bug when deleting entries without attachments.
+
+2003-10-18 Saturday 20:14  willcast
+
+	* editcategories.php: 
+	
+	- "striping_tags" inthe title
+
+2003-10-17 Friday 23:35  willcast
+
+	* dynalink.php: 
+	
+	- Two little mods in the category linking issue:     The concepts
+	could be in more than one glossary so...      I put it inside the
+	"if concept is category" conditional... I little more efficient.
+
+2003-10-17 Friday 23:30  moodler
+
+	* dynalink.php: 
+	
+	Fixed category linking.  :-)
+
+2003-10-17 Friday 16:55  moodler
+
+	* lib.php: 
+	
+	Made comments link smaller, and also prints "1 comment" and "2
+	comments"
+
+2003-10-17 Friday 16:49  moodler
+
+	* comment.php: 
+	
+	Some tidying up of the code to display the comment editing page
+
+2003-10-17 Friday 16:42  moodler
+
+	* edit.html, edit.php: 
+	
+	Some small changes ... made the heading a real heading and removed
+	includes from the template
+
+2003-10-17 Friday 16:38  moodler
+
+	* formats/: 1.php, 2.php, 3.php: 
+	
+	Some more cleaning up of the HTML and code formatting ...
+
+2003-10-17 Friday 16:19  moodler
+
+	* showentry.php, formats/3.php: 
+	
+	Some modification so that the encyclopedia format looks more like
+	forum posts (in fact it uses the same styles)
+
+2003-10-17 Friday 06:04  willcast
+
+	* db/mysql.php, db/mysql.sql, db/postgres7.sql, dynalink.php,
+	edit.html, edit.php, lib.php, mod.html, showentry.php, version.php:
+	
+	
+	Case sensitive match Whole words match No match at all (a bit rude
+	(you have to get down to the HTML code), no GUI so far either)
+	Categories are now linked too (I forced to be a case sensitive
+	match) You can automatically link one or several glossaries at once
+	no matter if it is a main one or not.
+
+2003-10-16 Thursday 14:37  willcast
+
+	* dynalink.php: 
+	
+	- Testing... If you can read this.. I solved the problem (thanks to
+	Martin)! :)
+
+2003-10-16 Thursday 14:00  moodler
+
+	* dynalink.php: 
+	
+	Added version number to source
+
+2003-10-16 Thursday 13:41  moodler
+
+	* lib.php: 
+	
+	Slight change to glossary_print_entry_icons so that "comments" link
+	isn't printed if comments are disabled
+
+2003-10-16 Thursday 13:15  willcast
+
+	* backuplib.php, comment.gif, comment.html, comment.php,
+	comments.php, lib.php, mod.html, restorelib.php, version.php,
+	db/mysql.php, db/mysql.sql, db/postgres7.sql: 
+	
+	- Now entries could be commented by other users.  - KNOWN BUG: It
+	does not restore the comments even when userinfo is set... Eloy! I
+	need your help! :)
+
+2003-10-16 Thursday 11:23  moodler
+
+	* dynalink.php: 
+	
+	Added autolink style
+
+2003-10-16 Thursday 06:01  willcast
+
+	* dynalink.php: 
+	
+	- Link within link issue: Solved.
+
+2003-10-16 Thursday 01:27  willcast
+
+	* dynalink.php: 
+	
+	- Link within link issue: Solved.
+
+2003-10-16 Thursday 00:12  willcast
+
+	* backuplib.php, edit.html, edit.php, lib.php, mod.html,
+	restorelib.php, version.php, view.php, db/mysql.php, db/mysql.sql,
+	db/oci8po.sql, db/postgres7.sql: 
+	
+	- Solving bug 817 (adding a glossary overview) - Minor changes
+	adopting moodle's naming and coding conventions (perhaps not fully
+	adopted yet) - Solving bug that traspose All Categories with Not
+	Categorised view.
+
+2003-10-13 Monday 22:44  moodler
+
+	* dynalink.php: 
+	
+	Minor formatting change ... links were obtrusive in forums etc ...
+	
+	Will, what do you think?
+
+2003-10-13 Monday 22:11  moodler
+
+	* dynalink.php: 
+	
+	NEW EXPERIMENTAL FEATURE: text filters.
+	
+	This new feature allows arbitrary text filters to be added to any
+	HTML that is printed (forum posts, resources etc) ... anything that
+	uses the standard format_text function.
+	
+	The first one properly supported is the glossary dynamic linking
+	feature.
+
+2003-10-08 Wednesday 11:13  moodler
+
+	* lib.php, view.php: 
+	
+	Started out reformatting the code a little and ended up simplifying
+	the interface a bit ... hope you like it, Will!
+
+2003-10-01 Wednesday 09:35  willcast
+
+	* lib.php: 
+	
+	- Exported entries with attachments are now properly shown
+	everywhere.
+
+2003-09-30 Tuesday 12:13  willcast
+
+	* dynalink.php: 
+	
+	- Multiwords concepts are now shown as a single link when they are
+	dinymically linked.
+	
+	KNOWN BUG: When a concept is contained inside another concept (i.e.
+	HOUSE and DOLL HOUSE) only the smaller concept is shown. Any help
+	would be appreciated.
+
+2003-09-30 Tuesday 12:01  willcast
+
+	* dynalink.php: 
+	
+	- Multiwords concepts are now shown as a single link when they are
+	dinymically linked.
+	
+	KNOWN BUG: When a concept is contained inside another concept (i.e.
+	HOUSE and DOLL HOUSE) only the smaller concept is shown. Any help
+	would be appreciated.
+
+2003-09-30 Tuesday 12:00  les_kopari
+
+	* db/oci8po.sql: 
+	
+	Test inserts updated for new column.
+
+2003-09-30 Tuesday 11:55  les_kopari
+
+	* db/oci8po.sql: 
+	
+	Truncated names to < 30 chars for table, sequence and trigger.
+
+2003-09-30 Tuesday 10:17  willcast
+
+	* dynalink.php, lib.php, showentry.php: 
+	
+	- Duplicated entries are now shown together when a dynamic link is
+	clicked on.
+
+2003-09-30 Tuesday 05:37  stronk7
+
+	* formats/3.php: 
+	
+	Included new format for glossary display "Encyclopedia"
+
+2003-09-30 Tuesday 03:14  willcast
+
+	* view.php: 
+	
+	[no log message]
+
+2003-09-30 Tuesday 01:45  willcast
+
+	* dynalink.php, showentry.php, view.php: 
+	
+	- Implementing output text filters for glossary entries    
+	dynalink.php::glossary_dynamic_link($courseid, $text, $glossaryid =
+	NULL)
+
+2003-09-29 Monday 23:27  stronk7
+
+	* lib.php: 
+	
+	Simply, move the XXXX_get_participants() function from bottom to
+	the common function area.  See bug 807
+
+2003-09-29 Monday 21:44  willcast
+
+	* lib.php, view.php: 
+	
+	- Not Categorized is now the default view for category tab.
+
+2003-09-29 Monday 18:06  moodler
+
+	* db/mysql.sql: 
+	
+	Fixed typo on sourceglossaryid line
+
+2003-09-29 Monday 11:06  willcast
+
+	* backuplib.php, deleteentry.php, edit.html, edit.php,
+	editcategories.html, editcategories.php, exportentry.php, lib.php,
+	minus.gif, mod.html, restorelib.php, version.php, view.php,
+	db/mysql.php, db/mysql.sql, db/oci8po.sql, db/postgres7.sql: 
+	
+	- Exported entries are now linked instead of copied to the main
+	glossary.  - Short tags are gone.  - Little changes in ES language.
+
+2003-09-29 Monday 00:49  stronk7
+
+	* index.php: 
+	
+	Now the JumpMenu is showed when listing activities of this module. 
+	See Bug 803
+
+2003-09-28 Sunday 18:56  stronk7
+
+	* index.php: 
+	
+	Now, when listing activities, entries are dimmed if they are hidden
+	(teacher view). See bug 802.
+
+2003-09-25 Thursday 06:46  les_kopari
+
+	* db/oci8po.sql: 
+	
+	Added new columns and tables, but need resolution on table names >
+	30 in length, including mdl_glossary_entries_categories.
+
+2003-09-23 Tuesday 20:42  willcast
+
+	* edit.php: 
+	
+	[no log message]
+
+2003-09-23 Tuesday 20:34  willcast
+
+	* edit.html, edit.php, lib.php, view.php, db/mysql.php: 
+	
+	- Corrections in EN language. Thanks to Przemek! - Added a "All
+	categories" link to the category drop-down box in Category view.  -
+	Better display of categorized entries (more organized).  -
+	SelectLetter, Special and All captions are now properly showed when
+	some of the their flags are not set.  - Properly use of course
+	module visibility (in case someone directly access the URL)
+
+2003-09-22 Monday 20:35  willcast
+
+	* deleteentry.php: 
+	
+	[no log message]
+
+2003-09-22 Monday 08:06  stronk7
+
+	* backuplib.php, restorelib.php: 
+	
+	Now glossary categories are inbackup/restore too !! Not tested !!
+
+2003-09-22 Monday 07:40  stronk7
+
+	* backuplib.php: 
+	
+	Some cosmetical updates plus one error selecting
+	glossary_categories_entries solved. No backup is working ok... I
+	think.
+
+2003-09-22 Monday 07:39  willcast
+
+	* version.php, db/mysql.php, db/postgres7.sql, db/mysql.sql: 
+	
+	[no log message]
+
+2003-09-22 Monday 07:32  willcast
+
+	* version.php, db/mysql.php, db/mysql.sql, db/postgres7.sql: 
+	
+	[no log message]
+
+2003-09-22 Monday 07:07  stronk7
+
+	* backuplib.php: 
+	
+	Fixed small error
+
+2003-09-22 Monday 06:43  stronk7
+
+	* restorelib.php: 
+	
+	No restoring categories, but working again.
+
+2003-09-22 Monday 02:09  willcast
+
+	* backuplib.php, restorelib.php: 
+	
+	- Backup of categories and its entries - Working on the restore
+	process... Eloy will gives me a hand this (hopefully!)
+
+2003-09-22 Monday 01:08  willcast
+
+	* deleteentry.html, deleteentry.php, edit.html, edit.php,
+	editcategories.html, editcategories.php, exportentry.php, lib.php,
+	version.php, view.php, db/mysql.php, db/mysql.sql,
+	db/postgres7.php, db/postgres7.sql, formats/1.php, formats/2.php: 
+	
+	- Now the entries could be categorized.  - Any entry could belongs
+	to many categories - Improved main page and add entry look.  -
+	Added PostgreSQL7 squema (Thanks Janne Mikkonen!) - Deleting
+	entries also delete its attachments if any.
+
+2003-09-19 Friday 07:53  willcast
+
+	* view.php: 
+	
+	- Initial changes to categorize the entries..  - A new function in
+	lib that perhaps could be used in other modules:   
+	print_tabbed_table_start and print_tabbed_table_end
+
+2003-09-19 Friday 07:36  willcast
+
+	* edit.html, lib.php, version.php, view.php, db/mysql.php,
+	db/mysql.sql, formats/1.php, formats/2.php: 
+	
+	- Initial changes to categorize the entries..  - A new function in
+	lib that perhaps could be used in other modules:   
+	print_tabbed_table_start and print_tabbed_table_end
+
+2003-09-18 Thursday 22:18  willcast
+
+	* lib.php: 
+	
+	- When guest or students search entries, now they are correctly
+	displayed.
+
+2003-09-18 Thursday 05:27  stronk7
+
+	* restorelib.php: 
+	
+	Now restoring glossaries is included too !! Please, test it !!
+
+2003-09-18 Thursday 05:07  stronk7
+
+	* backuplib.php: 
+	
+	Some fields missing in backup. Fixed.
+
+2003-09-17 Wednesday 08:21  willcast
+
+	* icon.gif, icon1.gif: 
+	
+	[no log message]
+
+2003-09-17 Wednesday 05:45  stronk7
+
+	* backuplib.php: 
+	
+	Now entries attachments are in backup too. This module is slighty
+	different because when "no user info" is selected, teacher entries
+	are exported so, instead of copying all the moddata/glossary dir
+	(as other modules), files are copied selectively !!
+
+2003-09-17 Wednesday 02:51  willcast
+
+	* db/: mysql.php, mysql.sql: 
+	
+	- Display format of entries is now modular.  - Entries can have an
+	optional file - English help files.  - Now the alphabet is a
+	language string so it is now usable in other languages.
+	
+	KNOWN BUGS: - It does not backup nor restore the attached files of
+	the entries.
+
+2003-09-17 Wednesday 02:04  willcast
+
+	* README.txt, backuplib.php, deleteentry.php, edit.html, edit.php,
+	exportentry.php, index.php, lib.php, mod.html, restorelib.php,
+	version.php, view.php, formats/1.php, formats/2.php: 
+	
+	- Display format of entries is now modular.  - Entries can have an
+	optional file - English help files.  - Now the alphabet is a
+	language string so it is now usable in other languages.
+	
+	KNOWN BUGS: - It does not backup nor restore the attached files of
+	the entries.
+
+2003-09-17 Wednesday 01:22  les_kopari
+
+	* db/: oci8po.sql, oci8po.php: 
+	
+	Oracle version
+
+2003-09-16 Tuesday 11:07  moodler
+
+	* README.txt, backuplib.php, deleteentry.html, deleteentry.php,
+	edit.html, edit.php, export.gif, exportentry.php, icon.gif,
+	index.php, lib.php, mod.html, restorelib.php, version.php,
+	view.php, db/mysql.php, db/mysql.sql: 
+	
+	New Glossary module, version 0.1 - by Williams Castillo!
+

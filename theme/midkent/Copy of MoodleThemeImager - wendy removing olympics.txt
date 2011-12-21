@@ -1,0 +1,306 @@
+ThemePath=C:\xampplite\moodle\theme\midkent\
+
+[26/Jan]
+logo.gif = logos\australiaday-logo.gif
+logo_small.gif = logos\australiaday-logo-small.gif
+TitleToolTip.txt = logos\australiaday.txt
+
+[7/Feb]
+logo.gif = logos\chinesenewyear-logo.gif
+logo_small.gif = logos\chinesenewyear-logo-small.gif
+TitleToolTip.txt = logos\chinesenewyear.txt
+
+[14/Feb]
+logo.gif = logos\stvalentines-logo.gif
+logo_small.gif = logos\stvalentines-logo-small.gif
+TitleToolTip.txt = logos\stvalentines.txt
+
+[1/Mar]
+logo.gif = logos\stdavids-logo.gif
+logo_small.gif = logos\stdavids-logo-small.gif
+TitleToolTip.txt = logos\stdavids.txt
+
+[14/Mar]
+logo.gif = logos\piday-logo.gif
+logo_small.gif = logos\piday-logo-small.gif
+TitleToolTip.txt = logos\piday.txt
+
+[15/Mar]
+logo.gif = logos\stpatricks-logo.gif
+logo_small.gif = logos\stpatricks-logo-small.gif
+TitleToolTip.txt = logos\stpatricks.txt
+
+[22/Apr]
+logo.gif = logos\earthday-logo.gif
+logo_small.gif = logos\earthday-logo-small.gif
+TitleToolTip.txt = logos\earthday.txt
+
+[23/Apr]
+logo.gif = logos\stgeorges-logo.gif
+logo_small.gif = logos\stgeorges-logo-small.gif
+TitleToolTip.txt = logos\stgeorges.txt
+
+[4/May]
+logo.gif = logos\may4th-logo.gif
+logo_small.gif = logos\may4th-logo-small.gif
+TitleToolTip.txt = logos\may4th.txt
+
+[9/Jun]
+logo.gif = logos\carshare-logo.gif
+logo_small.gif = logos\carshare-logo-small.gif
+TitleToolTip.txt = logos\carshare.txt
+
+[20/Jun]
+logo.gif = logos\summersolstice-logo.gif
+logo_small.gif = logos\summersolstice-logo-small.gif
+TitleToolTip.txt = logos\summersolstice.txt
+
+[4/Jul]
+logo.gif = logos\4thjuly-logo.gif
+logo_small.gif = logos\4thjuly-logo-small.gif
+TitleToolTip.txt = logos\4thjuly.txt
+
+[22/Jul]
+logo.gif = logos\piday-logo.gif
+logo_small.gif = logos\piday-logo-small.gif
+TitleToolTip.txt = logos\piapproximationday.txt
+
+[1/Aug]
+logo.gif = logos\summer-logo.gif
+logo_small.gif = logos\summer-logo-small.gif
+TitleToolTip.txt = logos\summer.txt
+
+[2/Aug]
+logo.gif = logos\summer-logo.gif
+logo_small.gif = logos\summer-logo-small.gif
+TitleToolTip.txt = logos\summer.txt
+
+[3/Aug]
+logo.gif = logos\summer-logo.gif
+logo_small.gif = logos\summer-logo-small.gif
+TitleToolTip.txt = logos\summer.txt
+
+[4/Aug]
+logo.gif = logos\summer-logo.gif
+logo_small.gif = logos\summer-logo-small.gif
+TitleToolTip.txt = logos\summer.txt
+
+[5/Aug]
+logo.gif = logos\summer-logo.gif
+logo_small.gif = logos\summer-logo-small.gif
+TitleToolTip.txt = logos\summer.txt
+
+[6/Aug]
+logo.gif = logos\summer-logo.gif
+logo_small.gif = logos\summer-logo-small.gif
+TitleToolTip.txt = logos\summer.txt
+
+[7/Aug]
+logo.gif = logos\summer-logo.gif
+logo_small.gif = logos\summer-logo-small.gif
+TitleToolTip.txt = logos\summer.txt
+
+[8/Aug]
+logo.gif = logos\summer-logo.gif
+logo_small.gif = logos\summer-logo-small.gif
+TitleToolTip.txt = logos\summer.txt
+
+[9/Aug]
+logo.gif = logos\summer-logo.gif
+logo_small.gif = logos\summer-logo-small.gif
+TitleToolTip.txt = logos\summer.txt
+
+[10/Aug]
+logo.gif = logos\summer-logo.gif
+logo_small.gif = logos\summer-logo-small.gif
+TitleToolTip.txt = logos\summer.txt
+
+[11/Aug]
+logo.gif = logos\summer-logo.gif
+logo_small.gif = logos\summer-logo-small.gif
+TitleToolTip.txt = logos\summer.txt
+
+[12/Aug]
+logo.gif = logos\olympics-logo.gif
+logo_small.gif = logos\olympics-logo-small.gif
+TitleToolTip.txt = logos\olympics.txt
+
+[13/Aug]
+logo.gif = logos\olympics-logo.gif
+logo_small.gif = logos\olympics-logo-small.gif
+TitleToolTip.txt = logos\olympics.txt
+
+[14/Aug]
+logo.gif = logos\olympics-logo.gif
+logo_small.gif = logos\olympics-logo-small.gif
+TitleToolTip.txt = logos\olympics.txt
+
+[15/Aug]
+logo.gif = logos\olympics-logo.gif
+logo_small.gif = logos\olympics-logo-small.gif
+TitleToolTip.txt = logos\olympics.txt
+
+[16/Aug]
+logo.gif = logos\olympics-logo.gif
+logo_small.gif = logos\olympics-logo-small.gif
+TitleToolTip.txt = logos\olympics.txt
+
+[17/Aug]
+logo.gif = logos\olympics-logo.gif
+logo_small.gif = logos\olympics-logo-small.gif
+TitleToolTip.txt = logos\olympics.txt
+
+[18/Aug]
+logo.gif = logos\olympics-logo.gif
+logo_small.gif = logos\olympics-logo-small.gif
+TitleToolTip.txt = logos\olympics.txt
+
+[19/Aug]
+logo.gif = logos\olympics-logo.gif
+logo_small.gif = logos\olympics-logo-small.gif
+TitleToolTip.txt = logos\olympics.txt
+
+[20/Aug]
+logo.gif = logos\olympics-logo.gif
+logo_small.gif = logos\olympics-logo-small.gif
+TitleToolTip.txt = logos\olympics.txt
+
+[21/Aug]
+logo.gif = logos\olympics-logo.gif
+logo_small.gif = logos\olympics-logo-small.gif
+TitleToolTip.txt = logos\olympics.txt
+
+[22/Aug]
+logo.gif = logos\olympics-logo.gif
+logo_small.gif = logos\olympics-logo-small.gif
+TitleToolTip.txt = logos\olympics.txt
+
+[23/Aug]
+logo.gif = logos\olympics-logo.gif
+logo_small.gif = logos\olympics-logo-small.gif
+TitleToolTip.txt = logos\olympics.txt
+
+[24/Aug]
+logo.gif = logos\olympics-logo.gif
+logo_small.gif = logos\olympics-logo-small.gif
+TitleToolTip.txt = logos\olympics.txt
+
+[25/Aug]
+logo.gif = logos\summer-logo.gif
+logo_small.gif = logos\summer-logo-small.gif
+TitleToolTip.txt = logos\summer.txt
+
+[26/Aug]
+logo.gif = logos\summer-logo.gif
+logo_small.gif = logos\summer-logo-small.gif
+TitleToolTip.txt = logos\summer.txt
+
+[27/Aug]
+logo.gif = logos\summer-logo.gif
+logo_small.gif = logos\summer-logo-small.gif
+TitleToolTip.txt = logos\summer.txt
+
+[28/Aug]
+logo.gif = logos\summer-logo.gif
+logo_small.gif = logos\summer-logo-small.gif
+TitleToolTip.txt = logos\summer.txt
+
+[29/Aug]
+logo.gif = logos\summer-logo.gif
+logo_small.gif = logos\summer-logo-small.gif
+TitleToolTip.txt = logos\summer.txt
+
+[30/Aug]
+logo.gif = logos\summer-logo.gif
+logo_small.gif = logos\summer-logo-small.gif
+TitleToolTip.txt = logos\summer.txt
+
+[19/Sep]
+logo.gif = logos\talklikeapirate-logo.gif
+logo_small.gif = logos\talklikeapirate-logo-small.gif
+TitleToolTip.txt = logos\talklikeapirate.txt
+
+[23/Sep]
+logo.gif = logos\autumn-logo.gif
+logo_small.gif = logos\autumn-logo-small.gif
+TitleToolTip.txt = logos\autumn.txt
+
+[24/Sep]
+logo.gif = logos\autumn-logo.gif
+logo_small.gif = logos\autumn-logo-small.gif
+TitleToolTip.txt = logos\autumn.txt
+
+[28/Oct]
+logo.gif = logos\diwali-logo.gif
+logo_small.gif = logos\diwali-logo-small.gif
+TitleToolTip.txt = logos\diwali.txt
+
+[31/Oct]
+logo.gif = logos\halloween-logo.gif
+logo_small.gif = logos\halloween-logo-small.gif
+TitleToolTip.txt = logos\halloween.txt
+
+[5/Nov]
+logo.gif = logos\guyfawkes-logo.gif
+logo_small.gif = logos\guyfawkes-logo-small.gif
+TitleToolTip.txt = logos\guyfawkes.txt
+
+[1/Dec]
+logo.gif = logos\standrews-logo.gif
+logo_small.gif = logos\standrews-logo-small.gif
+TitleToolTip.txt = logos\standrews.txt
+
+[21/Dec]
+logo.gif = logos\wintersolstice-logo.gif
+logo_small.gif = logos\wintersolstice-logo-small.gif
+TitleToolTip.txt = logos\wintersolstice.txt
+
+[22/Dec]
+logo.gif = logos\christmas-logo.gif
+logo_small.gif = logos\christmas-logo-small.gif
+TitleToolTip.txt = logos\christmas.txt
+
+[23/Dec]
+logo.gif = logos\christmas-logo.gif
+logo_small.gif = logos\christmas-logo-small.gif
+TitleToolTip.txt = logos\christmas.txt
+
+[24/Dec]
+logo.gif = logos\christmas-logo.gif
+logo_small.gif = logos\christmas-logo-small.gif
+TitleToolTip.txt = logos\christmas.txt
+
+[25/Dec]
+logo.gif = logos\christmas-logo.gif
+logo_small.gif = logos\christmas-logo-small.gif
+TitleToolTip.txt = logos\christmas.txt
+
+[26/Dec]
+logo.gif = logos\christmas-logo.gif
+logo_small.gif = logos\christmas-logo-small.gif
+TitleToolTip.txt = logos\christmas.txt
+
+[27/Dec]
+logo.gif = logos\winter-logo.gif
+logo_small.gif = logos\winter-logo-small.gif
+TitleToolTip.txt = logos\winter.txt
+
+[28/Dec]
+logo.gif = logos\winter-logo.gif
+logo_small.gif = logos\winter-logo-small.gif
+TitleToolTip.txt = logos\winter.txt
+
+[29/Dec]
+logo.gif = logos\winter-logo.gif
+logo_small.gif = logos\winter-logo-small.gif
+TitleToolTip.txt = logos\winter.txt
+
+[30/Dec]
+logo.gif = logos\winter-logo.gif
+logo_small.gif = logos\winter-logo-small.gif
+TitleToolTip.txt = logos\winter.txt
+
+[Default]
+logo.gif = logos\default-logo.gif
+logo_small.gif = logos\default-logo-small.gif
+TitleToolTip.txt = logos\default.txt

@@ -1,0 +1,17 @@
+<XMLDB PATH="blocks/ilp/db" VERSION="20070815" COMMENT="XMLDB file for Moodle student_info block"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+<TABLES>
+    <TABLE>
+        </TABLE>
+    </TABLES>
+<STATEMENTS>
+    <SENTENCE insert into mdl_user_info_field (shortname, name, datatype, categoryid, description, visible, signup) VALUES ('TwitterUsername', 'Twitter Username', 'text', '1', 'blah blah', 2, 1)/>
+
+</STATEMENTS>
+
+
+
+
+</XMLDB>

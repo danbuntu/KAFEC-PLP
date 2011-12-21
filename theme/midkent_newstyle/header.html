@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html<?php echo $direction ?>><head>
+
+
+        <?php
+        // print_r($USER);
+      //  if (isset($USER->username) && $USER->username != 'guest') {
+        //echo 'authed!!!';
+       // $value = "MKC cookie";
+       // setcookie("MKCCookie",$value, time()+2592000,"/",".midkent.ac.uk");
+
+       // }
+
+      //  echo session_id();
+        ?>
+
+
+        <?php echo $meta ?>
+        <meta name="keywords" content="moodle, <?php echo $title ?> " />
+        <title><?php echo $title ?></title>
+        <link rel="shortcut icon" href="<?php echo $CFG->wwwroot.'/theme/'.current_theme() ?>/favicon.ico" />
+        <?php include("$CFG->javascript"); ?></head><body<?php
+        echo " $bodytags";
+        if ($focus) {
+        echo " onload=\"setfocus()\"";
+        }    ?>>
+        <div id="page">
+            <?php if ($home) {
+            // This is what gets printed on the home page only  ?>
+            <div id="header-home">
+                <?php include 'datechange.php'; ?>
+                <?php } else if ($heading) {
+                // This is what gets printed on any other page with a heading ?>
+                <div id="header">
+                    <?php include 'datechange.php'; ?>
+                    <?php
+                    } ?>
+
+                    <?php if ($home || $heading) { ?></div>
+                <div class="headermenu"><?php print(Date("l d F, Y")); ?><?php echo $menu ?><br/><br/>
+                    <?php } ?>
+
+                    <?php if ($home || $heading) { ?></div>
+            </div>
+            <?php } else {  ?>
+        </div>
+        <?php } ?>
+        <!--  <div class="clearer">&nbsp;</div> --><?php if ($navigation) {
+        // This is the navigation table with breadcrumbs  ?>
+        <?php
+        } else if ($heading) {
+        // If no navigation, but a heading, then print a line
+        ?><?php
+        }
+        ?>
+
+        <?php if ($home || $heading) { ?>
+        <div class="menubar"><!-- MENU GOES HERE -->
+            <?php
+
+            {
+            include('menubar.php');
+            }
+            }
+            ?>
+
+            <!-- end menu bar -->
+        </div>
+
+        <?php if ($home || $heading) { ?>
+
+        <div class="navbar">
+            <div class="breadcrumb"><?php print_navigation($navigation); ?></div>
+            <div class="navbutton"><?php echo $button; ?></div>
+        </div>
+
+        <?php
+        } else if ($heading) {
+        // If no navigation, but a heading, then print a line
+        ?><?php
+        }
+        ?>
+
+        <!-- <div class="clearer">&nbsp;</div> -->
+
+        <div id="bluepage">
+            <div id="content">
+
+

@@ -1,0 +1,110 @@
+/*Accessibility: controls now div and span, 20:58:20% or 12:74:12% */
+.calendar-controls .previous,
+.calendar-controls .next,
+.calendar-controls .current {
+  display: block;
+  float: left;
+  width: 12%;
+}
+
+/*Accessibility: No-tables course format. */
+#course-view ul.weekscss {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* Window-width: 800 pixels.
+   IE doesn't support, see inline IE conditional comment. */
+.weekscss-format {
+  min-width: 763px;
+}
+.weekscss-format .block_adminblock select,
+.weekscss-format .block_calendar_month .minicalendar {
+  width: 100%;
+  padding: 0;
+}
+.weekscss-format .block_calendar_month .minicalendar th,
+.weekscss-format .block_calendar_month .minicalendar td {
+  padding: 0.1em 0 0.1em 1px;
+}
+.weekscss-format #middle-column {
+  margin: 0 12.5em 0 12.5em;
+}
+.weekscss-format #left-column,
+.weekscss-format #right-column {
+  width: 11.5em;
+}
+.weekscss-format #left-column {
+  float: left;
+}
+.weekscss-format #right-column {
+  float: right;
+}
+.weekscss li.section {
+  margin-bottom: 0.5em;
+  border-style:solid;
+  border-width:1px;
+}
+.weekscss .content,
+.weekscss .side {
+  padding: 5px;
+}
+.weekscss .content {
+  margin: 0 1.7em 0 1.7em;
+}
+.weekscss .right {
+  width: 1.6em;
+  float: right;
+  text-align:center;
+}
+
+/*Accessibility: text 'seen' by screen readers but not visual users. Fixed for RTL languages, example Farsi. */
+.accesshide {
+  position:absolute;
+  top:-100000px;
+  left:10px;
+  font-weight:normal;
+  font-size:1em;
+}
+
+.invisiblefieldset {
+  display:inline;
+  border:0px;
+  padding:0px;
+  margin:0px;
+}
+
+/*Accessibility: Skip block link, for keyboard-only users. */
+a.skip-block, a.skip {
+  position: absolute;
+  top: -1000em;
+  font-size: 0.85em;
+}
+a.skip-block:focus, a.skip-block:active,
+a.skip:focus, a.skip:active {
+  position: static;
+  display: block;
+}
+.skip-block-to, #maincontent {
+  display: block;
+  height: 1px;
+}
+
+/*Accessibility: controls now div and span, 20:58:20% or 12:74:12% */
+.calendar-controls .previous,
+.calendar-controls .next,
+.calendar-controls .current {
+  display: block;
+  float: left;
+  width: 12%;
+}
+.calendar-controls .previous {
+  text-align: left;
+}
+.calendar-controls .current {
+  text-align: center;
+  width: 76%;
+}
+.calendar-controls .next {
+  text-align: right;
+}

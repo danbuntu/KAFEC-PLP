@@ -1,0 +1,458 @@
+2007-01-15 Monday 02:58  stronk7
+
+	* db/: mysql.sql, postgres7.sql: 
+	
+	Deleting deprecated .sql files. MDL-7264 Byeeez!
+
+2007-01-14 Sunday 04:13  stronk7
+
+	* config.html: 
+	
+	Now all the modules global config pages are valid XML. Related to
+	MDL-7861
+
+2007-01-11 Thursday 16:06  moodler
+
+	* view.php: 
+	
+	FIxed up the intro boxes  XHTML Strict
+
+2007-01-09 Tuesday 03:34  skodak
+
+	* mod.html: 
+	
+	MDL-7861 xhtml transient fixes for not closed input fields - I hope
+	all of them except imported libs are now fixed
+
+2007-01-07 Sunday 03:23  skodak
+
+	* mod.html: 
+	
+	MDL-8062 Remove name attribute from <form> and related javascript
+	code cleanup (tested with FF, IE, Konq and Opera)
+
+2007-01-05 Friday 07:59  skodak
+
+	* mod.html: 
+	
+	MDL-7861 xhtml strict fixes - fixed capital letter tags and
+	attributes
+
+2007-01-05 Friday 07:38  skodak
+
+	* lib.php, mod.html: 
+	
+	MDL-7861 xhtml strict fixes - fixed all <br> in our code
+
+2007-01-05 Friday 05:32  skodak
+
+	* config.html: 
+	
+	MDL-8062 1.3 Remove name attribute from <form> and fix focus
+	everywhere - more changes ahead
+
+2007-01-03 Wednesday 22:44  moodler
+
+	* mod.html: 
+	
+	Bend over for XHTML 1.0 Strict ...  MDL-8049
+	
+	Removed Javascript language attribute tags and added CDATA
+
+2006-11-12 Sunday 16:55  skodak
+
+	* index.php, view.php: 
+	
+	fixed obsoleted use of course->category to find site course - now
+	used SITEID instead MDL-1899
+
+2006-11-09 Thursday 15:21  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	drop utf8 support from HEAD MDL-6332
+
+2006-10-27 Friday 06:46  stronk7
+
+	* db/postgres7.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+	
+	Merged from MOODLE_17_STABLE
+
+2006-10-27 Friday 06:39  stronk7
+
+	* db/mysql.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+	
+	Merged from MOODLE_17_STABLE
+
+2006-10-27 Friday 06:29  stronk7
+
+	* db/postgres7.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+
+2006-10-27 Friday 06:25  stronk7
+
+	* db/mysql.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+
+2006-10-27 Friday 01:43  stronk7
+
+	* db/upgrade.php: 
+	
+	New upgrade.php file added for this module. MDL-7214
+	
+	Merged from HEAD
+
+2006-10-27 Friday 01:33  stronk7
+
+	* db/upgrade.php: 
+	
+	file upgrade.php was added on branch MOODLE_17_STABLE on 2006-10-26
+	17:43:08 +0000
+
+2006-10-27 Friday 01:33  stronk7
+
+	* db/upgrade.php: 
+	
+	New upgrade.php file added for this module. MDL-7214
+
+2006-10-22 Sunday 00:14  moodler
+
+	* defaults.php: 
+	
+	Make sure LAMS is off if we don't need it (merged from stable)
+
+2006-10-22 Sunday 00:10  moodler
+
+	* defaults.php: 
+	
+	file defaults.php was initially added on branch MOODLE_17_STABLE.
+
+2006-10-22 Sunday 00:10  moodler
+
+	* defaults.php: 
+	
+	LAMS is now disabled by default so it doesn't confuse the heck out
+	of everyone.
+
+2006-10-11 Wednesday 14:22  moodler
+
+	* db/access.php: 
+	
+	Merged fixes for MDL-6907 from stable
+
+2006-10-11 Wednesday 14:16  moodler
+
+	* db/access.php: 
+	
+	All the PREVENTS from the legacy roles have been removed (and thus
+	are treated as INHERIT by default).
+	
+	See MDL-6907 for details.
+
+2006-09-21 Thursday 05:00  skodak
+
+	* db/access.php: 
+	
+	major whitespace cleanup - fixed trailng whitespace in new files
+	and admin area
+
+2006-09-12 Tuesday 16:22  moodler
+
+	* version.php: 
+	
+	Small bump for guest role fix
+
+2006-09-12 Tuesday 15:10  moodler
+
+	* version.php: 
+	
+	Reload the guest role using new defaults
+
+2006-09-12 Tuesday 03:54  skodak
+
+	* version.php, view.php, db/access.php: 
+	
+	lams conversion to new roles framework
+
+2006-08-12 Saturday 01:39  stronk7
+
+	* db/install.xml: 
+	
+	XMLDB schema initial commit for the lams module
+
+2006-08-10 Thursday 23:31  skodak
+
+	* version.php, view.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283; backported from HEAD
+
+2006-08-09 Wednesday 06:09  skodak
+
+	* version.php, view.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283
+
+2006-08-08 Tuesday 13:13  moodler
+
+	* version.php: 
+	
+	ROLES AND PERMISSIONS  - FIRST CHECK-IN
+	=======================================
+	
+	WARNING:  DEV IS CURRENTLY VERY UNSTABLE.
+	
+	This is a mega-checkin of the new Roles system.   A lot of changes
+	have been made in core and modules.
+	
+	Currently there are a lot of rough edges and known problems.  We
+	are working hard on these .. .the reason for getting this into HEAD
+	at this stage is enable us to move faster (our branch was diverging
+	from HEAD too much).
+	
+	Please keep an eye on http://docs.moodle.org/en/Roles for current
+	status and information for developers on how to use the new Roles
+	system.
+
+2006-06-05 Monday 18:01  fyang1024
+
+	* view.php: 
+	
+	add learner link when user is a teacher
+
+2006-04-05 Wednesday 15:46  gustav_delius
+
+	* index.php: 
+	
+	Fixed call to required_param()
+
+2006-03-10 Friday 11:43  patrickslee
+
+	* db/migrate2utf8.php: 
+	
+	UTF8 migration - now supporting PostgreSQL
+
+2006-03-08 Wednesday 05:35  skodak
+
+	* db/migrate2utf8.php: 
+	
+	short php tags
+
+2006-02-24 Friday 16:13  toyomoyo
+
+	* db/migrate2utf8.php: 
+	
+	see changes for admin/utfdbmigrate.php
+
+2006-02-08 Wednesday 14:01  fyang1024
+
+	* testws.php: 
+	
+	remove the testing code
+
+2006-02-08 Wednesday 14:00  fyang1024
+
+	* lib.php: 
+	
+	change class name soapclient to soap_client according to the
+	nusoap.php in the lib/soap folder
+
+2006-02-07 Tuesday 07:45  patrickslee
+
+	* lib.php, testws.php: 
+	
+	Fixed nusoap include problem in lams module caused by the rename of
+	nusoap lib directory
+
+2006-01-31 Tuesday 10:07  moodler
+
+	* db/migrate2utf8.php: 
+	
+	changed to use utfconvert function
+
+2006-01-19 Thursday 13:48  moodler
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	bug fixes
+
+2006-01-17 Tuesday 15:29  moodler
+
+	* db/mysql.sql: 
+	
+	Added default values where needed for columns in the MySQL creation
+	script mysql.sql.  Added default values to migrate2utf8.xml, for
+	any varchar and text field types, if the default values for these
+	fields were not defined as '' in the MySQL table creation script.
+	
+	Committed by vyshane
+
+2006-01-13 Friday 15:24  toyomoyo
+
+	* db/migrate2utf8.php: 
+	
+	more bug fixes =(
+
+2006-01-13 Friday 12:35  mjollnir_
+
+	* testws.php: 
+	
+	Preventing fatal errors from libraries getting included more than
+	once. Please remember to use require_once !
+
+2006-01-09 Monday 14:06  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	utf8 migration support scripts
+
+2005-12-14 Wednesday 12:15  patrickslee
+
+	* config.html, constants.php, icon.gif, index.php, lib.php,
+	list.php, mod.html, testws.php, userinfo.php, version.php,
+	view.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	Merged with MOODLE_16_MULTIENROL_MP1
+
+2005-11-19 Saturday 19:08  gustav_delius
+
+	* config.html, constants.php, index.php, list.php, mod.html,
+	testws.php, userinfo.php, view.php: 
+	
+	Correcting corrupted line endings
+
+2005-11-19 Saturday 19:08  patrickslee
+
+	* constants.php: 
+	
+	file constants.php was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:24 +0000
+
+2005-11-19 Saturday 19:08  patrickslee
+
+	* userinfo.php: 
+	
+	file userinfo.php was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:25 +0000
+
+2005-11-19 Saturday 19:08  patrickslee
+
+	* config.html: 
+	
+	file config.html was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:24 +0000
+
+2005-11-19 Saturday 19:08  patrickslee
+
+	* mod.html: 
+	
+	file mod.html was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:25 +0000
+
+2005-11-19 Saturday 19:08  patrickslee
+
+	* list.php: 
+	
+	file list.php was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:25 +0000
+
+2005-11-19 Saturday 19:08  patrickslee
+
+	* view.php: 
+	
+	file view.php was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:25 +0000
+
+2005-11-19 Saturday 19:08  patrickslee
+
+	* testws.php: 
+	
+	file testws.php was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:25 +0000
+
+2005-11-19 Saturday 19:08  patrickslee
+
+	* index.php: 
+	
+	file index.php was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:25 +0000
+
+2005-11-19 Saturday 19:05  gustav_delius
+
+	* lib.php: 
+	
+	Correcting corrupted line endings
+
+2005-11-19 Saturday 19:05  patrickslee
+
+	* lib.php: 
+	
+	file lib.php was added on branch MOODLE_16_MULTIENROL on 2005-12-14
+	04:15:25 +0000
+
+2005-11-18 Friday 05:36  mjollnir_
+
+	* db/postgres7.sql: 
+	
+	Fixed typo in lams postgres creation
+
+2005-11-18 Friday 05:36  patrickslee
+
+	* db/postgres7.sql: 
+	
+	file postgres7.sql was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:25 +0000
+
+2005-11-16 Wednesday 16:21  patrickslee
+
+	* version.php: 
+	
+	file version.php was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:25 +0000
+
+2005-11-16 Wednesday 16:21  patrickslee
+
+	* db/postgres7.php: 
+	
+	file postgres7.php was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:25 +0000
+
+2005-11-16 Wednesday 16:21  patrickslee
+
+	* db/mysql.sql: 
+	
+	file mysql.sql was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:25 +0000
+
+2005-11-16 Wednesday 16:21  patrickslee
+
+	* db/mysql.php: 
+	
+	file mysql.php was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:25 +0000
+
+2005-11-16 Wednesday 16:21  moodler
+
+	* config.html, constants.php, icon.gif, index.php, lib.php,
+	list.php, mod.html, testws.php, userinfo.php, version.php,
+	view.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	Adding the LAMS integration code. Can everyone please test
+	thoroughly.  Cheers, Shane.
+
+2005-11-16 Wednesday 16:21  patrickslee
+
+	* icon.gif: 
+	
+	file icon.gif was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:24 +0000
+

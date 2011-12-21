@@ -1,0 +1,4683 @@
+2007-01-15 Monday 02:58  stronk7
+
+	* db/: mysql.sql, postgres7.sql: 
+	
+	Deleting deprecated .sql files. MDL-7264 Byeeez!
+
+2007-01-14 Sunday 04:13  stronk7
+
+	* config.html: 
+	
+	Now all the modules global config pages are valid XML. Related to
+	MDL-7861
+
+2007-01-13 Saturday 02:52  skodak
+
+	* type/: online/assignment.class.php, upload/assignment.class.php: 
+	
+	MDL-8166 rename in/out methods in formslib - HQ consensus
+
+2007-01-12 Friday 03:47  skodak
+
+	* mod_form.php: 
+	
+	fixed text field widths in new forms
+
+2007-01-12 Friday 01:14  skodak
+
+	* lib.php: 
+	
+	fixe missing global CFG
+
+2007-01-10 Wednesday 22:06  skodak
+
+	* mod_form.php: 
+	
+	MDL-6987 fixed wrong labels
+
+2007-01-10 Wednesday 21:38  skodak
+
+	* lib.php, mod.html, mod_form.php,
+	type/online/assignment.class.php, type/online/mod.html,
+	type/upload/assignment.class.php, type/upload/mod.html,
+	type/uploadsingle/assignment.class.php, type/uploadsingle/mod.html,
+	type/offline/mod.html: 
+	
+	MDL-6987 assignment mod conversion to new forms lib
+
+2007-01-09 Tuesday 05:42  skodak
+
+	* lib.php: 
+	
+	MDL-8115 fixed $$submission typo; merged from MOODLE_17_STABLE
+
+2007-01-09 Tuesday 05:42  skodak
+
+	* lib.php: 
+	
+	MDL-8115 fixed $$submission typo
+
+2007-01-08 Monday 17:14  skodak
+
+	* lib.php, type/uploadsingle/assignment.class.php,
+	type/upload/assignment.class.php, type/online/assignment.class.php:
+	
+	
+	MDL-7861 new class .icon and .iconsmall
+
+2007-01-08 Monday 11:34  toyomoyo
+
+	* lib.php, type/common.html, type/common_end.html,
+	type/offline/mod.html, type/online/mod.html, type/upload/mod.html,
+	type/uploadsingle/mod.html: 
+	
+	MDL-7861, xhtml strict issues
+
+2007-01-08 Monday 05:54  skodak
+
+	* lib.php, type/upload/assignment.class.php: 
+	
+	MDL-7861 assignment related xhtml strict fixes (client view and
+	fixed quickgrading/grading) and admin tree CSS styling
+
+2007-01-07 Sunday 03:22  skodak
+
+	* lib.php, mod.html: 
+	
+	MDL-8062 Remove name attribute from <form> and related javascript
+	code cleanup (tested with FF, IE, Konq and Opera)
+
+2007-01-05 Friday 13:56  toyomoyo
+
+	* lib.php: 
+	
+	MDL-7861, xhtml strict fixes
+
+2007-01-05 Friday 12:57  toyomoyo
+
+	* lib.php, type/online/assignment.class.php,
+	type/upload/assignment.class.php,
+	type/uploadsingle/assignment.class.php: 
+	
+	MDL-7861, fixing xhtml strict problems
+
+2007-01-05 Friday 12:51  jamiesensei
+
+	* type/: online/assignment.class.php, upload/assignment.class.php: 
+	
+	added helpbuttons to htmleditors where needed. Further work on
+	htmleditor helpbutton code.
+
+2007-01-05 Friday 05:32  skodak
+
+	* lib.php, config.html, type/common.html: 
+	
+	MDL-8062 1.3 Remove name attribute from <form> and fix focus
+	everywhere - more changes ahead
+
+2007-01-05 Friday 02:23  skodak
+
+	* lib.php: 
+	
+	MDL-8050 1.2 Remove all target="_top" - refactoring of previous
+	commit
+
+2007-01-04 Thursday 03:24  skodak
+
+	* lib.php: 
+	
+	MDL-8050 1.2 Remove all target="_top"
+
+2007-01-03 Wednesday 22:44  moodler
+
+	* mod.html: 
+	
+	Bend over for XHTML 1.0 Strict ...  MDL-8049
+	
+	Removed Javascript language attribute tags and added CDATA
+
+2007-01-03 Wednesday 12:55  moodler
+
+	* index.php, lib.php: 
+	
+	Checking in Nick Freear's changes and evolution of Julette White's
+	code with a few modifications made to the install process) for
+	further work in HEAD.
+	
+	See MDL-7380 for details.
+
+2007-01-02 Tuesday 17:33  skodak
+
+	* lib.php: 
+	
+	MDL-7742 added nested drop down box to add activities/resources to
+	course, 3rd party mods can specify type MDL-6987 preparation for
+	migration of mod/assignment/mod.html
+
+2006-12-28 Thursday 23:43  jamiesensei
+
+	* type/: online/assignment.class.php, upload/assignment.class.php: 
+	
+	fixing all the form names as per new class naming convention (PHP
+	class names are also used for html id for styling)
+
+2006-12-28 Thursday 17:32  jamiesensei
+
+	* type/: online/assignment.class.php, upload/assignment.class.php: 
+	
+	changes to how we generate the id attribute of forms and the naming
+	convention of forms migrate blog edit to formslib
+
+2006-12-21 Thursday 20:18  nfreear
+
+	* index.php: 
+	
+	Integration 3 - groups in core, modules, calendar... (Part of
+	MDL-7380, new groups)
+
+2006-12-19 Tuesday 15:03  jamiesensei
+
+	* type/: online/assignment.class.php, upload/assignment.class.php: 
+	
+	
+	* Added setAdvanced functionality see
+	http://docs.moodle.org/en/Development:lib/formslib.php_setAdvanced
+	* Added MoodleQuickForm method closeHeaderBefore($elementName);
+	http://docs.moodle.org/en/Development:lib/formslib.php_Form_Definit
+	ion#Use_Fieldsets_to_group_Form_Elements * Added moodleform method
+	add_action_buttons(); see
+	http://docs.moodle.org/en/Development:lib/formslib.php_Form_Definit
+	ion#add_action_buttons.28.24cancel_.3D_true.2C_.24revert_.3D_true.2
+	C_.24submitlabel.3Dnull.29.3B * is_cancelled method added to
+	moodleform
+	http://docs.moodle.org/en/Development:lib/formslib.php_Usage#Basic_
+	Usage_in_A_Normal_Page * added hidden labels to elements within
+	groups such as the date_selector select boxes and other elements in
+	'groups' * quiz/mod.html migrated to formslib * glossary/edit.html
+	migrated to formslib * extended registerNoSubmitButton()
+	functionality to automatically add js to onclick to bypass client
+	side js input validation.  * added no_submit_button_pressed()
+	function that can be used in a similar way to is_cancelled() as a
+	test in the main script to see if some button in the page has been
+	pressed that is a submit button that is used for some dynamic
+	functionality within the form and not to submit the data for the
+	whole form.  * added new condition for disabledIf which allows to
+	disable another form element if no options are selected from within
+	a select element.  * added default 'action' for moodleform  -
+	strip_querystring(qualified_me())
+	http://docs.moodle.org/en/Development:lib/formslib.php_Usage#Basic_
+	Usage_in_A_Normal_Page
+
+2006-12-18 Monday 13:24  toyomoyo
+
+	* mod.html: 
+	
+	MDL-7681, fix for non xhtml strict tags and attributes
+
+2006-12-13 Wednesday 19:54  nfreear
+
+	* lib.php: 
+	
+	Functions to return SQL fragments for groups. Modules, core... no
+	longer need to refer directly to groups DB tables. (Part of
+	MDL-7380, new groups)
+
+2006-12-11 Monday 13:31  toyomoyo
+
+	* lib.php: 
+	
+	merged removed warning
+
+2006-12-11 Monday 13:30  toyomoyo
+
+	* lib.php: 
+	
+	removed warning
+
+2006-12-05 Tuesday 19:58  jamiesensei
+
+	* type/: online/assignment.class.php, upload/assignment.class.php: 
+	
+	changed name of reset element in form from 'reset' to 'resetbutton'
+	so that the element name doesn't conflict with js form method
+	reset.
+
+2006-12-05 Tuesday 17:44  skodak
+
+	* type/: online/assignment.class.php, upload/assignment.class.php: 
+	
+	added cancel button to glossary comment form and fixed
+	initialization of button arrays MDL-7778
+
+2006-12-05 Tuesday 17:37  skodak
+
+	* type/: online/assignment.class.php, upload/assignment.class.php: 
+	
+	added cancel button to assignment forms MDL-7778
+
+2006-11-30 Thursday 17:50  skodak
+
+	* type/upload/assignment.class.php, config.html, lib.php,
+	type/online/assignment.class.php: 
+	
+	minor xhtml fixes
+
+2006-11-30 Thursday 05:28  skodak
+
+	* type/: upload/assignment.class.php, online/assignment.class.php: 
+	
+	fix submission and notes edit to use new forms lib MDL-7740
+
+2006-11-25 Saturday 00:38  jamiesensei
+
+	* type/online/assignment.class.php: 
+	
+	changed name of submit buttons to submitbutton instead of sumbit as
+	submit was conflicting with method form.submit()
+
+2006-11-23 Thursday 05:45  skodak
+
+	* type/online/assignment.class.php: 
+	
+	Online text assignment: on re-edit submission page provide a label
+	for field so that screen-reader knows what it is for MDL-7479:
+	fixed format problems, converted to new forms library, whitespace
+	cleanup, fixed redirection after saving
+
+2006-11-16 Thursday 04:57  skodak
+
+	* type/upload/assignment.class.php: 
+	
+	Response file not uploading when grading student submission when
+	using secureforms MDL-7566; merged from MOODLE_17_STABLE
+
+2006-11-16 Thursday 04:56  skodak
+
+	* type/upload/assignment.class.php: 
+	
+	Response file not uploading when grading student submission when
+	using secureforms MDL-7566
+
+2006-11-16 Thursday 03:39  skodak
+
+	* lib.php: 
+	
+	Broken next button when grading assignments MDL-7569; merged from
+	MOODLE_17_STABLE
+
+2006-11-16 Thursday 03:38  skodak
+
+	* lib.php: 
+	
+	Broken next button when grading assignments MDL-7569
+
+2006-11-12 Sunday 16:55  skodak
+
+	* lib.php: 
+	
+	fixed obsoleted use of course->category to find site course - now
+	used SITEID instead MDL-1899
+
+2006-11-09 Thursday 15:21  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	drop utf8 support from HEAD MDL-6332
+
+2006-10-27 Friday 06:46  stronk7
+
+	* db/postgres7.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+	
+	Merged from MOODLE_17_STABLE
+
+2006-10-27 Friday 06:39  stronk7
+
+	* db/mysql.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+	
+	Merged from MOODLE_17_STABLE
+
+2006-10-27 Friday 06:29  stronk7
+
+	* db/postgres7.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+
+2006-10-27 Friday 06:25  stronk7
+
+	* db/mysql.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+
+2006-10-27 Friday 01:43  stronk7
+
+	* db/upgrade.php: 
+	
+	New upgrade.php file added for this module. MDL-7214
+	
+	Merged from HEAD
+
+2006-10-27 Friday 01:33  stronk7
+
+	* db/upgrade.php: 
+	
+	file upgrade.php was added on branch MOODLE_17_STABLE on 2006-10-26
+	17:43:05 +0000
+
+2006-10-27 Friday 01:33  stronk7
+
+	* db/upgrade.php: 
+	
+	New upgrade.php file added for this module. MDL-7214
+
+2006-10-24 Tuesday 07:00  stronk7
+
+	* lib.php: 
+	
+	Moving deprecated uses of sql_paging_limit() to the new $limitfrom,
+	$limitnum parameters in all the get_recordXXX() functions. MDL-7167
+	
+	Merged from MOODLE_17_STABLE
+
+2006-10-24 Tuesday 06:56  stronk7
+
+	* lib.php: 
+	
+	Moving deprecated uses of sql_paging_limit() to the new $limitfrom,
+	$limitnum parameters in all the get_recordXXX() functions. MDL-7167
+
+2006-10-24 Tuesday 05:04  skodak
+
+	* lib.php: 
+	
+	Assignment Reports incomplete MDL-6301 ; backported from
+	MOODLE_17_STABLE
+
+2006-10-24 Tuesday 05:02  skodak
+
+	* lib.php: 
+	
+	Assignment Reports incomplete MDL-6301 ; merged from
+	MOODLE_17_STABLE
+
+2006-10-24 Tuesday 05:01  skodak
+
+	* lib.php: 
+	
+	Assignment Reports incomplete MDL-6301
+
+2006-10-19 Thursday 05:34  skodak
+
+	* type/upload/assignment.class.php: 
+	
+	fixed access check when editting notes in advanced upload
+	assignment type; merged from MOODLE_17_STABLE
+
+2006-10-19 Thursday 05:32  skodak
+
+	* type/upload/assignment.class.php: 
+	
+	fixed access check when editting notes in advanced upload
+	assignment type
+
+2006-10-19 Thursday 05:02  skodak
+
+	* lib.php: 
+	
+	fixed Notices after assignment deletion in Recent Activity MDL-7089
+	; merged from MOODLE_17_STABLE
+
+2006-10-19 Thursday 05:01  skodak
+
+	* lib.php: 
+	
+	fixed Notices after assignment deletion in Recent Activity MDL-7089
+
+2006-10-18 Wednesday 19:14  skodak
+
+	* lib.php: 
+	
+	Deleting uploaded files when deleting an assignment instance +
+	fixed quoting style + trailing whitespace MDL-6387 ; merged from
+	MOODLE_17_STABLE
+
+2006-10-18 Wednesday 19:13  skodak
+
+	* lib.php: 
+	
+	Deleting uploaded files when deleting an assignment instance +
+	fixed quoting style + trailing whitespace MDL-6387
+
+2006-10-18 Wednesday 19:12  skodak
+
+	* lib.php: 
+	
+	Deleting uploaded files when deleting an assignment instance +
+	fixed quoting style MDL-6387
+
+2006-10-18 Wednesday 19:11  skodak
+
+	* lib.php: 
+	
+	Deleting uploaded files when deleting an assignment instance
+	MDL-6387
+
+2006-10-17 Tuesday 18:05  thompson697
+
+	* restorelib.php: 
+	
+	Apply modularity to the creation of the log file during restore to
+	a new course.  Remove the responsibility for loging the application
+	of the course start date offset, from activity modules to the
+	backup module.	Merged from stable branch
+
+2006-10-16 Monday 18:40  thompson697
+
+	* restorelib.php: 
+	
+	Apply modularity to the creation of the log file during restore to
+	a new course.  Remove the responsibility for loging the application
+	of the course start date offset, from activity modules to the
+	backup module.
+
+2006-10-12 Thursday 15:33  toyomoyo
+
+	* restorelib.php: 
+	
+	merged removed warning during restore
+
+2006-10-12 Thursday 15:32  toyomoyo
+
+	* restorelib.php: 
+	
+	removing warnings during restore
+
+2006-10-11 Wednesday 14:21  moodler
+
+	* db/access.php: 
+	
+	Merged fixes for MDL-6907 from stable
+
+2006-10-11 Wednesday 14:16  moodler
+
+	* db/access.php: 
+	
+	All the PREVENTS from the legacy roles have been removed (and thus
+	are treated as INHERIT by default).
+	
+	See MDL-6907 for details.
+
+2006-10-08 Sunday 16:06  skodak
+
+	* lib.php: 
+	
+	added 'Reviewed' assignment status to My moodle page MDL-6834,
+	patch submitted by Stephen Bourget - thanks!
+
+2006-10-04 Wednesday 22:50  thompson697
+
+	* restorelib.php: 
+	
+	Change creation of restorelog file location to protected backupdata
+	folder.  Reassign style and language links
+
+2006-10-04 Wednesday 07:34  skodak
+
+	* lib.php: 
+	
+	Assignment Module breaks MyMoodle Page MDL-6802, revisited - I hope
+	it is correct now
+
+2006-10-04 Wednesday 02:31  skodak
+
+	* lib.php: 
+	
+	Assignment Module breaks MyMoodle Page MDL-6802, please test it
+
+2006-10-02 Monday 16:44  skodak
+
+	* type/upload/assignment.class.php: 
+	
+	fixed directory creation issues in advanced upload assignment
+
+2006-10-02 Monday 16:36  skodak
+
+	* type/uploadsingle/assignment.class.php: 
+	
+	Student cannot see handed-in upload single assignment MDL-6770;
+	backported from HEAD
+
+2006-10-02 Monday 16:36  skodak
+
+	* type/uploadsingle/assignment.class.php: 
+	
+	Student cannot see handed-in upload single assignment MDL-6770
+
+2006-10-02 Monday 16:21  skodak
+
+	* type/upload/: assignment.class.php, mod.html: 
+	
+	assignment intro hiding before available date is now optional in
+	advanced upload type ( MDL-6131 ), the rest of types will not be
+	changed
+
+2006-10-02 Monday 05:45  skodak
+
+	* lib.php: 
+	
+	fixed error in assignments when no students enrolled in course
+
+2006-10-02 Monday 05:35  skodak
+
+	* type/upload/assignment.class.php: 
+	
+	partially fixed - assignment intro always avaible even setting
+	available date MDL-6131
+
+2006-09-30 Saturday 23:41  skodak
+
+	* type/upload/assignment.class.php, type/upload/notes.php,
+	type/upload/README.txt, type/upload/mod.html, delete.php, lib.php,
+	version.php, db/access.php: 
+	
+	new advanced upload assignmet type - replaces old upload type,
+	existing data and settings not fully compatible
+
+2006-09-30 Saturday 05:45  skodak
+
+	* type/upload/deleteonesubmission.php: 
+	
+	towards new upload assignment - expect brand-new version tomorrow
+	:-)
+
+2006-09-28 Thursday 23:34  skodak
+
+	* type/upload/: assignment.class.php, deleteonesubmission.php,
+	mod.html: 
+	
+	reverting last commit, expect new fixes soon
+
+2006-09-28 Thursday 06:57  jgraham909
+
+	* type/upload/: README.txt, assignment.class.php,
+	deleteonesubmission.php, mod.html: 
+	
+	Merging in changes from Doug Dixon and Mike Lee to update the
+	codebase
+
+2006-09-27 Wednesday 16:59  toyomoyo
+
+	* restorelib.php: 
+	
+	adding support for roles in backups
+
+2006-09-27 Wednesday 16:32  moodler
+
+	* lib.php: 
+	
+	Merged fixes for MDL-6334 from HEAD
+
+2006-09-27 Wednesday 16:29  moodler
+
+	* lib.php: 
+	
+	Fixed MDL-6334 by removing the group-setting popup
+
+2006-09-27 Wednesday 03:18  skodak
+
+	* restorelib.php: 
+	
+	fixed legacy comment upgrade code in assignment and journal
+
+2006-09-25 Monday 10:04  vyshane
+
+	* lib.php: 
+	
+	Fixed sql query in assignment_get_unmailed_submissions() - we can't
+	rely on user_students anymore.
+
+2006-09-24 Sunday 22:01  vyshane
+
+	* lib.php: 
+	
+	Changed <module>_print_recent_activity() functions so that they
+	don't use $isteacher. However, I've left the $isteacher parameter
+	in the functions, for backward compatibility so as not to break
+	thrid party modules. Should we remove the parameter now?
+
+2006-09-21 Thursday 18:04  stronk7
+
+	* type/online/db/: mysql.php, postgres7.php: 
+	
+	When journal to assignment migration is performed, journal upgrade
+	hasn't been upgraded yet so the journal_entries->comment field is
+	still called "comment"
+
+2006-09-21 Thursday 17:35  stronk7
+
+	* backuplib.php, lib.php, restorelib.php, version.php,
+	db/install.xml, db/migrate2utf8.xml, db/mysql.php, db/mysql.sql,
+	db/postgres7.php, db/postgres7.sql,
+	type/online/assignment.class.php, type/online/db/mysql.php,
+	type/online/db/postgres7.php, type/upload/assignment.class.php,
+	type/uploadsingle/assignment.class.php: 
+	
+	Moved assignment_submission->comment to submissioncomment (because
+	comment is DB reserved word)
+
+2006-09-21 Thursday 05:00  skodak
+
+	* db/access.php: 
+	
+	major whitespace cleanup - fixed trailng whitespace in new files
+	and admin area
+
+2006-09-21 Thursday 04:31  skodak
+
+	* type/: online/assignment.class.php,
+	uploadsingle/assignment.class.php, upload/assignment.class.php: 
+	
+	major whitespace cleanup - fixed tabs
+
+2006-09-21 Thursday 03:46  skodak
+
+	* type/upload/mod.html: 
+	
+	major whitespace cleanup - fixed \r\n line-ending
+
+2006-09-18 Monday 17:13  moodler
+
+	* restorelib.php: 
+	
+	FIxed to use the new debugging function
+
+2006-09-14 Thursday 17:08  toyomoyo
+
+	* lib.php: 
+	
+	changing sql calls from user_students table to role_assignments
+	table
+
+2006-09-13 Wednesday 21:19  thompson697
+
+	* restorelib.php: 
+	
+	Complete work on Roll Forwards - Restore from previous semester
+	(MDL-5532) * Add fields to restore form to enable changes to Short
+	Name, Full Name and Start Date * Start Date offset added to Restore
+	process * Created Restorelog file in Course files area * Activity
+	Modules use offset to change dates * Activity Modules write changes
+	to Restorelog
+
+2006-09-12 Tuesday 16:22  moodler
+
+	* version.php: 
+	
+	Small bump for guest role fix
+
+2006-09-12 Tuesday 15:10  moodler
+
+	* version.php: 
+	
+	Reload the guest role using new defaults
+
+2006-09-12 Tuesday 13:58  moodler
+
+	* db/access.php: 
+	
+	Changed some default permissions for the guest role
+
+2006-09-02 Saturday 19:44  skodak
+
+	* type/upload/assignment.class.php, lib.php: 
+	
+	replace all uses of isset($USER->id) with empty() to allow proper
+	operation of $CFG->notloggedinroleid hack
+
+2006-08-31 Thursday 16:51  toyomoyo
+
+	* type/online/file.php: 
+	
+	adding capabilities
+
+2006-08-29 Tuesday 14:02  toyomoyo
+
+	* type/upload/assignment.class.php: 
+	
+	added acapability
+
+2006-08-29 Tuesday 11:36  toyomoyo
+
+	* type/: online/assignment.class.php, upload/assignment.class.php,
+	uploadsingle/assignment.class.php: 
+	
+	replaced isguest with capability calls
+
+2006-08-29 Tuesday 11:22  toyomoyo
+
+	* lib.php: 
+	
+	adding in capabilities
+
+2006-08-29 Tuesday 11:20  toyomoyo
+
+	* type/upload/assignment.class.php: 
+	
+	adding capability, indenting, putting in brackets etc
+
+2006-08-28 Monday 16:42  toyomoyo
+
+	* details.php, index.php, lib.php, submissions.php,
+	type/online/assignment.class.php: 
+	
+	changes to how to pull out a list of users (course/module
+	participants)
+
+2006-08-14 Monday 13:55  moodler
+
+	* lib.php, type/online/assignment.class.php,
+	type/uploadsingle/assignment.class.php: 
+	
+	SWEEPING CLEANUP
+	
+	The API was changed slightly so that has_capability now takes the
+	whole $context object (we almost always have it anyway)
+	
+	The $kill thing was removed.   If you want to assert a capability
+	then use:
+	
+	    require_capability('capname', $context);
+	
+	with optional variables to modify the error message
+	
+	Misc bugs here and there also removed and code tidied
+
+2006-08-10 Thursday 23:51  skodak
+
+	* lib.php, submissions.php, upload.php, version.php, view.php,
+	type/online/file.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283; backported from HEAD
+
+2006-08-10 Thursday 23:30  skodak
+
+	* lib.php, submissions.php, upload.php, view.php, version.php,
+	type/online/file.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283; backported from HEAD
+
+2006-08-10 Thursday 02:36  skodak
+
+	* lib.php: 
+	
+	Bug #6225 - Moodle bug #4658 Breaks assignment type: Upload Single;
+	merged from MOODLE_16_STABLE
+
+2006-08-10 Thursday 02:35  skodak
+
+	* lib.php: 
+	
+	Bug #6225 - Moodle bug #4658 Breaks assignment type: Upload Single
+
+2006-08-09 Wednesday 21:45  moodler
+
+	* lib.php, mod.html: 
+	
+	Removed tabs
+
+2006-08-09 Wednesday 06:09  skodak
+
+	* lib.php, submissions.php, upload.php, version.php, view.php,
+	type/online/file.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283
+
+2006-08-08 Tuesday 13:13  moodler
+
+	* lib.php, version.php, db/access.php,
+	type/online/assignment.class.php,
+	type/uploadsingle/assignment.class.php: 
+	
+	ROLES AND PERMISSIONS  - FIRST CHECK-IN
+	=======================================
+	
+	WARNING:  DEV IS CURRENTLY VERY UNSTABLE.
+	
+	This is a mega-checkin of the new Roles system.   A lot of changes
+	have been made in core and modules.
+	
+	Currently there are a lot of rough edges and known problems.  We
+	are working hard on these .. .the reason for getting this into HEAD
+	at this stage is enable us to move faster (our branch was diverging
+	from HEAD too much).
+	
+	Please keep an eye on http://docs.moodle.org/en/Roles for current
+	status and information for developers on how to use the new Roles
+	system.
+
+2006-08-08 Tuesday 03:02  stronk7
+
+	* db/install.xml: 
+	
+	Initial commit of assignment XMLDB file. Stopping now from now.
+	Going to document things...
+
+2006-08-04 Friday 13:51  martinlanghoff
+
+	* lib.php: 
+	
+	mod/assignment if we are not using a numeric scale and a custom
+	scale return that as the max grade
+	
+	Author: Jun Yamog <jun@catalyst.net.nz>
+
+2006-08-04 Friday 13:50  vyshane
+
+	* db/access.php: 
+	
+	Renamed legacyroles to legacy
+
+2006-08-04 Friday 13:47  martinlanghoff
+
+	* lib.php: 
+	
+	mod/assignment if we are not using a numeric scale and a custom
+	scale return that as the max grade
+	
+	Author: Jun Yamog <jun@catalyst.net.nz>
+
+2006-08-01 Tuesday 15:46  skodak
+
+	* lib.php: 
+	
+	Bug #5352 - upgrade might be interrupted by user - upgrades are now
+	logged into moddata/upgradelogs/, user abor is ignored and
+	concurrent running of upgrades is prevented from one browser
+
+2006-08-01 Tuesday 15:32  vyshane
+
+	* db/access.php: 
+	
+	file access.php was initially added on branch MOODLE_17_ROLES.
+
+2006-08-01 Tuesday 15:32  vyshane
+
+	* db/access.php: 
+	
+	Capability definitions for the assignment module
+
+2006-07-31 Monday 12:56  martinlanghoff
+
+	* lib.php, lib.php, lib.php: 
+	
+	assignment: count_user_files() no longer creates extraneous dirs
+	(bug#4658)
+	
+	Applied the fix by Samuli.Karevaara, from the bug report - the
+	directory is checked for existence beforehand.	Previously it was
+	created if it didn't exist, then the files within it were counted.
+	
+	Author: Luke Hudson <luke@catalyst.net.nz>
+
+2006-07-26 Wednesday 11:20  toyomoyo
+
+	* lib.php, type/online/assignment.class.php,
+	type/uploadsingle/assignment.class.php: 
+	
+	some changes + modified participants page
+
+2006-07-13 Thursday 15:17  moodler
+
+	* type/upload/: README.txt, assignment.class.php,
+	deleteonesubmission.php, mod.html: 
+	
+	Integrating the "AU Assignment type" into Moodle (which was based
+	on Upload&Review).
+	
+	It's not tested and probably needs polishing, but people seem to
+	love it as it is.
+	
+	    http://moodle.org/mod/forum/discuss.php?d=46829
+
+2006-07-12 Wednesday 02:12  vyshane
+
+	* type/: online/assignment.class.php,
+	uploadsingle/assignment.class.php: 
+	
+	Updated capability name
+
+2006-07-12 Wednesday 02:10  vyshane
+
+	* lib.php: 
+	
+	Updated capabilities
+
+2006-07-06 Thursday 17:47  skodak
+
+	* lib.php: 
+	
+	Bug #5615 - Assigment listing shows duplicate names with paged
+	display; merged from MOODLE_16_STABLE
+
+2006-07-06 Thursday 17:46  skodak
+
+	* lib.php: 
+	
+	Bug #5615 - Assigment listing shows duplicate names with paged
+	display
+
+2006-07-04 Tuesday 05:11  skodak
+
+	* lib.php: 
+	
+	Bug #5909 - Fix use of user_group() because it returns arrays now -
+	part 1; merged from MOODLE_16_STABLE
+
+2006-07-04 Tuesday 05:07  skodak
+
+	* lib.php: 
+	
+	Bug #5909 - Fix use of user_group() because it returns arrays now -
+	part 1
+
+2006-06-27 Tuesday 00:16  skodak
+
+	* lib.php: 
+	
+	assignments on mymoodle page, Bug #5839 - Found more than one
+	record in get_record_sql !; merged from MOODLE_16_STABLE
+
+2006-06-27 Tuesday 00:15  skodak
+
+	* lib.php: 
+	
+	assignments on mymoodle page, Bug #5839 - Found more than one
+	record in get_record_sql !
+
+2006-06-26 Monday 15:02  toyomoyo
+
+	* lib.php, type/online/assignment.class.php,
+	type/uploadsingle/assignment.class.php: 
+	
+	fixes, added support for do_anything at top level, modified parts
+	of assignemnts
+
+2006-06-15 Thursday 16:13  toyomoyo
+
+	* lib.php: 
+	
+	R&P
+
+2006-06-05 Monday 20:18  skodak
+
+	* lib.php: 
+	
+	Bug #5725 - Assignment grading pop up windows do not close, broken
+	by 4976; merged from MOODLE_16_STABLE
+
+2006-06-05 Monday 20:17  skodak
+
+	* lib.php: 
+	
+	Bug #5725 - Assignment grading pop up windows do not close, broken
+	by 4976
+
+2006-05-29 Monday 17:21  moodler
+
+	* lib.php: 
+	
+	merged mymoodle fix from stable
+
+2006-05-29 Monday 17:20  moodler
+
+	* lib.php: 
+	
+	DOn't even show assignments without a due date
+
+2006-05-29 Monday 16:37  skodak
+
+	* lib.php: 
+	
+	Bug #5620 - MyMoodle shows bogus Assignment due date; merged from
+	MOODLE_16_STABLE
+
+2006-05-29 Monday 16:36  skodak
+
+	* lib.php: 
+	
+	Bug #5620 - MyMoodle shows bogus Assignment due date
+
+2006-05-26 Friday 17:09  skodak
+
+	* lib.php: 
+	
+	Bug #5619 - Assignment Feedback mail lacks linefeed; backported
+	from MOODLE_16_STABLE
+
+2006-05-26 Friday 17:07  skodak
+
+	* lib.php: 
+	
+	Bug #5619 - Assignment Feedback mail lacks linefeed; merged from
+	MOODLE_16_STABLE
+
+2006-05-26 Friday 17:06  skodak
+
+	* lib.php: 
+	
+	Bug #5619 - Assignment Feedback mail lacks linefeed
+
+2006-05-03 Wednesday 16:19  moodler
+
+	* type/online/: assignment.class.php, assignment.class.php: 
+	
+	Fixed: Bug #5164 - Assignment email lacks student name
+
+2006-04-27 Thursday 12:12  toyomoyo
+
+	* lib.php: 
+	
+	fix for 4976
+
+2006-04-24 Monday 17:00  vyshane
+
+	* db/: mysql.php, postgres7.php: 
+	
+	Fixing inserts for log_display.
+
+2006-04-24 Monday 16:41  vyshane
+
+	* db/: mysql.sql, postgres7.sql: 
+	
+	Fixed inserts for log_display.
+
+2006-04-24 Monday 04:33  skodak
+
+	* submissions.php, upload.php, view.php: 
+	
+	page parameter cleanup
+
+2006-04-23 Sunday 01:25  skodak
+
+	* type/uploadsingle/assignment.class.php: 
+	
+	fixed undefined $course
+
+2006-04-21 Friday 15:01  moodler
+
+	* type/uploadsingle/assignment.class.php: 
+	
+	Fixed Bug #5012 - assignment type uploadsingle does not log view
+	actions
+
+2006-04-21 Friday 10:23  moodler
+
+	* lib.php: 
+	
+	Added save changes button at top (Bug #1043 - submit button at top
+	of journal report)
+
+2006-04-18 Tuesday 17:16  moodler
+
+	* lib.php: 
+	
+	FIx for slashes problem in bug 5222 (and some others)
+
+2006-04-12 Wednesday 00:10  stronk7
+
+	* restorelib.php: 
+	
+	htmlentities() to s()
+
+2006-04-06 Thursday 02:52  gustav_delius
+
+	* type/: online/assignment.class.php,
+	uploadsingle/assignment.class.php: 
+	
+	Removed some unnecessary code
+
+2006-04-05 Wednesday 15:46  gustav_delius
+
+	* index.php: 
+	
+	Fixed call to required_param()
+
+2006-03-29 Wednesday 07:31  stronk7
+
+	* restorelib.php: 
+	
+	Typo.
+
+2006-03-15 Wednesday 12:01  moodler
+
+	* lib.php: 
+	
+	iFIx up some styles for the MyMoodle overview
+
+2006-03-15 Wednesday 11:47  moodler
+
+	* lib.php: 
+	
+	More styles for My Moodle
+
+2006-03-15 Wednesday 11:42  moodler
+
+	* lib.php: 
+	
+	Added some styles
+
+2006-03-15 Wednesday 11:36  moodler
+
+	* lib.php: 
+	
+	All the assignment classes no longer need to be loaded, and removed
+	some notices
+
+2006-03-15 Wednesday 06:05  patrickslee
+
+	* lib.php: 
+	
+	Dim link if not visible in my course view for assignment module
+
+2006-03-15 Wednesday 05:26  patrickslee
+
+	* lib.php: 
+	
+	Assignment module support for my moodle page
+
+2006-03-10 Friday 11:43  patrickslee
+
+	* db/migrate2utf8.php: 
+	
+	UTF8 migration - now supporting PostgreSQL
+
+2006-03-08 Wednesday 05:35  skodak
+
+	* db/migrate2utf8.php: 
+	
+	short php tags
+
+2006-02-24 Friday 16:13  toyomoyo
+
+	* db/migrate2utf8.php: 
+	
+	see changes for admin/utfdbmigrate.php
+
+2006-02-19 Sunday 21:26  gustav_delius
+
+	* lib.php: 
+	
+	Added comments to the code (when will moodle HQ start commenting
+	their own code? ;-)
+
+2006-02-19 Sunday 05:19  gustav_delius
+
+	* lib.php: 
+	
+	Fixing a misprint that was preventing multiple files from showing.
+
+2006-02-17 Friday 06:00  gustav_delius
+
+	* lib.php, lib.php: 
+	
+	Bug in "Prevent late submissions" setting fixed, thanks to Samuli,
+	see bug 4780
+
+2006-02-17 Friday 05:56  gustav_delius
+
+	* lib.php: 
+	
+	Bug in "Prevent late submissions" setting fixed, thanks to Samuli,
+	see bug 4780
+
+2006-02-17 Friday 05:53  gustav_delius
+
+	* lib.php: 
+	
+	Bug in "Prevent late submissions" setting fixed, thanks to Samuli,
+	see bug 4780
+
+2006-01-31 Tuesday 10:05  moodler
+
+	* db/migrate2utf8.php: 
+	
+	changed to use utfconvert function
+
+2006-01-23 Monday 10:38  moodler
+
+	* type/online/assignment.class.php: 
+	
+	Extra fix for bug #4604. Guests see different message, instead of
+	"You have not submitted anything"
+
+2006-01-23 Monday 10:34  moodler
+
+	* type/online/assignment.class.php: 
+	
+	Extra fix for bug #4604. Guests see different message, instead of
+	"You have not submitted anything"
+
+2006-01-19 Thursday 23:25  skodak
+
+	* type/uploadsingle/assignment.class.php: 
+	
+	remove upload form for guests - backported from HEAD
+
+2006-01-19 Thursday 23:24  skodak
+
+	* type/uploadsingle/assignment.class.php: 
+	
+	remove upload form for guests
+
+2006-01-19 Thursday 10:41  moodler
+
+	* type/online/assignment.class.php: 
+	
+	
+	Removed submit online assignment button for guest. (bug: 4604)
+
+2006-01-19 Thursday 10:38  moodler
+
+	* type/online/assignment.class.php: 
+	
+	Removed submit online assignment button for guest. (bug: 4604)
+
+2006-01-18 Wednesday 12:44  moodler
+
+	* type/online/: assignment.class.php, assignment.class.php: 
+	
+	Guests can no longer submit an online assignment (Bug 4604)
+
+2006-01-17 Tuesday 15:18  moodler
+
+	* db/mysql.sql: 
+	
+	Added default values where needed for columns in the MySQL creation
+	script mysql.sql.  Added default values to migrate2utf8.xml, for
+	any varchar and text field types, if the default values for these
+	fields were not defined as '' in the MySQL table creation script.
+	
+	Committed by vyshane
+
+2006-01-16 Monday 15:57  moodler
+
+	* db/migrate2utf8.php: 
+	
+	more bugs
+
+2006-01-16 Monday 05:09  mjollnir_
+
+	* restorelib.php: 
+	
+	Abstracted a bit of the restore procedure to allow for silent
+	restoring.  Added new function, import_backup_file_silently Changed
+	everything that prints stuff to check for a constant first. 
+	Backup_flush checks a different constant, this is so that output
+	can still get flushed to the browser when necessary but not print
+	<li>s everywhere.  Please test this!
+
+2006-01-13 Friday 11:45  mjollnir_
+
+	* backuplib.php, restorelib.php: 
+	
+	Granular backup & restore: This patch allows the much requested
+	selection of individual instances of modules within a course to
+	backup and restore.  It needs A LOT of testing and probably some
+	prettyifying too.
+
+2006-01-09 Monday 14:06  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	utf8 migration support scripts
+
+2006-01-06 Friday 00:27  stronk7
+
+	* config.html, lib.php, type/online/assignment.class.php,
+	type/online/file.php: 
+	
+	Now it's possible to configure what is going to be counted (words
+	or letters) because some languages don't have word separators.
+	
+	Merged from MOODLE_16_UTF8. Abandoning the branch.
+
+2005-12-23 Friday 14:38  toyomoyo
+
+	* lib.php: 
+	
+	merged, bug #4504
+
+2005-12-23 Friday 14:36  toyomoyo
+
+	* lib.php: 
+	
+	added a string "changes saved" after quickgrade - bug #4504
+
+2005-12-16 Friday 03:13  stronk7
+
+	* config.html, lib.php, type/online/assignment.class.php,
+	type/online/file.php: 
+	
+	Now assignment is able to count both words and letters (and
+	configured at admin/modules level)
+
+2005-12-16 Friday 02:13  stronk7
+
+	* config.html, lib.php: 
+	
+	Now it's possible what is going to be counted (words or letters)
+	Because some languages don't have word separators.
+
+2005-12-14 Wednesday 12:15  patrickslee
+
+	* lib.php, mod.html, type/offline/assignment.class.php,
+	type/online/assignment.class.php,
+	type/uploadsingle/assignment.class.php: 
+	
+	Merged with MOODLE_16_MULTIENROL_MP1
+
+2005-11-25 Friday 16:41  toyomoyo
+
+	* type/uploadsingle/: assignment.class.php, assignment.class.php: 
+	
+	fix for bug 4067
+
+2005-11-25 Friday 16:34  toyomoyo
+
+	* type/online/assignment.class.php: 
+	
+	fix for bug 4067 - allow user to update assignment when not yet
+	marked
+
+2005-11-25 Friday 16:31  toyomoyo
+
+	* type/online/assignment.class.php: 
+	
+	fix for bug 4067 - allow user to upload when assignment not yet
+	marked
+
+2005-11-24 Thursday 10:50  moodler
+
+	* type/online/: assignment.class.php, assignment.class.php: 
+	
+	fix for bug #4206
+
+2005-11-19 Saturday 23:39  moodler
+
+	* lib.php: 
+	
+	Merged bug 4351 fix from stable
+
+2005-11-19 Saturday 23:33  moodler
+
+	* lib.php: 
+	
+	Fix for bug 4351.  New parasmeter for get_record_sql to disable
+	auto-added LIMIT (in case we are using our own)
+
+2005-11-18 Friday 18:31  skodak
+
+	* lib.php, type/uploadsingle/assignment.class.php: 
+	
+	some more fixes for assignment grading; merged from
+	MOODLE_15_STABLE
+
+2005-11-18 Friday 18:24  skodak
+
+	* lib.php, type/uploadsingle/assignment.class.php: 
+	
+	some more fixes for assignment grading
+
+2005-11-17 Thursday 06:57  skodak
+
+	* lib.php: 
+	
+	Fixed bug #4038 encoding problems when grading; merged from
+	MOODLE_15_STABLE
+
+2005-11-17 Thursday 06:54  skodak
+
+	* lib.php: 
+	
+	Fixed bug #4038 encoding problems when grading
+
+2005-11-16 Wednesday 23:22  skodak
+
+	* lib.php: 
+	
+	cleaning of parameter name before use SC#188; merged from
+	MOODLE_15_STABLE
+
+2005-11-16 Wednesday 23:20  skodak
+
+	* lib.php: 
+	
+	cleaning of parameter name before use SC#188
+
+2005-11-16 Wednesday 07:48  skodak
+
+	* lib.php: 
+	
+	no page flip after fastgrade saving, allow hiding of grade or
+	comment column when fastgrading, do not update db when no changes
+	in fastgrade; merged from MOODLE_15_STABLE
+
+2005-11-16 Wednesday 07:43  skodak
+
+	* lib.php: 
+	
+	no page flip after fastgrade saving, allow hiding of grade or
+	comment column when fastgrading, do not update db when no changes
+	in fastgrade
+
+2005-11-13 Sunday 12:53  defacer
+
+	* lib.php: 
+	
+	
+	Merging all my latest changes and fixes from HEAD related to
+	SC#187.
+
+2005-11-13 Sunday 12:30  defacer
+
+	* lib.php: 
+	
+	
+	OK, trying to write about this in the SC made me think, thinking
+	made me find the solution. No hacks, no replicating the table
+	object, I just tweaked the table class itself to help us.
+	
+	I 'll post at SC#187 about this, but the bug is now totally fixed.
+
+2005-11-13 Sunday 12:01  defacer
+
+	* lib.php: 
+	
+	
+	Removing code block which, upon closer inspection, does nothing at
+	all.
+	
+	This is obviously a copy/paste artifact from
+	mod/quiz/report/overview/report.php, but notice that over there is
+	non-trivial processing going on over there with the sortorder
+	array!
+	
+	The sortorder can be used directly in queries, just stick an "ORDER
+	BY " in front.
+
+2005-11-13 Sunday 11:50  defacer
+
+	* lib.php: 
+	
+	
+	Merging my latest commits from HEAD, which include:
+	
+	Fixing XHTML stuff Skodak's patch from SC#187 without the HACK
+	ALERT part
+	
+	The "Next" buttons in grading windows don't get you where you 'd
+	expect right now, but please see SC#187 before doing anything about
+	it.
+
+2005-11-13 Sunday 11:37  defacer
+
+	* lib.php: 
+	
+	
+	Gone through the code carefully. Committed what is basically
+	Skodak's patch at SC#187 postid 1104 with a small addition, EXCEPT
+	the //HACK ALERT part.
+	
+	Where does that leave us? The popup does not die anymore, BUT:
+	
+	1. It throws a notice about $sort not being defined (to be
+	expected) 2. It doesn't use the correct sortorder ($sort is not
+	defined, so default sort)
+	
+	Please see the discussion at SC#187 before doing more work on this.
+
+2005-11-13 Sunday 11:20  defacer
+
+	* lib.php: 
+	
+	
+	Carefully going through the code now...
+	
+	Changing get_records_sql() for one record ALWAYS and associated
+	foreach() to a get_record_sql() without foreach. Please be
+	considerate with copy/paste. ;-)
+
+2005-11-13 Sunday 10:50  defacer
+
+	* lib.php, type/online/assignment.class.php: 
+	
+	
+	Been playing around Assignment a bit, and Tidy kept complaining...
+
+2005-11-12 Saturday 11:04  defacer
+
+	* lib.php: 
+	
+	
+	Merging from STABLE:
+	
+	Better retrieval of table sortorder when not done directly through
+	the table class, see SC#187.
+
+2005-11-12 Saturday 11:01  defacer
+
+	* lib.php: 
+	
+	
+	Better retrieval of table sortorder when not done directly through
+	the table class, see SC#187.
+
+2005-11-10 Thursday 08:22  skodak
+
+	* lib.php: 
+	
+	cleaning as assignment types SC#182 continued; merged from
+	MOODLE_15_STABLE
+
+2005-11-10 Thursday 08:20  skodak
+
+	* lib.php: 
+	
+	cleaning as assignment types SC#182 continued
+
+2005-11-10 Thursday 08:14  skodak
+
+	* lib.php: 
+	
+	cleaning as assignment types SC#182
+
+2005-11-10 Thursday 06:39  skodak
+
+	* lib.php: 
+	
+	fixed incorrect assignment grades in gradebook when custom scales
+	bug #4279; merged from MOODLE_15_STABLE
+
+2005-11-10 Thursday 06:38  skodak
+
+	* lib.php: 
+	
+	fixed incorrect assignment grades in gradebook when custom scales
+	bug #4279
+
+2005-11-10 Thursday 06:25  skodak
+
+	* lib.php: 
+	
+	fixed grades display in assignment/index.php when using different
+	scales; merged from MOODLE_15_STABLE
+
+2005-11-10 Thursday 06:24  skodak
+
+	* lib.php: 
+	
+	fixed grades display in assignment/index.php when using different
+	scales
+
+2005-11-10 Thursday 05:37  skodak
+
+	* lib.php: 
+	
+	fixed grading when secure forms on bug #4300; merged from
+	MOODLE_15_STABLE
+
+2005-11-10 Thursday 05:35  skodak
+
+	* lib.php: 
+	
+	fixed grading when secure forms on bug #4300
+
+2005-11-08 Tuesday 15:19  moodler
+
+	* lib.php: 
+	
+	BIG FEATURE  - MULTIPLE GROUPS
+	
+	Users can now be assigned to multiple groups.  Thanks Yu! Break out
+	the Bob Marley!!
+	
+	Otherwise groups work more or less like they did before.
+	
+	This has been pretty well tested by Yu and myself, but since Yu
+	started uncovering lots of existing groups bugs it's possible there
+	may be still a few corner cases still lurking here and there.
+	
+	Please help test this thoroughly for 1.6!!
+
+2005-11-08 Tuesday 09:44  moodler
+
+	* lib.php: 
+	
+	Added check to avoid notices when trying to get grades from an
+	assignment that didn't have any grades yet.    bug 4287
+	
+	Also, using datalib function to create LIMIT statement when
+	displaying submissions
+
+2005-11-04 Friday 14:50  moodler
+
+	* lib.php: 
+	
+	Merged fixes from stable
+
+2005-11-04 Friday 14:49  moodler
+
+	* lib.php: 
+	
+	More notices fixed
+
+2005-11-04 Friday 14:48  moodler
+
+	* type/offline/assignment.class.php: 
+	
+	fixes bug #4268
+
+2005-11-04 Friday 14:40  moodler
+
+	* lib.php: 
+	
+	Fixed a number of bugs:
+	
+	  - zero grade vs no grade now works, no grade is stored as -1 in
+	database
+	  - student modification time was being updated by teacher in
+	quickgrade
+	  - sundry notices
+
+2005-11-04 Friday 14:22  moodler
+
+	* type/offline/assignment.class.php: 
+	
+	fixes bug #4268
+
+2005-11-03 Thursday 17:40  moodler
+
+	* lib.php: 
+	
+	Merged fix for bug 4146 from stable
+
+2005-11-03 Thursday 17:38  moodler
+
+	* lib.php: 
+	
+	Widened the window a bit more, bug #4146
+
+2005-11-03 Thursday 14:25  moodler
+
+	* lib.php, type/online/assignment.class.php,
+	type/uploadsingle/assignment.class.php: 
+	
+	Merged new assignment grading interface fixes from STABLE
+
+2005-11-03 Thursday 14:19  moodler
+
+	* lib.php, type/online/assignment.class.php,
+	type/uploadsingle/assignment.class.php: 
+	
+	Fixing up the assignment grading interface to make it more usable.
+	
+	  - grade buttons are now links
+	  - popup window has teacher comments at the top
+	  - popup window can now cycle through all users without leaving
+	the window
+	  - new quickgrading feature to grade inline in one go
+	  - can choose page size
+
+2005-11-02 Wednesday 12:00  moodler
+
+	* mod.html: 
+	
+	Print standard course module settings
+
+2005-11-02 Wednesday 11:59  moodler
+
+	* mod.html: 
+	
+	Adding group mode and visibility buttons to assignment!!!
+
+2005-10-01 Saturday 21:36  gustav_delius
+
+	* mod.html, mod.html: 
+	
+	fixed a help button
+
+2005-09-10 Saturday 00:17  moodler
+
+	* lib.php: 
+	
+	Merged fixes for zero date displays in assignments
+
+2005-09-10 Saturday 00:01  moodler
+
+	* lib.php: 
+	
+	Don't calculate date when it's zero
+
+2005-09-01 Thursday 12:14  mjollnir_
+
+	* lib.php: 
+	
+	Initial checkin of stats (from processing the log table).  I will
+	write up some information about it for the developers wiki.
+
+2005-08-16 Tuesday 07:17  patrickslee
+
+	* db/postgres7.php: 
+	
+	Mass cleanup of bad postgres upgrade scripts(merged from 15_stable)
+
+2005-08-16 Tuesday 06:30  patrickslee
+
+	* db/postgres7.php: 
+	
+	Mass cleanup of bad postgres upgrade scripts
+
+2005-07-16 Saturday 01:32  moodler
+
+	* index.php, lib.php: 
+	
+	Merged fixes from STABLE for submodules
+
+2005-07-16 Saturday 01:26  moodler
+
+	* lib.php: 
+	
+	Assignment is now a good citizen and will install new submodules
+	nicely
+
+2005-07-13 Wednesday 03:16  skodak
+
+	* type/: online/assignment.class.php,
+	uploadsingle/assignment.class.php: 
+	
+	fixed submission logging, email notification for online; merged
+	from MOODLE_15_STABLE
+
+2005-07-13 Wednesday 03:14  skodak
+
+	* type/: online/assignment.class.php,
+	uploadsingle/assignment.class.php: 
+	
+	fixed submission logging, email notification for online
+
+2005-07-12 Tuesday 22:37  skodak
+
+	* lib.php: 
+	
+	fixed html emails; merged from MOODLE_15_STABLE
+
+2005-07-12 Tuesday 22:35  skodak
+
+	* lib.php: 
+	
+	fixed html emails
+
+2005-07-12 Tuesday 21:12  skodak
+
+	* lib.php, type/online/assignment.class.php,
+	type/uploadsingle/assignment.class.php: 
+	
+	unset unmodified text fields SC#140 + popup fix; merged from
+	MOODLE_15_STABLE
+
+2005-07-12 Tuesday 21:06  skodak
+
+	* type/online/assignment.class.php, lib.php,
+	type/uploadsingle/assignment.class.php: 
+	
+	unset unmodified text fields SC#140 + popup fix
+
+2005-07-12 Tuesday 17:57  moodler
+
+	* lib.php: 
+	
+	Fixed comment copying from stable
+
+2005-07-12 Tuesday 17:48  moodler
+
+	* lib.php: 
+	
+	Trim comment to remove extra space before using in Javascript
+	statements
+
+2005-07-12 Tuesday 17:04  moodler
+
+	* type/online/assignment.class.php: 
+	
+	Merged quote fix from stable
+
+2005-07-12 Tuesday 17:03  moodler
+
+	* type/online/assignment.class.php: 
+	
+	Better yet, don't update student text at all
+
+2005-07-12 Tuesday 17:00  moodler
+
+	* type/online/assignment.class.php: 
+	
+	FIxed the problem with online assignments containing quotes
+
+2005-07-12 Tuesday 16:00  moodler
+
+	* restorelib.php: 
+	
+	Merged SC139 from stable
+
+2005-07-12 Tuesday 15:52  moodler
+
+	* restorelib.php: 
+	
+	Escaped text output during relinking, as per SC 139
+
+2005-07-12 Tuesday 14:57  moodler
+
+	* type/online/db/: mysql.php, postgres7.php: 
+	
+	Merged upgrading fixes from stable
+
+2005-07-12 Tuesday 14:56  moodler
+
+	* type/online/db/: mysql.php, postgres7.php: 
+	
+	Corrected the journal -> Assignment upgrade!!!	:-(
+
+2005-07-11 Monday 02:43  skodak
+
+	* type/: online/assignment.class.php, online/file.php,
+	uploadsingle/assignment.class.php: 
+	
+	fixed resubmit logic and students can review their online
+	assignment through file.php; merged from MOODLE_15_STABLE
+
+2005-07-11 Monday 02:40  skodak
+
+	* type/: online/assignment.class.php, online/file.php,
+	uploadsingle/assignment.class.php: 
+	
+	fixed resubmit logic and students can review their online
+	assignment through file.php
+
+2005-07-09 Saturday 21:37  skodak
+
+	* lib.php: 
+	
+	fixed $posthtml - see bug#3868; merged from MOODLE_15_STABLE
+
+2005-07-09 Saturday 21:36  skodak
+
+	* lib.php: 
+	
+	fixed $posthtml - see bug#3868
+
+2005-07-09 Saturday 20:34  skodak
+
+	* lib.php, mod.html: 
+	
+	fixed grading bug#1517 and some other typos; merged from
+	MOODLE_15_STABLE
+
+2005-07-09 Saturday 20:31  skodak
+
+	* lib.php, mod.html: 
+	
+	fixed grading bug#1517 and some other typos
+
+2005-07-09 Saturday 15:01  skodak
+
+	* mod.html: 
+	
+	fixed resubmit logic; merged from MOODLE_15_STABLE
+
+2005-07-09 Saturday 14:59  skodak
+
+	* mod.html: 
+	
+	fixed resubmit logic
+
+2005-07-08 Friday 15:42  moodler
+
+	* lib.php: 
+	
+	Merged frix from stable
+
+2005-07-08 Friday 15:40  moodler
+
+	* lib.php: 
+	
+	Change && to AND to help PostgreSQL
+
+2005-07-06 Wednesday 22:04  skodak
+
+	* type/online/: assignment.class.php, file.php: 
+	
+	added word count display; merged from MOODLE_15_STABLE
+
+2005-07-06 Wednesday 22:02  skodak
+
+	* type/online/: assignment.class.php, file.php: 
+	
+	added word count display
+
+2005-07-06 Wednesday 18:15  skodak
+
+	* type/uploadsingle/assignment.class.php: 
+	
+	max upload size not shown to students; merged from MOODLE_15_STABLE
+
+2005-07-06 Wednesday 18:14  skodak
+
+	* type/uploadsingle/assignment.class.php: 
+	
+	max upload size not shown to students
+
+2005-07-06 Wednesday 17:52  skodak
+
+	* type/online/assignment.class.php: 
+	
+	Bug #3596 - Secureforms yes breaks online assignment; merged from
+	MOODLE_15_STABLE
+
+2005-07-06 Wednesday 17:51  skodak
+
+	* type/online/assignment.class.php: 
+	
+	Bug #3596 - Secureforms yes breaks online assignment
+
+2005-07-06 Wednesday 08:47  defacer
+
+	* type/online/db/: mysql.php, postgres7.php: 
+	
+	
+	Merging from STABLE: Fixed the annoying "...and the 1 Journals you
+	had..." message when you have no Journals at all, because I was
+	tired of seeing it.
+	
+	count(false) is 1 and not 0.
+
+2005-07-06 Wednesday 08:46  defacer
+
+	* type/online/db/: mysql.php, postgres7.php: 
+	
+	
+	Fixed the annoying "...and the 1 Journals you had..." message when
+	you have no Journals at all, because I was tired of seeing it.
+	
+	count(false) is 1 and not 0.
+
+2005-07-05 Tuesday 14:30  skodak
+
+	* lib.php: 
+	
+	merged from MOODLE_15_STABLE
+
+2005-07-05 Tuesday 14:28  skodak
+
+	* lib.php: 
+	
+	fixed problem when removing due date or adding due date to existing
+	assignment
+
+2005-07-05 Tuesday 14:03  skodak
+
+	* lib.php: 
+	
+	megamerge from MOODLE_15_STABLE
+
+2005-07-05 Tuesday 13:47  skodak
+
+	* type/online/assignment.class.php, details.php: 
+	
+	merged from MOODLE_15_STABLE
+
+2005-07-05 Tuesday 13:44  skodak
+
+	* type/online/assignment.class.php, details.php, lib.php: 
+	
+	code cleanup - see SC #110
+
+2005-07-05 Tuesday 02:55  stronk7
+
+	* backuplib.php, restorelib.php: 
+	
+	Improved automatic relinking in backup and restore. Credits go to
+	skodak.  Complete refactoring of the system that was really awful
+	(my fault!).  Now everything is in its place and working like a
+	charm, making things really easier to be implemented and amplied.
+	Bug 3678 (http://moodle.org/bugs/bug.php?op=show&bugid=3678)
+	(http://moodle.org/mod/forum/discuss.php?d=26530)
+	
+	Note: Everything is merged from stable but the quiz module because
+	it has other changes not merged for now. I've skyped a message to
+	Gustav about it.
+	
+	Merged from MOODLE_15_STABLE
+
+2005-07-05 Tuesday 01:34  stronk7
+
+	* backuplib.php, restorelib.php: 
+	
+	Improved automatic relinking in backup and restore. Credits go to
+	skodak.  Complete refactoring of the system that was really awful
+	(my fault!).  Now everything is in its place and working like a
+	charm, making things really easier to be implemented and amplied.
+	Bug 3678 (http://moodle.org/bugs/bug.php?op=show&bugid=3678)
+	(http://moodle.org/mod/forum/discuss.php?d=26530)
+
+2005-06-20 Monday 16:27  thepurpleblob
+
+	* config.html: 
+	
+	Merged from STABLE
+
+2005-06-20 Monday 16:26  thepurpleblob
+
+	* config.html: 
+	
+	Added missing sesskey field to module config screen
+
+2005-06-17 Friday 01:31  fiedorow
+
+	* type/uploadsingle/assignment.class.php: 
+	
+	merging security fix for guest uploads
+
+2005-06-17 Friday 01:16  fiedorow
+
+	* type/uploadsingle/assignment.class.php: 
+	
+	Security fix: stop guest uploading
+
+2005-06-16 Thursday 23:09  fiedorow
+
+	* type/uploadsingle/assignment.class.php: 
+	
+	Security fix to disallow guest uploading
+
+2005-06-06 Monday 17:53  ikawhero
+
+	* lib.php: 
+	
+	Small change merged from MOODLE_15_STABLE that to check
+	$scalegrades.  There appears to have been other changes made to
+	head so will not update the merged tag.
+
+2005-06-06 Monday 17:45  ikawhero
+
+	* lib.php: 
+	
+	Check to see if a scale grade exists for the given grade and if not
+	set it to an empty string. This should never occur through normal
+	use but just in case ...
+
+2005-06-01 Wednesday 07:28  moodler
+
+	* lib.php: 
+	
+	Better handling of dates when timedue isn't set
+
+2005-06-01 Wednesday 07:18  moodler
+
+	* index.php: 
+	
+	Hide due date when there isn;t one
+
+2005-06-01 Wednesday 07:02  moodler
+
+	* lib.php, version.php, db/mysql.php, db/postgres7.php: 
+	
+	Added event handling from trunk
+
+2005-06-01 Wednesday 07:00  moodler
+
+	* lib.php, version.php, db/mysql.php, db/postgres7.php: 
+	
+	Added event handling to new assignment.  Whopos!
+
+2005-05-26 Thursday 23:25  moodler
+
+	* index.php: 
+	
+	Merged stability fix from HEAD
+
+2005-05-26 Thursday 23:24  moodler
+
+	* index.php: 
+	
+	Add a little robustness to the listing (old assignment types etc)
+
+2005-05-22 Sunday 09:53  defacer
+
+	* lib.php: 
+	
+	
+	Fixing a header, this string wasn't set anywhere. Plus it needs a
+	new string in the lang files (coming up next).
+
+2005-05-22 Sunday 09:51  defacer
+
+	* lib.php: 
+	
+	
+	Fixing invalid GROUP BY sql reported by Patrick Li of Catalyst. 
+	(http://moodle.org/mod/forum/discuss.php?d=24110)
+	
+	This was just a simple matter of cleaning up, no GROUP BY was
+	needed.  Now let's see about the similar hornet's nest that we
+	disturbed in Quiz...
+
+2005-05-19 Thursday 22:13  moodler
+
+	* mod.html, type/common.html, type/online/mod.html: 
+	
+	Some fixes for bug 3166 and the errors when in debug mode
+
+2005-05-19 Thursday 21:17  moodler
+
+	* type/online/db/: mysql.php, postgres7.php: 
+	
+	Fix for journal upgrade problem
+
+2005-05-18 Wednesday 04:04  moodler
+
+	* type/online/: version.php, db/mysql.php, db/postgres7.php: 
+	
+	The Online assignment now self-upgrades and tries to populate
+	itself with all the Journals.
+	
+	I'm sorry this is so late.  :-(
+	
+	It probably has bugs and may lose Journal data.
+	
+	Please test it for me - I need to sleep.
+
+2005-05-18 Wednesday 03:58  moodler
+
+	* lib.php, version.php: 
+	
+	Fixed some upgrading bugs
+
+2005-05-17 Tuesday 06:02  stronk7
+
+	* config.html, details.php: 
+	
+	Tabs are out
+
+2005-04-27 Wednesday 17:37  moodler
+
+	* lib.php, mod.html, type/common.html,
+	type/uploadsingle/assignment.class.php, type/uploadsingle/mod.html:
+	
+	
+	Shane and I fixed a few things:
+	
+	   - preventlate works
+	   - dates can be set to not be used
+	   - optional assignment fields all getting passed to second screen
+	now  8-I
+
+2005-04-22 Friday 11:13  defacer
+
+	* type/uploadsingle/assignment.class.php: 
+	
+	
+	Fixing a bug with embedding the parameter a=... in the log URL,
+	which in turn affected the recent_activity block (that's how I
+	found out).
+	
+	Changed some random quotes to single in the near vicinity.
+	
+	Double quotes bad. Shoo!
+
+2005-04-21 Thursday 20:44  moodler
+
+	* type/offline/assignment.class.php: 
+	
+	Don't show lateness on offline assignments (bug 2993)
+
+2005-04-21 Thursday 16:41  moodler
+
+	* view.php: 
+	
+	Oops left database debugging on in the last commit. (SE)
+
+2005-04-21 Thursday 16:32  moodler
+
+	* lib.php, styles.php, view.php: 
+	
+	Fixed a PHP bug in deleting assignment instances. (SE).
+
+2005-04-20 Wednesday 20:01  moodler
+
+	* type/online/assignment.class.php: 
+	
+	Fixing a problem unslashed data
+
+2005-04-20 Wednesday 17:12  moodler
+
+	* lib.php, styles.php: 
+	
+	Strp tabs from shortened comments
+
+2005-04-20 Wednesday 15:48  moodler
+
+	* lib.php, type/online/assignment.class.php: 
+	
+	Inline commenting now works
+
+2005-04-20 Wednesday 14:49  moodler
+
+	* lib.php, type/offline/assignment.class.php,
+	type/online/assignment.class.php,
+	type/uploadsingle/assignment.class.php: 
+	
+	Fixed up the submitted links once and for all
+
+2005-04-19 Tuesday 23:37  moodler
+
+	* index.php: 
+	
+	Added assignment type on the index page
+
+2005-04-19 Tuesday 00:01  moodler
+
+	* index.php, lib.php, styles.php, type/online/assignment.class.php,
+	type/uploadsingle/assignment.class.php: 
+	
+	A few tidy ups
+
+2005-04-18 Monday 19:54  moodler
+
+	* type/uploadsingle/upload.php: 
+	
+	Extra file
+
+2005-04-18 Monday 19:47  moodler
+
+	* plan.txt: 
+	
+	All done now, more or less
+
+2005-04-18 Monday 17:29  moodler
+
+	* lib.php, mod.html, styles.php, type/offline/assignment.class.php,
+	type/online/assignment.class.php, type/online/file.php,
+	type/online/mod.html, type/uploadsingle/assignment.class.php,
+	type/uploadsingle/mod.html: 
+	
+	Another big dump with many changes.
+	
+	The most notable one is the new online assignment type, which is a
+	good example of how little code really needs to be written to make
+	new assignment types now.
+
+2005-04-18 Monday 12:11  moodler
+
+	* backuplib.php, restorelib.php, version.php, db/mysql.php,
+	db/mysql.sql, db/postgres7.php, db/postgres7.sql: 
+	
+	New field and option for assignments, preventlate, which prevents
+	students from submitting assignments late
+
+2005-04-18 Monday 06:17  stronk7
+
+	* index.php, lib.php, type/uploadsingle/upload.php: 
+	
+	assignment->name supports filterall again. :-P
+
+2005-04-18 Monday 02:45  moodler
+
+	* index.php, lib.php, type/offline/assignment.class.php: 
+	
+	Improved listing on index page for students
+
+2005-04-18 Monday 02:32  moodler
+
+	* type/offline/assignment.class.php: 
+	
+	FIxed some notices
+
+2005-04-18 Monday 01:58  moodler
+
+	* lib.php: 
+	
+	Added formatting for comments
+
+2005-04-18 Monday 01:51  moodler
+
+	* backuplib.php, lib.php, restorelib.php, styles.php, version.php,
+	db/mysql.php, db/mysql.sql, db/postgres7.php, db/postgres7.sql: 
+	
+	Added a new format field for comments
+
+2005-04-18 Monday 01:11  moodler
+
+	* lib.php, styles.php, type/uploadsingle/assignment.class.php: 
+	
+	Tweaks and so on, making it pretty
+
+2005-04-17 Sunday 23:56  moodler
+
+	* lib.php: 
+	
+	DIsplay numerical grades with total grade:	9 / 10
+
+2005-04-17 Sunday 23:55  moodler
+
+	* details.php: 
+	
+	Fix for secure forms
+
+2005-04-17 Sunday 23:38  moodler
+
+	* backuplib.php, details.php, lib.php, mod.html, restorelib.php,
+	styles.php, submissions.php, upload.php, version.php, view.php,
+	db/mysql.php, db/mysql.sql, db/postgres7.php, db/postgres7.sql,
+	type/uploadsingle/assignment.class.php, type/uploadsingle/mod.html,
+	type/uploadsingle/upload.php: 
+	
+	A very big batch of changes.  Everything sort of works: now I'm
+	mopping up.
+
+2005-04-17 Sunday 17:27  stronk7
+
+	* backuplib.php, restorelib.php: 
+	
+	timeavailable was missing in backup and restore. :-)
+
+2005-04-15 Friday 22:51  moodler
+
+	* backuplib.php, restorelib.php, version.php, db/mysql.php,
+	db/mysql.sql, db/postgres7.php, db/postgres7.sql: 
+	
+	Two new general-purpose fields in assignment_submissions, so that
+	most assignment types won't need to create new tables for data
+	
+	The fields are data1 and data2.
+	
+	Backup/restore handled, Eloy   ;-)
+
+2005-04-15 Friday 22:19  moodler
+
+	* lib.php, styles.php: 
+	
+	Tidied up the feedback - offline assignments are pretty much done
+
+2005-04-15 Friday 21:41  moodler
+
+	* lib.php: 
+	
+	Cleaner updating of buttons and scales
+
+2005-04-15 Friday 07:15  ikawhero
+
+	* lib.php: 
+	
+	Redundant parameters removed
+
+2005-04-15 Friday 01:59  moodler
+
+	* lib.php: 
+	
+	Forgot some debugging
+
+2005-04-15 Friday 01:56  moodler
+
+	* lib.php: 
+	
+	Better updating of the parent page when grading, now works even
+	when columns are closed
+
+2005-04-15 Friday 01:11  moodler
+
+	* styles.php: 
+	
+	Same color as "unread" posts
+
+2005-04-15 Friday 01:10  moodler
+
+	* lib.php, styles.php: 
+	
+	Shane and I have been working on this vastly improved grading
+	interface  :-D
+
+2005-04-14 Thursday 23:23  moodler
+
+	* lib.php: 
+	
+	Better updating of table from popup
+
+2005-04-14 Thursday 22:13  moodler
+
+	* lib.php: 
+	
+	Fixed a typo
+
+2005-04-14 Thursday 22:13  ikawhero
+
+	* lib.php: 
+	
+	Oops! Removed debug echo line.
+
+2005-04-14 Thursday 22:09  ikawhero
+
+	* lib.php: 
+	
+	SQL update to use JOIN rather than seperate queries
+
+2005-04-14 Thursday 21:37  moodler
+
+	* version.php, db/mysql.php, db/postgres7.php: 
+	
+	Fixed the assignment upgrade
+
+2005-04-14 Thursday 21:24  moodler
+
+	* backuplib.php, config.html, details.php, index.php, lib.php,
+	mod.html, plan.txt, restorelib.php, styles.php, submissions.php,
+	upload.php, version.php, view.php, db/mysql.php, db/mysql.sql,
+	db/postgres7.php, db/postgres7.sql, type/common.html,
+	type/common_end.html, type/postdata.html,
+	type/offline/assignment.class.php, type/offline/mod.html,
+	type/uploadsingle/assignment.class.php, type/uploadsingle/mod.html:
+	
+	
+	Refactored Assignment Module ============================
+	
+	This new assignment module allows Plugin Assignment types.  This
+	should allow a whole lot of new stuff to easily be placed in Moodle
+	without making the modules list longer for no good reason.
+	
+	This checkin is still a really rough version that needs work on it.
+	 Normally I would want it better than this to check in, but I need
+	to collaborate with Shane on the remaining code and CVS is the best
+	way.
+	
+	Give it a day or two to settle in.  :-)
+	
+	This is the last thing I wanted to get into 1.5.  Getting close
+	now!!
+	
+	Cheers! Martin
+
+2005-04-13 Wednesday 15:45  moodler
+
+	* view.php: 
+	
+	Added some reportlink classed to the report links
+
+2005-04-13 Wednesday 07:42  stronk7
+
+	* restorelib.php: 
+	
+	Now all the wiki formated texts are converted to markdown by the
+	restore process. Such conversion is performed for every backup file
+	prior to 2005041100.  Wiki internal links are dinamically changed
+	and then, converted to Markdown. Bye, Wiki! ;-)
+
+2005-04-11 Monday 20:44  thepurpleblob
+
+	* version.php: 
+	
+	Now 2005041100: Update wiki-like description to Markdown.
+
+2005-04-11 Monday 20:43  thepurpleblob
+
+	* db/: mysql.php, postgres7.php: 
+	
+	Update converts all wiki-like descriptions to Markdown.
+
+2005-04-03 Sunday 07:19  stronk7
+
+	* lib.php: 
+	
+	Now xxx_print_recent_mod_activity() supports filterall. 
+	(assignment, forum, quiz and workshop)
+
+2005-04-02 Saturday 19:32  stronk7
+
+	* lib.php: 
+	
+	Now course/recent.php works under PHP5.  See bug 2828
+	(http://moodle.org/bugs/bug.php?op=show&bugid=2828)
+	
+	Merged from MOODLE_14_STABLE
+
+2005-04-02 Saturday 19:24  stronk7
+
+	* lib.php: 
+	
+	Now course/recent.php works under PHP5.  See bug 2828
+	(http://moodle.org/bugs/bug.php?op=show&bugid=2828)
+
+2005-03-27 Sunday 02:14  stronk7
+
+	* index.php, lib.php, restorelib.php, submissions.php, upload.php,
+	view.php: 
+	
+	Now assignment->name works under filterall.
+
+2005-03-14 Monday 00:17  moodler
+
+	* view.php: 
+	
+	Standardise the intro box using an ID
+
+2005-03-10 Thursday 21:30  moodler
+
+	* lib.php, version.php: 
+	
+	Variety of small fixes, but mostly related to how the recent
+	activity block is constructed.	A new function exists to pump these
+	notes out in a standard way :  print_recent_activity_note.
+	
+	Module dependencies also updated because of this.
+
+2005-03-07 Monday 19:31  moodler
+
+	* lib.php: 
+	
+	Removed files/mimetype.php and put it into lib/filelib.php instead
+	where it always should have been.
+
+2005-02-22 Tuesday 20:56  moodler
+
+	* db/: oci8po.php, oci8po.sql: 
+	
+	Removing these to avoid confusion.
+	
+	Yes, my assignment refactoring is going to make it into 1.5
+
+2005-02-16 Wednesday 18:40  gustav_delius
+
+	* submissions.php, upload.php, version.php, view.php: 
+	
+	In order to ensure that when a teacher hides a resource or an
+	activity that students really can't get at it, even if they know
+	the direct links to its pages, I have given an optional third
+	argument $cm to the functions  require_login() and
+	require_course_login(). Pages showing information about a
+	particular course module now pass the course module object in this
+	third argument. The login functions will then test if either the
+	course module is visible or the user is a teacher. If neither is
+	the case then the user is redirected to the course homepage after
+	being shown a message "Sorry, this activity is currently hidden".
+	
+	(While I was at it I also turned the autologinguests off for most
+	module pages, except on the index.php pages and the view.php pages
+	for those modules that allow guests)
+
+2005-02-14 Monday 08:05  gustav_delius
+
+	* index.php: 
+	
+	Fix bug 1998
+
+2005-02-13 Sunday 08:42  stronk7
+
+	* lib.php: 
+	
+	Now retrieving only needed fields!
+
+2005-02-13 Sunday 05:41  gustav_delius
+
+	* mod.html: 
+	
+	Activities can now be hidden/shown from the activity editing page.
+	Also for modules that know about groups the groupmode can be set
+	from there. See bug 2533. This required adding to the mod.html
+	files calls to new functions print_visible_setting() and
+	print_groupmode_setting() which are combined in
+	print_standard_coursemodule_settings().
+	
+	The visibility of coursemodules is now always set through the
+	function set_coursemodule_visible() in order to make sure that the
+	associated events get updated in the calendar appropriately.
+	
+	If moving a coursemodule to a hidden section then the module is set
+	to hidden as well and its events are hidden in the calendar.
+	
+	If deleting a coursemodule its events are deleted from the
+	calendar.
+	
+	The function choose_from_menu() has an extra optional argument
+	$disabled which, when set to true, will disable the menu.
+	
+	For the sake of consistency the function set_groupmode_for_module
+	has been renamed to set_coursemodule_groupmode and the functions
+	show_course_module() and hide_course_module() have been combined to
+	set_coursemodule_visible().
+
+2005-02-10 Thursday 18:41  moodler
+
+	* lib.php: 
+	
+	Removing the THEME variable and adding in classes where appropriate
+
+2005-02-08 Tuesday 17:23  moodler
+
+	* config.html: 
+	
+	Fixed up some layout issues in the configuration files
+
+2005-02-08 Tuesday 07:33  stronk7
+
+	* restorelib.php: 
+	
+	Some minor changes to each module to XHTMLise the restore process
+
+2005-01-31 Monday 03:03  stronk7
+
+	* backuplib.php, restorelib.php: 
+	
+	Added suppor for assignment->emailteachers
+
+2005-01-29 Saturday 01:35  moodler
+
+	* upload.php: 
+	
+	Fixed a typo
+
+2005-01-25 Tuesday 17:39  moodler
+
+	* lib.php, mod.html, view.php: 
+	
+	Changes for XHTML and accessibility compatibility.  Tidied up
+	layout and other minor changes.
+
+2005-01-23 Sunday 02:53  stronk7
+
+	* mod.html: 
+	
+	Modify sesskey behaviour. SC#73
+
+2005-01-21 Friday 13:06  moodler
+
+	* mod.html: 
+	
+	Changes for XHTML and accessibility compatibility. General tidy up.
+
+2005-01-13 Thursday 11:02  moodler
+
+	* lib.php: 
+	
+	FIxes for bug 2379 (merged from stable)
+
+2005-01-13 Thursday 10:55  moodler
+
+	* lib.php: 
+	
+	isteacher() was called incorrectly (bug #2379)
+
+2005-01-11 Tuesday 22:33  petcheverry
+
+	* backuplib.php, lib.php, mod.html, version.php, db/mysql.php,
+	db/mysql.sql: 
+	
+	Some changes in terminology (more to come).
+
+2005-01-06 Thursday 21:23  moodler
+
+	* view.php: 
+	
+	Removing a notice on PHP 5
+
+2005-01-06 Thursday 21:15  moodler
+
+	* lib.php: 
+	
+	FIxed a few silly bugs.  Seems to test out OK now.
+
+2005-01-06 Thursday 01:13  moodler
+
+	* lib.php, mod.html, upload.php, version.php, db/mysql.php,
+	db/mysql.sql, db/postgres7.php, db/postgres7.sql: 
+	
+	Email alerts to teachers ------------------------
+	
+	Added a small new feature to the assignment module to alert
+	teachers when new emails come in.  This feature adds one new field
+	(which is tested) but the operation of the new code has not been
+	tested yet at all (apart from PHP syntax) and very likely has bugs
+	in it.
+	
+	I'm checking this in so I can do tests on test.moodle.com which has
+	email set up properly.
+	
+	I'm off to bed right now but if anyone else wants to test this
+	feature before tomorrow please do!   :-)
+	
+	While I'm rambling here in CVS, I need to have a good look soon at
+	Pablo's work on Assignment and see if I can merge it all in...
+
+2005-01-03 Monday 20:40  petcheverry
+
+	* version.php: 
+	
+	Updated version number.
+
+2004-12-31 Friday 00:16  petcheverry
+
+	* backuplib.php, index.php, lib.php, mod2.php, restorelib.php,
+	version.php, view.php, db/mysql.php: 
+	
+	Added online assignment.  Polished offline assignment.	Added
+	backup and restore functions which take into account the new
+	structure.  This is the first version we could name "Beta level".
+
+2004-11-19 Friday 02:58  stronk7
+
+	* version.php, db/mysql.php, db/postgres7.php: 
+	
+	2004111200 downto 2004060401 (version never changes in STABLE
+	branches)
+
+2004-11-18 Thursday 10:33  mjollnir_
+
+	* db/: mysql.php, postgres7.php: 
+	
+	Replaced prefix_ with CFG->prefix for DROP of indexes before
+	creation because of being inside execute_sql rather than
+	modify_database - assignment module
+
+2004-11-18 Thursday 05:49  mjollnir_
+
+	* version.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	Merged from MOODLE_14_STABLE: Indexes and version bump for
+	assignment
+
+2004-11-18 Thursday 05:49  mjollnir_
+
+	* version.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	Indexes and version bump for assignment
+
+2004-11-15 Monday 22:20  petcheverry
+
+	* lib.php, mod2.php, version.php, view.php, db/mysql.php: 
+	
+	Fixed a problem when updating where original content was not
+	inserted by default for modifying.
+
+2004-11-10 Wednesday 00:33  petcheverry
+
+	* type/postdata.html: 
+	
+	Removed some debug stuff.
+
+2004-11-09 Tuesday 23:44  petcheverry
+
+	* version.php: 
+	
+	Updated version number so it installs fine.
+
+2004-11-08 Monday 23:58  petcheverry
+
+	* db/mysql.php: 
+	
+	All functions fo offline assignment (update, delete, view) are
+	finished.  Database update scripts now work fine.
+
+2004-11-07 Sunday 23:27  moodler
+
+	* lib.php: 
+	
+	Merged mailout fix from STABLE
+
+2004-11-07 Sunday 23:24  moodler
+
+	* lib.php: 
+	
+	Don't post out assignment notifications older than a day
+
+2004-11-04 Thursday 23:30  petcheverry
+
+	* lib.php, mod2.php, version.php, view.php: 
+	
+	All functions fo offline assignment (update, delete, view) are
+	finished.  Database update scripts now work fine.
+
+2004-10-31 Sunday 12:10  moodler
+
+	* lib.php: 
+	
+	Merged fix from stable
+
+2004-10-31 Sunday 12:09  moodler
+
+	* lib.php: 
+	
+	Fixed the bug introduced in 1.4 (part of the site-level module
+	changes) that caused assignment notifications to not be mailed out
+
+2004-10-19 Tuesday 17:19  moodler
+
+	* lib.php, mod.html, submissions.php, view.php: 
+	
+	Changes for XHTML and accessibility compliance
+
+2004-10-18 Monday 23:08  petcheverry
+
+	* type/postdata.html: 
+	
+	[no log message]
+
+2004-10-18 Monday 23:02  petcheverry
+
+	* db/: mysql.php, mysql.sql: 
+	
+	No differences.
+
+2004-10-18 Monday 22:52  petcheverry
+
+	* lib.php, mod2.php, update_tables.sql, version.php, view.php: 
+	
+	Removed old manual update file.
+
+2004-10-08 Friday 21:33  moodler
+
+	* lib.php: 
+	
+	Changes for XHTML compatibility
+
+2004-10-03 Sunday 17:48  stronk7
+
+	* config.html: 
+	
+	admin/module.php is now using sesskey.
+	
+	Merged from MOODLE_14_STABLE
+
+2004-10-03 Sunday 17:44  stronk7
+
+	* config.html: 
+	
+	admin/module.php is now using sesskey.
+
+2004-09-17 Friday 13:46  mjollnir_
+
+	* version.php: 
+	
+	bumps for version and requires for modules that use new upload
+	class
+
+2004-09-17 Friday 01:13  gustav_delius
+
+	* lib.php, submissions.php: 
+	
+	XHTML compliance - fixed (hopefully) all <img> tags - global
+	replace on <br> to <br /> - &amp; in URLs - got the forum module
+	XHTML compliant Julian Sedding
+
+2004-09-16 Thursday 12:25  mjollnir_
+
+	* upload.php: 
+	
+	Small fix for assignment regarding integration with upload class.
+	
+	These patches are maintained in an publicly accessible Arch
+	repository, see:
+	http://lists.eduforge.org/cgi-bin/archzoom.cgi/arch-eduforge@cataly
+	st.net.nz--2004-MIRROR/moodle--eduforge--1.3.3
+	
+	Index of arch patches in this commit:
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	67     2004-09-16 04:21:28 GMT	   Penny Leach
+	<penny@catalyst.net.nz>     tiny fix for assignment integration
+	
+	Full logs:
+	
+	Revision: moodle--eduforge--1.3.3--patch-67 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Thu Sep 16 16:21:28 NZST 2004
+	Standard-date: 2004-09-16 04:21:28 GMT Modified-files:
+	mod/assignment/upload.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	67 Summary: tiny fix for assignment integration Keywords:
+
+2004-09-15 Wednesday 06:58  mjollnir_
+
+	* lib.php, upload.php: 
+	
+	Centralised file upload code, integration with clam AV, integration
+	with some modules: assignment, exercise, forum, glossaryt,
+	resource, scorm (more to come soon).
+	
+	These patches are maintained in an publicly accessible Arch
+	repository, see:
+	http://lists.eduforge.org/cgi-bin/archzoom.cgi/arch-eduforge@cataly
+	st.net.nz--2004-MIRROR/moodle--eduforge--1.3.3
+	
+	Index of arch patches in this commit:
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	15     final touches to sears stuff until testing can begin,
+	beginning of magical uploadey wrappery function goodness
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	18     Virus scanning on upload
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	19     made emacs use spaces instead of tabs and fixed
+	lib/moodlelib.php where it was bad in the new functions; few
+	wording changes, added in support for clamdscan
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	20     handlevirus.php = new script to handle output of clamscan
+	(designed for cron clamscan), changes to strings for emailing out
+	virus notifications, changes to moodlelib - slightly different
+	notice reporting in handle_infected_file and new function for
+	replacing file with message
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	21     refactor to filter out invalid lines in input to handlevirus
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	22     modified assignment to use hande_file_upload
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	25     bug fix for handle_file_upload
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	26     Small fix for non thinking brain doing something silly
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	35     small fix to switch order of items in drop down to allow
+	sensible defaults
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	36     small changes to strings file
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	38     taken stuff out of moodlelib to put in upload class
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	39     new upload class -in a changeset by itself just in case -
+	not quite finished
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	40     tweaks to upload class - clam_scan_file can now take a path
+	as an argument, not just an entry from _FILES, there is better
+	handling of failure and notification, more allowance for module
+	writers to keep control in general. Also slightly nicer strings
+	entries for a few things
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	41     upload class integration with assignment module, bug fix,
+	slight tweak
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	42     small changes to uploadlib, integration with assessment and
+	assignment
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	44     tweaks for assessment and assignment for uploading
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	48     integration with exercise module
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	49     integration of virus stuff with forum module
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	50     integration of upload class and glossary module
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	51     just in case glossary_move_attachments is ever used, we
+	change the log entries before we move the files. also  moved
+	clam_log_upload out of the class
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	52     virus scanning for imports for glossary
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	53     relog entries when moving files attached to forum posts
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	54     resource module integration with virus scanning
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	55     scorm integration with upload/virus class
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	56     fix for handlevirus.php since upload class changes
+	
+	Full logs:
+	
+	Revision: moodle--eduforge--1.3.3--patch-15 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Wed Sep  1 17:28:13 NZST 2004
+	Standard-date: 2004-09-01 05:28:13 GMT Modified-files:
+	lang/en/moodle.php lib/moodlelib.php	 mod/assessment/sears.php
+	mod/assessment/upload.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	15 Summary: final touches to sears stuff until testing can begin,
+	beginning of magical uploadey wrappery function goodness Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-18 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Thu Sep  2 15:49:54 NZST 2004
+	Standard-date: 2004-09-02 03:49:54 GMT Modified-files:
+	admin/config.html lang/en/moodle.php	 lib/moodlelib.php
+	mod/assessment/upload.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	18 Summary: Virus scanning on upload Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-19 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Thu Sep  2 17:06:14 NZST 2004
+	Standard-date: 2004-09-02 05:06:14 GMT Modified-files:
+	lang/en/moodle.php lib/moodlelib.php	 mod/assessment/upload.php
+	New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	19 Summary: made emacs use spaces instead of tabs and fixed
+	lib/moodlelib.php where it was bad in the new functions; few
+	wording changes, added in support for clamdscan Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-20 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Fri Sep  3 16:06:05 NZST 2004
+	Standard-date: 2004-09-03 04:06:05 GMT New-files:
+	admin/.arch-ids/handlevirus.php.id     admin/handlevirus.php
+	Modified-files: lang/en/moodle.php lib/moodlelib.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	20 Summary: handlevirus.php = new script to handle output of
+	clamscan (designed for cron clamscan), changes to strings for
+	emailing out virus notifications, changes to moodlelib - slightly
+	different notice reporting in handle_infected_file and new function
+	for replacing file with message Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-21 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep  6 11:37:31 NZST 2004
+	Standard-date: 2004-09-05 23:37:31 GMT Modified-files:
+	admin/handlevirus.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	21 Summary: refactor to filter out invalid lines in input to
+	handlevirus Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-22 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep  6 13:07:48 NZST 2004
+	Standard-date: 2004-09-06 01:07:48 GMT Modified-files:
+	mod/assignment/upload.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	22 Summary: modified assignment to use hande_file_upload Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-25 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep  6 16:32:11 NZST 2004
+	Standard-date: 2004-09-06 04:32:11 GMT Modified-files:
+	lib/moodlelib.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	25 Summary: bug fix for handle_file_upload Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-26 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep  6 16:51:50 NZST 2004
+	Standard-date: 2004-09-06 04:51:50 GMT Modified-files:
+	lib/moodlelib.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	26 Summary: Small fix for non thinking brain doing something silly
+	Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-35 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Fri Sep 10 10:09:53 NZST 2004
+	Standard-date: 2004-09-09 22:09:53 GMT Modified-files:
+	admin/config.html New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	35 Summary: small fix to switch order of items in drop down to
+	allow sensible defaults Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-36 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Fri Sep 10 10:11:29 NZST 2004
+	Standard-date: 2004-09-09 22:11:29 GMT Modified-files:
+	lang/en/moodle.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	36 Summary: small changes to strings file Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-38 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Fri Sep 10 10:17:24 NZST 2004
+	Standard-date: 2004-09-09 22:17:24 GMT Modified-files:
+	lib/moodlelib.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	38 Summary: taken stuff out of moodlelib to put in upload class
+	Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-39 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Fri Sep 10 10:21:21 NZST 2004
+	Standard-date: 2004-09-09 22:21:21 GMT New-files:
+	lib/.arch-ids/uploadlib.php.id lib/uploadlib.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	39 Summary: new upload class -in a changeset by itself just in case
+	- not quite finished Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-40 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Fri Sep 10 11:58:24 NZST 2004
+	Standard-date: 2004-09-09 23:58:24 GMT Modified-files:
+	lang/en/moodle.php lib/uploadlib.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	40 Summary: tweaks to upload class - clam_scan_file can now take a
+	path as an argument, not just an entry from _FILES, there is better
+	handling of failure and notification, more allowance for module
+	writers to keep control in general. Also slightly nicer strings
+	entries for a few things Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-41 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Fri Sep 10 12:38:02 NZST 2004
+	Standard-date: 2004-09-10 00:38:02 GMT Modified-files:
+	lib/uploadlib.php mod/assignment/upload.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	41 Summary: upload class integration with assignment module, bug
+	fix, slight tweak Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-42 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Fri Sep 10 15:30:20 NZST 2004
+	Standard-date: 2004-09-10 03:30:20 GMT Modified-files:
+	lib/uploadlib.php mod/assessment/upload.php    
+	mod/assessment/view.php mod/assignment/upload.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	42 Summary: small changes to uploadlib, integration with assessment
+	and assignment Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-44 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Fri Sep 10 16:54:40 NZST 2004
+	Standard-date: 2004-09-10 04:54:40 GMT Modified-files:
+	mod/assessment/lib.php	   mod/assignment/lib.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	44 Summary: tweaks for assessment and assignment for uploading
+	Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-48 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep 13 09:57:03 NZST 2004
+	Standard-date: 2004-09-12 21:57:03 GMT Modified-files:
+	lang/en/moodle.php     mod/exercise/locallib.php
+	mod/exercise/upload.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	48 Summary: integration with exercise module Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-49 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep 13 11:35:46 NZST 2004
+	Standard-date: 2004-09-12 23:35:46 GMT Modified-files:
+	mod/forum/lib.php mod/forum/post.html New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	49 Summary: integration of virus stuff with forum module Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-50 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep 13 14:00:29 NZST 2004
+	Standard-date: 2004-09-13 02:00:29 GMT Modified-files:
+	lang/en/glossary.php mod/glossary/edit.html    
+	mod/glossary/edit.php mod/glossary/lib.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	50 Summary: integration of upload class and glossary module
+	Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-51 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep 13 15:13:02 NZST 2004
+	Standard-date: 2004-09-13 03:13:02 GMT Modified-files:
+	lib/uploadlib.php mod/glossary/lib.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	51 Summary: just in case glossary_move_attachments is ever used, we
+	change the log entries before we move the files. also  moved
+	clam_log_upload out of the class Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-52 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep 13 15:26:56 NZST 2004
+	Standard-date: 2004-09-13 03:26:56 GMT Modified-files:
+	mod/glossary/import.html     mod/glossary/import.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	52 Summary: virus scanning for imports for glossary Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-53 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep 13 16:02:22 NZST 2004
+	Standard-date: 2004-09-13 04:02:22 GMT Modified-files:
+	mod/forum/lib.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	53 Summary: relog entries when moving files attached to forum posts
+	Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-54 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep 13 16:58:37 NZST 2004
+	Standard-date: 2004-09-13 04:58:37 GMT Modified-files:
+	mod/resource/coursefiles.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	54 Summary: resource module integration with virus scanning
+	Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-55 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Tue Sep 14 16:15:47 NZST 2004
+	Standard-date: 2004-09-14 04:15:47 GMT Modified-files:
+	mod/scorm/coursefiles.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	55 Summary: scorm integration with upload/virus class Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-56 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Wed Sep 15 10:33:23 NZST 2004
+	Standard-date: 2004-09-14 22:33:23 GMT Modified-files:
+	admin/handlevirus.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	56 Summary: fix for handlevirus.php since upload class changes
+	Keywords:
+
+2004-09-13 Monday 06:29  gustav_delius
+
+	* lib.php: 
+	
+	closed some br tags
+
+2004-09-13 Monday 06:23  gustav_delius
+
+	* submissions.php: 
+	
+	closed some input tags
+
+2004-09-13 Monday 05:43  gustav_delius
+
+	* backuplib.php, index.php, lib.php, restorelib.php,
+	submissions.php, upload.php, version.php, view.php, db/mysql.php,
+	db/oci8po.php, db/postgres7.php: 
+	
+	towards XHTML compliance
+
+2004-09-12 Sunday 22:41  gustav_delius
+
+	* config.html, lib.php, mod.html, restorelib.php, submissions.php,
+	view.php: 
+	
+	closed <input /> <br /> <hr />
+
+2004-09-09 Thursday 23:15  petcheverry
+
+	* update_tables.sql: 
+	
+	file update_tables.sql was initially added on branch
+	MOODLE_14_ASSIGNMENTREFACTOR.
+
+2004-09-09 Thursday 23:15  petcheverry
+
+	* update_tables.sql: 
+	
+	Added SQL definition file for tables under MySQL.
+
+2004-09-09 Thursday 22:53  petcheverry
+
+	* lib.php, mod.html, mod2.php, view.php: 
+	
+	Minor changes.
+
+2004-09-09 Thursday 22:28  petcheverry
+
+	* db/: mysql.php, mysql.sql, oci8po.php, oci8po.sql, postgres7.php,
+	postgres7.sql: 
+	
+	removed db directory. It is not ready yet and could cause problems
+	if used.
+
+2004-09-09 Thursday 21:25  petcheverry
+
+	* mod2.php: 
+	
+	file mod2.php was initially added on branch
+	MOODLE_14_ASSIGNMENTREFACTOR.
+
+2004-09-09 Thursday 21:23  petcheverry
+
+	* type/common.html, type/common_end.html, type/postdata.html,
+	mod2.php: 
+	
+	[no log message]
+
+2004-09-09 Thursday 21:23  petcheverry
+
+	* type/postdata.html: 
+	
+	file postdata.html was initially added on branch
+	MOODLE_14_ASSIGNMENTREFACTOR.
+
+2004-09-09 Thursday 21:23  petcheverry
+
+	* type/common_end.html: 
+	
+	file common_end.html was initially added on branch
+	MOODLE_14_ASSIGNMENTREFACTOR.
+
+2004-09-09 Thursday 21:23  petcheverry
+
+	* type/common.html: 
+	
+	file common.html was initially added on branch
+	MOODLE_14_ASSIGNMENTREFACTOR.
+
+2004-09-09 Thursday 00:15  petcheverry
+
+	* backuplib.php, index.php, restorelib.php, submissions.php,
+	upload.php: 
+	
+	Removed files yet not processed to comply new class structure.
+
+2004-09-07 Tuesday 17:25  moodler
+
+	* lib.php, upload.php, view.php: 
+	
+	Improvements to uploading error feedback  (from Shane)
+
+2004-08-29 Sunday 22:15  gustav_delius
+
+	* lib.php: 
+	
+	removed unnecessary calls to get_site()
+
+2004-08-25 Wednesday 02:38  gustav_delius
+
+	* version.php: 
+	
+	Merging from stable branch
+
+2004-08-24 Tuesday 23:14  gustav_delius
+
+	* version.php: 
+	
+	reduced $module->requires to 052505 after Martin put my new
+	functions into that version.
+
+2004-08-24 Tuesday 18:13  gustav_delius
+
+	* version.php: 
+	
+	All the modules in which I made changes require the latest version
+	of datalib.php.
+
+2004-08-22 Sunday 22:38  gustav_delius
+
+	* index.php, lib.php, view.php: 
+	
+	All modules are now suitable for the site page. They now all follow
+	the same rules, namely that any students enrolled in at least one
+	course is considered to be a student on the site.
+	
+	All the page headers work correctly also on the site course.
+	
+	On the site page the modules don't require login unless necessary
+	or required by $CFG->forcelogin.
+
+2004-08-22 Sunday 04:20  gustav_delius
+
+	* index.php, submissions.php, upload.php, view.php: 
+	
+	Removed notices by introducing new function print_header_simple()
+	which works on site as well as in courses without extra logic.
+
+2004-08-17 Tuesday 14:58  moodler
+
+	* submissions.php: 
+	
+	Show jump menu when grading assignments
+
+2004-08-17 Tuesday 13:44  moodler
+
+	* lib.php, view.php: 
+	
+	Don't show grades at all when grades not being used  bug 1710
+
+2004-07-03 Saturday 18:28  moodler
+
+	* lib.php: 
+	
+	Merged from stable branch
+
+2004-07-03 Saturday 18:25  moodler
+
+	* lib.php: 
+	
+	Made assignment submission counting more robust
+
+2004-06-15 Tuesday 20:35  petcheverry
+
+	* readme.txt: 
+	
+	Added readme.txt, with initial schedule.
+
+2004-06-15 Tuesday 20:35  petcheverry
+
+	* readme.txt: 
+	
+	file readme.txt was initially added on branch
+	MOODLE_14_ASSIGNMENTREFACTOR.
+
+2004-06-09 Wednesday 15:05  moodler
+
+	* lib.php: 
+	
+	When sending assignment notifications, update "mailed" flag before
+	trying to mail them.  This helps prevent multiple mail problems if
+	cron or smtp has major problems.
+	
+	http://moodle.org/mod/forum/discuss.php?d=8821
+
+2004-06-04 Friday 15:28  moodler
+
+	* version.php: 
+	
+	MOdules are dependent on this version of course/mod.php
+
+2004-06-04 Friday 14:17  moodler
+
+	* mod.html, version.php: 
+	
+	BRANCH MERGE
+	
+	These are the changes from MOODLE_13_STABLE, merged into trunk
+	
+	The tag MOODLE_13_MERGED on the MOODLE_13_STABLE branch now refers
+	to this point
+	
+	The biggest changes here are the fixes for HTML editor in all
+	standard modules
+
+2004-06-03 Thursday 21:07  moodler
+
+	* mod.html, version.php: 
+	
+	OK, for bug fixes this is a pretty big checkin!!   :-/
+	
+	I finally was able to see the HTML Editor bug in IE/XP that
+	everyone was talking about, and it's a very serious bug as it makes
+	Moodle 1.3 almost unusable for these people.  :-(  :-(
+	
+	So, I eventually found out that the problem is that the Javascript
+	that attaches the editor has troubles when it is embedded within
+	the table						    that
+	course/mod.php puts around the mod.html forms in each module. 
+	(Only in IE and only sometimes, mind you).
+	
+	While testing I also had a good look at a long standing issue which
+	is the inconsistency of the mod.html forms when using the editor.
+	
+	So, to fix both I decided to put the HTML editor calls OUTSIDE the
+	mod.html in the mod.php file.  This means that all modules get the
+	HTML editor by default on all text areas during activity module
+	setup by default.
+	
+	I've been running through this for the past few hours and it seems
+	pretty stable now and a lot more consistent, so I'm checking it in
+	as big fix towards the Moodle 1.3.1 we have to have.
+	
+	Unfortunately it also means the API has changed a bit  ... I had to
+	update all the module dependencies to this exact version (or
+	later).
+	
+	Please test this "stable" version hard using the standard modules
+	only and I'll merge these changes over to the trunk in a day or so
+	and update all known third-party modules.
+
+2004-05-18 Tuesday 00:24  moodler
+
+	* lib.php: 
+	
+	Delete events when activity is deleted
+
+2004-05-16 Sunday 08:35  stronk7
+
+	* lib.php: 
+	
+	Step 2 of Bug 1223 done. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1223)
+
+2004-05-16 Sunday 07:18  stronk7
+
+	* lib.php: 
+	
+	Step 1 of Bug 1223 done. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1223)
+
+2004-05-15 Saturday 23:21  moodler
+
+	* submissions.php: 
+	
+	FIxed a recently-introduced bug preventing assignment grading  bug
+	1390
+
+2004-05-13 Thursday 16:50  moodler
+
+	* submissions.php: 
+	
+	Fixed bug 1379 ....
+
+2004-05-05 Wednesday 15:07  gustav_delius
+
+	* lib.php: 
+	
+	Events associated to hidden activities are now invisible in
+	calendar, using new field 'visible' in table 'event' which is
+	updated each time a course module is hidden or unhidden.
+
+2004-04-26 Monday 21:39  moodler
+
+	* submissions.php: 
+	
+	Put a submit button at the top too.
+
+2004-04-26 Monday 21:35  moodler
+
+	* lib.php: 
+	
+	Show no grade on entries without any feedback
+
+2004-04-24 Saturday 23:08  moodler
+
+	* lib.php: 
+	
+	Solution for bug 1258 I think ... needs testing
+
+2004-04-24 Saturday 12:51  moodler
+
+	* lib.php: 
+	
+	Don't send out notifications for hidden assignments until they are
+	unhidden
+	
+	Bug 1259
+
+2004-04-23 Friday 00:30  moodler
+
+	* lib.php: 
+	
+	Deal with apostrophes better in assignments
+
+2004-04-10 Saturday 07:55  stronk7
+
+	* lib.php: 
+	
+	Modified the function. Now it accepts a courseid to restrict the
+	check to assignments belonging to one exact course. if not
+	specified all assignments in site are checked (old approach).  This
+	function in used by restore_refresh_events() to recalculate module
+	events.  Perhaps it should become a standard function in NEWMODULE
+	to allow new modules implement it.  Ciao :-)
+
+2004-04-01 Thursday 23:41  moodler
+
+	* db/postgres7.php: 
+	
+	Update old events
+
+2004-04-01 Thursday 23:40  moodler
+
+	* lib.php, version.php, db/mysql.php: 
+	
+	
+	Assignment module can now maintain its own events in the calendar. 
+	:-)
+
+2004-03-16 Tuesday 21:54  moodler
+
+	* index.php, lib.php, view.php: 
+	
+	Fixes for displaying numbers of assignment submissions when groups
+	are active
+
+2004-03-13 Saturday 22:24  moodler
+
+	* submissions.php: 
+	
+	Function name change ... hope it doesn't break any third-party
+	code, sorry if it does!
+	
+	  get_users_in_group --->  get_group_users
+	
+	  ... more consistent with other functions
+
+2004-02-21 Saturday 06:03  selliott
+
+	* lib.php: 
+	
+	Added logic in function assignment_get_recent_mod_activity for
+	groups
+
+2004-02-17 Tuesday 20:25  moodler
+
+	* submissions.php, version.php, db/mysql.php, db/mysql.sql,
+	db/postgres7.php, db/postgres7.sql: 
+	
+	FIxed up logging when viewing submissions (database truncation in
+	logs)
+	
+	Thanks Eloy!
+
+2004-02-16 Monday 22:17  selliott
+
+	* lib.php: 
+	
+	Fixed icon display for submissions when shown in course/recent.php
+
+2004-02-16 Monday 17:24  moodler
+
+	* lib.php: 
+	
+	Fixed some old pix paths
+
+2004-02-16 Monday 05:18  stronk7
+
+	* restorelib.php: 
+	
+	Now logs from: - Assignments - Choices - Workshops are restored
+	too.
+
+2004-02-15 Sunday 22:54  moodler
+
+	* submissions.php: 
+	
+	Fixed bug selecting students in group
+
+2004-02-15 Sunday 15:17  moodler
+
+	* submissions.php: 
+	
+	Use the new short way of setting up groups
+
+2004-02-15 Sunday 14:32  selliott
+
+	* lib.php: 
+	
+	Deleted assignment_print_recent_instance_activity and
+	assignment_get_recent_assignments (used only in course/recent.php)
+	Added	assignment_get_recent_mod_activity and
+	assignment_print_recent_mod_activity (used for course/recent.php)
+
+2004-02-14 Saturday 16:11  moodler
+
+	* submissions.php: 
+	
+	A few more improvements with sorting
+
+2004-02-14 Saturday 15:57  moodler
+
+	* submissions.php: 
+	
+	Group support for assignment submissions, and some cleanups.
+	
+	I really hate this interface - it's not scalable - but this will
+	have to wait for another day.
+
+2004-02-06 Friday 13:25  selliott
+
+	* lib.php: 
+	
+	Added functions get_recent_assignments and
+	print_recent_instance_activity (for course/recent.php)
+
+2004-02-05 Thursday 16:32  moodler
+
+	* db/: mysql.php, postgres7.php: 
+	
+	Removing log upgrades from here (too slow)
+
+2004-02-05 Thursday 13:10  moodler
+
+	* submissions.php, upload.php, version.php, db/mysql.php,
+	db/postgres7.php: 
+	
+	Upgrade logs for assignments
+
+2004-02-04 Wednesday 17:29  moodler
+
+	* lib.php: 
+	
+	Fixed a hardcoded string (thanks, koen)  bug #1022
+
+2004-02-01 Sunday 12:42  moodler
+
+	* version.php: 
+	
+	Updating version numbers of all Modules to make things a bit
+	clearer
+
+2004-01-31 Saturday 23:24  moodler
+
+	* version.php: 
+	
+	All modules now require the very latest because of the changes to
+	add_to_log
+
+2004-01-31 Saturday 23:22  moodler
+
+	* view.php: 
+	
+	Upgraded add_to_log to send cm->id
+
+2004-01-31 Saturday 00:53  moodler
+
+	* index.php, lib.php, view.php: 
+	
+	Fixed the counting of submissions for a new function
+	assignment_count_real_submissions()
+
+2004-01-28 Wednesday 19:03  moodler
+
+	* index.php, view.php: 
+	
+	FIxed counting of submissions
+
+2004-01-28 Wednesday 12:27  moodler
+
+	* version.php: 
+	
+	Define minimum required versions of Moodle
+
+2004-01-26 Monday 20:27  moodler
+
+	* mod.html: 
+	
+	Added dividers and improved display of section
+
+2004-01-26 Monday 20:07  moodler
+
+	* index.php: 
+	
+	Better dividers in the table
+
+2003-11-28 Friday 19:06  moodler
+
+	* lib.php: 
+	
+	Use fullname function
+
+2003-11-22 Saturday 11:14  moodler
+
+	* view.php: 
+	
+	Fixed bug 902 when displaying scale grades for offline assignments
+
+2003-11-15 Saturday 02:34  moodler
+
+	* lib.php: 
+	
+	Check for existence of grades
+
+2003-11-02 Sunday 23:11  moodler
+
+	* lib.php: 
+	
+	Don't even show submitted dates on offline assignments
+
+2003-11-02 Sunday 11:13  moodler
+
+	* db/postgres7.php: 
+	
+	Removed a blank line
+
+2003-11-02 Sunday 11:05  moodler
+
+	* db/mysql.php: 
+	
+	Removed a blank line
+
+2003-10-07 Tuesday 02:02  moodler
+
+	* config.html, lib.php, mod.html: 
+	
+	These changes implement some better controls for controlling
+	uploads.
+	
+	1) There is a new site-wide configuration variable called maxbytes,
+	   which provides an upper filesize limit for all (student)
+	uploads.
+	
+	2) There is a new course-level variable called maxbytes, which
+	further    limits uploads within a course.
+	
+	3) There is a new maxbytes field for forums, which further
+	restricts    the size allowed in a particular forum.  There is also
+	a new config	variable in the module configuration to specify a
+	default size	to use when defining a new forum.
+	
+	4) Assignments already had a limit, but this is now aware of the
+	other	 limits, and like forums there is now a settable default
+	value.
+	
+	5) Finally, the sizes of files (Gb, Mb, Kb, bytes) is now
+	translatable	in the language packs.
+
+2003-09-29 Monday 23:27  stronk7
+
+	* lib.php: 
+	
+	Simply, move the XXXX_get_participants() function from bottom to
+	the common function area.  See bug 807
+
+2003-09-25 Thursday 07:20  les_kopari
+
+	* db/oci8po.php: 
+	
+	Initial add for Oracle...does nothing.
+
+2003-09-13 Saturday 15:55  les_kopari
+
+	* db/oci8po.sql: 
+	
+	Oracle tables, etc converted from mysql, plus test transactions.
+
+2003-09-10 Wednesday 21:53  moodler
+
+	* version.php, db/postgres7.php, db/postgres7.sql: 
+	
+	Fixed a missing PostgreSQL field that had never been added!
+
+2003-09-08 Monday 05:40  stronk7
+
+	* lib.php: 
+	
+	Modified a bit the xx_get_participants() function to avoid non
+	existing activities warnings.
+
+2003-09-04 Thursday 06:10  stronk7
+
+	* lib.php: 
+	
+	Included assignment_get_participants() function.  Please check it
+	before continue with other modules.
+
+2003-08-25 Monday 10:48  moodler
+
+	* restorelib.php: 
+	
+	Fixed some array indices
+
+2003-08-24 Sunday 00:32  selliott
+
+	* submissions.php: 
+	
+	selliott - fixed some code to allow proper sorting of assignments
+	based on name, lastmodified, and feedback
+
+2003-08-18 Monday 13:33  moodler
+
+	* lib.php: 
+	
+	Removed unnecessary database access
+
+2003-08-18 Monday 13:28  moodler
+
+	* mod.html: 
+	
+	More cleanups and separation of printing the grades menu into a new
+	function
+
+2003-08-18 Monday 13:10  moodler
+
+	* submissions.php, view.php: 
+	
+	New function make_grades_menu() for easily making an array of
+	grades
+
+2003-08-18 Monday 12:24  moodler
+
+	* lib.php, mod.html, submissions.php, view.php: 
+	
+	Some polishing for the case when grades are set to zero (no
+	grades).
+	
+	Also, if the date is set further than on year into the future then
+	the due date is not shown.
+
+2003-08-18 Monday 08:02  stronk7
+
+	* restorelib.php: 
+	
+	Scales are now supported in assignments restore (when grade <0, I
+	suppose).
+
+2003-08-17 Sunday 20:45  moodler
+
+	* lib.php: 
+	
+	Fixed display of assignment results when using a scale
+
+2003-08-17 Sunday 18:23  moodler
+
+	* mod.html, submissions.php, view.php: 
+	
+	Assignment module can now use scales for grading.
+
+2003-07-29 Tuesday 06:31  stronk7
+
+	* restorelib.php: 
+	
+	Fixed important bug when recovering assignments or forums with
+	files and the moddata/courseid didn't exist.  Now force the
+	creation of the courseid dir from the restorelib in each module.
+
+2003-07-29 Tuesday 03:32  stronk7
+
+	* restorelib.php: 
+	
+	Added language support
+
+2003-07-25 Friday 22:28  selliott
+
+	* upload.php: 
+	
+	Replaced call to function assignment_get_submission with call to
+	get_record.  This should clean up duplicate rows in
+	assignment_submissions table. -- selliott
+
+2003-07-12 Saturday 13:19  moodler
+
+	* index.php: 
+	
+	When displaying index lists of a particular module's activities,
+	ensure that the order they are displayed in is always the same as
+	the order they have been defined in.   See bug 553.
+	
+	This involved API changes to the function
+	get_all_instances_in_course()
+
+2003-07-09 Wednesday 12:40  moodler
+
+	* backuplib.php, restorelib.php: 
+	
+	Moving the backup libraries for each module into their new homes.
+	
+	There's some beer and pies in the fridge, guys, settle in.
+
+2003-07-07 Monday 20:45  moodler
+
+	* lib.php: 
+	
+	Fixes for "wierd assignment error" - Bug #549, from Scott Elliott
+
+2003-06-16 Monday 22:40  moodler
+
+	* mod.html, submissions.php: 
+	
+	Some fixes to avoid pointless uses of $ME
+
+2003-06-08 Sunday 14:46  moodler
+
+	* lib.php: 
+	
+	better variable name
+
+2003-06-07 Saturday 14:23  moodler
+
+	* lib.php: 
+	
+	Don't return assignment submissions if no sumission has been made
+
+2003-06-07 Saturday 13:54  moodler
+
+	* index.php: 
+	
+	Changes from Scott Elliott to make the listing more useful for
+	teachers Thanks, Scott!
+
+2003-05-20 Tuesday 16:03  moodler
+
+	* mod.html: 
+	
+	Minor code cleanups
+	
+	  - lowercasing
+	  - removing short php tags
+	  - adding some emoticon help here and there
+
+2003-05-16 Friday 02:03  moodler
+
+	* view.php: 
+	
+	I knew there was something else I'd forgotten!
+	
+	Added a check to all modules (well view.php anyway) to check
+	whether a module is hidden or not.  If it is, then students get a
+	message.
+
+2003-05-14 Wednesday 00:02  moodler
+
+	* lib.php: 
+	
+	Mail-outs for assignment and journal module are now translatable.
+
+2003-05-08 Thursday 04:53  gregb_cc
+
+	* submissions.php: 
+	
+	fix for bug 324.  we are now checking to see if there is a conflict
+	caused by multiple teachers gradign simultaneously.
+
+2003-04-28 Monday 23:52  moodler
+
+	* lib.php, submissions.php: 
+	
+	Minor fixes
+
+2003-04-26 Saturday 23:08  moodler
+
+	* lib.php: 
+	
+	Trying a different tack for recent_activity since the old way was
+	still producing too much data and overflowing PHP memory on busier
+	sites (eg moodle.org).
+	
+	Now, there are more database queries, which is unfortunate, but the
+	data is much more specific, and no sorting needs to be done, so
+	this is a performance boost.
+	
+	I don't know how these will cancel out ... my guess is that very
+	small sites may be very slightly slower on the course page, but
+	that large sites will be much faster.
+	
+	Let's see.
+
+2003-04-26 Saturday 20:59  moodler
+
+	* lib.php: 
+	
+	Performance improvements
+	
+	  - better checking of data before processing
+	  - used logs are removed to avoid re-processing by other modules
+
+2003-04-26 Saturday 20:17  moodler
+
+	* lib.php: 
+	
+	Cleaned up definition of constant COURSE_* values in course/lib.php
+	
+	Moved COURSE_TEACHER_COLOR out to style sheets where it belongs
+	(.teacheronly)
+	
+	Added some efficiency when printing recent activity
+	
+	 - don't print more than one weeks worth of updates
+	  - don't keep re-parsing logs once they've been used
+
+2003-04-26 Saturday 07:49  stronk7
+
+	* lib.php: 
+	
+	Show activity log only from visible assignments. Bug #367.
+
+2003-04-25 Friday 00:38  stronk7
+
+	* index.php: 
+	
+	Changed to show the hidden assignments dimmed (bug #364)
+
+2003-04-21 Monday 15:11  moodler
+
+	* upload.php: 
+	
+	Make sure to change the ownership of uploaded files
+
+2003-03-21 Friday 22:09  moodler
+
+	* lib.php: 
+	
+	Removed some tabs  :-)
+
+2003-03-21 Friday 22:07  moodler
+
+	* lib.php, submissions.php: 
+	
+	Hack from Roberto Pinna (Bobo) to add sorting when viewing
+	submissions
+	
+	Might need some tidying up still but it's functional ..
+
+2003-03-15 Saturday 03:58  gregb_cc
+
+	* lib.php: 
+	
+	This closes bug http://moodle.org/bugs/bug.php?op=show&bugid=310
+	assignment_get_unmailed_submissions now ensures that a student is
+	still enrolled
+
+2003-03-14 Friday 04:59  gregb_cc
+
+	* lib.php: 
+	
+	Added a useful message, to make the cron output more helpful in
+	diagnosing "stuck" assignments.
+
+2003-01-23 Thursday 12:23  moodler
+
+	* upload.php: 
+	
+	If comment contains quotes then it can cause problems when an
+	assignment is uploaded.  Bug fixed by Ray Kingdon.
+
+2003-01-15 Wednesday 18:55  moodler
+
+	* lib.php: 
+	
+	
+	Displayed time formats are now stored in lang files (see the new
+	strftime* strings) so they can be customised per language
+
+2003-01-14 Tuesday 11:01  moodler
+
+	* submissions.php: 
+	
+	For assignments without a timemodified stamp, add one when graded
+
+2003-01-06 Monday 21:55  moodler
+
+	* lib.php, mod.html, submissions.php: 
+	
+	Small robustness fixes
+
+2003-01-05 Sunday 22:19  moodler
+
+	* index.php, lib.php, submissions.php, upload.php, view.php: 
+	
+	Clean sweep through all the important changing all include(),
+	include_once() and require() to require_once()
+
+2003-01-05 Sunday 12:20  moodler
+
+	* upload.php: 
+	
+	Changes to improve robustness of uploads, and make things
+	compatible with PHP 4.3.0.  Also some translation fixes with upload
+	strings.
+
+2003-01-02 Thursday 22:49  moodler
+
+	* submissions.php: 
+	
+	buggy_referer is dead!	 Long live buggy_referer!
+	
+	Should be fixed now.  As a bonus, I've removed all the uses of
+	HTTP_POST_VARS from all scripts.
+	
+	All forms should use the new data_submitted() function to collect
+	form data (it does the match_referer thing internally now).
+	
+	Much nicer.
+
+2003-01-01 Wednesday 14:34  moodler
+
+	* mod.html: 
+	
+	More robustness fixes
+
+2002-12-30 Monday 01:32  moodler
+
+	* index.php: 
+	
+	Various little fixes to remove warnings (usually about empty
+	variables) when error_reporting is turned up to 15 or so ... more
+	of these to come ...
+
+2002-12-27 Friday 00:27  moodler
+
+	* mod.html: 
+	
+	Added "source" mode in richtext editor
+
+2002-12-23 Monday 19:47  moodler
+
+	* db/postgres7.sql: 
+	
+	More fixes for postgreSQL etc
+
+2002-12-23 Monday 17:39  moodler
+
+	* lib.php, submissions.php, upload.php, version.php, db/mysql.php,
+	db/mysql.sql, db/postgres7.sql: 
+	
+	Changes throughout Moodle to remove any reserved words from the
+	Moodle tables.
+	
+	ie user -> userid in many tables, plus in user_students    start ->
+	starttime and end -> endtime
+	
+	I've just done all this as carefully as I could ... I don't think I
+	missed anything but it's pretty intensive work and I'd be fooling
+	myself if I didn't think I'd missed a couple.
+	
+	Note that this version should pretty much be able to bootstrap
+	itself using PostgreSQL now ... but this is untested
+
+2002-12-20 Friday 22:44  moodler
+
+	* lib.php, view.php, db/mysql.sql: 
+	
+	Many many changes lumped in here ... not finished yet either.
+	
+	Basically all the Database functions are in lib/datalib.php and the
+	web functions are all in lib/weblib.php, so moodlelib.php is much
+	thinner than it was.
+	
+	Data functions have been extended ... most old calls will still
+	work, but now many more SQL commands can be performed using the
+	datalib functions rather than using SQL.  I'm currently moving
+	through the whole tree replacing SQL calls or at least
+	concentrating them in one section of mod/xxx/lib.php
+	
+	Still working on forums, quizzes, surveys, resources.
+	
+	The tree is currently not full working ... some things are
+	half-completed ... will resume tomorrow.
+
+2002-12-15 Sunday 10:41  moodler
+
+	* db/: postgres7.php, postgres7.sql: 
+	
+	Database and upgrade files for PostgreSQL 7 support!
+
+2002-12-13 Friday 17:06  moodler
+
+	* mod.html: 
+	
+	New consistent help buttons for textarea fields throughout all
+	modules
+
+2002-12-12 Thursday 11:14  moodler
+
+	* lib.php, submissions.php: 
+	
+	Fixed two missing strings
+
+2002-12-07 Saturday 12:20  moodler
+
+	* mod.html: 
+	
+	Removed the "zero" value altogether
+
+2002-12-07 Saturday 12:00  moodler
+
+	* mod.html: 
+	
+	Better checking of existing value, in case it's not in the list
+
+2002-11-28 Thursday 10:41  moodler
+
+	* mod.html: 
+	
+	Fixes to increase the number of options available to limit
+	assignment upload size, and also to limit the list based on PHP
+	limits
+
+2002-11-21 Thursday 18:26  moodler
+
+	* submissions.php: 
+	
+	Fixed a bug from reusing newsubmission variable
+
+2002-11-19 Tuesday 22:27  moodler
+
+	* lib.php: 
+	
+	Changed all references of %e to %d to fix strftime on Windows
+
+2002-11-15 Friday 11:32  moodler
+
+	* mod.html, upload.php, version.php, view.php, db/mysql.php,
+	db/mysql.sql: 
+	
+	Add option that allows students to resubmit after being graded
+
+2002-11-12 Tuesday 13:05  moodler
+
+	* lib.php: 
+	
+	Small fix just in case numfiles isn't set ... it will still try to
+	display files if timemodified is set ... workaround for possible
+	bug
+
+2002-11-12 Tuesday 12:59  moodler
+
+	* upload.php: 
+	
+	Small tweak to specify specifically number of files in an update
+
+2002-11-10 Sunday 16:43  moodler
+
+	* index.php: 
+	
+	Added navmenu in more places
+
+2002-11-10 Sunday 15:37  moodler
+
+	* view.php: 
+	
+	Changes to enable jumping between activity modules, using a new
+	menu in the upper-right corner.   Caution: Not well tested at this
+	stage.
+
+2002-11-06 Wednesday 16:54  moodler
+
+	* submissions.php: 
+	
+	Fixes and simplification
+
+2002-11-06 Wednesday 16:44  moodler
+
+	* view.php: 
+	
+	Bug fix on record counting
+
+2002-11-06 Wednesday 16:12  moodler
+
+	* lib.php, mod.html, submissions.php, version.php, view.php,
+	db/mysql.php: 
+	
+	Added new type of assignment - offline.
+	
+	This type of assignment doesn't require anything of the student
+	online, it just tells them about an assignment and the teacher can
+	provide feedback and grades.  Useful for offline activities, and
+	also for the teacher to add manual columns to the grades page
+
+2002-10-28 Monday 10:25  moodler
+
+	* view.php: 
+	
+	Show date in red if assignment date has passed
+
+2002-10-28 Monday 10:24  moodler
+
+	* upload.php: 
+	
+	Use translated strings for all upload feedback
+
+2002-10-28 Monday 09:30  moodler
+
+	* upload.php: 
+	
+	Fixed "uploaded assignment"   (uploadsuccess) string
+
+2002-10-20 Sunday 13:35  moodler
+
+	* index.php: 
+	
+	Fixed display of "done" assignments
+
+2002-10-18 Friday 17:38  moodler
+
+	* mod.html: 
+	
+	Better help with text formats
+
+2002-10-17 Thursday 16:28  moodler
+
+	* lib.php: 
+	
+	Better grade reports
+
+2002-10-17 Thursday 15:55  moodler
+
+	* lib.php: 
+	
+	Now includes maximum grades
+
+2002-10-17 Thursday 15:23  moodler
+
+	* lib.php: 
+	
+	Added new grading functions to work with course/grades.php
+
+2002-10-16 Wednesday 13:31  moodler
+
+	* mod.html, version.php, view.php, db/mysql.php, db/mysql.sql: 
+	
+	Teacher can now use the richtext editor to edit the assignment text
+
+2002-10-16 Wednesday 12:51  moodler
+
+	* mod.html, submissions.php, view.php: 
+	
+	Cleaned up some buttons ...
+
+2002-10-11 Friday 09:58  moodler
+
+	* view.php: 
+	
+	Added a new string to make it very clear how to upload assignments
+
+2002-10-06 Sunday 01:20  moodler
+
+	* version.php, db/mysql.php: 
+	
+	Moved upgrade functions into db/mysql.sql
+
+2002-10-04 Friday 10:55  moodler
+
+	* mod.html: 
+	
+	Use main version of "maximum grade" string
+
+2002-09-24 Tuesday 17:02  martin
+
+	* view.php: 
+	
+	Prevent guests from submitting choices or assignments
+
+2002-09-22 Sunday 14:41  martin
+
+	* lib.php: 
+	
+	Added assignments under "Recent Activity"
+
+2002-09-21 Saturday 16:40  martin
+
+	* lib.php: 
+	
+	Make sure user language works OK (it does now)
+
+2002-09-21 Saturday 15:46  martin
+
+	* lib.php: 
+	
+	Make sure mailouts are in the user's chosen language
+
+2002-08-28 Wednesday 21:20  martin
+
+	* version.php: 
+	
+	Slight improvements to documentation
+
+2002-08-28 Wednesday 21:07  martin
+
+	* lib.php, version.php: 
+	
+	Moved uploaded assignment files into a subdirectory called moddata,
+	where data from other modules can also live later on.
+	
+	Also added a README for that directory to warn teachers not to mess
+	with it, version code to perform the upgrade, tweaks to
+	assignment/lib.php and a tweak to reading module so that assignment
+	files aren't listed in the list of possible readings (could get
+	messy).
+
+2002-08-26 Monday 17:48  martin
+
+	* lib.php: 
+	
+	Changes to use a new configuration variable: CFG->slasharguments
+	
+	If true, then display of user pictures or filenames will use the
+	method of providing arguments as "slash" arguments - this is much
+	better for caching, proxies, search engines etc.  Unfortunately it
+	doesn't seem to work on some PHP installations.
+	
+	If false (the default), then a more compatible method is used (ie
+	usual way of passing parameters to scripts)
+
+2002-08-19 Monday 00:39  martin
+
+	* version.php: 
+	
+	Updated versions in preparation for 1.0 release tomorrow
+
+2002-08-17 Saturday 19:32  martin
+
+	* index.php: 
+	
+	Fixed some missing language strings
+
+2002-08-17 Saturday 16:59  martin
+
+	* mod.html: 
+	
+	Some more missed language strings
+
+2002-08-10 Saturday 22:56  martin
+
+	* lib.php: 
+	
+	Small fix to the full list of available assignments
+
+2002-08-07 Wednesday 16:46  martin
+
+	* version.php, db/mysql.sql: 
+	
+	Missing 'auto_increment' on assignment_submissions table, for 'id'
+
+2002-08-06 Tuesday 17:23  martin
+
+	* upload.php: 
+	
+	Changed a variable name for clarity
+
+2002-08-05 Monday 01:24  martin
+
+	* lib.php: 
+	
+	More tweaks to feedback display (consistency with forum posts)
+
+2002-08-05 Monday 01:13  martin
+
+	* lib.php: 
+	
+	Fixes in display of standard user_complete and user_outline
+	functions for journal, forum and assignments
+
+2002-08-05 Monday 00:44  martin
+
+	* view.php: 
+	
+	Formatting tweak
+
+2002-08-05 Monday 00:19  martin
+
+	* README, icon.gif, index.php, lib.php, mod.html, submissions.php,
+	upload.php, version.php, view.php, db/mysql.sql: 
+	
+	New assignment module finally complete!
+
+2002-08-03 Saturday 10:29  martin
+
+	* lib.php, mod.php: 
+	
+	Moved all mod.php functions from modules into lib.php, and updated
+	course/mod.php to use them there.  No longer need module/mod.php
+
+2002-08-03 Saturday 01:42  martin
+
+	* version.php: 
+	
+	Removed fullname and search fields from modules table.	Fullname is
+	now derived from the string 'modulename' in the lang files for each
+	module.
+
+2002-08-01 Thursday 11:49  martin
+
+	* lib.php, mod.html, mod.php: 
+	
+	Some work so far on the assignment module ... NOT FINISHED YET! I
+	just want to get it out the way of some other commits
+
+2002-07-31 Wednesday 22:19  martin
+
+	* module.php, version.php: 
+	
+	OK, some massive changes with many files removed or changed.
+	
+	Basically the changes are:
+	
+	 - I've merged the 'discuss' module into the forum module
+	   which makes the interface MUCH clearer for everyone
+	 - I've added a new 'single' forum type that replicates
+	   what the old discuss course modules used to look like.
+	 - I've got rid of the "discussion" forum type - it will
+	   still exist in upgraded courses but as a normal forum.
+	 - the 'discuss' module is completely deleted - gone.
+	 - the 'chat' module is completely deleted - gone.
+	 - The upgrading system has been improved, and all code
+	   is stored in version.php.
+	 - I've put in upgrading commands to do the best I can
+	   (right now) to upgrade courses that used the discuss
+	   module.  It should mostly work, just leaving some
+	   "orphan" coursemodules on you course front page.  You
+	   can easily delete these using the little 'x'.
+	   I may have forgotten something  - I've only tested on
+	   my testing server and I'm about to test on my production
+	   server to see how it goes.
+	 - Forums have a lot of little new features and fixes.	The
+	   main one is the subscription process.  Teachers can 'force'
+	   subscriptions on any forum.	This disallows everyone from
+	   choosing their own mail subscription - it's just on.
+	 - The assignment module is half-finished and not working yet
+	
+	I've still some massive changes to do, mostly involving making all
+	the lib.php function names more standardised, so consider this is
+	an interim checkin to do some tests.
+
+2002-07-27 Saturday 15:13  martin
+
+	* db/mysql.sql: 
+	
+	Dummy (for now)
+
+2002-07-27 Saturday 14:07  martin
+
+	* module.php: 
+	
+	Changes to suit new upgrading procedure (admin/index.html)
+
+2001-11-22 Thursday 14:23  martin
+
+	* README, module.php: 
+	
+	moodle
+
+2001-11-22 Thursday 14:23  martin
+
+	* README, module.php: 
+	
+	Initial revision
+

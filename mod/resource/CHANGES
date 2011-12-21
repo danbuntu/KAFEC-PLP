@@ -1,0 +1,3847 @@
+2007-01-23 Tuesday 02:49  skodak
+
+	* index.php, lib.php, view.php: 
+	
+	MDL-8262 fixed require_course_login and $COURSE logic
+
+2007-01-21 Sunday 03:32  stronk7
+
+	* version.php, db/install.xml, db/upgrade.php: 
+	
+	Changing resource->alltext to medium. MDL-6872
+
+2007-01-21 Sunday 02:10  stronk7
+
+	* version.php, db/install.xml, db/upgrade.php: 
+	
+	Now resource->summary is nullable. MDL-7355
+
+2007-01-20 Saturday 03:50  skodak
+
+	* type/: html/resource.class.php, text/resource.class.php,
+	file/resource.class.php, ims/resource.class.php,
+	repository/resource.class.php: 
+	
+	fixed wrong disabledif conditions in resource subtypes - sorry
+
+2007-01-18 Thursday 04:41  skodak
+
+	* version.php, db/upgrade.php: 
+	
+	MDL-5690 text format in text type resource is now stored in
+	reference field
+
+2007-01-18 Thursday 04:10  skodak
+
+	* type/: repository/resource.class.php, file/resource.class.php: 
+	
+	do not send passowrd hashes to other sites SC#353; merged from
+	MOODLE_16_STABLE
+
+2007-01-18 Thursday 04:08  skodak
+
+	* type/: file/resource.class.php, repository/resource.class.php: 
+	
+	do not send passowrd hashes to other sites SC#353
+
+2007-01-16 Tuesday 23:36  jamiesensei
+
+	* mod_form.php: 
+	
+	changed name of moodleform_mod method 'defaults_preprocessing' to
+	'data_preprocessing' in line with change of set_defaults name to
+	set_data.
+
+2007-01-15 Monday 02:58  stronk7
+
+	* db/: mysql.sql, postgres7.sql: 
+	
+	Deleting deprecated .sql files. MDL-7264 Byeeez!
+
+2007-01-14 Sunday 04:13  stronk7
+
+	* config.html: 
+	
+	Now all the modules global config pages are valid XML. Related to
+	MDL-7861
+
+2007-01-12 Friday 19:43  skodak
+
+	* type/: html/resource.class.php, ims/resource.class.php,
+	repository/resource.class.php, text/resource.class.php,
+	file/resource.class.php: 
+	
+	MDL-7013 advanced buttons inplemented in resource settings
+
+2007-01-12 Friday 18:24  skodak
+
+	* type/: html/resource.class.php, text/resource.class.php,
+	repository/resource.class.php, file/resource.class.php,
+	ims/resource.class.php: 
+	
+	MDL-7013 disabeldIf implemented in resource settings
+
+2007-01-12 Friday 03:47  skodak
+
+	* type/html/resource.class.php, type/file/resource.class.php,
+	type/ims/resource.class.php, type/repository/resource.class.php,
+	mod_form.php, type/text/resource.class.php: 
+	
+	fixed text field widths in new forms
+
+2007-01-12 Friday 03:21  skodak
+
+	* type/directory/directory.html, type/directory/resource.class.php,
+	type/repository/hive/makelink.php, lib.php, mod.html, mod_form.php,
+	type/html/html.html, type/html/resource.class.php, config.html,
+	fetch.php, type/common.html, type/common_end.html,
+	type/ims/resource.class.php, type/repository/repository.html,
+	type/repository/resource.class.php, type/file/file.html,
+	type/file/localfile.php, type/file/resource.class.php,
+	type/text/resource.class.php, type/text/text.html: 
+	
+	MDL-7013 resource forms converted to use new forms library; locking
+	is not implemented yet - will have to improve disabledif first
+
+2007-01-10 Wednesday 10:55  vyshane
+
+	* type/repository/repository.html: 
+	
+	Fixes for MDL-7861.
+
+2007-01-10 Wednesday 10:52  vyshane
+
+	* type/ims/ims.html: 
+	
+	Fixes for MDL-7861.
+
+2007-01-10 Wednesday 10:47  vyshane
+
+	* type/: file/file.html, directory/directory.html: 
+	
+	Fixes for MDL-7861.
+
+2007-01-10 Wednesday 10:33  vyshane
+
+	* type/html/html.html: 
+	
+	Fixes for MDL-7861.
+
+2007-01-09 Tuesday 20:01  vyshane
+
+	* type/text/text.html: 
+	
+	Fixed xhtml for MDL-7861.
+
+2007-01-09 Tuesday 19:47  vyshane
+
+	* type/: common.html, common_end.html: 
+	
+	Fixes for MDL-7861.
+
+2007-01-09 Tuesday 18:42  vyshane
+
+	* config.html, type/file/localfile.php, type/file/localpath.php: 
+	
+	Xhtml fixes for MDL-7861.
+
+2007-01-09 Tuesday 03:34  skodak
+
+	* type/: file/localfile.php, file/localpath.php,
+	repository/hive/openhive.php: 
+	
+	MDL-7861 xhtml transient fixes for not closed input fields - I hope
+	all of them except imported libs are now fixed
+
+2007-01-08 Monday 17:14  skodak
+
+	* type/directory/resource.class.php: 
+	
+	MDL-7861 new class .icon and .iconsmall
+
+2007-01-07 Sunday 21:49  skodak
+
+	* lib.php, type/html/resource.class.php,
+	type/directory/resource.class.php, type/file/resource.class.php,
+	type/text/resource.class.php: 
+	
+	MDL-7861 resource mod related xhtml strict fixes (student visible
+	interface only)
+
+2007-01-07 Sunday 03:23  skodak
+
+	* type/file/localfile.php, type/file/localpath.php,
+	type/repository/hive/openhive.php, type/common.html, config.html: 
+	
+	MDL-8062 Remove name attribute from <form> and related javascript
+	code cleanup (tested with FF, IE, Konq and Opera)
+
+2007-01-05 Friday 07:38  skodak
+
+	* type/ims/repository_deploy.php: 
+	
+	MDL-7861 xhtml strict fixes - fixed all <br> in our code
+
+2007-01-05 Friday 05:39  skodak
+
+	* type/: repository/resource.class.php, file/resource.class.php: 
+	
+	fixed potential problems with undefined $USER->screenreader
+
+2007-01-05 Friday 02:23  skodak
+
+	* type/repository/resource.class.php, type/file/resource.class.php,
+	lib.php, filter.php, type/ims/deploy.php: 
+	
+	MDL-8050 1.2 Remove all target="_top" - refactoring of previous
+	commit
+
+2007-01-04 Thursday 03:33  skodak
+
+	* type/: html/resource.class.php, ims/javascript.php,
+	ims/resource.class.php, repository/resource.class.php,
+	file/resource.class.php, text/resource.class.php: 
+	
+	MDL-8049 Remove all language=Javascript from javascript includes
+
+2007-01-04 Thursday 03:24  skodak
+
+	* filter.php, lib.php, type/ims/deploy.php,
+	type/repository/resource.class.php, type/file/resource.class.php: 
+	
+	MDL-8050 1.2 Remove all target="_top"
+
+2007-01-03 Wednesday 22:44  moodler
+
+	* type/: file/file.html, file/localfile.php, file/localpath.php,
+	html/html.html, ims/ims.html, repository/repository.html,
+	repository/hive/makelink.php, repository/hive/openhive.php,
+	text/text.html: 
+	
+	Bend over for XHTML 1.0 Strict ...  MDL-8049
+	
+	Removed Javascript language attribute tags and added CDATA
+
+2007-01-02 Tuesday 17:33  skodak
+
+	* lib.php: 
+	
+	MDL-7742 added nested drop down box to add activities/resources to
+	course, 3rd party mods can specify type MDL-6987 preparation for
+	migration of mod/assignment/mod.html
+
+2006-12-30 Saturday 04:17  skodak
+
+	* lib.php: 
+	
+	MDL-8021 resource "Link to a file or web site", when created,
+	doesn't open in a new window - fixed recourse typo; backported from
+	HEAD
+
+2006-12-30 Saturday 04:16  skodak
+
+	* lib.php: 
+	
+	MDL-8021 resource "Link to a file or web site", when created,
+	doesn't open in a new window - fixed recourse typo
+
+2006-12-13 Wednesday 16:24  toyomoyo
+
+	* type/directory/resource.class.php: 
+	
+	accessiblity, associating <th> with respective row or col
+
+2006-12-12 Tuesday 11:39  toyomoyo
+
+	* type/: file/resource.class.php, ims/resource.class.php,
+	repository/resource.class.php: 
+	
+	fix for MDL-7862, frames titles and frame accessibility for
+	resources
+
+2006-11-27 Monday 00:20  skodak
+
+	* type/: directory/resource.class.php, repository/repository.html: 
+	
+	MDL-7434 all images that convey information should have alt text to
+	convey that information - part 3
+
+2006-11-13 Monday 14:29  ikawhero
+
+	* type/repository/hive/: hp-footer-hive-powered.gif,
+	hp-footer-hive-powered.gif: 
+	
+	Replacing with working image
+
+2006-11-13 Monday 14:26  ikawhero
+
+	* type/repository/hive/hp-footer-hive-powered.gif: 
+	
+	Replacing with working image.
+
+2006-11-12 Sunday 16:55  skodak
+
+	* index.php, lib.php, type/ims/deploy.php: 
+	
+	fixed obsoleted use of course->category to find site course - now
+	used SITEID instead MDL-1899
+
+2006-11-12 Sunday 01:23  skodak
+
+	* type/: file/resource.class.php, ims/preview.php,
+	ims/resource.class.php: 
+	
+	we are going 100% unicode now - removed use of $CFG->unicodedb and
+	current_charset(); MDL-7439 - part 2, only hotpot and wiki left
+
+2006-11-09 Thursday 15:21  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	drop utf8 support from HEAD MDL-6332
+
+2006-11-03 Friday 16:45  toyomoyo
+
+	* lib.php, lib.php: 
+	
+	fix for MDL-7300, mssql not null problem
+
+2006-10-27 Friday 06:46  stronk7
+
+	* db/postgres7.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+	
+	Merged from MOODLE_17_STABLE
+
+2006-10-27 Friday 06:39  stronk7
+
+	* db/mysql.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+	
+	Merged from MOODLE_17_STABLE
+
+2006-10-27 Friday 06:29  stronk7
+
+	* db/postgres7.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+
+2006-10-27 Friday 06:25  stronk7
+
+	* db/mysql.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+
+2006-10-27 Friday 01:43  stronk7
+
+	* db/upgrade.php: 
+	
+	New upgrade.php file added for this module. MDL-7214
+	
+	Merged from HEAD
+
+2006-10-27 Friday 01:33  stronk7
+
+	* db/upgrade.php: 
+	
+	file upgrade.php was added on branch MOODLE_17_STABLE on 2006-10-26
+	17:43:08 +0000
+
+2006-10-27 Friday 01:33  stronk7
+
+	* db/upgrade.php: 
+	
+	New upgrade.php file added for this module. MDL-7214
+
+2006-10-23 Monday 21:42  moodler
+
+	* type/: directory/resource.class.php, html/resource.class.php,
+	text/resource.class.php: 
+	
+	Fixed &nbsp characters MDL-7179
+
+2006-10-23 Monday 21:41  moodler
+
+	* type/: directory/resource.class.php, html/resource.class.php,
+	text/resource.class.php: 
+	
+	FIxed some rogue &nbsp characters (thanks, Samuli!)   MDL-7179
+
+2006-10-22 Sunday 02:28  stronk7
+
+	* db/: oci8po.php, oci8po.sql, oci8po.php, oci8po.sql: 
+	
+	Deleting some old oci8po files from CVS.
+
+2006-10-08 Sunday 16:21  skodak
+
+	* type/file/resource.class.php: 
+	
+	Resource frameset error in IE6 MDL-6842, patch submitted by Chris
+	Fryer; backported from HEAD
+
+2006-10-08 Sunday 16:20  skodak
+
+	* type/file/resource.class.php: 
+	
+	Resource frameset error in IE6 MDL-6842, patch submitted by Chris
+	Fryer.
+
+2006-09-25 Monday 22:12  skodak
+
+	* config.html, lib.php: 
+	
+	improved handling of resource file/directory references when
+	renaming and deleting files in file manager. It is now fully
+	configurable too. MDL-6132
+
+2006-09-22 Friday 21:27  moodler
+
+	* type/repository/: repository.html, hive/openlitepublish.php: 
+	
+	Merged fixes from 1.6
+
+2006-09-22 Friday 21:23  moodler
+
+	* type/repository/: repository.html, hive/openlitepublish.php: 
+	
+	Hive updates
+
+2006-09-22 Friday 21:23  moodler
+
+	* type/repository/hive/openlitepublish.php: 
+	
+	file openlitepublish.php was initially added on branch
+	MOODLE_16_STABLE.
+
+2006-09-22 Friday 11:05  vyshane
+
+	* db/access.php: 
+	
+	Removed mod/resource:view
+
+2006-09-21 Thursday 05:00  skodak
+
+	* db/access.php: 
+	
+	major whitespace cleanup - fixed trailng whitespace in new files
+	and admin area
+
+2006-09-21 Thursday 04:31  skodak
+
+	* type/ims/: deploy.php, resource.class.php: 
+	
+	major whitespace cleanup - fixed tabs
+
+2006-09-21 Thursday 03:46  skodak
+
+	* db/: mysql.sql, oci8po.sql: 
+	
+	major whitespace cleanup - fixed \r\n line-ending
+
+2006-09-20 Wednesday 23:04  skodak
+
+	* type/ims/repository_deploy.php: 
+	
+	fixed missing ;
+
+2006-09-20 Wednesday 17:00  toyomoyo
+
+	* type/ims/: finder.php, repository_deploy.php: 
+	
+	replacing deprecated calls and references to capability calls
+
+2006-09-19 Tuesday 22:17  toyomoyo
+
+	* type/ims/resource.class.php: 
+	
+	relacing deprecated functions with capability checks
+
+2006-09-18 Monday 17:13  moodler
+
+	* restorelib.php, type/ims/deploy.php,
+	type/ims/repository_deploy.php: 
+	
+	FIxed to use the new debugging function
+
+2006-09-17 Sunday 14:49  skodak
+
+	* version.php, type/directory/resource.class.php,
+	type/ims/deploy.php, type/ims/resource.class.php: 
+	
+	backupdata folder is no longer displayed in list of directories
+	when setting up Directory Resource - partially related to  MDL-6280
+	; and some other typo fixes; get_directory_list() no accepts also
+	array of exluded files
+
+2006-09-17 Sunday 02:15  skodak
+
+	* backuplib.php: 
+	
+	fixed recursive backing up of backup folder when resource diretory
+	reference is course files root - MDL-6280 ; merged from
+	MOODLE_16_STABLE
+
+2006-09-17 Sunday 02:14  skodak
+
+	* backuplib.php: 
+	
+	fixed recursive backing up of backup folder when resource diretory
+	reference is course files root - MDL-6280
+
+2006-09-17 Sunday 01:15  skodak
+
+	* type/directory/resource.class.php: 
+	
+	backupdata folder is not visible in directory resource any more,
+	the backup files were not downloadable, but they might be stored in
+	browser cache when teacher and student were logged from the same
+	browser and computer account - MDL-6280 ; merged from
+	MOODLE_16_STABLE
+
+2006-09-17 Sunday 01:11  skodak
+
+	* type/directory/resource.class.php: 
+	
+	backupdata folder is not visible in directory resource any more,
+	the backup files were not downloadable, but they might be stored in
+	browser cache when teacher and student were logged from the same
+	browser and computer account - MDL-6280
+
+2006-09-13 Wednesday 17:08  toyomoyo
+
+	* type/: directory/resource.class.php, ims/deploy.php,
+	ims/resource.class.php: 
+	
+	adding capabilitiies
+
+2006-09-12 Tuesday 16:22  moodler
+
+	* version.php: 
+	
+	Small bump for guest role fix
+
+2006-09-12 Tuesday 15:10  moodler
+
+	* version.php: 
+	
+	Reload the guest role using new defaults
+
+2006-09-12 Tuesday 13:58  moodler
+
+	* db/access.php: 
+	
+	Changed some default permissions for the guest role
+
+2006-09-06 Wednesday 16:55  toyomoyo
+
+	* lib.php: 
+	
+	adding capabilities
+
+2006-08-13 Sunday 05:41  stronk7
+
+	* db/install.xml: 
+	
+	Initial version of the XMLDB file for this plugin
+
+2006-08-10 Thursday 23:51  skodak
+
+	* fetch.php, version.php, lib.php, view.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283; backported from HEAD
+
+2006-08-10 Thursday 23:34  skodak
+
+	* type/ims/deploy.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283; backported from HEAD
+
+2006-08-10 Thursday 23:30  skodak
+
+	* fetch.php, lib.php, version.php, view.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283; backported from HEAD
+
+2006-08-09 Wednesday 06:09  skodak
+
+	* fetch.php, lib.php, version.php, view.php, type/ims/deploy.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283
+
+2006-08-08 Tuesday 13:13  moodler
+
+	* version.php, db/access.php: 
+	
+	ROLES AND PERMISSIONS  - FIRST CHECK-IN
+	=======================================
+	
+	WARNING:  DEV IS CURRENTLY VERY UNSTABLE.
+	
+	This is a mega-checkin of the new Roles system.   A lot of changes
+	have been made in core and modules.
+	
+	Currently there are a lot of rough edges and known problems.  We
+	are working hard on these .. .the reason for getting this into HEAD
+	at this stage is enable us to move faster (our branch was diverging
+	from HEAD too much).
+	
+	Please keep an eye on http://docs.moodle.org/en/Roles for current
+	status and information for developers on how to use the new Roles
+	system.
+
+2006-08-04 Friday 13:57  vyshane
+
+	* db/access.php: 
+	
+	Renamed legacyroles to legacy
+
+2006-08-01 Tuesday 15:42  vyshane
+
+	* db/access.php: 
+	
+	file access.php was initially added on branch MOODLE_17_ROLES.
+
+2006-08-01 Tuesday 15:42  vyshane
+
+	* db/access.php: 
+	
+	Capability definitions for the resource module.
+
+2006-07-03 Monday 14:26  skodak
+
+	* lib.php: 
+	
+	Bug #5996 - block+resource=problem; merged from MOODLE_16_STABLE
+
+2006-07-03 Monday 14:25  skodak
+
+	* lib.php: 
+	
+	Bug #5996 - block+resource=problem
+
+2006-06-16 Friday 17:42  moodler
+
+	* type/file/resource.class.php: 
+	
+	Merged fix for bug 5830 into dev
+
+2006-06-16 Friday 17:41  moodler
+
+	* type/file/resource.class.php: 
+	
+	Fix for resource parameters for users not logged in
+
+2006-06-02 Friday 03:13  skodak
+
+	* type/html/resource.class.php: 
+	
+	fixed - unable to disable blocks; merged from MOODLE_16_STABLE
+
+2006-06-02 Friday 03:12  skodak
+
+	* type/html/resource.class.php: 
+	
+	fixed - unable to disable blocks
+
+2006-05-04 Thursday 02:22  stronk7
+
+	* type/html/html.html: 
+	
+	XHTML validation. Bug 5332. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=5332)
+	
+	Merged from MOODLE_16_STABLE
+
+2006-05-04 Thursday 02:20  stronk7
+
+	* type/html/html.html: 
+	
+	XHTML validation. Bug 5332. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=5332)
+
+2006-04-28 Friday 21:18  stronk7
+
+	* type/ims/javascript.php: 
+	
+	No need to display the iframe because now it's never hidden.
+
+2006-04-28 Friday 11:18  toyomoyo
+
+	* version.php, db/mysql.php: 
+	
+	bug fix for 5303. hope i didn't break anything >_<
+
+2006-04-28 Friday 03:45  stronk7
+
+	* type/ims/: javascript.php, resize.js: 
+	
+	Deleted a bunch of js code and trying another (the last) way to
+	resize the iframe properly. Tests at home 100% reliable.  I hope
+	it'll work ok remotely... Depending of results	we'll decide the
+	final system.
+
+2006-04-26 Wednesday 13:48  toyomoyo
+
+	* version.php, db/mysql.php, db/mysql.sql: 
+	
+	trying to change all the default NULL fields to NOT NULL default
+	'0'/'', hope i didn't mess up. Please report any bugs asap!
+
+2006-04-26 Wednesday 08:09  stronk7
+
+	* type/ims/resource.class.php: 
+	
+	Supresing footer() output in this page because it continues causing
+	important problems under Safari and I really think it isn't
+	critical to have it here at all costs.
+
+2006-04-26 Wednesday 07:52  stronk7
+
+	* type/ims/deploy.php: 
+	
+	Handle some debugs properly.
+
+2006-04-26 Wednesday 07:47  stronk7
+
+	* type/ims/repository_deploy.php: 
+	
+	Now the deploy-all button works!
+
+2006-04-25 Tuesday 23:44  stronk7
+
+	* type/ims/: javascript.php, resize.js, resource.class.php: 
+	
+	And the standard footer is back again. Andrew Walker, the
+	JavaScript Superman did the work! B-) Tested under FF, IE and
+	Safari.
+
+2006-04-25 Tuesday 07:55  stronk7
+
+	* type/ims/: finder.php, preview.php: 
+	
+	Apply latest changes from resource type to repository (double head
+	out, cool resize javascript, XHTML and navigation menu)
+	
+	TODO: Fix the 'deploy all' button
+
+2006-04-25 Tuesday 06:17  stronk7
+
+	* type/ims/resource.class.php: 
+	
+	Now navigation menu is properly created (XHTML + 508)
+
+2006-04-24 Monday 16:38  vyshane
+
+	* db/: mysql.php, postgres7.php: 
+	
+	Fixed inserts for log_display.
+
+2006-04-24 Monday 16:10  toyomoyo
+
+	* db/: mysql.sql, oci8po.sql, postgres7.sql: 
+	
+	changed formats for log_display table
+
+2006-04-24 Monday 08:11  stronk7
+
+	* type/ims/: javascript.php, resize.js, resource.class.php: 
+	
+	Looking much better now! B-) More tests tomorrow (IE, mainly)
+
+2006-04-24 Monday 04:58  skodak
+
+	* lib.php: 
+	
+	block editing now uses PARAM_BOOL
+
+2006-04-24 Monday 01:22  stronk7
+
+	* type/ims/resize.js: 
+	
+	Now the resize script supports both resources with and without
+	navigation menu.
+
+2006-04-24 Monday 01:00  stronk7
+
+	* type/ims/resource.class.php: 
+	
+	Styles are now 100% out from here.
+
+2006-04-23 Sunday 19:49  stronk7
+
+	* type/ims/resource.class.php: 
+	
+	Moving some harcoded styles in ims cp to standard
+
+2006-04-23 Sunday 17:59  stronk7
+
+	* type/ims/resize.js: 
+	
+	Now the resize script hasn't anymore harcoded widths.
+
+2006-04-23 Sunday 10:21  stronk7
+
+	* type/ims/resource.class.php: 
+	
+	TOC needs _parent because it's rendered in the iframe.
+
+2006-04-23 Sunday 09:57  stronk7
+
+	* type/ims/: javascript.php, resource.class.php: 
+	
+	Now double-headers are out 100% Some incorrect targets are out. 
+	Scorm API (dummy) is working fine.
+	
+	TODO: Move css styles to standard.
+
+2006-04-23 Sunday 06:52  stronk7
+
+	* type/ims/ims.html: 
+	
+	Moving script to a proper place (for XHTML validation) (although
+	the page still continues with some errors)
+
+2006-04-23 Sunday 06:51  stronk7
+
+	* type/ims/resource.class.php: 
+	
+	Avoid some warnings...
+
+2006-04-20 Thursday 14:53  wildgirl
+
+	* type/ims/preview.php: 
+	
+	Added a check for is_object($item) to prevent possible warnings in
+	preview_ims_generate_toc Restored use of textlib in
+	preview_ims_generate_toc
+
+2006-04-20 Thursday 14:51  wildgirl
+
+	* type/ims/resource.class.php: 
+	
+	Added a check for isset($this->resource->reference) to prevent
+	warnings in resource_ims Added a check for is_object($item) to
+	prevent warnings in ims_generate_toc Restored use of textlib in
+	ims_generate_toc
+
+2006-04-19 Wednesday 02:04  wildgirl
+
+	* type/ims/: deploy.php, ims.html, resource.class.php, dummyapi.js,
+	finder.php, preview.php, repository_config.php,
+	repository_deploy.php, resize.js, images/dir.gif, images/ims.gif: 
+	
+	resource.class.php changes: 1. Added logic to process repository
+	paths. A repository path is marked with a # as the first character
+	of the reference field.  2. Added a new error code for repository
+	items not being deployed / bad reference.
+	
+	ims.html change: Added a button to link to the repository browser.
+	
+	New files: finder.php – browser for the repository preview.php –
+	cut down display routine from resource.class.php, forces sidemenu
+	etc.  repository_deploy.php – deploy for repository items (same
+	results as deploy.php) repository_config.php (repository disabled
+	by default) resize.js - for iframe resizing dummyapi.js - dummy
+	SCORM API
+	
+	(Tom's work, with help from Andy)
+
+2006-04-13 Thursday 16:44  moodler
+
+	* type/: file/resource.class.php, repository/resource.class.php: 
+	
+	Added a new string idnumber course to allow more customisation	bug
+	4337
+
+2006-04-12 Wednesday 00:19  stronk7
+
+	* restorelib.php: 
+	
+	htmlentities() to s()
+
+2006-04-11 Tuesday 06:31  wildgirl
+
+	* type/ims/ims.html: 
+	
+	Config menu for extra options added. Javascript added to force some
+	sensible options. (Tom's work)
+
+2006-04-11 Tuesday 06:30  wildgirl
+
+	* type/ims/resource.class.php: 
+	
+	1. Converted display function from frames to divs and an iframe to
+	hold the content.  2. Added an (optional) side navigation bar.	3.
+	Added several options to add more flexibility. Option to
+	fast-forward submenus.	(Tom's work)
+
+2006-03-29 Wednesday 07:31  stronk7
+
+	* restorelib.php: 
+	
+	Typo.
+
+2006-03-14 Tuesday 06:26  skodak
+
+	* type/ims/resource.class.php: 
+	
+	removed $SESSION->encoding now replaced by current_charset() and
+	$CFG->unicodedb; 3rd party contribs must be fixed to be utf-8 and
+	1.6dev compatible anyway;
+	
+	going to add a notice to wiki at
+	http://docs.moodle.org/en/UTF-8_scripts
+
+2006-03-10 Friday 11:43  patrickslee
+
+	* db/migrate2utf8.php: 
+	
+	UTF8 migration - now supporting PostgreSQL
+
+2006-03-10 Friday 09:05  martinlanghoff
+
+	* type/repository/: repository.html, resource.class.php: 
+	
+	mod/resource: dos2unix on the Hive code
+	
+	Some Windows newlines got in there somehow. Cleanup.
+
+2006-03-09 Thursday 09:51  moodler
+
+	* type/repository/: repository.html, resource.class.php,
+	hive/hp-footer-hive-powered.gif, hive/makelink.php,
+	hive/openhive.php, hive/openlitebrowse.php,
+	hive/openlitesearch.php: 
+	
+	Checking in some unchecked-in code
+
+2006-03-08 Wednesday 08:08  skodak
+
+	* index.php: 
+	
+	lots of incorrect required_param()'s - there MUST be only two
+	parameters not three!!
+
+2006-03-08 Wednesday 05:35  skodak
+
+	* db/migrate2utf8.php: 
+	
+	short php tags
+
+2006-03-04 Saturday 20:37  skodak
+
+	* lib.php: 
+	
+	incorrect usage of clean_filename() replaced with
+	clean_param($text, PARAM_SAFEDIR)
+
+2006-02-24 Friday 16:13  toyomoyo
+
+	* db/migrate2utf8.php: 
+	
+	see changes for admin/utfdbmigrate.php
+
+2006-02-02 Thursday 03:10  stronk7
+
+	* restorelib.php: 
+	
+	Solved one bug when decoding encoded links for resource->reference
+	(http://moodle.org/mod/forum/discuss.php?d=38801)
+	
+	Merged from MOODLE_15_STABLE
+
+2006-02-02 Thursday 03:08  stronk7
+
+	* restorelib.php: 
+	
+	Solved one bug when decoding encoded links for resource->reference
+	(http://moodle.org/mod/forum/discuss.php?d=38801)
+
+2006-01-31 Tuesday 10:09  moodler
+
+	* db/migrate2utf8.php: 
+	
+	changed to use utfconvert function
+
+2006-01-27 Friday 12:29  moodler
+
+	* db/migrate2utf8.php: 
+	
+	took out an echo
+
+2006-01-17 Tuesday 15:34  moodler
+
+	* db/mysql.sql: 
+	
+	Added default values where needed for columns in the MySQL creation
+	script mysql.sql.  Added default values to migrate2utf8.xml, for
+	any varchar and text field types, if the default values for these
+	fields were not defined as '' in the MySQL table creation script.
+	
+	Committed by vyshane
+
+2006-01-16 Monday 12:45  moodler
+
+	* type/text/resource.class.php: 
+	
+	added missing semicolon in &nbsp (bug#4592)
+
+2006-01-16 Monday 12:29  moodler
+
+	* type/html/resource.class.php: 
+	
+	added missing semicolon in &nbsp (bug#4592)
+
+2006-01-16 Monday 12:22  moodler
+
+	* type/html/resource.class.php: 
+	
+	added missing semicolon in &nbsp (bug#4592)
+
+2006-01-16 Monday 12:16  moodler
+
+	* type/directory/resource.class.php: 
+	
+	added missing semicolon in &nbsp (bug#4592)
+
+2006-01-16 Monday 05:09  mjollnir_
+
+	* restorelib.php: 
+	
+	Abstracted a bit of the restore procedure to allow for silent
+	restoring.  Added new function, import_backup_file_silently Changed
+	everything that prints stuff to check for a constant first. 
+	Backup_flush checks a different constant, this is so that output
+	can still get flushed to the browser when necessary but not print
+	<li>s everywhere.  Please test this!
+
+2006-01-13 Friday 15:24  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	more bug fixes =(
+
+2006-01-13 Friday 11:45  mjollnir_
+
+	* backuplib.php, restorelib.php: 
+	
+	Granular backup & restore: This patch allows the much requested
+	selection of individual instances of modules within a course to
+	backup and restore.  It needs A LOT of testing and probably some
+	prettyifying too.
+
+2006-01-11 Wednesday 23:22  stronk7
+
+	* filter.php: 
+	
+	Solved one problem with frames and activitynames filter. 
+	(http://moodle.org/mod/forum/discuss.php?d=28382)
+	
+	Merged from MOODLE_15_STABLE
+
+2006-01-11 Wednesday 23:21  stronk7
+
+	* filter.php: 
+	
+	Solved one problem with frames and activitynames filter. 
+	(http://moodle.org/mod/forum/discuss.php?d=28382)
+
+2006-01-09 Monday 14:06  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	utf8 migration support scripts
+
+2006-01-06 Friday 00:46  stronk7
+
+	* type/ims/resource.class.php: 
+	
+	More uses for current_charset()
+	
+	Merged from MOODLE_16_UTF8. Abandoning the branch.
+
+2006-01-06 Friday 00:44  stronk7
+
+	* type/file/resource.class.php: 
+	
+	More uses for current_charset().
+	
+	Merged from MOODLE_16_UTF8. Abandoning the branch.
+
+2006-01-05 Thursday 15:09  moodler
+
+	* fetch.php: 
+	
+	Various old fixes that had not been checked in
+
+2005-12-14 Wednesday 12:15  patrickslee
+
+	* index.php, lib.php, type/directory/resource.class.php,
+	type/file/resource.class.php, type/ims/deploy.php,
+	type/ims/resource.class.php: 
+	
+	Merged with MOODLE_16_MULTIENROL_MP1
+
+2005-12-11 Sunday 08:20  stronk7
+
+	* type/: file/resource.class.php, ims/resource.class.php: 
+	
+	More uses for current_charset()
+
+2005-12-06 Tuesday 18:41  stronk7
+
+	* type/ims/resource.class.php: 
+	
+	Some strings are now properly displayed. End of work in IMS for
+	now.
+
+2005-12-06 Tuesday 18:28  stronk7
+
+	* type/ims/resource.class.php: 
+	
+	Fixed one typo-bug! :-P
+
+2005-12-06 Tuesday 18:22  stronk7
+
+	* type/ims/deploy.php: 
+	
+	Added suport to read submanifests (not deployed yet but loaded)
+
+2005-12-06 Tuesday 18:17  stronk7
+
+	* type/ims/resource.class.php: 
+	
+	Check the IMS package has been deployed before delete dir.
+
+2005-12-06 Tuesday 08:12  stronk7
+
+	* type/ims/resource.class.php: 
+	
+	Now IMS Content Packaging resources are deleted properly (both DB
+	records and deply files under moddata)
+
+2005-12-06 Tuesday 08:02  stronk7
+
+	* lib.php: 
+	
+	Now delete_instance() in resource classes receives the full
+	$resource record instead of the $id alone. Needed to be able to
+	specialize such method in some resource types.
+	
+	Merged from MOODLE_15_STABLE
+
+2005-12-06 Tuesday 07:59  stronk7
+
+	* lib.php: 
+	
+	Now delete_instance() in resource classes receives the full
+	$resource record instead of the $id alone. Needed to be able to
+	specialize such method in some resource types.
+
+2005-11-08 Tuesday 13:14  moodler
+
+	* index.php: 
+	
+	Tidying ...
+
+2005-11-08 Tuesday 13:13  moodler
+
+	* index.php: 
+	
+	Undoing accidental change
+
+2005-11-08 Tuesday 11:07  moodler
+
+	* index.php: 
+	
+	Resource summary is no longer preceded with newline. Suggested by
+	Grigory Rubtsov (grb at sentence dot ru) - Bug 4275
+
+2005-11-06 Sunday 00:19  stronk7
+
+	* type/ims/resource.class.php: 
+	
+	Fixed encoding of page title of framed IMS CP resources (mimic of
+	skodak's work in other frames)
+
+2005-11-04 Friday 19:32  skodak
+
+	* type/directory/resource.class.php: 
+	
+	fixed bug #4030 - filemtime for time modified; merged from
+	MOODLE_15_STABLE
+
+2005-11-04 Friday 19:29  skodak
+
+	* type/directory/resource.class.php: 
+	
+	fixed bug #4030 - filemtime for time modified
+
+2005-11-04 Friday 18:00  skodak
+
+	* type/file/resource.class.php: 
+	
+	fixed encoding of page title of framed resources; merged from
+	MOODLE_15_STABLE
+
+2005-11-04 Friday 17:55  skodak
+
+	* type/file/resource.class.php: 
+	
+	fixed encoding of page title of framed resources
+
+2005-10-14 Friday 06:02  stronk7
+
+	* type/ims/deploy.php: 
+	
+	Solve copy/paste bug. Now items are properly checked.
+
+2005-10-02 Sunday 05:51  stronk7
+
+	* type/ims/deploy.php: 
+	
+	Make some extra chacks because there were some problems with
+	invalid manifests and PHP5.
+
+2005-09-28 Wednesday 00:09  stronk7
+
+	* type/ims/resource.class.php: 
+	
+	Minor bug with some unclosed tags solved.
+
+2005-09-25 Sunday 01:59  stronk7
+
+	* type/ims/deploy.php: 
+	
+	xml:base attribute can be inside the manifest tag too. Thanks to
+	SCORM specifications clarifying this IMS CP detail! :-)
+
+2005-09-24 Saturday 06:41  stronk7
+
+	* type/ims/resource.class.php: 
+	
+	Small hack to see Table of Contents correctly both under UTF-8 and
+	ISO-8859-1 sites. We will delete this once Moodle was migrated to
+	UTF-8.
+
+2005-09-24 Saturday 06:25  stronk7
+
+	* type/ims/deploy.php: 
+	
+	Changed a bit how <xml:base> works, instead of priorizate one of
+	them, simply concatenate them.
+
+2005-09-23 Friday 08:21  stronk7
+
+	* type/ims/: deploy.php, resource.class.php: 
+	
+	Now the IMS CP resource works fine with packages using the
+	<xml:basde> tag (both at global and individual levels, following
+	the priorization specs)
+
+2005-09-21 Wednesday 20:34  stronk7
+
+	* type/ims/deploy.php: 
+	
+	Error messges improved & detect some exceptions ins the manifest
+	file (strange chars)
+
+2005-09-21 Wednesday 18:27  stronk7
+
+	* type/ims/deploy.php: 
+	
+	Problem with reference parameters solved under PHP 4.x. Bug 4102. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=4102)
+
+2005-09-20 Tuesday 00:53  stronk7
+
+	* type/ims/: deploy.php, ims.html, resource.class.php: 
+	
+	First version of the IMS CP resource module.
+	
+	Known limitations:     - IMS Metadata is not loaded (soon it will
+	be).	  - IMS submanifests are not supported (is anybody using
+	them?).      - Need to convert loaded data to SITE->charset, have
+	to think a bit about it.
+	
+	But it loads IMS CP packages like a charm! ;-)
+
+2005-09-06 Tuesday 06:34  stronk7
+
+	* filter.php: 
+	
+	Avoid empty or unlinkable activity names.
+	
+	Merged from MOODLE_15_STABLE
+
+2005-09-06 Tuesday 06:33  stronk7
+
+	* filter.php: 
+	
+	Avoid empty or unlinkable activity names.
+
+2005-09-01 Thursday 12:14  mjollnir_
+
+	* lib.php: 
+	
+	Initial checkin of stats (from processing the log table).  I will
+	write up some information about it for the developers wiki.
+
+2005-08-31 Wednesday 14:13  mjollnir_
+
+	* filter.php: 
+	
+	Merged from MOODLE_15_STABLE: Preventing another warning.  In some
+	cases in the  calendar blocks, resource filtering gets called with
+	no courseid
+
+2005-08-31 Wednesday 14:13  mjollnir_
+
+	* filter.php: 
+	
+	Preventing another warning.  In some cases in the  calendar blocks,
+	resource filtering gets called with no courseid
+
+2005-08-14 Sunday 14:06  moodler
+
+	* type/html/resource.class.php: 
+	
+	Minor change to displaying resources with course blocks (SE)
+
+2005-08-14 Sunday 13:57  moodler
+
+	* type/: html/html.html, html/resource.class.php,
+	text/resource.class.php, text/text.html: 
+	
+	Can now display course blocks when composing a text or web page.
+	(SE).
+
+2005-08-14 Sunday 13:34  moodler
+
+	* lib.php: 
+	
+	Two methods added to allow resources to be displayed with the
+	course blocks. Uses the outstanding Page class code by Jon P. (SE)
+
+2005-07-29 Friday 16:08  mikewaters
+
+	* type/repository/: repository.html, resource.class.php,
+	hive/hp-footer-hive-powered.gif, hive/makelink.php,
+	hive/openhive.php, hive/openlitebrowse.php,
+	hive/openlitesearch.php: 
+	
+	
+	 Modified Files:
+	     repository.html  - added help buttons and changed hive buttons
+	     resource.class.php  - hive/makelink.php added version and
+	format options
+	     hive/openhive.php	- obsolete
+	 Added Files:
+	     hive/hp-footer-hive-powered.gif - hive logo
+	     hive/openlitebrowse.php  - new openhive option
+	     hive/openlitesearch.php  - new openhive option
+
+2005-07-15 Friday 15:37  moodler
+
+	* type/repository/: repository.html, resource.class.php,
+	hive/makelink.php, hive/openhive.php: 
+	
+	More Hive stuff for integration
+
+2005-07-15 Friday 15:22  moodler
+
+	* lib.php: 
+	
+	Hide repository type by default
+
+2005-07-12 Tuesday 16:00  moodler
+
+	* restorelib.php: 
+	
+	Merged SC139 from stable
+
+2005-07-12 Tuesday 15:53  moodler
+
+	* restorelib.php: 
+	
+	Escaped text output during relinking, as per SC 139
+
+2005-07-05 Tuesday 02:56  stronk7
+
+	* restorelib.php: 
+	
+	Improved automatic relinking in backup and restore. Credits go to
+	skodak.  Complete refactoring of the system that was really awful
+	(my fault!).  Now everything is in its place and working like a
+	charm, making things really easier to be implemented and amplied.
+	Bug 3678 (http://moodle.org/bugs/bug.php?op=show&bugid=3678)
+	(http://moodle.org/mod/forum/discuss.php?d=26530)
+	
+	Note: Everything is merged from stable but the quiz module because
+	it has other changes not merged for now. I've skyped a message to
+	Gustav about it.
+	
+	Merged from MOODLE_15_STABLE
+
+2005-07-05 Tuesday 01:34  stronk7
+
+	* restorelib.php: 
+	
+	Improved automatic relinking in backup and restore. Credits go to
+	skodak.  Complete refactoring of the system that was really awful
+	(my fault!).  Now everything is in its place and working like a
+	charm, making things really easier to be implemented and amplied.
+	Bug 3678 (http://moodle.org/bugs/bug.php?op=show&bugid=3678)
+	(http://moodle.org/mod/forum/discuss.php?d=26530)
+
+2005-07-03 Sunday 04:35  skodak
+
+	* fetch.php: 
+	
+	merged from MOODLE_15_STABLE
+
+2005-07-03 Sunday 04:23  skodak
+
+	* fetch.php: 
+	
+	not used anymore, please fix SC #99 before any use
+
+2005-06-16 Thursday 18:10  thepurpleblob
+
+	* fetch.php, index.php, type/directory/resource.class.php,
+	type/html/resource.class.php, type/text/resource.class.php: 
+	
+	Replaced _variable() style calls with _param() style calls plus
+	other mods to suit.
+
+2005-06-10 Friday 21:25  thepurpleblob
+
+	* type/file/resource.class.php: 
+	
+	Whoops - typo!
+
+2005-05-17 Tuesday 06:53  stronk7
+
+	* config.html: 
+	
+	Tabs are out
+
+2005-05-07 Saturday 02:15  stronk7
+
+	* filter.php: 
+	
+	Now resource autolinking filter is optimised too,  so all the
+	autolinking filters are using latest improvements.  Only Bug 3138
+	remains open and is important. I've its solution at home and I'll
+	post it in some hours. Just testing it against PHP4 and PHP5. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=3138)
+
+2005-04-18 Monday 22:48  moodler
+
+	* type/: common.html, text/text.html: 
+	
+	Actually, better to do it for all of them (gap after summary)
+
+2005-04-18 Monday 22:45  moodler
+
+	* type/text/text.html: 
+	
+	Make the gap between summary and full text a little larger
+
+2005-04-15 Friday 15:05  moodler
+
+	* lib.php: 
+	
+	Hack fix for course languages in resources (bug 2922)
+
+2005-04-13 Wednesday 07:42  stronk7
+
+	* restorelib.php: 
+	
+	Now all the wiki formated texts are converted to markdown by the
+	restore process. Such conversion is performed for every backup file
+	prior to 2005041100.  Wiki internal links are dinamically changed
+	and then, converted to Markdown. Bye, Wiki! ;-)
+
+2005-04-11 Monday 20:33  thepurpleblob
+
+	* version.php: 
+	
+	Version 2005041100. Update converts wiki-like resources to
+	Markdown.
+
+2005-04-11 Monday 20:32  thepurpleblob
+
+	* db/: mysql.php, postgres7.php: 
+	
+	Added update to convert wiki-like format to Markdown format
+
+2005-04-08 Friday 22:24  gustav_delius
+
+	* type/file/resource.class.php: 
+	
+	complete the renaming of get_user_timezone to
+	get_user_timezone_offset started by Martin
+
+2005-04-07 Thursday 00:52  moodler
+
+	* restorelib.php: 
+	
+	Fixed missing bracket
+
+2005-04-06 Wednesday 06:37  stronk7
+
+	* index.php, restorelib.php, type/directory/resource.class.php,
+	type/file/resource.class.php, type/html/resource.class.php,
+	type/text/resource.class.php: 
+	
+	Now resource->name is working under filterall.
+
+2005-04-02 Saturday 20:11  moodler
+
+	* config.html, lib.php, type/file/file.html,
+	type/file/localfile.php, type/file/localpath.php,
+	type/file/resource.class.php: 
+	
+	New feature for resources ... Local File Resources
+	
+	A Resource Parameter controls this (it defaults to OFF).
+	
+	When on, you see a third button when selecting a file, which lets
+	you select a LOCAL file on your own filesystem (but it isn't
+	uploaded).
+	
+	The local file is included in the web page when viewed.  All users
+	see a link that helps them set up a user_preference for the
+	location of these files on their own system (usually a CD_ROM
+	drive).
+
+2005-04-02 Saturday 08:13  stronk7
+
+	* restorelib.php: 
+	
+	Manual links from lesson pages to resources are now preserved
+	between backup/restore anywhere.  (see discussion
+	http://moodle.org/mod/forum/discuss.php?d=21044)
+	
+	Merged from MOODLE_14_STABLE
+
+2005-04-02 Saturday 08:04  stronk7
+
+	* restorelib.php: 
+	
+	Manual links from lesson pages to resources are now preserved
+	between backup/restore anywhere.  (see discussion
+	http://moodle.org/mod/forum/discuss.php?d=21044)
+
+2005-03-16 Wednesday 01:08  moodler
+
+	* type/file/resource.class.php: 
+	
+	Call the new MP# player properly
+
+2005-03-15 Tuesday 16:38  moodler
+
+	* filter.php: 
+	
+	Simplify autolink styles to "modulename autolink"
+
+2005-03-15 Tuesday 02:14  moodler
+
+	* type/file/resource.class.php: 
+	
+	Better invocation of the new MP3 player
+
+2005-03-14 Monday 01:17  moodler
+
+	* type/directory/resource.class.php: 
+	
+	Consistent file styles
+
+2005-03-14 Monday 00:32  moodler
+
+	* type/directory/resource.class.php: 
+	
+	Styles on file listings
+
+2005-03-07 Monday 23:11  moodler
+
+	* type/: directory/resource.class.php, file/resource.class.php: 
+	
+	Fixed four more references to mimetypes.php (bug 2690)	Thanks,
+	Gustav!
+
+2005-03-07 Monday 19:32  moodler
+
+	* lib.php: 
+	
+	Removed files/mimetype.php and put it into lib/filelib.php instead
+	where it always should have been.
+
+2005-03-07 Monday 14:33  moodler
+
+	* index.php: 
+	
+	Fixed up formatting of this page
+
+2005-03-04 Friday 18:13  moodler
+
+	* filter.php, view.php: 
+	
+	New faster filters!
+
+2005-03-03 Thursday 00:22  moodler
+
+	* type/file/resource.class.php: 
+	
+	Merge fix from STABLE
+
+2005-03-03 Thursday 00:19  moodler
+
+	* type/file/resource.class.php: 
+	
+	Some notices fixed
+
+2005-02-25 Friday 12:48  moodler
+
+	* type/file/resource.class.php: 
+	
+	Removed link from navigation bar
+
+2005-02-20 Sunday 14:08  moodler
+
+	* type/file/resource.class.php: 
+	
+	Made new serverurl more standard (don't include raw variables in
+	strings)
+
+2005-02-20 Sunday 06:44  fiedorow
+
+	* type/file/resource.class.php: 
+	
+	Minor fix: language string lookup
+
+2005-02-20 Sunday 04:22  fiedorow
+
+	* type/file/resource.class.php: 
+	
+	Added hook for more flexible authentication to external url -
+	backwards compatible with existing file resources
+
+2005-02-16 Wednesday 18:40  gustav_delius
+
+	* fetch.php, lib.php, version.php: 
+	
+	In order to ensure that when a teacher hides a resource or an
+	activity that students really can't get at it, even if they know
+	the direct links to its pages, I have given an optional third
+	argument $cm to the functions  require_login() and
+	require_course_login(). Pages showing information about a
+	particular course module now pass the course module object in this
+	third argument. The login functions will then test if either the
+	course module is visible or the user is a teacher. If neither is
+	the case then the user is redirected to the course homepage after
+	being shown a message "Sorry, this activity is currently hidden".
+	
+	(While I was at it I also turned the autologinguests off for most
+	module pages, except on the index.php pages and the view.php pages
+	for those modules that allow guests)
+
+2005-02-13 Sunday 05:41  gustav_delius
+
+	* type/: directory/directory.html, file/file.html, html/html.html,
+	text/text.html: 
+	
+	Activities can now be hidden/shown from the activity editing page.
+	Also for modules that know about groups the groupmode can be set
+	from there. See bug 2533. This required adding to the mod.html
+	files calls to new functions print_visible_setting() and
+	print_groupmode_setting() which are combined in
+	print_standard_coursemodule_settings().
+	
+	The visibility of coursemodules is now always set through the
+	function set_coursemodule_visible() in order to make sure that the
+	associated events get updated in the calendar appropriately.
+	
+	If moving a coursemodule to a hidden section then the module is set
+	to hidden as well and its events are hidden in the calendar.
+	
+	If deleting a coursemodule its events are deleted from the
+	calendar.
+	
+	The function choose_from_menu() has an extra optional argument
+	$disabled which, when set to true, will disable the menu.
+	
+	For the sake of consistency the function set_groupmode_for_module
+	has been renamed to set_coursemodule_groupmode and the functions
+	show_course_module() and hide_course_module() have been combined to
+	set_coursemodule_visible().
+
+2005-02-08 Tuesday 17:23  moodler
+
+	* config.html: 
+	
+	Fixed up some layout issues in the configuration files
+
+2005-02-08 Tuesday 07:33  stronk7
+
+	* restorelib.php: 
+	
+	Some minor changes to each module to XHTMLise the restore process
+
+2005-02-07 Monday 04:06  skodak
+
+	* type/directory/resource.class.php: 
+	
+	correction in require path for mimetypes
+
+2005-02-01 Tuesday 11:46  moodler
+
+	* lib.php, type/directory/resource.class.php,
+	type/file/resource.class.php, type/html/resource.class.php,
+	type/text/resource.class.php: 
+	
+	Removed $THEME from around the place
+
+2005-01-30 Sunday 22:21  julmis
+
+	* filter.php: 
+	
+	Adding <span class="nolink"> excluding.
+
+2005-01-23 Sunday 02:53  stronk7
+
+	* type/common.html: 
+	
+	Modify sesskey behaviour. SC#73
+
+2005-01-18 Tuesday 17:45  ikawhero
+
+	* lib.php, type/common.html, type/file/file.html,
+	type/file/resource.class.php, type/html/html.html,
+	type/html/resource.class.php, type/text/resource.class.php,
+	type/text/text.html: 
+	
+	General tidy up of code, changes for XHTML and accessibility
+	compatibility.
+
+2004-12-15 Wednesday 21:13  moodler
+
+	* type/directory/resource.class.php: 
+	
+	fix merged from stable
+
+2004-12-15 Wednesday 21:02  moodler
+
+	* type/directory/resource.class.php: 
+	
+	Better check for bad resource name - Found by skodak SC#32
+
+2004-11-28 Sunday 00:03  moodler
+
+	* type/file/resource.class.php: 
+	
+	Tiny hack to make $course work OK in file resources (print_header)
+	
+	Should be replaced with proper global $COURSE in 1.5
+
+2004-11-19 Friday 13:00  mjollnir_
+
+	* version.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	Merged from MOODLE_14_STABLE: Indexes for resource and version bump
+	(honoring partial freeze)
+
+2004-11-19 Friday 12:52  mjollnir_
+
+	* version.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	Indexes for resource and version bump (honoring partial freeze)
+
+2004-11-11 Thursday 16:04  moodler
+
+	* coursefiles.php: 
+	
+	Stub file to overwrite formerly buggy script
+
+2004-11-11 Thursday 15:57  moodler
+
+	* type/: directory/resource.class.php, file/resource.class.php,
+	html/resource.class.php, text/resource.class.php: 
+	
+	Merged changes from STABLE
+
+2004-11-11 Thursday 15:45  moodler
+
+	* view.php: 
+	
+	More secure use of parameters, merged from stable
+
+2004-11-11 Thursday 15:44  moodler
+
+	* lib.php: 
+	
+	Access fixes, merged from stable
+
+2004-11-02 Tuesday 20:53  moodler
+
+	* coursefiles.php, version.php, type/file/file.html: 
+	
+	Updated Resource, Wiki and Scorm to use the new files/index.php to
+	choose files.	The old coursefiles.php is obsolete.
+
+2004-11-02 Tuesday 20:01  moodler
+
+	* coursefiles.php, version.php, type/file/file.html: 
+	
+	files/index.php now allows choosing and it makes the
+	coursefiles.php scripts unnecessary.
+	
+	Wiki, Resource and Scorm now use the new method, so their versions
+	have been bumped.
+
+2004-10-28 Thursday 22:18  skodak
+
+	* coursefiles.php: 
+	
+	merged from 14_STABLE - removed incorrect global $USER
+
+2004-10-28 Thursday 22:17  skodak
+
+	* coursefiles.php: 
+	
+	removed incorrect global $USER
+
+2004-10-27 Wednesday 03:57  skodak
+
+	* coursefiles.php: 
+	
+	merged from 14_STABLE - updated htmleditor invocation (from
+	files/index.php)
+
+2004-10-27 Wednesday 03:53  skodak
+
+	* coursefiles.php: 
+	
+	updated htmleditor invocation (from files/index.php)
+
+2004-10-27 Wednesday 03:44  skodak
+
+	* coursefiles.php: 
+	
+	xhtml compliance $id and $wdir not quoted in forms
+
+2004-10-27 Wednesday 03:25  skodak
+
+	* coursefiles.php: 
+	
+	merged from 14_STABLE - changes: * sesskey; * only editing teachers
+	can use it; * time modified - used filemtime (consistency with
+	files/index.php, better for Win32); * directory sizes shown; *
+	removed unused "torte" action; * updated breadcrums (active folder
+	not linked and &raquo;); * updated comments; * some other fixes
+	from files/index.php.
+	
+	Please test, test, test.
+
+2004-10-27 Wednesday 02:55  skodak
+
+	* coursefiles.php: 
+	
+	changes: * sesskey; * only editing teachers can use it; * time
+	modified - used filemtime (consistency with files/index.php, better
+	for Win32); * directory sizes shown; * removed unused "torte"
+	action; * updated breadcrums (active folder not linked and
+	&raquo;); * updated comments; * some other fixes from
+	files/index.php.
+	
+	Please test, test, test.
+
+2004-10-26 Tuesday 04:33  gustav_delius
+
+	* type/html/resource.class.php: 
+	
+	added missing print_footer()
+
+2004-10-19 Tuesday 17:41  moodler
+
+	* lib.php: 
+	
+	Moved the new additions from the display() function into the
+	constructor
+
+2004-10-19 Tuesday 17:28  moodler
+
+	* lib.php, view.php, type/directory/resource.class.php,
+	type/file/resource.class.php, type/html/resource.class.php,
+	type/text/resource.class.php: 
+	
+	Centralised some of the display stuff in the display function in
+	the base class
+	
+	Added better checking for students accessing hidden resources
+
+2004-10-19 Tuesday 15:09  moodler
+
+	* type/file/: file.html, resource.class.php: 
+	
+	XHTML and accessibility compatibility
+
+2004-10-19 Tuesday 14:40  moodler
+
+	* type/html/resource.class.php: 
+	
+	More changes for XHTML compatibility.  Remove some left over test
+	code.
+
+2004-10-18 Monday 03:36  stronk7
+
+	* coursefiles.php: 
+	
+	Now resource's FileManager is using central zip & unzip functions.
+	
+	Merged from MOODLE_14_STABLE
+
+2004-10-18 Monday 03:33  stronk7
+
+	* coursefiles.php: 
+	
+	Now resource's FileManager is using central zip & unzip functions.
+
+2004-10-15 Friday 20:23  moodler
+
+	* index.php, type/common.html, type/directory/resource.class.php,
+	type/html/html.html, type/html/resource.class.php,
+	type/text/resource.class.php, type/text/text.html: 
+	
+	More XHTML fixes
+
+2004-10-15 Friday 16:48  moodler
+
+	* type/file/resource.class.php: 
+	
+	Changes for XHTML compatibility
+
+2004-10-07 Thursday 16:08  moodler
+
+	* lib.php, type/file/file.html, type/file/resource.class.php,
+	type/html/html.html, type/html/resource.class.php,
+	type/text/resource.class.php, type/text/text.html: 
+	
+	Some changes for XHTML compatibility
+
+2004-10-03 Sunday 17:48  stronk7
+
+	* config.html: 
+	
+	admin/module.php is now using sesskey.
+	
+	Merged from MOODLE_14_STABLE
+
+2004-10-03 Sunday 17:44  stronk7
+
+	* config.html: 
+	
+	admin/module.php is now using sesskey.
+
+2004-10-01 Friday 23:19  moodler
+
+	* type/directory/resource.class.php: 
+	
+	Merged from stable
+
+2004-10-01 Friday 23:18  moodler
+
+	* type/directory/resource.class.php: 
+	
+	Don't allow any dots in the subdirectory string for directory
+	resources  Thanks Petr!
+
+2004-10-01 Friday 19:33  stronk7
+
+	* restorelib.php: 
+	
+	Included one more translation of links from assignments to
+	resources. Required in bug 2027.  Easy and not risky.
+	
+	Merged from MOODLE_14_STABLE
+
+2004-10-01 Friday 19:31  stronk7
+
+	* restorelib.php: 
+	
+	Included one more translation of links from assignments to
+	resources. Required in bug 2027.  Easy and not risky.
+
+2004-09-29 Wednesday 11:12  moodler
+
+	* lib.php: 
+	
+	Merged resource->type checks from stable
+
+2004-09-29 Wednesday 11:11  moodler
+
+	* lib.php: 
+	
+	Check resource->type more carefully
+
+2004-09-28 Tuesday 16:05  moodler
+
+	* coursefiles.php: 
+	
+	Merged fix for unclean oldname from renaming ... from stable.
+
+2004-09-28 Tuesday 16:02  moodler
+
+	* coursefiles.php: 
+	
+	Copy of the change from files/index.php to clean $oldname during
+	rename
+
+2004-09-17 Friday 13:46  mjollnir_
+
+	* version.php: 
+	
+	bumps for version and requires for modules that use new upload
+	class
+
+2004-09-17 Friday 01:13  gustav_delius
+
+	* coursefiles.php, lib.php, type/directory/resource.class.php,
+	type/file/file.html, type/file/resource.class.php,
+	type/html/html.html, type/html/resource.class.php,
+	type/text/resource.class.php, type/text/text.html: 
+	
+	XHTML compliance - fixed (hopefully) all <img> tags - global
+	replace on <br> to <br /> - &amp; in URLs - got the forum module
+	XHTML compliant Julian Sedding
+
+2004-09-15 Wednesday 06:58  mjollnir_
+
+	* coursefiles.php: 
+	
+	Centralised file upload code, integration with clam AV, integration
+	with some modules: assignment, exercise, forum, glossaryt,
+	resource, scorm (more to come soon).
+	
+	These patches are maintained in an publicly accessible Arch
+	repository, see:
+	http://lists.eduforge.org/cgi-bin/archzoom.cgi/arch-eduforge@cataly
+	st.net.nz--2004-MIRROR/moodle--eduforge--1.3.3
+	
+	Index of arch patches in this commit:
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	15     final touches to sears stuff until testing can begin,
+	beginning of magical uploadey wrappery function goodness
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	18     Virus scanning on upload
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	19     made emacs use spaces instead of tabs and fixed
+	lib/moodlelib.php where it was bad in the new functions; few
+	wording changes, added in support for clamdscan
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	20     handlevirus.php = new script to handle output of clamscan
+	(designed for cron clamscan), changes to strings for emailing out
+	virus notifications, changes to moodlelib - slightly different
+	notice reporting in handle_infected_file and new function for
+	replacing file with message
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	21     refactor to filter out invalid lines in input to handlevirus
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	22     modified assignment to use hande_file_upload
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	25     bug fix for handle_file_upload
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	26     Small fix for non thinking brain doing something silly
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	35     small fix to switch order of items in drop down to allow
+	sensible defaults
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	36     small changes to strings file
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	38     taken stuff out of moodlelib to put in upload class
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	39     new upload class -in a changeset by itself just in case -
+	not quite finished
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	40     tweaks to upload class - clam_scan_file can now take a path
+	as an argument, not just an entry from _FILES, there is better
+	handling of failure and notification, more allowance for module
+	writers to keep control in general. Also slightly nicer strings
+	entries for a few things
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	41     upload class integration with assignment module, bug fix,
+	slight tweak
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	42     small changes to uploadlib, integration with assessment and
+	assignment
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	44     tweaks for assessment and assignment for uploading
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	48     integration with exercise module
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	49     integration of virus stuff with forum module
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	50     integration of upload class and glossary module
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	51     just in case glossary_move_attachments is ever used, we
+	change the log entries before we move the files. also  moved
+	clam_log_upload out of the class
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	52     virus scanning for imports for glossary
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	53     relog entries when moving files attached to forum posts
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	54     resource module integration with virus scanning
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	55     scorm integration with upload/virus class
+	
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	56     fix for handlevirus.php since upload class changes
+	
+	Full logs:
+	
+	Revision: moodle--eduforge--1.3.3--patch-15 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Wed Sep  1 17:28:13 NZST 2004
+	Standard-date: 2004-09-01 05:28:13 GMT Modified-files:
+	lang/en/moodle.php lib/moodlelib.php	 mod/assessment/sears.php
+	mod/assessment/upload.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	15 Summary: final touches to sears stuff until testing can begin,
+	beginning of magical uploadey wrappery function goodness Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-18 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Thu Sep  2 15:49:54 NZST 2004
+	Standard-date: 2004-09-02 03:49:54 GMT Modified-files:
+	admin/config.html lang/en/moodle.php	 lib/moodlelib.php
+	mod/assessment/upload.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	18 Summary: Virus scanning on upload Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-19 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Thu Sep  2 17:06:14 NZST 2004
+	Standard-date: 2004-09-02 05:06:14 GMT Modified-files:
+	lang/en/moodle.php lib/moodlelib.php	 mod/assessment/upload.php
+	New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	19 Summary: made emacs use spaces instead of tabs and fixed
+	lib/moodlelib.php where it was bad in the new functions; few
+	wording changes, added in support for clamdscan Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-20 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Fri Sep  3 16:06:05 NZST 2004
+	Standard-date: 2004-09-03 04:06:05 GMT New-files:
+	admin/.arch-ids/handlevirus.php.id     admin/handlevirus.php
+	Modified-files: lang/en/moodle.php lib/moodlelib.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	20 Summary: handlevirus.php = new script to handle output of
+	clamscan (designed for cron clamscan), changes to strings for
+	emailing out virus notifications, changes to moodlelib - slightly
+	different notice reporting in handle_infected_file and new function
+	for replacing file with message Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-21 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep  6 11:37:31 NZST 2004
+	Standard-date: 2004-09-05 23:37:31 GMT Modified-files:
+	admin/handlevirus.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	21 Summary: refactor to filter out invalid lines in input to
+	handlevirus Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-22 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep  6 13:07:48 NZST 2004
+	Standard-date: 2004-09-06 01:07:48 GMT Modified-files:
+	mod/assignment/upload.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	22 Summary: modified assignment to use hande_file_upload Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-25 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep  6 16:32:11 NZST 2004
+	Standard-date: 2004-09-06 04:32:11 GMT Modified-files:
+	lib/moodlelib.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	25 Summary: bug fix for handle_file_upload Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-26 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep  6 16:51:50 NZST 2004
+	Standard-date: 2004-09-06 04:51:50 GMT Modified-files:
+	lib/moodlelib.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	26 Summary: Small fix for non thinking brain doing something silly
+	Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-35 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Fri Sep 10 10:09:53 NZST 2004
+	Standard-date: 2004-09-09 22:09:53 GMT Modified-files:
+	admin/config.html New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	35 Summary: small fix to switch order of items in drop down to
+	allow sensible defaults Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-36 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Fri Sep 10 10:11:29 NZST 2004
+	Standard-date: 2004-09-09 22:11:29 GMT Modified-files:
+	lang/en/moodle.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	36 Summary: small changes to strings file Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-38 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Fri Sep 10 10:17:24 NZST 2004
+	Standard-date: 2004-09-09 22:17:24 GMT Modified-files:
+	lib/moodlelib.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	38 Summary: taken stuff out of moodlelib to put in upload class
+	Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-39 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Fri Sep 10 10:21:21 NZST 2004
+	Standard-date: 2004-09-09 22:21:21 GMT New-files:
+	lib/.arch-ids/uploadlib.php.id lib/uploadlib.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	39 Summary: new upload class -in a changeset by itself just in case
+	- not quite finished Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-40 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Fri Sep 10 11:58:24 NZST 2004
+	Standard-date: 2004-09-09 23:58:24 GMT Modified-files:
+	lang/en/moodle.php lib/uploadlib.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	40 Summary: tweaks to upload class - clam_scan_file can now take a
+	path as an argument, not just an entry from _FILES, there is better
+	handling of failure and notification, more allowance for module
+	writers to keep control in general. Also slightly nicer strings
+	entries for a few things Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-41 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Fri Sep 10 12:38:02 NZST 2004
+	Standard-date: 2004-09-10 00:38:02 GMT Modified-files:
+	lib/uploadlib.php mod/assignment/upload.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	41 Summary: upload class integration with assignment module, bug
+	fix, slight tweak Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-42 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Fri Sep 10 15:30:20 NZST 2004
+	Standard-date: 2004-09-10 03:30:20 GMT Modified-files:
+	lib/uploadlib.php mod/assessment/upload.php    
+	mod/assessment/view.php mod/assignment/upload.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	42 Summary: small changes to uploadlib, integration with assessment
+	and assignment Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-44 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Fri Sep 10 16:54:40 NZST 2004
+	Standard-date: 2004-09-10 04:54:40 GMT Modified-files:
+	mod/assessment/lib.php	   mod/assignment/lib.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	44 Summary: tweaks for assessment and assignment for uploading
+	Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-48 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep 13 09:57:03 NZST 2004
+	Standard-date: 2004-09-12 21:57:03 GMT Modified-files:
+	lang/en/moodle.php     mod/exercise/locallib.php
+	mod/exercise/upload.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	48 Summary: integration with exercise module Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-49 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep 13 11:35:46 NZST 2004
+	Standard-date: 2004-09-12 23:35:46 GMT Modified-files:
+	mod/forum/lib.php mod/forum/post.html New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	49 Summary: integration of virus stuff with forum module Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-50 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep 13 14:00:29 NZST 2004
+	Standard-date: 2004-09-13 02:00:29 GMT Modified-files:
+	lang/en/glossary.php mod/glossary/edit.html    
+	mod/glossary/edit.php mod/glossary/lib.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	50 Summary: integration of upload class and glossary module
+	Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-51 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep 13 15:13:02 NZST 2004
+	Standard-date: 2004-09-13 03:13:02 GMT Modified-files:
+	lib/uploadlib.php mod/glossary/lib.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	51 Summary: just in case glossary_move_attachments is ever used, we
+	change the log entries before we move the files. also  moved
+	clam_log_upload out of the class Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-52 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep 13 15:26:56 NZST 2004
+	Standard-date: 2004-09-13 03:26:56 GMT Modified-files:
+	mod/glossary/import.html     mod/glossary/import.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	52 Summary: virus scanning for imports for glossary Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-53 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep 13 16:02:22 NZST 2004
+	Standard-date: 2004-09-13 04:02:22 GMT Modified-files:
+	mod/forum/lib.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	53 Summary: relog entries when moving files attached to forum posts
+	Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-54 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Mon Sep 13 16:58:37 NZST 2004
+	Standard-date: 2004-09-13 04:58:37 GMT Modified-files:
+	mod/resource/coursefiles.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	54 Summary: resource module integration with virus scanning
+	Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-55 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Tue Sep 14 16:15:47 NZST 2004
+	Standard-date: 2004-09-14 04:15:47 GMT Modified-files:
+	mod/scorm/coursefiles.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	55 Summary: scorm integration with upload/virus class Keywords:
+	
+	Revision: moodle--eduforge--1.3.3--patch-56 Archive:
+	arch-eduforge@catalyst.net.nz--2004 Creator: Penny Leach
+	<penny@catalyst.net.nz> Date: Wed Sep 15 10:33:23 NZST 2004
+	Standard-date: 2004-09-14 22:33:23 GMT Modified-files:
+	admin/handlevirus.php New-patches:
+	arch-eduforge@catalyst.net.nz--2004/moodle--eduforge--1.3.3--patch-
+	56 Summary: fix for handlevirus.php since upload class changes
+	Keywords:
+
+2004-09-15 Wednesday 04:39  gustav_delius
+
+	* coursefiles.php, type/directory/directory.html,
+	type/directory/resource.class.php, type/file/file.html,
+	type/file/resource.class.php, type/html/html.html,
+	type/text/text.html: 
+	
+	towards XHTML compliance
+
+2004-09-13 Monday 01:09  gustav_delius
+
+	* backuplib.php, config.html, coursefiles.php, filter.php,
+	index.php, lib.php, restorelib.php, version.php, view.php,
+	db/mysql.php, db/oci8po.php, db/postgres7.php, type/common.html,
+	type/directory/directory.html, type/directory/resource.class.php,
+	type/file/file.html, type/file/resource.class.php,
+	type/html/html.html, type/html/resource.class.php,
+	type/text/resource.class.php, type/text/text.html: 
+	
+	fixed capitalization and quoting of attribute values
+
+2004-09-12 Sunday 22:41  gustav_delius
+
+	* config.html, coursefiles.php, restorelib.php, type/common.html,
+	type/common_end.html, type/file/file.html, type/html/html.html,
+	type/text/text.html: 
+	
+	closed <input /> <br /> <hr />
+
+2004-08-31 Tuesday 21:46  defacer
+
+	* coursefiles.php: 
+	
+	Merging goodness from MOODLE_14_STABLE
+
+2004-08-31 Tuesday 21:31  defacer
+
+	* coursefiles.php: 
+	
+	Mike noticed that PHP_SELF was being used here. Replaced all
+	instances with $ME.
+
+2004-08-31 Tuesday 02:18  moodler
+
+	* type/: file/file.html, html/html.html, text/text.html: 
+	
+	Merged changes from stable for new help button
+
+2004-08-31 Tuesday 02:17  moodler
+
+	* type/: file/file.html, html/html.html, text/text.html: 
+	
+	Added help buttons to the new help file for window settings
+
+2004-08-30 Monday 16:43  moodler
+
+	* coursefiles.php: 
+	
+	MErged from CVS
+
+2004-08-30 Monday 16:42  moodler
+
+	* coursefiles.php: 
+	
+	Disabled HTML editor when editing HTML files, for now.	See bug
+	1815
+
+2004-08-30 Monday 12:23  moodler
+
+	* type/file/file.html: 
+	
+	Merged new string from stable
+
+2004-08-30 Monday 12:21  moodler
+
+	* type/file/file.html: 
+	
+	"Choose parameter" is now translatable.
+
+2004-08-30 Monday 10:56  moodler
+
+	* version.php: 
+	
+	Fixed Gustav's typo in the version ... bug 1841
+
+2004-08-29 Sunday 22:15  gustav_delius
+
+	* coursefiles.php, filter.php, version.php: 
+	
+	removed unnecessary calls to get_site()
+
+2004-08-29 Sunday 01:20  moodler
+
+	* config.html, lib.php, type/file/file.html, type/html/html.html,
+	type/html/resource.class.php, type/text/resource.class.php,
+	type/text/text.html: 
+	
+	Merged new settings from stable
+
+2004-08-29 Sunday 00:29  moodler
+
+	* config.html, lib.php, type/file/file.html, type/html/html.html,
+	type/text/text.html: 
+	
+	Added two new site-wide settings for the resource module so that
+	the admin can deternine the default state of the collapsible panes
+	on the resource creation screen.
+
+2004-08-28 Saturday 23:56  moodler
+
+	* lib.php, type/file/file.html, type/html/html.html,
+	type/html/resource.class.php, type/text/resource.class.php,
+	type/text/text.html: 
+	
+	Aded user preferences to the collapsing resources.  Panel settings
+	are now remembered per user from one edit to the next.
+
+2004-08-28 Saturday 13:17  moodler
+
+	* type/: file/file.html, html/html.html, text/text.html: 
+	
+	Merged from stable
+
+2004-08-28 Saturday 13:15  moodler
+
+	* type/: file/file.html, html/html.html, text/text.html: 
+	
+	Added ellipses to buttons  "Show settings..."
+
+2004-08-27 Friday 17:50  moodler
+
+	* type/: file/file.html, html/html.html, text/text.html: 
+	
+	Merged changes from STABLE to add new collapsible sections to mod
+	edit forms
+
+2004-08-27 Friday 17:44  moodler
+
+	* type/: file/file.html, html/html.html, text/text.html: 
+	
+	Tidied up form sections with javascript
+
+2004-08-27 Friday 17:06  moodler
+
+	* type/: common.html, file/file.html: 
+	
+	Merged from trunk. Changes to file resource.
+
+2004-08-27 Friday 16:53  moodler
+
+	* type/: common.html, file/file.html: 
+	
+	Tidied up file resource with hidden form sections
+
+2004-08-26 Thursday 21:01  moodler
+
+	* type/file/resource.class.php: 
+	
+	Merged updates from stable
+
+2004-08-26 Thursday 20:58  moodler
+
+	* type/file/resource.class.php: 
+	
+	Added Password and Phone 2
+	
+	Frame is now default again
+
+2004-08-21 Saturday 16:46  moodler
+
+	* type/file/: file.html, resource.class.php: 
+	
+	Use the general word "Location" instead of "File name"
+
+2004-08-21 Saturday 16:33  moodler
+
+	* type/file/resource.class.php: 
+	
+	Use resource_defaulturl when it's blank ... somehow this got
+	removed.
+
+2004-08-14 Saturday 19:54  moodler
+
+	* lib.php, type/file/file.html, type/file/resource.class.php,
+	type/html/html.html, type/html/resource.class.php,
+	type/text/resource.class.php, type/text/text.html: 
+	
+	Fixed window choices on resources so that they use a radio button
+	now.
+	
+	bug 1741
+
+2004-08-10 Tuesday 17:10  moodler
+
+	* fetch.php: 
+	
+	Don't clean external files
+
+2004-08-09 Monday 23:45  moodler
+
+	* details.php, type/directory/resource.class.php,
+	type/file/resource.class.php, type/html/resource.class.php,
+	type/text/resource.class.php: 
+	
+	Cleaned up some more things using some shortcut variables, and also
+	fixed bug 1711 that was preventing glossaries from working properly
+
+2004-08-09 Monday 22:49  moodler
+
+	* index.php, type/directory/resource.class.php,
+	type/file/resource.class.php, type/html/resource.class.php,
+	type/text/resource.class.php: 
+	
+	Standardising the printing of content and summaries to use
+	format_text()
+
+2004-08-08 Sunday 22:33  moodler
+
+	* lib.php, restorelib.php, version.php, db/mysql.php,
+	db/postgres7.php, type/directory/resource.class.php,
+	type/file/resource.class.php, type/html/html.html,
+	type/html/resource.class.php, type/text/resource.class.php,
+	type/text/text.html: 
+	
+	Lots of little cleanups and these new things:
+	
+	  - Reference resources are now history -> converted to HTML pages
+	      (the backup/restore has been taken care of, Eloy)
+	
+	  - HTML pages and Text pages can now have popups!
+	
+	  - Summaries are not shown when they should be blank (eg if they
+	    just contain a <br /> as the HTML editor usually inserts.
+	
+	  - Fixed some notices for PHP 5
+
+2004-08-08 Sunday 15:35  moodler
+
+	* type/directory/resource.class.php: 
+	
+	Directory selection list now works when adding a new resource
+
+2004-08-08 Sunday 14:57  moodler
+
+	* filter.php: 
+	
+	Improvement to filters, providing speed boost AND better
+	compatibility with Turck MMCache.
+	
+	Filter function must now have a particular name
+	
+	   eg resource_filter
+	
+	where "resource" is the name of the directory that filter.php is
+	in.
+
+2004-08-06 Friday 02:13  moodler
+
+	* restorelib.php: 
+	
+	Removed Martin's mistaken addition from a few days ago
+
+2004-08-05 Thursday 18:51  moodler
+
+	* db/: mysql.php, postgres7.php: 
+	
+	Removing some upgrade stuff ... not sure what I was trying to do
+	there
+	
+	I'm checking this in so I can do some testing on other sites
+
+2004-08-03 Tuesday 14:29  gustav_delius
+
+	* version.php: 
+	
+	resource module requires recent version
+
+2004-08-03 Tuesday 03:11  moodler
+
+	* lib.php: 
+	
+	The resource types are now always displayed in a standard order no
+	matter what the language.
+
+2004-08-01 Sunday 14:37  moodler
+
+	* type/file/resource.class.php: 
+	
+	Fixed some notices, thanks Eloy!
+
+2004-08-01 Sunday 14:36  moodler
+
+	* lib.php: 
+	
+	Files starting with a slash are treated as URLs too
+
+2004-07-31 Saturday 04:23  stronk7
+
+	* restorelib.php: 
+	
+	Adjusted the 'frame' option for some mimetypes when restoring 1.3
+	courses...
+
+2004-07-30 Friday 17:47  moodler
+
+	* lib.php: 
+	
+	Fixed URL detection
+
+2004-07-30 Friday 15:03  moodler
+
+	* version.php, db/mysql.php, db/postgres7.php: 
+	
+	FIx up some resources that didn't upgrade properly before.   :-/
+
+2004-07-30 Friday 11:55  moodler
+
+	* db/: mysql.sql, postgres7.sql: 
+	
+	resource->type is now a varchar
+
+2004-07-30 Friday 01:54  stronk7
+
+	* restorelib.php: 
+	
+	Now resource module backups from a 1.4 version can be restored in a
+	1.3.  Only two combinations aren't 100% compatible:	- Program
+	resources.	- Text without format in 1.4 is changed to type 4
+	(plain text)  So resource restore is 99% backwards compatible in
+	1.3 Bug 1674 (http://moodle.org/bugs/bug.php?op=show&bugid=1674)
+
+2004-07-28 Wednesday 19:57  moodler
+
+	* index.php: 
+	
+	Fixed a notice on site page
+
+2004-07-28 Wednesday 16:51  paca70
+
+	* db/postgres7.php: 
+	
+	Wery quickly tested and untested  versions for Postgresql.
+
+2004-07-28 Wednesday 14:56  moodler
+
+	* lib.php, mod.html, view.php, type/directory/resource.class.php,
+	type/file/resource.class.php, type/html/resource.class.php,
+	type/text/resource.class.php: 
+	
+	Fixed lots of bodgy little things
+
+2004-07-28 Wednesday 13:52  moodler
+
+	* type/: directory/resource.class.php, file/resource.class.php,
+	html/resource.class.php, text/resource.class.php: 
+	
+	Fixed some notices ... thanks, Eloy!  For some reason my server
+	isn't displaying these even though it's set up ...
+
+2004-07-28 Wednesday 13:30  moodler
+
+	* type/: directory/resource.class.php, file/resource.class.php,
+	html/resource.class.php, text/resource.class.php: 
+	
+	Grr, fixed ID tag syntax
+
+2004-07-28 Wednesday 13:29  moodler
+
+	* type/: directory/resource.class.php, file/resource.class.php,
+	html/resource.class.php, text/resource.class.php: 
+	
+	Added some ID tags to these files
+
+2004-07-28 Wednesday 07:05  stronk7
+
+	* backuplib.php, restorelib.php: 
+	
+	Now new resources are included in backup & restore.  1.4--->1.4 and
+	1.3--->1.4 conversions are working fine.  Tomorrow I'll try the
+	backwards conversion (1.4--->1.3).  Bug 1674
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1674)
+
+2004-07-27 Tuesday 00:21  moodler
+
+	* lib.php: 
+	
+	Fix popups and icons for resources
+
+2004-07-26 Monday 19:35  moodler
+
+	* version.php, db/mysql.php, db/postgres7.php: 
+	
+	FIxes bug 1669 and some defunct resource types
+
+2004-07-26 Monday 13:19  moodler
+
+	* db/: mysql.php, postgres7.php: 
+	
+	Fixed bug 1667 .... require -> require_once
+
+2004-07-25 Sunday 22:32  moodler
+
+	* config.html, coursefiles.php, lib.php, mod.html, version.php,
+	view.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql, type/common.html, type/common_end.html,
+	type/directory/directory.html, type/directory/resource.class.php,
+	type/file/file.html, type/file/resource.class.php,
+	type/html/html.html, type/html/resource.class.php,
+	type/text/resource.class.php, type/text/text.html: 
+	
+	Merged in the new resource structure to TRUNK
+
+2004-07-25 Sunday 21:36  moodler
+
+	* config.html, lib.php, type/file/file.html,
+	type/file/resource.class.php: 
+	
+	Program resources are now inlcuded in web/file as well ...
+	
+	I had a bit of a CVS accident tonight, hopefully this is all sound
+
+2004-07-19 Monday 15:38  moodler
+
+	* type/text/text.html: 
+	
+	file text.html was initially added on branch MOODLE_14_RESOURCE.
+
+2004-07-19 Monday 15:38  moodler
+
+	* type/common_end.html: 
+	
+	file common_end.html was initially added on branch
+	MOODLE_14_RESOURCE.
+
+2004-07-19 Monday 15:38  moodler
+
+	* type/: directory/resource.class.php, file/resource.class.php,
+	html/resource.class.php, text/resource.class.php: 
+	
+	file resource.class.php was initially added on branch
+	MOODLE_14_RESOURCE.
+
+2004-07-19 Monday 15:38  moodler
+
+	* type/html/html.html: 
+	
+	file html.html was initially added on branch MOODLE_14_RESOURCE.
+
+2004-07-19 Monday 15:38  moodler
+
+	* type/file/file.html: 
+	
+	file file.html was initially added on branch MOODLE_14_RESOURCE.
+
+2004-07-19 Monday 15:38  moodler
+
+	* type/directory/directory.html: 
+	
+	file directory.html was initially added on branch
+	MOODLE_14_RESOURCE.
+
+2004-07-19 Monday 15:38  moodler
+
+	* type/common.html: 
+	
+	file common.html was initially added on branch MOODLE_14_RESOURCE.
+
+2004-07-19 Monday 15:38  moodler
+
+	* coursefiles.php, lib.php, mod.html, version.php, view.php,
+	db/mysql.php, db/mysql.sql, db/postgres7.php, db/postgres7.sql,
+	type/common.html, type/common_end.html,
+	type/directory/directory.html, type/directory/resource.class.php,
+	type/file/file.html, type/file/resource.class.php,
+	type/html/html.html, type/html/resource.class.php,
+	type/text/resource.class.php, type/text/text.html: 
+	
+	Checking in new resource module to a development branch
+
+2004-06-04 Friday 15:28  moodler
+
+	* version.php: 
+	
+	MOdules are dependent on this version of course/mod.php
+
+2004-06-04 Friday 14:17  moodler
+
+	* details.php, mod.html, version.php: 
+	
+	BRANCH MERGE
+	
+	These are the changes from MOODLE_13_STABLE, merged into trunk
+	
+	The tag MOODLE_13_MERGED on the MOODLE_13_STABLE branch now refers
+	to this point
+	
+	The biggest changes here are the fixes for HTML editor in all
+	standard modules
+
+2004-06-03 Thursday 21:07  moodler
+
+	* details.php, mod.html, version.php: 
+	
+	OK, for bug fixes this is a pretty big checkin!!   :-/
+	
+	I finally was able to see the HTML Editor bug in IE/XP that
+	everyone was talking about, and it's a very serious bug as it makes
+	Moodle 1.3 almost unusable for these people.  :-(  :-(
+	
+	So, I eventually found out that the problem is that the Javascript
+	that attaches the editor has troubles when it is embedded within
+	the table						    that
+	course/mod.php puts around the mod.html forms in each module. 
+	(Only in IE and only sometimes, mind you).
+	
+	While testing I also had a good look at a long standing issue which
+	is the inconsistency of the mod.html forms when using the editor.
+	
+	So, to fix both I decided to put the HTML editor calls OUTSIDE the
+	mod.html in the mod.php file.  This means that all modules get the
+	HTML editor by default on all text areas during activity module
+	setup by default.
+	
+	I've been running through this for the past few hours and it seems
+	pretty stable now and a lot more consistent, so I'm checking it in
+	as big fix towards the Moodle 1.3.1 we have to have.
+	
+	Unfortunately it also means the API has changed a bit  ... I had to
+	update all the module dependencies to this exact version (or
+	later).
+	
+	Please test this "stable" version hard using the standard modules
+	only and I'll merge these changes over to the trunk in a day or so
+	and update all known third-party modules.
+
+2004-05-30 Sunday 09:00  stronk7
+
+	* filter.php: 
+	
+	Solved bug 1491 in all the "linking" filters. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1491) Bugfix 001
+
+2004-05-30 Sunday 08:28  stronk7
+
+	* filter.php: 
+	
+	Solved bug 1491 in all the "linking" filters. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1491) Bugfix 001
+
+2004-05-29 Saturday 14:24  moodler
+
+	* lib.php: 
+	
+	External resources where we don't know the type are given the web
+	icon
+
+2004-05-24 Monday 02:20  stronk7
+
+	* filter.php: 
+	
+	Now only integers < 1000 are avoided...  Bug 1441
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1441)
+
+2004-05-23 Sunday 19:49  stronk7
+
+	* filter.php: 
+	
+	Avoid filtering names whose lenght is 2 or less chars.	Bug 1441. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1441)
+
+2004-05-18 Tuesday 00:04  moodler
+
+	* filter.php: 
+	
+	Strip tags from Resource names before filtering   bug 1418
+
+2004-05-17 Monday 23:36  moodler
+
+	* details.php: 
+	
+	Fix resource names properly
+
+2004-05-16 Sunday 17:11  moodler
+
+	* view.php: 
+	
+	Add a link across to the Files area
+
+2004-05-16 Sunday 16:52  moodler
+
+	* details.php, version.php, view.php: 
+	
+	1.  Directory Resources now support sub directories 2. 
+	Subdirectories in File Manager now display their total size
+
+2004-05-16 Sunday 14:41  moodler
+
+	* filter.php: 
+	
+	Resource auto-linking filter!	Developed by Eloy - thanks!  (see
+	bug 1389)
+
+2004-05-11 Tuesday 21:16  moodler
+
+	* fetch.php, index.php, view.php: 
+	
+	Added some checks for forcelogin on resources
+
+2004-05-11 Tuesday 00:10  moodler
+
+	* details.php: 
+	
+	Handle resource names with slashes better
+
+2004-05-09 Sunday 02:27  stronk7
+
+	* backuplib.php, restorelib.php: 
+	
+	Now every link to forums (from resources and forums) and every link
+	to resources (from resources and forums) are re-encoded in
+	backup/restore.
+	
+	I could reduce the code size but for now I prefer to have it this
+	looong form to clarify what it's doing.
+	
+	Please, test, test and test...
+
+2004-05-03 Monday 13:36  moodler
+
+	* view.php: 
+	
+	Minor change to table format
+
+2004-05-03 Monday 01:18  moodler
+
+	* lib.php: 
+	
+	Use the folder icon for Directory resources
+
+2004-05-02 Sunday 23:32  moodler
+
+	* version.php: 
+	
+	Indicating dependency
+
+2004-05-02 Sunday 23:25  moodler
+
+	* view.php: 
+	
+	Fix path problem with main directory listing
+
+2004-05-02 Sunday 23:22  moodler
+
+	* view.php: 
+	
+	Added file size and table headings to Directory resource
+
+2004-05-02 Sunday 23:10  moodler
+
+	* details.php, lib.php, view.php: 
+	
+	A new resource type called Directory ... it simply lists all the
+	files in a directory to make them available to students.
+
+2004-04-26 Monday 23:44  moodler
+
+	* lib.php: 
+	
+	WEBLINKs and WEBPAGEs can have icons too
+
+2004-04-26 Monday 23:31  moodler
+
+	* lib.php: 
+	
+	Much requested:  Uploaded resources are now shown using the
+	relevant icon.
+
+2004-04-17 Saturday 15:49  moodler
+
+	* view.php: 
+	
+	QUicktime should use "aspect" for best results on different movies
+
+2004-04-17 Saturday 15:32  moodler
+
+	* view.php: 
+	
+	Using scaling when displaying quicktime
+
+2004-03-25 Thursday 23:22  moodler
+
+	* details.php: 
+	
+	Removed a very odd line ... probably left over from testing or
+	something
+	
+	bug 1156    Thanks Eloy!
+
+2004-03-24 Wednesday 08:28  stronk7
+
+	* coursefiles.php: 
+	
+	Small typo. Now Bug 1179 is closed. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1179)
+
+2004-03-15 Monday 07:05  stronk7
+
+	* coursefiles.php: 
+	
+	Avoid one undefined THEME little problem in html_header()
+
+2004-03-12 Friday 07:50  stronk7
+
+	* view.php: 
+	
+	Undo one line inserted by error in my previous commit with one
+	change I was trying some time ago...sorry :-( But now all should be
+	correct.
+
+2004-03-12 Friday 07:47  stronk7
+
+	* coursefiles.php, view.php: 
+	
+	Fixed some wrong call to pclzip.lib.php. See:
+	http://moodle.org/bugs/bug.php?op=show&bugid=1138
+
+2004-03-09 Tuesday 14:28  moodler
+
+	* fetch.php, view.php: 
+	
+	Reverting previous fix, since it's now done across the board by
+	file.php
+
+2004-03-09 Tuesday 14:20  moodler
+
+	* fetch.php, view.php: 
+	
+	Fix for bug 1106
+	
+	When resource_filterexternalpages are turned on then uploaded HTML
+	files are also now filtered properly.
+
+2004-02-20 Friday 19:58  moodler
+
+	* view.php: 
+	
+	Make Quicktime movies loop by default
+
+2004-02-17 Tuesday 04:40  stronk7
+
+	* restorelib.php: 
+	
+	Now label, quiz, resource and survey logs are restored properly (I
+	think) :-)
+
+2004-02-15 Sunday 16:04  moodler
+
+	* details.php: 
+	
+	When searching for resources, use button instead of link.
+
+2004-02-15 Sunday 00:19  moodler
+
+	* coursefiles.php: 
+	
+	MOved the file icons into the proper place (at last)
+
+2004-02-13 Friday 11:42  moodler
+
+	* view.php: 
+	
+	DOn't print blank summaries
+
+2004-02-08 Sunday 20:51  moodler
+
+	* view.php: 
+	
+	Removed some rubbish
+
+2004-02-08 Sunday 20:48  moodler
+
+	* view.php: 
+	
+	Quicktime plugin
+
+2004-02-08 Sunday 20:21  moodler
+
+	* view.php: 
+	
+	Use mediaplayer for ALL uploaded mediaplayer files
+
+2004-02-01 Sunday 13:51  moodler
+
+	* coursefiles.php: 
+	
+	Fixed calculation of max upload size
+
+2004-01-31 Saturday 23:25  moodler
+
+	* version.php: 
+	
+	All modules now require the very latest because of the changes to
+	add_to_log
+
+2004-01-31 Saturday 23:22  moodler
+
+	* view.php: 
+	
+	Upgraded add_to_log to send cm->id
+
+2004-01-31 Saturday 19:54  moodler
+
+	* version.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	A new log_display entry for when resources are updated
+
+2004-01-28 Wednesday 12:27  moodler
+
+	* version.php: 
+	
+	Define minimum required versions of Moodle
+
+2004-01-26 Monday 20:07  moodler
+
+	* index.php: 
+	
+	Better dividers in the table
+
+2004-01-26 Monday 19:51  moodler
+
+	* index.php: 
+	
+	Use dividers on the resource page
+
+2004-01-26 Monday 04:34  gustav_delius
+
+	* details.php, mod.html: 
+	
+	replaced incorrectly closed html tags, see bug 365
+
+2004-01-23 Friday 20:34  moodler
+
+	* coursefiles.php: 
+	
+	Zipping now works in the filemanager popup from resources.
+
+2004-01-20 Tuesday 19:22  moodler
+
+	* view.php: 
+	
+	Support for auto embedding of WMV files
+
+2004-01-09 Friday 16:47  moodler
+
+	* view.php: 
+	
+	Updated with the new location of the Flash script
+
+2004-01-09 Friday 15:16  moodler
+
+	* details.php: 
+	
+	Old settings weren't being remembered - fixed now.
+
+2004-01-09 Friday 14:52  moodler
+
+	* view.php: 
+	
+	More tweaks when displaying embedded resources
+
+2004-01-09 Friday 14:36  moodler
+
+	* view.php: 
+	
+	Some tidying up of the recent layout
+
+2004-01-09 Friday 11:31  moodler
+
+	* view.php: 
+	
+	Some cleaning up and native support for streaming MP3! (using
+	Flash)
+
+2004-01-08 Thursday 20:20  moodler
+
+	* view.php: 
+	
+	Fixed long-standing problem with popup windows.
+	
+	Now when you go to the using the navbar, they popup and leave some
+	navigation behind.
+	
+	Also fixed a recent bug with embedded images
+
+2003-12-30 Tuesday 14:54  moodler
+
+	* details.php: 
+	
+	Improved navigation info in header
+
+2003-12-30 Tuesday 14:53  moodler
+
+	* view.php: 
+	
+	Big cleanup for logic in handling uploaded files, now shorter and
+	clearer
+
+2003-12-09 Tuesday 12:00  moodler
+
+	* config.html, details.php, lib.php: 
+	
+	New defaults for popup window settings, which is window off, but
+	all sub-settings on.
+	
+	These default defaults can be defined on the page
+	
+	  Admin -> Config -> Modules -> Resource -> Settings
+
+2003-12-06 Saturday 15:34  moodler
+
+	* view.php: 
+	
+	Fix for image display - see Bug 695    Thanks, Gustav
+
+2003-11-28 Friday 11:27  willcast
+
+	* lib.php: 
+	
+	- Adding error trapping to the fetching function and giving error
+	messages accordandly.  - Adding Moodle as the web agent!!! :)
+	
+	PLEASE, edit the new language strings if necessary.
+
+2003-11-28 Friday 10:19  moodler
+
+	* lib.php: 
+	
+	Removed some tabs
+
+2003-11-28 Friday 10:18  willcast
+
+	* view.php: 
+	
+	- Fixing bug that was preveting uploaded files to be shown...
+	
+	Uploaded files parsing is not ready so it's desabled by code...
+
+2003-11-28 Friday 10:11  moodler
+
+	* config.html, fetch.php, lib.php, view.php: 
+	
+	A few rearrangments in the new code for filtered external pages
+
+2003-11-28 Friday 03:09  willcast
+
+	* fetch.php, lib.php: 
+	
+	- External webpage resources now are parsed and automatic links are
+	added to the glossary terms... Only if $CFG->filterexternalpages is
+	enabled.
+
+2003-11-28 Friday 03:04  willcast
+
+	* fetch.php, lib.php, view.php: 
+	
+	- External webpage resources now are parsed and automatic links are
+	added to the glossary terms... Only if $CFG->filterexternalpages is
+	enabled.
+
+2003-11-26 Wednesday 19:47  moodler
+
+	* config.html, details.php, lib.php: 
+	
+	Another setting to allow a default URL in webpage and weblink
+
+2003-11-25 Tuesday 16:01  moodler
+
+	* config.html, details.php, lib.php: 
+	
+	Added a new setting called "resource_websearch" ... it is simply a
+	URL that is offered to users as a place to to find URLs.  By
+	default it's google.com, but could easily be a local repository of
+	files.
+
+2003-11-04 Tuesday 00:58  moodler
+
+	* details.php: 
+	
+	Use new editor stuff
+
+2003-11-03 Monday 10:59  moodler
+
+	* db/mysql.php: 
+	
+	Removed blank lines at the end (!)
+
+2003-10-28 Tuesday 22:01  moodler
+
+	* view.php: 
+	
+	Make sure resources are put through format_text so that they can be
+	processed properly (eg autolinking)
+
+2003-10-22 Wednesday 21:14  moodler
+
+	* lib.php: 
+	
+	Modularised some of the processing for "extra" information such as
+	information for popup windows on resources and labels
+
+2003-10-19 Sunday 23:02  moodler
+
+	* coursefiles.php, details.php: 
+	
+	I finally added a proper course files browser to replace the menu.
+
+2003-10-19 Sunday 22:21  moodler
+
+	* view.php: 
+	
+	Allow uploaded files to be declared in popup windows too.
+
+2003-10-10 Friday 14:02  moodler
+
+	* view.php: 
+	
+	Smaller borders on frames
+
+2003-09-25 Thursday 09:47  les_kopari
+
+	* db/oci8po.php: 
+	
+	Initial add for Oracle.
+
+2003-09-13 Saturday 16:03  les_kopari
+
+	* db/oci8po.sql: 
+	
+	Oracle tables, etc converted from mysql, plus test transactions.
+
+2003-09-11 Thursday 21:21  moodler
+
+	* details.php: 
+	
+	More short tags
+
+2003-09-09 Tuesday 20:32  moodler
+
+	* details.php: 
+	
+	Fixed some PHP short_tags
+
+2003-09-08 Monday 06:01  stronk7
+
+	* lib.php: 
+	
+	Included resource_get_participants() function.
+
+2003-09-02 Tuesday 09:20  moodler
+
+	* view.php: 
+	
+	Redirection speed is faster (use 0), also prevents page going into
+	IE history
+
+2003-08-27 Wednesday 15:21  moodler
+
+	* details.php: 
+	
+	Keep defaults even when reediting web links that aren't using new
+	window
+
+2003-08-26 Tuesday 21:47  moodler
+
+	* index.php: 
+	
+	'Extras' in cached course modinfo activities is now returned.
+	
+	This means that Resources can now employ them on the index listing.
+	
+	Specifically, Resources that are popup now popup from there too.
+
+2003-08-26 Tuesday 14:01  moodler
+
+	* view.php: 
+	
+	Some fixes so that navmenus don't jump out of frames any more.
+	
+	The navmenu function now takes a third parameter that specifies the
+	window to change location of (default 'self', but could be "parent"
+	or "top")
+
+2003-08-20 Wednesday 21:06  moodler
+
+	* version.php, db/mysql.php, db/mysql.sql: 
+	
+	Fixed a typo in the MySQL database definition that only shows up
+	when adding resources to courses with IDs higher than 255
+
+2003-08-19 Tuesday 01:46  moodler
+
+	* config.html, lib.php, view.php: 
+	
+	New configuration screen for the resources module
+
+2003-07-29 Tuesday 03:32  stronk7
+
+	* restorelib.php: 
+	
+	Added language support
+
+2003-07-20 Sunday 21:53  moodler
+
+	* details.php, lib.php, version.php: 
+	
+	New feature - "Web link" resources can now specify a popup window
+	
+	fullscreen is currently the only feature left out of this .. I had
+	trouble getting it to work consistently so I've left it out as
+	being more troubles than it's worth.
+
+2003-07-12 Saturday 13:19  moodler
+
+	* index.php, lib.php: 
+	
+	When displaying index lists of a particular module's activities,
+	ensure that the order they are displayed in is always the same as
+	the order they have been defined in.   See bug 553.
+	
+	This involved API changes to the function
+	get_all_instances_in_course()
+
+2003-07-09 Wednesday 12:40  moodler
+
+	* backuplib.php, restorelib.php: 
+	
+	Moving the backup libraries for each module into their new homes.
+	
+	There's some beer and pies in the fridge, guys, settle in.
+
+2003-06-16 Monday 22:40  moodler
+
+	* mod.html: 
+	
+	Some fixes to avoid pointless uses of $ME
+
+2003-06-10 Tuesday 13:33  moodler
+
+	* mod.html: 
+	
+	Make form destinations relative (to course/mod.php) to avoid some
+	form problems on mis-configured servers (wwwroot not quite right)
+
+2003-06-02 Monday 16:14  moodler
+
+	* details.php: 
+	
+	Prevent possible error when editing non-HTML pages
+
+2003-05-20 Tuesday 16:03  moodler
+
+	* details.php, mod.html: 
+	
+	Minor code cleanups
+	
+	  - lowercasing
+	  - removing short php tags
+	  - adding some emoticon help here and there
+
+2003-05-19 Monday 14:11  moodler
+
+	* view.php: 
+	
+	Fixed previous over-zealous lowercasing
+
+2003-05-18 Sunday 14:05  moodler
+
+	* view.php: 
+	
+	Strip tags from page title, and some minor code cleanups
+
+2003-05-16 Friday 02:03  moodler
+
+	* view.php: 
+	
+	I knew there was something else I'd forgotten!
+	
+	Added a check to all modules (well view.php anyway) to check
+	whether a module is hidden or not.  If it is, then students get a
+	message.
+
+2003-05-13 Tuesday 15:51  moodler
+
+	* view.php: 
+	
+	Images are not put in a frame, but embedded in a normal page
+
+2003-05-01 Thursday 11:43  moodler
+
+	* details.php, lib.php, view.php: 
+	
+	Added new Wiki code to allow Resource web pages to be
+	created/edited using Wiki format
+	
+	This code contributed by Howard Miller.  Thanks!
+
+2003-04-29 Tuesday 21:51  moodler
+
+	* view.php: 
+	
+	Some tidying up - too much thesis wool in the head
+
+2003-04-29 Tuesday 21:31  moodler
+
+	* view.php: 
+	
+	Images, when displayed as resources, are now centered and
+	controlled by a new style resourceimage
+
+2003-04-25 Friday 01:05  moodler
+
+	* details.php: 
+	
+	Default value for alltext variable
+
+2003-04-24 Thursday 23:25  stronk7
+
+	* index.php: 
+	
+	Changed to show the hidden resources dimmed (bug #364)
+
+2003-04-23 Wednesday 23:01  moodler
+
+	* details.php: 
+	
+	Got a bit slash-happy
+
+2003-04-23 Wednesday 22:50  moodler
+
+	* details.php: 
+	
+	some HTML tags made a bit more XHTMLish
+
+2003-04-12 Saturday 11:42  moodler
+
+	* details.php, mod.html: 
+	
+	Don't pass alltext from mod.html to details.php ... more efficient
+	this way
+
+2003-03-12 Wednesday 16:02  moodler
+
+	* view.php: 
+	
+	Making a consistent download link for uploaded resources (same as
+	web page)
+
+2003-03-12 Wednesday 15:36  moodler
+
+	* view.php: 
+	
+	Modified Greg's work to:
+	
+	  - rename the main_frame variable to framename, because it
+	       - might have caused some confusion
+	       - none of the global variables have underscores
+	  - put the config in the config table, with a default of _top
+
+2003-03-12 Wednesday 05:35  gregb_cc
+
+	* view.php: 
+	
+	This is a first attempt to make moodle frame safe.
+	
+	I've added the variable CFG->main_frame to config-dist.php, and
+	replaced _top targets with the variable in all the php files.  HTML
+	files, like those in the documentation, have not been modified, as
+	they are not (yet) parsed.
+	
+	The variable should probably get moved into the config table, and
+	get some documentation.
+	
+	I've also included, but commented out, a slight change in
+	weblib.php, which would guarantee that messages would be seen
+	before redirecting the user (unless delay intentionally set to 0
+	when redirect is used).
+
+2003-01-15 Wednesday 18:55  moodler
+
+	* view.php: 
+	
+	
+	Displayed time formats are now stored in lang files (see the new
+	strftime* strings) so they can be customised per language
+
+2003-01-05 Sunday 22:19  moodler
+
+	* details.php, index.php, view.php: 
+	
+	Clean sweep through all the important changing all include(),
+	include_once() and require() to require_once()
+
+2003-01-05 Sunday 18:10  moodler
+
+	* lib.php, view.php: 
+	
+	Make frame width a variable
+
+2003-01-05 Sunday 14:45  moodler
+
+	* details.php: 
+	
+	OK a number of small changes here.
+	
+	Firstly, I'm replacing all use of old-style global variables like
+	$HTTY_REFERER with their new-style equivalent
+	$_SERVER["HTTP_REFERER"] Also using $_POST instead $HTTP_POST_VARS 
+	etc
+	
+	Secondly, if gdversion == 0 (ie GD is not installed) then:
+	
+	 - users are not even allowed to upload new images
+	 - graphs now just print a message instead of failing.
+	
+	this allows Moodle to still be used even if GD is not present
+
+2003-01-02 Thursday 22:49  moodler
+
+	* details.php: 
+	
+	buggy_referer is dead!	 Long live buggy_referer!
+	
+	Should be fixed now.  As a bonus, I've removed all the uses of
+	HTTP_POST_VARS from all scripts.
+	
+	All forms should use the new data_submitted() function to collect
+	form data (it does the match_referer thing internally now).
+	
+	Much nicer.
+
+2003-01-01 Wednesday 21:17  moodler
+
+	* mod.html: 
+	
+	Robustness fixes
+
+2002-12-30 Monday 23:47  moodler
+
+	* details.php: 
+	
+	Little robustness fixes
+
+2002-12-24 Tuesday 15:01  moodler
+
+	* details.php, lib.php, view.php: 
+	
+	Added new "Program" resource type, which allows Moodle to cooperate
+	with external web applications by passing info about the current
+	session to them.
+	
+	Code contributed by Mark Kimes.
+
+2002-12-23 Monday 19:47  moodler
+
+	* db/postgres7.sql: 
+	
+	More fixes for postgreSQL etc
+
+2002-12-23 Monday 17:39  moodler
+
+	* lib.php, version.php: 
+	
+	Changes throughout Moodle to remove any reserved words from the
+	Moodle tables.
+	
+	ie user -> userid in many tables, plus in user_students    start ->
+	starttime and end -> endtime
+	
+	I've just done all this as carefully as I could ... I don't think I
+	missed anything but it's pretty intensive work and I'd be fooling
+	myself if I didn't think I'd missed a couple.
+	
+	Note that this version should pretty much be able to bootstrap
+	itself using PostgreSQL now ... but this is untested
+
+2002-12-20 Friday 22:44  moodler
+
+	* db/mysql.sql: 
+	
+	Many many changes lumped in here ... not finished yet either.
+	
+	Basically all the Database functions are in lib/datalib.php and the
+	web functions are all in lib/weblib.php, so moodlelib.php is much
+	thinner than it was.
+	
+	Data functions have been extended ... most old calls will still
+	work, but now many more SQL commands can be performed using the
+	datalib functions rather than using SQL.  I'm currently moving
+	through the whole tree replacing SQL calls or at least
+	concentrating them in one section of mod/xxx/lib.php
+	
+	Still working on forums, quizzes, surveys, resources.
+	
+	The tree is currently not full working ... some things are
+	half-completed ... will resume tomorrow.
+
+2002-12-15 Sunday 10:41  moodler
+
+	* db/: postgres7.php, postgres7.sql: 
+	
+	Database and upgrade files for PostgreSQL 7 support!
+
+2002-12-13 Friday 17:06  moodler
+
+	* details.php, mod.html: 
+	
+	New consistent help buttons for textarea fields throughout all
+	modules
+
+2002-11-10 Sunday 22:03  moodler
+
+	* view.php: 
+	
+	Use #defines for resource types ... just esthetics
+
+2002-11-10 Sunday 16:43  moodler
+
+	* index.php: 
+	
+	Added navmenu in more places
+
+2002-11-10 Sunday 15:37  moodler
+
+	* view.php: 
+	
+	Changes to enable jumping between activity modules, using a new
+	menu in the upper-right corner.   Caution: Not well tested at this
+	stage.
+
+2002-10-17 Thursday 22:28  moodler
+
+	* lib.php: 
+	
+	Changed string neverread to neverseen
+
+2002-10-17 Thursday 22:03  moodler
+
+	* details.php, icon.gif, index.php, lib.php, mod.html, version.php,
+	view.php, db/mysql.php, db/mysql.sql: 
+	
+	
+	
+	***NOTE NOTE NOTE
+	**********************************************************
+	
+	THIS IS A BIG CHANGE!
+	
+	I've renamed the "reading" module to "resource".
+	
+	This meant changing quite a few references throughout Moodle.
+	
+	The automatic upgrade process should work OK (it worked OK on my
+	development server) and there shouldn't be any problems.
+	
+	BUT PLEASE PROCEED WITH CAUTION AND KEEP BACKUPS OF EVERYTHING
+	UNTIL I HAVE A FEW MORE TESTS!	 If you upgrade please let me know.
+	
+	One thing that will break are any hard-coded links within forum
+	messages.
+	
+	What I will be doing to fix this on my apache server is to add this
+	to httpd.conf:
+	
+	Redirect /mod/reading/ http://moodle.com/mod/resource/
+	
+	Sorry about any inconvenience, but it's better this is done sooner
+	than later.
+

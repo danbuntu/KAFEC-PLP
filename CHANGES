@@ -1,0 +1,1382 @@
+CHANGES
+=======
+
+This file contains all the raw change logs from the past month,
+so that you can see exactly what changes have been made recently.
+
+---------------------------------------------------------------
+
+2009-05-20 Wednesday 02:45  stronk7
+
+	* backup/restore_check.html: 
+	
+	MDL-19163 restore - avoid some notices.
+
+2009-05-20 Wednesday 02:36  stronk7
+
+	* lang/en_utf8/moodle.php: 
+	
+	MDL-19163 restore - 2 new strings to warn about restore over SITEID
+
+2009-05-20 Wednesday 02:34  stronk7
+
+	* backup/restore_check.html: 
+	
+	MDL-19163 restore - warn if restoring over SITEID course
+
+2009-05-19 Tuesday 18:31  stronk7
+
+	* backup/restore_check.html: 
+	
+	MDL-19163 - Fixed problem when cancreatecourse users were restoring
+	to sites with only 1 course
+
+2009-05-19 Tuesday 08:39  moodlerobot
+
+	* version.php: 
+	
+	Updated the 19 build version to 20090519
+
+2009-05-18 Monday 13:25  fmarier
+
+	* lib/setup.php: 
+	
+	MDL-19222 add a check and error message when initialising file
+	sessions in case there is no free space on the partition
+
+2009-05-18 Monday 10:28  peterbulmer
+
+	* admin/mnet/enr_course_enrol.php, enrol/mnet/enrol.php: 
+	
+	MDL19219 mnet, mitigate arrkey loss in transit
+	
+	When usernames are numeric, they are lost in mnet transit when used
+	as keys in the array result of course_enrolments(). As the username
+	is not sent with the enrolment details, it was not previously
+	recoverable.  This patch adds the information to the enrolment
+	details, (enrol/mnet/enrol.php), and adds support for recovering
+	the username if it was numeric (and hence lost)
+	(admin/mnet/enr_course_enrol.php)
+
+2009-05-18 Monday 08:40  moodlerobot
+
+	* version.php: 
+	
+	Updated the 19 build version to 20090518
+
+2009-05-17 Sunday 08:41  moodlerobot
+
+	* version.php: 
+	
+	Updated the 19 build version to 20090517
+
+2009-05-17 Sunday 08:34  moodlerobot
+
+	* install/lang/: hy_utf8/installer.php, is_utf8/installer.php: 
+	
+	Automatic installer.php lang files by installer_builder (20090517)
+
+2009-05-16 Saturday 08:38  moodlerobot
+
+	* version.php: 
+	
+	Updated the 19 build version to 20090516
+
+2009-05-15 Friday 15:22  skodak
+
+	* lib/moodlelib.php: 
+	
+	MDL-19194 fixed regression - recursive cretion of dirs on win32
+	works again
+
+2009-05-15 Friday 11:36  fmarier
+
+	* auth/ldap/config.html: 
+	
+	Fix typo
+
+2009-05-15 Friday 08:39  moodlerobot
+
+	* version.php: 
+	
+	Updated the 19 build version to 20090515
+
+2009-05-15 Friday 08:33  moodlerobot
+
+	* install/lang/eu_utf8/installer.php: 
+	
+	Automatic installer.php lang files by installer_builder (20090515)
+
+2009-05-14 Thursday 12:03  fmarier
+
+	* course/lib.php: 
+	
+	MDL-19179 cache superfluous queries when listing categories on
+	front page
+
+2009-05-14 Thursday 08:39  moodlerobot
+
+	* version.php: 
+	
+	Updated the 19 build version to 20090514
+
+2009-05-14 Thursday 08:33  moodlerobot
+
+	* install/lang/hu_utf8/installer.php: 
+	
+	Automatic installer.php lang files by installer_builder (20090514)
+
+2009-05-13 Wednesday 14:55  moodler
+
+	* version.php: 
+	
+	Bumped 1.9.5 version for release
+
+2009-05-13 Wednesday 13:35  jerome
+
+	* lib/authlib.php, lib/weblib.php, user/editadvanced_form.php,
+	admin/uploaduser.php, admin/settings/users.php,
+	user/filters/lib.php: 
+	
+	authentication MDL-18273 Custom Authentication Plugin title can be
+	retrieved from specific language file
+
+2009-05-13 Wednesday 08:36  moodlerobot
+
+	* version.php: 
+	
+	Updated the 19 build version to 20090513
+
+2009-05-12 Tuesday 22:53  stronk7
+
+	* backup/restore_check.html: 
+	
+	MDL-19163 restore - enable course selection for teachers having
+	perms in more than 1 course
+
+2009-05-12 Tuesday 17:27  stronk7
+
+	* admin/environment.xml: 
+	
+	MDL-19161 - DB 2.0 reqs. Updated to fulfil 2.0 Roadmap
+
+2009-05-12 Tuesday 15:46  nicolasconnault
+
+	* admin/fixuserpix.php: 
+	
+	file fixuserpix.php was initially added on branch MOODLE_19_STABLE.
+
+2009-05-12 Tuesday 15:46  nicolasconnault
+
+	* admin/fixuserpix.php: 
+	
+	MDL-8605 New script (web and CLI) for restoring user profile
+	pictures that failed to move to the new folder during upgrade.
+
+2009-05-12 Tuesday 13:09  moodler
+
+	* course/format/social/format.php: 
+	
+	course/format/social MDL-18483 For social course format, print
+	forum intro on course page
+
+2009-05-12 Tuesday 08:38  moodlerobot
+
+	* version.php: 
+	
+	Updated the 19 build version to 20090512
+
+2009-05-12 Tuesday 07:38  fmarier
+
+	* auth/fc/fcFPP.php: 
+	
+	MDL-19156: auth/fc: clarifying the licensing terms as per author's
+	email
+
+2009-05-12 Tuesday 03:58  diml
+
+	* search/update.php: 
+	
+	MDL-16979 - protects update queries by setting a real value in
+	$CFG->search_indexer_update_date
+
+2009-05-12 Tuesday 03:52  diml
+
+	* search/documents/data_document.php: 
+	
+	addresses MDL-19154. May not fix every thing here... more tests in
+	progress.
+
+2009-05-12 Tuesday 03:48  diml
+
+	* search/documents/glossary_document.php: 
+	
+	Fix MDL-19155 on glossary
+
+2009-05-12 Tuesday 02:29  stronk7
+
+	* version.php, lib/db/upgrade.php: 
+	
+	MDL-16879 - check & fix mandatory mnet_host records and orphan
+	users. Bump version to next int one.
+
+2009-05-11 Monday 23:04  stronk7
+
+	* lib/xmldb/classes/generators/mysql/mysql.class.php: 
+	
+	MDL-18547 mysql floats - only none/both params (length & decimals)
+	syntax is allowed. So, if decimals are missing, enforce 0 if length
+	is defined.
+
+2009-05-11 Monday 14:31  nicolasconnault
+
+	* mod/quiz/lib.php: 
+	
+	MDL-7028 global $QTYPES is only available if lib/questionlib.php is
+	included.
+
+2009-05-11 Monday 08:37  moodlerobot
+
+	* version.php: 
+	
+	Updated the 19 build version to 20090511
+
+2009-05-11 Monday 08:02  stronk7
+
+	* lib/accesslib.php: 
+	
+	MDL-18746 get_user_courses_bycap() - avoid ambiguous (repeated)
+	column names
+
+2009-05-11 Monday 07:16  stronk7
+
+	* backup/lib.php: 
+	
+	MDL-19084 - backup_course_silently() missing call to
+	xxx__check_backup_mods() causing quizzes to be incorrect (thanks
+	Piers Harding) plus problems with users, files and role
+	assignments.
+
+2009-05-10 Sunday 23:27  stronk7
+
+	* mod/wiki/ewiki/: ewiki.php, plugins/moodle/moodle_wikidump.php,
+	plugins/moodle/sitemap.php, plugins/page/orphanedpages.php,
+	plugins/page/pageindex.php: 
+	
+	MDL-15534 wiki special pages heading title. Apply ewiki_t() to get
+	translated heading names
+
+2009-05-10 Sunday 22:38  stronk7
+
+	* backup/restorelib.php: 
+	
+	MDL-12618 restore events - delete some missed debug lines...oops
+
+2009-05-10 Sunday 22:35  stronk7
+
+	* backup/restorelib.php: 
+	
+	MDL-12618 restore events - apply cross-db sql_compare_text(). MSSQL
+	& Oracle were broken here.
+
+2009-05-10 Sunday 19:50  stronk7
+
+	* backup/restorelib.php: 
+	
+	MDL-11144 - restore of mnet users. Another improvement...
+
+2009-05-10 Sunday 19:48  skodak
+
+	* lib/form/selectgroups.php: 
+	
+	MDL-19139 selectgroups formslib element improvements - 1/ does not
+	validate if optgroup array empty 2/ add optional $showchoose
+	parameter which adds "Choose..." as first item of list with empty
+	value
+
+2009-05-10 Sunday 09:14  stronk7
+
+	* backup/restorelib.php: 
+	
+	MDL-17009 restore of mnet users - prevent any user using local host
+	to end with mnet auth
+
+2009-05-10 Sunday 08:37  moodlerobot
+
+	* version.php: 
+	
+	Updated the 19 build version to 20090510
+
+2009-05-10 Sunday 08:31  moodlerobot
+
+	* install/lang/et_utf8/installer.php: 
+	
+	Automatic installer.php lang files by installer_builder (20090510)
+
+2009-05-09 Saturday 12:32  fmarier
+
+	* filter/mediaplugin/flvplayer.README.txt: 
+	
+	MDL-19117 clarification to the license
+
+2009-05-09 Saturday 09:45  stronk7
+
+	* lib/db/upgradelib.php: 
+	
+	MDL-16879 copy/paste double dollar fixed
+
+2009-05-09 Saturday 09:32  stronk7
+
+	* lib/db/upgradelib.php: 
+	
+	MDL-16879 - fix mnet hosts. Tentative function. Not applied to
+	upgrade yet. Please review.
+
+2009-05-09 Saturday 08:38  moodlerobot
+
+	* version.php: 
+	
+	Updated the 19 build version to 20090509
+
+2009-05-09 Saturday 05:30  skodak
+
+	* lib/setuplib.php: 
+	
+	MDL-16957 explain why our htaccess is intentionally broken
+
+2009-05-09 Saturday 05:05  skodak
+
+	* course/lib.php: 
+	
+	MDL-18311 fixed magic quotes trouble when moving courses
+
+2009-05-09 Saturday 04:08  skodak
+
+	* grade/edit/tree/grade_form.php, lang/en_utf8/grades.php: 
+	
+	MDL-14831 adding warning - excluded grades are not compatible with
+	sum agg; backported from HEAD
+
+2009-05-08 Friday 22:26  mjollnir_
+
+	* course/lib.php: 
+	
+	fix for MDL-19110
+	
+	Author: Adrian Schlegel <adrian@liip.ch>
+
+2009-05-08 Friday 21:29  nicolasconnault
+
+	* grade/edit/tree/index.php: 
+	
+	MDL-19121 Not allowing negative values for droplow and keephigh:
+	capping at 0
+
+2009-05-08 Friday 21:17  skodak
+
+	* grade/edit/tree/category.php: 
+	
+	MDL-19068 fixed item decimals before saving item
+
+2009-05-08 Friday 20:22  skodak
+
+	* admin/settings/users.php: 
+	
+	MDL-18476 fixed default guest role display hint
+
+2009-05-08 Friday 20:15  skodak
+
+	* auth/mnet/auth.php: 
+	
+	MDL-18704 fixed incorrect mnet logging
+
+2009-05-08 Friday 20:07  skodak
+
+	* blog/lib.php: 
+	
+	MDL-18869 fixed full name display
+
+2009-05-08 Friday 16:52  skodak
+
+	* files/index.php, lib/editor/htmlarea/coursefiles.php: 
+	
+	MDL-18492 it is not possible to do anything with moddata directory
+	anymore - this is too dangerous for many people ;-)
+
+2009-05-08 Friday 16:15  moodler
+
+	* theme/standard/styles_layout.css: 
+	
+	theme/standard MDL-19082 Added a margin to standard theme on
+	redirects page
+
+2009-05-08 Friday 15:53  skodak
+
+	* auth/cas/auth.php: 
+	
+	MDL-18744 cas fix, credit goes to Thibault Le Meur
+
+2009-05-08 Friday 15:16  nicolasconnault
+
+	* grade/edit/tree/item.php: 
+	
+	MDL-18402 Put default value of 1 for grade item's aggregationcoef
+	if parent category's aggregation is weighted mean. Put 0 for
+	gradepass if field is empty, and 0 for grademin if left empty. This
+	prevents SQL errors because all three fields (aggregationcoef,
+	gradepass and grademin) are non-NULL.
+
+2009-05-08 Friday 14:25  nicolasconnault
+
+	* lang/en_utf8/help/grade/aggregationcoefcombo.html: 
+	
+	file aggregationcoefcombo.html was initially added on branch
+	MOODLE_19_STABLE.
+
+2009-05-08 Friday 14:25  nicolasconnault
+
+	* grade/edit/tree/lib.php,
+	lang/en_utf8/help/grade/aggregationcoefcombo.html: 
+	
+	MDL-16416 Created a new help file including explanations of extra
+	credit for both "Sum of Grades" and "Mean with extra credit"
+	aggregation types. This is used on the "Edit categories and items"
+	page.
+
+2009-05-08 Friday 08:37  moodlerobot
+
+	* version.php: 
+	
+	Updated the 19 build version to 20090508
+
+2009-05-08 Friday 07:53  stronk7
+
+	* backup/backuplib.php: 
+	
+	MDL-15690, MDL-16518 backup - include roles with overrides (not
+	only with assignments). Credit goes to Clinton Graham.
+
+2009-05-08 Friday 07:01  gbateson
+
+	* mod/hotpot/lib.php: 
+	
+	when searhcing for urls of next quiz, remove requirement for
+	navigation buttons to have class="NavButton"
+
+2009-05-08 Friday 04:39  stronk7
+
+	* mod/resource/type/file/resource.class.php: 
+	
+	MDL-13826 link/file resource - check maximum length
+
+2009-05-08 Friday 04:29  stronk7
+
+	* lib/form/choosecoursefile.php: 
+	
+	MDL-19112 choosecoursefile group element - pass specified attrs to
+	text element
+
+2009-05-08 Friday 01:38  skodak
+
+	* grade/edit/tree/lib.php: 
+	
+	MDL-19111 fixed dimming of hidden until items
+
+2009-05-07 Thursday 20:13  ericmerrill
+
+	* mod/workshop/view.php: 
+	
+	MDL-19092 Fixed the user login view, which was incomplete and
+	broken on some browsers
+
+2009-05-07 Thursday 18:47  skodak
+
+	* lib/moodlelib.php: 
+	
+	MDL-2307 improved file name cleanup during unzip
+
+2009-05-07 Thursday 17:44  nicolasconnault
+
+	* lib/ajax/section_classes.js, course/lib.php: 
+	
+	MDL-10201 Wrapping label text in a span instead of div, and giving
+	it a class so that it can be found by hide/show AJAX code
+
+2009-05-07 Thursday 16:55  nicolasconnault
+
+	* filter/mediaplugin/filter.php, lib/filelib.php: 
+	
+	MDL-14412 Applied Michael's patches to fix ram/rm support in
+	firefox
+
+2009-05-07 Thursday 16:47  skodak
+
+	* grade/edit/tree/category_form.php: 
+	
+	MDL-19101 scale selection validated on category edit form
+
+2009-05-07 Thursday 16:36  skodak
+
+	* grade/edit/tree/item.php, grade/edit/tree/item_form.php,
+	grade/edit/tree/category.php, grade/edit/tree/category_form.php,
+	lang/en_utf8/grades.php: 
+	
+	MDL-19091 removed custom scales from different courses + added BC
+	hack
+
+2009-05-07 Thursday 15:52  nicolasconnault
+
+	* grade/edit/tree/: category.php, category_form.php: 
+	
+	MDL-12444 Removed aggregationview preference from category edit
+	form
+
+2009-05-07 Thursday 15:37  skodak
+
+	* grade/report/user/lib.php: 
+	
+	MDL-19090 fixed user report preferences
+
+2009-05-07 Thursday 15:18  skodak
+
+	* grade/edit/tree/category_form.php: 
+	
+	MDL-19088 fixed category aggregation limitations
+
+2009-05-07 Thursday 13:39  dongsheng
+
+	* theme/standard/styles_color.css: 
+	
+	"MDL-18971, fixed .unread class definition"
+
+2009-05-07 Thursday 13:30  dongsheng
+
+	* lib/: weblib.php, editor/htmlarea/lang/en.php: 
+	
+	"MDL-3729, use forces language for htmleditor"
+
+2009-05-07 Thursday 11:03  fmarier
+
+	* COPYING.txt: 
+	
+	file COPYING.txt was initially added on branch MOODLE_19_STABLE.
+
+2009-05-07 Thursday 11:03  fmarier
+
+	* COPYING.txt: 
+	
+	MDL-19096 include a copy of the GPL
+
+2009-05-07 Thursday 08:36  moodlerobot
+
+	* version.php: 
+	
+	Updated the 19 build version to 20090507
+
+2009-05-07 Thursday 02:50  skodak
+
+	* grade/: lib.php, edit/tree/lib.php: 
+	
+	MDL-19029 fixed validation problems
+
+2009-05-07 Thursday 02:35  skodak
+
+	* grade/report/grader/lib.php: 
+	
+	MDL-19029 fixed validation problem in yui titles
+
+2009-05-07 Thursday 02:13  skodak
+
+	* mod/forum/lib.php: 
+	
+	MDL-16915 fixed warnings caused by empty arrays in forum ratings
+
+2009-05-07 Thursday 01:24  stronk7
+
+	* mod/data/view.php: 
+	
+	MDL-14463 search/order - make it cross-db + delete unused column
+	from query
+
+2009-05-07 Thursday 00:17  skodak
+
+	* grade/edit/outcome/import.php: 
+	
+	MDL-19036 fixed multiple SQL injections
+
+2009-05-07 Thursday 00:10  skodak
+
+	* admin/langdoc.php, admin/langimport.php,
+	backup/bb/restore_bb.php, mod/data/field/picture/field.class.php,
+	mod/lesson/importppt.php, search/indexer.php: 
+	
+	MDL-18670 adding proper permissions for mkdir()
+
+2009-05-06 Wednesday 23:53  skodak
+
+	* auth/mnet/auth.php: 
+	
+	MDL-18757 using new addslashes_recursive() instead of old
+	addslashes_object() which does not tollerate arrays, nulls, etc.
+
+2009-05-06 Wednesday 18:16  stronk7
+
+	* lang/en_utf8/data.php, mod/data/rate.php: 
+	
+	MDL-18059 database rates - secured
+
+2009-05-06 Wednesday 17:15  stronk7
+
+	* lang/en_utf8/glossary.php, mod/glossary/rate.php: 
+	
+	MDL-18058 glossary rates - secured
+
+2009-05-06 Wednesday 16:48  skodak
+
+	* lib/moodlelib.php: 
+	
+	MDL-2307, MDL-18415 - improved unzipping - now properly removing
+	forbidden chars and symlinks
+
+2009-05-06 Wednesday 08:38  moodlerobot
+
+	* version.php: 
+	
+	Updated the 19 build version to 20090506
+
+2009-05-06 Wednesday 08:32  moodlerobot
+
+	* install/lang/eu_utf8/installer.php: 
+	
+	Automatic installer.php lang files by installer_builder (20090506)
+
+2009-05-05 Tuesday 19:52  skodak
+
+	* grade/report/grader/index.php: 
+	
+	MDL-19029 added missing CDATA
+
+2009-05-05 Tuesday 19:42  skodak
+
+	* grade/report/grader/lib.php: 
+	
+	MDL-19029 removed bogus feedback end span
+
+2009-05-05 Tuesday 17:25  stronk7
+
+	* backup/backuplib.php: 
+	
+	MDL-18799 backup of file.php links - now using unicode modifiers if
+	allowed in the server
+
+2009-05-05 Tuesday 08:38  moodlerobot
+
+	* version.php: 
+	
+	Updated the 19 build version to 20090505
+
+2009-05-05 Tuesday 04:24  skodak
+
+	* lib/accesslib.php, lib/deprecatedlib.php, admin/roles/tabs.php: 
+	
+	MDL-19009 cleanup - there is no CONTEXT_GROUP and pinned block
+	context; backported from HEAD
+
+2009-05-05 Tuesday 03:56  skodak
+
+	* course/lib.php: 
+	
+	MDL-18124 course creators can not delete any courses in their
+	category any more, only those they created at most one day ago
+
+2009-05-04 Monday 21:14  skodak
+
+	* grade/export/: ods/index.php, txt/index.php, xls/index.php,
+	xml/index.php: 
+	
+	MDL-19052 separate group mode improvements and fixes
+
+2009-05-04 Monday 21:12  skodak
+
+	* grade/report/: lib.php, grader/index.php: 
+	
+	MDL-19052 fixed separate group mode access on grader report
+
+2009-05-04 Monday 20:54  skodak
+
+	* grade/report/: overview/index.php, user/index.php: 
+	
+	MDL-19052 separate group mode improvements and fixes
+
+2009-05-04 Monday 20:26  nicolasconnault
+
+	* grade/report/grader/: lib.php, settings.php,
+	preferences_form.php: 
+	
+	MDL-12444 Removed aggregationview preference from grader report
+
+2009-05-04 Monday 16:11  stronk7
+
+	* mod/forum/: version.php, db/upgrade.php: 
+	
+	MDL-18227 forum ratings - clean wrong records
+
+2009-05-04 Monday 08:39  moodlerobot
+
+	* version.php: 
+	
+	Updated the 19 build version to 20090504
+
+2009-05-03 Sunday 08:39  moodlerobot
+
+	* version.php: 
+	
+	Updated the 19 build version to 20090503
+
+2009-05-02 Saturday 08:38  moodlerobot
+
+	* version.php: 
+	
+	Updated the 19 build version to 20090502
+
+2009-05-01 Friday 18:21  tjhunt
+
+	* lib/adminlib.php: 
+	
+	adminlib: MDL-19038 lazy-load the list of users in
+	admin_setting_users_with_capability
+
+2009-05-01 Friday 16:06  dongsheng
+
+	* lib/moodlelib.php, mod/hotpot/view.php,
+	mod/resource/type/file/resource.class.php,
+	mod/resource/type/repository/resource.class.php,
+	auth/ldap/auth.php, lib/form/recaptcha.php: 
+	
+	"MDL-19037, use getremoteaddr to get remote ip address, backported
+	from 2.0"
+
+2009-05-01 Friday 08:39  moodlerobot
+
+	* version.php: 
+	
+	Updated the 19 build version to 20090501
+
+2009-05-01 Friday 04:07  skodak
+
+	* grade/report/: overview/index.php, user/index.php: 
+	
+	MDL-15801 fixed incorrect use of get complete user data function
+
+2009-05-01 Friday 03:56  skodak
+
+	* grade/export/: txt/grade_export_txt.php,
+	xml/grade_export_xml.php: 
+	
+	MDL-14561 fixed https issue in IE
+
+2009-05-01 Friday 03:04  skodak
+
+	* lib/gradelib.php: 
+	
+	MDL-18523 fixed notice when no cms present yet
+
+2009-04-30 Thursday 18:35  skodak
+
+	* grade/report/grader/: index.php, lib.php: 
+	
+	MDL-19029 fixed incorrect closing of divs on grader report
+
+2009-04-30 Thursday 18:15  skodak
+
+	* grade/report/lib.php: 
+	
+	MDL-19029 xhtml strict
+
+2009-04-30 Thursday 18:08  skodak
+
+	* lib/pear/HTML/QuickForm/Renderer/Tableless.php: 
+	
+	MDL-19030 even uglier hack - do not try to add id to labels of
+	static element - they do not have it
+
+2009-04-30 Thursday 18:01  skodak
+
+	* lib/pear/HTML/QuickForm/Renderer/Tableless.php: 
+	
+	MDL-19030 very ugly hack - do not try to add id to labels of
+	element group - they do not have it
+
+2009-04-30 Thursday 17:48  skodak
+
+	* lib/pear/HTML/QuickForm/Renderer/Tableless.php: 
+	
+	MDL-19030 fixed xhtml strictness when label attached to frozen
+	element
+
+2009-04-30 Thursday 17:16  skodak
+
+	* lang/en_utf8/grades.php: 
+	
+	MDL-18951 standardised group support in grader report - forgotten
+	string
+
+2009-04-30 Thursday 17:15  skodak
+
+	* grade/edit/tree/category_form.php: 
+	
+	MDL-19016 xhtml strict fix; backported from HEAD
+
+2009-04-30 Thursday 17:01  skodak
+
+	* grade/report/grader/lib.php: 
+	
+	MDL-18951 standardised group support in grader report; backported
+	from HEAD
+
+2009-04-30 Thursday 16:39  nicolasconnault
+
+	* grade/report/user/lib.php: 
+	
+	MDL-19028 Hiding hidden category from student report instead of
+	grade items. See code diff for better explanation
+
+2009-04-30 Thursday 16:08  skodak
+
+	* version.php, grade/report/lib.php, grade/report/grader/lib.php,
+	grade/report/grader/preferences_form.php,
+	grade/report/grader/settings.php, lib/db/upgrade.php: 
+	
+	MDL-18951 standardised group support in grader report (not complete
+	yet); backported from HEAD
+
+2009-04-30 Thursday 15:04  nicolasconnault
+
+	* grade/report/grader/lib.php: 
+	
+	MDL-19027 Added <th> for controls row in edit mode with
+	screenreader and editing on
+
+2009-04-30 Thursday 08:38  moodlerobot
+
+	* version.php: 
+	
+	Updated the 19 build version to 20090430
+
+2009-04-30 Thursday 04:57  skodak
+
+	* grade/export/: lib.php, xml/index.php: 
+	
+	MDL-13722, MDL-12909 - idnumber required in xml grade export, if
+	not present do not show user in export preview
+
+2009-04-30 Thursday 04:35  skodak
+
+	* grade/lib.php: 
+	
+	MDL-16687 fixed incorrect sorting - thanks Philip Cali
+
+2009-04-29 Wednesday 23:16  skodak
+
+	* grade/edit/tree/category_form.php: 
+	
+	MDL-17829 category edit page cleanup; backported from HEAD
+
+2009-04-29 Wednesday 23:04  skodak
+
+	* grade/edit/tree/category_form.php: 
+	
+	MDL-18991 proper locking of grade type and min/max when sum agg
+	selected and other code cleanup; backported from HEAD
+
+2009-04-29 Wednesday 22:44  skodak
+
+	* grade/edit/tree/lib.php: 
+	
+	MDL-19014 multiplicator and offset are used only for activity
+	grades - must be disabled elsewhere; backported from HEAD
+
+2009-04-29 Wednesday 22:36  skodak
+
+	* grade/edit/tree/: item.php, item_form.php: 
+	
+	MDL-19015 removed category item editing from normal item edit form;
+	backported from HEAD
+
+2009-04-29 Wednesday 21:44  skodak
+
+	* lib/grade/grade_grade.php,
+	lib/grade/simpletest/testgradecategory.php, version.php,
+	lib/db/upgrade.php, lib/grade/grade_category.php: 
+	
+	MDL-19008 extra credis should not be dropped when drop low or keep
+	high specified (including unit tests); backported from HAED and
+	full regrading which is also needed for MDL-18993
+
+2009-04-29 Wednesday 18:06  skodak
+
+	* lib/grade/grade_category.php: 
+	
+	MDL-18993 implemented frull support for droplow and keephigh in sum
+	aggregation type; backported from HEAD
+
+2009-04-29 Wednesday 17:24  nicolasconnault
+
+	* grade/report/grader/index.php: 
+	
+	MDL-18963 Applied Matt's patch. Thanks
+
+2009-04-29 Wednesday 16:55  skodak
+
+	* lib/grade/grade_category.php: 
+	
+	MDL-18993 implemented frull support for droplow and keephigh in sum
+	aggregation type; backported from HEAD
+
+2009-04-29 Wednesday 08:39  moodlerobot
+
+	* version.php: 
+	
+	Updated the 19 build version to 20090429
+
+2009-04-29 Wednesday 02:50  skodak
+
+	* user/index.php: 
+	
+	MDL-19001 fixed sql typo - thanks Alan Trick
+
+2009-04-28 Tuesday 08:42  moodlerobot
+
+	* version.php: 
+	
+	Updated the 19 build version to 20090428
+
+2009-04-27 Monday 23:20  skodak
+
+	* lib/grade/grade_category.php, version.php, lib/db/upgrade.php: 
+	
+	MDL-17248 fixed incorrect sum when scales involved
+
+2009-04-27 Monday 22:26  skodak
+
+	* grade/edit/tree/item_form.php: 
+	
+	MDL-18987 fixed broken item editing when only one category present
+
+2009-04-27 Monday 18:21  skodak
+
+	* grade/import/csv/index.php: 
+	
+	MDL-16918 fixed deleting in csv import file - thanks Luis de
+	Vasconcelos
+
+2009-04-27 Monday 16:52  skodak
+
+	* lang/en_utf8/grades.php, grade/export/ods/export.php,
+	grade/export/txt/export.php, grade/export/xls/export.php,
+	grade/export/xml/export.php: 
+	
+	MDL-18985 improved group access control in gradebook exports;
+	backported from HEAD
+
+2009-04-27 Monday 16:47  skodak
+
+	* grade/import/: grade_import_form.php, csv/index.php: 
+	
+	MDL-18984 gradebook csv import group access control implemented;
+	backported from HEAD
+
+2009-04-27 Monday 14:34  skodak
+
+	* grade/edit/outcome/import.php: 
+	
+	MDL-18325 one more pgl fix - thanks Richard Mansfield
+
+2009-04-27 Monday 08:36  moodlerobot
+
+	* version.php: 
+	
+	Updated the 19 build version to 20090427
+
+2009-04-27 Monday 05:12  stronk7
+
+	* message/lib.php, message/history.php, lib/db/upgrade.php,
+	version.php, lib/moodlelib.php: 
+	
+	MDL-16824 messaging - move unread messages from deleted users to
+	message_read.  Pending to commit changes to uploaduser.php. Credit
+	goes to Anthony Borrow. Thanks!
+
+2009-04-26 Sunday 08:36  moodlerobot
+
+	* version.php: 
+	
+	Updated the 19 build version to 20090426
+
+2009-04-26 Sunday 05:18  stronk7
+
+	* index.php: 
+	
+	MDL-18940 meta description in main page - render multilang summary
+	properly
+
+2009-04-25 Saturday 19:52  stronk7
+
+	* backup/backuplib.php: 
+	
+	MDL-18799 backup - fixed recently introduced regexp to be PHP 4.3.x
+	compatible. 19_STABLE only.
+
+2009-04-25 Saturday 14:52  nicolasconnault
+
+	* grade/report/grader/: index.php, styles.php: 
+	
+	MDL-18963 Applying Matt's patch to fix the YUI tooltips in the
+	grader report
+
+2009-04-25 Saturday 08:35  moodlerobot
+
+	* version.php: 
+	
+	Updated the 19 build version to 20090425
+
+2009-04-25 Saturday 02:07  skodak
+
+	* version.php, lib/db/upgrade.php, lib/db/upgradelib.php: 
+	
+	MDL-18961, MDL-12942, MDL-18960 - added better extra credit
+	upgrade, fixed potential problem with bogus coefs value for simple
+	mean in current installs + finally fixed long standing "no course
+	total" bug
+
+2009-04-25 Saturday 01:58  skodak
+
+	* admin/settings/grades.php: 
+	
+	MDL-18961 fixed warning during upgrade
+
+2009-04-25 Saturday 00:24  skodak
+
+	* grade/edit/tree/item.php, grade/edit/tree/outcomeitem_form.php,
+	grade/edit/tree/category.php, grade/edit/tree/lib.php,
+	lib/grade/grade_category.php: 
+	
+	MDL-12942 new extra credit option for simple mean agg
+
+2009-04-24 Friday 17:04  nicolasconnault
+
+	* grade/report/grader/preferences_form.php: 
+	
+	MDL-13579 Fixed an undefined variable ($course_value)
+
+2009-04-24 Friday 16:12  nicolasconnault
+
+	* grade/edit/tree/index.php: 
+	
+	MDL-18950 Not printing "move selected to" element if no grade
+	category exists
+
+2009-04-24 Friday 15:49  nicolasconnault
+
+	* grade/edit/tree/: functions.js, index.php, lib.php: 
+	
+	MDL-18949 Move selector is now disabled unless at least one grade
+	item is selected.
+
+2009-04-24 Friday 15:26  nicolasconnault
+
+	* lang/en_utf8/grades.php, grade/lib.php: 
+	
+	MDL-18942 Fixed user selector lang string
+
+2009-04-24 Friday 15:14  skodak
+
+	* lib/form/select.php: 
+	
+	MDL-18948 fixed handling of indexes when removing options
+
+2009-04-24 Friday 08:36  moodlerobot
+
+	* version.php: 
+	
+	Updated the 19 build version to 20090424
+
+2009-04-24 Friday 04:28  skodak
+
+	* grade/lib.php, grade/report/overview/index.php,
+	grade/report/user/index.php, lang/en_utf8/error.php: 
+	
+	MDL-18942 user selection and group support in gradebook user
+	overview report
+
+2009-04-24 Friday 04:20  skodak
+
+	* grade/report/user/: lib.php, styles.php: 
+	
+	MDL-18943 xhtml strict - using class instead of repeated id
+	attribute
+
+2009-04-24 Friday 03:26  skodak
+
+	* grade/: lib.php, report/user/index.php: 
+	
+	MDL-18941 group support in user gradebook report
+
+2009-04-23 Thursday 15:20  nicolasconnault
+
+	* grade/lib.php: 
+	
+	MDL-18419 Hiding export and import tabs from users who lack
+	moodle/grade:export|import caps
+
+2009-04-23 Thursday 14:50  nicolasconnault
+
+	* lib/ajax/section_classes.js: 
+	
+	MDL-9306 Converting tabs to spaces
+
+2009-04-23 Thursday 08:38  moodlerobot
+
+	* version.php: 
+	
+	Updated the 19 build version to 20090423
+
+2009-04-23 Thursday 05:29  skodak
+
+	* grade/edit/tree/index.php, lib/gradelib.php, mod/lams/lib.php,
+	mod/wiki/lib.php: 
+	
+	MDL-18523 Only display the 'Synchronise legacy grades' button when
+	necessary
+
+2009-04-23 Thursday 04:53  skodak
+
+	* grade/lib.php, theme/standard/styles_fonts.css,
+	theme/standard/styles_layout.css: 
+	
+	MDL-18930 fixed behaviour of dropdown menu selector in gradebook -
+	the headings are not selectable again like the rest of moodle
+	dropdowns
+
+2009-04-23 Thursday 04:04  skodak
+
+	* grade/edit/tree/index.php, lang/en_utf8/grades.php: 
+	
+	MDL-18929 fixed double colons, in fact we stopped using colons long
+	time ago
+
+2009-04-23 Thursday 04:01  skodak
+
+	* grade/edit/tree/: index.php, lib.php: 
+	
+	MDL-18933 Cannot assign default value to variable passed by
+	reference
+
+2009-04-23 Thursday 03:48  skodak
+
+	* grade/edit/tree/lib.php: 
+	
+	MDL-18932 PHP5 exceptions replaced with error()
+
+2009-04-23 Thursday 03:45  uid536
+
+	* grade/edit/tree/item_form.php: 
+	
+	MDL-18931 removed PHP5 syntaxt function()->function()
+
+2009-04-23 Thursday 03:39  skodak
+
+	* lib/grade/: grade_category.php, grade_item.php: 
+	
+	MDL-18927 fixed performance regression
+
+2009-04-23 Thursday 03:29  skodak
+
+	* lib/gradelib.php: 
+	
+	MDL-18928 removed unnecessary feedback from core gradebook function
+
+2009-04-23 Thursday 03:26  skodak
+
+	* grade/lib.php: 
+	
+	MDL-18926 readding deleted sum icon
+
+2009-04-22 Wednesday 18:37  nicolasconnault
+
+	* grade/edit/tree/lib.php: 
+	
+	MDL-18083 Replaced php5 constructors with php4 style
+
+2009-04-22 Wednesday 16:52  nicolasconnault
+
+	* version.php: 
+	
+	MDL-18083 Bumping version number
+
+2009-04-22 Wednesday 16:40  nicolasconnault
+
+	* grade/: edit/scale/edit_form.php, report/styles.css: 
+	
+	MDL-18083 Minor changes related to big gradebook patch.
+
+2009-04-22 Wednesday 16:40  nicolasconnault
+
+	* grade/report/grader/index.php: 
+	
+	MDL-18083 MDL-18228 MDL-17807 MDL-18004 Implemented fixed student
+	column in grader report, mouseover tooltips over grade cells and
+	new browser detection code in moodlelib. Also added new navigation
+	code.
+
+2009-04-22 Wednesday 16:39  nicolasconnault
+
+	* grade/report/grader/functions.js,
+	grade/report/grader/settings.php, grade/report/grader/styles.php,
+	lib/moodlelib.php: 
+	
+	MDL-18083 MDL-18228 MDL-17807 Implemented fixed student column in
+	grader report, mouseover tooltips over grade cells and new browser
+	detection code in moodlelib.
+
+2009-04-22 Wednesday 16:37  nicolasconnault
+
+	* grade/report/user/index.php: 
+	
+	MDL-18083 MDL-18004 MDL-17991 Facelife for user report. Also added
+	new navigation code.
+
+2009-04-22 Wednesday 16:36  nicolasconnault
+
+	* grade/edit/tree/: category.php, item.php: 
+	
+	MDL-18083 MDL-18004 MDL-17829 Combining grade item and category
+	forms into one. Also added new navigation code.
+
+2009-04-22 Wednesday 16:36  nicolasconnault
+
+	* grade/edit/tree/index.php: 
+	
+	MDL-18083 MDL-14961 MDL-15680 MDL-16913 New Edit Categories and
+	Items interface with heaps of improvements. Replaces the original
+	page. Also added a help string for the "synchronise legacy grades"
+	button.
+
+2009-04-22 Wednesday 16:35  nicolasconnault
+
+	* grade/lib.php: 
+	
+	MDL-18083 MDL-18004 MDL-12631 MDL-13417 Mainly changes related to
+	new tab navigation in the gradebook. Outcomes report is also no
+	longer visible if outcomes are disabled in the course/site.
+
+2009-04-22 Wednesday 16:34  nicolasconnault
+
+	* lang/en_utf8/grades.php: 
+	
+	MDL-18083 MDL-12380 MDL-14961 MDL-15680 MDL-16913 MDL-17991
+	MDL-18228 MDL-17807 New or improved lang strings for gradebook
+
+2009-04-22 Wednesday 16:31  nicolasconnault
+
+	* admin/settings/grades.php: 
+	
+	MDL-18083 MDL-18004 MDL-12380 Implementing new tab navigation in
+	gradebook and grades over 100%
+
+2009-04-22 Wednesday 16:31  nicolasconnault
+
+	* grade/report/user/: lib.php, styles.php: 
+	
+	MDL-18083 MDL-17991 User report facelift, with more presentation
+	options and better layout, similar to the new edit categories and
+	items interface.
+
+2009-04-22 Wednesday 16:30  nicolasconnault
+
+	* grade/edit/tree/: item_form.php, category_form.php: 
+	
+	MDL-18083 MDL-17829 Combining grade item and category forms into
+	one
+
+2009-04-22 Wednesday 16:28  nicolasconnault
+
+	* grade/edit/tree/: lib.php, functions.js, tree.css: 
+	
+	MDL-18083 MDL-15680 MDL-16913 New Edit Categories and Items
+	interface with heaps of improvements. Replaces the original page.
+
+2009-04-22 Wednesday 16:25  nicolasconnault
+
+	* grade/report/grader/lib.php: 
+	
+	MDL-18083 MDL-12380 MDL-18228 MDL-17807 Implementing grades over
+	100% in the grader report, new tab navigation, fixed student column
+	and mouseover tooltips for grade cells.
+
+2009-04-22 Wednesday 16:23  nicolasconnault
+
+	* lib/grade/: grade_grade.php, grade_item.php, grade_category.php: 
+	
+	MDL-18083 MDL-12380 MDL-15680 MDL-16913 Combining grade item and
+	category forms into one, implementing grades over 100%, and patches
+	for correct aggregation.
+
+2009-04-22 Wednesday 16:21  nicolasconnault
+
+	* lib/: adminlib.php, gradelib.php: 
+	
+	MDL-18083 MDL-12380 Implementing grades over 100% for the gradebook
+
+2009-04-22 Wednesday 16:20  nicolasconnault
+
+	* grade/edit/letter/edit.php, grade/edit/letter/index.php,
+	grade/export/xml/index.php, grade/import/xml/import.php,
+	grade/import/xml/index.php, grade/export/txt/index.php,
+	grade/export/ods/index.php, lang/en_utf8/gradereport_grader.php,
+	grade/edit/outcome/course.php, grade/edit/outcome/edit.php,
+	grade/edit/outcome/import.php, grade/edit/outcome/index.php,
+	theme/standard/styles_fonts.css, theme/standard/styles_layout.css,
+	grade/edit/tree/outcomeitem.php, grade/export/xls/index.php,
+	grade/report/lib.php, grade/edit/settings/index.php,
+	grade/report/outcomes/index.php, grade/edit/scale/edit.php,
+	grade/edit/scale/index.php, grade/report/grader/preferences.php,
+	grade/import/csv/index.php, grade/export/keymanager.php,
+	lib/grade/constants.php, grade/import/keymanager.php,
+	grade/report/overview/index.php: 
+	
+	MDL-18083 MDL-18004 Implementing new tab navigation in gradebook.
+
+2009-04-22 Wednesday 08:46  moodlerobot
+
+	* version.php: 
+	
+	Updated the 19 build version to 20090422
+
+2009-04-21 Tuesday 22:13  stronk7
+
+	* mod/data/lib.php: 
+	
+	MDLSITE-545 MDL-18024 - reaplying incorrectly reverted fix
+
+2009-04-21 Tuesday 08:38  moodlerobot
+
+	* version.php: 
+	
+	Updated the 19 build version to 20090421
+
+2009-04-21 Tuesday 05:24  stronk7
+
+	* filter/tex/lib.php: 
+	
+	MDL-18893 TeX filter - fine tune "def" commands + add some more
+	commands to blacklist (from Kopete).  Thanks to Mauno Korpelainen
+	and Steve Mayer
+
+2009-04-20 Monday 13:59  tjhunt
+
+	* course/: index.php, editcategory.php: 
+	
+	category paths: MDL-18897 call fix_course_sortorder eveywhere we
+	insert a category to set category.path and .depth
+

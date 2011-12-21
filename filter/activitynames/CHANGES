@@ -1,0 +1,183 @@
+2007-01-05 Friday 02:24  skodak
+
+	* filter.php: 
+	
+	MDL-8050 1.2 Remove all target="_top" - refactoring of previous
+	commit
+
+2007-01-04 Thursday 03:24  skodak
+
+	* filter.php: 
+	
+	MDL-8050 1.2 Remove all target="_top"
+
+2006-09-05 Tuesday 05:12  stronk7
+
+	* filter.php: 
+	
+	Casting $course->modinfo to string prevents one notice to be showed
+	when it's null, returning false as desired.
+
+2006-01-11 Wednesday 23:11  stronk7
+
+	* filter.php: 
+	
+	Solved one problem with frames and activitynames filter. 
+	(http://moodle.org/mod/forum/discuss.php?d=28382)
+	
+	Merged from MOODLE_15_STABLE
+
+2006-01-11 Wednesday 23:09  stronk7
+
+	* filter.php: 
+	
+	Solved one problem with frames and activitynames filter. 
+	(http://moodle.org/mod/forum/discuss.php?d=28382)
+
+2005-09-06 Tuesday 06:32  stronk7
+
+	* filter.php: 
+	
+	Avoid empty or unlinkable activity names
+	
+	Merged from MOODLE_15_STABLE
+
+2005-09-06 Tuesday 06:30  stronk7
+
+	* filter.php: 
+	
+	Avoid empty or unlinkable activity names.
+
+2005-04-26 Tuesday 06:03  stronk7
+
+	* filter.php: 
+	
+	I forgot to look for cache. Woking now.
+
+2005-04-26 Tuesday 05:55  stronk7
+
+	* filter.php: 
+	
+	Cache array of filterobjects per request.
+
+2005-03-04 Friday 18:12  moodler
+
+	* filter.php: 
+	
+	Rewritten to use the new generic filter function. (SE)
+
+2005-02-14 Monday 15:40  martinlanghoff
+
+	* filter.php: 
+	
+	Merged from MOODLE_14_STABLE - Cleanup of warnings in
+	filter/activitynames
+
+2005-02-14 Monday 15:39  martinlanghoff
+
+	* filter.php: 
+	
+	Cleanup of warnings in filter/activitynames
+
+2005-01-30 Sunday 22:21  julmis
+
+	* filter.php: 
+	
+	Adding <span class="nolink"> excluding.
+
+2004-12-13 Monday 09:31  stronk7
+
+	* filter.php: 
+	
+	Some dyslexic problem solved! :-D
+	
+	Merged from MOODLE_14_STABLE
+
+2004-12-13 Monday 09:30  stronk7
+
+	* filter.php: 
+	
+	Some dyslexic problem solved! :-D
+
+2004-12-13 Monday 09:25  stronk7
+
+	* filter.php: 
+	
+	Now activity names are sorted by name length to avoid Bug 2282
+	(http://moodle.org/bugs/bug.php?op=show&bugid=2282)
+	
+	Merged from MOODLE_14_STABLE
+
+2004-12-13 Monday 09:23  stronk7
+
+	* filter.php: 
+	
+	Now activity names are sorted by name length to avoid Bug 2282
+	(http://moodle.org/bugs/bug.php?op=show&bugid=2282)
+
+2004-08-29 Sunday 22:15  gustav_delius
+
+	* filter.php: 
+	
+	removed unnecessary calls to get_site()
+
+2004-08-08 Sunday 14:57  moodler
+
+	* filter.php: 
+	
+	Improvement to filters, providing speed boost AND better
+	compatibility with Turck MMCache.
+	
+	Filter function must now have a particular name
+	
+	   eg resource_filter
+	
+	where "resource" is the name of the directory that filter.php is
+	in.
+
+2004-05-30 Sunday 09:00  stronk7
+
+	* filter.php: 
+	
+	Solved bug 1491 in all the "linking" filters. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1491) Bugfix 001
+
+2004-05-30 Sunday 08:28  stronk7
+
+	* filter.php: 
+	
+	Solved bug 1491 in all the "linking" filters. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1491) Bugfix 001
+
+2004-05-29 Saturday 23:19  stronk7
+
+	* filter.php: 
+	
+	One simple change to test cvs branching...
+
+2004-05-28 Friday 07:43  stronk7
+
+	* filter.php: 
+	
+	Small change to make it a bit more consistent. No significant.
+
+2004-05-25 Tuesday 01:58  moodler
+
+	* filter.php: 
+	
+	Fixed quotes in titles ... well nearly.
+
+2004-05-25 Tuesday 01:43  stronk7
+
+	* filter.php: 
+	
+	Avoid linking to labels and to hidden activities...
+
+2004-05-25 Tuesday 01:30  stronk7
+
+	* filter.php: 
+	
+	Allow every activity name in texts to be linked to the original
+	activity.  Bug 1454. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=1454)
+

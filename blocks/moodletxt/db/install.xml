@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="blocks/moodletxt/db" VERSION="20110401" COMMENT="XMLDB install file for moodletxt 2.4"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="block_mtxt_inbox" COMMENT="Links Moodle users to inbound messages" NEXT="block_mtxt_in_folders">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" ENUM="false" NEXT="userid"/>
+        <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="id"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" NEXT="fk-inbox-user"/>
+        <KEY NAME="fk-inbox-user" TYPE="foreign" FIELDS="userid" REFTABLE="user" REFFIELDS="id" COMMENT="Links inbox record to moodle user account." PREVIOUS="primary"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="block_mtxt_in_folders" COMMENT="Stores inbox folders for organising inbound messages" PREVIOUS="block_mtxt_inbox" NEXT="block_mtxt_in_mess">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" ENUM="false" NEXT="inbox"/>
+        <FIELD NAME="inbox" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="id" NEXT="name"/>
+        <FIELD NAME="name" TYPE="char" LENGTH="30" NOTNULL="true" SEQUENCE="false" ENUM="false" PREVIOUS="inbox" NEXT="candelete"/>
+        <FIELD NAME="candelete" TYPE="int" LENGTH="1" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="name"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" NEXT="fk-folder-inbox"/>
+        <KEY NAME="fk-folder-inbox" TYPE="foreign" FIELDS="inbox" REFTABLE="block_mtxt_inbox" REFFIELDS="id" COMMENT="Links a folder record to its parent inbox." PREVIOUS="primary"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="block_mtxt_in_mess" COMMENT="Stores details of text messages received" PREVIOUS="block_mtxt_in_folders" NEXT="block_mtxt_accounts">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" ENUM="false" NEXT="folderid"/>
+        <FIELD NAME="folderid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="id" NEXT="ticket"/>
+        <FIELD NAME="ticket" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="folderid" NEXT="messagetext"/>
+        <FIELD NAME="messagetext" TYPE="text" LENGTH="medium" NOTNULL="true" SEQUENCE="false" ENUM="false" PREVIOUS="ticket" NEXT="source"/>
+        <FIELD NAME="source" TYPE="char" LENGTH="20" NOTNULL="true" SEQUENCE="false" ENUM="false" PREVIOUS="messagetext" NEXT="sourcename"/>
+        <FIELD NAME="sourcename" TYPE="char" LENGTH="100" NOTNULL="true" SEQUENCE="false" ENUM="false" PREVIOUS="source" NEXT="timereceived"/>
+        <FIELD NAME="timereceived" TYPE="int" LENGTH="12" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="sourcename" NEXT="hasbeenread"/>
+        <FIELD NAME="hasbeenread" TYPE="int" LENGTH="1" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="timereceived"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" NEXT="fk-message-folder"/>
+        <KEY NAME="fk-message-folder" TYPE="foreign" FIELDS="folderid" REFTABLE="block_mtxt_in_folders" REFFIELDS="id" COMMENT="Links a stored message to its parent folder." PREVIOUS="primary"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="block_mtxt_accounts" COMMENT="Stores txttools accounts used within the system." PREVIOUS="block_mtxt_in_mess" NEXT="block_mtxt_stats">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" ENUM="false" NEXT="username"/>
+        <FIELD NAME="username" TYPE="char" LENGTH="40" NOTNULL="true" SEQUENCE="false" ENUM="false" PREVIOUS="id" NEXT="password"/>
+        <FIELD NAME="password" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" ENUM="false" PREVIOUS="username" NEXT="description"/>
+        <FIELD NAME="description" TYPE="char" LENGTH="100" NOTNULL="true" SEQUENCE="false" ENUM="false" PREVIOUS="password" NEXT="defaultinbox"/>
+        <FIELD NAME="defaultinbox" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" ENUM="false" PREVIOUS="description" NEXT="creditsused"/>
+        <FIELD NAME="creditsused" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" ENUM="false" PREVIOUS="defaultinbox" NEXT="creditsremaining"/>
+        <FIELD NAME="creditsremaining" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" ENUM="false" PREVIOUS="creditsused" NEXT="outboundenabled"/>
+        <FIELD NAME="outboundenabled" TYPE="int" LENGTH="1" NOTNULL="true" UNSIGNED="true" DEFAULT="1" SEQUENCE="false" ENUM="false" PREVIOUS="creditsremaining" NEXT="inboundenabled"/>
+        <FIELD NAME="inboundenabled" TYPE="int" LENGTH="1" NOTNULL="true" UNSIGNED="true" DEFAULT="1" SEQUENCE="false" ENUM="false" PREVIOUS="outboundenabled" NEXT="accounttype"/>
+        <FIELD NAME="accounttype" TYPE="int" LENGTH="1" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" ENUM="false" COMMENT="Type of account (invoiced/prepaid/other)" PREVIOUS="inboundenabled" NEXT="lastupdate"/>
+        <FIELD NAME="lastupdate" TYPE="int" LENGTH="12" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="accounttype"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" NEXT="username"/>
+        <KEY NAME="username" TYPE="unique" FIELDS="username" PREVIOUS="primary" NEXT="fk-default-inbox"/>
+        <KEY NAME="fk-default-inbox" TYPE="foreign" FIELDS="defaultinbox" REFTABLE="block_mtxt_inbox" REFFIELDS="id" COMMENT="Links a txttools account to the default inbox used for unfiltered inbound messages." PREVIOUS="username"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="block_mtxt_stats" COMMENT="Holds number of messages sent by users each day." PREVIOUS="block_mtxt_accounts" NEXT="block_mtxt_outbox">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" ENUM="false" NEXT="userid"/>
+        <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" ENUM="false" PREVIOUS="id" NEXT="txttoolsaccount"/>
+        <FIELD NAME="txttoolsaccount" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" ENUM="false" PREVIOUS="userid" NEXT="date_entered"/>
+        <FIELD NAME="date_entered" TYPE="datetime" LENGTH="small" NOTNULL="true" SEQUENCE="false" ENUM="false" PREVIOUS="txttoolsaccount" NEXT="numbersent"/>
+        <FIELD NAME="numbersent" TYPE="int" LENGTH="7" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="date_entered"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" NEXT="fk-stats-userid"/>
+        <KEY NAME="fk-stats-userid" TYPE="foreign" FIELDS="userid" REFTABLE="user" REFFIELDS="id" COMMENT="Links the outbound stats entry to a given user." PREVIOUS="primary" NEXT="fk-stats-account"/>
+        <KEY NAME="fk-stats-account" TYPE="foreign" FIELDS="txttoolsaccount" REFTABLE="block_mtxt_accounts" REFFIELDS="id" COMMENT="Links the outbound stats to the txttools account they were sent via." PREVIOUS="fk-stats-userid"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="block_mtxt_outbox" COMMENT="Stores details of message texts sent, linked to the user." PREVIOUS="block_mtxt_stats" NEXT="block_mtxt_sent">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" ENUM="false" NEXT="userid"/>
+        <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" ENUM="false" PREVIOUS="id" NEXT="txttoolsaccount"/>
+        <FIELD NAME="txttoolsaccount" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" ENUM="false" PREVIOUS="userid" NEXT="messagetext"/>
+        <FIELD NAME="messagetext" TYPE="text" LENGTH="medium" NOTNULL="true" SEQUENCE="false" ENUM="false" PREVIOUS="txttoolsaccount" NEXT="timesent"/>
+        <FIELD NAME="timesent" TYPE="int" LENGTH="11" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="messagetext" NEXT="scheduledfor"/>
+        <FIELD NAME="scheduledfor" TYPE="int" LENGTH="11" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="timesent" NEXT="type"/>
+        <FIELD NAME="type" TYPE="int" LENGTH="1" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="scheduledfor"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" NEXT="fk-message-userid"/>
+        <KEY NAME="fk-message-userid" TYPE="foreign" FIELDS="userid" REFTABLE="user" REFFIELDS="id" COMMENT="Links the outbound message to the user who sent it." PREVIOUS="primary" NEXT="fk-message-account"/>
+        <KEY NAME="fk-message-account" TYPE="foreign" FIELDS="txttoolsaccount" REFTABLE="block_mtxt_accounts" REFFIELDS="id" COMMENT="Links the outbound message to the txttools it was sent through." PREVIOUS="fk-message-userid"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="block_mtxt_sent" COMMENT="Table stores details of actual SMS messages sent." PREVIOUS="block_mtxt_outbox" NEXT="block_mtxt_status">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" ENUM="false" NEXT="messageid"/>
+        <FIELD NAME="messageid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="id" NEXT="ticketnumber"/>
+        <FIELD NAME="ticketnumber" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="messageid" NEXT="destination"/>
+        <FIELD NAME="destination" TYPE="char" LENGTH="20" NOTNULL="true" SEQUENCE="false" ENUM="false" PREVIOUS="ticketnumber" NEXT="sendname"/>
+        <FIELD NAME="sendname" TYPE="char" LENGTH="100" NOTNULL="true" SEQUENCE="false" ENUM="false" PREVIOUS="destination"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" NEXT="fk-sms-message"/>
+        <KEY NAME="fk-sms-message" TYPE="foreign" FIELDS="messageid" REFTABLE="block_mtxt_outbox" REFFIELDS="id" COMMENT="Links this SMS message to its parent message." PREVIOUS="primary" NEXT="un-ticketnumber"/>
+        <KEY NAME="un-ticketnumber" TYPE="unique" FIELDS="ticketnumber" COMMENT="Ensures ticket numbers are unique" PREVIOUS="fk-sms-message"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="block_mtxt_status" COMMENT="Table stores status messages for text messages sent." PREVIOUS="block_mtxt_sent" NEXT="block_mtxt_templates">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" ENUM="false" NEXT="ticketnumber"/>
+        <FIELD NAME="ticketnumber" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="id" NEXT="status"/>
+        <FIELD NAME="status" TYPE="int" LENGTH="1" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="ticketnumber" NEXT="statusmessage"/>
+        <FIELD NAME="statusmessage" TYPE="char" LENGTH="100" NOTNULL="true" SEQUENCE="false" ENUM="false" PREVIOUS="status" NEXT="updatetime"/>
+        <FIELD NAME="updatetime" TYPE="int" LENGTH="11" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="statusmessage"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" NEXT="fk-status-ticket"/>
+        <KEY NAME="fk-status-ticket" TYPE="foreign" FIELDS="ticketnumber" REFTABLE="block_mtxt_sent" REFFIELDS="ticketnumber" COMMENT="Links this status update to the SMS it originated from." PREVIOUS="primary"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="block_mtxt_templates" COMMENT="Table stores user-specific text message templates." PREVIOUS="block_mtxt_status" NEXT="block_mtxt_rss">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" ENUM="false" NEXT="userid"/>
+        <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="id" NEXT="template"/>
+        <FIELD NAME="template" TYPE="text" LENGTH="medium" NOTNULL="true" SEQUENCE="false" ENUM="false" PREVIOUS="userid"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" NEXT="fk-template-user"/>
+        <KEY NAME="fk-template-user" TYPE="foreign" FIELDS="userid" REFTABLE="user" REFFIELDS="id" COMMENT="Links this template to the Moodle user that owns it." PREVIOUS="primary"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="block_mtxt_rss" COMMENT="Holds previously downloaded RSS updates." PREVIOUS="block_mtxt_templates" NEXT="block_mtxt_config">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" ENUM="false" NEXT="title"/>
+        <FIELD NAME="title" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" ENUM="false" PREVIOUS="id" NEXT="link"/>
+        <FIELD NAME="link" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" ENUM="false" PREVIOUS="title" NEXT="pubtime"/>
+        <FIELD NAME="pubtime" TYPE="int" LENGTH="12" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="link" NEXT="description"/>
+        <FIELD NAME="description" TYPE="text" LENGTH="small" NOTNULL="true" SEQUENCE="false" ENUM="false" PREVIOUS="pubtime" NEXT="expirytime"/>
+        <FIELD NAME="expirytime" TYPE="int" LENGTH="12" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="description"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="block_mtxt_config" COMMENT="Holds global settings for moodletxt." PREVIOUS="block_mtxt_rss" NEXT="block_mtxt_uconfig">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" ENUM="false" NEXT="setting"/>
+        <FIELD NAME="setting" TYPE="char" LENGTH="50" NOTNULL="true" SEQUENCE="false" ENUM="false" PREVIOUS="id" NEXT="value"/>
+        <FIELD NAME="value" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" ENUM="false" PREVIOUS="setting"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="block_mtxt_uconfig" COMMENT="Holds user settings for moodletxt." PREVIOUS="block_mtxt_config" NEXT="block_mtxt_filter">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" ENUM="false" NEXT="userid"/>
+        <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="id" NEXT="setting"/>
+        <FIELD NAME="setting" TYPE="char" LENGTH="50" NOTNULL="true" SEQUENCE="false" ENUM="false" PREVIOUS="userid" NEXT="value"/>
+        <FIELD NAME="value" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" ENUM="false" PREVIOUS="setting"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" NEXT="fk-user"/>
+        <KEY NAME="fk-user" TYPE="foreign" FIELDS="userid" REFTABLE="user" REFFIELDS="id" COMMENT="The user to whom these settings belong." PREVIOUS="primary"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="block_mtxt_filter" COMMENT="Holds filters for filtering inbound messages to inboxes." PREVIOUS="block_mtxt_uconfig" NEXT="block_mtxt_in_filter">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" ENUM="false" NEXT="account"/>
+        <FIELD NAME="account" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="id" NEXT="type"/>
+        <FIELD NAME="type" TYPE="char" LENGTH="7" NOTNULL="true" DEFAULT="KEYWORD" SEQUENCE="false" ENUM="true" ENUMVALUES="'phoneno', 'keyword'" PREVIOUS="account" NEXT="value"/>
+        <FIELD NAME="value" TYPE="char" LENGTH="50" NOTNULL="true" SEQUENCE="false" ENUM="false" PREVIOUS="type"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" NEXT="fk-filter-account"/>
+        <KEY NAME="fk-filter-account" TYPE="foreign" FIELDS="account" REFTABLE="block_mtxt_accounts" REFFIELDS="id" COMMENT="Links this filter to the txttools account it operates on." PREVIOUS="primary"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="block_mtxt_in_filter" COMMENT="Links inbound filters to inboxes." PREVIOUS="block_mtxt_filter" NEXT="block_mtxt_ab">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" ENUM="false" NEXT="inbox"/>
+        <FIELD NAME="inbox" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="id" NEXT="filter"/>
+        <FIELD NAME="filter" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="inbox"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" NEXT="fk-filter-inbox"/>
+        <KEY NAME="fk-filter-inbox" TYPE="foreign" FIELDS="inbox" REFTABLE="moodletxt_inbox" REFFIELDS="id" COMMENT="First half of the link - the destination inbox." PREVIOUS="primary" NEXT="fk-inbox-filter"/>
+        <KEY NAME="fk-inbox-filter" TYPE="foreign" FIELDS="filter" REFTABLE="block_mtxt_filter" REFFIELDS="id" COMMENT="The second half of the link - the filter in operation." PREVIOUS="fk-filter-inbox"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="block_mtxt_ab" COMMENT="Stores top-level details of an address book." PREVIOUS="block_mtxt_in_filter" NEXT="block_mtxt_ab_entry">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" ENUM="false" NEXT="name"/>
+        <FIELD NAME="name" TYPE="char" LENGTH="50" NOTNULL="true" SEQUENCE="false" ENUM="false" PREVIOUS="id" NEXT="type"/>
+        <FIELD NAME="type" TYPE="char" LENGTH="7" NOTNULL="true" DEFAULT="global" SEQUENCE="false" ENUM="true" ENUMVALUES="'global', 'private'" PREVIOUS="name" NEXT="owner"/>
+        <FIELD NAME="owner" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="type"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="Primary key for block_mtxt_ab" NEXT="fk-owner-user"/>
+        <KEY NAME="fk-owner-user" TYPE="foreign" FIELDS="owner" REFTABLE="user" REFFIELDS="id" COMMENT="Links this address book to the Moodle user that owns it." PREVIOUS="primary"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="block_mtxt_ab_entry" COMMENT="Holds contact details for address books." PREVIOUS="block_mtxt_ab" NEXT="block_mtxt_ab_users">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" ENUM="false" NEXT="addressbook"/>
+        <FIELD NAME="addressbook" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="id" NEXT="lastname"/>
+        <FIELD NAME="lastname" TYPE="char" LENGTH="50" NOTNULL="true" SEQUENCE="false" ENUM="false" PREVIOUS="addressbook" NEXT="firstname"/>
+        <FIELD NAME="firstname" TYPE="char" LENGTH="50" NOTNULL="true" SEQUENCE="false" ENUM="false" PREVIOUS="lastname" NEXT="company"/>
+        <FIELD NAME="company" TYPE="char" LENGTH="100" NOTNULL="true" SEQUENCE="false" ENUM="false" PREVIOUS="firstname" NEXT="phoneno"/>
+        <FIELD NAME="phoneno" TYPE="char" LENGTH="20" NOTNULL="true" SEQUENCE="false" ENUM="false" PREVIOUS="company"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="Primary key for block_mtxt_ab_entry" NEXT="fk-parent-addressbook"/>
+        <KEY NAME="fk-parent-addressbook" TYPE="foreign" FIELDS="addressbook" REFTABLE="block_mtxt_ab" REFFIELDS="id" COMMENT="Links a contact entry to the address book they are part of." PREVIOUS="primary"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="block_mtxt_ab_users" COMMENT="Links users to private address books." PREVIOUS="block_mtxt_ab_entry" NEXT="block_mtxt_ab_groups">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" ENUM="false" NEXT="addressbook"/>
+        <FIELD NAME="addressbook" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="id" NEXT="userid"/>
+        <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="addressbook"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="Primary key for block_mtxt_ab_users" NEXT="fk-addressbook"/>
+        <KEY NAME="fk-addressbook" TYPE="foreign" FIELDS="addressbook" REFTABLE="block_mtxt_ab" REFFIELDS="id" COMMENT="The first half of this link - the address book being linked to." PREVIOUS="primary" NEXT="fk-user"/>
+        <KEY NAME="fk-user" TYPE="foreign" FIELDS="userid" REFTABLE="user" REFFIELDS="id" COMMENT="The second half of this link - the Moodle user being given access." PREVIOUS="fk-addressbook"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="block_mtxt_ab_groups" COMMENT="Stores details of address book contact groups." PREVIOUS="block_mtxt_ab_users" NEXT="block_mtxt_ab_grpmem">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" ENUM="false" NEXT="addressbook"/>
+        <FIELD NAME="addressbook" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="id" NEXT="name"/>
+        <FIELD NAME="name" TYPE="char" LENGTH="100" NOTNULL="true" SEQUENCE="false" ENUM="false" PREVIOUS="addressbook" NEXT="description"/>
+        <FIELD NAME="description" TYPE="text" LENGTH="small" NOTNULL="true" SEQUENCE="false" ENUM="false" PREVIOUS="name"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="Primary key for block_mtxt_ab_groups" NEXT="fk-addressbook-parent"/>
+        <KEY NAME="fk-addressbook-parent" TYPE="foreign" FIELDS="addressbook" REFTABLE="block_mtxt_ab" REFFIELDS="id" COMMENT="Joins a contact group to its parent address book." PREVIOUS="primary"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="block_mtxt_ab_grpmem" COMMENT="Links address book contacts to groups." PREVIOUS="block_mtxt_ab_groups" NEXT="block_mtxt_in_ab">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" ENUM="false" NEXT="contact"/>
+        <FIELD NAME="contact" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="id" NEXT="groupid"/>
+        <FIELD NAME="groupid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="contact"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="Primary key for block_mtxt_ab_grpmem" NEXT="fk-contact"/>
+        <KEY NAME="fk-contact" TYPE="foreign" FIELDS="contact" REFTABLE="block_mtxt_ab_entry" REFFIELDS="id" COMMENT="First half of link - the contact being linked to a group." PREVIOUS="primary" NEXT="fk-groupid"/>
+        <KEY NAME="fk-groupid" TYPE="foreign" FIELDS="groupid" REFTABLE="block_mtxt_ab_groups" REFFIELDS="id" COMMENT="Second half of the link - the group a contact is a member of." PREVIOUS="fk-contact"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="block_mtxt_in_ab" COMMENT="Links address book contacts to received messages." PREVIOUS="block_mtxt_ab_grpmem" NEXT="block_mtxt_in_user">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" ENUM="false" NEXT="contact"/>
+        <FIELD NAME="contact" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="id" NEXT="receivedmessage"/>
+        <FIELD NAME="receivedmessage" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="contact"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="Primary key for block_mtxt_in_ab" NEXT="fk-contact"/>
+        <KEY NAME="fk-contact" TYPE="foreign" FIELDS="contact" REFTABLE="block_mtxt_ab_entry" REFFIELDS="id" COMMENT="First half of link -  the contact who sent the message." PREVIOUS="primary" NEXT="fk-receivedmessage"/>
+        <KEY NAME="fk-receivedmessage" TYPE="foreign" FIELDS="receivedmessage" REFTABLE="block_mtxt_in_mess" REFFIELDS="id" COMMENT="Second half of link - the message sent in by contact." PREVIOUS="fk-contact"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="block_mtxt_in_user" COMMENT="Links received messages to Moodle users." PREVIOUS="block_mtxt_in_ab" NEXT="block_mtxt_sent_ab">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" ENUM="false" NEXT="userid"/>
+        <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="id" NEXT="receivedmessage"/>
+        <FIELD NAME="receivedmessage" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="userid"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="Primary key for block_mtxt_in_user" NEXT="fk-userid"/>
+        <KEY NAME="fk-userid" TYPE="foreign" FIELDS="userid" REFTABLE="user" REFFIELDS="id" COMMENT="First half of link - the user that sent the message in." PREVIOUS="primary" NEXT="fk-receivedmessage"/>
+        <KEY NAME="fk-receivedmessage" TYPE="foreign" FIELDS="receivedmessage" REFTABLE="block_mtxt_in_mess" REFFIELDS="id" COMMENT="Second half of link - the message sent in." PREVIOUS="fk-userid"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="block_mtxt_sent_ab" COMMENT="Links address book contacts to sent messages." PREVIOUS="block_mtxt_in_user" NEXT="block_mtxt_sent_user">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" ENUM="false" NEXT="contact"/>
+        <FIELD NAME="contact" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="id" NEXT="sentmessage"/>
+        <FIELD NAME="sentmessage" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="contact"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="Primary key for block_mtxt_sent_ab" NEXT="fk-contact"/>
+        <KEY NAME="fk-contact" TYPE="foreign" FIELDS="contact" REFTABLE="block_mtxt_ab_entry" REFFIELDS="id" COMMENT="The first half of the link - the contact the message was sent to." PREVIOUS="primary" NEXT="fk-sentmessage"/>
+        <KEY NAME="fk-sentmessage" TYPE="foreign" FIELDS="sentmessage" REFTABLE="block_mtxt_sent" REFFIELDS="id" COMMENT="Second half of the link - the message sent." PREVIOUS="fk-contact"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="block_mtxt_sent_user" COMMENT="Links sent messages to Moodle users." PREVIOUS="block_mtxt_sent_ab">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" ENUM="false" NEXT="userid"/>
+        <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="id" NEXT="sentmessage"/>
+        <FIELD NAME="sentmessage" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" PREVIOUS="userid"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="Primary key for block_mtxt_sent_user" NEXT="fk-userid"/>
+        <KEY NAME="fk-userid" TYPE="foreign" FIELDS="userid" REFTABLE="user" REFFIELDS="id" COMMENT="First half of link - the user the message was sent to." PREVIOUS="primary" NEXT="fk-sentmessage"/>
+        <KEY NAME="fk-sentmessage" TYPE="foreign" FIELDS="sentmessage" REFTABLE="block_mtxt_sent" REFFIELDS="id" COMMENT="Second half of link - the message sent." PREVIOUS="fk-userid"/>
+      </KEYS>
+    </TABLE>
+  </TABLES>
+  <STATEMENTS>
+    <STATEMENT NAME="insert block_mtxt_config" TYPE="insert" TABLE="block_mtxt_config" COMMENT="Insertion of default global settings for moodletxt. EK, which is based on current timestamp, will be inserted after installation via PHP.">
+      <SENTENCES>
+        <SENTENCE TEXT="(setting, value) VALUES ('Get_Status_On_View', '0')" />
+        <SENTENCE TEXT="(setting, value) VALUES ('Get_Inbound_On_View', '0')" />
+        <SENTENCE TEXT="(setting, value) VALUES ('Push_Username', ' ')" />
+        <SENTENCE TEXT="(setting, value) VALUES ('Push_Password', ' ')" />
+        <SENTENCE TEXT="(setting, value) VALUES ('Use_Protocol', 'SSL')" />
+        <SENTENCE TEXT="(setting, value) VALUES ('Protocol_Warnings_On', '1')" />
+        <SENTENCE TEXT="(setting, value) VALUES ('RSS_Last_Update', '0')" />
+        <SENTENCE TEXT="(setting, value) VALUES ('RSS_Update_Interval', '14400')" />
+        <SENTENCE TEXT="(setting, value) VALUES ('RSS_Expiry_Length', '604800')" />
+        <SENTENCE TEXT="(setting, value) VALUES ('Default_International_Prefix', '+44')" />
+        <SENTENCE TEXT="(setting, value) VALUES ('National_Prefix', '0')" />
+        <SENTENCE TEXT="(setting, value) VALUES ('Phone_Number_Source', 'phone2')" />
+        <SENTENCE TEXT="(setting, value) VALUES ('Show_Inbound_Numbers', '0')" />
+        <SENTENCE TEXT="(setting, value) VALUES ('Proxy_Host', ' ')" />
+        <SENTENCE TEXT="(setting, value) VALUES ('Proxy_Port', ' ')" />
+        <SENTENCE TEXT="(setting, value) VALUES ('Proxy_Username', ' ')" />
+        <SENTENCE TEXT="(setting, value) VALUES ('Proxy_Password', ' ')" />
+        <SENTENCE TEXT="(setting, value) VALUES ('jQuery_Include_Enabled', '1')" />
+        <SENTENCE TEXT="(setting, value) VALUES ('jQuery_UI_Include_Enabled', '1')" />
+      </SENTENCES>
+    </STATEMENT>
+  </STATEMENTS>
+</XMLDB>

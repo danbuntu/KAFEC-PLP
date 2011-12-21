@@ -1,0 +1,1078 @@
+/* begin Page */
+
+/* Generated with Artisteer version 2.3.0.21098, file checksum is 101A6060. */
+
+
+
+/* Start Content headings Fonts & Colors  */
+h1, h1 a, h1 a:link, h1 a:visited, h1 a:hover
+{
+    font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+    font-size: 30px;
+    color: #8DDE00;
+}
+
+h1, h1 a, h1 a:link {
+    text-decoration: none;
+}
+
+h2, h2 a, h2 a:link, h2 a:visited, h2 a:hover
+{
+    font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+    font-size: 16px;
+    color: black;
+}
+
+h2, h2 a, h2 a:link {
+    text-decoration: none;
+}
+
+/* sets the text colour to black in the help pages */
+h2.main {
+    color: black;
+}
+
+h3, h3 a, h3 a:link, h3 a:visited, h3 a:hover
+{
+    font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+    font-size: 18px;
+    color: #37636D;
+}
+
+h3, h3 a, h3 a:link {
+    text-decoration: none;
+}
+
+h4, h4 a, h4 a:link, h4 a:visited, h4 a:hover
+{
+    font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+    font-size: 16px;
+    color: #441909;
+}
+
+h4, h4 a, h4 a:link {
+    text-decoration: none;
+}
+
+h5, h5 a, h5 a:link, h5 a:visited, h5 a:hover
+{
+    font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+    font-size: 14px;
+    color: #441909;
+}
+
+h5, h5 a, h5 a:link {
+    text-decoration: none;
+}
+
+h6, h6 a, h6 a:link, h6 a:visited, h6 a:hover
+{
+    /*font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;*/
+    /*font-size: 12px;*/
+    /*color: #441909;*/
+    color: #8DDE00;
+    height: auto;
+    font-size: 20px;
+    padding-top: 6px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    font-family: verdana;
+    margin-top: 5px;
+    margin-bottom:5px;
+    background: url('images/Page-BgTexture.jpg');
+}
+
+h6, h6 a, h6 a:link {
+    text-decoration: none;
+}
+
+
+a:link {
+    text-decoration: none;
+    color: #333333;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+.logininfo a {
+    color: #8DDE00;
+}
+
+
+/* Finish Content headings Fonts & Colors  */
+/* end PostContent */
+
+/* begin PostBullets */
+/* Start Content list */
+ol, ul
+{
+    color: #26444B;
+    margin:1em 0 1em 2em;
+    padding:0;
+    font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+    font-size: 12px;
+}
+
+li ol, li ul
+{
+    margin:0.5em 0 0.5em 2em;
+    padding:0;
+}
+
+li 
+{
+    margin:0.2em 0;
+    padding:0;
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+ol
+{
+    list-style-position:inside;
+
+}
+
+p {
+    font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+
+
+
+
+
+/* set background texture and indents margins */
+body
+{
+    padding: 20px 15px 20px 15px;
+    background-color: #000000;
+    background-image: url('images/Page-BgTexture.jpg');
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: top left;
+    /* sets min width to stop the right blocks going out of alignment */
+    min-width: 960px;
+}
+
+
+/* sets up the header min size, height and image - logo set in header.html */
+/* hieght adjusted to take into account padding */
+#header-home {
+
+    min-width: 600px;
+    height: 105px;
+    /* this images replaced by the php date change script */
+    /* background-image: url('images/Header.png'); */
+    background-repeat: no-repeat;
+    background-color: #26B1E0;
+    border-left: 8px solid white;
+    border-right: 8px solid white;
+    border-top: 8px solid white;
+    border-bottom: 0px;
+}
+
+#header {
+    padding: ;
+    min-width: 600px;
+    height: 105px;
+    /* this images replaced by the php date change script */
+    /* background-image: url('images/Header.png'); */
+    background-repeat: no-repeat;
+    background-color: #26B1E0;
+    border-left: 8px solid white;
+    border-right: 8px solid white;
+    border-top: 8px solid white;
+    border-bottom: 0px;
+}
+
+#accessibility {
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+
+/* sets up the breacrumbs bar, needs to take into account padding at the top of the main content */
+.navbar {
+    background-color: #26B1E0;
+    color: white;
+    border: none;
+    height: 28px;
+    margin-top: 0px;
+    border-left: 8px solid white;
+    border-right: 8px solid white;
+
+}
+
+/* sets the navbar in the footer */
+#footer .navbar {
+    background-color: black;
+    margin-top: 0px;
+    border: none;
+}
+
+
+.clearer {
+    height: 0px;
+}
+
+.navbar .breadcrumb {
+    padding-top: 2px;
+    padding-left: 3px;
+    color: white;
+}
+
+.navbar .breadcrumb .li .ul {
+    color: white;
+}
+
+/* set the menu text - you are logged in as */
+.headermenu {
+    font-family: verdana;
+    margin-right: 15px;
+    margin-top: 10px;
+    color: white;
+    font-size: 14px;
+    float: right;
+    top: 40px;
+}
+
+
+.date {
+    color: white;
+    font-size: 14px;
+}
+
+#bluepage {
+    background-color: #26B1E0;
+    border-left: 8px solid white;
+    border-right: 8px solid white;
+    /* padding-bottom: 15px; */
+    padding-top: 10px;
+
+}
+
+
+#content {
+
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+
+    height: 100%;
+}
+
+/*#mis {*/
+/*	float: right;*/
+/*	background-color: red;*/
+/*}*/
+
+.generalboxcontent {
+    background-color: white;
+
+}
+
+.modified {
+    font-size: 14px;
+}
+
+.menubar {
+    color: #555555;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.9em;
+    text-align: middle;
+    font-weight:normal;
+    border-left: 8px solid white;
+    border-right: 8px solid white;
+}
+
+
+/* columns */
+/* left and right column headers and sets spacing to middle column */
+#left-column .header {
+    background-image: url('images/Page-BgTexture.jpg');
+    margin-right: 10px;
+    border: none;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+#left-column  h2 {
+    color: white;
+    font-size: 13px;
+}
+
+#left-column .content {
+    background-color: white;
+    margin-right: 10px;
+}
+
+#right-column .header {
+    background-image: url('images/Page-BgTexture.jpg');
+    margin-left: 10px;
+    border: none;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+#right-column .content {
+    background-color: white;
+    margin-left: 10px;
+}
+
+#right-column  h2 {
+    color: white;
+    font-size: 13px;
+}
+
+#middle-column {
+    background-color: white;
+    padding-top: 10px;
+    border: 1px solid black;
+
+}
+
+.headermain {
+
+}
+
+/* footer settings */
+#footer {
+    background-color: black;
+    padding-top: 10px;
+    color: white;
+    margin-top: 0px;
+    border-left: 8px solid white;
+    border-right: 8px solid white;
+
+    border-bottom: 8px solid white;
+    font-size: 12px;
+    height: 80px;
+    clear: both;
+}
+
+#mod-resource-view div#footer {
+    margin-top: 0px;
+}
+
+/* link the very bottom of the page */
+.homelink a {
+    color: white;
+}
+
+/***
+ *** Calendar
+ ***/
+
+table.minicalendar {
+    width: 100%;
+    margin:10px auto;
+    padding:2px;
+    border-width:0px;
+    border-style:solid;
+    border-collapse:separate;
+    border-spacing:1px !important;
+    font-size: 12px;
+}
+
+table.minicalendar tr.weekdays th {
+    border-style: none;
+}
+
+table.minicalendar tr td.day {
+    border-style: solid;
+    border-width: 0px;
+}
+
+table.calendarmonth {
+    border-collapse:separate;
+    border-spacing:1px !important;
+}
+
+table.calendarmonth tr td  {
+    border-style: solid;
+    border-width: 1px;
+}
+
+table.weekday event_course {
+    background-color: red;
+}
+
+#calendar .today,
+.minicalendar .today {
+    border-color:#8DDE00 !important;
+    background-color: #8DDE00;
+}
+
+/* colors for calendar events */
+#calendar .event_global,
+.minicalendar .event_global,
+.block_calendar_month .event_global {
+    border-color:#2EBA0E !important;
+    background-color: #2EBA0E;
+}
+
+#calendar .event_course,
+.minicalendar .event_course,
+.block_calendar_month .event_course {
+    border-color:#26B1E0 !important;
+    background-color:#26B1E0;
+}
+
+#calendar .event_group,
+.minicalendar .event_group,
+.block_calendar_month .event_group {
+    border-color:#FBBB23 !important;
+    background-color:#FBBB23;
+}
+
+#calendar .event_user,
+.minicalendar .event_user,
+.block_calendar_month .event_user {
+    border-color:#A1BECB !important;
+    background-color:#A1BECB;
+}
+
+.cal_popup_fg {
+    background-color:#FEF9F6;
+}
+
+.cal_popup_bg {
+    border-color:#668ACC;
+    background-color:#FEF9F6;
+}
+
+
+/* elibrarytext */
+.elibrarytext {
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size:12px;
+    padding-left: 2px;
+    color: #244E6E;
+}
+
+a.elibrarytext:link {
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size:12px;
+    padding-left: 2px;
+    color: #244E6E;
+}
+a.elibrarytext:visited {
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size:12px;
+    padding-left: 2px;
+    color: #244E6E;
+}
+a.elibrarytext:hover {
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size:12px;
+    padding-left: 2px;
+    color: #244E6E;
+}
+
+/* themeing the heading block for forum posts */
+.header {
+    color: black;
+    border: none;
+    border-color: white;
+    height: 30px;
+}
+
+.forumpost {
+    border: 0px;
+
+}
+
+.forumpost .header {
+    font-family: verdana;
+    font-size: 12px;
+    background: url('images/Page-BgTexture.jpg');
+}
+
+.forumpost .header .subject {
+    color: #8DDE00;
+    height: 20px;
+    font-size: 18px;
+}
+
+.forumpost .header .author  {
+    color: white;
+    font-size: 14px;
+}
+
+.forumpost .header .author a {
+    color: white;
+    font-size: 14px;
+}
+
+
+.loginbox {
+    margin-top: 10px;
+    background-color: white;
+}
+
+.generalbox {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom-bottom: 1px;
+    border-bottom-color: black;
+    border-bottom-style: dashed;
+}
+
+/* sets small icons size when editing pages */
+img.iconsmall {
+    vertical-align:middle;
+    margin-right:1px;
+    width:11px;
+    height:11px;
+    border:0px;
+}
+
+/* themes the file picker box and simplfies it */
+#files-index {
+    background-color: white;
+}
+
+#files-index .files {
+
+}
+
+
+/* knock out the backgorund imge to mask div flowing problems  */
+#files-index {
+    background-image: none;
+}
+
+
+#files-index #bluepage {
+    background-color: white;
+}
+
+/* knock out the blue borders */
+#files-index #content {
+    background-color: white;
+    border-left: none;
+    border-right: none;
+}
+
+#files-index .menubar{
+    display: none;
+}
+
+#files-index .date {
+    color: black;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+
+
+/* ILP SETTINGS */
+
+/*
+* @copyright &copy; 2007 University of London Computer Centre
+* @author http://www.ulcc.ac.uk, http://moodle.ulcc.ac.uk
+* @license http://www.gnu.org/copyleft/gpl.html GNU Public License
+* @package ILP
+*/
+
+/* General page setting */
+#blocks-ilp-view div#content {padding-left: 10px; padding-right: 10px;}
+#blocks-ilp-view table td{margin:3px; padding:5px; }
+#blocks-ilp-view table.generalbox { width:99%; }
+#blocks-ilp-view div.generalbox {margin:3px; padding:5px;}
+#blocks-ilp-view div.generalbox h2 {margin:0; padding:0}
+
+/* Add new post button */
+div.addbox { text-align:center; margin:5px; }
+div.addbox a { border: 1px solid #000; padding:5px; }
+
+/* Comments box */
+.ilpcenter { text-align:center; }
+.ilpcomment { width:85%; text-align:left; font-size:0.8em; margin-top:3px; margin-bottom:3px; padding:3px; }
+.ilpcomment .commands { font-size: 0.9em; padding-top: 0.5em; text-align:right; clear: both; }
+
+/* Student Status Colours */
+h1.status-0, h2.status-0, h3.status-0, span.status-0 { color: #00984b; }
+h1.status-1, h2.status-1, h3.status-1, span.status-1 { color: #ff7e00; }
+h1.status-2, h2.status-2, h3.status-2, span.status-2 { color: #ff0000; }
+span.status-0, span.status-1, span.status-2 { font-weight:bold; }
+
+/* Use full-size profile image */
+#blocks-ilp-view .userpicture { width: 100px; height: 100px; }
+
+/* YUI Grid http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css */
+
+ilp_post,.yui-t4 {margin:auto;text-align:left;width:99%;*width:99%;}
+.ilp_post { margin:3px; }
+.yui-t4 {border: 1px solid #ccc; padding:3px; }
+.yui-b{position:relative;}
+.yui-b{_position:static;}
+.yui-main .yui-b{position:static;}
+.yui-main{width:100%;}
+.yui-t4 .yui-main {float:left;margin-right:-25em;}
+.yui-t4 .yui-b{float:right;width:15.8456em;*width:15.50em;}
+.yui-t4 .yui-main .yui-b{margin-right:16.8456em;*margin-right:16.55em;}
+.yui-main .yui-b{float:none;width:auto;}
+.yui-gd .yui-u{float:left;}
+.yui-gd div.first{float:left;}
+.yui-gd .yui-u{width:16%;margin-left:1.99%; }
+.yui-gd .yui-u{width:80%;border-right:1px dashed #ccc;border-left:1px dashed #ccc; padding-left:2px;}
+.yui-gd div.first{width:15%;border:none;}
+.yui-gd div.first{margin-left:0;}
+
+.yui-t4 .yui-b img.achieved {position: absolute; bottom:0; right:0}
+.yui-t4 .yui-b ul {margin: 5px 0 5px 0; padding-left: 0; border: none;}
+.yui-t4 .yui-b ul li { margin-left: 0; padding-left: 2px; border: none; list-style: none;}
+.yui-t4 .yui-b ul li:before { content: "\0020 \0020 \0020 \00BB \0020"; }
+.yui-t4 .yui-b .commands { font-size: 0.8em; padding-top: 0em; clear: both; }
+.yui-t4 .yui-b form {display:inline;}
+.yui-t4 .yui-b form select, .yui-t4 .yui-b form input {font-size:0.8em;}
+
+.bd:after,.yui-gd:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.bd,.yui-gd{zoom:1;}
+
+
+
+/***
+ *** Modules: Chat
+ ***/
+
+.message .menubar {
+    background-color: red;
+    display: none;
+}
+
+body#message-header {
+    height: 300px;
+}
+
+body#message-user {
+    background-image: none;
+    background-color: white;
+}
+body#message-messages {
+    background-image: none;
+    background-color: white;
+}
+body#message-send {
+    background-image: none;
+    background-color: white;
+}
+body#message-user div#content {
+    margin-top: 0;
+    padding-top: 0;
+    background-color: white;
+}
+body#message-user div#header {
+    display: none;
+
+}
+
+/* word of the day themeing */
+
+#inst16480 {
+    background: red;
+}
+
+#inst16480 .content .image {
+    display: none;
+}
+
+#inst16480 .content .title {
+    display: none;
+}
+
+#inst16480 .content .link {
+    display: none;
+}
+
+#inst16480 .content .description {
+
+    font-size: 14px;
+}
+
+
+
+/*
+#plp {
+background-color:#FFFFFF;
+margin-top: 50px;
+margin-bottom: 50px;
+margin-left: auto;
+margin-right: auto;
+padding: 0px;
+padding-bottom: 30px;
+float: left;
+}*/
+
+#ilp-profile-overview {
+    /*    background-color: teal;*/
+    /*    height: auto;*/
+
+}
+
+.clearfix {
+
+}
+
+/* shows in the popup messages */
+.note {
+    color: black;
+}
+
+.heading {
+    color: black;
+}
+
+/* fixes an issue with the header being clipped */
+#ilp-profile-overview h1 {
+    padding-bottom: 10px;
+}
+
+/* layout */
+#databases {
+    float: right;
+    width: 39%;
+}
+
+#main_boxes {
+    float: left;
+    width: 60%;
+}
+
+#flightplan {
+    float: right;
+    width: 39%;
+    text-align: left;
+}
+
+
+#external_databases {
+    margin-top: -12px;
+    float: right;
+    clear: right;
+    width: 39%;
+    text-align: left;
+}
+
+
+#external_databases2 {
+    margin-top: 20px;
+    float: right;
+    clear: both;
+    width: 39%;
+    text-align: left;
+}
+
+#info {
+    float: left;
+    width: 60%;
+}
+
+#hidden {
+    display: none;
+}
+
+.errorboxcontent {
+    color: black;
+}
+
+
+#printbutton {
+    text-align: right;
+}
+
+#nav {
+    width: 100%;
+}
+
+.navbutton {
+
+}
+
+/* nav fixes */
+
+#content {
+    border-left: 18px #26B1E0 solid;
+    border-right: 18px #26B1E0 solid;
+}
+
+#content .layout-table {
+    border-left: 0px;
+}
+
+#files-index #bluepage {
+
+}
+
+#bluepage {
+    width: auto;
+
+}
+
+#course-category {
+
+}
+
+#files-index #content {
+
+}
+
+#files-index #page {
+
+}
+
+.headermenu {
+    position: absolute;
+    align: top;
+    right: 30px;
+}
+
+.sideblock {
+    overflow: hidden;
+}
+
+.sideblock .content {
+    word-wrap: break-word;
+}
+
+.clearer {
+    height: -10px;
+
+}
+
+#content {}
+
+
+#content {
+
+}
+
+#layout-table {
+
+}
+
+
+
+#footer {
+    height: auto;
+}
+
+
+#info .infotable h1 {
+    height: auto;
+}
+
+#badges {
+
+}
+
+#one_badge {
+    float: left;
+    display: block;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+#flight_details_layout {
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+#small_badges {
+    float: left;
+    display: block;
+}
+
+#badges_submit {
+
+    float: right;
+    /*clear: left;*/
+
+}
+
+#one_badge .badge {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#one_badge h2 {
+    color: #029f9d;
+}
+
+#one_badge
+
+#backbutton {
+
+    float: left;
+    clear: left;
+}
+
+#content .message .other {
+    color: black;
+
+}
+
+table.message_form  {
+    color: black;
+}
+
+#add_review {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #AEAEAE;
+}
+
+
+/* set the maximum size of the student photo on the plp */
+.student_photo {
+    max-width: 160px;
+}
+
+
+
+.ilpadd h2 {
+    color: red;
+
+}
+
+#mtg {
+    padding-top: 10px;
+    color: #70a02b;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+/* fixes text being white in help popups */
+#content .generalboxcontent {
+    color: black;
+}
+
+
+/* fixes text being white in help popups */
+#middle-column .courseboxcontent {
+    color: black;
+}
+
+#middle-column .courseboxcontent h2 {
+    background-color: #1AC4EE;
+}
+
+
+#files-index {
+    width: 30px;
+}
+
+/* set the messaging system to have a white background */
+#message-messages,
+#message-send,
+#message-user,
+#mod-chat-gui_header_js-chatinput,
+#mod-chat-gui_header_js-jsupdate,
+#mod-chat-gui_header_js-users
+{
+    background:none;
+}
+
+
+#mod-chat-gui_header_js-chatinput {
+    padding: 0px 0px 0px 0px;
+}
+
+#mod-chat-gui_header_js-chatinput #bluepage  {
+  background-color: white;
+    border-left: none;
+    border-right: none;
+}
+#mod-chat-gui_header_js-chatinput #bluepage #content  {
+ background-color: white ;
+    border-left: none;
+    border-right: none;
+}
+
+
+#mod-chat-gui_header_js-users {
+    padding: 0px 0px 0px 0px;
+}
+
+#mod-chat-gui_header_js-users #bluepage {
+    background-color: white;
+}
+
+#mod-chat-gui_header_js-users #bluepage #content {
+    background-color: white;
+    border-left: 0px;
+     border-right: 0px;
+}
+
+.generalboxcontent {
+    text-align: left;
+}
+
+.generalboxcontent h2 {
+    color: black;
+    background-color: teal;
+}
+
+#plp .ilp-profile-overview h2 {
+    color: black;
+    background-color: teal;
+}
+
+#ilp-target-overview {
+    color: black;
+
+}
+
+#tracker {
+    text-align: center;
+}
+
+table#attempts {
+    background-color: white;
+}
+
+#content .gradeparent .left_scroller {
+   
+    float:left;
+}
+
+#content  .right_scroller {
+    background-color: white;
+}
+
+table#user-grades {
+      background-color: white;
+}

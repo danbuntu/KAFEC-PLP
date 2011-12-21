@@ -1,0 +1,29 @@
+<?php
+
+    if (isset($this->config)) {
+
+        $formtitle = $this->config->title;
+
+    } else {
+
+        $formtitle = "MoodleTxt";
+
+    }
+
+?>
+<table cellpadding="9" cellspacing="0">
+    <tr valign="top">
+        <td align="right">
+            <?php print_string('configtitle', 'block_moodletxt'); ?>:
+        </td>
+        <td>
+            <input type="text" size="20" name="title" value="<?php echo($formtitle); ?>" />
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <input type="submit" value="<?php print_string('savechanges') ?>" />
+        </td>
+    </tr>
+</table>
+<?php use_html_editor(); ?>

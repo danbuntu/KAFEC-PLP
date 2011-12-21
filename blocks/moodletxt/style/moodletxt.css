@@ -1,0 +1,280 @@
+div.mdltxt_prev {
+
+    width               :   30%;
+    float               :   left;
+
+}
+
+div.mdltxt_next {
+
+    width               :   30%;
+    float               :   right;
+    text-align          :   right;
+
+}
+
+div.mdltxt_half_centred {
+
+    width               :   50%;
+    margin              :   0 auto;
+
+}
+
+
+div.mdltxt_right {
+
+    width               :   45%;
+    float               :   right;
+    margin-bottom       :   2em;
+
+}
+
+div.mdltxt_left {
+
+    float               :   left;
+    width               :   45%;
+    margin-bottom       :   2em;
+
+}
+
+div.mdltxt_clearer {
+
+    width               :   100%;
+    clear               :   both;
+
+}
+
+div.rssitem {
+
+    border              :   1px #000000 dashed;
+    margin-bottom       :   2em;
+
+}
+
+h3.rssitem {
+
+    margin-top          :   0;
+
+}
+
+p.rssbody {
+
+    margin-left         :   1em;
+    margin-right        :   1em;
+
+}
+
+table.mdltxt_resultlist {
+
+    text-align          :   center;
+    margin              :   0 auto;
+
+}
+
+table.mdltxt_fullwidth {
+
+    width               :   100%;
+
+}
+
+table.mdltxt_halfwidth {
+
+    width               :   50%;
+
+}
+
+table.mdltxt_resultlist th {
+
+    border-bottom       :   1px dashed #000000;
+
+}
+
+.mdltxt_columnline {
+
+    border-right        :   1px dashed #000000;
+
+}
+
+table.mdltxt_dynamictable {
+
+    margin-top          :   1em;
+    margin-bottom       :   1em;
+
+}
+
+table.mdltxt_dynamictable th {
+
+    cursor              :   pointer;
+
+}
+
+table.mdltxt_dynamictable th div.sortIcon {
+
+    margin              :   0 auto;
+    width               :   21px;
+    height              :   9px;
+    background-repeat   :   no-repeat;
+    background-position :   center left;
+
+}
+
+table.mdltxt_dynamictable th.header div.sortIcon {
+
+    background-image    :   url(<?php echo($CFG->wwwroot); ?>/blocks/moodletxt/pix/sort.gif);
+
+}
+
+table.mdltxt_dynamictable th.headerSortUp div.sortIcon {
+
+    background-image    :   url(<?php echo($CFG->wwwroot); ?>/blocks/moodletxt/pix/asc.gif);
+
+}
+
+table.mdltxt_dynamictable th.headerSortDown div.sortIcon {
+
+    background-image    :   url(<?php echo($CFG->wwwroot); ?>/blocks/moodletxt/pix/desc.gif);
+
+}
+
+table.mdltxt_dynamictable tr.even {
+
+    background-color    :   #EEEEEE;
+
+}
+
+div.tablePager {
+
+    float               :   right;
+    width               :   40%;
+    text-align          :   right;
+
+}
+
+label.mdltxt_align_form {
+
+    float               :   left;
+    width               :   45%;
+    text-align          :   right;
+
+}
+
+input[type="submit"].align_form {
+
+    margin-left         :   45%;
+
+}
+
+.mdltxt_aligned_form_field {
+    margin-left         :   45%;
+}
+
+fieldset {
+    border              :   1px #000000 solid;
+    text-align          :   justify;
+}
+
+fieldset.mdltxt_userset {
+
+    padding            :   5px 10px 10px 10px;
+
+}
+
+ul.mdltxt_inbox_folderlist,
+ul.mdltxt_addressbook_list {
+
+    margin-left         :   4em;
+    padding             :   0;
+
+}
+
+ul.mdltxt_inbox_folderlist li,
+ul.mdltxt_addressbook_list li {
+
+    padding-left        :   5px;
+    margin-left         :   5px;
+    font-weight         :   bold;
+    font-size           :   larger;
+
+}
+
+ul.mdltxt_inbox_folderlist li {
+
+    list-style-type     :   disc;
+    list-style-image    :   url(<?php echo($CFG->wwwroot); ?>/blocks/moodletxt/pix/folder_open.gif);
+    list-style-position :   outside;
+
+}
+
+ul.mdltxt_addressbook_list li {
+
+    list-style-type     :   none;
+
+}
+
+ul.mdltxt_addressbook_list li.private {
+
+    list-style-type     :   disc;
+    list-style-image    :   url(<?php echo($CFG->wwwroot); ?>/blocks/moodletxt/pix/icon_teacher.gif);
+    list-style-position :   outside;
+
+}
+
+ul.mdltxt_addressbook_list li.global {
+
+    list-style-type     :   disc;
+    list-style-image    :   url(<?php echo($CFG->wwwroot); ?>/blocks/moodletxt/pix/icon_group.gif);
+    list-style-position :   outside;
+
+}
+
+/*
+ * Autocompleter styling
+ */
+.ac_results {
+	padding: 0px;
+	border: 1px solid black;
+	background-color: white;
+	overflow: hidden;
+	z-index: 99999;
+}
+
+.ac_results ul {
+	width: 100%;
+	list-style-position: outside;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.ac_results li {
+	margin: 0px;
+	padding: 2px 5px;
+	cursor: default;
+	display: block;
+	/*
+	if width will be 100% horizontal scrollbar will apear
+	when scroll mode will be used
+	*/
+	/*width: 100%;*/
+	font: menu;
+	font-size: 12px;
+	/*
+	it is very important, if line-height not setted or setted
+	in relative units scroll will be broken in firefox
+	*/
+	line-height: 16px;
+	overflow: hidden;
+}
+
+.ac_loading {
+	background: white url('indicator.gif') right center no-repeat;
+}
+
+.ac_odd {
+	background-color: #eee;
+}
+
+.ac_over {
+	background-color: #0A246A;
+	color: white;
+}

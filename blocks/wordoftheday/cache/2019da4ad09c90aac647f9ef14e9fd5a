@@ -1,0 +1,453 @@
+O:9:"MagpieRSS":22:{s:6:"parser";i:0;s:12:"current_item";a:0:{}s:5:"items";a:28:{i:0;a:9:{s:2:"id";s:46:"tag:www.bbcworldservice.com,2010-09-23:6595945";s:2:"dc";a:2:{s:10:"identifier";s:7:"6595945";s:7:"subject";s:35:"one planet, kofi annan, development";}s:7:"updated";s:25:"2010-09-23T13:11:57+00:00";s:9:"published";s:25:"2010-09-23T10:22:49+00:00";s:6:"rights";s:14:"not restricted";s:5:"title";s:10:"Kofi Annan";s:7:"summary";s:197:"Ten years in progress, five years to go - time is running out for the world to achieve its Millennium Development Goals. What does Kofi Annan, one of the original architects, think of the progress?";s:4:"link";s:40:"http://www.bbc.co.uk/programmes/p009sjt0";s:12:"atom_content";s:750:"
+            <media:thumbnail url="http://wscdn.bbc.co.uk/worldservice/assets/images/2010/09/23/100923123427_kofi_annan_106x60_nocredit.jpg" width="106" height="60">
+               <img alt="Kofi Annan" width="106" height="60" src="http://wscdn.bbc.co.uk/worldservice/assets/images/2010/09/23/100923123427_kofi_annan_106x60_nocredit.jpg"></img>
+            <media:thumbnail />
+         <media:content />
+      <link />
+      <link rel="related" type="text/html" title="external-audio" href="http://www.bbc.co.uk/iplayer/console/p009sjt0">
+         <media:content />
+      <link />
+      <link rel="related" type="text/html" title="external-download" href="http://www.bbc.co.uk/podcasts/series/oneplanet">
+         <media:content />
+      <link />
+   ";}i:1;a:6:{s:12:"atom_content";s:1302:"
+      <id >tag:www.bbcworldservice.com,2010-09-21:6566258</id>
+      <dc:identifier >6566258<dc:identifier />
+      <updated >2010-09-21T16:52:22+00:00</updated>
+      <published >2010-09-21T14:20:31+00:00</published>
+      <category xml:lang="en-GB" term="worldservice" label="worldservice"></category>
+      <category xml:lang="en-GB" term="news" label="News"></category>
+      <rights >restricted</rights>
+      
+            <media:thumbnail url="http://wscdn.bbc.co.uk/worldservice/assets/images/2010/09/22/100922092742_dementia_106x60_nocredit.jpg" width="106" height="60">
+               <img alt="Health carer holds the hand of an elderly patient" width="106" height="60" src="http://wscdn.bbc.co.uk/worldservice/assets/images/2010/09/22/100922092742_dementia_106x60_nocredit.jpg"></img>
+            <media:thumbnail />
+         <media:content />
+      <link />
+      <link rel="related" type="text/html" title="audio" href="http://www.bbc.co.uk/worldservice/news/2010/09/100921_dementia_johnson.shtml">
+         <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="related" media="handheld" title="mobile-av_instance" type="text/html" href="http://www.bbc.co.uk/worldservice/mobile/news/2010/09/100921_dementia_johnson.shtml"><xhtml:link />
+         <media:content />
+      <link />
+   ";s:5:"title";s:42:"The 'sheer terror' of living with dementia";s:7:"summary";s:193:"A new report on the global impact of dementia calls the illness the most significant health and social crisis of the century. Anne Johnson talks to the BBC about how she copes with the disease.";s:2:"dc";a:1:{s:7:"subject";s:33:"dementia, alzheimer, Anne Johhson";}s:4:"link";s:82:"http://www.bbc.co.uk/worldservice/news/2010/09/100921_dementia_johnson_nh_hs.shtml";s:5:"xhtml";a:1:{s:4:"link";s:89:"http://www.bbc.co.uk/worldservice/mobile/news/2010/09/100921_dementia_johnson_nh_hs.shtml";}}i:2;a:5:{s:12:"atom_content";s:1124:"
+      <id >tag:www.bbcworldservice.com,2010-09-20:6547214</id>
+      <dc:identifier >6547214<dc:identifier />
+      <updated >2010-09-20T14:26:33+00:00</updated>
+      <published >2010-09-20T14:05:56+00:00</published>
+      <category xml:lang="en-GB" term="worldservice" label="worldservice"></category>
+      <category term="external"></category>
+      <rights >not restricted</rights>
+      
+            <media:thumbnail url="http://wscdn.bbc.co.uk/worldservice/assets/images/2010/09/20/100920140825_young_lovers_106.jpg" width="106" height="60">
+               <img alt="Young lovers" width="106" height="60" src="http://wscdn.bbc.co.uk/worldservice/assets/images/2010/09/20/100920140825_young_lovers_106.jpg"></img>
+            <media:thumbnail />
+         <media:content />
+      <link />
+      <link rel="related" type="text/html" title="external-audio" href="http://www.bbc.co.uk/iplayer/console/p009qkg1">
+         <media:content />
+      <link />
+      <link rel="related" type="text/html" title="external-download" href="http://www.bbc.co.uk/podcasts/series/healthc">
+         <media:content />
+      <link />
+   ";s:5:"title";s:19:"Encouraging safesex";s:7:"summary";s:92:"Health Check looks at how young people are being educated about contraception and safe sex. ";s:2:"dc";a:1:{s:7:"subject";s:36:"safe sex, contraception, teenage sex";}s:4:"link";s:40:"http://www.bbc.co.uk/programmes/p009qkg1";}i:3;a:5:{s:12:"atom_content";s:1146:"
+      <id >tag:www.bbcworldservice.com,2010-09-15:6484115</id>
+      <dc:identifier >6484115<dc:identifier />
+      <updated >2010-09-16T11:41:53+00:00</updated>
+      <published >2010-09-15T19:34:23+00:00</published>
+      <category xml:lang="en-GB" term="worldservice" label="worldservice"></category>
+      <category term="external"></category>
+      <rights >not restricted</rights>
+      
+            <media:thumbnail url="http://wscdn.bbc.co.uk/worldservice/assets/images/2010/09/16/100916113803_branson_106.jpg" width="106" height="60">
+               <img alt="Entrepreneur Richard Branson in sunglasses" width="106" height="60" src="http://wscdn.bbc.co.uk/worldservice/assets/images/2010/09/16/100916113803_branson_106.jpg"></img>
+            <media:thumbnail />
+         <media:content />
+      <link />
+      <link rel="related" type="text/html" title="external-audio" href="http://www.bbc.co.uk/iplayer/console/p009nmc5">
+         <media:content />
+      <link />
+      <link rel="related" type="text/html" title="external-download" href="http://www.bbc.co.uk/podcasts/series/oneplanet">
+         <media:content />
+      <link />
+   ";s:5:"title";s:15:"Richard Branson";s:7:"summary";s:179:"What does flamboyant entrepreneur Richard Branson think of the celebrity climate change bandwagon and the social responsibility of the world's billionaires? One Planet finds out. ";s:2:"dc";a:1:{s:7:"subject";s:54:"one planet, richard branson, interview, climate change";}s:4:"link";s:40:"http://www.bbc.co.uk/programmes/p009nmc5";}i:4;a:6:{s:12:"atom_content";s:1301:"
+      <id >tag:www.bbcworldservice.com,2010-09-13:6450212</id>
+      <dc:identifier >6450212<dc:identifier />
+      <updated >2010-09-13T17:00:24+00:00</updated>
+      <published >2010-09-13T15:46:38+00:00</published>
+      <category xml:lang="en-GB" term="worldservice" label="worldservice"></category>
+      <category xml:lang="en-GB" term="news" label="News"></category>
+      <rights >restricted</rights>
+      
+            <media:thumbnail url="http://wscdn.bbc.co.uk/worldservice/assets/images/2010/09/13/100913154056_supermario_106x60_nocredit.jpg" width="106" height="60">
+               <img alt="Super Mario in some of his incarnations (PA)" width="106" height="60" src="http://wscdn.bbc.co.uk/worldservice/assets/images/2010/09/13/100913154056_supermario_106x60_nocredit.jpg"></img>
+            <media:thumbnail />
+         <media:content />
+      <link />
+      <link rel="related" type="text/html" title="audio" href="http://www.bbc.co.uk/worldservice/news/2010/09/100913_mario_james_binn.shtml">
+         <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="related" media="handheld" title="mobile-av_instance" type="text/html" href="http://www.bbc.co.uk/worldservice/mobile/news/2010/09/100913_mario_james_binn.shtml"><xhtml:link />
+         <media:content />
+      <link />
+   ";s:5:"title";s:65:"Super Mario: plucky plumber celebrates 25 years of gaming success";s:7:"summary";s:192:"Super Mario Bros, one of the most successful computer games in the world, is celebrating its 25th birthday. James Binn from the international computer games magazine Edge explains his appeal. ";s:2:"dc";a:1:{s:7:"subject";s:37:"Super Mario, Jame Binn, computer game";}s:4:"link";s:77:"http://www.bbc.co.uk/worldservice/news/2010/09/100913_super_mario_nh_hs.shtml";s:5:"xhtml";a:1:{s:4:"link";s:84:"http://www.bbc.co.uk/worldservice/mobile/news/2010/09/100913_super_mario_nh_hs.shtml";}}i:5;a:4:{s:12:"atom_content";s:1186:"
+      <id >tag:www.bbcworldservice.com,2010-09-14:6468524</id>
+      <dc:identifier >6468524<dc:identifier />
+      <updated >2010-09-15T10:43:41+00:00</updated>
+      <published >2010-09-14T19:53:59+00:00</published>
+      <category xml:lang="en-GB" term="worldservice" label="worldservice"></category>
+      <category term="external"></category>
+      <rights >not restricted</rights>
+      
+            <media:thumbnail url="http://wscdn.bbc.co.uk/worldservice/assets/images/2010/09/14/100914195221_graphene_106x60_nocredit.jpg" width="106" height="60">
+               <img alt="Graphene picture credit: Jannik Meyer, University of Ulm" width="106" height="60" src="http://wscdn.bbc.co.uk/worldservice/assets/images/2010/09/14/100914195221_graphene_106x60_nocredit.jpg"></img>
+            <media:thumbnail />
+         <media:content />
+      <link />
+      <link rel="related" type="text/html" title="external-audio" href="http://www.bbc.co.uk/iplayer/console/p009lzgt">
+         <media:content />
+      <link />
+      <link rel="related" type="text/html" title="external-download" href="http://www.bbc.co.uk/podcasts/series/discovery">
+         <media:content />
+      <link />
+   ";s:5:"title";s:20:"Graphene's potential";s:7:"summary";s:174:"The toughest of materials, chemically inert, impermeable to gases, almost completely transparent - graphene is an exciting new carbon that will transform technology. But how?";s:4:"link";s:40:"http://www.bbc.co.uk/programmes/p009lzgt";}i:6;a:4:{s:12:"atom_content";s:1106:"
+      <id >tag:www.bbcworldservice.com,2010-09-13:6446461</id>
+      <dc:identifier >6446461<dc:identifier />
+      <updated >2010-09-13T13:01:19+00:00</updated>
+      <published >2010-09-13T13:01:19+00:00</published>
+      <category xml:lang="en-GB" term="worldservice" label="worldservice"></category>
+      <category term="external"></category>
+      <rights >not restricted</rights>
+      
+            <media:thumbnail url="http://www.bbc.co.uk/worldservice/assets/images/2010/04/27/100427135134_malaria_106.jpg" width="106" height="60">
+               <img alt="Mosquito" width="106" height="60" src="http://www.bbc.co.uk/worldservice/assets/images/2010/04/27/100427135134_malaria_106.jpg"></img>
+            <media:thumbnail />
+         <media:content />
+      <link />
+      <link rel="related" type="text/html" title="external-audio" href="http://www.bbc.co.uk/iplayer/console/p009kv49">
+         <media:content />
+      <link />
+      <link rel="related" type="text/html" title="external-download" href="http://www.bbc.co.uk/podcasts/series/healthc">
+         <media:content />
+      <link />
+   ";s:5:"title";s:12:"Medicine man";s:7:"summary";s:47:"The doctor who uncovered the secrets of malaria";s:4:"link";s:40:"http://www.bbc.co.uk/programmes/p009kv49";}i:7;a:4:{s:12:"atom_content";s:1175:"
+      <id >tag:www.bbcworldservice.com,2010-09-07:6370864</id>
+      <dc:identifier >6370864<dc:identifier />
+      <updated >2010-09-09T14:03:14+00:00</updated>
+      <published >2010-09-07T21:23:37+00:00</published>
+      <category xml:lang="en-GB" term="worldservice" label="worldservice"></category>
+      <category term="external"></category>
+      <rights >not restricted</rights>
+      
+            <media:thumbnail url="http://wscdn.bbc.co.uk/worldservice/assets/images/2010/09/09/100909140112_oil_spill_106x60_nocredit.jpg" width="106" height="60">
+               <img alt="A man with a net cleaning up oil on a beach" width="106" height="60" src="http://wscdn.bbc.co.uk/worldservice/assets/images/2010/09/09/100909140112_oil_spill_106x60_nocredit.jpg"></img>
+            <media:thumbnail />
+         <media:content />
+      <link />
+      <link rel="related" type="text/html" title="external-audio" href="http://www.bbc.co.uk/iplayer/console/p009hs57">
+         <media:content />
+      <link />
+      <link rel="related" type="text/html" title="external-download" href="http://www.bbc.co.uk/podcasts/series/oneplanet">
+         <media:content />
+      <link />
+   ";s:5:"title";s:20:"Louisiana oil spill ";s:7:"summary";s:178:"As BP publishes it's report into what happened on April 20th on the Deepwater Horizon oil rig, what is the environmental and political fallout from the world's biggest oil spill?";s:4:"link";s:40:"http://www.bbc.co.uk/programmes/p009hs57";}i:8;a:4:{s:12:"atom_content";s:1167:"
+      <id >tag:www.bbcworldservice.com,2010-09-07:6370398</id>
+      <dc:identifier >6370398<dc:identifier />
+      <updated >2010-09-08T13:12:11+00:00</updated>
+      <published >2010-09-07T20:01:29+00:00</published>
+      <category xml:lang="en-GB" term="worldservice" label="worldservice"></category>
+      <category term="external"></category>
+      <rights >not restricted</rights>
+      
+            <media:thumbnail url="http://wscdn.bbc.co.uk/worldservice/assets/images/2010/09/08/100908130718_elderly_hands_106x60_nocredit.jpg" width="106" height="60">
+               <img alt="The hands of an elderly man" width="106" height="60" src="http://wscdn.bbc.co.uk/worldservice/assets/images/2010/09/08/100908130718_elderly_hands_106x60_nocredit.jpg"></img>
+            <media:thumbnail />
+         <media:content />
+      <link />
+      <link rel="related" type="text/html" title="external-audio" href="http://www.bbc.co.uk/iplayer/console/p009hrwq">
+         <media:content />
+      <link />
+      <link rel="related" type="text/html" title="external-download" href="http://www.bbc.co.uk/podcasts/series/discovery">
+         <media:content />
+      <link />
+   ";s:5:"title";s:14:"Muscle wastage";s:7:"summary";s:217:"The molecular pathways within muscles are beginning to be understood. Drug companies can now target new ways of replacing what is lost, offering hope to people who suffer from muscle wastage due to illness or ageing. ";s:4:"link";s:40:"http://www.bbc.co.uk/programmes/p009hrwq";}i:9;a:2:{s:12:"atom_content";s:1169:"
+      <id >tag:www.bbcworldservice.com,2010-09-06:6352251</id>
+      <dc:identifier >6352251<dc:identifier />
+      <updated >2010-09-06T17:10:40+00:00</updated>
+      <published >2010-09-06T17:10:40+00:00</published>
+      <category xml:lang="en-GB" term="worldservice" label="worldservice"></category>
+      <category term="external"></category>
+      <rights >not restricted</rights>
+      
+            <media:thumbnail url="http://wscdn.bbc.co.uk/worldservice/assets/images/2010/09/06/100906165748_eyes_106x60_nocredit.jpg" width="106" height="60">
+               <img alt="Close up of a model applying make-up to her eyes." width="106" height="60" src="http://wscdn.bbc.co.uk/worldservice/assets/images/2010/09/06/100906165748_eyes_106x60_nocredit.jpg"></img>
+            <media:thumbnail />
+         <media:content />
+      <link />
+      <link rel="related" type="text/html" title="external-audio" href="http://www.bbc.co.uk/iplayer/console/p009kv49">
+         <media:content />
+      <link />
+      <link rel="related" type="text/html" title="external-download" href="http://www.bbc.co.uk/podcasts/series/healthc">
+         <media:content />
+      <link />
+   ";s:4:"link";s:40:"http://www.bbc.co.uk/programmes/p009hr8s";}i:10;a:5:{s:12:"atom_content";s:1136:"
+      <id >tag:www.bbcworldservice.com,2010-09-03:6314114</id>
+      <dc:identifier >6314114<dc:identifier />
+      <updated >2010-09-03T14:47:57+00:00</updated>
+      <published >2010-09-03T14:47:57+00:00</published>
+      <category xml:lang="en-GB" term="worldservice" label="worldservice"></category>
+      <category term="external"></category>
+      <rights >not restricted</rights>
+      
+            <media:thumbnail url="http://www.bbc.co.uk/worldservice/assets/images/2010/04/05/100405114559_cownose_106x60_nocredit.jpg" width="106" height="60">
+               <img alt="A cow's nose" width="106" height="60" src="http://www.bbc.co.uk/worldservice/assets/images/2010/04/05/100405114559_cownose_106x60_nocredit.jpg"></img>
+            <media:thumbnail />
+         <media:content />
+      <link />
+      <link rel="related" type="text/html" title="external-audio" href="http://www.bbc.co.uk/iplayer/console/p009sjt0">
+         <media:content />
+      <link />
+      <link rel="related" type="text/html" title="external-download" href="http://www.bbc.co.uk/podcasts/series/oneplanet">
+         <media:content />
+      <link />
+   ";s:5:"title";s:10:"One Planet";s:7:"summary";s:119:"Jo Fidgen reports on a new type of dairy farm that is heading to Europe - super dairies with herds of over 8,000 cows. ";s:2:"dc";a:1:{s:7:"subject";s:25:"One Planet, cows, dairies";}s:4:"link";s:40:"http://www.bbc.co.uk/programmes/p009hq8g";}i:11;a:5:{s:12:"atom_content";s:1156:"
+      <id >tag:www.bbcworldservice.com,2010-09-01:6276921</id>
+      <dc:identifier >6276921<dc:identifier />
+      <updated >2010-09-01T13:13:09+00:00</updated>
+      <published >2010-09-01T13:06:22+00:00</published>
+      <category xml:lang="en-GB" term="worldservice" label="worldservice"></category>
+      <category term="external"></category>
+      <rights >not restricted</rights>
+      
+            <media:thumbnail url="http://wscdn.bbc.co.uk/worldservice/assets/images/2010/09/01/100901130318_brian_cox_106.jpg" width="106" height="60">
+               <img alt="Dr Brian Cox, physicist and television presenter" width="106" height="60" src="http://wscdn.bbc.co.uk/worldservice/assets/images/2010/09/01/100901130318_brian_cox_106.jpg"></img>
+            <media:thumbnail />
+         <media:content />
+      <link />
+      <link rel="related" type="text/html" title="external-audio" href="http://www.bbc.co.uk/iplayer/console/p009c5zb">
+         <media:content />
+      <link />
+      <link rel="related" type="text/html" title="external-download" href="http://www.bbc.co.uk/podcasts/series/discovery">
+         <media:content />
+      <link />
+   ";s:5:"title";s:23:"Scientists in Hollywood";s:7:"summary";s:116:"Adam Rutherford heads to Tinseltown to talk to the scientists who have left the lab for the glamour of the film set.";s:2:"dc";a:1:{s:7:"subject";s:38:"adam rutherford, scientists, hollywood";}s:4:"link";s:40:"http://www.bbc.co.uk/programmes/p009c5zb";}i:12;a:6:{s:12:"atom_content";s:1286:"
+      <id >tag:www.bbcworldservice.com,2010-08-31:6262581</id>
+      <dc:identifier >6262581<dc:identifier />
+      <updated >2010-08-31T15:55:29+00:00</updated>
+      <published >2010-08-31T14:48:00+00:00</published>
+      <category xml:lang="en-GB" term="worldservice" label="worldservice"></category>
+      <category xml:lang="en-GB" term="news" label="News"></category>
+      <rights >restricted</rights>
+      
+            <media:thumbnail url="http://wscdn.bbc.co.uk/worldservice/assets/images/2010/08/31/100831143700_heartbeat_bbc_106.jpg" width="106" height="60">
+               <img alt="A screen grab from the free version of iStethoscope" width="106" height="60" src="http://wscdn.bbc.co.uk/worldservice/assets/images/2010/08/31/100831143700_heartbeat_bbc_106.jpg"></img>
+            <media:thumbnail />
+         <media:content />
+      <link />
+      <link rel="related" type="text/html" title="audio" href="http://www.bbc.co.uk/worldservice/news/2010/08/100831_bentley_wup_sl.shtml">
+         <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="related" media="handheld" title="mobile-av_instance" type="text/html" href="http://www.bbc.co.uk/worldservice/mobile/news/2010/08/100831_bentley_wup_sl.shtml"><xhtml:link />
+         <media:content />
+      <link />
+   ";s:5:"title";s:64:"iStethoscope: the phone app that records and displays heartbeats";s:7:"summary";s:230:"Could a new phone application make the stethoscope redundant? The iStethoscope, which enables doctors to monitor their patients' heartbeats using smartphones, was invented by Professor Peter Bentley from University College London.";s:2:"dc";a:1:{s:7:"subject";s:64:"stethoscope, istethoscope, iphone, app, bentley, doctor, medical";}s:4:"link";s:79:"http://www.bbc.co.uk/worldservice/news/2010/08/100831_istethoscope_wup_sl.shtml";s:5:"xhtml";a:1:{s:4:"link";s:86:"http://www.bbc.co.uk/worldservice/mobile/news/2010/08/100831_istethoscope_wup_sl.shtml";}}i:13;a:5:{s:12:"atom_content";s:1122:"
+      <id >tag:www.bbcworldservice.com,2010-08-31:6258710</id>
+      <dc:identifier >6258710<dc:identifier />
+      <updated >2010-08-31T12:10:36+00:00</updated>
+      <published >2010-08-31T12:10:36+00:00</published>
+      <category xml:lang="en-GB" term="worldservice" label="worldservice"></category>
+      <category term="external"></category>
+      <rights >not restricted</rights>
+      
+            <media:thumbnail url="http://wscdn.bbc.co.uk/worldservice/assets/images/2010/08/31/100831120051_playstation_106.jpg" width="106" height="60">
+               <img alt="Playstation" width="106" height="60" src="http://wscdn.bbc.co.uk/worldservice/assets/images/2010/08/31/100831120051_playstation_106.jpg"></img>
+            <media:thumbnail />
+         <media:content />
+      <link />
+      <link rel="related" type="text/html" title="external-audio" href="http://www.bbc.co.uk/iplayer/console/p009bk8b">
+         <media:content />
+      <link />
+      <link rel="related" type="text/html" title="external-download" href="http://www.bbc.co.uk/podcasts/series/digitalp">
+         <media:content />
+      <link />
+   ";s:5:"title";s:21:"Game for the big bang";s:7:"summary";s:85:"A scientist tries to recreate the Big Bang by hooking up a wall of PS3 Playstations. ";s:2:"dc";a:1:{s:7:"subject";s:37:"digital planet, playstation, big bang";}s:4:"link";s:40:"http://www.bbc.co.uk/programmes/p009bk8b";}i:14;a:5:{s:12:"atom_content";s:876:"
+      <id >tag:www.bbcworldservice.com,2010-08-27:6203184</id>
+      <dc:identifier >6203184<dc:identifier />
+      <updated >2010-08-27T08:59:54+00:00</updated>
+      <published >2010-08-27T08:59:54+00:00</published>
+      <category xml:lang="en-GB" term="worldservice" label="worldservice"></category>
+      <category term="external"></category>
+      <rights >not restricted</rights>
+      
+            <media:thumbnail url="http://wscdn.bbc.co.uk/worldservice/assets/images/2010/08/27/100827085822_krakatoa_volcano_106x60_nocredit.jpg" width="106" height="60">
+               <img alt="How Krakatoa would have looked before the eruption in 1883" width="106" height="60" src="http://wscdn.bbc.co.uk/worldservice/assets/images/2010/08/27/100827085822_krakatoa_volcano_106x60_nocredit.jpg"></img>
+            <media:thumbnail />
+         <media:content />
+      <link />
+   ";s:5:"title";s:16:"Krakatoa volcano";s:7:"summary";s:86:"How the Krakatoa volcano disaster of 1883 wreaked havoc, but also inspired scientists.";s:2:"dc";a:1:{s:7:"subject";s:25:"Krakatoa volcano, witness";}s:4:"link";s:40:"http://www.bbc.co.uk/programmes/p0098gdy";}i:15;a:2:{s:12:"atom_content";s:1223:"
+      <id >tag:www.bbcworldservice.com,2010-07-09:5472838</id>
+      <dc:identifier >5472838<dc:identifier />
+      <updated >2010-07-09T13:38:24+00:00</updated>
+      <published >2010-07-09T13:38:24+00:00</published>
+      <category xml:lang="en-GB" term="worldservice" label="worldservice"></category>
+      <category term="external"></category>
+      <rights >not restricted</rights>
+      
+            <media:thumbnail url="http://wscdn.bbc.co.uk/worldservice/assets/images/2010/07/09/100709111448_kenya_inflatable_tv_106x60_nocredit.jpg" width="106" height="60">
+               <img alt="Watching a world cup match on a massive inflatable screen in rural Kenya" width="106" height="60" src="http://wscdn.bbc.co.uk/worldservice/assets/images/2010/07/09/100709111448_kenya_inflatable_tv_106x60_nocredit.jpg"></img>
+            <media:thumbnail />
+         <media:content />
+      <link />
+      <link rel="related" type="text/html" title="external-audio" href="http://www.bbc.co.uk/iplayer/console/p008yptc">
+         <media:content />
+      <link />
+      <link rel="related" type="text/html" title="external-download" href="http://www.bbc.co.uk/podcasts/series/digitalp">
+         <media:content />
+      <link />
+   ";s:4:"link";s:50:"http://news.bbc.co.uk/1/hi/technology/10542870.stm";}i:16;a:5:{s:12:"atom_content";s:430:"
+      <id >tag:www.bbcworldservice.com,2010-04-14:4096559</id>
+      <dc:identifier >4096559<dc:identifier />
+      <updated >2010-04-14T12:11:33+00:00</updated>
+      <published >2010-04-14T12:11:33+00:00</published>
+      <category xml:lang="en-GB" term="worldservice" label="worldservice"></category>
+      <category term="external"></category>
+      <rights >not restricted</rights>
+      <media:content />
+      <link />
+   ";s:5:"title";s:15:"Wire-free power";s:7:"summary";s:45:"Could wireless electricity be a reality soon?";s:2:"dc";a:1:{s:7:"subject";s:56:"digital planet, digital, wireless, electricity, internet";}s:4:"link";s:49:"http://news.bbc.co.uk/1/hi/technology/8618161.stm";}i:17;a:5:{s:12:"atom_content";s:430:"
+      <id >tag:www.bbcworldservice.com,2009-11-19:2311720</id>
+      <dc:identifier >2311720<dc:identifier />
+      <updated >2009-11-19T14:24:18+00:00</updated>
+      <published >2009-11-19T14:24:18+00:00</published>
+      <category xml:lang="en-GB" term="worldservice" label="worldservice"></category>
+      <category term="external"></category>
+      <rights >not restricted</rights>
+      <media:content />
+      <link />
+   ";s:5:"title";s:14:"Computer curse";s:7:"summary";s:47:"The man who wrote the first ever computer virus";s:2:"dc";a:1:{s:7:"subject";s:35:"computer virus, witness, fred cohen";}s:4:"link";s:49:"http://news.bbc.co.uk/1/hi/technology/8366703.stm";}i:18;a:5:{s:12:"atom_content";s:426:"
+      <id >tag:www.bbcworldservice.com,2009-10-23:2019113</id>
+      <dc:identifier >2019113<dc:identifier />
+      <updated >2009-10-23T14:19:58+00:00</updated>
+      <published >2009-10-23T14:19:58+00:00</published>
+      <category xml:lang="en-GB" term="worldservice" label="worldservice"></category>
+      <category term="external"></category>
+      <rights >restricted</rights>
+      <media:content />
+      <link />
+   ";s:5:"title";s:23:"Broadband in a backpack";s:7:"summary";s:51:"Mobile internet connection from almost any location";s:2:"dc";a:1:{s:7:"subject";s:64:"mobile, disaster, internet, connection, backback, new technology";}s:4:"link";s:49:"http://news.bbc.co.uk/1/hi/technology/8318156.stm";}i:19;a:4:{s:12:"atom_content";s:426:"
+      <id >tag:www.bbcworldservice.com,2009-10-15:1930973</id>
+      <dc:identifier >1930973<dc:identifier />
+      <updated >2009-10-15T10:53:11+00:00</updated>
+      <published >2009-10-15T10:52:11+00:00</published>
+      <category xml:lang="en-GB" term="worldservice" label="worldservice"></category>
+      <category term="external"></category>
+      <rights >restricted</rights>
+      <media:content />
+      <link />
+   ";s:5:"title";s:13:"Crowd control";s:7:"summary";s:54:"New technology for predicting crowd behaviour launches";s:4:"link";s:49:"http://news.bbc.co.uk/1/hi/technology/8307733.stm";}i:20;a:4:{s:12:"atom_content";s:426:"
+      <id >tag:www.bbcworldservice.com,2009-10-07:1850203</id>
+      <dc:identifier >1850203<dc:identifier />
+      <updated >2009-10-07T12:19:16+00:00</updated>
+      <published >2009-10-07T12:19:16+00:00</published>
+      <category xml:lang="en-GB" term="worldservice" label="worldservice"></category>
+      <category term="external"></category>
+      <rights >restricted</rights>
+      <media:content />
+      <link />
+   ";s:5:"title";s:15:"Beaver Receiver";s:7:"summary";s:51:"Why New Yorkers are sending texts to river wildlife";s:4:"link";s:49:"http://news.bbc.co.uk/1/hi/technology/8293608.stm";}i:21;a:5:{s:12:"atom_content";s:426:"
+      <id >tag:www.bbcworldservice.com,2009-09-18:1655929</id>
+      <dc:identifier >1655929<dc:identifier />
+      <updated >2009-09-18T13:46:15+00:00</updated>
+      <published >2009-09-18T13:39:15+00:00</published>
+      <category xml:lang="en-GB" term="worldservice" label="worldservice"></category>
+      <category term="external"></category>
+      <rights >restricted</rights>
+      <media:content />
+      <link />
+   ";s:5:"title";s:34:"'Barcodes' tackle bush meat trade ";s:7:"summary";s:34:"'Barcodes' tackle bush meat trade ";s:2:"dc";a:1:{s:7:"subject";s:53:"barcode, dna, bush meat, africa, exotic, wild animals";}s:4:"link";s:51:"http://news.bbc.co.uk/1/hi/world/africa/8262499.stm";}i:22;a:3:{s:12:"atom_content";s:430:"
+      <id >tag:www.bbcworldservice.com,2010-05-26:4698864</id>
+      <dc:identifier >4698864<dc:identifier />
+      <updated >2010-05-26T11:30:18+00:00</updated>
+      <published >2010-05-26T11:30:12+00:00</published>
+      <category xml:lang="en-GB" term="worldservice" label="worldservice"></category>
+      <category term="external"></category>
+      <rights >not restricted</rights>
+      <media:content />
+      <link />
+   ";s:5:"title";s:18:"Science on the BBC";s:4:"link";s:29:"http://www.bbc.co.uk/science/";}i:23;a:3:{s:12:"atom_content";s:422:"
+      <id >tag:www.bbcworldservice.com,2009-03-14:71389</id>
+      <dc:identifier >71389<dc:identifier />
+      <updated >2009-03-14T12:50:20+00:00</updated>
+      <published >2009-03-14T12:50:20+00:00</published>
+      <category xml:lang="en-GB" term="worldservice" label="worldservice"></category>
+      <category term="external"></category>
+      <rights >restricted</rights>
+      <media:content />
+      <link />
+   ";s:5:"title";s:26:"Digital Planet on Facebook";s:4:"link";s:48:"http://www.facebook.com/group.php?gid=4287320286";}i:24;a:3:{s:12:"atom_content";s:422:"
+      <id >tag:www.bbcworldservice.com,2009-03-14:71390</id>
+      <dc:identifier >71390<dc:identifier />
+      <updated >2009-03-14T12:52:04+00:00</updated>
+      <published >2009-03-14T12:52:04+00:00</published>
+      <category xml:lang="en-GB" term="worldservice" label="worldservice"></category>
+      <category term="external"></category>
+      <rights >restricted</rights>
+      <media:content />
+      <link />
+   ";s:5:"title";s:23:"Digital Planet on Orkut";s:4:"link";s:53:"http://www.orkut.com/Main#Community.aspx?cmm=70838905";}i:25;a:3:{s:12:"atom_content";s:422:"
+      <id >tag:www.bbcworldservice.com,2009-03-14:71395</id>
+      <dc:identifier >71395<dc:identifier />
+      <updated >2009-03-14T12:58:46+00:00</updated>
+      <published >2009-03-14T12:58:46+00:00</published>
+      <category xml:lang="en-GB" term="worldservice" label="worldservice"></category>
+      <category term="external"></category>
+      <rights >restricted</rights>
+      <media:content />
+      <link />
+   ";s:5:"title";s:26:"Gareth Mitchell on Twitter";s:4:"link";s:26:"http://twitter.com/GarethM";}i:26;a:3:{s:12:"atom_content";s:422:"
+      <id >tag:www.bbcworldservice.com,2009-03-14:71394</id>
+      <dc:identifier >71394<dc:identifier />
+      <updated >2009-03-14T12:57:57+00:00</updated>
+      <published >2009-03-14T12:57:57+00:00</published>
+      <category xml:lang="en-GB" term="worldservice" label="worldservice"></category>
+      <category term="external"></category>
+      <rights >restricted</rights>
+      <media:content />
+      <link />
+   ";s:5:"title";s:24:"Bill Thompson on Twitter";s:4:"link";s:24:"http://twitter.com/billt";}i:27;a:3:{s:12:"atom_content";s:422:"
+      <id >tag:www.bbcworldservice.com,2009-03-14:71399</id>
+      <dc:identifier >71399<dc:identifier />
+      <updated >2009-03-14T13:00:30+00:00</updated>
+      <published >2009-03-14T13:00:30+00:00</published>
+      <category xml:lang="en-GB" term="worldservice" label="worldservice"></category>
+      <category term="external"></category>
+      <rights >restricted</rights>
+      <media:content />
+      <link />
+   ";s:5:"title";s:13:"The Bill Blog";s:4:"link";s:36:"http://www.thebillblog.com/billblog/";}}s:7:"channel";a:12:{s:2:"id";s:51:"http://www.bbc.co.uk/worldservice/science/index.xml";s:5:"title";s:27:"BBC World Service | Science";s:7:"updated";s:25:"2010-09-23T13:48:29+00:00";s:9:"link_self";s:51:"http://www.bbc.co.uk/worldservice/science/index.xml";s:6:"author";s:25:"
+      
+      
+      
+   ";s:11:"author_name";s:17:"BBC World Service";s:12:"author_email";s:22:"worldservice@bbc.co.uk";s:10:"author_uri";s:30:"http://www.bbcworldservice.com";s:9:"generator";s:30:"http://www.bbcworldservice.com";s:4:"logo";s:57:"http://wscdn.bbc.co.uk/worldservice/images/1024/brand.jpg";s:6:"rights";s:46:"Copyright British Broadcasting Corporation2010";s:12:"atom_content";s:109:"
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+";}s:9:"textinput";a:0:{}s:5:"image";a:0:{}s:9:"feed_type";s:4:"Atom";s:12:"feed_version";N;s:8:"encoding";s:5:"utf-8";s:16:"_source_encoding";s:0:"";s:5:"ERROR";s:0:"";s:7:"WARNING";s:0:"";s:19:"_CONTENT_CONSTRUCTS";a:6:{i:0;s:7:"content";i:1;s:7:"summary";i:2;s:4:"info";i:3;s:5:"title";i:4;s:7:"tagline";i:5;s:9:"copyright";}s:16:"_KNOWN_ENCODINGS";a:3:{i:0;s:5:"UTF-8";i:1;s:8:"US-ASCII";i:2;s:10:"ISO-8859-1";}s:5:"stack";a:0:{}s:9:"inchannel";b:0;s:6:"initem";b:0;s:9:"incontent";s:12:"atom_content";s:11:"intextinput";b:0;s:7:"inimage";b:0;s:17:"current_namespace";b:0;s:13:"last_modified";s:29:"Thu, 23 Sep 2010 13:49:09 GMT";}

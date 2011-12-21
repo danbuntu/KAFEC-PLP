@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="blocks/newsfeed/db" VERSION="20071205" COMMENT="Tables for newsfeed system."
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="newsfeed" COMMENT="Holds information for each newsfeed." NEXT="newsfeed_includes">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" ENUM="false" NEXT="name"/>
+        <FIELD NAME="name" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" ENUM="false" COMMENT="Name of feed (plain text)." PREVIOUS="id" NEXT="summary"/>
+        <FIELD NAME="summary" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" ENUM="false" COMMENT="Brief text describing the purpose of this news feed. (Not null, but may be blank.)" PREVIOUS="name" NEXT="publicfeed"/>
+        <FIELD NAME="publicfeed" TYPE="int" LENGTH="1" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" COMMENT="If 1, field is publicly available via Atom. If 0, it is internal to the system and can only be viewed via a newsfeed block." PREVIOUS="summary" NEXT="defaultauthid"/>
+        <FIELD NAME="defaultauthid" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" ENUM="false" COMMENT="Default authorisation token. By default, messages posted to this feed require users to possess the specified authorisation token in order to view. (Note that this is not a genuine security measure and is only intended to help ensure that messages can be directed to appropriate users.) This can be changed per-message. If null, then no authorisation requirement by default." PREVIOUS="publicfeed" NEXT="deleted"/>
+        <FIELD NAME="deleted" TYPE="int" LENGTH="1" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" COMMENT="If 1 then this feed has been marked as deleted in the interface. If 0 it is still accessible." PREVIOUS="defaultauthid" NEXT="blockinstance"/>
+        <FIELD NAME="blockinstance" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" COMMENT="Instance of block associated with this newsfeed" PREVIOUS="deleted"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="Primary key for block"/>
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="ix_newsfeed_blockinstance" UNIQUE="true" FIELDS="blockinstance" COMMENT="newsfeed.blockinstance is block_instance.id"/>
+      </INDEXES>
+    </TABLE>
+    <TABLE NAME="newsfeed_includes" COMMENT="Lists newsfeeds which are included (aggregated) within other feeds." PREVIOUS="newsfeed" NEXT="newsfeed_external">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="false" SEQUENCE="true" ENUM="false" COMMENT="id of the table, please edit me" NEXT="parentnewsfeedid"/>
+        <FIELD NAME="parentnewsfeedid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" COMMENT="ID of parent newsfeed (the one that contains another feed)." PREVIOUS="id" NEXT="childnewsfeedid"/>
+        <FIELD NAME="childnewsfeedid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" COMMENT="ID of child newsfeed (the one that is contained within another)" PREVIOUS="parentnewsfeedid"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="primary key of the table, please edit me" NEXT="fk_newsfeed_includes_parentnewsfeedid"/>
+        <KEY NAME="fk_newsfeed_includes_parentnewsfeedid" TYPE="foreign" FIELDS="parentnewsfeedid" REFTABLE="newsfeed" REFFIELDS="id" PREVIOUS="primary" NEXT="fk_newsfeed_includes_childnewsfeedid"/>
+        <KEY NAME="fk_newsfeed_includes_childnewsfeedid" TYPE="foreign" FIELDS="childnewsfeedid" REFTABLE="newsfeed" REFFIELDS="id" PREVIOUS="fk_newsfeed_includes_parentnewsfeedid"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="newsfeed_external" COMMENT="Extra information stored for external feeds (those which are merely imported copies of Atom/RSS feeds, automatically updated)" PREVIOUS="newsfeed_includes" NEXT="newsfeed_authids">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="false" SEQUENCE="true" ENUM="false" COMMENT="id of the table, please edit me" NEXT="newsfeedid"/>
+        <FIELD NAME="newsfeedid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" COMMENT="Newsfeed that this additional information is for." PREVIOUS="id" NEXT="url"/>
+        <FIELD NAME="url" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" ENUM="false" COMMENT="URL to RSS or Atom feed" PREVIOUS="newsfeedid" NEXT="lastcheck"/>
+        <FIELD NAME="lastcheck" TYPE="int" LENGTH="10" NOTNULL="false" UNSIGNED="true" SEQUENCE="false" ENUM="false" COMMENT="Time at which the feed was last checked" PREVIOUS="url" NEXT="checkfreq"/>
+        <FIELD NAME="checkfreq" TYPE="int" LENGTH="10" NOTNULL="false" UNSIGNED="true" SEQUENCE="false" ENUM="false" COMMENT="Frequency of checking (in seconds)." PREVIOUS="lastcheck" NEXT="error"/>
+        <FIELD NAME="error" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" ENUM="false" COMMENT="Used to store a brief error message if there was an error last time the feed was checked. Otherwise null." PREVIOUS="checkfreq"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="primary key of the table, please edit me" NEXT="fk_newsfeed_external_newsfeedid"/>
+        <KEY NAME="fk_newsfeed_external_newsfeedid" TYPE="foreign-unique" FIELDS="newsfeedid" REFTABLE="newsfeed" REFFIELDS="id" PREVIOUS="primary"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="newsfeed_authids" COMMENT="Stores available authid (authorisation token) options for feed." PREVIOUS="newsfeed_external" NEXT="newsfeed_entries">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="false" SEQUENCE="true" ENUM="false" COMMENT="id of the table, please edit me" NEXT="newsfeedid"/>
+        <FIELD NAME="newsfeedid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" COMMENT="ID of newsfeed these authids are for." PREVIOUS="id" NEXT="authid"/>
+        <FIELD NAME="authid" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" ENUM="false" COMMENT="Authorisation token (string value)." PREVIOUS="newsfeedid"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="primary key of the table, please edit me" NEXT="fk_newsfeed_authids_newsfeedid"/>
+        <KEY NAME="fk_newsfeed_authids_newsfeedid" TYPE="foreign" FIELDS="newsfeedid" REFTABLE="newsfeed" REFFIELDS="id" PREVIOUS="primary"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="newsfeed_entries" COMMENT="Stores information about entries in a feed. An entry refers to a particular posting; entries can have multiple versions if they are edited. The actual data (text, etc.) is stored in the versions table." PREVIOUS="newsfeed_authids" NEXT="newsfeed_versions">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="false" SEQUENCE="true" ENUM="false" COMMENT="id of the table, please edit me" NEXT="newsfeedid"/>
+        <FIELD NAME="newsfeedid" TYPE="int" LENGTH="10" NOTNULL="false" UNSIGNED="true" SEQUENCE="false" ENUM="false" COMMENT="Feed this entry is included within." PREVIOUS="id"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="primary key of the table, please edit me" NEXT="fk_newsfeed_entries_newsfeedid"/>
+        <KEY NAME="fk_newsfeed_entries_newsfeedid" TYPE="foreign" FIELDS="newsfeedid" REFTABLE="newsfeed" REFFIELDS="id" PREVIOUS="primary"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="newsfeed_versions" COMMENT="Stores actual text and other details associated with each version of an entry." PREVIOUS="newsfeed_entries" NEXT="newsfeed_files">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="false" SEQUENCE="true" ENUM="false" COMMENT="id of the table, please edit me" NEXT="entryid"/>
+        <FIELD NAME="entryid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" COMMENT="Entry that this is a version of." PREVIOUS="id" NEXT="appearancedate"/>
+        <FIELD NAME="appearancedate" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" COMMENT="Date at which entry becomes visible, in seconds since epoch. The entry will not appear to students until this date. This date is the one that appears on an entry." PREVIOUS="entryid" NEXT="rollforward"/>
+        <FIELD NAME="rollforward" TYPE="int" LENGTH="1" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" COMMENT="Set to 1 if this message should be _rolled forward_ for new presentations of the feed, or 0 if it should only appear at the fixed date." PREVIOUS="appearancedate" NEXT="authid"/>
+        <FIELD NAME="authid" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" ENUM="false" COMMENT="One or more authorisation tokens (space-separated) indicating which students are shown this post. (Note that this is not a security measure, only a categorisation one. It is easy to circumvent.) Null if no restrictions." PREVIOUS="rollforward" NEXT="title"/>
+        <FIELD NAME="title" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" ENUM="false" COMMENT="Title of post." PREVIOUS="authid" NEXT="html"/>
+        <FIELD NAME="html" TYPE="text" LENGTH="medium" NOTNULL="true" SEQUENCE="false" ENUM="false" COMMENT="Content of post as (X)HTML" PREVIOUS="title" NEXT="link"/>
+        <FIELD NAME="link" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" ENUM="false" COMMENT="HTML link for post. This usually links to the full version of content for a post. May be null if none." PREVIOUS="html" NEXT="poster"/>
+        <FIELD NAME="poster" TYPE="int" LENGTH="10" NOTNULL="false" UNSIGNED="true" SEQUENCE="false" ENUM="false" COMMENT="Moodle user ID of user who posted this entry. (Note I have not made a foreign-key entry at time of writing because we do not need an index.) Null if entry is remote or from the system etc." PREVIOUS="link" NEXT="timeposted"/>
+        <FIELD NAME="timeposted" TYPE="int" LENGTH="10" NOTNULL="false" UNSIGNED="true" SEQUENCE="false" ENUM="false" COMMENT="Time that this version was posted. (Note this is not the same as the _official_ date appearancedate which controls when the message appears and is what displays to users.)" PREVIOUS="poster" NEXT="approver"/>
+        <FIELD NAME="approver" TYPE="int" LENGTH="10" NOTNULL="false" UNSIGNED="true" SEQUENCE="false" ENUM="false" COMMENT="Moodle user ID of person who approved message or null if it has not been approved." PREVIOUS="timeposted" NEXT="timeapproved"/>
+        <FIELD NAME="timeapproved" TYPE="int" LENGTH="10" NOTNULL="false" UNSIGNED="true" SEQUENCE="false" ENUM="false" COMMENT="Time (seconds since epoch) at which this version was approved, or null if it has not been." PREVIOUS="approver" NEXT="deleted"/>
+        <FIELD NAME="deleted" TYPE="int" LENGTH="1" NOTNULL="false" UNSIGNED="true" SEQUENCE="false" ENUM="false" COMMENT="1 if the entry has been deleted and should not appear to users. Null otherwise." PREVIOUS="timeapproved"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="primary key of the table, please edit me" NEXT="fk_newsfeed_versions_entryid"/>
+        <KEY NAME="fk_newsfeed_versions_entryid" TYPE="foreign" FIELDS="entryid" REFTABLE="newsfeed_entries" REFFIELDS="id" PREVIOUS="primary"/>
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="ix_newsfeed_versions_deleted" UNIQUE="false" FIELDS="deleted" COMMENT="Just to get rid of a final sequential scan in a query."/>
+      </INDEXES>
+    </TABLE>
+    <TABLE NAME="newsfeed_files" COMMENT="Stores information about files that are attached to entries. The actual files go in the Moodle filesystem somewhere." PREVIOUS="newsfeed_versions" NEXT="newsfeed_approverequests">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="false" SEQUENCE="true" ENUM="false" COMMENT="id of the table, please edit me" NEXT="versionid"/>
+        <FIELD NAME="versionid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" COMMENT="Version ID that this file belongs to." PREVIOUS="id" NEXT="filename"/>
+        <FIELD NAME="filename" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" ENUM="false" COMMENT="Filename (only, not full path)." PREVIOUS="versionid" NEXT="mimetype"/>
+        <FIELD NAME="mimetype" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" ENUM="false" COMMENT="MIME type of file" PREVIOUS="filename" NEXT="filesize"/>
+        <FIELD NAME="filesize" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" COMMENT="Size of file in bytes" PREVIOUS="mimetype"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="primary key of the table, please edit me" NEXT="versionid"/>
+        <KEY NAME="versionid" TYPE="foreign" FIELDS="versionid" REFTABLE="newsfeed_versions" REFFIELDS="id" PREVIOUS="primary"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="newsfeed_approverequests" COMMENT="When emails are sent out to request approval, this table is used to store the fact that the email was already sent. (It does not send more than one email per feed per time the feed changes state from &quot;having unapproved messages&quot; to &quot;everything is approved&quot; or vice versa.)" PREVIOUS="newsfeed_files">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="false" SEQUENCE="true" ENUM="false" COMMENT="id of the table, please edit me" NEXT="newsfeedid"/>
+        <FIELD NAME="newsfeedid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" COMMENT="ID of news feed that message was sent out for." PREVIOUS="id" NEXT="sendtime"/>
+        <FIELD NAME="sendtime" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" COMMENT="Date (seconds since epoch) at which message was sent." PREVIOUS="newsfeedid"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="primary key of the table, please edit me" NEXT="newsfeedid"/>
+        <KEY NAME="newsfeedid" TYPE="foreign-unique" FIELDS="newsfeedid" REFTABLE="newsfeed" REFFIELDS="id" PREVIOUS="primary"/>
+      </KEYS>
+    </TABLE>
+  </TABLES>
+</XMLDB>

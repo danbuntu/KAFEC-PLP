@@ -1,0 +1,547 @@
+2007-01-14 Sunday 04:15  stronk7
+
+	* filterconfig.html: 
+	
+	Now all the filters global config pages are valid XML. Related to
+	MDL-7861
+
+2007-01-09 Tuesday 04:30  skodak
+
+	* filter.php: 
+	
+	MDL-8105 some more icon class fixes including new .iconhelp for
+	help and docs icon
+
+2007-01-09 Tuesday 03:34  skodak
+
+	* texdebug.php, texed.php: 
+	
+	MDL-7861 xhtml transient fixes for not closed input fields - I hope
+	all of them except imported libs are now fixed
+
+2006-12-13 Wednesday 11:03  toyomoyo
+
+	* filterconfig.html: 
+	
+	various accessbility fixes
+
+2006-11-26 Sunday 02:09  skodak
+
+	* filter.php: 
+	
+	MDL-7434 all images that convey information should have alt text to
+	convey that information - part 2
+
+2006-11-16 Thursday 04:39  skodak
+
+	* displaytex.php: 
+	
+	remove use of get_String("thischarset") replace it with utf-8
+	MDL-7570
+
+2006-09-23 Saturday 17:38  skodak
+
+	* pix.php: 
+	
+	debugging and error reporting level fixes and improvements MDL-6671
+
+2006-09-21 Thursday 04:31  skodak
+
+	* defaultsettings.php: 
+	
+	major whitespace cleanup - fixed tabs
+
+2006-09-19 Tuesday 12:31  toyomoyo
+
+	* filter.php: 
+	
+	took out a comment, for proper debugging use the new debugging()
+	function
+
+2006-09-18 Monday 21:26  moodler
+
+	* pix.php: 
+	
+	Fixed up some more debug statements
+
+2006-09-18 Monday 21:24  moodler
+
+	* pix.php: 
+	
+	Fixed a some debugging statements
+
+2006-09-08 Friday 16:46  toyomoyo
+
+	* filter.php: 
+	
+	adding capabilities
+
+2006-08-14 Monday 14:24  skodak
+
+	* pix.php, texdebug.php, texed.php: 
+	
+	prevent access to filters when disabled in filter settings SC#291;
+	merged from MOODLE_16_STABLE
+
+2006-08-14 Monday 14:22  skodak
+
+	* pix.php, texdebug.php, texed.php: 
+	
+	prevent access to filters when disabled in filter settings SC#291
+
+2006-06-30 Friday 21:46  skodak
+
+	* texdebug.php: 
+	
+	slashargument fix for healthcenter, better diagnostic messages;
+	renamed file.php/pic.jpg option to file.php/1/pic.jpg because the
+	course number is mandatory; merged from MOODLE_16_STABLE
+
+2006-06-30 Friday 21:38  skodak
+
+	* texdebug.php: 
+	
+	slashargument fix for healthcenter, better diagnostic messages;
+	renamed file.php/pic.jpg option to file.php/1/pic.jpg because the
+	course number is mandatory
+
+2006-05-18 Thursday 00:47  tjhunt
+
+	* latex.php: 
+	
+	Merge from stable branch: Convert tabs to spaces in files where
+	there were only a few rogue tabs.
+
+2006-05-18 Thursday 00:37  tjhunt
+
+	* defaultsettings.php, latex.php: 
+	
+	Convert tabs to spaces in files where there were only a few rogue
+	tabs.
+
+2006-02-07 Tuesday 00:32  thepurpleblob
+
+	* defaultsettings.php, filterconfig.html: 
+	
+	Added ability to reset page to defaults. bug #4123
+
+2006-02-06 Monday 23:35  thepurpleblob
+
+	* filterconfig.html: 
+	
+	Added test for cache directory. Suppresses errors if it does not
+	exist.
+
+2006-02-06 Monday 12:03  moodler
+
+	* filterconfig.html: 
+	
+	Removing delDirContents because we already have remove_dir
+
+2005-08-10 Wednesday 20:58  thepurpleblob
+
+	* filter.php, latex.php: 
+	
+	Some more tweaks to LaTeX filter - see bug #3829.
+
+2005-08-10 Wednesday 20:45  thepurpleblob
+
+	* defaultsettings.php: 
+	
+	Added preamble for LaTeX AMS notation to default. See bug #3829
+
+2005-07-28 Thursday 17:35  thepurpleblob
+
+	* defaultsettings.php, filterconfig.html, latex.php: 
+	
+	Moved filter paths to filter settings (admin) page.
+
+2005-07-26 Tuesday 21:18  thepurpleblob
+
+	* filterconfig.html: 
+	
+	Added proper looked-up strings.
+
+2005-07-26 Tuesday 20:32  thepurpleblob
+
+	* filterconfig.html: 
+	
+	TeX cache cleared when page displayed, to ensure changes actually
+	apply.
+
+2005-07-26 Tuesday 18:58  thepurpleblob
+
+	* defaultsettings.php, filterconfig.html: 
+	
+	Added facility to modify settings from admin page. Just a start...
+	will add more settings for tex.
+
+2005-07-25 Monday 16:11  thepurpleblob
+
+	* mimetex.freebsd: 
+	
+	Added version of mimetex compiled for FreeBSD.
+
+2005-07-22 Friday 21:59  thepurpleblob
+
+	* latex.php, pix.php: 
+	
+	Use 'factored out' configuration settings.
+
+2005-07-22 Friday 21:57  thepurpleblob
+
+	* defaultsettings.php: 
+	
+	Initialise all (new) config settings for this filter in one place.
+
+2005-07-22 Friday 17:01  thepurpleblob
+
+	* filter.php, pix.php: 
+	
+	Added additional features/fixes noted in bug #3795 by Dmitry
+	Pupinin.
+
+2005-07-21 Thursday 15:52  thepurpleblob
+
+	* displaytex.php, latex.php, mimetex.linux, pix.php: 
+	
+	Various small changes suggested by Dmitry Pupinin.  1. Changed
+	formula's size 2. Formula displayed correctly in pop-up window 3.
+	Preambula became configurable 4. Formula became transparent
+
+2005-07-20 Wednesday 21:28  thepurpleblob
+
+	* latex.php: 
+	
+	Added paths for windows
+
+2005-06-28 Tuesday 22:12  thepurpleblob
+
+	* latex.php: 
+	
+	Added check so render returns with false if unsupported platform.
+
+2005-06-28 Tuesday 21:23  thepurpleblob
+
+	* filter.php, latex.php, pix.php: 
+	
+	Added class to render images using Latex rather than mimetex. It
+	will only be used if it works on the server, otherwise mimetex is
+	used as before.  Produces rather nicer images, and the full range
+	of formatting can be used, rather than mimetex's limited set.
+
+2005-06-25 Saturday 01:59  fiedorow
+
+	* filter.php, filter.php: 
+	
+	Compatibility fix for glossary
+
+2005-05-17 Tuesday 05:37  stronk7
+
+	* filter.php, texdebug.php: 
+	
+	Tabs are out
+
+2005-04-14 Thursday 21:24  fiedorow
+
+	* texdebug.php: 
+	
+	Added link to admin/config.php for slasharguments
+
+2005-04-14 Thursday 12:27  fiedorow
+
+	* texdebug.php: 
+	
+	texdebug.php now checks slasharguments setting
+
+2005-04-01 Friday 13:55  martinlanghoff
+
+	* filter.php: 
+	
+	Merged from MOODLE_14_STABLE - insert_record() - major efficiency
+	improvements for Postgres databases on insert. Also fixed many
+	calls to insert_record() which discard the returned record id to
+	not ask for the record id.
+
+2005-04-01 Friday 13:33  martinlanghoff
+
+	* filter.php: 
+	
+	insert_record() - major efficiency improvements for Postgres
+	databases on insert. Also fixed many calls to insert_record() which
+	discard the returned record id to not ask for the record id.
+
+2005-03-07 Monday 19:31  moodler
+
+	* pix.php: 
+	
+	Removed files/mimetype.php and put it into lib/filelib.php instead
+	where it always should have been.
+
+2005-02-14 Monday 01:04  fiedorow
+
+	* texdebug.php: 
+	
+	Corrected file size message in debugger
+
+2005-02-11 Friday 06:15  fiedorow
+
+	* filter.php, mimetex.exe, mimetex.linux, pix.php, texed.php: 
+	
+	various improvements: updated mimetex, image positioning, XHTML
+	validation
+
+2004-12-15 Wednesday 02:57  skodak
+
+	* pix.php: 
+	
+	new handling of uploaded files, please TEST, TEST, TEST
+
+2004-11-18 Thursday 18:08  skodak
+
+	* displaytex.php: 
+	
+	merged from MOODLE_14_STABLE; fixed encoding of html entities in
+	tex expressions - SC#7
+
+2004-11-18 Thursday 18:06  skodak
+
+	* displaytex.php: 
+	
+	fixed encoding of html entities in tex expressions - SC#7
+
+2004-11-04 Thursday 16:00  skodak
+
+	* pix.php: 
+	
+	merged from MOODLE_14_STABLE: initialized variables - the same as
+	algebra/pix.php
+
+2004-11-04 Thursday 15:58  skodak
+
+	* pix.php: 
+	
+	initialized variables - the same as algebra/pix.php
+
+2004-09-17 Friday 01:10  gustav_delius
+
+	* filter.php, mimetex.exe: 
+	
+	XHTML compliance - fixed (hopefully) all <img> tags - global
+	replace on <br> to <br /> - &amp; in URLs - got the forum module
+	XHTML compliant Julian Sedding
+
+2004-09-13 Monday 05:09  gustav_delius
+
+	* pix.php, texdebug.php, texed.php: 
+	
+	towards XHTML compliance
+
+2004-08-08 Sunday 14:57  moodler
+
+	* filter.php: 
+	
+	Improvement to filters, providing speed boost AND better
+	compatibility with Turck MMCache.
+	
+	Filter function must now have a particular name
+	
+	   eg resource_filter
+	
+	where "resource" is the name of the directory that filter.php is
+	in.
+
+2004-06-11 Friday 00:47  fiedorow
+
+	* texdebug.php: 
+	
+	Functionality in debug for miscellaneous mimeTeX binaries
+
+2004-04-26 Monday 23:18  fiedorow
+
+	* filter.php: 
+	
+	Commented out debugging code
+
+2004-04-05 Monday 10:45  fiedorow
+
+	* mimetex.exe, mimetex.linux, texdebug.php: 
+	
+	Security updates for Linux and Windows based on new source from
+	John Forkosh
+
+2004-03-29 Monday 06:35  fiedorow
+
+	* displaytex.php, filter.php: 
+	
+	replaced js alert by popup
+
+2004-03-28 Sunday 02:31  fiedorow
+
+	* filter.php: 
+	
+	Expression image now links to TeX source or debug script
+
+2004-03-06 Saturday 19:58  fiedorow
+
+	* mimetex.exe, mimetex.linux: 
+	
+	mimeTeX buffer overrun vulnerability fixed for Windows and Linux
+
+2004-03-05 Friday 14:35  moodler
+
+	* texdebug.php, texed.php: 
+	
+	Just some cleanup formatting
+
+2004-02-29 Sunday 22:26  fiedorow
+
+	* filter.php: 
+	
+	Remove nolink tags in glossaries
+
+2004-02-26 Thursday 11:24  fiedorow
+
+	* pix.php: 
+	
+	Bug fix: is_executable not available in Windows PHP 4.x
+
+2004-02-24 Tuesday 16:04  moodler
+
+	* pix.php: 
+	
+	Changed the logic around so that any binary called "mimetex" is
+	used in preference to any other pre-installed binary.
+	
+	This makes me happier about the FAT binary, because a leaner binary
+	can be installed without interfering with CVS etc.
+
+2004-02-24 Tuesday 02:46  fiedorow
+
+	* texdebug.php: 
+	
+	Displays file permissions for mimetex and uses md5_file if
+	available
+
+2004-02-22 Sunday 21:12  fiedorow
+
+	* mimetex.exe: 
+	
+	Now ++ argument is optional
+
+2004-02-22 Sunday 07:31  fiedorow
+
+	* mimetex.exe, pix.php, texdebug.php: 
+	
+	Fix for case when $CFG->dirroot contains spaces, especially for
+	Windows
+
+2004-02-21 Saturday 03:20  fiedorow
+
+	* mimetex.linux, texdebug.php: 
+	
+	Statically linked mimetex.linux; bug fix for texdebug.php
+
+2004-02-20 Friday 11:31  moodler
+
+	* pix.php: 
+	
+	Add some feedback and instructions for other platforms
+
+2004-02-20 Friday 11:00  moodler
+
+	* pix.php: 
+	
+	Added the default platform back again.	:-)
+
+2004-02-20 Friday 09:43  fiedorow
+
+	* pix.php, texdebug.php: 
+	
+	Improved debugging of mimetex
+
+2004-02-20 Friday 02:05  fiedorow
+
+	* texdebug.php: 
+	
+	Added debugger for TeX filter
+
+2004-02-19 Thursday 00:02  moodler
+
+	* pix.php: 
+	
+	Default to just using "mimetex" binary.  This makes it easier to
+	drop in unusual binaries and have them work
+
+2004-02-18 Wednesday 03:03  fiedorow
+
+	* mimetex.darwin, texed.php: 
+	
+	mimetex.darwin updated; tex previewer added
+
+2004-02-17 Tuesday 13:22  moodler
+
+	* filter.php, tex_filter.php: 
+	
+	Changed the name of all filters to be consistent.
+	
+	Removed texh filter
+
+2004-02-17 Tuesday 11:41  fiedorow
+
+	* mimetex.exe, mimetex.linux, pix.php: 
+	
+	Improved mimeTeX binaries & more uniform cross-platform code in
+	filter
+
+2004-02-16 Monday 14:44  moodler
+
+	* pix.php: 
+	
+	Apparently WIN32 gets returned sometimes too
+
+2004-02-16 Monday 14:42  moodler
+
+	* pix.php: 
+	
+	Accept Windows as well as WINNT
+
+2004-02-16 Monday 10:05  fiedorow
+
+	* mimetex.darwin, mimetex.exe, pix.php: 
+	
+	Updates for Windows and MacOS X
+
+2004-02-14 Saturday 11:00  moodler
+
+	* mimetex, mimetex.darwin, mimetex.exe, mimetex.linux, pix.php: 
+	
+	Using PHP_OS to detect OS  (thanks, Greg Barnett!)
+	
+	Included three binaries for mimetex ... Linux is tested but I
+	haven't tested the others yet
+
+2004-02-13 Friday 09:42  moodler
+
+	* README.mimetex: 
+	
+	To help with our GPL obligations
+
+2004-02-12 Thursday 16:39  moodler
+
+	* pix.php, tex_filter.php: 
+	
+	OK, well this is working for me now!
+
+2004-02-11 Wednesday 22:25  moodler
+
+	* mimetex, mimetex.cgi, tex_filter.php: 
+	
+	SOme tweaks
+
+2004-02-11 Wednesday 00:46  fiedorow
+
+	* mimetex.cgi, tex_filter.php: 
+	
+	Test version of TeX filter designed for moodle.org
+

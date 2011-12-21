@@ -1,0 +1,17 @@
+Using the Students Main Quals Import System
+
+MIS will provide an Excell sheet witht eh following headers:
+
+STEM_Student_ID
+NOTIONAL_NVQ_LEVEL_CODE
+LEARNING_AIM_TYPE_DESC
+PLP main qual type
+
+This is needs to be saved as a csv
+The csv is then put in the primaryquals folder in moodle (ie. s-moodle\C$\xampplite\htdocs\moodle\primaryquals)
+Then run the import page form the site (ie. http://s-moodle.midkent.ac.uk/primaryquals/import_quals.php)
+
+This will then scan through the csv and import or edit the records as needed.
+
+Records in green are new records
+Records in red are ones being updated

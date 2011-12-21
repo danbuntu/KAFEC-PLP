@@ -1,0 +1,2449 @@
+2007-01-24 Wednesday 10:52  gbateson
+
+	* mod.html: 
+	
+	added "print_standard_coursemodule_settings" (group and visible
+	settings) to add/update HotPot page, "mod.html"
+
+2007-01-24 Wednesday 10:44  gbateson
+
+	* lib.php: 
+	
+	remove DB dependant code and references to NULL in field values
+	mdl-8169
+
+2007-01-15 Monday 02:58  stronk7
+
+	* db/: mysql.sql, postgres7.sql: 
+	
+	Deleting deprecated .sql files. MDL-7264 Byeeez!
+
+2007-01-14 Sunday 04:13  stronk7
+
+	* config.html: 
+	
+	Now all the modules global config pages are valid XML. Related to
+	MDL-7861
+
+2007-01-13 Saturday 19:46  gbateson
+
+	* lib.php: 
+	
+	fixed typo in SQL query when starting a new HotPot attempt
+
+2007-01-13 Saturday 10:39  gbateson
+
+	* lib.php: 
+	
+	removed db specific conditional clauses from SQL to get grades (see
+	Moodle tracker - mdl-8169)
+
+2007-01-13 Saturday 08:52  stronk7
+
+	* lib.php, db/update_to_v2.php: 
+	
+	Some more uses of $CFG->dbfamily. MDL-7061
+
+2007-01-09 Tuesday 04:38  skodak
+
+	* index.php: 
+	
+	MDL-7861 still some icons left ;grr previous commid had wrong MDL
+	id
+
+2007-01-09 Tuesday 03:34  skodak
+
+	* report/overview/report.php, config.html, report.php, view.php,
+	hotpot-full.js, mod.html, template/v6.php,
+	template/v6/hp6sendresults.js_, template/v6/jcross6.js_: 
+	
+	MDL-7861 xhtml transient fixes for not closed input fields - I hope
+	all of them except imported libs are now fixed
+
+2007-01-08 Monday 17:14  skodak
+
+	* index.php, lib.php: 
+	
+	MDL-7861 new class .icon and .iconsmall
+
+2007-01-07 Sunday 03:23  skodak
+
+	* mod.html: 
+	
+	MDL-8062 Remove name attribute from <form> and related javascript
+	code cleanup (tested with FF, IE, Konq and Opera)
+
+2007-01-05 Friday 07:59  skodak
+
+	* config.html: 
+	
+	MDL-7861 xhtml strict fixes - fixed capital letter tags and
+	attributes
+
+2007-01-05 Friday 07:38  skodak
+
+	* attempt.php, restorelib.php, db/update_to_v2.php: 
+	
+	MDL-7861 xhtml strict fixes - fixed all <br> in our code
+
+2007-01-05 Friday 05:32  skodak
+
+	* config.html, lib.php, view.php, report/overview/report.php: 
+	
+	MDL-8062 1.3 Remove name attribute from <form> and fix focus
+	everywhere - more changes ahead
+
+2007-01-05 Friday 02:23  skodak
+
+	* index.php, lib.php, view.php: 
+	
+	MDL-8050 1.2 Remove all target="_top" - refactoring of previous
+	commit
+
+2007-01-03 Wednesday 22:44  moodler
+
+	* lib.php, mod.html, show.php, view.php,
+	report/fullstat/report.php: 
+	
+	Bend over for XHTML 1.0 Strict ...  MDL-8049
+	
+	Removed Javascript language attribute tags and added CDATA
+
+2007-01-03 Wednesday 12:55  moodler
+
+	* report.php: 
+	
+	Checking in Nick Freear's changes and evolution of Julette White's
+	code with a few modifications made to the install process) for
+	further work in HEAD.
+	
+	See MDL-7380 for details.
+
+2006-12-22 Friday 12:52  moodler
+
+	* view.php: 
+	
+	Added CDATA to Javascript
+
+2006-12-21 Thursday 20:18  nfreear
+
+	* report.php: 
+	
+	Integration 3 - groups in core, modules, calendar... (Part of
+	MDL-7380, new groups)
+
+2006-12-17 Sunday 10:27  gbateson
+
+	* README.TXT, version.php: 
+	
+	increased release number to v2.3.0, to differentiate this version
+	fo the module from v2.2.0, which is used on Moodle 1.7
+
+2006-12-17 Sunday 10:22  gbateson
+
+	* README.TXT: 
+	
+	Modified README.TXT to reflect the fact that this version fo the
+	module, v2.3.0, is not compatitble with Moodle 1.7 and eariler.
+
+2006-12-17 Sunday 10:11  gbateson
+
+	* README.TXT: 
+	
+	Modified the README.TXT to reflect the fact that this version fo
+	the HotPot module, v2.2.x, is only compatible with Moodle 1.7
+
+2006-12-17 Sunday 09:15  gbateson
+
+	* README.TXT: 
+	
+	Modifications to reflect the fact that this version of the module,
+	v2.2.0, only works with Moodle 1.7
+
+2006-12-14 Thursday 15:48  toyomoyo
+
+	* hotpot-full.js, report.php, review.php, report/default.php: 
+	
+	accessibility fixes
+
+2006-12-08 Friday 10:42  gbateson
+
+	* report.php, report.php: 
+	
+	fix undefined property "cr_timefinish", when viewing click report
+
+2006-12-08 Friday 10:38  gbateson
+
+	* report.php: 
+	
+	fix undefined property "cr_timefinish", when viewing clickreport
+
+2006-11-28 Tuesday 18:43  skodak
+
+	* view.php: 
+	
+	 Fix frames accessibility on Hotpot MDL-7468
+
+2006-11-27 Monday 00:20  skodak
+
+	* index.php: 
+	
+	MDL-7434 all images that convey information should have alt text to
+	convey that information - part 3
+
+2006-11-18 Saturday 16:54  gbateson
+
+	* report/: default.php, default.php: 
+	
+	fix sort order of questions in legend, which caused mismatch
+	between question numbers used in Detailed Statistics report and
+	those used in the legend
+
+2006-11-18 Saturday 16:52  gbateson
+
+	* report/default.php: 
+	
+	fix sorting order of questions in legend, which caused mismatch
+	between question numbers used in Detailed Statistics report and
+	those used in the legend
+
+2006-11-12 Sunday 16:55  skodak
+
+	* index.php, report.php, review.php, view.php: 
+	
+	fixed obsoleted use of course->category to find site course - now
+	used SITEID instead MDL-1899
+
+2006-11-09 Thursday 15:21  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	drop utf8 support from HEAD MDL-6332
+
+2006-10-30 Monday 16:55  gbateson
+
+	* template/v6.php: 
+	
+	correct the setting the fixed flag in JMatch quizzes
+
+2006-10-30 Monday 16:54  gbateson
+
+	* template/v6.php: 
+	
+	corrected the setting of fixed flag in JMatch quizzes
+
+2006-10-30 Monday 16:52  gbateson
+
+	* template/v6.php: 
+	
+	corrected the settiing of fixed flag in JMatch quizzes
+
+2006-10-27 Friday 09:34  gbateson
+
+	* template/v6.php: 
+	
+	fixed detection and display of fixed JMatch items (in jmt files)
+
+2006-10-27 Friday 08:53  gbateson
+
+	* template/v6.php: 
+	
+	fix detection and display of fixed items in JMatch (jmt file)
+
+2006-10-27 Friday 08:41  gbateson
+
+	* template/v6.php: 
+	
+	corrected the detection and display of fixed JMatch items (jmt
+	files)
+
+2006-10-27 Friday 06:46  stronk7
+
+	* db/postgres7.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+	
+	Merged from MOODLE_17_STABLE
+
+2006-10-27 Friday 06:39  stronk7
+
+	* db/mysql.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+	
+	Merged from MOODLE_17_STABLE
+
+2006-10-27 Friday 06:29  stronk7
+
+	* db/postgres7.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+
+2006-10-27 Friday 06:25  stronk7
+
+	* db/mysql.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+
+2006-10-27 Friday 01:43  stronk7
+
+	* db/upgrade.php: 
+	
+	New upgrade.php file added for this module. MDL-7214
+	
+	Merged from HEAD
+
+2006-10-27 Friday 01:33  stronk7
+
+	* db/upgrade.php: 
+	
+	file upgrade.php was added on branch MOODLE_17_STABLE on 2006-10-26
+	17:43:07 +0000
+
+2006-10-27 Friday 01:33  stronk7
+
+	* db/upgrade.php: 
+	
+	New upgrade.php file added for this module. MDL-7214
+
+2006-10-25 Wednesday 17:04  moodler
+
+	* attempt.php, index.php, lib.php, report.php, db/update_to_v2.php:
+	
+	
+	Merged AS keyword fixes from stable  MDL-7207
+
+2006-10-25 Wednesday 17:02  moodler
+
+	* attempt.php, index.php, lib.php, report.php, db/update_to_v2.php:
+	
+	
+	More rogue AS keywords	 MDL-7207
+
+2006-10-25 Wednesday 16:51  moodler
+
+	* lib.php: 
+	
+	Merged fixes for AS keywords   MDL-7207
+
+2006-10-25 Wednesday 16:50  moodler
+
+	* lib.php: 
+	
+	Removed use of table as xxx   MDL-7207
+
+2006-10-17 Tuesday 18:05  thompson697
+
+	* restorelib.php: 
+	
+	Apply modularity to the creation of the log file during restore to
+	a new course.  Remove the responsibility for loging the application
+	of the course start date offset, from activity modules to the
+	backup module.	Merged from stable branch
+
+2006-10-16 Monday 18:40  thompson697
+
+	* restorelib.php: 
+	
+	Apply modularity to the creation of the log file during restore to
+	a new course.  Remove the responsibility for loging the application
+	of the course start date offset, from activity modules to the
+	backup module.
+
+2006-10-13 Friday 05:46  gbateson
+
+	* hotpot-full.js, hotpot-full.js: 
+	
+	removed a debug line which showed up in Rottmeier DropDown quizzes
+
+2006-10-12 Thursday 16:08  gbateson
+
+	* hotpot-full.js: 
+	
+	correct handling of correct, wrong and ignored answers in Rottmeier
+	DropDown 2.4 quizzes
+
+2006-10-12 Thursday 16:06  gbateson
+
+	* mod.html: 
+	
+	remove unnecessary <br /> before summary textbox when in edit mode
+	(as opposed to add mode)
+
+2006-10-12 Thursday 16:01  gbateson
+
+	* restorelib.php: 
+	
+	add global $CFG to hotpot_restore_dates function
+
+2006-10-12 Thursday 15:56  gbateson
+
+	* mod.html: 
+	
+	add "Group Mode" and "Visible to students" as per other standard
+	modules
+
+2006-10-12 Thursday 15:50  gbateson
+
+	* hotpot-full.js: 
+	
+	fixed the reporting of results from Rottmeier DropDown 2.4 quizzes
+
+2006-10-11 Wednesday 17:21  skodak
+
+	* restorelib.php: 
+	
+	fixed wrong } in hotpot_restore_dates()
+
+2006-10-11 Wednesday 16:34  gbateson
+
+	* mod.html: 
+	
+	standardized lock/unlock of dates (also name and feedbackurl);
+	added standard "Groups" and "Show" settings at end of form.
+
+2006-10-11 Wednesday 14:22  moodler
+
+	* db/access.php: 
+	
+	Merged fixes for MDL-6907 from stable
+
+2006-10-11 Wednesday 14:16  moodler
+
+	* db/access.php: 
+	
+	All the PREVENTS from the legacy roles have been removed (and thus
+	are treated as INHERIT by default).
+	
+	See MDL-6907 for details.
+
+2006-10-11 Wednesday 09:41  gbateson
+
+	* report.php: 
+	
+	use "noattemptstoshow" instead of "noattempts"
+
+2006-10-11 Wednesday 09:40  gbateson
+
+	* report.php: 
+	
+	use "noattemptstoshow" message instead of "noattempts"
+
+2006-10-11 Wednesday 09:32  gbateson
+
+	* restorelib.php: 
+	
+	move restore dates in a HotPot record to a separate function
+
+2006-10-11 Wednesday 09:29  gbateson
+
+	* report.php, report.php: 
+	
+	allow selection of groups in reports
+
+2006-10-11 Wednesday 07:54  gbateson
+
+	* report.php: 
+	
+	removed "Select course" drop-down menu, because it is unusable, and
+	separated enrolled and unenrolled students in "Select users"
+	drop-down list
+
+2006-10-07 Saturday 22:57  gbateson
+
+	* mod.html: 
+	
+	simplified the javascript to hide "name", "studentfeedbackurl" and
+	dates when not required
+
+2006-10-07 Saturday 16:59  gbateson
+
+	* attempt.php, index.php, report.php, review.php, view.php: 
+	
+	added PARAM types for all calls to "optional_param()" and
+	"required_param()"
+
+2006-10-07 Saturday 13:03  gbateson
+
+	* index.php: 
+	
+	adjust "best grade" to range 0 to hotpot->maxgrade
+
+2006-10-07 Saturday 09:57  gbateson
+
+	* report.php: 
+	
+	remvoved course selection for admins, and tidied up handling of
+	capabilities
+
+2006-10-06 Friday 17:36  gbateson
+
+	* review.php: 
+	
+	fix undefined variable $context on line 135
+
+2006-10-06 Friday 16:02  gbateson
+
+	* report.php: 
+	
+	allow display and deletion of attempts by "All users" including
+	unenrolled students
+
+2006-10-06 Friday 15:09  gbateson
+
+	* report/overview/report.php: 
+	
+	fix typo on line 89: get_context_instance(CONTEXT_COURSE, $course)
+	... should be ... get_context_instance(CONTEXT_COURSE, $course->id)
+
+2006-10-06 Friday 14:22  gbateson
+
+	* restorelib.php: 
+	
+	added "format_string" and "stripslashes" when print HotPot name to
+	browser
+
+2006-10-06 Friday 13:56  gbateson
+
+	* lib.php: 
+	
+	renamed all $hp to $hotpot; added/update/delete calendar events
+	when adding/updating/deleting hotpots; add functions required for
+	participation report;
+
+2006-10-06 Friday 12:03  toyomoyo
+
+	* db/migrate2utf8.xml: 
+	
+	adding utf8 support for new fields
+
+2006-10-06 Friday 11:41  gbateson
+
+	* report.php: 
+	
+	change default setting for reportusers to "allusers" (was "all")
+
+2006-10-06 Friday 11:19  gbateson
+
+	* report.php: 
+	
+	replace indent tabs with 4 spaces
+
+2006-10-06 Friday 10:03  gbateson
+
+	* db/update_to_v2.php: 
+	
+	removed all references to obsolete indexes on
+	"hotpot_questions.name" and "hotpot_strings.string"
+
+2006-10-06 Friday 09:25  gbateson
+
+	* db/mysql.php: 
+	
+	reset version number in HotPot v1 with over-advanced version number
+
+2006-10-05 Thursday 15:12  gbateson
+
+	* restorelib.php: 
+	
+	as per other mods, use "strip_slashes" and "format_string" when
+	printing HotPot name to browser
+
+2006-10-05 Thursday 14:43  gbateson
+
+	* report.php: 
+	
+	added names of unenrolled students to drop-down list of users names
+	for which a report can be generated
+
+2006-10-05 Thursday 14:02  gbateson
+
+	* report.php: 
+	
+	enabled display of attempts by students who are no longer enrolled
+	in the course
+
+2006-10-04 Wednesday 22:50  thompson697
+
+	* index.php, restorelib.php: 
+	
+	Change creation of restorelog file location to protected backupdata
+	folder.  Reassign style and language links
+
+2006-10-03 Tuesday 07:57  gbateson
+
+	* db/mysql.php: 
+	
+	version number of final HotPot v1 (2005050900) was beyond version
+	number of initial HotPot v2 (2004122000), added code to adjust
+	$oldversion to trigger correct upgrade of tables for HotPot v1
+
+2006-10-02 Monday 08:30  gbateson
+
+	* index.php: 
+	
+	corrected display of best grade on "index.php" when maximum grade
+	for the HotPot is not 100
+
+2006-10-02 Monday 07:59  gbateson
+
+	* index.php: 
+	
+	removed a leftover debug print "SELECT ... GROUP BY ..."
+
+2006-10-01 Sunday 14:39  gbateson
+
+	* index.php: 
+	
+	do not join "hotpot_attempts" and "hotpot_details" tables when
+	displaying "hotpot/index.php". This should speed display when
+	courses have many HotPot activities, especially for students
+
+2006-10-01 Sunday 14:36  gbateson
+
+	* lib.php: 
+	
+	add/delete calendar events when adding/updating/deleting hotpots
+
+2006-10-01 Sunday 14:22  gbateson
+
+	* lib.php: 
+	
+	calendar events are now added/deleted when hotpots are
+	added/updated/deleted
+
+2006-10-01 Sunday 06:40  gbateson
+
+	* index.php: 
+	
+	do not join attempts and details tables when select attempts
+	details. This may speed up display of hotpot/index.php where there
+	are many, many hotpots
+
+2006-09-28 Thursday 21:24  gbateson
+
+	* show.php: 
+	
+	added PARAM types to calls using "required_param" and
+	"optional_param" functions
+
+2006-09-28 Thursday 20:41  gbateson
+
+	* show.php: 
+	
+	added PARAM types when calling "required_param" and
+	"optional_param" functions
+
+2006-09-26 Tuesday 20:21  gbateson
+
+	* lib.php: 
+	
+	added functions for participation report: hotpot_get_view_actions +
+	hotpot_get_post_actions
+
+2006-09-26 Tuesday 13:06  martinlanghoff
+
+	* index.php, lib.php, report.php: 
+	
+	mod/glossary, mod/hotpot: use sql_concat() and sql_concat_join()
+	
+	Cleaned up several dbtype conditionals too.
+
+2006-09-24 Sunday 22:01  vyshane
+
+	* lib.php: 
+	
+	Changed <module>_print_recent_activity() functions so that they
+	don't use $isteacher. However, I've left the $isteacher parameter
+	in the functions, for backward compatibility so as not to break
+	thrid party modules. Should we remove the parameter now?
+
+2006-09-24 Sunday 15:38  skodak
+
+	* lib.php: 
+	
+	fixed warning in hotpot lib when running cron from commandline
+
+2006-09-21 Thursday 05:00  skodak
+
+	* db/access.php: 
+	
+	major whitespace cleanup - fixed trailng whitespace in new files
+	and admin area
+
+2006-09-21 Thursday 03:46  skodak
+
+	* report/click/report.php, template/v6.php, hotpot-full.js: 
+	
+	major whitespace cleanup - fixed \r\n line-ending
+
+2006-09-20 Wednesday 17:00  toyomoyo
+
+	* view.php: 
+	
+	replacing deprecated calls and references to capability calls
+
+2006-09-19 Tuesday 22:17  toyomoyo
+
+	* index.php, mod.html, report.php, show.php: 
+	
+	relacing deprecated functions with capability checks
+
+2006-09-19 Tuesday 09:44  toyomoyo
+
+	* report.php: 
+	
+	replacing references to user_* tables
+
+2006-09-18 Monday 17:13  moodler
+
+	* db/update_to_v2.php: 
+	
+	FIxed to use the new debugging function
+
+2006-09-15 Friday 05:50  gbateson
+
+	* restorelib.php: 
+	
+	do not add $restore->course_startdateoffset to ANY empty dates
+
+2006-09-14 Thursday 19:10  gbateson
+
+	* restorelib.php: 
+	
+	moved restorelog code to "hotpot_restore_mods", so it is only
+	executed when backing up a HotPot record. Also, modified restorelog
+	code so that "course_startdateoffset" is not added to TIMEOPEN or
+	TIMECLOSE if those fields are currently empty (empty has a special
+	meaning for those fields)
+
+2006-09-14 Thursday 17:08  toyomoyo
+
+	* report.php: 
+	
+	changing sql calls from user_students table to role_assignments
+	table
+
+2006-09-14 Thursday 15:29  gbateson
+
+	* lib.php: 
+	
+	add get_coursemodule_from_id/instance functions for compatability
+	with Moodles <1.7
+
+2006-09-14 Thursday 15:17  gbateson
+
+	* report/default.php: 
+	
+	reduce length of worksheet name to 31 chars if running under Moodle
+	1.5
+
+2006-09-14 Thursday 15:16  gbateson
+
+	* report/overview/report.php: 
+	
+	remove &nbsp; from blank cells when generating Excel sheet
+
+2006-09-14 Thursday 08:24  gbateson
+
+	* db/mysql.php: 
+	
+	removed unnecessary $db declaration
+
+2006-09-14 Thursday 07:59  gbateson
+
+	* db/: mysql.php, postgres7.php: 
+	
+	fix for overly advanced version numbers in HotPot module in Moodle
+	1.5 (see bug MDL-6538)
+
+2006-09-14 Thursday 07:27  gbateson
+
+	* db/mysql.php: 
+	
+	copied code from "hotpot/db/postgres.php" to detect
+	hotpot_attempts.details field
+
+2006-09-14 Thursday 05:25  gbateson
+
+	* db/postgres7.php: 
+	
+	fix bug 6538, in which $db->MetaColumns was not defined in some PG
+	sites
+
+2006-09-13 Wednesday 22:40  moodler
+
+	* version.php: 
+	
+	
+	Fixed MDL-6508 ... a wrongful update to the hotpot version was
+	killing Moodle upgrade
+
+2006-09-13 Wednesday 21:19  thompson697
+
+	* restorelib.php: 
+	
+	Complete work on Roll Forwards - Restore from previous semester
+	(MDL-5532) * Add fields to restore form to enable changes to Short
+	Name, Full Name and Start Date * Start Date offset added to Restore
+	process * Created Restorelog file in Course files area * Activity
+	Modules use offset to change dates * Activity Modules write changes
+	to Restorelog
+
+2006-09-13 Wednesday 16:26  gbateson
+
+	* README.TXT, version.php, db/mysql.php, db/postgres7.php: 
+	
+	when updating, if the version number indicates this could be an
+	early HotPot v2.1 (Moodle 1.6) then check this is not HotPot v2.0
+	(Moodle 1.5) with an overly advanced version number. Also, added
+	backwards compatability back to Moodle 1.1.1 New release is HotPot
+	v2.1.23, version is 2006082900
+
+2006-09-13 Wednesday 16:19  gbateson
+
+	* report/overview/report.php: 
+	
+	don't show &nbsp; in empty grades cells in Excel format
+
+2006-09-13 Wednesday 16:17  gbateson
+
+	* lib.php: 
+	
+	add get_coursemodule functions for Moodle <1.5.4
+
+2006-09-13 Wednesday 16:16  gbateson
+
+	* report/default.php: 
+	
+	limit worksheet length to 31 chars on Moodle 1.5: prevents fatal
+	error lib/excel/workbook.php
+
+2006-09-12 Tuesday 16:22  moodler
+
+	* version.php: 
+	
+	Small bump for guest role fix
+
+2006-09-12 Tuesday 15:10  moodler
+
+	* version.php: 
+	
+	Reload the guest role using new defaults
+
+2006-09-02 Saturday 06:44  gbateson
+
+	* db/update_to_v2.php: 
+	
+	improve detection of PostgreSQL version number
+
+2006-09-01 Friday 23:36  stronk7
+
+	* db/install.xml: 
+	
+	New md5key fields and associated indexes.  Now hotpot should be
+	100% cross-db. Thanks Gordon!
+
+2006-09-01 Friday 16:55  gbateson
+
+	* db/update_to_v2.php: 
+	
+	fix bug MDL_6419
+
+2006-09-01 Friday 12:24  gbateson
+
+	* restorelib.php: 
+	
+	correct the detection of HotPot 2.0 backups (from Moodle 1.5)
+
+2006-09-01 Friday 12:20  gbateson
+
+	* db/: mysql.sql, postgres7.sql, update_to_v2.php: 
+	
+	add md5key field to end of hotpot_questions and hotpot_strings
+
+2006-09-01 Friday 11:58  gbateson
+
+	* restorelib.php: 
+	
+	correct the detection of HotPot 2.0 backups (from Moodle 1.5)
+
+2006-09-01 Friday 10:18  gbateson
+
+	* db/update_to_v2.php: 
+	
+	fixed typo on line 2
+
+2006-09-01 Friday 10:08  gbateson
+
+	* db/mysql.php, db/postgres7.php, db/update_to_v2.php, lib.php,
+	restorelib.php, version.php: 
+	
+	replace MySQL-only indexes on text fields (hotpot_question.name +
+	hotpot_strings.string) with two new md5key fields
+	(hotpot_question.md5key + hotpot_strings.md5key), which are the MD5
+	hash of the respective text fields. Microincrement version number
+	to 2006083101
+
+2006-09-01 Friday 05:36  gbateson
+
+	* lib.php: 
+	
+	fix "get_jcross_item"s and "get_jcross_grid" so that function
+	arguments are assigned BEFORE the function call, not AS the
+	function is called. This fixes blank crosswords and matching
+	exercises in PHP5
+
+2006-08-31 Thursday 16:51  toyomoyo
+
+	* version.php, db/access.php: 
+	
+	adding capabilities
+
+2006-08-30 Wednesday 16:43  toyomoyo
+
+	* index.php, lib.php, report.php, review.php, show.php, view.php,
+	report/click/report.php, report/fullstat/report.php,
+	report/overview/report.php, report/simplestat/report.php: 
+	
+	added some capabilities
+
+2006-08-29 Tuesday 16:26  gbateson
+
+	* README.TXT, version.php, report/fullstat/report.php,
+	report/overview/report.php, report/simplestat/report.php: 
+	
+	remove assignment of variables in calls to functions as this was
+	making empty HotPot reports in PHP 5
+
+2006-08-29 Tuesday 14:34  gbateson
+
+	* report.php: 
+	
+	corrected a two calls to get_string:  allattempts=>attemptsall, 
+	bestattempt=>attemptsbest
+
+2006-08-26 Saturday 01:02  stronk7
+
+	* db/install.xml: 
+	
+	Indexes on text fields are not allowed
+
+2006-08-12 Saturday 01:24  stronk7
+
+	* db/install.xml: 
+	
+	XMLDB schema initial commit for the hotpot module
+
+2006-08-10 Thursday 23:51  skodak
+
+	* report.php, review.php, version.php, view.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283; backported from HEAD
+
+2006-08-10 Thursday 23:30  skodak
+
+	* README.TXT, report.php, review.php, version.php, view.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283; backported from HEAD
+
+2006-08-09 Wednesday 21:45  moodler
+
+	* attempt.php, config.html, index.php, lib.php, mod.html,
+	report.php, review.php, show.php, view.php, db/mysql.php,
+	db/update_to_v2.php, report/default.php, template/default.php,
+	template/v6.php: 
+	
+	Removed tabs
+
+2006-08-09 Wednesday 06:09  skodak
+
+	* README.TXT, report.php, review.php, version.php, view.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283
+
+2006-08-08 Tuesday 13:13  moodler
+
+	* version.php, db/access.php: 
+	
+	ROLES AND PERMISSIONS  - FIRST CHECK-IN
+	=======================================
+	
+	WARNING:  DEV IS CURRENTLY VERY UNSTABLE.
+	
+	This is a mega-checkin of the new Roles system.   A lot of changes
+	have been made in core and modules.
+	
+	Currently there are a lot of rough edges and known problems.  We
+	are working hard on these .. .the reason for getting this into HEAD
+	at this stage is enable us to move faster (our branch was diverging
+	from HEAD too much).
+	
+	Please keep an eye on http://docs.moodle.org/en/Roles for current
+	status and information for developers on how to use the new Roles
+	system.
+
+2006-08-04 Friday 13:56  vyshane
+
+	* db/access.php: 
+	
+	Renamed legacyroles to legacy
+
+2006-08-04 Friday 03:19  skodak
+
+	* db/update_to_v2.php: 
+	
+	merging forgotten changes from MOODLE_16_STABLE; sorry for the
+	breakage ;-)
+
+2006-08-01 Tuesday 15:40  vyshane
+
+	* db/access.php: 
+	
+	file access.php was initially added on branch MOODLE_17_ROLES.
+
+2006-08-01 Tuesday 15:40  vyshane
+
+	* db/access.php: 
+	
+	Capability definitions for the hotpot module.
+
+2006-08-01 Tuesday 02:10  skodak
+
+	* README.TXT, restorelib.php, version.php, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	merging changes from MOODLE_16_STABLE
+
+2006-07-21 Friday 08:10  gbateson
+
+	* README.TXT: 
+	
+	microincrement version to 2.1.21
+
+2006-07-19 Wednesday 16:13  skodak
+
+	* db/update_to_v2.php: 
+	
+	Bug #6136 - Hard coded admin paths; merged from MOODLE_16_STABLE
+
+2006-07-19 Wednesday 15:59  skodak
+
+	* db/update_to_v2.php: 
+	
+	Bug #6136 - Hard coded admin paths
+
+2006-07-16 Sunday 14:54  gbateson
+
+	* version.php: 
+	
+	micro-increment version number to v2.1.21
+
+2006-07-16 Sunday 14:53  gbateson
+
+	* db/: postgres7.php, postgres7.sql, update_to_v2.php: 
+	
+	add double quotes to index fields to avoid reserved words errors in
+	pg7. correct setting of default values in HotPot 2006050201 which
+	was incompatible with pg7.3
+
+2006-07-15 Saturday 22:28  gbateson
+
+	* restorelib.php: 
+	
+	initialized objects using new stdClass() and adjusted use use of
+	empty() and isset() in hotpot_restore_records() function
+
+2006-07-15 Saturday 21:47  gbateson
+
+	* restorelib.php: 
+	
+	fixed setting of empty secondary fields during restore (bug 6113)
+
+2006-06-05 Monday 05:11  skodak
+
+	* README.TXT: 
+	
+	merged last two commints into MOODLE_16_STABLE
+
+2006-05-25 Thursday 13:14  gbateson
+
+	* README.TXT: 
+	
+	added blank lines for to improve readability
+
+2006-05-25 Thursday 08:00  gbateson
+
+	* README.TXT: 
+	
+	clarified the wording in point (5) of the "TO USE" section
+
+2006-05-22 Monday 08:18  gbateson
+
+	* README.TXT, README.TXT: 
+	
+	modified CVS URLs to start http://moodle.cvs.sourceforge.net
+
+2006-05-22 Monday 08:10  gbateson
+
+	* README.TXT, lib.php, version.php: 
+	
+	Give Up button modified to send results and set status to
+	Abandoned. Microincrement release to 2006052200 (release = v2.1.20)
+
+2006-05-22 Monday 08:07  gbateson
+
+	* README.TXT, lib.php, version.php: 
+	
+	Give Up button modified to send results and set status to
+	abandoned. Microincrement version to 2006052200 (release = v2.1.20)
+
+2006-05-17 Wednesday 14:35  martinlanghoff
+
+	* version.php, db/postgres7.php: 
+	
+	moodle16cleanup: mod/hotpot set the correct column datatype and
+	default value
+
+2006-05-17 Wednesday 14:19  martinlanghoff
+
+	* version.php, db/postgres7.php: 
+	
+	moodle16cleanup: mod/hotpot set the correct column datatype and
+	default value
+
+2006-05-14 Sunday 16:34  gbateson
+
+	* README.TXT: 
+	
+	microincrement version number to v2.1.19
+
+2006-05-02 Tuesday 14:00  moodler
+
+	* attempt.php, defaults.php, view.php: 
+	
+	COnverted from DOS format
+
+2006-05-02 Tuesday 13:57  moodler
+
+	* attempt.php, backuplib.php, defaults.php, index.php, lib.php,
+	report.php, restorelib.php, review.php, show.php, view.php: 
+	
+	Changed all files to DOS and added some Id tags
+
+2006-05-02 Tuesday 13:18  gbateson
+
+	* lib.php, version.php: 
+	
+	fixed handling of square brackets in JCloze on older PHP sites.
+	Micro-increment version to 2006050200 (v2.1.19)
+
+2006-04-28 Friday 10:11  gbateson
+
+	* db/update_to_v2.php: 
+	
+	set negative values to 0, on unsigned numeric fields
+
+2006-04-28 Friday 10:06  gbateson
+
+	* version.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/update_to_v2.php: 
+	
+	allow negative score and weighting in hotpot_responses table
+
+2006-04-28 Friday 09:37  gbateson
+
+	* db/mysql.php, db/postgres7.php, db/update_to_v2.php, version.php:
+	
+	
+	optimization fo the removal of orphan records
+
+2006-04-28 Friday 09:20  gbateson
+
+	* version.php, db/mysql.php, db/postgres7.php, db/update_to_v2.php:
+	
+	
+	small fix for the removal of orphan records
+
+2006-04-28 Friday 08:59  gbateson
+
+	* db/update_to_v2.php: 
+	
+	fix undefined variable $db
+
+2006-04-28 Friday 08:56  gbateson
+
+	* db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/update_to_v2.php, version.php: 
+	
+	remove orphans records, if any, from hotpot tables, reduce size of
+	"score" and "weighting" fields in "hotpot_responses" table, and set
+	default value on ALL string fields in HotPot tables. New version
+	number is 2006042800 (v2.1.18)
+
+2006-04-28 Friday 05:22  gbateson
+
+	* db/postgres7.php, db/postgres7.sql, version.php: 
+	
+	force remaining NULL fields into NOT NULL '0'/''
+
+2006-04-27 Thursday 16:45  gbateson
+
+	* version.php, db/mysql.php, db/update_to_v2.php: 
+	
+	Fix "data truncated errors" by setting set NULL values in int field
+	to 0 before changing to NOT NULL DEFAULT 0
+
+2006-04-26 Wednesday 13:48  toyomoyo
+
+	* version.php, db/mysql.php, db/mysql.sql: 
+	
+	trying to change all the default NULL fields to NOT NULL default
+	'0'/'', hope i didn't mess up. Please report any bugs asap!
+
+2006-04-26 Wednesday 11:26  gbateson
+
+	* db/update_to_v2.php: 
+	
+	changed line 10 to:	$index = "{$table}_{$field}_idx"; (bug
+	5315)
+
+2006-04-26 Wednesday 11:07  gbateson
+
+	* db/update_to_v2.php: 
+	
+	change single quotes to double quotes. Probable fix for bug 5315
+
+2006-04-24 Monday 14:54  gbateson
+
+	* version.php, db/mysql.php, db/postgres7.php, db/update_to_v2.php:
+	
+	
+	fix bug 5304
+
+2006-04-24 Monday 09:44  gbateson
+
+	* version.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql, db/update_to_v2.php: 
+	
+	set default value for varchar 255 fields, to fix "truncated" errors
+	in utf8 migration. Fields affected: hotpot.studentfeedbackurl,
+	hotpot_responses.correct/wrong/ignored
+
+2006-04-23 Sunday 19:55  gbateson
+
+	* README.TXT, version.php: 
+	
+	micro-increment version number to 2006042101 (release = v2.1.16)
+
+2006-04-23 Sunday 19:53  gbateson
+
+	* db/: mysql.php, mysql.sql, postgres7.php, update_to_v2.php: 
+	
+	two fixes connected with UTF migration:  (i) remove $CFG->prefix
+	from all index names, (ii) force type of "name" field in
+	"hotpot_questions" table to "text"
+
+2006-04-23 Sunday 19:51  gbateson
+
+	* db/migrate2utf8.php: 
+	
+	set $result even when $fromenc=="utf-8", to fix "unassigned
+	variable" errors
+
+2006-04-23 Sunday 19:48  gbateson
+
+	* db/migrate2utf8.xml: 
+	
+	type of "name" field in "hotpot_questions" table should be "text"
+	after migrate
+
+2006-04-22 Saturday 21:39  skodak
+
+	* view.php: 
+	
+	typo in switch
+
+2006-04-21 Friday 15:55  toyomoyo
+
+	* version.php, db/mysql.php, db/mysql.sql: 
+	
+	fix for 5205
+
+2006-04-19 Wednesday 14:20  gbateson
+
+	* template/v6.php: 
+	
+	fixed bug which prevented display of JCross clues on PHP 5.1.2
+
+2006-04-18 Tuesday 20:20  gbateson
+
+	* lib.php: 
+	
+	corrected handling of tables within JCloze text (a lot of vertical
+	space was being added)
+
+2006-04-16 Sunday 10:10  gbateson
+
+	* lib.php: 
+	
+	improved readability of reg. exp. in adjust_media_urls function
+
+2006-04-15 Saturday 16:17  gbateson
+
+	* lib.php: 
+	
+	fix "Force Plugins" behavior to correctly detect media players in
+	JavaScript
+
+2006-04-14 Friday 23:57  skodak
+
+	* lib.php: 
+	
+	removed outdated xxx_param() functions
+
+2006-04-14 Friday 15:34  gbateson
+
+	* README.TXT: 
+	
+	modified instructions for uploading to "lang" directory, to reflect
+	the fact that the default Moodle 1.6 location for the "lang"
+	directory is now within $CFG->dataroot
+
+2006-04-05 Wednesday 09:28  gbateson
+
+	* lib.php: 
+	
+	define PARAM_SAFEDIR (constant) and clean_param (function) if
+	required for compatibility with Moodle 1.3 or earlier
+
+2006-03-30 Thursday 11:17  gbateson
+
+	* README.TXT, lib.php, version.php, report/click/report.php,
+	report/overview/report.php, template/v6.php: 
+	
+	make compatible with PHP 5.1.2 by removing variable assignments in
+	calls to functions e.g. myfunction($a=1); Micro-incremented version
+	number to 2.1.15
+
+2006-03-29 Wednesday 13:14  gbateson
+
+	* db/update_to_v2.php: 
+	
+	fix SQL query that didn't work in PG (bug 4989)
+
+2006-03-29 Wednesday 03:18  stronk7
+
+	* lib.php: 
+	
+	Only decode from utf8 if we aren't running under utf8.
+	
+	Please, test it. Thanks!
+
+2006-03-29 Wednesday 02:48  stronk7
+
+	* lib.php: 
+	
+	Only convert to UTF8 if we aren't running under UTF8.
+	
+	Please, test this is correct, thanks!
+
+2006-03-27 Monday 13:18  gbateson
+
+	* README.TXT: 
+	
+	modified newlines for Windows (perhaps?)
+
+2006-03-27 Monday 13:16  gbateson
+
+	* README.TXT, version.php: 
+	
+	modified README.txt to download zip, lang and question/format files
+	from CVS
+
+2006-03-19 Sunday 07:47  gbateson
+
+	* template/v6.php: 
+	
+	increase gap size for long answers in JCloze
+
+2006-03-10 Friday 11:43  patrickslee
+
+	* db/migrate2utf8.php: 
+	
+	UTF8 migration - now supporting PostgreSQL
+
+2006-03-09 Thursday 01:54  gbateson
+
+	* template/v6.php: 
+	
+	JCloze improvements: allow gap at start of cloze and allow "0" for
+	a gap value
+
+2006-03-08 Wednesday 05:46  skodak
+
+	* show.php: 
+	
+	short php tags once more
+
+2006-03-08 Wednesday 05:35  skodak
+
+	* db/migrate2utf8.php: 
+	
+	short php tags
+
+2006-03-04 Saturday 20:37  skodak
+
+	* report.php: 
+	
+	incorrect usage of clean_filename() replaced with
+	clean_param($text, PARAM_SAFEDIR)
+
+2006-02-24 Friday 17:57  gbateson
+
+	* lib.php: 
+	
+	improved handling of relative URLs for media files in jqz files
+
+2006-02-24 Friday 16:13  toyomoyo
+
+	* db/migrate2utf8.php: 
+	
+	see changes for admin/utfdbmigrate.php
+
+2006-02-24 Friday 05:24  gbateson
+
+	* lib.php: 
+	
+	improved conversion of relative URLs for some Flash players
+
+2006-02-21 Tuesday 08:19  gbateson
+
+	* template/v6.php: 
+	
+	do not show JCloze clue button, if there is no clue
+
+2006-02-16 Thursday 18:18  gbateson
+
+	* README.TXT, version.php: 
+	
+	micro increment version to 2.1.13
+
+2006-02-16 Thursday 18:17  gbateson
+
+	* lib.php: 
+	
+	correctly handle HTML entities in readings
+
+2006-02-08 Wednesday 10:47  gbateson
+
+	* README.TXT, lib.php, version.php: 
+	
+	small change to get CSS background images displayed on site where
+	PHP's server API is "CGI". Micro increment version number to 2.1.12
+
+2006-02-01 Wednesday 21:25  gbateson
+
+	* db/update_to_v2.php: 
+	
+	if old "v6" folder cannot be deleted, update will WARN but will not
+	fail
+
+2006-01-31 Tuesday 10:10  moodler
+
+	* db/migrate2utf8.php: 
+	
+	changed to use utfconvert function
+
+2006-01-27 Friday 12:27  moodler
+
+	* db/migrate2utf8.xml: 
+	
+	fixing typo =(
+
+2006-01-26 Thursday 20:11  gbateson
+
+	* template/v6.php: 
+	
+	Further improvement to generation alternative matches in JMatch
+
+2006-01-25 Wednesday 15:31  gbateson
+
+	* README.TXT, version.php: 
+	
+	micro increment version to 2.1.11
+
+2006-01-25 Wednesday 15:20  gbateson
+
+	* backuplib.php, restorelib.php: 
+	
+	added backup/restore compatibility for Moodle 1.5 (and earlier)
+
+2006-01-23 Monday 11:15  moodler
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	bug fixes
+
+2006-01-22 Sunday 12:40  gbateson
+
+	* view.php: 
+	
+	removed some extraneous white space
+
+2006-01-22 Sunday 12:39  gbateson
+
+	* README.TXT: 
+	
+	standardized line endings, so that README.TXT is readable on
+	Windows machines
+
+2006-01-21 Saturday 14:48  gbateson
+
+	* lib.php: 
+	
+	fix typo: "get_user_preference" => "set_user_preference"
+
+2006-01-21 Saturday 14:46  gbateson
+
+	* report.php: 
+	
+	only display "Excel" option, if an Excel library is available
+
+2006-01-20 Friday 19:27  gbateson
+
+	* README.TXT, lib.php, version.php: 
+	
+	addslashes to "name" and "summary" when they are set from the HP
+	quiz file; increment version to v2.1.10
+
+2006-01-20 Friday 09:05  gbateson
+
+	* README.TXT, version.php: 
+	
+	micro-increment version number to v2.1.9
+
+2006-01-20 Friday 08:59  gbateson
+
+	* template/v6.php: 
+	
+	allow duplicate segments on JMatch
+
+2006-01-17 Tuesday 21:24  gbateson
+
+	* report/default.php: 
+	
+	use clean_filename for filename of text file download
+
+2006-01-17 Tuesday 21:15  gbateson
+
+	* backuplib.php, restorelib.php: 
+	
+	uses 4-spaces (Moodle standard) instead of tabs for code indenting
+
+2006-01-17 Tuesday 20:49  gbateson
+
+	* version.php: 
+	
+	micro increment version number to 2.1.8
+
+2006-01-17 Tuesday 20:48  gbateson
+
+	* db/: postgres7.php, postgres7.sql, update_to_v2.php: 
+	
+	in "hotpot" table, rename "microreporting" field to
+	"clickreporting" (PostgreSQL only)
+
+2006-01-17 Tuesday 20:46  gbateson
+
+	* db/mysql.php: 
+	
+	mysql does not need to call "hotpot_update_to_v2_1_6()" or
+	"hotpot_update_to_v2_1_8()" functions
+
+2006-01-17 Tuesday 15:24  moodler
+
+	* db/mysql.sql: 
+	
+	Added default values where needed for columns in the MySQL creation
+	script mysql.sql.  Added default values to migrate2utf8.xml, for
+	any varchar and text field types, if the default values for these
+	fields were not defined as '' in the MySQL table creation script.
+	
+	Committed by vyshane
+
+2006-01-17 Tuesday 13:45  gbateson
+
+	* report/default.php: 
+	
+	allow user to set encoding when "lib/excellib.class.php" is not
+	available
+
+2006-01-17 Tuesday 12:31  gbateson
+
+	* version.php: 
+	
+	microincrement version number to 2.1.7
+
+2006-01-17 Tuesday 12:16  gbateson
+
+	* report/default.php: 
+	
+	fixed Excel reports to work with new "excellib.class.php" and fixed
+	Excel and Text reports to handle multicolumn and multirow cells
+
+2006-01-16 Monday 05:09  mjollnir_
+
+	* restorelib.php: 
+	
+	Abstracted a bit of the restore procedure to allow for silent
+	restoring.  Added new function, import_backup_file_silently Changed
+	everything that prints stuff to check for a constant first. 
+	Backup_flush checks a different constant, this is so that output
+	can still get flushed to the browser when necessary but not print
+	<li>s everywhere.  Please test this!
+
+2006-01-15 Sunday 10:08  gbateson
+
+	* restorelib.php: 
+	
+	improved readability of "foreign key could not be updated" error
+	message
+
+2006-01-15 Sunday 09:47  gbateson
+
+	* restorelib.php: 
+	
+	if foreign keys are missing, backup will not abort, but record will
+	not be restored
+
+2006-01-14 Saturday 12:04  gbateson
+
+	* lib.php: 
+	
+	optimzed SQL query in hotpot_get_participants to return only user
+	ids (not whole user record)
+
+2006-01-14 Saturday 07:07  gbateson
+
+	* db/postgres7.sql: 
+	
+	corrected spelling of "Potatatoes" to "Potatoes" on some table
+	comments
+
+2006-01-13 Friday 16:44  gbateson
+
+	* db/mysql.sql: 
+	
+	corrected the spelling of "Potatatoes" to "Potatoes" in the
+	comments of several tables
+
+2006-01-13 Friday 16:37  gbateson
+
+	* db/postgres7.sql: 
+	
+	add questions_name_idx and strings_stirng _idx
+
+2006-01-13 Friday 15:57  gbateson
+
+	* attempt.php: 
+	
+	if starttime and endtime are empty, set them to zero
+
+2006-01-13 Friday 15:56  gbateson
+
+	* db/update_to_v2.php: 
+	
+	remove unused microreportid field from postgre7 database
+
+2006-01-13 Friday 15:24  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	more bug fixes =(
+
+2006-01-13 Friday 14:08  gbateson
+
+	* db/mysql.php, db/mysql.sql, db/postgres7.php, db/postgres7.sql,
+	db/update_to_v2.php, version.php: 
+	
+	add, delete and rename certain fields and indexes that were not
+	correctly setup by postgres7.sql
+
+2006-01-13 Friday 11:45  mjollnir_
+
+	* backuplib.php, restorelib.php: 
+	
+	Granular backup & restore: This patch allows the much requested
+	selection of individual instances of modules within a course to
+	backup and restore.  It needs A LOT of testing and probably some
+	prettyifying too.
+
+2006-01-13 Friday 07:28  mjollnir_
+
+	* lib.php: 
+	
+	Replaced mysql specific comments with generic ones in hotpot sql
+
+2006-01-12 Thursday 10:35  toyomoyo
+
+	* db/migrate2utf8.xml: 
+	
+	some bug fixes
+
+2006-01-11 Wednesday 09:46  toyomoyo
+
+	* db/migrate2utf8.xml: 
+	
+	added 2 fields in xml, addindex and dropindex, and bug fixes
+
+2006-01-10 Tuesday 12:06  gbateson
+
+	* lib.php, template/v6.php: 
+	
+	change relative URLs in stylsheets to absolute URLs
+
+2006-01-09 Monday 14:06  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	utf8 migration support scripts
+
+2006-01-08 Sunday 13:53  gbateson
+
+	* attempt.php: 
+	
+	removed unnecessary tabs at end of lines
+
+2006-01-08 Sunday 13:43  gbateson
+
+	* attempt.php: 
+	
+	changes to allow JQuiz in mobile format
+
+2006-01-08 Sunday 13:34  gbateson
+
+	* lib.php: 
+	
+	defined PARAM_CLEAN if necessary (for mobile template on
+	Moodle<=1.4)
+
+2006-01-06 Friday 00:38  stronk7
+
+	* report/default.php: 
+	
+	Now Hotpot is using the new Excel generation API.
+	
+	Merged from MOODLE_16_UTF8. Abandoning the branch.
+
+2005-12-20 Tuesday 03:27  stronk7
+
+	* report/default.php: 
+	
+	Now Hotpot is using the new Excel generation API
+
+2005-12-14 Wednesday 12:15  patrickslee
+
+	* README.TXT, attempt.php, backuplib.php, config.html,
+	hotpot-full.js, iframe.js, index.php, lib.php, mod.html,
+	report.php, restorelib.php, review.php, show.php, version.php,
+	view.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql, db/update_to_v2.php, report/default.php,
+	report/click/report.php, report/fullstat/report.php,
+	report/overview/report.php, report/simplestat/report.php,
+	template/default.php, template/v6.php, template/v6/djmatch6.ht_,
+	template/v6/djmatch6.js_, template/v6/djmix6.ht_,
+	template/v6/djmix6.js_, template/v6/fjmatch6.ht_,
+	template/v6/fjmatch6.js_, template/v6/hotpot6r.ht_,
+	template/v6/hp6.cs_, template/v6/hp6browsercheck.js_,
+	template/v6/hp6buttons.js_, template/v6/hp6card.js_,
+	template/v6/hp6checkshortanswer.js_, template/v6/hp6hotpotnet.js_,
+	template/v6/hp6navbar.ht_, template/v6/hp6objecttags.ht_,
+	template/v6/hp6plainpage.ht_, template/v6/hp6sendresults.js_,
+	template/v6/hp6showmessage.js_, template/v6/hp6timer.js_,
+	template/v6/hp6utilities.js_, template/v6/jcloze6.ht_,
+	template/v6/jcloze6.js_, template/v6/jcross6.ht_,
+	template/v6/jcross6.js_, template/v6/jcross6print.ht_,
+	template/v6/jmatch6.ht_, template/v6/jmatch6.js_,
+	template/v6/jmix6.ht_, template/v6/jmix6.js_,
+	template/v6/jquiz6.ht_, template/v6/jquiz6.js_,
+	template/v6/masher.ht_, template/v6/mashernav.ht_,
+	template/v6/testbrowsercheck.htm: 
+	
+	Merged with MOODLE_16_MULTIENROL_MP1
+
+2005-12-11 Sunday 08:22  stronk7
+
+	* report/default.php: 
+	
+	current_charset() is used now.
+
+2005-12-06 Tuesday 11:41  gbateson
+
+	* report/: fullstat/report.php, overview/report.php,
+	simplestat/report.php: 
+	
+	use "optional_param" instead of outdated "optional_variable"
+
+2005-12-06 Tuesday 10:33  patrickslee
+
+	* restorelib.php: 
+	
+	Fixed a bug caused hotpot module not restoring attempts properly
+
+2005-11-27 Sunday 09:46  gbateson
+
+	* README.TXT, version.php: 
+	
+	micro-increment version number to 2.0.10
+
+2005-11-27 Sunday 09:41  gbateson
+
+	* lib.php: 
+	
+	corrected adjustment of relative URLs in <EMBED> tag
+
+2005-11-26 Saturday 07:01  gbateson
+
+	* template/v6.php: 
+	
+	JMatch: allow extra, unused RHS items
+
+2005-11-25 Friday 21:04  gbateson
+
+	* hotpot-full.js: 
+	
+	corrected scoring and finishing of JMatch with unused RHS items
+
+2005-11-24 Thursday 15:00  gbateson
+
+	* template/v6/: djmatch6.ht_, djmatch6.js_, djmix6.ht_, djmix6.js_,
+	fjmatch6.ht_, fjmatch6.js_, hotpot6r.ht_, hp6.cs_,
+	hp6browsercheck.js_, hp6buttons.js_, hp6card.js_,
+	hp6checkshortanswer.js_, hp6hotpotnet.js_, hp6navbar.ht_,
+	hp6objecttags.ht_, hp6plainpage.ht_, hp6sendresults.js_,
+	hp6showmessage.js_, hp6timer.js_, hp6utilities.js_, jcloze6.ht_,
+	jcloze6.js_, jcross6.ht_, jcross6.js_, jcross6print.ht_,
+	jmatch6.ht_, jmatch6.js_, jmix6.ht_, jmix6.js_, jquiz6.ht_,
+	jquiz6.js_, masher.ht_, mashernav.ht_, testbrowsercheck.htm: 
+	
+	removed bad newlines (\r\r\n) which caused double-spacing in
+	HTML/JS/CSS source
+
+2005-11-24 Thursday 14:44  gbateson
+
+	* config.html, mod.html: 
+	
+	removed bad newlines (\r\r\n) which caused double-spacing in PHP
+	source
+
+2005-11-24 Thursday 13:39  gbateson
+
+	* report/: fullstat/report.php, overview/report.php,
+	simplestat/report.php: 
+	
+	removed bad newlines, which caused double-spacing in PHP source
+
+2005-11-24 Thursday 13:36  gbateson
+
+	* README.TXT, backuplib.php, hotpot-full.js, iframe.js,
+	restorelib.php, review.php, show.php, version.php, view.php,
+	db/mysql.php, db/mysql.sql, db/postgres7.php, db/postgres7.sql,
+	db/update_to_v2.php, report/click/report.php: 
+	
+	removed bad newlines, which caused double-spacing in PHP source
+
+2005-11-24 Thursday 13:16  gbateson
+
+	* template/default.php: 
+	
+	fix bad newlines which caused double spacing
+
+2005-11-20 Sunday 00:23  gbateson
+
+	* hotpot-full.js: 
+	
+	Sequitur improvments: corrected score and added counts for number
+	of correct and wrong clicks
+
+2005-11-19 Saturday 10:10  gbateson
+
+	* version.php: 
+	
+	micro-incremented version number to 2.1.5
+
+2005-11-19 Saturday 10:09  gbateson
+
+	* README.TXT: 
+	
+	incremented version number and added one more sponsor
+
+2005-11-19 Saturday 10:02  gbateson
+
+	* hotpot-full.js: 
+	
+	corrected JMatch reporting and added intermediate reporting of
+	TexToys Rhubarb quizzes
+
+2005-11-18 Friday 14:07  gbateson
+
+	* hotpot-full.js, lib.php: 
+	
+	allow "penalties" to be returned from Rottmeier Find-It quizzes
+
+2005-11-18 Friday 09:13  gbateson
+
+	* template/v6.php: 
+	
+	remove [] from clue button text in JCloze (HP default is [?], so
+	additional [] are not needed)
+
+2005-11-14 Monday 19:32  gbateson
+
+	* hotpot-full.js: 
+	
+	correct score calculation in TexToys Rhubarb
+
+2005-11-11 Friday 14:46  gbateson
+
+	* lib.php: 
+	
+	adjust relative URLs in <SCRIPT> tags; use ClueCaption as text on
+	clue buttons (hitherto it was always set to "?")
+
+2005-11-11 Friday 14:34  gbateson
+
+	* template/v6.php: 
+	
+	get clue button text from quiz XML file (hitherto, it was always
+	been set to "?")
+
+2005-11-10 Thursday 17:00  gbateson
+
+	* lib.php: 
+	
+	fix error on line 700 when student displays hotpot/index.php
+
+2005-11-08 Tuesday 15:48  gbateson
+
+	* attempt.php, index.php, lib.php: 
+	
+	changes to allow quizzes in tail of HotPot chains to be visible
+
+2005-11-04 Friday 10:16  gbateson
+
+	* report/default.php: 
+	
+	fixed undefined index line 147 in "remove_column" function
+
+2005-10-31 Monday 09:58  defacer
+
+	* lib.php: 
+	
+	
+	Fixing a typo ("=" to "=>") which killed my Moodle after grabbing
+	the latest CVS.
+
+2005-10-31 Monday 07:32  gbateson
+
+	* lib.php: 
+	
+	add PARAM_ALPHANUM for Moodle 1.4 and less
+
+2005-10-31 Monday 07:31  gbateson
+
+	* attempt.php: 
+	
+	improved detection of $quiztype for "mobile" output format
+
+2005-10-23 Sunday 19:41  gbateson
+
+	* lib.php: 
+	
+	replace relative URLs in <embed> tags
+
+2005-10-19 Wednesday 17:56  gbateson
+
+	* report.php: 
+	
+	allow student to review results (if teacher allows it)
+
+2005-10-13 Thursday 06:00  gbateson
+
+	* README.TXT: 
+	
+	corrected spelling in sponsor details
+
+2005-10-12 Wednesday 20:20  gbateson
+
+	* version.php: 
+	
+	micro version increase to 2.1.4
+
+2005-10-12 Wednesday 20:19  gbateson
+
+	* README.TXT: 
+	
+	added list of (two) sponsors
+
+2005-10-12 Wednesday 15:11  gbateson
+
+	* attempt.php: 
+	
+	corrected the setting of "ignored" fields on mobile output format
+
+2005-10-12 Wednesday 15:08  gbateson
+
+	* view.php: 
+	
+	insert modified submission form for mobile phone output
+
+2005-10-12 Wednesday 15:07  gbateson
+
+	* lib.php: 
+	
+	allow non alphanumeric chars in filenames when searching for
+	relative URLs, and added $HOTPOT_QUIZTYPE array to map numeric quiz
+	type to text description
+
+2005-10-07 Friday 13:31  gbateson
+
+	* lib.php, view.php: 
+	
+	detect mobile phone browsers and use mobile format if required and
+	available
+
+2005-10-07 Friday 09:56  gbateson
+
+	* lib.php: 
+	
+	add get_file_contents for php<4.2, use get_file_contents($filepath)
+	instead of fread($fp, filesize($filepath))
+
+2005-10-07 Friday 09:52  gbateson
+
+	* template/default.php: 
+	
+	use get_file_contents($filepath) instead of fread($fp,
+	filesize($filepath))
+
+2005-10-07 Friday 07:59  gbateson
+
+	* lib.php: 
+	
+	fixed setting of name+summary from quiz when adding all files in a
+	folder as a chain
+
+2005-10-05 Wednesday 21:00  gbateson
+
+	* attempt.php, lib.php, view.php: 
+	
+	attempt.php now includes view.php for "mobile" outputformat; added
+	checks, hints and score for "mobile" outputformat
+
+2005-10-05 Wednesday 11:49  gbateson
+
+	* attempt.php: 
+	
+	simplified logic which handles passing of invalid (non-numeric)
+	atrtemptid
+
+2005-10-05 Wednesday 11:47  gbateson
+
+	* hotpot-full.js, lib.php: 
+	
+	modified handling of JCross question numbers in
+	hotpot_add_attempt_details()
+
+2005-10-03 Monday 08:06  gbateson
+
+	* README.TXT, attempt.php, backuplib.php, config.html,
+	hotpot-full.js, index.php, lib.php, mod.html, report.php,
+	restorelib.php, review.php, show.php, version.php, view.php,
+	db/update_to_v2.php, report/click/report.php, report/default.php,
+	report/fullstat/report.php, report/overview/report.php,
+	report/simplestat/report.php, template/default.php,
+	template/v6.php: 
+	
+	added some reporting for HP5 (v5 and v6) quizzes; improved
+	reporting on JCross and JQuiz multichoice; some modifications to
+	prepare for upcoming "mobile" output format; corrected positioning
+	bug when IE displays feedback box on long reading
+
+2005-09-28 Wednesday 11:14  gbateson
+
+	* iframe.js, lib.php, view.php: 
+	
+	improved the display of "Give Up" button and <IFRAME> navigation
+	buttons (however <IFRAME> still does not resize on FireFox)
+
+2005-09-27 Tuesday 12:46  gbateson
+
+	* index.php: 
+	
+	use while loop instead of foreach loop during regrade, to allow for
+	the possibility of splitting a regrade and so avoid "maximum
+	execution time exceeded" errors
+
+2005-09-26 Monday 19:33  gbateson
+
+	* db/update_to_v2.php: 
+	
+	slight modificaition to the function which updates from v1.2.0 or
+	v1.2.1 to v1.2.2, so as to catch all incorrectly labelled "in
+	progress" attempts
+
+2005-09-26 Monday 09:27  gbateson
+
+	* README.TXT, version.php, db/mysql.php, db/postgres7.php,
+	db/update_to_v2.php: 
+	
+	when updating from v2.1.0 or 2.1.1, check there is no more than one
+	"in progress" attempt per user for each quiz, and if there is such
+	an attempt, it must be the most recent attempt on the quiz by that
+	user
+
+2005-09-26 Monday 08:44  gbateson
+
+	* lib.php: 
+	
+	switch output_formats v3, v4, v5 and moved "hotpot_flush" function
+	to "db/update_to_v2.php"
+
+2005-09-22 Thursday 15:32  gbateson
+
+	* report/click/report.php: 
+	
+	ensure %-signs in "reportpercentscore" are doubled for sprintf
+	(only applies to Moodle 1.4 and less)
+
+2005-09-22 Thursday 14:38  gbateson
+
+	* report.php: 
+	
+	allow teacher to select reports on single students
+
+2005-09-22 Thursday 12:40  gbateson
+
+	* report.php, report/default.php, report/click/report.php,
+	report/fullstat/report.php, report/simplestat/report.php: 
+	
+	modified reports to allow rowspan and colspan settings to work with
+	"remove_column" function
+
+2005-09-22 Thursday 09:19  gbateson
+
+	* lib.php: 
+	
+	changed some variable names to improve readability:  $i, $ii, $iii
+	=> $str_start, $cdata_start, $cdata_end,  $hp->files =>
+	$hp->references
+
+2005-09-21 Wednesday 19:53  gbateson
+
+	* restorelib.php: 
+	
+	SQL to update clickreportid must be done one statement at a time
+
+2005-09-21 Wednesday 19:51  gbateson
+
+	* lib.php: 
+	
+	when adding a "chain" of HotPots, check quiz specified in "Next"
+	button has not already been added
+
+2005-09-21 Wednesday 08:31  gbateson
+
+	* README.TXT: 
+	
+	renumbered steps 1,2,3,3,4 => 1,2,3,4,5 signalled steps 3 and 4 as
+	not required for Moodle 1.5 and later
+
+2005-09-21 Wednesday 08:25  gbateson
+
+	* README.TXT: 
+	
+	renumbered steps 1,2,3,3,4 => 1,2,3,4,5 signalled steps 3 and 4 as
+	not required for Moodle 1.5 and later
+
+2005-09-20 Tuesday 19:57  gbateson
+
+	* show.php: 
+	
+	removed XSS hole caused by "urldecode"
+
+2005-09-20 Tuesday 19:48  gbateson
+
+	* show.php: 
+	
+	removed XSS hole caused by urldecode
+
+2005-09-20 Tuesday 15:12  gbateson
+
+	* lib.php: 
+	
+	Improved the setting of quiz name and summary for quiz chains
+
+2005-09-19 Monday 14:29  gbateson
+
+	* lib.php, version.php, view.php, template/v6.php: 
+	
+	improved handling of Hot Potatoes navigation buttons
+
+2005-09-16 Friday 19:57  gbateson
+
+	* lib.php: 
+	
+	Fixed bug for student view of index.php Replaced use of
+	DIRECTORY_SEPARATOR constant with '/'
+
+2005-09-16 Friday 15:24  gbateson
+
+	* config.html, report/click/report.php, template/default.php,
+	template/v6.php, template/v6/djmatch6.ht_,
+	template/v6/djmatch6.js_, template/v6/djmix6.ht_,
+	template/v6/djmix6.js_, template/v6/fjmatch6.ht_,
+	template/v6/fjmatch6.js_, template/v6/hotpot6r.ht_,
+	template/v6/hp6.cs_, template/v6/hp6browsercheck.js_,
+	template/v6/hp6buttons.js_, template/v6/hp6card.js_,
+	template/v6/hp6checkshortanswer.js_, template/v6/hp6hotpotnet.js_,
+	template/v6/hp6navbar.ht_, template/v6/hp6objecttags.ht_,
+	template/v6/hp6plainpage.ht_, template/v6/hp6sendresults.js_,
+	template/v6/hp6showmessage.js_, template/v6/hp6timer.js_,
+	template/v6/hp6utilities.js_, template/v6/jcloze6.ht_,
+	template/v6/jcloze6.js_, template/v6/jcross6.ht_,
+	template/v6/jcross6.js_, template/v6/jcross6print.ht_,
+	template/v6/jmatch6.ht_, template/v6/jmatch6.js_,
+	template/v6/jmix6.ht_, template/v6/jmix6.js_,
+	template/v6/jquiz6.ht_, template/v6/jquiz6.js_,
+	template/v6/masher.ht_, template/v6/mashernav.ht_,
+	template/v6/testbrowsercheck.htm: 
+	
+	changes to database and most scripts to allow enhancements for
+	HotPot v2.1   - click-by-click reporting   - manipulate "chains" of
+	hotpot activities   - standardized reporting across all quiz types 
+	 - several smaller features
+
+2005-09-16 Friday 10:55  gbateson
+
+	* README.TXT, attempt.php, backuplib.php, hotpot-full.js,
+	index.php, lib.php, mod.html, report.php, restorelib.php,
+	review.php, show.php, version.php, view.php, db/mysql.php,
+	db/mysql.sql, db/postgres7.php, db/postgres7.sql,
+	db/update_to_v2.php, report/default.php,
+	report/fullstat/report.php, report/overview/report.php,
+	report/simplestat/report.php: 
+	
+	changes to database and most scripts to allow enhancements for
+	HotPot v2.1   - click-by-click reporting   - manipulate "chains" of
+	hotpot activities   - standardized reporting across all quiz types 
+	 - several smaller features
+
+2005-09-16 Friday 08:43  gbateson
+
+	* lib.php: 
+	
+	fixed "hotpot_print_recent_activity to use "hp=" instead of "id="
+	in links to attempted quizzes
+
+2005-09-16 Friday 08:30  gbateson
+
+	* README.TXT: 
+	
+	new version number: 2.0.9
+
+2005-09-16 Friday 08:22  gbateson
+
+	* lib.php, version.php: 
+	
+	fixed "hotpot_print_recent_mod_activity" to use "hp=" instead of
+	"id=" in link to recent attempted quiz
+
+2005-09-09 Friday 09:03  gbateson
+
+	* lib.php: 
+	
+	removed line which was crippling quizzes with HTML in questions or
+	answers added check to detect when no grades were returned in the
+	database
+
+2005-09-01 Thursday 12:14  mjollnir_
+
+	* lib.php: 
+	
+	Initial checkin of stats (from processing the log table).  I will
+	write up some information about it for the developers wiki.
+
+2005-07-04 Monday 15:20  skodak
+
+	* view.php: 
+	
+	merged from MOODLE_15_STABLE
+
+2005-07-04 Monday 15:07  skodak
+
+	* view.php: 
+	
+	typos in switch - semicolon after 'main'
+
+2005-05-31 Tuesday 07:13  gbateson
+
+	* view.php: 
+	
+	size of top frame, if any,  set using $CFG->resource_framesize
+
+2005-05-31 Tuesday 07:06  gbateson
+
+	* README.TXT: 
+	
+	Additional explanation for quiz module add-in in Moodle 1.4.5
+
+2005-05-21 Saturday 04:44  gustav_delius
+
+	* version.php: 
+	
+	fixed weird line endings in this file because perhaps it is the
+	cause of bug 3301.
+
+2005-05-17 Tuesday 15:45  gbateson
+
+	* show.php: 
+	
+	use class="helplink" instead of inline styles
+
+2005-05-17 Tuesday 15:44  gbateson
+
+	* README.TXT: 
+	
+	correct wording on point 2, to "Install the messages and help files
+	of the hotpot module"
+
+2005-05-17 Tuesday 15:43  gbateson
+
+	* lib.php: 
+	
+	use class="helplink" instead of inline styles
+	get_recent_mod_activity to initialize $activity in loop
+
+2005-05-17 Tuesday 11:13  gbateson
+
+	* show.php: 
+	
+	moved hard-coded text messages (about clipboard) to
+	lang/en/hotpot.php
+
+2005-05-17 Tuesday 11:11  gbateson
+
+	* lib.php: 
+	
+	removed several (all?) XHTML incompatabilities
+
+2005-05-17 Tuesday 10:15  gbateson
+
+	* show.php: 
+	
+	access to $_GET parameters now done using required_param() HTML
+	tags made XHTML compatible
+
+2005-05-16 Monday 16:59  gbateson
+
+	* README.TXT: 
+	
+	Updated version number to 2.0.8
+
+2005-05-14 Saturday 14:07  moodler
+
+	* lib.php: 
+	
+	Removed excess z
+
+2005-05-14 Saturday 11:22  moodler
+
+	* lib.php: 
+	
+	Some little style fixes    bug 3222
+
+2005-05-14 Saturday 10:43  gbateson
+
+	* version.php: 
+	
+	modified $moodle->requires to 2003091111 (Moodle v1.1.1)
+
+2005-05-13 Friday 20:39  gbateson
+
+	* lib.php, version.php: 
+	
+	setting of path templates directory no longer depends on strings
+	"v6", "v5", etc in language pack
+
+2005-05-13 Friday 10:39  gbateson
+
+	* install.php: 
+	
+	removed install.php script because it is non-standard and not
+	required in Moodle 1.5
+
+2005-05-09 Monday 19:57  gbateson
+
+	* README.TXT: 
+	
+	corrected spelling of "supprot forum" to "support forum"
+
+2005-05-09 Monday 19:52  gbateson
+
+	* README.TXT: 
+	
+	corrected version number to 2.0.7
+
+2005-05-09 Monday 19:48  gbateson
+
+	* README.TXT: 
+	
+	removed reference to install.php from README.TXT
+
+2005-05-08 Sunday 10:36  gbateson
+
+	* README.TXT, install.php: 
+	
+	added hotpot/install.php to simplify installation and upgrade
+	modified README.TXT explaining how to use install.php
+
+2005-05-04 Wednesday 19:19  gbateson
+
+	* db/update_to_v2.php: 
+	
+	two changes to "hotpot_db_update_field_type" to correct bugs when
+	updating PostgreSQL database - declare $db as global variable (line
+	760) - curly brackets around $field when assigning $tmpfield (line
+	852)
+
+2005-04-26 Tuesday 00:29  moodler
+
+	* defaults.php, version.php, db/mysql.php, db/mysql.sql,
+	db/postgres7.php: 
+	
+	The initial installation is now properly handled.
+	
+	Hot Potatoes is disabled by default in new installations.
+
+2005-04-25 Monday 23:21  moodler
+
+	* db/: mysql.php, postgres7.php: 
+	
+	Change logic for new installs
+
+2005-04-25 Monday 22:41  moodler
+
+	* README.TXT, attempt.php, backuplib.php, hotpot-full.js, icon.gif,
+	iframe.js, index.php, lib.php, mod.html, report.php,
+	restorelib.php, review.php, show.php, version.php, view.php,
+	db/mysql.php, db/mysql.sql, db/postgres7.php, db/postgres7.sql,
+	db/update_to_v2.php, report/default.php,
+	report/fullstat/report.php, report/overview/report.php,
+	report/simplestat/report.php: 
+	
+	Hotpot module v2!   Thomas Robb, Gordon Bateson - thanks!!
+

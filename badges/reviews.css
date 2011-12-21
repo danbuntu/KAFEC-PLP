@@ -1,0 +1,32 @@
+/* 
+    Document   : reviews
+    Created on : 22-Jul-2010, 11:24:52
+    Author     : dattwood
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+#pastreview {
+    float: left;
+    display: block;
+    margin-left: 10px;
+}
+
+#dump {
+    clear: both;
+}
+
+
+
+#deletebutton {
+    float: right;
+}

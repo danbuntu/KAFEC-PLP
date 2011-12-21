@@ -1,0 +1,26 @@
+	html{
+		height:100%;
+	}
+	#categorygroup
+	{
+		overflow:auto;
+		height:150px;
+	}
+	.fgroup span
+	{
+		width:10em;
+		float:left;
+	}
+	.fgroup span input
+	{
+		float:left;
+		display:block;
+	}
+	.fgroup span label
+	{
+		/*border:1px solid red;*/
+	}/*
+	.mform div.felement, .mform fieldset.felement
+	{
+		width:auto;
+	}*/

@@ -1,0 +1,91 @@
+<?php
+    if(empty($this->config->selectdays)) {
+        $this->config->selectdays = B_ACTIVE_FORUMS_DEFAULT_DAYS;
+    }
+    if(empty($this->config->title_length)) {
+        $this->config->title_length = B_ACTIVE_FORUMS_DEFAULT_TITLE;
+    }
+    if(empty($this->config->max_discussions)) {
+        $this->config->max_discussions = B_ACTIVE_FORUMS_DEFAULT_DISCUSSIONS;
+    }
+    if(empty($this->config->include_news)) {
+        $this->config->include_news = B_ACTIVE_FORUMS_DEFAULT_INCLUDE_NEWS;
+    }
+?>
+<table width="100%" cellpadding="9" cellspacing="0">
+    <tr valign="top">
+        <td align="right" width="50%"> 
+            <?php print_string('configtitle', 'block_active_forums'); ?>:
+            <?php helpbutton('settingTitle',get_string('setting_title','block_active_forums'),'block_active_forums');?>
+        </td>    
+        <td>
+            <input type="text" name="active_forums_title" size="30" value="<?php echo (isset($this->config->active_forums_title)?$this->config->active_forums_title: get_string('active_forums_title','block_active_forums')); ?>" />
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            <?php print_string('configdays', 'block_active_forums'); ?>:
+            <?php helpbutton('settingDays',get_string('setting_days','block_active_forums'),'block_active_forums');?>
+        </td>
+        <td>   
+            <select name="selectdays">
+                <option value ="7"   <?php echo ($this->config->selectdays=='7'?   'selected':''); ?> >   7 </option>
+                <option value ="14"  <?php echo ($this->config->selectdays=='14'?  'selected':''); ?> >  14 </option>
+                <option value ="30"  <?php echo ($this->config->selectdays=='30'?  'selected':''); ?> >  30 </option>
+                <option value ="60"  <?php echo ($this->config->selectdays=='60'?  'selected':''); ?> >  60 </option>
+                <option value ="90"  <?php echo ($this->config->selectdays=='90'?  'selected':''); ?> >  90 </option>
+                <option value ="180" <?php echo ($this->config->selectdays=='180'? 'selected':''); ?> > 180 </option>
+            </select>
+        </td>
+    </tr>
+    
+    <tr valign="top">
+        <td align="right">
+            <?php print_string('configforumtitle', 'block_active_forums'); ?>:
+            <?php helpbutton('settingLength',get_string('setting_length','block_active_forums'),'block_active_forums');?>
+        </td>
+        <td>   
+            <select name="title_length">
+                <option value ="10" <?php echo ($this->config->title_length=='10'? 'selected':''); ?> > 10 </option>
+                <option value ="20" <?php echo ($this->config->title_length=='20'? 'selected':''); ?> > 20 </option>
+                <option value ="30" <?php echo ($this->config->title_length=='30'? 'selected':''); ?> > 30 </option>
+                <option value ="40" <?php echo ($this->config->title_length=='40'? 'selected':''); ?> > 40 </option>
+                <option value ="50" <?php echo ($this->config->title_length=='50'? 'selected':''); ?> > 50 </option>
+            </select>
+        </td>
+    </tr> 
+    <tr valign="top">
+        <td align="right">
+            <?php print_string('config_max_discussions', 'block_active_forums'); ?>:
+            <?php helpbutton('settingMaxDiscussions',get_string('setting_max_discussions','block_active_forums'),'block_active_forums');?>
+        </td>
+        <td>   
+            <select name="max_discussions">
+                <option value = "5" <?php echo ($this->config->max_discussions=='5' ? 'selected':''); ?> > 05 </option>
+                <option value ="10" <?php echo ($this->config->max_discussions=='10'? 'selected':''); ?> > 10 </option>
+                <option value ="15" <?php echo ($this->config->max_discussions=='15'? 'selected':''); ?> > 15 </option>
+                <option value ="20" <?php echo ($this->config->max_discussions=='20'? 'selected':''); ?> > 20 </option>
+                <option value ="25" <?php echo ($this->config->max_discussions=='25'? 'selected':''); ?> > 25 </option>
+                <option value ="30" <?php echo ($this->config->max_discussions=='30'? 'selected':''); ?> > 30 </option>
+                <option value ="50" <?php echo ($this->config->max_discussions=='50'? 'selected':''); ?> > 50 </option>
+            </select>
+        </td>
+    </tr> 
+    <tr valign="top">
+        <td align="right">
+            <?php print_string('config_include_news', 'block_active_forums'); ?>:
+            <?php helpbutton('settingShowNews',get_string('setting_include_news','block_active_forums'),'block_active_forums');?>
+        </td>
+        <td>   
+            <select name="include_news">
+                <option value ="0" <?php echo ($this->config->include_news=='0'? 'selected':''); ?> > No  </option>
+                <option value ="1" <?php echo ($this->config->include_news=='1'? 'selected':''); ?> > Yes </option>
+            </select>
+        </td>
+    </tr> 
+    <tr>
+        <td colspan="2" align="center">
+            <input type="submit" value="<?php print_string('savechanges') ?>" />
+        </td>
+    </tr>
+</table>

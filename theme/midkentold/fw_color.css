@@ -1,0 +1,306 @@
+/* Core */
+
+body {
+  background-color: #FBFCFF; /*#F7F6F1;*/
+    background-image: url("gradient-hori.jpg");
+    background-repeat: repeat-y;
+    background-position: center top;
+}
+
+a:link {
+    color: #0033CC;
+}
+
+a:visited {
+    color:#0033CC;
+}
+
+a:hover {
+    color: #000099;
+}
+
+a.dimmed:link,
+a.dimmed:visited {
+  color:#AAAAAA;
+}
+
+a.dimmed_text {
+  color:#AAAAAA;
+}
+
+h1 {
+  background-color: #F0F7FF;
+  border-color: #668ACC;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  color: #000000;
+}
+
+h2 {
+  background-color: #F0F7FF;
+  border-color:#668ACC;
+}
+h3 {
+  border-color:#668ACC;
+}
+h4 {
+  border-color:#668ACC;
+}
+
+
+th {
+    background-color:#ffffff;
+
+}
+
+th.header,
+td.header,
+div.header {
+  background-image: url(pix/grad/header_gradiant.jpg);
+
+}
+
+#layout-table #left-column {
+    /* background-color: yellow; */
+}
+
+.generalbox {
+  border-color:#668ACC;
+  background-color:#FFFFFF;
+}
+
+.navbar {
+  background-color:#668ACC;
+  border-color:#FFFFFF;
+  border-width: 2px;
+  /* height: 20px; */
+  background: url(pix/grad/bg_bread.jpg) repeat-x;
+  color: 000000;
+}
+
+.sitetopiccontent {
+  border-color:#668ACC;
+  background-color:#FFFFFF;
+}
+
+
+/***
+ *** Header
+ ***/
+
+#header-home, #header {
+  background-color: #ffffff;
+  	    background-image: url("arches5.jpg");
+  border-color:#668ACC;
+}
+
+/***
+ *** Login
+ ***/
+
+
+.loginbox .header {
+  border-color:#668ACC;
+}
+
+.loginbox .content {
+  border-color:#668ACC;
+}
+
+
+/***
+ *** Blocks
+ ***/
+ 
+.sideblock .header {
+  border-color: #668ACC;
+}
+
+.sideblock {
+  border-color:#668ACC;
+}
+
+.sideblock .content {
+  border-color:#668ACC;
+  background-color:#F0F7FF; /*was fff7f4*/
+}
+
+.sideblock .footer {
+  border-top-color:#668ACC;
+}
+
+.sideblock .header .hide-show img.hide-show-image {
+  background: url('pix/t/switch_minus.gif') no-repeat bottom;
+}
+
+.sideblock.hidden .header .hide-show img.hide-show-image {
+  background: url('pix/t/switch_plus.gif') no-repeat bottom;
+}
+
+.sideblock .content .post .head .date,
+.sideblock .content .post .head .name {
+  color: #000000;
+  }
+
+/***
+ *** Calendar
+***/
+ 
+#calendar .maincalendar,
+#calendar .sidecalendar {
+  border-color: #668ACC;
+}
+
+#calendar .maincalendar table.calendarmonth th {
+  border-color: #668ACC;
+}
+
+
+table.calendarmonth tr td {
+   border-color:#668ACC;
+} 
+
+table.minicalendar {
+  border-color:#668ACC;
+}
+
+table.minicalendar tr.weekdays th {
+  background-color:#FEF9F6;
+  border-color:#668ACC;
+  }
+
+table.minicalendar tr td.day {
+   border-color:#668ACC;
+  }
+  
+table.minicalendar tr td.weekend {
+  border-color:#668ACC;
+  color: red;
+  }
+  
+#calendar .today,
+.minicalendar .today {
+  border-color:#000000 !important;
+}
+  
+/* colors for calendar events */
+#calendar .event_global,
+.minicalendar .event_global,
+.block_calendar_month .event_global {
+  border-color:#2EBA0E !important;
+  background-color:#2EBA0E;
+}
+
+#calendar .event_course,
+.minicalendar .event_course,
+.block_calendar_month .event_course {
+  border-color:#FF9966 !important;
+  background-color:#FF9966;
+}
+
+#calendar .event_group,
+.minicalendar .event_group,
+.block_calendar_month .event_group {
+  border-color:#FBBB23 !important;
+  background-color:#FBBB23;
+}
+
+#calendar .event_user,
+.minicalendar .event_user,
+.block_calendar_month .event_user {
+  border-color:#A1BECB !important;
+  background-color:#A1BECB;
+}
+
+.cal_popup_fg {
+  background-color:#FEF9F6;
+}
+
+.cal_popup_bg {
+  border-color:#668ACC;
+  background-color:#FEF9F6;
+}
+
+
+/***
+ *** Course
+ ***/
+
+.headingblock {
+  border-color:#668ACC;
+}
+
+.categoryboxcontent,
+.courseboxcontent {
+  border-color:#668ACC;
+  background: #FFFFFF;
+}
+
+.categorybox .category,
+.categorybox .category {
+  border-color: #668ACC;
+}
+
+#course-view .section.main .content {
+  border-color: #668ACC;
+  background-color: #FFFFFF;
+}
+
+#course-view .section.main .side {
+  border-color: #668ACC;
+  background-color: #FFFFFF;
+}
+
+#course-view .current .right.side,
+#course-view .current .left.side {
+  background-color: #668ACC;
+}
+
+#course-view .section.hidden .content,
+#course-view .section.hidden .side {
+  border-color:#668ACC;
+}
+
+#course-view .current .side{
+  background-color: #E9ECF3;
+}
+
+
+/***
+ *** Tabs
+ ***/
+
+.tabs .side {
+  border-color: #668ACC;
+}
+.tabrow td {
+  background:url(pix/tab/left.gif) top left no-repeat;
+}
+.tabrow td .tablink {
+  background:url(pix/tab/right.gif) top right no-repeat;
+}
+.tabrow td:hover {
+  background-image:url(pix/tab/left_hover.gif);
+}
+.tabrow td:hover .tablink {
+  background-image:url(pix/tab/right_hover.gif);
+}
+.tabrow .last span {
+  background:url(pix/tab/right_end.gif) top right no-repeat;
+}
+.tabrow .selected {
+  background:url(pix/tab/left_active.gif) top left no-repeat;
+}
+.tabrow .selected .tablink {
+  background:url(pix/tab/right_active.gif) top right no-repeat;
+}
+.tabrow td.selected:hover {
+  background-image:url(pix/tab/left_active_hover.gif);
+}
+.tabrow td.selected:hover .tablink {
+  background-image:url(pix/tab/right_active_hover.gif);
+}
+.highlight {
+  background-color: #aaffaa;
+}
+

@@ -1,0 +1,672 @@
+2007-01-15 Monday 02:58  stronk7
+
+	* db/: mysql.sql, postgres7.sql: 
+	
+	Deleting deprecated .sql files. MDL-7264 Byeeez!
+
+2007-01-12 Friday 03:47  skodak
+
+	* mod_form.php: 
+	
+	fixed text field widths in new forms
+
+2007-01-05 Friday 12:51  jamiesensei
+
+	* mod_form.php: 
+	
+	added helpbuttons to htmleditors where needed. Further work on
+	htmleditor helpbutton code.
+
+2007-01-02 Tuesday 17:33  skodak
+
+	* lib.php: 
+	
+	MDL-7742 added nested drop down box to add activities/resources to
+	course, 3rd party mods can specify type MDL-6987 preparation for
+	migration of mod/assignment/mod.html
+
+2006-12-28 Thursday 17:32  jamiesensei
+
+	* mod_form.php: 
+	
+	changes to how we generate the id attribute of forms and the naming
+	convention of forms migrate blog edit to formslib
+
+2006-12-19 Tuesday 15:03  jamiesensei
+
+	* mod_form.php: 
+	
+	
+	* Added setAdvanced functionality see
+	http://docs.moodle.org/en/Development:lib/formslib.php_setAdvanced
+	* Added MoodleQuickForm method closeHeaderBefore($elementName);
+	http://docs.moodle.org/en/Development:lib/formslib.php_Form_Definit
+	ion#Use_Fieldsets_to_group_Form_Elements * Added moodleform method
+	add_action_buttons(); see
+	http://docs.moodle.org/en/Development:lib/formslib.php_Form_Definit
+	ion#add_action_buttons.28.24cancel_.3D_true.2C_.24revert_.3D_true.2
+	C_.24submitlabel.3Dnull.29.3B * is_cancelled method added to
+	moodleform
+	http://docs.moodle.org/en/Development:lib/formslib.php_Usage#Basic_
+	Usage_in_A_Normal_Page * added hidden labels to elements within
+	groups such as the date_selector select boxes and other elements in
+	'groups' * quiz/mod.html migrated to formslib * glossary/edit.html
+	migrated to formslib * extended registerNoSubmitButton()
+	functionality to automatically add js to onclick to bypass client
+	side js input validation.  * added no_submit_button_pressed()
+	function that can be used in a similar way to is_cancelled() as a
+	test in the main script to see if some button in the page has been
+	pressed that is a submit button that is used for some dynamic
+	functionality within the form and not to submit the data for the
+	whole form.  * added new condition for disabledIf which allows to
+	disable another form element if no options are selected from within
+	a select element.  * added default 'action' for moodleform  -
+	strip_querystring(qualified_me())
+	http://docs.moodle.org/en/Development:lib/formslib.php_Usage#Basic_
+	Usage_in_A_Normal_Page
+
+2006-12-14 Thursday 20:44  jamiesensei
+
+	* mod_form.php: 
+	
+	added setAdvanced MoodleQuickForm method. And added
+	closeHeaderAfter method
+
+2006-12-04 Monday 17:36  jamiesensei
+
+	* mod_form.php: 
+	
+	added new 'cancel' element type and introduced new is_cancelled()
+	MoodleQuickForm method.  also used new cancel button in all
+	mod_forms as well as a 'Revert' button and reworked logic about
+	where to go on cancel or after submission for modedit.php
+
+2006-11-25 Saturday 00:38  jamiesensei
+
+	* mod_form.php: 
+	
+	changed name of submit buttons to submitbutton instead of sumbit as
+	submit was conflicting with method form.submit()
+
+2006-11-24 Friday 14:39  jamiesensei
+
+	* mod_form.php: 
+	
+	some restructuring of formslib - moving moodleform_mod definition
+	to new file course\moodleform_mod.php and some changes to
+	moodleform_mod standard elements setup and moodleform disabledIf
+	API
+
+2006-11-13 Monday 17:20  jamiesensei
+
+	* mod.html, mod_form.php: 
+	
+	[no log message]
+
+2006-11-12 Sunday 01:23  skodak
+
+	* lib.php: 
+	
+	we are going 100% unicode now - removed use of $CFG->unicodedb and
+	current_charset(); MDL-7439 - part 2, only hotpot and wiki left
+
+2006-11-09 Thursday 15:21  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	drop utf8 support from HEAD MDL-6332
+
+2006-10-27 Friday 06:46  stronk7
+
+	* db/postgres7.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+	
+	Merged from MOODLE_17_STABLE
+
+2006-10-27 Friday 06:39  stronk7
+
+	* db/mysql.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+	
+	Merged from MOODLE_17_STABLE
+
+2006-10-27 Friday 06:29  stronk7
+
+	* db/postgres7.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+
+2006-10-27 Friday 06:25  stronk7
+
+	* db/mysql.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+
+2006-10-27 Friday 01:43  stronk7
+
+	* db/upgrade.php: 
+	
+	New upgrade.php file added for this module. MDL-7214
+	
+	Merged from HEAD
+
+2006-10-27 Friday 01:33  stronk7
+
+	* db/upgrade.php: 
+	
+	file upgrade.php was added on branch MOODLE_17_STABLE on 2006-10-26
+	17:43:07 +0000
+
+2006-10-27 Friday 01:33  stronk7
+
+	* db/upgrade.php: 
+	
+	New upgrade.php file added for this module. MDL-7214
+
+2006-10-22 Sunday 02:28  stronk7
+
+	* db/: oci8po.sql, oci8po.sql: 
+	
+	Deleting some old oci8po files from CVS.
+
+2006-10-08 Sunday 18:07  skodak
+
+	* lib.php: 
+	
+	Insert a Chinese charachter string to label resource result error
+	MDL-6757 ; backported from HEAD
+
+2006-10-08 Sunday 18:07  skodak
+
+	* lib.php: 
+	
+	Insert a Chinese charachter string to label resource result error
+	MDL-6757
+
+2006-09-18 Monday 17:13  moodler
+
+	* restorelib.php: 
+	
+	FIxed to use the new debugging function
+
+2006-09-12 Tuesday 16:22  moodler
+
+	* version.php: 
+	
+	Small bump for guest role fix
+
+2006-09-12 Tuesday 15:10  moodler
+
+	* version.php: 
+	
+	Reload the guest role using new defaults
+
+2006-09-06 Wednesday 00:09  stronk7
+
+	* db/install.xml: 
+	
+	Deleted duplicate table label2 from XMLDB schema
+
+2006-08-12 Saturday 01:37  stronk7
+
+	* db/install.xml: 
+	
+	XMLDB schema initial commit for the label module
+
+2006-08-10 Thursday 23:51  skodak
+
+	* version.php, view.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283; backported from HEAD
+
+2006-08-10 Thursday 23:31  skodak
+
+	* version.php, view.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283; backported from HEAD
+
+2006-08-09 Wednesday 06:10  skodak
+
+	* version.php, view.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283
+
+2006-08-08 Tuesday 13:13  moodler
+
+	* version.php: 
+	
+	ROLES AND PERMISSIONS  - FIRST CHECK-IN
+	=======================================
+	
+	WARNING:  DEV IS CURRENTLY VERY UNSTABLE.
+	
+	This is a mega-checkin of the new Roles system.   A lot of changes
+	have been made in core and modules.
+	
+	Currently there are a lot of rough edges and known problems.  We
+	are working hard on these .. .the reason for getting this into HEAD
+	at this stage is enable us to move faster (our branch was diverging
+	from HEAD too much).
+	
+	Please keep an eye on http://docs.moodle.org/en/Roles for current
+	status and information for developers on how to use the new Roles
+	system.
+
+2006-04-24 Monday 16:28  vyshane
+
+	* db/: mysql.php, mysql.sql, postgres7.php, postgres7.sql: 
+	
+	Fixed log_display inserts.
+
+2006-04-12 Wednesday 00:13  stronk7
+
+	* restorelib.php: 
+	
+	htmlentities() to s()
+
+2006-04-05 Wednesday 14:41  moodler
+
+	* db/postgres7.php: 
+	
+	FIxing some blank lines as per bug 5095
+
+2006-04-05 Wednesday 14:14  moodler
+
+	* db/postgres7.php: 
+	
+	FIxed blank trailing lines  (bug 5095)
+
+2006-03-29 Wednesday 07:31  stronk7
+
+	* restorelib.php: 
+	
+	Typo.
+
+2006-03-10 Friday 11:43  patrickslee
+
+	* db/migrate2utf8.php: 
+	
+	UTF8 migration - now supporting PostgreSQL
+
+2006-03-08 Wednesday 05:35  skodak
+
+	* db/migrate2utf8.php: 
+	
+	short php tags
+
+2006-02-24 Friday 16:13  toyomoyo
+
+	* db/migrate2utf8.php: 
+	
+	see changes for admin/utfdbmigrate.php
+
+2006-01-31 Tuesday 10:10  moodler
+
+	* db/migrate2utf8.php: 
+	
+	changed to use utfconvert function
+
+2006-01-25 Wednesday 14:11  moodler
+
+	* db/migrate2utf8.php: 
+	
+	fixing typos
+
+2006-01-17 Tuesday 15:28  moodler
+
+	* db/mysql.sql: 
+	
+	Added default values where needed for columns in the MySQL creation
+	script mysql.sql.  Added default values to migrate2utf8.xml, for
+	any varchar and text field types, if the default values for these
+	fields were not defined as '' in the MySQL table creation script.
+	
+	Committed by vyshane
+
+2006-01-16 Monday 05:09  mjollnir_
+
+	* restorelib.php: 
+	
+	Abstracted a bit of the restore procedure to allow for silent
+	restoring.  Added new function, import_backup_file_silently Changed
+	everything that prints stuff to check for a constant first. 
+	Backup_flush checks a different constant, this is so that output
+	can still get flushed to the browser when necessary but not print
+	<li>s everywhere.  Please test this!
+
+2006-01-13 Friday 15:24  toyomoyo
+
+	* db/migrate2utf8.php: 
+	
+	more bug fixes =(
+
+2006-01-13 Friday 11:45  mjollnir_
+
+	* backuplib.php: 
+	
+	Granular backup & restore: This patch allows the much requested
+	selection of individual instances of modules within a course to
+	backup and restore.  It needs A LOT of testing and probably some
+	prettyifying too.
+
+2006-01-09 Monday 14:06  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	utf8 migration support scripts
+
+2005-12-14 Wednesday 12:15  patrickslee
+
+	* index.php: 
+	
+	Merged with MOODLE_16_MULTIENROL_MP1
+
+2005-10-17 Monday 15:59  gustav_delius
+
+	* index.php: 
+	
+	Fixing misprint leading to fatal error
+
+2005-09-01 Thursday 12:14  mjollnir_
+
+	* lib.php: 
+	
+	Initial checkin of stats (from processing the log table).  I will
+	write up some information about it for the developers wiki.
+
+2005-07-12 Tuesday 16:00  moodler
+
+	* restorelib.php: 
+	
+	Merged SC139 from stable
+
+2005-07-12 Tuesday 15:53  moodler
+
+	* restorelib.php: 
+	
+	Escaped text output during relinking, as per SC 139
+
+2005-07-05 Tuesday 02:56  stronk7
+
+	* restorelib.php: 
+	
+	Improved automatic relinking in backup and restore. Credits go to
+	skodak.  Complete refactoring of the system that was really awful
+	(my fault!).  Now everything is in its place and working like a
+	charm, making things really easier to be implemented and amplied.
+	Bug 3678 (http://moodle.org/bugs/bug.php?op=show&bugid=3678)
+	(http://moodle.org/mod/forum/discuss.php?d=26530)
+	
+	Note: Everything is merged from stable but the quiz module because
+	it has other changes not merged for now. I've skyped a message to
+	Gustav about it.
+	
+	Merged from MOODLE_15_STABLE
+
+2005-07-05 Tuesday 01:34  stronk7
+
+	* restorelib.php: 
+	
+	Improved automatic relinking in backup and restore. Credits go to
+	skodak.  Complete refactoring of the system that was really awful
+	(my fault!).  Now everything is in its place and working like a
+	charm, making things really easier to be implemented and amplied.
+	Bug 3678 (http://moodle.org/bugs/bug.php?op=show&bugid=3678)
+	(http://moodle.org/mod/forum/discuss.php?d=26530)
+
+2005-06-16 Thursday 18:15  thepurpleblob
+
+	* index.php, view.php: 
+	
+	Replaced _variable() style calls with _param() style calls plus
+	other mods to suit.
+
+2005-06-03 Friday 20:22  moodler
+
+	* lib.php: 
+	
+	Merged fixes from stable
+
+2005-06-03 Friday 20:21  moodler
+
+	* lib.php: 
+	
+	Labels can now have apostrophes again!	 :-)   bug 3411
+
+2005-04-06 Wednesday 23:20  stronk7
+
+	* lib.php, restorelib.php: 
+	
+	Now label->name is working with filterall.  (not really important
+	because it is never shown, but...)
+
+2005-03-17 Thursday 00:35  moodler
+
+	* db/mysql.php: 
+	
+	FIxed some wierd line feeds
+
+2005-02-18 Friday 03:19  gustav_delius
+
+	* mod.html: 
+	
+	Give groupmode selection to mod.html for all modules that use
+	groupmode. Also fix bug 2576
+
+2005-02-08 Tuesday 07:33  stronk7
+
+	* restorelib.php: 
+	
+	Some minor changes to each module to XHTMLise the restore process
+
+2005-01-23 Sunday 02:53  stronk7
+
+	* mod.html: 
+	
+	Modify sesskey behaviour. SC#73
+
+2004-11-19 Friday 11:05  mjollnir_
+
+	* version.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	Merged from MOODLE_14_STABLE: Indexes for label and version bump
+	(honoring partial freeze)
+
+2004-11-19 Friday 10:12  mjollnir_
+
+	* version.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	Indexes for label and version bump (honoring partial freeze)
+
+2004-09-13 Monday 00:16  gustav_delius
+
+	* backuplib.php, index.php, lib.php, mod.html, restorelib.php,
+	version.php, view.php, db/mysql.php, db/postgres7.php: 
+	
+	fixed capitalization and quoting of attribute values
+
+2004-09-12 Sunday 22:41  gustav_delius
+
+	* mod.html, restorelib.php: 
+	
+	closed <input /> <br /> <hr />
+
+2004-08-25 Wednesday 02:38  gustav_delius
+
+	* version.php: 
+	
+	Merging from stable branch
+
+2004-08-24 Tuesday 23:14  gustav_delius
+
+	* version.php: 
+	
+	reduced $module->requires to 052505 after Martin put my new
+	functions into that version.
+
+2004-07-28 Wednesday 14:55  moodler
+
+	* mod.html: 
+	
+	Fixed a notice
+
+2004-06-04 Friday 15:28  moodler
+
+	* version.php: 
+	
+	MOdules are dependent on this version of course/mod.php
+
+2004-06-04 Friday 14:17  moodler
+
+	* mod.html, version.php: 
+	
+	BRANCH MERGE
+	
+	These are the changes from MOODLE_13_STABLE, merged into trunk
+	
+	The tag MOODLE_13_MERGED on the MOODLE_13_STABLE branch now refers
+	to this point
+	
+	The biggest changes here are the fixes for HTML editor in all
+	standard modules
+
+2004-06-03 Thursday 21:07  moodler
+
+	* mod.html, version.php: 
+	
+	OK, for bug fixes this is a pretty big checkin!!   :-/
+	
+	I finally was able to see the HTML Editor bug in IE/XP that
+	everyone was talking about, and it's a very serious bug as it makes
+	Moodle 1.3 almost unusable for these people.  :-(  :-(
+	
+	So, I eventually found out that the problem is that the Javascript
+	that attaches the editor has troubles when it is embedded within
+	the table						    that
+	course/mod.php puts around the mod.html forms in each module. 
+	(Only in IE and only sometimes, mind you).
+	
+	While testing I also had a good look at a long standing issue which
+	is the inconsistency of the mod.html forms when using the editor.
+	
+	So, to fix both I decided to put the HTML editor calls OUTSIDE the
+	mod.html in the mod.php file.  This means that all modules get the
+	HTML editor by default on all text areas during activity module
+	setup by default.
+	
+	I've been running through this for the past few hours and it seems
+	pretty stable now and a lot more consistent, so I'm checking it in
+	as big fix towards the Moodle 1.3.1 we have to have.
+	
+	Unfortunately it also means the API has changed a bit  ... I had to
+	update all the module dependencies to this exact version (or
+	later).
+	
+	Please test this "stable" version hard using the standard modules
+	only and I'll merge these changes over to the trunk in a day or so
+	and update all known third-party modules.
+
+2004-04-26 Monday 23:31  moodler
+
+	* lib.php: 
+	
+	Much requested:  Uploaded resources are now shown using the
+	relevant icon.
+
+2004-02-19 Thursday 21:25  moodler
+
+	* version.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	Fixed missing Label logs - thanks Eloy!
+
+2004-02-17 Tuesday 04:40  stronk7
+
+	* restorelib.php: 
+	
+	Now label, quiz, resource and survey logs are restored properly (I
+	think) :-)
+
+2004-02-01 Sunday 12:42  moodler
+
+	* version.php: 
+	
+	Updating version numbers of all Modules to make things a bit
+	clearer
+
+2004-01-31 Saturday 23:25  moodler
+
+	* version.php: 
+	
+	All modules now require the very latest because of the changes to
+	add_to_log
+
+2004-01-28 Wednesday 12:27  moodler
+
+	* version.php: 
+	
+	Define minimum required versions of Moodle
+
+2003-11-24 Monday 09:16  moodler
+
+	* mod.html: 
+	
+	Use the new method for calling html editor
+
+2003-11-21 Friday 22:03  moodler
+
+	* lib.php: 
+	
+	Removed unnecessary functions
+
+2003-10-22 Wednesday 21:14  moodler
+
+	* lib.php: 
+	
+	Modularised some of the processing for "extra" information such as
+	information for popup windows on resources and labels
+
+2003-09-15 Monday 07:41  les_kopari
+
+	* db/oci8po.sql: 
+	
+	Oracle translation of mySQL module for label.
+
+2003-09-14 Sunday 23:47  stronk7
+
+	* backuplib.php, lib.php, restorelib.php: 
+	
+	Added "graphical structure".  Added label_get_participants()
+	function.
+
+2003-09-14 Sunday 23:20  moodler
+
+	* backuplib.php, restorelib.php: 
+	
+	Backupo / Restore for labels (untested as yet)
+
+2003-09-14 Sunday 23:20  moodler
+
+	* version.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	Added a course field (whoops!) and edited backuplib.php and
+	restorelib.php
+
+2003-09-14 Sunday 20:30  moodler
+
+	* icon.gif, index.php, lib.php, mod.html, version.php, view.php,
+	db/mysql.php, db/mysql.sql, db/postgres7.php, db/postgres7.sql: 
+	
+	New module:  Label.
+	
+	This is a sort of "dummy" activity that allows HTML to be placed
+	anywhere in the course sections ...
+

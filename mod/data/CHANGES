@@ -1,0 +1,4355 @@
+2007-01-23 Tuesday 14:10  vyshane
+
+	* templates.php: 
+	
+	Fixes for MDL-6966.
+
+2007-01-23 Tuesday 13:42  vyshane
+
+	* templates.php: 
+	
+	Fix for MDL-6966.
+
+2007-01-15 Monday 02:58  stronk7
+
+	* db/: mysql.sql, postgres7.sql: 
+	
+	Deleting deprecated .sql files. MDL-7264 Byeeez!
+
+2007-01-14 Sunday 04:13  stronk7
+
+	* config.html: 
+	
+	Now all the modules global config pages are valid XML. Related to
+	MDL-7861
+
+2007-01-13 Saturday 08:32  stronk7
+
+	* field/: latlong/field.class.php, number/field.class.php: 
+	
+	Some more uses of $CFG->dbfamily. MDL-7061
+
+2007-01-13 Saturday 02:52  skodak
+
+	* comment.php, lib.php: 
+	
+	MDL-8166 rename in/out methods in formslib - HQ consensus
+
+2007-01-12 Friday 03:47  skodak
+
+	* mod_form.php: 
+	
+	fixed text field widths in new forms
+
+2007-01-11 Thursday 16:06  moodler
+
+	* view.php: 
+	
+	FIxed up the intro boxes  XHTML Strict
+
+2007-01-09 Tuesday 04:30  skodak
+
+	* field/picture/field.class.php: 
+	
+	MDL-8105 some more icon class fixes including new .iconhelp for
+	help and docs icon
+
+2007-01-09 Tuesday 03:34  skodak
+
+	* edit.php: 
+	
+	MDL-7861 xhtml transient fixes for not closed input fields - I hope
+	all of them except imported libs are now fixed
+
+2007-01-08 Monday 17:14  skodak
+
+	* field.php, lib.php, preset.php, field/file/field.class.php: 
+	
+	MDL-7861 new class .icon and .iconsmall
+
+2007-01-08 Monday 09:38  toyomoyo
+
+	* lib.php: 
+	
+	MDL-7861 xhtml strict fixes
+
+2007-01-08 Monday 09:09  toyomoyo
+
+	* field.php, lib.php: 
+	
+	MDL-7861, fixing xhtml strict bugs
+
+2007-01-05 Friday 16:01  toyomoyo
+
+	* preset.php: 
+	
+	MDL-7861, xhtml strict issues
+
+2007-01-05 Friday 12:51  jamiesensei
+
+	* mod_form.php: 
+	
+	added helpbuttons to htmleditors where needed. Further work on
+	htmleditor helpbutton code.
+
+2007-01-05 Friday 10:38  toyomoyo
+
+	* lib.php: 
+	
+	MDL-7861, strict xhtml fixes
+
+2007-01-05 Friday 10:00  toyomoyo
+
+	* edit.php, templates.php: 
+	
+	MDL-7861, xhtml related issues, added class for some fieldsets to
+	not display border
+
+2007-01-05 Friday 09:19  toyomoyo
+
+	* edit.php: 
+	
+	MDL-7861, fixing xhtml strict divs
+
+2007-01-05 Friday 05:32  skodak
+
+	* config.html, field.php, lib.php, preset.php, templates.php: 
+	
+	MDL-8062 1.3 Remove name attribute from <form> and fix focus
+	everywhere - more changes ahead
+
+2007-01-05 Friday 02:23  skodak
+
+	* filter.php, pagelib.php: 
+	
+	MDL-8050 1.2 Remove all target="_top" - refactoring of previous
+	commit
+
+2007-01-04 Thursday 11:18  toyomoyo
+
+	* edit.php: 
+	
+	adding fieldset to form MDL-7861
+
+2007-01-04 Thursday 03:24  skodak
+
+	* filter.php, pagelib.php: 
+	
+	MDL-8050 1.2 Remove all target="_top"
+
+2007-01-03 Wednesday 22:44  moodler
+
+	* templates.php: 
+	
+	Bend over for XHTML 1.0 Strict ...  MDL-8049
+	
+	Removed Javascript language attribute tags and added CDATA
+
+2007-01-03 Wednesday 12:55  moodler
+
+	* index.php: 
+	
+	Checking in Nick Freear's changes and evolution of Julette White's
+	code with a few modifications made to the install process) for
+	further work in HEAD.
+	
+	See MDL-7380 for details.
+
+2006-12-28 Thursday 23:43  jamiesensei
+
+	* comment.php, lib.php: 
+	
+	fixing all the form names as per new class naming convention (PHP
+	class names are also used for html id for styling)
+
+2006-12-28 Thursday 17:32  jamiesensei
+
+	* comment_form.php, mod_form.php: 
+	
+	changes to how we generate the id attribute of forms and the naming
+	convention of forms migrate blog edit to formslib
+
+2006-12-22 Friday 12:55  moodler
+
+	* templates.php: 
+	
+	Fixed XHTML and Javascript insertion of tags into the templates
+
+2006-12-21 Thursday 20:18  nfreear
+
+	* index.php: 
+	
+	Integration 3 - groups in core, modules, calendar... (Part of
+	MDL-7380, new groups)
+
+2006-12-19 Tuesday 15:03  jamiesensei
+
+	* comment_form.php, mod_form.php: 
+	
+	
+	* Added setAdvanced functionality see
+	http://docs.moodle.org/en/Development:lib/formslib.php_setAdvanced
+	* Added MoodleQuickForm method closeHeaderBefore($elementName);
+	http://docs.moodle.org/en/Development:lib/formslib.php_Form_Definit
+	ion#Use_Fieldsets_to_group_Form_Elements * Added moodleform method
+	add_action_buttons(); see
+	http://docs.moodle.org/en/Development:lib/formslib.php_Form_Definit
+	ion#add_action_buttons.28.24cancel_.3D_true.2C_.24revert_.3D_true.2
+	C_.24submitlabel.3Dnull.29.3B * is_cancelled method added to
+	moodleform
+	http://docs.moodle.org/en/Development:lib/formslib.php_Usage#Basic_
+	Usage_in_A_Normal_Page * added hidden labels to elements within
+	groups such as the date_selector select boxes and other elements in
+	'groups' * quiz/mod.html migrated to formslib * glossary/edit.html
+	migrated to formslib * extended registerNoSubmitButton()
+	functionality to automatically add js to onclick to bypass client
+	side js input validation.  * added no_submit_button_pressed()
+	function that can be used in a similar way to is_cancelled() as a
+	test in the main script to see if some button in the page has been
+	pressed that is a submit button that is used for some dynamic
+	functionality within the form and not to submit the data for the
+	whole form.  * added new condition for disabledIf which allows to
+	disable another form element if no options are selected from within
+	a select element.  * added default 'action' for moodleform  -
+	strip_querystring(qualified_me())
+	http://docs.moodle.org/en/Development:lib/formslib.php_Usage#Basic_
+	Usage_in_A_Normal_Page
+
+2006-12-18 Monday 12:47  moodler
+
+	* preset.php: 
+	
+	XHTML compliance MDL-7861
+
+2006-12-18 Monday 06:00  skodak
+
+	* preset/imagegallery/: rsstemplate.html, rsstitletemplate.html: 
+	
+	MDL-7959 improve rss template for Image gallery preset
+
+2006-12-18 Monday 05:48  skodak
+
+	* lib.php, rsslib.php: 
+	
+	MDL-7945 Database learning activity does not use user defined RSS
+	template, but continues to use default template.
+
+2006-12-18 Monday 05:12  skodak
+
+	* mod_form.php: 
+	
+	fixed number of rss articles in data mod settings - broken during
+	new forms conversion
+
+2006-12-14 Thursday 20:44  jamiesensei
+
+	* mod_form.php: 
+	
+	added setAdvanced MoodleQuickForm method. And added
+	closeHeaderAfter method
+
+2006-12-14 Thursday 07:09  skodak
+
+	* db/install.xml, lib.php, tabs.php, db/upgrade.php,
+	comment_form.php, templates.php, version.php, comment.php: 
+	
+	MDL-5964 need html editor for comments in database mod + added
+	format sql table field MDL-7813 accessiblity fixes in comments
+
+2006-12-14 Thursday 05:02  skodak
+
+	* lib.php, templates.php, preset/imagegallery/listtemplate.html,
+	preset/imagegallery/singletemplate.html: 
+	
+	 xhtml and accessibility cleanup in data mod MDL-7813
+	* buttons reorganized - now displayed only with templates where
+	usable
+
+2006-12-14 Thursday 04:32  skodak
+
+	* preset.php: 
+	
+	data preset coding style fixes
+
+2006-12-14 Thursday 04:26  skodak
+
+	* backuplib.php, comment.php, config.html, css.php, edit.php,
+	field.php, filter.php, import.php, index.php, js.php, mod_form.php,
+	pagelib.php, restorelib.php, rsslib.php, tabs.php, templates.php,
+	view.php, lib.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/upgrade.php, field/latlong/field.class.php,
+	field/latlong/kml.php, field/menu/field.class.php,
+	field/picture/field.class.php, field/url/field.class.php,
+	field/checkbox/field.class.php, field/date/field.class.php,
+	field/file/field.class.php, field/multimenu/field.class.php,
+	field/number/field.class.php, field/radiobutton/field.class.php,
+	preset/imagegallery/jstemplate.js, field/textarea/field.class.php: 
+	
+	data mod whitespace cleanup - there are already many accessibility
+	related changes and fixes that are not backportable anyway and
+	merging from previous versions is not expected
+
+2006-12-13 Wednesday 17:58  skodak
+
+	* preset/imagegallery/singletemplate.html: 
+	
+	MDL-7822 Make imagegallery database template accessible - minor
+	fixing
+
+2006-12-13 Wednesday 17:53  skodak
+
+	* field/: checkbox/field.class.php, radiobutton/field.class.php: 
+	
+	MDL-5696 fixed 'Checkbox' actually allows 'checkboxes' and empty
+	'options' (radio buttons too)
+
+2006-12-13 Wednesday 17:38  skodak
+
+	* lib.php, view.php: 
+	
+	 xhtml and accessibility cleanup in data mod MDL-7813
+	* preference form fixes
+	
+	do not search for one character in data mod MDL-7911
+
+2006-12-13 Wednesday 17:29  skodak
+
+	* field/picture/field.class.php: 
+	
+	 xhtml and accessibility cleanup in data mod MDL-7813
+	* image alt value is now called "Alternative text" because it
+	should not be considered optional
+
+2006-12-13 Wednesday 17:22  skodak
+
+	* lib.php: 
+	
+	 xhtml and accessibility cleanup in data mod MDL-7813
+	* fixed labels in preference form
+
+2006-12-13 Wednesday 16:24  toyomoyo
+
+	* report.php: 
+	
+	accessiblity, associating <th> with respective row or col
+
+2006-12-13 Wednesday 07:34  skodak
+
+	* edit.php, field.php, lib.php, preset.php, templates.php,
+	field/picture/field.class.php, field/checkbox/field.class.php,
+	field/checkbox/mod.html, field/file/field.class.php,
+	field/file/mod.html, field/latlong/field.class.php,
+	field/latlong/mod.html, field/menu/field.class.php,
+	field/menu/mod.html, field/picture/mod.html,
+	field/radiobutton/field.class.php, field/radiobutton/mod.html,
+	field/text/mod.html, field/textarea/field.class.php,
+	field/textarea/mod.html, field/url/field.class.php,
+	field/url/mod.html, field/date/field.class.php,
+	field/date/mod.html, field/multimenu/field.class.php,
+	field/multimenu/mod.html, field/number/mod.html,
+	preset/imagegallery/addtemplate.html,
+	preset/imagegallery/listtemplate.html: 
+	
+	 xhtml and accessibility cleanup in data mod MDL-7813
+	* image galery preset accessiblity fixes MDL-7822 * xhtml fixes *
+	fields now use s() and p() where needed * added labels to all
+	fields - imporved accessiblity for adding of new entries * some
+	other general bugfixing and cleanup
+	
+	it is still not finished though, expect some more commits tomorrow
+
+2006-12-13 Wednesday 06:08  skodak
+
+	* templates.php: 
+	
+	MDL-7909 add optional id parameter to choose_from_menu() and
+	print_textarea() - needed data mod changes
+
+2006-12-13 Wednesday 04:10  skodak
+
+	* lib.php: 
+	
+	MDL-7905 Add new available tag for element id for in database mod -
+	fixed renaming of field and other cleanup
+
+2006-12-13 Wednesday 04:09  skodak
+
+	* preset/imagegallery/addtemplate.html: 
+	
+	MDL-7822 Make imagegallery database template accessible
+
+2006-12-13 Wednesday 02:20  skodak
+
+	* edit.php, templates.php: 
+	
+	MDL-7905 Add new available tag for element id for in database mod
+
+2006-12-11 Monday 17:35  skodak
+
+	* lib.php: 
+	
+	MDL-6635 Template fields filtered twice
+
+2006-12-11 Monday 17:17  skodak
+
+	* view.php: 
+	
+	MDL-7455 Database Activity Fatal Error after removing filed used
+	for sorting
+
+2006-12-11 Monday 17:03  skodak
+
+	* field/textarea/mod.html: 
+	
+	MDL-7858 Textarea field of database activity needs two translation
+	strings.
+
+2006-12-11 Monday 16:55  skodak
+
+	* lib.php: 
+	
+	MDL-7881 Reset js template should make the template empty
+
+2006-12-11 Monday 16:54  skodak
+
+	* templates.php: 
+	
+	MDL-7879 Removed available tags from CSS and Javascript template
+	definition
+
+2006-12-11 Monday 11:14  toyomoyo
+
+	* field/picture/field.class.php: 
+	
+	merged fix for MDL-7270, fixing warnings
+
+2006-12-11 Monday 11:13  toyomoyo
+
+	* field/picture/field.class.php: 
+	
+	fix for MDL-7270, fixing warnings
+
+2006-12-11 Monday 07:18  skodak
+
+	* templates.php: 
+	
+	MDL-5585 Clicking on available tag does not enter it into html
+	editor when defining database templates
+
+2006-12-11 Monday 07:09  skodak
+
+	* templates.php: 
+	
+	MDL-6234 - reworked available tags when editing database templates;
+	fixed closing optgroup tag
+
+2006-12-11 Monday 06:38  skodak
+
+	* templates.php: 
+	
+	MDL-6234 - reworked available tags when editing database templates
+
+2006-12-11 Monday 06:15  skodak
+
+	* templates.php: 
+	
+	MDL-5671 html editor can now be switched off on the fly while
+	editing database templates; removed editor button from js and css
+	template
+
+2006-12-11 Monday 06:11  skodak
+
+	* templates.php: 
+	
+	MDL-7826 added labels to text areas in data mod template
+	definitions
+
+2006-12-11 Monday 04:21  skodak
+
+	* index.php: 
+	
+	MDL-7857 uninitialized context in mod/data/index.php; backported
+	from HEAD
+
+2006-12-11 Monday 04:21  skodak
+
+	* index.php: 
+	
+	MDL-7857 uninitialized context in mod/data/index.php
+
+2006-12-11 Monday 04:16  skodak
+
+	* edit.php, lib.php, tabs.php, import.php, templates.php: 
+	
+	MDL-7716 In visible groups mode, It is possible to put a database
+	entries in other group that it his
+
+2006-12-11 Monday 03:28  skodak
+
+	* view.php, view.php: 
+	
+	MDL-6668 Database mod search error on Postgres; patch by Lorenzo
+	Nicora; backported from HEAD
+
+2006-12-11 Monday 03:25  skodak
+
+	* view.php: 
+	
+	MDL-6668 Database mod search error on Postgres; patch by Lorenzo
+	Nicora
+
+2006-12-11 Monday 03:08  skodak
+
+	* templates.php: 
+	
+	MDL-5671 html editor can now be switched off on the fly while
+	editing database templates
+
+2006-12-11 Monday 01:31  skodak
+
+	* preset.php: 
+	
+	MDL-7855 Sanitize field type when importing presents into data mod;
+	backported from HEAD
+
+2006-12-11 Monday 01:31  skodak
+
+	* preset.php: 
+	
+	MDL-7855 Sanitize field type when importing presents into data mod
+
+2006-12-09 Saturday 22:06  jamiesensei
+
+	* mod_form.php: 
+	
+	added code to include hidden labels in groups in forms
+
+2006-12-09 Saturday 19:43  jamiesensei
+
+	* mod_form.php: 
+	
+	some changes to date_selector and date_time_selector. Now
+	automatically disabledIf disable checkbox is checked. 'optional'
+	option includes a disable checkbox.
+
+2006-12-09 Saturday 06:36  skodak
+
+	* edit.php, lib.php: 
+	
+	MDL-6519 Dollar ($) signs in data module text fields not preserved;
+	backported from HEAD
+
+2006-12-09 Saturday 06:29  skodak
+
+	* edit.php, lib.php: 
+	
+	MDL-6519 Dollar ($) signs in data module text fields not preserved.
+
+2006-12-09 Saturday 06:25  skodak
+
+	* preset.php: 
+	
+	MDL-7848 Database presets import breaks non-null restriction on
+	description; backported from HEAD
+
+2006-12-09 Saturday 06:23  skodak
+
+	* preset.php: 
+	
+	MDL-7848 Database presets import breaks non-null restriction on
+	description
+
+2006-12-09 Saturday 03:36  skodak
+
+	* preset.php: 
+	
+	MDL-7823 Fixed hardcoded strings and xhtml compliance, code
+	cleanup, improved access control in mod/data/preset.php minor
+	changes in language pack, should not cause legacy problems
+
+2006-12-08 Friday 04:12  skodak
+
+	* report.php, lib.php, rate.php: 
+	
+	MDL-7839 Fixed use of capabilities in database entry rating;
+	backported from HEAD
+
+2006-12-08 Friday 04:06  skodak
+
+	* lib.php, rate.php, report.php: 
+	
+	MDL-7839 Fixed use of capabilities in database entry rating
+
+2006-12-07 Thursday 18:39  jamiesensei
+
+	* lib.php, mod_form.php: 
+	
+	added Sam's 'enabled' checkbox functionality
+
+2006-12-07 Thursday 04:24  skodak
+
+	* field.php, lib.php, comment.php, edit.php, preset.php, tabs.php,
+	templates.php: 
+	
+	MDL-7821 wrong use of cm in data mod and added proper
+	require_login(); backported from HEAD
+
+2006-12-07 Thursday 04:17  skodak
+
+	* comment.php, edit.php, field.php, lib.php, preset.php, tabs.php,
+	templates.php: 
+	
+	MDL-7821 wrong use of cm in data mod and added proper
+	require_login()
+
+2006-12-06 Wednesday 17:58  skodak
+
+	* field.php: 
+	
+	MDL-7812 warning in sorting form in data module when no fields
+	defined; backported from HEAD
+
+2006-12-06 Wednesday 17:57  skodak
+
+	* field.php: 
+	
+	MDL-7812 warning in sorting form in data module when no fields
+	defined
+
+2006-12-04 Monday 17:36  jamiesensei
+
+	* mod_form.php: 
+	
+	added new 'cancel' element type and introduced new is_cancelled()
+	MoodleQuickForm method.  also used new cancel button in all
+	mod_forms as well as a 'Revert' button and reworked logic about
+	where to go on cancel or after submission for modedit.php
+
+2006-11-27 Monday 00:20  skodak
+
+	* field/picture/field.class.php, preset.php: 
+	
+	MDL-7434 all images that convey information should have alt text to
+	convey that information - part 3
+
+2006-11-25 Saturday 00:38  jamiesensei
+
+	* mod_form.php: 
+	
+	changed name of submit buttons to submitbutton instead of sumbit as
+	submit was conflicting with method form.submit()
+
+2006-11-24 Friday 14:39  jamiesensei
+
+	* mod_form.php: 
+	
+	some restructuring of formslib - moving moodleform_mod definition
+	to new file course\moodleform_mod.php and some changes to
+	moodleform_mod standard elements setup and moodleform disabledIf
+	API
+
+2006-11-22 Wednesday 23:19  jamiesensei
+
+	* mod.html, mod_form.php: 
+	
+	changed method name addDependency to disabledIf and removed
+	data/mod.html
+
+2006-11-22 Wednesday 19:09  jamiesensei
+
+	* mod_form.php: 
+	
+	added dependencies to form
+
+2006-11-15 Wednesday 10:10  toyomoyo
+
+	* lib.php: 
+	
+	fixing alt tag to use capital "More"
+
+2006-11-13 Monday 15:52  jamiesensei
+
+	* mod_form.php: 
+	
+	glossary form migrated to formslib and other formslib forms now
+	using $COURSE global
+
+2006-11-10 Friday 12:20  moodler
+
+	* backuplib.php, restorelib.php: 
+	
+	field data should be backed up/restored regardless of whether user
+	data is selected
+
+2006-11-10 Friday 12:17  toyomoyo
+
+	* backuplib.php: 
+	
+	merged, fields should be backed up regardless of whether user data
+	is selected
+
+2006-11-10 Friday 12:17  toyomoyo
+
+	* backuplib.php: 
+	
+	fields should be backed up regardless of whether userdata is
+	selected
+
+2006-11-10 Friday 12:11  toyomoyo
+
+	* restorelib.php: 
+	
+	merged, fields should be restored regardless of whether user data
+	is to be restored
+
+2006-11-10 Friday 12:10  toyomoyo
+
+	* restorelib.php: 
+	
+	fields should be restored regardless of user data is selected or
+	not
+
+2006-11-10 Friday 10:23  jamiesensei
+
+	* mod_form.php: 
+	
+	removed extra erroneous help button
+
+2006-11-10 Friday 03:44  jamiesensei
+
+	* lib.php, mod_form.php: 
+	
+	migrated mod/data/mod.html to formslib. Still to add lockoption
+	functionality.
+
+2006-11-09 Thursday 15:21  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	drop utf8 support from HEAD MDL-6332
+
+2006-11-03 Friday 11:27  toyomoyo
+
+	* templates.php: 
+	
+	merged fix for MDL-7031, removing control tags from add template
+
+2006-11-03 Friday 11:26  toyomoyo
+
+	* templates.php: 
+	
+	fix for MDL-7031, removing control tags from add template
+
+2006-11-02 Thursday 10:10  toyomoyo
+
+	* filter.php: 
+	
+	merged fix for MDL_7112 select distinct on text fields
+
+2006-11-02 Thursday 10:09  toyomoyo
+
+	* filter.php: 
+	
+	fix for MDL-7112 select distinct on text fields
+
+2006-10-27 Friday 15:50  skodak
+
+	* lib.php: 
+	
+	Comments in data print the "by" and then the date but no username
+	MDL-7235; merged from MOODLE_17_STABLE
+
+2006-10-27 Friday 15:49  skodak
+
+	* lib.php: 
+	
+	Comments in data print the "by" and then the date but no username
+	MDL-7235
+
+2006-10-27 Friday 06:46  stronk7
+
+	* db/postgres7.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+	
+	Merged from MOODLE_17_STABLE
+
+2006-10-27 Friday 06:39  stronk7
+
+	* db/mysql.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+	
+	Merged from MOODLE_17_STABLE
+
+2006-10-27 Friday 06:29  stronk7
+
+	* db/postgres7.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+
+2006-10-27 Friday 06:25  stronk7
+
+	* db/mysql.php: 
+	
+	Deprecating old "upgrade" files. MDL-7214
+
+2006-10-27 Friday 01:43  stronk7
+
+	* db/upgrade.php: 
+	
+	New upgrade.php file added for this module. MDL-7214
+	
+	Merged from HEAD
+
+2006-10-27 Friday 01:33  stronk7
+
+	* db/upgrade.php: 
+	
+	file upgrade.php was added on branch MOODLE_17_STABLE on 2006-10-26
+	17:43:06 +0000
+
+2006-10-27 Friday 01:33  stronk7
+
+	* db/upgrade.php: 
+	
+	New upgrade.php file added for this module. MDL-7214
+
+2006-10-25 Wednesday 17:04  moodler
+
+	* filter.php, lib.php: 
+	
+	Merged AS keyword fixes from stable  MDL-7207
+
+2006-10-25 Wednesday 17:02  moodler
+
+	* filter.php, lib.php: 
+	
+	More rogue AS keywords	 MDL-7207
+
+2006-10-25 Wednesday 16:51  moodler
+
+	* lib.php: 
+	
+	Merged fixes for AS keywords   MDL-7207
+
+2006-10-25 Wednesday 16:50  moodler
+
+	* lib.php: 
+	
+	Removed use of table as xxx   MDL-7207
+
+2006-10-25 Wednesday 06:00  stronk7
+
+	* rsslib.php: 
+	
+	DeLIMITing Moodle core. Now the new $limitfrom, $limitnum
+	parameters are used instead. MDL-7168
+	
+	Merged from MOODLE_17_STABLE
+
+2006-10-25 Wednesday 05:55  stronk7
+
+	* rsslib.php: 
+	
+	DeLIMITing Moodle core. Now the new $limitfrom, $limitnum
+	parameters are used instead. MDL-7168
+
+2006-10-24 Tuesday 16:06  skodak
+
+	* version.php, db/access.php: 
+	
+	fixed risks associated with capabilitites in modules MDL-7174;
+	merged from MOODLE_17_STABLE
+
+2006-10-24 Tuesday 16:04  skodak
+
+	* version.php, db/access.php: 
+	
+	fixed risks associated with capabilitites in modules MDL-7174
+
+2006-10-22 Sunday 16:13  moodler
+
+	* filter.php: 
+	
+	Merged filter fix from stable
+
+2006-10-22 Sunday 16:11  moodler
+
+	* filter.php: 
+	
+	FIxed some HTML warnings & -> &amp;
+
+2006-10-20 Friday 15:34  moodler
+
+	* edit.php, edit.php: 
+	
+	Added Javascript, CSS etc on edit page for database.   MDL-7100
+
+2006-10-20 Friday 14:59  moodler
+
+	* db/access.php: 
+	
+	MERGED:
+	
+	Changed default capability for database to allow guests to view by
+	default MDL-7118
+
+2006-10-20 Friday 14:58  moodler
+
+	* db/access.php: 
+	
+	CHanged default capability for database to allow guests to view by
+	default MDL-7118
+
+2006-10-17 Tuesday 18:05  thompson697
+
+	* restorelib.php: 
+	
+	Apply modularity to the creation of the log file during restore to
+	a new course.  Remove the responsibility for loging the application
+	of the course start date offset, from activity modules to the
+	backup module.	Merged from stable branch
+
+2006-10-16 Monday 18:40  thompson697
+
+	* restorelib.php: 
+	
+	Apply modularity to the creation of the log file during restore to
+	a new course.  Remove the responsibility for loging the application
+	of the course start date offset, from activity modules to the
+	backup module.
+
+2006-10-11 Wednesday 14:21  moodler
+
+	* db/access.php: 
+	
+	Merged fixes for MDL-6907 from stable
+
+2006-10-11 Wednesday 14:16  moodler
+
+	* db/access.php: 
+	
+	All the PREVENTS from the legacy roles have been removed (and thus
+	are treated as INHERIT by default).
+	
+	See MDL-6907 for details.
+
+2006-10-09 Monday 03:45  skodak
+
+	* index.php: 
+	
+	fixed data/index.php when no databases available, initialized array
+	in get_all_instances_in_course() from datalib.php; merged from
+	MOODLE_16_STABLE
+
+2006-10-09 Monday 03:44  skodak
+
+	* index.php: 
+	
+	fixed data/index.php when no databases available, initialized array
+	in get_all_instances_in_course() from datalib.php
+
+2006-10-06 Friday 14:04  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	fix for MDL-6859, MDL-6860
+
+2006-10-04 Wednesday 22:50  thompson697
+
+	* restorelib.php: 
+	
+	Change creation of restorelog file location to protected backupdata
+	folder.  Reassign style and language links
+
+2006-10-03 Tuesday 01:24  moodler
+
+	* edit.php, field.php, lib.php, preset.php, styles.php,
+	templates.php, version.php, db/access.php: 
+	
+	Fixes related to presets and MDL-6755.
+	
+	The original code was shocking once I started reviewing it, and
+	even after heavy editing I'm still not happy with it, but at least
+	it works more like it was supposed to.
+	
+	Needs more cleaning up to make it clearer and probably safer.
+	
+	Also, presets can now contain langage packs and they'll be used. 
+	The image gallery is an example.
+
+2006-10-02 Monday 23:27  moodler
+
+	* preset/imagegallery/lang/en_utf8/data.php: 
+	
+	Added language files to default preset as an example
+
+2006-09-30 Saturday 22:13  moodler
+
+	* preset/imagegallery/: addtemplate.html, csstemplate.css,
+	jstemplate.js, listtemplate.html, listtemplatefooter.html,
+	listtemplateheader.html, preset.xml, rsstemplate.html,
+	rsstitletemplate.html, singletemplate.html: 
+	
+	Fixed up Preset name
+
+2006-09-26 Tuesday 13:11  martinlanghoff
+
+	* view.php: 
+	
+	mod/lesson, mod/quiz: remove deprecated sql_paging_limit(), use
+	offset, limit parameters
+
+2006-09-26 Tuesday 13:08  martinlanghoff
+
+	* lib.php: 
+	
+	data, forum, glossary: use sql_ilike() for a portable LIKE operator
+
+2006-09-26 Tuesday 06:48  stronk7
+
+	* version.php: 
+	
+	Ops! I forgot to commit this 2 days ago! Now a lot of data fields
+	will be null!
+
+2006-09-24 Sunday 21:58  vyshane
+
+	* backuplib.php, lib.php, mod.html, restorelib.php: 
+	
+	Removed the following module configurations (converted to use
+	roles): participants, assesspublic and ratings. Changed assessed
+	field to only use 1 (ratings on) or 0 (off).
+
+2006-09-23 Saturday 17:37  stronk7
+
+	* db/: install.xml, mysql.php, mysql.sql, postgres7.php,
+	postgres7.sql: 
+	
+	Moving a bunch of database module fields to NULLable
+	(http://docs.moodle.org/en/XMLDB_Problems#NOT_NULL_fields_using_a_D
+	EFAULT_.27.27_clause)
+
+2006-09-21 Thursday 12:10  vyshane
+
+	* db/: install.xml, mysql.php, mysql.sql, postgres7.php,
+	postgres7.sql: 
+	
+	Removed column ratings from data table
+
+2006-09-21 Thursday 05:00  skodak
+
+	* db/access.php: 
+	
+	major whitespace cleanup - fixed trailng whitespace in new files
+	and admin area
+
+2006-09-21 Thursday 04:31  skodak
+
+	* field/latlong/field.class.php, field/latlong/kml.php, preset.php:
+	
+	
+	major whitespace cleanup - fixed tabs
+
+2006-09-21 Thursday 02:08  vyshane
+
+	* db/install.xml: 
+	
+	Updated to reflect changes to data table
+
+2006-09-21 Thursday 01:46  vyshane
+
+	* lib.php, version.php, db/mysql.php, db/mysql.sql,
+	db/postgres7.php, db/postgres7.sql: 
+	
+	Upgrade to roles code for data module.
+
+2006-09-21 Thursday 00:57  vyshane
+
+	* lib.php, restorelib.php, db/access.php, db/mysql.php,
+	db/postgres7.php: 
+	
+	Upgrade to roles code, as well as restoring from 1.6 on a 1.7
+	install code.
+
+2006-09-20 Wednesday 17:00  toyomoyo
+
+	* preset.php: 
+	
+	replacing deprecated calls and references to capability calls
+
+2006-09-19 Tuesday 09:21  tomflannaghan
+
+	* preset/imagegallery/: addtemplate.html, listtemplate.html,
+	listtemplatefooter.html, listtemplateheader.html, preset.xml,
+	rsstemplate.html, singletemplate.html: 
+	
+	Preset added. This is a basic javascript based preset.
+
+2006-09-19 Tuesday 05:32  skodak
+
+	* version.php, db/access.php: 
+	
+	added capabilty risks into access.php and GUI for define role and
+	override; minor fixes for capability types in forum
+
+2006-09-18 Monday 21:46  vyshane
+
+	* view.php, db/access.php: 
+	
+	Added new capabilities, renamed mod/data:readentry to
+	mod/data:viewentry to make capability name more consistent with the
+	rest of moodle.
+
+2006-09-18 Monday 19:45  tomflannaghan
+
+	* js.php: 
+	
+	Adds Javascript Support for the presets.
+
+2006-09-18 Monday 19:42  tomflannaghan
+
+	* field.php, preset.php: 
+	
+	<?php // $Id: preset.php,v 1.5 2006/08/30 09:17:40 skodak Exp $ /*
+	Preset Menu  *	* This is the page that is the menu item in the
+	config database  * pages.   */
+	
+	require_once('../../config.php'); require_once('lib.php');
+	require_once($CFG->libdir.'/uploadlib.php');
+	require_once($CFG->libdir.'/xmlize.php');
+	
+	$id	 = optional_param('id', 0, PARAM_INT);	  // course module
+	id $d	    = optional_param('d', 0, PARAM_INT);     // database
+	activity id $action  = optional_param('action', 'base', PARAM_RAW);
+	// current action $file    = optional_param('file', false,
+	PARAM_PATH); // path of file to upload
+	
+	if ($id) {     if (! $cm = get_record('course_modules', 'id', $id))
+	{	  error('Course Module ID Incorrect');	   }	 if (!
+	$course = get_record('course', 'id', $cm->course)) {	    
+	error('Course is misconfigured');     }     if (! $data =
+	get_record('data', 'id', $cm->instance)) {	   error('Module
+	Incorrect');	 } } else if ($d) {	if (! $data =
+	get_record('data', 'id', $d)) { 	error('Database ID
+	Incorrect');	 }     if (! $course = get_record('course', 'id',
+	$data->course)) {	  error('Course is misconfigured');	}  
+	  if (! $cm = get_coursemodule_from_instance('data', $data->id,
+	$course->id)) { 	error('Course Module ID was incorrect');   
+	 } } else {	error('Parameter missing'); }
+	
+	require_login($course->id);
+	
+	require_capability('mod/data:managetemplates',
+	get_context_instance(CONTEXT_MODULE, $cm->id));
+	
+	/* get the list of standard presets found in /mod/data/preset */
+	$presets = array();
+	
+	if ($presetdir = opendir($CFG->dirroot.'/mod/data/preset')) {
+	
+	    while ($userdir = readdir($presetdir)) {
+	
+		$fulluserdir = '/mod/data/preset/'.$userdir;
+	
+		if ($userdir == '.' || $userdir == '..') {
+		    continue;
+		}
+	
+		/* Global Standard Presets */
+		if (is_directory_a_preset($CFG->dirroot.$fulluserdir)) {
+		    $preset = new StdClass;
+		    $preset->path = $fulluserdir;
+		    $preset->name = $userdir;
+		    if (file_exists($fulluserdir.'/screenshot.jpg')) {
+			$preset->screenshot =
+	$CFG->wwwroot.'/mod/data/preset/'.$userdir.'/screenshot.jpg';
+		    }
+		    $presets[] = $preset;
+		    unset($preset);
+		}
+	
+		/* User made presets stored in user folders */
+		else if (get_record('user', 'id', $userdir)) {
+		    $userdirh = opendir($CFG->dirroot.$fulluserdir);
+		    while ($userpresetdir = readdir($userdirh)) {
+			$fulluserpresetdir =
+	$fulluserdir.'/'.$userpresetdir;
+			if ($userpresetdir != '.' && $userpresetdir != '..'
+	&& is_directory_a_preset($CFG->dirroot.$fulluserpresetdir)) {
+			    $preset = new StdClass;
+			    $preset->path = $fulluserpresetdir;
+			    $preset->name = $userpresetdir;
+			    $preset->user = $userdir;
+			    if
+	(file_exists($fulluserpresetdir.'/screenshot.jpg')) {
+				$preset->screenshot =
+	$CFG->wwwroot.'/mod/data/preset/'.$userdir.'/'.$userpresetdir.'/scr
+	eenshot.jpg';
+			    }
+			    $presets[] = $preset;
+			    unset($preset);
+			}
+		    }
+		}
+	    }
+	    closedir($presetdir);
+	}
+	
+	/* Need sesskey security check here for import instruction */
+	$sesskey = sesskey();
+	
+	/******************************************************************
+	**/ /* Output */ data_presets_print_header($course, $cm, $data);
+	
+	echo "<center>"; switch ($action) {	/* Main selection menu -
+	default mode also. */  default:  case 'base':	   $strimport =
+	get_string('import');	   $strfromfile = get_string('fromfile',
+	'data');      $strchooseorupload = get_string('chooseorupload',
+	'data');      $strok = get_string('ok');      $strusestandard =
+	get_string('usestandard', 'data');	$strchoose =
+	get_string('choose');	   $strexport = get_string('export',
+	'data');      $strexportaszip = get_string('exportaszip', 'data'); 
+	    $strsaveaspreset = get_string('saveaspreset', 'data');     
+	$strdelete = get_string('delete');
+	
+	     echo "<table cellpadding=7>";
+	     echo "<tr><td><h3>$strimport</h3></td>";
+	     echo "<td><form name='form' method='POST'
+	action='?d=$data->id&action=importzip&sesskey=$sesskey'
+	enctype='multipart/form-data'>";
+	     helpbutton('importfromfile', '', 'data');
+	     echo " $strfromfile:</td><td><input name=\"file\" size=\"20\"
+	value=\"\" alt=\"file\" type=\"text\"><input name=\"coursefiles\"
+	title=\"Choose or upload a file\" value=\"$strchooseorupload\"
+	onclick=\"return
+	openpopup('/files/index.php?id=2&choose=form.file', 'coursefiles',
+	'menubar=0,location=0,scrollbars,resizable,width=750,height=500',
+	0);\" type=\"button\">";
+	     echo "<input type=\"submit\" value=\"$strok\"/>";
+	     echo "</form></td></tr>";
+	
+	     echo "<tr valign=top><td></td><td>";
+	     helpbutton('usepreset', '', 'data');
+	     echo " $strusestandard: </td><td>";
+	     echo "<table width=100%>";
+	     foreach ($presets as $id => $preset) {
+		 echo "<tr><form action='' method='POST'>";
+		 echo "<input type='hidden' name='file'
+	value=\"$preset->path\">";
+		 echo "<input type='hidden' name='action'
+	value='importpreset'>";
+		 echo "<input type='hidden' name='d' value='$data->id'>";
+		 echo "<input type='hidden' name='sesskey'
+	value='$sesskey'>";
+		 echo "<td>";
+		 if ($preset->screenshot) {
+		     echo "<img src='$preset->screenshot'
+	alt='$preset->screenshot' />";
+		 }
+		 echo "</td><td>$preset->name";
+		 if ($preset->user) {
+		     $user = get_record('user', 'id', $preset->user);
+		     echo " by $user->firstname $user->lastname";
+		 }
+		 echo "</td><td><input type='submit'
+	value='$strchoose'></td></form>";
+		 echo "<td>";
+		 if ($preset->user == $USER->id || isadmin()) {
+		     echo "<form action='' method='POST'>";
+		     echo "<input type='hidden' name='d' value='$data->id'
+	/>";
+		     echo "<input type='hidden' name='action'
+	value='confirmdelete' />";
+		     echo "<input type='hidden' name='sesskey'
+	value='$sesskey' />";
+		     echo "<input type='hidden' name='deleteid' value='$id'
+	/>";
+		     echo "<input type='hidden' name='deletename'
+	value=\"$preset->name\" />";
+		     echo "<input type='submit' value='$strdelete'
+	/></form>";
+		 }
+		 echo "</td></tr>";
+	     }
+	     echo "</table></td></tr>";
+	
+	     echo "<tr><td valign=top><h3>$strexport</h3></td>";
+	     echo "<td><form action='' method='POST'>";
+	     helpbutton('exportzip', '', 'data');
+	     echo " <input type='hidden' name='action' value='export' />";
+	     echo "<input type='hidden' name='d' value='$data->id' />";
+	     echo "<input type='submit' value='$strexportaszip' />";
+	     echo "</form>";
+	
+	     echo "<form action='' method='POST'>";
+	     helpbutton('savepreset', '', 'data');
+	     echo " <input type='hidden' name='action' value='save1' />";
+	     echo "<input type='hidden' name='d' value='$data->id' />";
+	     echo "<input type='hidden' name='sesskey' value='$sesskey'
+	/>";
+	     echo "<input type='submit' value='$strsaveaspreset' />";
+	     echo "</form>";
+	
+	     echo "</table>";
+	     break;
+	
+	     /***************** Deleting *****************/
+	 case 'confirmdelete' :
+	     if (!confirm_sesskey()) {
+		 error("Sesskey Invalid");
+	     }
+	
+	     $deletename = required_param('deletename', PARAM_RAW);
+	     $deleteid = required_param('deleteid', PARAM_INT);
+	
+	     $strwarning = get_string('deletewarning', 'data');
+	     $strdelete = get_string('delete');
+	     notify($strwarning);
+	     echo "<form action='' method='POST'>";
+	     echo "<input type='hidden' name='d' value='$data->id' />";
+	     echo "<input type='hidden' name='action' value='delete' />";
+	     echo "<input type='hidden' name='sesskey' value='$sesskey'
+	/>";
+	     echo "<input type='hidden' name='deleteid' value='$deleteid'
+	/>";
+	     echo "<input type='hidden' name='deletename'
+	value=\"$deletename\" />";
+	     echo "<input type='submit' value='$strdelete' /></form>";
+	     break;
+	
+	 case 'delete' :
+	     if (!confirm_sesskey()) {
+		 error('Sesskey Invalid');
+	     }
+	
+	     $deletename = required_param('deletename', PARAM_RAW);
+	     $deleteid = required_param('deleteid', PARAM_INT);
+	
+	     if (!empty($presets[$deleteid])) {
+		 if ($presets[$deleteid]->name == $deletename) {
+		     if
+	(!clean_preset($CFG->dirroot.$presets[$deleteid]->path))
+	error("Error deleting");
+		 }
+		 rmdir($CFG->dirroot.$presets[$deleteid]->path);
+	     }
+	     else {
+		 error('Invalid delete');
+	     }
+	
+	     $strdelete = get_string('deleted', 'data');
+	     notify("$deletename $strdeleted");
+	
+	     break;
+	
+	     /***************** Importing *****************/
+	 case 'importpreset' :
+	     if (!confirm_sesskey()) {
+		 error("Sesskey Invalid");
+	     }
+	
+	     $pimporter = new PresetImporter($course, $cm, $data,
+	$CFG->dirroot.$file);
+	     $pimporter->import_options();
+	     break;
+	
+	     /* Imports a zip file. */
+	 case 'importzip' :
+	     if (!confirm_sesskey()) {
+		 error("Sesskey Invalid");
+	     }
+	
+	     if (!make_upload_directory('temp/data/'.$USER->id)) {
+		 error("Can't Create Directory");
+	     }
+	
+	     $presetfile = $CFG->dataroot."/temp/data/".$USER->id;
+	     clean_preset($presetfile);
+	
+	     if (!unzip_file($CFG->dataroot."/$course->id/$file",
+			     $presetfile, false))
+		 error("Can't unzip file");
+	
+	     $pimporter = new PresetImporter($course, $cm, $data,
+	$presetfile);
+	     $pimporter->import_options();
+	     break;
+	
+	 case 'finishimport':
+	     if (!confirm_sesskey()) {
+		 error('Sesskey Invalid');
+	     }
+	
+	     $pimporter = new PresetImporter($course, $cm, $data, $file);
+	     $pimporter->import();
+	
+	     $strimportsuccess = get_string('importsuccess', 'data');
+	     $straddentries = get_string('addentries', 'data');
+	     $strtodatabase = get_string('todatabase', 'data');
+	     if (!get_records('data_records', 'dataid', $data->id)) {
+		 notify("$strimportsuccess <a
+	href='edit.php?d=$data->id'>$straddentries</a> $strtodatabase",
+	'notifysuccess');
+	     }
+	     else {
+		 notify("$strimportsuccess", 'notifysuccess');
+	     }
+	     break;
+	
+	     /* Exports as a zip file ready for download. */
+	 case 'export':
+	     $file = data_presets_export($course, $cm, $data);
+	     echo get_string('exportedtozip', 'data')."<br>";
+	     $perminantfile =
+	$CFG->dataroot."/$course->id/moddata/data/$data->id/preset.zip";
+	     @unlink($perminantfile);
+	     /* is this created elsewhere? sometimes its not present... */
+	     make_upload_directory("$course->id/moddata/data/$data->id");
+	
+	     /* now just move the zip into this folder to allow a nice
+	download */
+	     if (!rename($file, $perminantfile)) error("Can't move zip");
+	     echo "<a
+	href='$CFG->wwwroot/file.php/$course->id/moddata/data/$data->id/pre
+	set.zip'>".get_string('download', 'data')."</a>";
+	     break;
+	
+	     /***************** Exporting *****************/
+	 case 'save1':
+	     if (!confirm_sesskey()) {
+		 error("Sesskey Invalid");
+	     }
+	
+	     $strcontinue = get_string('continue');
+	     $strwarning = get_string('presetwarning', 'data');
+	
+	     echo "<div align=center>";
+	     echo "<p>$strwarning</p>";
+	     echo "<form action='' method='POST'>";
+	     echo "Name: <input type='textbox' name='name'
+	value=\"$data->name\" />";
+	     echo "<input type='hidden' name='action' value='save2' />";
+	     echo "<input type='hidden' name='d' value='$data->id' />";
+	     echo "<input type='hidden' name='sesskey' value='$sesskey'
+	/>";
+	     echo "<input type='submit' value='$strcontinue'
+	/></form></div>";
+	     break;
+	
+	 case 'save2':
+	     if (!confirm_sesskey()) {
+		 error("Sesskey Invalid");
+	     }
+	
+	     $strcontinue = get_string('continue');
+	     $stroverwrite = get_string('overwrite');
+	
+	     $name = optional_param('name', $data->name, PARAM_FILE);
+	
+	     if
+	(is_directory_a_preset("$CFG->dirroot/mod/data/preset/$USER->id/$na
+	me")) {
+		 notify("Preset already exists: Pick another name or
+	overwrite");
+	
+		 echo "<div align=center>";
+		 echo "<form action='' method='POST'>";
+		 echo "New name: <input type='textbox' name='name'
+	value=\"$name\" />";
+		 echo "<input type='hidden' name='action' value='save2'
+	/>";
+		 echo "<input type='hidden' name='d' value='$data->id' />";
+		 echo "<input type='hidden' name='sesskey' value='$sesskey'
+	/>";
+		 echo "<input type='submit' value='$strcontinue'
+	/></form>";
+	
+		 echo "<form action='' method='POST'>";
+		 echo "<input type='hidden' name='name' value=\"$name\"
+	/>";
+		 echo "<input type='hidden' name='action' value='save3'
+	/>";
+		 echo "<input type='hidden' name='d' value='$data->id' />";
+		 echo "<input type='hidden' name='sesskey' value='$sesskey'
+	/>";
+		 echo "<input type='submit' value='$stroverwrite'
+	/></form>";
+		 echo "</div>";
+		 break;
+	     }
+	
+	 case 'save3':
+	     if (!confirm_sesskey()) {
+		 error("Sesskey Invalid");
+	     }
+	
+	     $name = optional_param('name', $data->name, PARAM_FILE);
+	     $presetdirectory =
+	"$CFG->dirroot/mod/data/preset/$USER->id/$name";
+	
+	     if (!is_dir($presetdirectory)) {
+		 @mkdir("$CFG->dirroot/mod/data/preset/$USER->id");
+		 mkdir($presetdirectory);
+	     }
+	     else {
+		 clean_preset($presetdirectory);
+	     }
+	
+	     $file = data_presets_export($course, $cm, $data);
+	     if (!unzip_file($file, $presetdirectory, false)) error("Can't
+	unzip to the preset directory");
+	     notify(get_string('savesuccess', 'data'), 'notifysuccess');
+	     break;
+	
+	}  echo "</center>"; print_footer($course);
+	
+	function is_directory_a_preset($directory) {	 $directory =
+	rtrim($directory, '/\\') . '/';     if
+	(file_exists($directory.'singletemplate.html') && 
+	file_exists($directory.'listtemplate.html') && 
+	file_exists($directory.'listtemplateheader.html') &&   
+	file_exists($directory.'listtemplatefooter.html') &&   
+	file_exists($directory.'addtemplate.html') &&  
+	file_exists($directory.'rsstemplate.html') &&  
+	file_exists($directory.'rsstitletemplate.html') &&     
+	file_exists($directory.'csstemplate.css') &&   
+	file_exists($directory.'jstemplate.js') &&     
+	file_exists($directory.'preset.xml')) return true;     else return
+	false; }
+	
+	function data_presets_print_header($course, $cm, $data,
+	$showtabs=true) {
+	
+	    global $CFG, $displaynoticegood, $displaynoticebad;
+	
+	    $strdata = get_string('modulenameplural','data');
+	
+	    print_header_simple($data->name, '', "<a
+	href='index.php?id=$course->id'>$strdata</a> -> $data->name",
+				'', '', true, '', navmenu($course, $cm));
+	
+	    print_heading(format_string($data->name));
+	
+	    /// Print the tabs
+	
+	    if ($showtabs) {
+		$currenttab = 'presets';
+		include_once('tabs.php');
+	    }
+	
+	    /// Print any notices
+	
+	    if (!empty($displaynoticegood)) {
+		notify($displaynoticegood, 'notifysuccess');	// good
+	(usually green)
+	    } else if (!empty($displaynoticebad)) {
+		notify($displaynoticebad);		       // bad
+	(usuually red)
+	    }
+	}
+	
+	function clean_preset($folder) {     if
+	(unlink($folder.'/singletemplate.html') &&     
+	unlink($folder.'/listtemplate.html') &&        
+	unlink($folder.'/listtemplateheader.html') &&  
+	unlink($folder.'/listtemplatefooter.html') &&  
+	unlink($folder.'/addtemplate.html') && 
+	unlink($folder.'/rsstemplate.html') && 
+	unlink($folder.'/rsstitletemplate.html') &&    
+	unlink($folder.'/csstemplate.css') &&  
+	unlink($folder.'/jstemplate.js') &&    
+	unlink($folder.'/preset.xml')) return true;	else return false;
+	}
+	
+	function data_presets_export($course, $cm, $data) {	global
+	$CFG;	  /* Info Collected. Now need to make files in
+	moodledata/temp */     $tempfolder = $CFG->dataroot.'/temp';	
+	$singletemplate     = fopen($tempfolder.'/singletemplate.html',
+	'w');	  $listtemplate       =
+	fopen($tempfolder.'/listtemplate.html', 'w');	 
+	$listtemplateheader = fopen($tempfolder.'/listtemplateheader.html',
+	'w');	  $listtemplatefooter =
+	fopen($tempfolder.'/listtemplatefooter.html', 'w');    
+	$addtemplate	    = fopen($tempfolder.'/addtemplate.html', 'w'); 
+	   $rsstemplate        = fopen($tempfolder.'/rsstemplate.html',
+	'w');	  $rsstitletemplate   =
+	fopen($tempfolder.'/rsstitletemplate.html', 'w');     $csstemplate 
+	      = fopen($tempfolder.'/csstemplate.css', 'w');	$jstemplate
+		= fopen($tempfolder.'/jstemplate.js', 'w');
+	
+	    fwrite($singletemplate, $data->singletemplate);
+	    fwrite($listtemplate, $data->listtemplate);
+	    fwrite($listtemplateheader, $data->listtemplateheader);
+	    fwrite($listtemplatefooter, $data->listtemplatefooter);
+	    fwrite($addtemplate, $data->addtemplate);
+	    fwrite($rsstemplate, $data->rsstemplate);
+	    fwrite($rsstitletemplate, $data->rsstitletemplate);
+	    fwrite($csstemplate, $data->csstemplate);
+	    fwrite($jstemplate, $data->jstemplate);
+	
+	    fclose($singletemplate);
+	    fclose($listtemplate);
+	    fclose($listtemplateheader);
+	    fclose($listtemplatefooter);
+	    fclose($addtemplate);
+	    fclose($rsstemplate);
+	    fclose($rsstitletemplate);
+	    fclose($csstemplate);
+	    fclose($jstemplate);
+	
+	    /* All the display data is now done. Now assemble preset.xml */
+	    $fields = get_records('data_fields', 'dataid', $data->id);
+	    $presetfile = fopen($tempfolder.'/preset.xml', 'w');
+	    $presetxml = "<preset>\n\n";
+	
+	    /* Database settings first. Name not included? */
+	    $settingssaved = array('intro', 'comments', 'ratings',
+	'participants',
+				   'requiredentries',
+	'requiredentriestoview', 'maxentries',
+				   'rssarticles', 'approval', 'scale',
+	'assessed', 'assessedpublic',
+				   'defaultsort', 'defaultsortdir',
+	'editany');
+	
+	    $presetxml .= "<settings>\n";
+	    foreach ($settingssaved as $setting) {
+		$presetxml .= "<$setting>{$data->$setting}</$setting>\n";
+	    }
+	    $presetxml .= "</settings>\n\n";
+	
+	    /* Now for the fields. Grabs all settings that are non-empty */
+	    if (!empty($fields)) {
+		foreach ($fields as $field) {
+		    $presetxml .= "<field>\n";
+		    foreach ($field as $key => $value) {
+			if ($value != '' && $key != 'id' && $key !=
+	'dataid') {
+			    $presetxml .= "<$key>$value</$key>\n";
+			}
+		    }
+		    $presetxml .= "</field>\n\n";
+		}
+	    }
+	
+	    $presetxml .= "</preset>";
+	    fwrite($presetfile, $presetxml);
+	    fclose($presetfile);
+	
+	    /* Check all is well */
+	    if (!is_directory_a_preset($tempfolder)) {
+		error("Not all files generated!");
+	    }
+	
+	    $filelist = array(
+			      "singletemplate.html",
+			      "listtemplate.html",
+			      "listtemplateheader.html",
+			      "listtemplatefooter.html",
+			      "addtemplate.html",
+			      "rsstemplate.html",
+			      "rsstitletemplate.html",
+			      "csstemplate.css",
+			      "jstemplate.js",
+			      "preset.xml");
+	
+	    foreach ($filelist as $key => $file) {
+		$filelist[$key] = $tempfolder.'/'.$filelist[$key];
+	    }
+	
+	    @unlink($tempfolder.'/export.zip');
+	    $status = zip_files($filelist, $tempfolder.'/export.zip');
+	
+	    /* made the zip... now return the filename for storage.*/
+	    return $tempfolder.'/export.zip';
+	}
+	
+	class PresetImporter {	   function PresetImporter($course, $cm,
+	$data, $folder) {	  global $CFG;	       $this->course =
+	$course;	 $this->cm = $cm;	  $this->data = $data;	   
+	   $this->folder = $folder;	    $this->postfolder = $folder;   
+	 }
+	
+	    function get_settings() {
+		global $CFG;
+	
+		if (!is_directory_a_preset($this->folder)) {
+		    error("$this->folder Not a preset");
+		}
+	
+		/* Grab XML */
+		$presetxml =
+	file_get_contents($this->folder.'/preset.xml');
+		$parsedxml = xmlize($presetxml);
+	
+		/* First, do settings. Put in user friendly array. */
+		$settingsarray =
+	$parsedxml['preset']['#']['settings'][0]['#'];
+		$settings = new StdClass();
+	
+		foreach ($settingsarray as $setting => $value) {
+		    $settings->$setting = $value[0]['#'];
+		}
+	
+		/* Now work out fields to user friendly array */
+		$fieldsarray = $parsedxml['preset']['#']['field'];
+		$fields = array();
+		foreach ($fieldsarray as $field) {
+		    $f = new StdClass();
+		    foreach ($field['#'] as $param => $value) {
+			$f->$param = $value[0]['#'];
+		    }
+		    $f->dataid = $this->data->id;
+		    $fields[] = $f;
+		}
+	
+		/* Now add the HTML templates to the settings array so we
+	can update d */
+		$settings->singletemplate     =
+	file_get_contents($this->folder."/singletemplate.html");
+		$settings->listtemplate       =
+	file_get_contents($this->folder."/listtemplate.html");
+		$settings->listtemplateheader =
+	file_get_contents($this->folder."/listtemplateheader.html");
+		$settings->listtemplatefooter =
+	file_get_contents($this->folder."/listtemplatefooter.html");
+		$settings->addtemplate	      =
+	file_get_contents($this->folder."/addtemplate.html");
+		$settings->rsstemplate	      =
+	file_get_contents($this->folder."/rsstemplate.html");
+		$settings->rsstitletemplate   =
+	file_get_contents($this->folder."/rsstitletemplate.html");
+		$settings->csstemplate	      =
+	file_get_contents($this->folder."/csstemplate.css");
+		$settings->jstemplate	      =
+	file_get_contents($this->folder."/jstemplate.js");
+	
+		$settings->instance = $this->data->id;
+	
+		/* Now we look at the current structure (if any) to work
+	out whether we need to clear db
+		   or save the data */
+		$currentfields = array();
+		$currentfields = get_records('data_fields', 'dataid',
+	$this->data->id);
+	
+		return array($settings, $fields, $currentfields);
+	    }
+	
+	    function import_options() {
+		if (!confirm_sesskey()) {
+		    error("Sesskey Invalid");
+		}
+	
+		$strblank = get_string('blank', 'data');
+		$strnofields = get_string('nofields', 'data');
+		$strcontinue = get_string("continue");
+		$sesskey = sesskey();
+		$strwarning = get_string('mappingwarning', 'data');
+		$strfieldmappings = get_string('fieldmappings', 'data');
+		$strnew = get_string("new");
+		$strold = get_string("old");
+	
+		list($settings, $newfields,  $currentfields) =
+	$this->get_settings();
+	
+		echo "<div align='center'><form action='' method='POST'>";
+		echo "<input type='hidden' name='sesskey' value='$sesskey'
+	/>";
+		echo "<input type='hidden' name='d'
+	value='{$this->data->id}' />";
+		echo "<input type='hidden' name='action'
+	value='finishimport' />";
+		echo "<input type='hidden' name='file'
+	value=\"$this->postfolder\" />";
+	
+		if ($currentfields != array() && $newfields != array()) {
+		    echo "<h3>$strfieldmappings ";
+		    echo helpbutton('fieldmappings', '', 'data');
+		    echo "</h3><table>";
+	
+		    foreach ($newfields as $nid => $newfield) {
+			echo "<tr><td>$newfield->name </td>";
+			echo "<td><select name='field_$nid'>";
+	
+			foreach ($currentfields as $cid => $currentfield) {
+			    if ($currentfield->type == $newfield->type) {
+				if ($currentfield->name == $newfield->name)
+	{
+				    echo "<option value='$cid'
+	selected='true'>$currentfield->name</option>";
+				    $selected=true;
+				}
+				else {
+				    echo "<option
+	value='$cid'>$currentfield->name</option>";
+				}
+			    }
+			}
+	
+			if ($selected)
+			    echo "<option value='-1'>-</option>";
+			else
+			    echo "<option value='-1'
+	selected='true'>-</option>";
+			echo "</select></td></tr>";
+		    }
+		    echo "</table>";
+		    echo "<p>$strwarning</p>";
+		}
+		else if ($newfields == array()) {
+		    error("New preset has no defined fields!");
+		}
+		echo "<input type='submit' value='$strcontinue'
+	/></form></div>";
+	
+	    }
+	
+	    function import() {
+		global $CFG;
+	
+		list($settings, $newfields, $currentfields) =
+	$this->get_settings();
+		$preservedfields = array();
+	
+		/* Maps fields and makes new ones */
+		if ($newfields != array()) {
+		    /* We require an injective mapping, and need to know
+	what to protect */
+		    foreach ($newfields as $nid => $newfield) {
+			$cid = optional_param("field_$nid", -1, PARAM_INT);
+			if ($cid == -1) continue;
+	
+			if (array_key_exists($cid, $preservedfields))
+	error("Not an injective map");
+			else $preservedfields[$cid] = true;
+	
+		    }
+	
+		    foreach ($newfields as $nid => $newfield) {
+			$cid = optional_param("field_$nid", -1, PARAM_INT);
+	
+			/* A mapping. Just need to change field params.
+	Data kept. */
+			if ($cid != -1) {
+			    $fieldobject =
+	data_get_field_from_id($currentfields[$cid]->id, $this->data);
+			    foreach ($newfield as $param => $value) {
+				if ($param != "id") {
+				    $fieldobject->field->$param = $value;
+				}
+			    }
+			    unset($fieldobject->field->similarfield);
+			    $fieldobject->update_field();
+			    unset($fieldobject);
+			}
+			/* Make a new field */
+			else {
+			   
+	include_once("field/$newfield->type/field.class.php");
+	
+			    $classname = 'data_field_'.$newfield->type;
+			    $fieldclass = new $classname($newfield,
+	$this->data);
+			    $fieldclass->insert_field();
+			    unset($fieldclass);
+			}
+		    }
+		}
+	
+		/* Get rid of all old unused data */
+		if ($preservedfields != array()) {
+		    foreach ($currentfields as $cid => $currentfield) {
+			if (!array_key_exists($cid, $preservedfields)) {
+			    /* Data not used anymore so wipe! */
+			    print "Deleting field $currentfield->name<br>";
+			    $id = $currentfield->id;
+	
+			    if ($content = get_records('data_content',
+	'fieldid', $id)) {
+				foreach ($content as $item) {
+				    delete_records('data_ratings',
+	'recordid', $item->recordid);
+				    delete_records('data_comments',
+	'recordid', $item->recordid);
+				    delete_records('data_records', 'id',
+	$item->recordid);
+				}
+			    }
+			    delete_records('data_content', 'fieldid', $id);
+			    delete_records('data_fields', 'id', $id);
+	
+			}
+		    }
+		}
+	
+		data_update_instance(addslashes_object($settings));
+	
+		if (strstr($this->folder, "/temp/"))
+	clean_preset($this->folder); /* Removes the temporary files */
+		return true;
+	    }
+	}
+	
+	?>
+
+2006-09-18 Monday 17:13  moodler
+
+	* rate.php, rsslib.php: 
+	
+	FIxed to use the new debugging function
+
+2006-09-18 Monday 10:28  vyshane
+
+	* lib.php: 
+	
+	Replaced isteacher() in fullname() call.
+
+2006-09-13 Wednesday 21:19  thompson697
+
+	* restorelib.php: 
+	
+	Complete work on Roll Forwards - Restore from previous semester
+	(MDL-5532) * Add fields to restore form to enable changes to Short
+	Name, Full Name and Start Date * Start Date offset added to Restore
+	process * Created Restorelog file in Course files area * Activity
+	Modules use offset to change dates * Activity Modules write changes
+	to Restorelog
+
+2006-09-12 Tuesday 16:22  moodler
+
+	* version.php: 
+	
+	Small bump for guest role fix
+
+2006-09-12 Tuesday 15:10  moodler
+
+	* version.php: 
+	
+	Reload the guest role using new defaults
+
+2006-09-12 Tuesday 13:58  moodler
+
+	* db/access.php: 
+	
+	Changed some default permissions for the guest role
+
+2006-08-30 Wednesday 17:17  skodak
+
+	* preset.php: 
+	
+	fixed missing semicolon typo
+
+2006-08-30 Wednesday 16:43  toyomoyo
+
+	* edit.php, field.php, import.php, index.php, lib.php, preset.php,
+	report.php, field/latlong/field.class.php, field/latlong/kml.php: 
+	
+	added some capabilities
+
+2006-08-18 Friday 00:40  stronk7
+
+	* db/install.xml: 
+	
+	Added JS template field for JavaScript if needed.
+
+2006-08-17 Thursday 21:19  tomflannaghan
+
+	* preset.php: 
+	
+	Slashes added for database entry.
+
+2006-08-17 Thursday 17:27  tomflannaghan
+
+	* view.php: 
+	
+	Javascript added
+
+2006-08-17 Thursday 17:26  tomflannaghan
+
+	* templates.php: 
+	
+	jstemplate
+
+2006-08-17 Thursday 17:26  tomflannaghan
+
+	* tabs.php: 
+	
+	Extra tab for 'jstemplate'
+
+2006-08-17 Thursday 17:02  moodler
+
+	* backuplib.php, restorelib.php, version.php, db/mysql.php,
+	db/mysql.sql, db/postgres7.php, db/postgres7.sql: 
+	
+	Added JS template field for JavaScript if needed
+
+2006-08-15 Tuesday 19:14  tomflannaghan
+
+	* preset.php: 
+	
+	A few fixes for the dropdown menus.
+
+2006-08-15 Tuesday 16:42  moodler
+
+	* field.php, lib.php, preset.php, tabs.php: 
+	
+	Merged new "Database preset" support from Tom Flannaghan.
+	
+	Still needs some tidy-up work but it's working.
+
+2006-08-14 Monday 17:01  moodler
+
+	* import.php: 
+	
+	Merged fixes from HEAD
+
+2006-08-14 Monday 16:59  moodler
+
+	* import.php: 
+	
+	Fixes from forum    http://moodle.org/mod/forum/discuss.php?d=46048
+
+2006-08-14 Monday 13:55  moodler
+
+	* comment.php, field.php, import.php, lib.php, tabs.php,
+	templates.php, view.php: 
+	
+	SWEEPING CLEANUP
+	
+	The API was changed slightly so that has_capability now takes the
+	whole $context object (we almost always have it anyway)
+	
+	The $kill thing was removed.   If you want to assert a capability
+	then use:
+	
+	    require_capability('capname', $context);
+	
+	with optional variables to modify the error message
+	
+	Misc bugs here and there also removed and code tidied
+
+2006-08-13 Sunday 03:03  danstowell
+
+	* field/latlong/mod.html: 
+	
+	Added download link for all entries as KML
+
+2006-08-13 Sunday 01:36  danstowell
+
+	* field/latlong/: field.class.php, kml.php, mod.html: 
+	
+	Now latlong data types allow you to choose which labels appear in
+	Google Earth
+
+2006-08-11 Friday 21:17  danstowell
+
+	* field/latlong/: field.class.php, icon.gif, kml.php, mod.html: 
+	
+	Adding new data field type, latlong, to HEAD
+
+2006-08-10 Thursday 23:30  skodak
+
+	* edit.php, version.php, view.php, import.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283; backported from HEAD
+
+2006-08-10 Thursday 03:46  skodak
+
+	* edit.php: 
+	
+	Bug #6199 - A typo in edit.php; merged from MOODLE_16_STABLE
+
+2006-08-10 Thursday 03:45  skodak
+
+	* edit.php: 
+	
+	Bug #6199 - A typo in edit.php
+
+2006-08-09 Wednesday 21:45  moodler
+
+	* comment.php, field.php, import.php, lib.php, restorelib.php,
+	tabs.php, templates.php, view.php: 
+	
+	Removed tabs
+
+2006-08-09 Wednesday 06:09  skodak
+
+	* edit.php, import.php, version.php, view.php: 
+	
+	new function get_coursemodule_from_id() is now used for obtaining
+	of valid $cm from coursemodule id SC#283
+
+2006-08-09 Wednesday 01:00  stronk7
+
+	* db/install.xml: 
+	
+	Initial XMLDB schema for data tables. Using FKs where they are
+	obvious.
+
+2006-08-08 Tuesday 16:04  toyomoyo
+
+	* db/postgres7.sql: 
+	
+	these tables should not be there,,
+
+2006-08-08 Tuesday 13:13  moodler
+
+	* comment.php, field.php, import.php, lib.php, tabs.php,
+	templates.php, version.php, view.php, db/access.php,
+	db/postgres7.sql: 
+	
+	ROLES AND PERMISSIONS  - FIRST CHECK-IN
+	=======================================
+	
+	WARNING:  DEV IS CURRENTLY VERY UNSTABLE.
+	
+	This is a mega-checkin of the new Roles system.   A lot of changes
+	have been made in core and modules.
+	
+	Currently there are a lot of rough edges and known problems.  We
+	are working hard on these .. .the reason for getting this into HEAD
+	at this stage is enable us to move faster (our branch was diverging
+	from HEAD too much).
+	
+	Please keep an eye on http://docs.moodle.org/en/Roles for current
+	status and information for developers on how to use the new Roles
+	system.
+
+2006-08-04 Friday 13:53  vyshane
+
+	* db/access.php: 
+	
+	Renamed legacyroles to legacy
+
+2006-08-01 Tuesday 15:35  vyshane
+
+	* db/access.php: 
+	
+	file access.php was initially added on branch MOODLE_17_ROLES.
+
+2006-08-01 Tuesday 15:35  vyshane
+
+	* db/access.php: 
+	
+	Capability definitions for the data module.
+
+2006-07-13 Thursday 23:38  skodak
+
+	* restorelib.php: 
+	
+	Bug #6099 - Restore alternatively failing on data module - fixed
+	status codes of module restore process; merged from
+	MOODLE_16_STABLE
+
+2006-07-13 Thursday 23:33  skodak
+
+	* restorelib.php: 
+	
+	Bug #6099 - Restore alternatively failing on data module - fixed
+	status codes of module restore process
+
+2006-07-12 Wednesday 02:45  vyshane
+
+	* comment.php, edit.php, field.php, import.php, lib.php, tabs.php,
+	templates.php, view.php: 
+	
+	Updated capability names
+
+2006-07-10 Monday 00:26  moodler
+
+	* backuplib.php, restorelib.php: 
+	
+	Merged fixes from HEAD for missing backup data
+
+2006-07-09 Sunday 10:03  moodler
+
+	* backuplib.php, restorelib.php: 
+	
+	CSS templates weren't being backed up!
+
+2006-07-04 Tuesday 05:11  skodak
+
+	* lib.php: 
+	
+	Bug #5909 - Fix use of user_group() because it returns arrays now -
+	part 1; merged from MOODLE_16_STABLE
+
+2006-07-04 Tuesday 05:07  skodak
+
+	* lib.php: 
+	
+	Bug #5909 - Fix use of user_group() because it returns arrays now -
+	part 1
+
+2006-06-29 Thursday 15:00  skodak
+
+	* field/textarea/field.class.php: 
+	
+	Bug #5955 - link to help item for html editor looks funny; merged
+	from MOODLE_16_STABLE
+
+2006-06-29 Thursday 14:59  skodak
+
+	* field/textarea/field.class.php: 
+	
+	Bug #5955 - link to help item for html editor looks funny
+
+2006-06-29 Thursday 14:53  skodak
+
+	* edit.php: 
+	
+	Bug #5959 - save and view takes to wrong place; merged from
+	MOODLE_16_STABLE
+
+2006-06-29 Thursday 14:52  skodak
+
+	* edit.php: 
+	
+	Bug #5959 - save and view takes to wrong place
+
+2006-06-29 Thursday 14:48  skodak
+
+	* comment.php: 
+	
+	Bug #5960 - can't delete or edit comments; merged from
+	MOODLE_16_STABLE
+
+2006-06-29 Thursday 14:47  skodak
+
+	* comment.php: 
+	
+	Bug #5960 - can't delete or edit comments
+
+2006-06-28 Wednesday 16:24  toyomoyo
+
+	* comment.php, edit.php, field.php, import.php, lib.php, tabs.php,
+	templates.php, view.php: 
+	
+	new changes in some moduels for roles
+
+2006-06-27 Tuesday 05:35  skodak
+
+	* pagelib.php: 
+	
+	Bug #5931 - blocks block database; merged from MOODLE_16_STABLE
+
+2006-06-27 Tuesday 05:34  skodak
+
+	* pagelib.php: 
+	
+	Bug #5931 - blocks block database
+
+2006-06-15 Thursday 16:13  toyomoyo
+
+	* db/postgres7.sql: 
+	
+	R&P
+
+2006-06-07 Wednesday 04:55  skodak
+
+	* templates.php: 
+	
+	Bug #5659 - Problem with build-in buttons when creating templates;
+	merged from MOODLE_16_STABLE
+
+2006-06-07 Wednesday 04:54  skodak
+
+	* templates.php: 
+	
+	Bug #5659 - Problem with build-in buttons when creating templates
+
+2006-06-06 Tuesday 23:12  skodak
+
+	* backuplib.php, restorelib.php: 
+	
+	Bug #5535 - Database module backup error in 1.5.4, patch submitted
+	by Patrick Pollet ; merged from MOODLE_16_STABLE
+
+2006-06-06 Tuesday 23:11  skodak
+
+	* backuplib.php, restorelib.php: 
+	
+	Bug #5535 - Database module backup error in 1.5.4, patch submitted
+	by Patrick Pollet
+
+2006-06-06 Tuesday 18:17  skodak
+
+	* field.php, lib.php: 
+	
+	Bug #5678 - Question marks, single quotes in field name cause
+	trouble - cleaning hack ported from clean_filename(); merged from
+	MOODLE_16_STABLE
+
+2006-06-06 Tuesday 18:15  skodak
+
+	* field.php, lib.php: 
+	
+	Bug #5678 - Question marks, single quotes in field name cause
+	trouble - cleaning hack ported from clean_filename()
+
+2006-06-06 Tuesday 17:35  skodak
+
+	* field.php: 
+	
+	Bug #5680 - Fixed duplicate field names; merged from
+	MOODLE_16_STABLE
+
+2006-06-06 Tuesday 17:34  skodak
+
+	* field.php: 
+	
+	Bug #5680 - Fixed duplicate field names
+
+2006-06-02 Friday 12:29  vyshane
+
+	* lib.php: 
+	
+	Merged from 1.6. Fix for Bug #5682 - 'Reset template' button in CSS
+	template adds HTML.
+
+2006-06-02 Friday 12:27  vyshane
+
+	* lib.php: 
+	
+	Fix for Bug #5682 - 'Reset template' button in CSS template adds
+	HTML
+
+2006-06-01 Thursday 12:08  vyshane
+
+	* edit.php: 
+	
+	Merged fix from 1.6 (missing lang string)
+
+2006-06-01 Thursday 12:07  vyshane
+
+	* edit.php: 
+	
+	Fixed missing string
+
+2006-05-25 Thursday 23:57  skodak
+
+	* field/number/field.class.php: 
+	
+	Bug #5582 - sort by numerical field doesn't work properly with
+	decimals; merged from MOODLE_16_STABLE
+
+2006-05-25 Thursday 23:55  skodak
+
+	* field/number/field.class.php: 
+	
+	Bug #5582 - sort by numerical field doesn't work properly with
+	decimals
+
+2006-05-25 Thursday 13:19  vyshane
+
+	* edit.php: 
+	
+	Merged fix for bug: when a student tries to add an entry and no
+	fields are defined, the foreach barfs since the value of $fields is
+	false.
+
+2006-05-25 Thursday 13:14  vyshane
+
+	* edit.php: 
+	
+	Fix for bug: when students try to add an entry while no field is
+	defined, the foreach barfs on the value of $fields, which is false.
+
+2006-05-25 Thursday 10:31  toyomoyo
+
+	* backuplib.php, restorelib.php, db/migrate2utf8.php,
+	db/migrate2utf8.xml: 
+	
+	merged backup-restore/db migrate for rsstitletemplate field
+
+2006-05-25 Thursday 10:29  toyomoyo
+
+	* backuplib.php, restorelib.php, db/migrate2utf8.php,
+	db/migrate2utf8.xml: 
+	
+	backup-restore, utfmigrate for rsstitletemplate field
+
+2006-05-24 Wednesday 15:03  toyomoyo
+
+	* rsslib.php, templates.php: 
+	
+	added rsstitle, merged
+
+2006-05-24 Wednesday 15:01  toyomoyo
+
+	* rsslib.php, templates.php: 
+	
+	added a rsstitle field
+
+2006-05-24 Wednesday 14:14  toyomoyo
+
+	* version.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql, version.php, db/mysql.php, db/mysql.sql,
+	db/postgres7.php, db/postgres7.sql: 
+	
+	added rsstitletemplate field
+
+2006-05-24 Wednesday 06:33  stronk7
+
+	* lib.php: 
+	
+	Solving one SQL error in data_get_participants() plus some improved
+	readability.
+	
+	Merged from MOODLE_16_STABLE
+
+2006-05-24 Wednesday 06:30  stronk7
+
+	* lib.php: 
+	
+	Solving one SQL error in data_get_participants() plus some improved
+	readability.
+
+2006-05-24 Wednesday 02:38  skodak
+
+	* backuplib.php, restorelib.php: 
+	
+	fixed file backup and converted other forgotten "assignments";
+	merged from MOODLE_16_STABLE
+
+2006-05-24 Wednesday 02:37  skodak
+
+	* backuplib.php, restorelib.php: 
+	
+	fixed file backup and converted other forgotten "assignments"
+
+2006-05-24 Wednesday 02:15  skodak
+
+	* lib.php: 
+	
+	fixed broken SQL that was throwing errors in backup; merged from
+	MOODLE_16_STABLE
+
+2006-05-24 Wednesday 02:14  skodak
+
+	* lib.php: 
+	
+	fixed broken SQL that was throwing errors in backup
+
+2006-05-23 Tuesday 00:54  skodak
+
+	* report.php: 
+	
+	fixed register globals issues for $sort SC #256; merged from
+	MOODLE_16_STABLE
+
+2006-05-23 Tuesday 00:51  skodak
+
+	* report.php: 
+	
+	fixed register globals issues for $sort SC #256
+
+2006-05-18 Thursday 00:47  tjhunt
+
+	* field/picture/mod.html: 
+	
+	Merge from stable branch: Convert tabs to spaces in files where
+	there were only a few rogue tabs.
+
+2006-05-18 Thursday 00:37  tjhunt
+
+	* field/picture/mod.html: 
+	
+	Convert tabs to spaces in files where there were only a few rogue
+	tabs.
+
+2006-05-16 Tuesday 16:22  toyomoyo
+
+	* restorelib.php: 
+	
+	merged
+
+2006-05-16 Tuesday 16:22  toyomoyo
+
+	* restorelib.php: 
+	
+	forgot to take out comment
+
+2006-05-16 Tuesday 15:58  toyomoyo
+
+	* restorelib.php: 
+	
+	merged fix for 5513
+
+2006-05-16 Tuesday 15:57  toyomoyo
+
+	* restorelib.php: 
+	
+	fix for 5513
+
+2006-05-15 Monday 10:03  toyomoyo
+
+	* edit.php: 
+	
+	merged fix for 5465
+
+2006-05-15 Monday 10:01  toyomoyo
+
+	* edit.php: 
+	
+	fix for 5465
+
+2006-05-05 Friday 13:15  toyomoyo
+
+	* version.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	merged fix for 5428
+
+2006-05-05 Friday 13:13  toyomoyo
+
+	* version.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	fix for 5428
+
+2006-04-24 Monday 16:09  vyshane
+
+	* db/: mysql.php, mysql.sql, postgres7.php, postgres7.sql: 
+	
+	Fixing inserts for log_display table.
+
+2006-04-24 Monday 04:58  skodak
+
+	* view.php: 
+	
+	block editing now uses PARAM_BOOL
+
+2006-04-23 Sunday 01:26  skodak
+
+	* field/file/field.class.php: 
+	
+	fixed undefined $course
+
+2006-04-20 Thursday 15:55  moodler
+
+	* index.php: 
+	
+	No need for noapprovalrequired string
+
+2006-04-20 Thursday 12:07  moodler
+
+	* field/number/field.class.php: 
+	
+	Make sure the number is stored as a proper number
+
+2006-04-20 Thursday 12:02  moodler
+
+	* field/number/: field.class.php, icon.gif, mod.html: 
+	
+	New number field type
+
+2006-04-20 Thursday 03:42  skodak
+
+	* rate.php: 
+	
+	isguest() must be checked AFTER require_login() because the user
+	may not be logged in yet ;-)
+
+2006-04-19 Wednesday 12:21  vyshane
+
+	* templates.php: 
+	
+	Setting $data->listtemplateheader and $data->listtemplatefooter to
+	'' if we are resetting the listtemplate.
+
+2006-04-19 Wednesday 10:54  vyshane
+
+	* templates.php: 
+	
+	Removed javascript for resetting templates. We reload the page to
+	reset templates.
+
+2006-04-18 Tuesday 14:43  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	fix for 5209
+
+2006-04-18 Tuesday 14:11  vyshane
+
+	* templates.php: 
+	
+	"Reset template" button now only resets the template textarea with
+	the default template. User needs to hit "Save template" to save the
+	changes.
+
+2006-04-15 Saturday 14:02  moodler
+
+	* view.php: 
+	
+	DOn't show intro on first page of single view
+
+2006-04-15 Saturday 10:41  moodler
+
+	* lib.php, view.php: 
+	
+	FIxes for bug 5197
+
+2006-04-13 Thursday 18:41  moodler
+
+	* view.php: 
+	
+	FIx for bug 5188 - seach with no results -> dead end
+
+2006-04-13 Thursday 16:49  moodler
+
+	* view.php: 
+	
+	FIxed a typo
+
+2006-04-13 Thursday 09:34  moodler
+
+	* view.php: 
+	
+	Was trying Eloy's suggestion here
+	http://moodle.org/mod/forum/discuss.php?d=43041 but wasn't working
+	for some reason ... checking in as commented to work on later.	The
+	lkudge seems to be working pretty well for now.
+
+2006-04-11 Tuesday 21:10  moodler
+
+	* comment.php: 
+	
+	Don't save empty comments
+
+2006-04-11 Tuesday 21:00  moodler
+
+	* lib.php: 
+	
+	Don't clean final HTML template output, the input should be
+	sanitised.
+
+2006-04-11 Tuesday 20:37  moodler
+
+	* index.php: 
+	
+	Fix language strings  (records -> Entries)
+
+2006-04-11 Tuesday 20:32  moodler
+
+	* lib.php: 
+	
+	Guests should not see comment boxes
+
+2006-04-11 Tuesday 20:29  moodler
+
+	* edit.php: 
+	
+	Submit button was causing bug 4986
+
+2006-04-11 Tuesday 00:46  moodler
+
+	* field/picture/field.class.php: 
+	
+	Added some feedback to the picture thumbnail regneneration   bug
+	5011
+
+2006-04-10 Monday 13:59  vyshane
+
+	* view.php: 
+	
+	Fixing bug (Postgres related):
+	
+	ERROR: for SELECT DISTINCT, ORDER BY expressions must appear in
+	select list
+
+2006-04-10 Monday 13:03  toyomoyo
+
+	* db/migrate2utf8.xml: 
+	
+	convertion to unicode data_content -> content(1 to 4)
+
+2006-04-09 Sunday 00:33  moodler
+
+	* view.php: 
+	
+	Fix for bug 5132, search now no longer prevents display of
+	arbitrary single records
+
+2006-04-07 Friday 15:02  moodler
+
+	* lib.php: 
+	
+	FIxed activity reporting for database activities
+
+2006-04-07 Friday 01:12  moodler
+
+	* field/picture/field.class.php: 
+	
+	More clean ups
+
+2006-04-07 Friday 00:20  moodler
+
+	* field/picture/field.class.php: 
+	
+	Fixes from Dan Stowell to support thumbnail images, with some
+	modifications from me to remove unnecessary messages.	 bug 5011
+
+2006-04-05 Wednesday 16:19  moodler
+
+	* lib.php, view.php: 
+	
+	Fixed some pretty major HTML errors  :-)     bug 5089
+
+2006-04-05 Wednesday 15:37  moodler
+
+	* field.php: 
+	
+	HTML fixes for bug 5092
+
+2006-04-05 Wednesday 15:27  moodler
+
+	* tabs.php, templates.php: 
+	
+	FIxed some warnings   bug 5091
+
+2006-04-05 Wednesday 09:40  moodler
+
+	* lib.php: 
+	
+	Fixed a string name
+
+2006-04-05 Wednesday 09:38  moodler
+
+	* add.php, edit.php, index.php, lib.php, rsslib.php, tabs.php,
+	templates.php, view.php, field/date/field.class.php: 
+	
+	Various fixes that have accumulated
+
+2006-03-30 Thursday 15:54  moodler
+
+	* tabs.php: 
+	
+	Fixed tabs logic flow
+
+2006-03-30 Thursday 15:45  moodler
+
+	* add.php, tabs.php: 
+	
+	Fixed up some tabs names
+
+2006-03-30 Thursday 12:46  moodler
+
+	* add.php, view.php: 
+	
+	Better pages for hidden activities
+
+2006-03-30 Thursday 12:37  moodler
+
+	* add.php, field.php, templates.php, view.php: 
+	
+	Some better security when database is hidden
+
+2006-03-30 Thursday 12:26  moodler
+
+	* field/picture/field.class.php: 
+	
+	Changes to match file class changes
+
+2006-03-30 Thursday 11:54  moodler
+
+	* field/file/field.class.php: 
+	
+	Use better variable names in file class
+
+2006-03-30 Thursday 02:38  moodler
+
+	* tabs.php: 
+	
+	Whoops, wrong line, I am tired.  :-)
+
+2006-03-30 Thursday 02:36  moodler
+
+	* tabs.php: 
+	
+	Template order makes more sense this way :-)
+
+2006-03-30 Thursday 02:29  moodler
+
+	* css.php, templates.php, view.php: 
+	
+	Support for a new CSS template, allowing you to use CSS in the
+	other templates
+
+2006-03-30 Thursday 02:00  moodler
+
+	* tabs.php: 
+	
+	Fixed a notice
+
+2006-03-30 Thursday 01:42  moodler
+
+	* version.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql: 
+	
+	Added field for CSS for database templates
+
+2006-03-30 Thursday 01:36  moodler
+
+	* comment.php, lib.php, view.php: 
+	
+	Fixes for comments
+
+2006-03-29 Wednesday 18:05  ikawhero
+
+	* tabs.php: 
+	
+	Smart add entry tab
+
+2006-03-29 Wednesday 16:49  moodler
+
+	* comment.php, lib.php, tabs.php, view.php: 
+	
+	Bunch of fixes including:
+	
+	   - separate browse / detail tabs
+	   - cleaner logic
+	   - proper sorting in all scenrios
+	   - settings stored in the sessions
+	   - better cleaner URLs
+
+2006-03-27 Monday 17:50  moodler
+
+	* view.php: 
+	
+	Fixed no- display when not logged in  (bug 4990)
+
+2006-03-27 Monday 17:08  ikawhero
+
+	* field.php: 
+	
+	Tidying up
+
+2006-03-27 Monday 16:42  ikawhero
+
+	* view.php: 
+	
+	Added default sort
+
+2006-03-27 Monday 16:37  ikawhero
+
+	* field.php: 
+	
+	Added default sort.
+
+2006-03-27 Monday 16:03  moodler
+
+	* db/: mysql.php, mysql.sql, postgres7.php: 
+	
+	Er more fixes
+
+2006-03-27 Monday 15:54  moodler
+
+	* db/: mysql.php, mysql.sql, postgres7.php, postgres7.sql: 
+	
+	Added a missing fileld for direction
+
+2006-03-27 Monday 15:44  ikawhero
+
+	* db/mysql.sql: 
+	
+	Oops, getting my SQL right.
+
+2006-03-27 Monday 15:42  ikawhero
+
+	* db/: mysql.php, mysql.sql, postgres7.php: 
+	
+	Making the defaultsort field signed to indicate sort direction
+
+2006-03-27 Monday 15:24  moodler
+
+	* lib.php: 
+	
+	Sort the sort menu
+
+2006-03-27 Monday 14:52  moodler
+
+	* field/: menu/field.class.php, textarea/field.class.php: 
+	
+	Misc fixes
+
+2006-03-27 Monday 14:52  ikawhero
+
+	* version.php: 
+	
+	Version bump - added 2 new fields to data table
+
+2006-03-27 Monday 14:52  ikawhero
+
+	* db/: mysql.php, mysql.sql, postgres7.php, postgres7.sql: 
+	
+	Added 2 new fields: 1. editany - flag to allow any user to edit any
+	entry 2. defaultsort - set the default sort field for list view
+
+2006-03-27 Monday 14:19  vyshane
+
+	* lib.php: 
+	
+	Fix for Bug #4978 - Every time I add one field in one DB
+	activity...  Added AS df in SQL query in data_fieldname_exists().
+	Reformatted the strings to use single quotes when quoting in SQL.
+	These changes might solve PostgreSQL problems.
+
+2006-03-27 Monday 13:36  vyshane
+
+	* add.php: 
+	
+	We now mark records as approved if the data activity is set to not
+	require approval of new records.
+
+2006-03-27 Monday 13:28  moodler
+
+	* index.php: 
+	
+	Fixed index page
+
+2006-03-27 Monday 13:20  vyshane
+
+	* index.php: 
+	
+	Added 2 columns for number of records and number of records not
+	approved yet.
+
+2006-03-27 Monday 13:14  moodler
+
+	* field/date/field.class.php: 
+	
+	Removed silly date string
+
+2006-03-27 Monday 12:37  moodler
+
+	* field/date/: field.class.php, icon.gif, mod.html: 
+	
+	New field plugin for dates
+
+2006-03-27 Monday 12:13  vyshane
+
+	* add.php, view.php: 
+	
+	Fixed Bug #4985 - Guest rights to the database module.
+
+2006-03-27 Monday 12:02  vyshane
+
+	* lib.php: 
+	
+	Replaced <br /> with <hr /> for default list template.
+
+2006-03-27 Monday 11:43  vyshane
+
+	* view.php: 
+	
+	Removed the unneeded ORDER BY clauses for the queries that are
+	COUNTing.  Fix for Bug #4979 - Errror in Browse Page.
+
+2006-03-27 Monday 11:02  vyshane
+
+	* templates.php: 
+	
+	Fixed javascript for cases where htmleditor is not available.
+
+2006-03-27 Monday 00:19  moodler
+
+	* lib.php, view.php: 
+	
+	Little tidyings, I should be in bed watching Scrubs!
+
+2006-03-27 Monday 00:16  moodler
+
+	* rate.php: 
+	
+	Old test code
+
+2006-03-26 Sunday 23:57  moodler
+
+	* rsslib.php: 
+	
+	Include course in RSS feed name
+
+2006-03-26 Sunday 23:54  moodler
+
+	* lib.php: 
+	
+	Better looking form for preferences and more accessible
+
+2006-03-26 Sunday 14:28  moodler
+
+	* filter.php: 
+	
+	FIlter wasn't using site databases globally
+
+2006-03-26 Sunday 14:00  moodler
+
+	* field.php, templates.php: 
+	
+	Tidy messages  and display
+
+2006-03-26 Sunday 13:36  moodler
+
+	* lib.php, view.php: 
+	
+	More tidying up
+
+2006-03-26 Sunday 13:22  moodler
+
+	* lib.php, view.php: 
+	
+	Properly fixed page flow for approvals and deletions
+
+2006-03-26 Sunday 13:03  moodler
+
+	* approve.php, lib.php, templates.php, view.php,
+	field/picture/field.class.php, field/url/field.class.php,
+	field/url/mod.html: 
+	
+	Various little fixes.
+
+2006-03-26 Sunday 01:19  moodler
+
+	* add.php: 
+	
+	Fixed some mistakes
+
+2006-03-26 Sunday 00:29  moodler
+
+	* add.php: 
+	
+	Return to the record you edited after editing
+
+2006-03-26 Sunday 00:19  moodler
+
+	* add.php: 
+	
+	Fixed some bung security logic
+
+2006-03-26 Sunday 00:12  moodler
+
+	* rsslib.php: 
+	
+	Improvements to RSS . it could be better
+
+2006-03-25 Saturday 22:58  moodler
+
+	* templates.php: 
+	
+	Removced the "generate all" button and just made it a default
+	action for new databases
+
+2006-03-25 Saturday 22:57  moodler
+
+	* lib.php: 
+	
+	Update the passed-in data object when generating new templates
+
+2006-03-25 Saturday 22:56  moodler
+
+	* tabs.php: 
+	
+	Smarter links for the templates tab
+
+2006-03-25 Saturday 22:00  moodler
+
+	* field.php, lib.php: 
+	
+	Fixes for fields display
+
+2006-03-25 Saturday 16:46  moodler
+
+	* field/url/field.class.php: 
+	
+	Better-looking add fields
+
+2006-03-25 Saturday 16:46  moodler
+
+	* field/menu/field.class.php: 
+	
+	Don't prefix add filed with label
+
+2006-03-24 Friday 22:49  moodler
+
+	* templates.php: 
+	
+	Always allow regeneration of templates
+
+2006-03-24 Friday 22:48  moodler
+
+	* approve.php, lib.php: 
+	
+	Cleaned up approval script (more security ;-))
+
+2006-03-24 Friday 22:33  vyshane
+
+	* add.php, field.php, lib.php, field/textarea/mod.html,
+	field/url/field.class.php, field/url/mod.html: 
+	
+	Bug fixes and changes to URL field.
+
+2006-03-24 Friday 10:44  moodler
+
+	* add.php, field.php, fields.php, import.php, lib.php, tabs.php,
+	templates.php, view.php: 
+	
+	Renamed fields.php to field.php
+
+2006-03-24 Friday 10:35  moodler
+
+	* preset/imagegallery/: addtemplate.html, listtemplate.html,
+	listtemplatefooter.html, listtemplateheader.html, preset.xml,
+	rsstemplate.html, singletemplate.html: 
+	
+	Renaming some stuff, it's the fashion this week
+
+2006-03-24 Friday 10:09  vyshane
+
+	* lib.php: 
+	
+	Fix for Bug #4969. Renamed variable $mode to $template.
+
+2006-03-23 Thursday 18:01  moodler
+
+	* add.php, lib.php, templates.php: 
+	
+	Various tidy-ups
+
+2006-03-23 Thursday 16:34  vyshane
+
+	* lib.php, field/checkbox/field.class.php: 
+	
+	Fixed bug data_print_template() from /mod/data/lib.php. Extra
+	function argument removed.
+
+2006-03-23 Thursday 15:20  vyshane
+
+	* add.php: 
+	
+	Renamed $rid to $recordid in function call
+	$field->update_content($rid, $value, $name); This fixes a bug that
+	was causing the data_content to be stored wrongly.
+
+2006-03-23 Thursday 14:20  vyshane
+
+	* add.php, lib.php: 
+	
+	Fixed extra function argument in call for display_add_field() from
+	add.php.
+
+2006-03-23 Thursday 13:40  moodler
+
+	* field/: textarea/field.class.php, url/field.class.php: 
+	
+	removed $content->content =
+	$this->format_data_field_multimenu_content($value); bad cut and
+	paste
+
+2006-03-23 Thursday 13:38  moodler
+
+	* view.php: 
+	
+	Fixed some typos
+
+2006-03-23 Thursday 11:48  vyshane
+
+	* lib.php: 
+	
+	Fixed typo in function define_field()
+
+2006-03-23 Thursday 10:50  moodler
+
+	* field/file/field.class.php: 
+	
+	Fixed Fatal error: Call to undefined function get_course() in
+	/data/www/html/server/dev/mod/data/field/file/field.class.php on
+	line 133
+
+2006-03-22 Wednesday 22:55  moodler
+
+	* lib.php: 
+	
+	Removed some debugging
+
+2006-03-22 Wednesday 22:31  moodler
+
+	* add.php, lib.php, view.php: 
+	
+	Various cleanups
+
+2006-03-22 Wednesday 21:38  moodler
+
+	* fields.php, styles.php, field/checkbox/mod.html,
+	field/file/mod.html, field/menu/mod.html, field/multimenu/mod.html,
+	field/picture/mod.html, field/radiobutton/mod.html,
+	field/text/mod.html, field/textarea/mod.html, field/url/mod.html: 
+	
+	Fixed up some styles and pagepath for field-editing pages
+
+2006-03-22 Wednesday 17:53  moodler
+
+	* fields.php: 
+	
+	Tweaky tweaky tweak
+
+2006-03-22 Wednesday 17:49  moodler
+
+	* fields.php, templates.php: 
+	
+	Cleanups
+
+2006-03-22 Wednesday 17:43  moodler
+
+	* fields.php: 
+	
+	Fixed up hardcoded tables with notice_yesno
+
+2006-03-22 Wednesday 17:33  moodler
+
+	* fields.php: 
+	
+	Cleaned up table of fields
+
+2006-03-22 Wednesday 17:14  moodler
+
+	* fields.php: 
+	
+	The menu to add fields is now more accessible
+
+2006-03-22 Wednesday 16:56  moodler
+
+	* add.php, field/checkbox/field.class.php,
+	field/multimenu/field.class.php, field/textarea/field.class.php,
+	field/url/field.class.php: 
+	
+	Fixing more typos
+
+2006-03-22 Wednesday 16:44  moodler
+
+	* add.php, fields.php, field/checkbox/field.class.php,
+	field/picture/field.class.php, field/textarea/field.class.php: 
+	
+	Fixing silly stuff
+
+2006-03-22 Wednesday 16:32  moodler
+
+	* index.php, lib.php, view.php: 
+	
+	Fixes
+
+2006-03-22 Wednesday 16:07  moodler
+
+	* add.php, fields.php, import.php, lib.php, mod.html, tabs.php,
+	view.php, field/checkbox/field.class.php, field/checkbox/mod.html,
+	field/file/field.class.php, field/file/mod.html,
+	field/menu/field.class.php, field/menu/mod.html,
+	field/multimenu/field.class.php, field/multimenu/mod.html,
+	field/picture/field.class.php, field/picture/mod.html,
+	field/radiobutton/field.class.php, field/radiobutton/mod.html,
+	field/text/field.class.php, field/text/mod.html,
+	field/textarea/field.class.php, field/textarea/mod.html,
+	field/url/field.class.php, field/url/mod.html: 
+	
+	Lots and lots and lots of cleanup for the data module code, mostly
+	to do with how the field classes worked.  Now it should be even
+	easier for developers.
+	
+	No changes for users.  :-P
+	
+	The changes are not well tested yet!
+
+2006-03-21 Tuesday 12:36  vyshane
+
+	* add.php, import.php, field/checkbox/field.class.php,
+	field/file/field.class.php, field/multimenu/field.class.php: 
+	
+	Added CSV import facility for the data module. Fixed notice for
+	checkbox and multimenu field types.
+
+2006-03-17 Friday 12:51  vyshane
+
+	* field/textarea/field.class.php: 
+	
+	Fixed php notice
+
+2006-03-15 Wednesday 15:42  vyshane
+
+	* field/textarea/field.class.php: 
+	
+	Made gen_textarea() use print_textarea() function from
+	/lib/weblib.php
+
+2006-03-15 Wednesday 11:11  vyshane
+
+	* field/textarea/field.class.php: 
+	
+	Textarea field now uses functions use_html_editor() and
+	print_editor_config() form /lib/weblib.php. It's been decided that
+	the minimum requirements for the database module will be 1.5.3+
+	stable. Will commit updates to the above two functions to 1.5.3+
+	stable once they have been tested on stable.
+
+2006-03-14 Tuesday 16:32  vyshane
+
+	* templates.php: 
+	
+	Made textarea field use use_html_editor() and print_editor_config()
+	from /lib/weblib.php. Removed these functions from
+	/lib/mod/field/textarea/field.class.php. Will commit updates to
+	these functions to Moodle 1.5 Stable. Database module will only be
+	compatible with the latest Moodle 1.5 Stable and onwards.
+
+2006-03-14 Tuesday 13:56  vyshane
+
+	* templates.php: 
+	
+	Fixed javascript bug. Clicking on a template tag now inserts the
+	tag into the textarea in both wysiwyg and non-wysiwyg modes.
+
+2006-03-14 Tuesday 13:32  vyshane
+
+	* add.php, templates.php, field/textarea/field.class.php: 
+	
+	Clicking on a template tag e.g. [[field_name]] now adds the
+	template tag to the HTMLArea editor in the template views. This is
+	not currently working in source code mode of the editor.
+	
+	Added equivalent of use_html_editor() and print_editor_config()
+	from /lib/weblib.php to textarea field class. We use a copy in that
+	class instead of calling the functions in /lib/weblib.php because
+	we want the data module to be compatible with Moodle 1.5. This is
+	not ideal, but it is a necessary evil.
+	
+	Updated the textarea field class to use the correct path to
+	/lib/editor/htmlarea/htmlarea.php.
+
+2006-03-10 Friday 17:08  moodler
+
+	* lib.php, view.php: 
+	
+	Just spacings
+
+2006-03-10 Friday 17:08  moodler
+
+	* field/text/field.class.php: 
+	
+	Fixing typos
+
+2006-03-10 Friday 17:06  moodler
+
+	* add.php: 
+	
+	Cleaning
+
+2006-03-10 Friday 11:43  patrickslee
+
+	* db/migrate2utf8.php: 
+	
+	UTF8 migration - now supporting PostgreSQL
+
+2006-03-09 Thursday 14:26  vyshane
+
+	* lib.php: 
+	
+	Added functions data_get_view_actions() and data_get_post_actions()
+	for participation reports.
+
+2006-03-08 Wednesday 12:54  vyshane
+
+	* tabs.php: 
+	
+	Made some of the tabs linked even if selected in the different
+	views.
+
+2006-03-08 Wednesday 11:53  vyshane
+
+	* add.php, fields.php, templates.php: 
+	
+	Added course module in call to navmenu() so that we have the <
+	(prev) and > <next> buttons in all the views for the data module.
+	To keep things consistent.
+
+2006-03-08 Wednesday 05:46  skodak
+
+	* field/: menu/mod.html, url/mod.html, file/mod.html,
+	picture/mod.html: 
+	
+	short php tags once more
+
+2006-03-08 Wednesday 05:35  skodak
+
+	* db/migrate2utf8.php: 
+	
+	short php tags
+
+2006-03-08 Wednesday 04:32  skodak
+
+	* filter.php: 
+	
+	missing db prefix
+
+2006-03-07 Tuesday 16:53  vyshane
+
+	* field/picture/field.class.php: 
+	
+	Fixed bug: wrong parameter for input field (max size of uploaded
+	file)
+
+2006-03-07 Tuesday 16:47  vyshane
+
+	* db/mysql.php, db/mysql.sql, db/postgres7.sql, templates.php: 
+	
+	Renamed data "templates defaults" action to "templates def" because
+	the db column has a limit of 20 characters.
+
+2006-03-07 Tuesday 16:11  vyshane
+
+	* db/: mysql.php, mysql.sql, postgres7.php, postgres7.sql: 
+	
+	Updated logging support. Added version upgrade.
+
+2006-03-07 Tuesday 16:10  vyshane
+
+	* add.php, fields.php, templates.php, version.php, view.php: 
+	
+	Update logging support. Bumped module version up.
+
+2006-03-03 Friday 22:44  moodler
+
+	* import.php: 
+	
+	VERY preliminary import script, needs a lot of work
+
+2006-03-03 Friday 16:30  vyshane
+
+	* pagelib.php, view.php: 
+	
+	Added argument $meta to pagelib::print_header (data module)
+
+2006-03-03 Friday 16:06  vyshane
+
+	* view.php: 
+	
+	Added support for printing <link rel="alternate"
+	type="application/rss+xml"...  /> tag in header. Only happens if
+	appropriate. E.g. RSS turned on etc.
+
+2006-03-03 Friday 14:13  vyshane
+
+	* fields.php: 
+	
+	Made field names as links that go to the edit view for the
+	respective fields.
+
+2006-03-01 Wednesday 14:51  toyomoyo
+
+	* lib.php: 
+	
+	printing user picture for comments
+
+2006-02-28 Tuesday 10:51  vyshane
+
+	* fields.php, mod.html, templates.php: 
+	
+	Fixed Bug #4552
+
+2006-02-28 Tuesday 09:52  toyomoyo
+
+	* comment.php: 
+	
+	added a line to prevent warning
+
+2006-02-27 Monday 12:13  moodler
+
+	* add.php, fields.php, lib.php, templates.php, db/mysql.sql: 
+	
+	A few small changes for Vy to continue working on (logs, mostly)
+
+2006-02-27 Monday 10:16  toyomoyo
+
+	* templates.php: 
+	
+	comments, not comment, typo
+
+2006-02-27 Monday 10:13  toyomoyo
+
+	* comment.php, lib.php: 
+	
+	added time created and modified for comments
+
+2006-02-27 Monday 10:06  toyomoyo
+
+	* backuplib.php, restorelib.php, version.php, db/mysql.php,
+	db/mysql.sql, db/postgres7.php, db/postgres7.sql: 
+	
+	adding date created and date modified for comments
+
+2006-02-24 Friday 16:13  toyomoyo
+
+	* comment.php, lib.php, db/migrate2utf8.php: 
+	
+	see changes for admin/utfdbmigrate.php
+
+2006-02-24 Friday 14:14  vyshane
+
+	* field/file/field.class.php, filter.php: 
+	
+	Made script work with 1.5
+
+2006-02-24 Friday 12:30  toyomoyo
+
+	* comment.php: 
+	
+	prints the whole comment when displaying confirmation
+
+2006-02-24 Friday 12:26  toyomoyo
+
+	* report.php: 
+	
+	fixing bugs
+
+2006-02-23 Thursday 10:34  toyomoyo
+
+	* field/text/field.class.php: 
+	
+	fix for string type sort error, bug 4823
+
+2006-02-21 Tuesday 15:17  toyomoyo
+
+	* lib.php: 
+	
+	security issues with dangerous template
+
+2006-02-21 Tuesday 10:02  toyomoyo
+
+	* add.php, fields.php, lib.php, rate.php, templates.php: 
+	
+	changed data_submitted for secureform; added sesskey
+
+2006-02-20 Monday 17:34  toyomoyo
+
+	* fields.php: 
+	
+	real fix for secureforms
+
+2006-02-20 Monday 17:31  toyomoyo
+
+	* fields.php: 
+	
+	fix for secure forms
+
+2006-02-20 Monday 14:07  toyomoyo
+
+	* lib.php: 
+	
+	[no log message]
+
+2006-02-20 Monday 13:50  toyomoyo
+
+	* lib.php: 
+	
+	keep comments to the left for IE
+
+2006-02-20 Monday 13:40  toyomoyo
+
+	* rate.php: 
+	
+	took out an extra echo
+
+2006-02-20 Monday 13:37  toyomoyo
+
+	* comment.php, lib.php: 
+	
+	fixed navigation after deleting or editting data comment
+
+2006-02-20 Monday 11:15  toyomoyo
+
+	* lib.php, report.php: 
+	
+	string fix and empty lines
+
+2006-02-20 Monday 11:02  vyshane
+
+	* rsslib.php, field/file/field.class.php,
+	field/picture/field.class.php: 
+	
+	Fixed bug in RSS xml file generation.  Fixed bug in file and
+	picture links.
+
+2006-02-20 Monday 10:15  vyshane
+
+	* add.php, fields.php, lib.php, tabs.php, templates.php, view.php,
+	field/checkbox/field.class.php, field/checkbox/mod.html,
+	field/file/field.class.php, field/file/mod.html,
+	field/menu/field.class.php, field/menu/mod.html,
+	field/multimenu/mod.html, field/picture/field.class.php,
+	field/picture/mod.html, field/radiobutton/field.class.php,
+	field/radiobutton/mod.html, field/text/mod.html,
+	field/textarea/mod.html, field/url/field.class.php,
+	field/url/mod.html: 
+	
+	Cleaning up xhtml markup. Code now validates for xhtml 1.0
+	transitional.
+
+2006-02-20 Monday 01:39  moodler
+
+	* rsslib.php: 
+	
+	Make Database RSS feed work on Moodle 1.5 as well   ;-)
+
+2006-02-16 Thursday 16:15  vyshane
+
+	* fields.php, lib.php, field/picture/mod.html: 
+	
+	Fixed notice in picture field edit view.  Made the field type icons
+	clickable to edit the field.
+
+2006-02-16 Thursday 11:35  vyshane
+
+	* rsslib.php: 
+	
+	RSS support
+
+2006-02-15 Wednesday 14:38  toyomoyo
+
+	* comment.php, lib.php, mod.html, rate.php, report.php: 
+	
+	changed some strings
+
+2006-02-14 Tuesday 12:10  vyshane
+
+	* mod.html: 
+	
+	Fixed typo for get_string call for 'rsshowmany'
+
+2006-02-14 Tuesday 12:02  toyomoyo
+
+	* backuplib.php, restorelib.php: 
+	
+	backup and restore for comments and ratings
+
+2006-02-14 Tuesday 11:21  toyomoyo
+
+	* report.php: 
+	
+	new ratings functionality
+
+2006-02-14 Tuesday 11:19  toyomoyo
+
+	* rate.php: 
+	
+	taking out the print_object
+
+2006-02-14 Tuesday 11:17  toyomoyo
+
+	* backuplib.php, comment.php, lib.php, rate.php, restorelib.php,
+	templates.php: 
+	
+	adding ratings and comments functionality
+
+2006-02-13 Monday 15:57  vyshane
+
+	* lib.php, mod.html, view.php: 
+	
+	Added RSS support for data module.
+
+2006-02-09 Thursday 12:44  vyshane
+
+	* approve.php, config.html, lib.php, mod.html, templates.php,
+	field/checkbox/field.class.php, field/checkbox/mod.html,
+	field/file/field.class.php, field/file/mod.html,
+	field/menu/field.class.php, field/menu/mod.html,
+	field/multimenu/field.class.php, field/multimenu/mod.html,
+	field/picture/field.class.php, field/picture/mod.html,
+	field/radiobutton/field.class.php, field/radiobutton/mod.html,
+	field/text/mod.html, field/textarea/field.class.php,
+	field/textarea/mod.html, field/url/field.class.php,
+	field/url/mod.html: 
+	
+	Updated lang/en/data.php.  Removed hard coded message strings from
+	scripts and moved them to the language file.  Fixed a display bug
+	in multimenu field.  Removed rounded help buttons from fields, made
+	the fields use html title to display the descriptions instead.
+
+2006-02-08 Wednesday 12:58  toyomoyo
+
+	* lib.php: 
+	
+	add_instance change too
+
+2006-02-08 Wednesday 12:56  toyomoyo
+
+	* lib.php, mod.html: 
+	
+	adding 3 more fields to mod.html, and modified data_update_instance
+
+2006-02-08 Wednesday 12:35  toyomoyo
+
+	* version.php: 
+	
+	adding 3 more fields
+
+2006-02-08 Wednesday 12:35  toyomoyo
+
+	* db/: mysql.php, mysql.sql, postgres7.php, postgres7.sql: 
+	
+	adding 3 new fields
+
+2006-02-06 Monday 17:13  vyshane
+
+	* fields.php, filter.php, lib.php, field/file/field.class.php: 
+	
+	Fixed bug in /mod/data/filter.php - content list for autolinking
+	was not being generated properly.
+	
+	Updated /mod/data/fields.php - deletion of a field now also deletes
+	data_contents and any files associated as well.
+	
+	Add/update/delete fields - template now gets updates in the
+	following cases: 1) Deletion: remove template tags for the field
+	from all templates 2) Edit: search and replace template tags for
+	the field in all templates 3) Add: append template tag for field
+	into the signe and rss templates, but only if these templates are
+	not empty. Otherwise we'd rather the user uses the automatic
+	template generation facility, which produces better display.
+
+2006-02-06 Monday 14:30  toyomoyo
+
+	* view.php: 
+	
+	group 0 records are visible to all now
+
+2006-02-06 Monday 14:19  toyomoyo
+
+	* view.php: 
+	
+	no page in groups, thanks
+
+2006-02-06 Monday 14:13  toyomoyo
+
+	* add.php, lib.php, view.php: 
+	
+	adding group support
+
+2006-02-06 Monday 13:37  ikawhero
+
+	* add.php: 
+	
+	return to previous view after editing a record
+
+2006-02-06 Monday 13:36  ikawhero
+
+	* lib.php: 
+	
+	I'm really having issues getting this one line right!
+
+2006-02-06 Monday 13:33  ikawhero
+
+	* lib.php: 
+	
+	Oops, missing semicolon
+
+2006-02-06 Monday 13:31  ikawhero
+
+	* lib.php: 
+	
+	Recommiting lost changes.
+
+2006-02-06 Monday 13:31  toyomoyo
+
+	* fields.php, templates.php: 
+	
+	templates and fields do not require group support
+
+2006-02-06 Monday 13:24  moodler
+
+	* add.php, lib.php, styles.php, templates.php, view.php: 
+	
+	Various small XHTML fixes, language fixes
+
+2006-02-06 Monday 13:18  ikawhero
+
+	* add.php, lib.php: 
+	
+	Tidying up.
+
+2006-02-06 Monday 13:02  moodler
+
+	* db/mysql.php: 
+	
+	fixing for 4695
+
+2006-02-06 Monday 12:17  moodler
+
+	* view.php: 
+	
+	Show the intro at the top of the page
+
+2006-02-06 Monday 11:51  moodler
+
+	* add.php: 
+	
+	adding a check to make sure student can't participant in teacher
+	participation level
+
+2006-02-06 Monday 11:06  moodler
+
+	* field/picture/field.class.php: 
+	
+	Added a link to the listtemplate images to the full record
+
+2006-02-06 Monday 10:49  moodler
+
+	* lib.php, field/checkbox/field.class.php,
+	field/file/field.class.php, field/menu/field.class.php,
+	field/multimenu/field.class.php, field/picture/field.class.php,
+	field/picture/mod.html, field/url/field.class.php: 
+	
+	Added a parameter to  display_browse_field() to pass the template
+	name to the fields, so they can return different output for
+	different templates.
+	
+	Picture now has two heights/widths for different templates
+
+2006-02-06 Monday 10:41  moodler
+
+	* db/postgres7.php: 
+	
+	fixing 4681
+
+2006-02-06 Monday 10:31  moodler
+
+	* db/postgres7.sql: 
+	
+	fix for 4615
+
+2006-02-03 Friday 18:53  moodler
+
+	* view.php: 
+	
+	Fixed some SQL errors on searching and sorting
+
+2006-02-03 Friday 18:42  ikawhero
+
+	* lib.php: 
+	
+	Remove para tags
+
+2006-02-03 Friday 17:22  vyshane
+
+	* lib.php, field/checkbox/mod.html, field/file/mod.html,
+	field/menu/mod.html, field/multimenu/mod.html,
+	field/picture/mod.html, field/radiobutton/mod.html,
+	field/text/mod.html, field/textarea/mod.html, field/url/mod.html: 
+	
+	Input field size cleanups.
+
+2006-02-03 Friday 16:56  ikawhero
+
+	* mod.html: 
+	
+	Added helpbutton for approvals.
+
+2006-02-03 Friday 16:12  moodler
+
+	* approve.php: 
+	
+	adding functionality to allow teacher approval of record
+
+2006-02-03 Friday 16:11  moodler
+
+	* add.php, backuplib.php, fields.php, lib.php, mod.html,
+	pagelib.php, restorelib.php, templates.php, version.php, view.php,
+	db/mysql.php, db/mysql.sql, db/postgres7.php, db/postgres7.sql: 
+	
+	changes in search, sort etc
+
+2006-02-03 Friday 16:10  ikawhero
+
+	* mod.html: 
+	
+	Added help buttons, removed ambiguous participants entry.
+
+2006-02-03 Friday 16:04  vyshane
+
+	* filter.php, lib.php, field/textarea/field.class.php,
+	field/textarea/mod.html: 
+	
+	Added autolinking.
+
+2006-02-02 Thursday 18:12  vyshane
+
+	* lib.php, field/checkbox/icon.gif, field/file/icon.gif,
+	field/menu/icon.gif, field/multimenu/icon.gif,
+	field/picture/icon.gif, field/radiobutton/icon.gif,
+	field/text/icon.gif, field/textarea/icon.gif, field/url/icon.gif: 
+	
+	Removed debugging output from /mod/data/lib.php New icons for field
+	types
+
+2006-02-02 Thursday 14:28  vyshane
+
+	* add.php, lib.php, field/checkbox/field.class.php,
+	field/menu/field.class.php, field/multimenu/field.class.php,
+	field/textarea/field.class.php: 
+	
+	Removed autolink support from radio button field (not needed). 
+	Fixed bug for empty muti menu and multi checkbox fields.  Added
+	"Choose..." as first item in single selection menu. Added relevant
+	string in en language.	Updated /mod/data/lib.php, function
+	store_data_content() so that we store empty content for fields too.
+
+2006-02-01 Wednesday 14:59  vyshane
+
+	* field/: multimenu/field.class.php, radiobutton/field.class.php,
+	radiobutton/mod.html: 
+	
+	Removed autolink form radio button field (not needed).
+
+2006-02-01 Wednesday 13:13  vyshane
+
+	* field/url/field.class.php: 
+	
+	Modification to make field use content1 column in data_content
+	table
+
+2006-02-01 Wednesday 13:09  vyshane
+
+	* field/multimenu/: field.class.php, icon.gif, mod.html: 
+	
+	Added multi-selection menu field support.
+
+2006-02-01 Wednesday 13:08  vyshane
+
+	* field/checkbox/: field.class.php, icon.gif, mod.html: 
+	
+	Checkbox field support
+
+2006-01-31 Tuesday 12:25  vyshane
+
+	* fields.php, field/file/field.class.php,
+	field/menu/field.class.php, field/picture/field.class.php,
+	field/text/mod.html, field/textarea/field.class.php,
+	field/textarea/mod.html, field/url/field.class.php: 
+	
+	Fixed update display bug in the menu field.
+	
+	Updated following fields so that they do not pack data into
+	data_content.content, but use data_content.content,
+	data_content.content1, etc:
+	
+	- URL field - File field - Picture field
+	
+	Note that above changes to the way data is stored means that the
+	new implementation is not compatible with previous version.
+	
+	Updated textarea field. Added relevant help messages. Added
+	richtext editor support. Removed ability to restrict allowed
+	formats for the textarea field.
+	
+	Misc bug fixes and display tweaks.
+
+2006-01-31 Tuesday 11:58  vyshane
+
+	* add.php, lib.php, view.php: 
+	
+	Added richtext support for textarea, plus relevant help buttons.
+	Made fields use column content1, content 2, etc. instead of packing
+	everything into content.
+
+2006-01-31 Tuesday 10:08  moodler
+
+	* db/migrate2utf8.php: 
+	
+	changed to use utfconvert function
+
+2006-01-25 Wednesday 17:21  vyshane
+
+	* field/textarea/: field.class.php, mod.html: 
+	
+	Modifications to use new columns in data_content table
+	Modifications to support different text formats
+
+2006-01-25 Wednesday 17:18  vyshane
+
+	* add.php: 
+	
+	Modifications to use new columns in data_content table
+
+2006-01-25 Wednesday 17:10  vyshane
+
+	* lib.php: 
+	
+	Modifications to bring in line with the changes to database
+	structure.
+	
+	Vy-Shane
+
+2006-01-24 Tuesday 10:20  moodler
+
+	* field/text/mod.html: 
+	
+	Cleaned up text field params (textarea does this now)
+
+2006-01-24 Tuesday 10:07  moodler
+
+	* fields.php: 
+	
+	Fixed a parameter check
+
+2006-01-20 Friday 10:38  moodler
+
+	* field/textarea/: field.class.php, icon.gif, mod.html: 
+	
+	Added textarea field type.
+	
+	Committed by Vy-Shane <vyshane@moodle.com>
+
+2006-01-20 Friday 10:26  toyomoyo
+
+	* field/text/\: 
+	
+	removing \
+
+2006-01-20 Friday 09:53  moodler
+
+	* field/text/field.class.php: 
+	
+	fixing conflicts
+
+2006-01-20 Friday 09:37  moodler
+
+	* backuplib.php: 
+	
+	fixing the conflicts, sorry >_<
+
+2006-01-20 Friday 09:19  moodler
+
+	* db/postgres7.sql: 
+	
+	bug fix for 4615
+
+2006-01-19 Thursday 17:06  moodler
+
+	* backuplib.php, restorelib.php, version.php, db/mysql.php,
+	db/mysql.sql, db/postgres7.php, db/postgres7.sql: 
+	
+	db changes to data_content table
+
+2006-01-19 Thursday 16:51  moodler
+
+	* lib.php: 
+	
+	Made updating a field use PARAM_NOTAG instead of PARAM_ALPHA
+	
+	Committed by Vy-Shane Sin Fat <vyshane@moodle.com>
+
+2006-01-19 Thursday 16:22  moodler
+
+	* field/menu/: field.class.php, icon.gif, mod.html: 
+	
+	New field for menus
+
+2006-01-19 Thursday 16:18  moodler
+
+	* field/radiobutton/: field.class.php, icon.gif, mod.html: 
+	
+	New field type for radio buttons
+
+2006-01-19 Thursday 11:32  moodler
+
+	* db/migrate2utf8.php: 
+	
+	fixing some typos
+
+2006-01-19 Thursday 11:11  moodler
+
+	* field/text/field.class.php: 
+	
+	Cleaned up test code.
+	
+	Committed by Vy-Shane Sin Fat <vyshane@moodle.com>
+
+2006-01-18 Wednesday 16:36  moodler
+
+	* field/text/\: 
+	
+	Committing icon.gif. This is just a temporary icon. We need to
+	replace it eventually.
+	
+	Vy-Shane Sin Fat <vyshane@moodle.com>
+
+2006-01-18 Wednesday 16:31  moodler
+
+	* field/text/: field.class.php, mod.html: 
+	
+	Textarea field type support for the data module.
+	
+	Committed by Vy-Shane <vyshane@moodle.com>
+
+2006-01-18 Wednesday 16:02  toyomoyo
+
+	* restorelib.php: 
+	
+	some small fix
+
+2006-01-18 Wednesday 14:58  toyomoyo
+
+	* backuplib.php, pagelib.php, restorelib.php: 
+	
+	adding back up and restore functionality, but the user back up and
+	restore part is not working yet
+
+2006-01-17 Tuesday 15:21  moodler
+
+	* db/mysql.sql: 
+	
+	Added default values where needed for columns in the MySQL creation
+	script mysql.sql.  Added default values to migrate2utf8.xml, for
+	any varchar and text field types, if the default values for these
+	fields were not defined as '' in the MySQL table creation script.
+	
+	Committed by vyshane
+
+2006-01-13 Friday 11:45  mjollnir_
+
+	* backuplib.php, restorelib.php: 
+	
+	Granular backup & restore: This patch allows the much requested
+	selection of individual instances of modules within a course to
+	backup and restore.  It needs A LOT of testing and probably some
+	prettyifying too.
+
+2006-01-12 Thursday 10:35  toyomoyo
+
+	* db/migrate2utf8.xml: 
+	
+	some bug fixes
+
+2006-01-09 Monday 14:06  toyomoyo
+
+	* db/: migrate2utf8.php, migrate2utf8.xml: 
+	
+	utf8 migration support scripts
+
+2005-12-14 Wednesday 12:15  patrickslee
+
+	* add.php, config.html, fields.php, icon.gif, index.php, lib.php,
+	mod.html, pagelib.php, tabs.php, templates.php, version.php,
+	view.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql, field/file/field.class.php, field/file/icon.gif,
+	field/file/mod.html, field/picture/field.class.php,
+	field/picture/icon.gif, field/picture/mod.html,
+	field/text/field.class.php, field/text/icon.gif,
+	field/text/mod.html, field/url/field.class.php, field/url/icon.gif,
+	field/url/mod.html: 
+	
+	Merged with MOODLE_16_MULTIENROL_MP1
+
+2005-12-12 Monday 11:32  martinlanghoff
+
+	* db/postgres7.sql: 
+	
+	mod/data: tidyup of Postgres schema -- thanks to Nigel McNie
+
+2005-12-12 Monday 11:32  patrickslee
+
+	* db/postgres7.sql: 
+	
+	file postgres7.sql was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:17 +0000
+
+2005-12-05 Monday 16:56  moodler
+
+	* view.php: 
+	
+	fixed a little search bug >_<
+
+2005-12-05 Monday 16:56  patrickslee
+
+	* view.php: 
+	
+	file view.php was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:17 +0000
+
+2005-12-05 Monday 11:11  moodler
+
+	* lib.php: 
+	
+	fix for XSS exploit in search
+
+2005-12-05 Monday 11:11  patrickslee
+
+	* lib.php: 
+	
+	file lib.php was added on branch MOODLE_16_MULTIENROL on 2005-12-14
+	04:15:17 +0000
+
+2005-12-02 Friday 15:50  moodler
+
+	* add.php, config.html, fields.php, icon.gif, index.php, lib.php,
+	mod.html, pagelib.php, tabs.php, templates.php, version.php,
+	view.php, db/mysql.php, db/mysql.sql, db/postgres7.php,
+	db/postgres7.sql, field/file/field.class.php, field/file/icon.gif,
+	field/file/mod.html, field/picture/field.class.php,
+	field/picture/icon.gif, field/picture/mod.html,
+	field/text/field.class.php, field/text/icon.gif,
+	field/text/mod.html, field/url/field.class.php, field/url/icon.gif,
+	field/url/mod.html: 
+	
+	NEW MODULE FROM MOODLE.COM  - DATABASE !
+	
+	Finally, we have an early version good enough for everyone to start
+	banging on to help us polish it up and find bugs.
+	
+	Please take a look and file bugs in the bug tracker under "Database
+	module".
+	
+	We urgently need     - new icons for existing field types     -
+	testing on PostgreSQL install
+	
+	Coming soon (?):
+	
+	    - Many more field types:  calculation, checkbox, relation,
+	date, datetime,
+				      time, email, group, list, user,
+	number, richtext
+	      (Please let us know if you are interested in developing any
+	of these)
+	
+	    - A way to save and restore "presets", which are field/template
+	sets
+	
+	    - Backup/Restore support
+	
+	    - Groups Support
+	
+	    - RSS support
+	
+	Many thanks to Yu for all the hard work under my whip.
+
+2005-12-02 Friday 15:50  patrickslee
+
+	* add.php: 
+	
+	file add.php was added on branch MOODLE_16_MULTIENROL on 2005-12-14
+	04:15:17 +0000
+
+2005-12-02 Friday 15:50  patrickslee
+
+	* icon.gif, field/file/icon.gif: 
+	
+	file icon.gif was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:17 +0000
+
+2005-12-02 Friday 15:50  patrickslee
+
+	* field/: picture/field.class.php, text/field.class.php,
+	url/field.class.php: 
+	
+	file field.class.php was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:18 +0000
+
+2005-12-02 Friday 15:50  patrickslee
+
+	* tabs.php: 
+	
+	file tabs.php was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:17 +0000
+
+2005-12-02 Friday 15:50  patrickslee
+
+	* templates.php: 
+	
+	file templates.php was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:17 +0000
+
+2005-12-02 Friday 15:50  patrickslee
+
+	* index.php: 
+	
+	file index.php was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:17 +0000
+
+2005-12-02 Friday 15:50  patrickslee
+
+	* mod.html, field/file/mod.html: 
+	
+	file mod.html was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:17 +0000
+
+2005-12-02 Friday 15:50  patrickslee
+
+	* version.php: 
+	
+	file version.php was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:17 +0000
+
+2005-12-02 Friday 15:50  patrickslee
+
+	* field/file/field.class.php: 
+	
+	file field.class.php was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:17 +0000
+
+2005-12-02 Friday 15:50  patrickslee
+
+	* pagelib.php: 
+	
+	file pagelib.php was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:17 +0000
+
+2005-12-02 Friday 15:50  patrickslee
+
+	* db/postgres7.php: 
+	
+	file postgres7.php was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:17 +0000
+
+2005-12-02 Friday 15:50  patrickslee
+
+	* config.html: 
+	
+	file config.html was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:17 +0000
+
+2005-12-02 Friday 15:50  patrickslee
+
+	* fields.php: 
+	
+	file fields.php was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:17 +0000
+
+2005-12-02 Friday 15:50  patrickslee
+
+	* db/mysql.sql: 
+	
+	file mysql.sql was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:17 +0000
+
+2005-12-02 Friday 15:50  patrickslee
+
+	* field/: picture/icon.gif, text/icon.gif, url/icon.gif: 
+	
+	file icon.gif was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:18 +0000
+
+2005-12-02 Friday 15:50  patrickslee
+
+	* field/: picture/mod.html, text/mod.html, url/mod.html: 
+	
+	file mod.html was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:18 +0000
+
+2005-12-02 Friday 15:50  patrickslee
+
+	* db/mysql.php: 
+	
+	file mysql.php was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:15:17 +0000
+

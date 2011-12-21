@@ -1,0 +1,2 @@
+This project is not stored in HEAD. We use only the branches corresponding to
+specific Moodle versions (e.g. MOODLE_19_STABLE).

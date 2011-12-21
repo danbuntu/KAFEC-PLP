@@ -1,0 +1,108 @@
+Badges system for PLP
+Dan Attwood 2010
+On behalf of Midkent College
+
+
+Intro
+The badges system allows Foursquare style achievement badges to be added to Moodle PLP's. It's built as an additional system rather then as a bespoke moodle module to save complication.
+
+Table Creation
+
+A database with 3 tables needs to be set up. the database is called 'badges'
+
+/* SQL creation statement
+
+delimiter $$
+
+CREATE DATABASE `badges` /*!40100 DEFAULT CHARACTER SET utf8 */$$
+
+delimiter $$
+
+CREATE TABLE `badges` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(45) default NULL,
+  `icon` varchar(45) default NULL,
+  `description` varchar(700) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8$$
+
+delimiter $$
+
+CREATE TABLE `badges_link` (
+  `id` int(11) NOT NULL auto_increment,
+  `student_id` varchar(255) default NULL,
+  `badge_id` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8$$
+
+delimiter $$
+
+CREATE TABLE `students` (
+  `id` int(11) NOT NULL auto_increment,
+  `students_name` varchar(255) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8$$
+
+End statement */
+
+Files
+
+The 'badges' folder sits in the root of the moodle install. It contains the 'databaseconnection.php' This needs to be changed to reflect the current database connection.
+
+Also copy the databaseconnection.php file into /blocks/ilp/templates/custom/
+
+
+You then need to add a button to the PLP to take you to the badges screen like the follwoing:
+
+echo '<form id="medals" action="' . $url . '/badges/selectbadge.php?var1=' . fullname($user) . '&var2=' . $user->username . '&var3=' . $user->id . '&var4=' . $courseid . '" method="post"><input type="submit" value="Edit Medals"></form>';
+
+Additional install steps
+
+There are lots of hardcoded links (sorry) - this these to be checked and changed
+
+
+CSS
+
+the templates/ theme will need the additional CSS
+
+#badges {
+
+}
+
+#one_badge {
+    float: left;
+    display: block;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+#small_badges {
+    float: left;
+    display: block;
+}
+
+#badges_submit {
+
+    float: right;
+    clear: both;
+
+}
+
+#one_badge .badge {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+Brief Summary
+
+When a user goes to the badge select screen it checks to see if they exist in the 'students' table - if they don't it creates the user and refreshs the screen
+
+It then displays that users selected badges and all available badges
+
+Clicking save changes takes the user to a screen which checks a record for the user/badges exists in the badges_link table and creates it if needed.
+

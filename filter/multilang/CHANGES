@@ -1,0 +1,271 @@
+2006-12-12 Tuesday 20:27  skodak
+
+	* filter.php: 
+	
+	MDL-7901 allow empty spans in multilang block
+
+2006-12-12 Tuesday 18:39  skodak
+
+	* README.txt, defaultsettings.php, filter.php, filterconfig.html: 
+	
+	MDL-7887 Multilang upgrade to new tags in Moodle 1.8
+
+2006-09-15 Friday 16:23  moodler
+
+	* filter.php: 
+	
+	FIxed docs
+
+2006-08-14 Monday 15:46  skodak
+
+	* README.txt, filter.php: 
+	
+	Bug #6245 - rewritten multilang filter
+
+2006-07-15 Saturday 16:39  stronk7
+
+	* filter.php: 
+	
+	Soled bug 6089 plus some minor iteration savings... 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=6089)
+	
+	Merged from MOODLE_16_STABLE
+
+2006-07-15 Saturday 16:38  stronk7
+
+	* filter.php: 
+	
+	Soled bug 6089 plus some minor iteration savings... 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=6089)
+
+2006-07-06 Thursday 22:01  thepurpleblob
+
+	* filter.php: 
+	
+	Merged from STABLE
+
+2006-07-06 Thursday 22:00  thepurpleblob
+
+	* filter.php: 
+	
+	Bug #4375 - did not work correctly in blocks.
+
+2006-01-05 Thursday 23:46  stronk7
+
+	* filter.php: 
+	
+	Nobody is now calling get_string_from_file(). And the multilang
+	filter supports utf8 langs too
+	
+	Merged from MOODLE_16_UTF8. Abandoning the branch.
+
+2005-12-14 Wednesday 12:14  patrickslee
+
+	* README.txt: 
+	
+	Merged with MOODLE_16_MULTIENROL_MP1
+
+2005-11-20 Sunday 09:47  stronk7
+
+	* filter.php: 
+	
+	Nobody is now calling get_string_from_file(). And the multilang
+	filter supports utf8 langs too.
+
+2005-11-17 Thursday 07:05  stronk7
+
+	* README.txt: 
+	
+	Some typos solved. :-|
+	
+	Merged from MOODLE_15_STABLE
+
+2005-11-17 Thursday 07:03  stronk7
+
+	* README.txt: 
+	
+	Some typos solved. :-|
+
+2005-11-17 Thursday 03:51  stronk7
+
+	* README.txt: 
+	
+	Updated a bit to explain how the multilang filter works.
+	
+	Merged from MOODLE_15_STABLE
+
+2005-11-17 Thursday 03:50  stronk7
+
+	* README.txt: 
+	
+	Updated a bit to explain how the multilang filter works.
+
+2005-07-13 Wednesday 01:10  moodler
+
+	* filter.php: 
+	
+	Merged multilang fix from stable again
+
+2005-07-13 Wednesday 01:09  moodler
+
+	* filter.php: 
+	
+	Gah, now it's fixed properly
+
+2005-07-12 Tuesday 23:10  moodler
+
+	* filter.php: 
+	
+	Merged "8" fixed fix
+
+2005-07-12 Tuesday 23:09  moodler
+
+	* filter.php: 
+	
+	Fixed my fix from earlier
+
+2005-07-12 Tuesday 20:27  moodler
+
+	* filter.php: 
+	
+	Merged utf8 fix from stable
+
+2005-07-12 Tuesday 20:26  moodler
+
+	* filter.php: 
+	
+	Fix for problem with lang names containing 8  Thanks Eloy
+
+2005-05-20 Friday 01:32  defacer
+
+	* filter.php: 
+	
+	
+	New extended multilang filter!
+	
+	Now does lang replacement for each "langblock" (many lang-enabled
+	tags bunched together with only whitespace between), allowing:
+	
+	  * Multiple langblocks per filtered text
+	  * Non-lang-translated content before, after, and between
+	langblocks
+	
+	This should be solving bugs 2878 and 2879. Buy one, get one free.
+
+2005-04-29 Friday 00:33  stronk7
+
+	* filter.php: 
+	
+	Now we support both uppercase and lowercase lang tags, and the
+	separator can be both the hypen and the underscore characters. 
+	Everything is converted to Moodle's (lowercase with hypen) langs.
+	
+	And the filter returns the full text if some exception happens (bad
+	build lang tags). Actually it was returning an empty string on
+	error.
+	
+	Should we be a stricter allowing only the correct langs????
+
+2005-04-28 Thursday 06:17  stronk7
+
+	* filter.php: 
+	
+	Now multilang filter supports both the <lang lang="XX> and the
+	<span lang="XX"> syntaxes. Bug 3057. 
+	(http://moodle.org/bugs/bug.php?op=show&bugid=3057)
+
+2004-11-08 Monday 01:11  stronk7
+
+	* README.txt, filter.php: 
+	
+	New release of the multilang filter:	 - 100% compatible with
+	previous "Multilang" filter.	  - Supports a new "short" syntax
+	to make things easier. Simply use:	    <lang lang="XX">	  -
+	It needs less resources and executes faster.	  - It Allows any
+	type of content to be used. No restrictions at all!
+	
+	Merged from MOODLE_14_STABLE
+
+2004-11-08 Monday 01:03  stronk7
+
+	* README.txt, filter.php: 
+	
+	New release of the multilang filter:	 - 100% compatible with
+	previous "Multilang" filter.	  - Supports a new "short" syntax
+	to make things easier. Simply use:	    <lang lang="XX">	  -
+	It needs less resources and executes faster.	  - It Allows any
+	type of content to be used. No restrictions at all!
+
+2004-09-13 Monday 16:21  moodler
+
+	* filter.php: 
+	
+	Auto-detection of type, apparently.
+
+2004-09-13 Monday 16:20  moodler
+
+	* filter.php: 
+	
+	This should make the charset detection automatic ...
+
+2004-09-13 Monday 16:17  moodler
+
+	* filter.php: 
+	
+	Merged XML UTF-8 fixed from stable (see bug 1927)
+
+2004-09-13 Monday 15:42  moodler
+
+	* filter.php: 
+	
+	Checking in fixes to xml_parser_create to specify an encoding
+	(UTF-8)
+	
+	See Eloy's bug 1927 for details.
+	
+	After this checkin I'll be immediately testing some backup/restores
+	on PHP 4.
+
+2004-08-08 Sunday 14:57  moodler
+
+	* filter.php: 
+	
+	Improvement to filters, providing speed boost AND better
+	compatibility with Turck MMCache.
+	
+	Filter function must now have a particular name
+	
+	   eg resource_filter
+	
+	where "resource" is the name of the directory that filter.php is
+	in.
+
+2004-02-17 Tuesday 13:22  moodler
+
+	* filter.php, multilang.php: 
+	
+	Changed the name of all filters to be consistent.
+	
+	Removed texh filter
+
+2004-02-10 Tuesday 18:01  moodler
+
+	* multilang.php: 
+	
+	Multi-lang filter can flag a text as not being cacheable
+
+2004-01-20 Tuesday 18:03  moodler
+
+	* multilang.php: 
+	
+	Make sure XML is enabled
+
+2004-01-20 Tuesday 16:56  moodler
+
+	* README.txt, multilang.php: 
+	
+	Working code by Gaëtan Frenoy to allow texts to contain multiple
+	languages!
+	
+	See:  http://moodle.org/mod/forum/discuss.php?d=2760
+

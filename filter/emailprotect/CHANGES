@@ -1,0 +1,16 @@
+2004-09-11 Saturday 21:29  moodler
+
+	* filter.php: 
+	
+	Seems very stable, I'll add the email protection filter to stable
+
+2004-09-02 Thursday 12:14  moodler
+
+	* filter.php: 
+	
+	New filter for Email protection ... filters all email addresses in
+	Moodle text and obfuscates them from spammer's robotic eyes
+	
+	Thanks Mike Churchward! 
+	http://moodle.org/mod/forum/discuss.php?d=11302
+

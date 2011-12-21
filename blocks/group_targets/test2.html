@@ -1,0 +1,309 @@
+<script type="text/javascript" src="./jquery/js/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="./jquery/js/jquery-ui-1.8.16.custom.min.js"></script>
+<script type="text/javascript" src="./jquery/js/jquery.tablesorter.min.js"></script>
+<link rel="stylesheet" href="./twitter-bootstrap/bootstrap.min.css" type="text/css" media="screen"
+      charset="utf-8">
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Bootstrap, from Twitter</title>
+    <meta name="description" content="">
+
+    <meta name="author" content="">
+
+
+    
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+</head>
+
+
+<!--[if lt IE 9]>
+<script src="../bootstrap/html5.js"></script>
+<![endif]-->
+
+<link href="../bootstrap/bootstrap.min.css" rel="stylesheet">
+<style type="text/css">
+    body {
+        padding-top: 60px;
+    }
+</style>
+
+
+code: 794<!-- Load the main javscript Asynchronously-->
+<script id="myscript" type="text/javascript">
+
+    (function () {
+        var myscript = document.createElement('script');
+        myscript.type = 'text/javascript';
+        myscript.src = ('jscripts2.js');
+        var s = document.getElementById('myscript');
+        s.parentNode.insertBefore(myscript, s);
+    })();
+
+</script><div class="container">
+    <div class="topbar"><div class="topbar-inner"><div class="container-fluid"><a class="brand" href="#">Group Target Setter v2.0</a><ul class="nav"><li  ><a href="/jobshop/index.php">Home</a></li><li  ><a href="/jobshop/job/index.php">Add a Job</a></li><li  ><a href="/jobshop/feeds/process_feeds.php">Import Feeds</a></li><li  ><a href="/jobshop/processing/index.php">View Applications</a></li><li   class="active"><a href="/jobshop/slider/index.php">Featured Jobs</a></li></ul><p class="pull-right">Logged in as <a href="#">username</a></p></div></div></div></div>
+
+<div class="container">
+
+    SELECT c.id, c.fullname, ra.contextid  FROM mdl_role_assignments ra JOIN mdl_context co ON ra.contextid=co.id JOIN mdl_course c ON co.instanceid=c.id WHERE userid='0' AND roleid='3' AND co.contextlevel='50'<table class="table">
+    <tr>
+        <th>Filter by Course:</th>
+    </tr>
+    <tr>
+        <td>
+
+            <form name="process" action="/blocks/group_targets/view2.php" method="POST">
+                <select name="course" id="select_type">
+                    <option value="1">--Select a Course--</option>
+
+                                    </select>
+                <input type="submit" name="filter" value="filter"/>
+            </form>
+        </td>
+    <tr>
+
+        <th>Filter by Group:</th>
+    </tr>
+    <tr>
+        <td align="center">
+
+            No groups found on this course        </td>
+    </tr>
+</table>
+<br/>
+
+    content
+
+
+
+    SELECT  distinct u.id, u.firstname, u.lastname, u.idnumber, u.username FROM mdl_role_assignments a JOIN mdl_user u on a.userid=u.id LEFT JOIN mdl_groups_members gm ON gm.userid=a.userid WHERE contextid='57510'  AND a.roleid='5' order by lastnamenum rows: 15    <table>
+        <tr>
+            <th style="vertical-align: middle;">Students on this course</th>
+            <td style="vertical-align: middle;">Select / Deselect all<input type="checkbox"
+                                                                            onclick="toggleChecked(this.checked)"></td>
+        </tr>
+    </table>
+
+
+    <!--        <form name="process" action="process_targets.php" method="POST">-->
+<!--    <table id="students" class="zebra-striped">-->
+<!--                <thead>-->
+<!--                <tr>-->
+<!--                <th>test</th>-->
+<!---->
+<!--                </tr>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+<!--        <tr>-->
+<!--            <td>1</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--                   <td>2</td>-->
+<!--               </tr>-->
+<!--        </tbody>-->
+
+<!--        </table>-->
+<!--    </form>-->
+
+    <form name="process" action="process_targets.php" method="POST">
+        <table id="students" class="zebra-striped">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Surname</th>
+
+                <th>RAG</th>
+                <th>ID</th>
+                <th>Select</th>
+                <th>Attendance</th>
+<!--                <th>Targets</th>-->
+<!--                <th>Reviews</th>-->
+<!--                <th>Concerns</th>-->
+<!--                <th>Reasons</th>-->
+<!--                <th>Contributions</th>-->
+
+<!--                <th>T-MTG</th>-->
+<!--                <th>P-Best</th>-->
+<!--                <th>QCA</th>-->
+<!--                <th>MIS MTG</th>-->
+<!--                <th>R 1</th>-->
+<!--                <th>R2g</th>-->
+<!--                <th>R 2</th>-->
+<!--                <th>R3g</th>-->
+<!--                <th>R 3</th>-->
+<!--                <th>R4g</th>-->
+<!--                <th>R 4</th>-->
+<!--                <th>Parental</th>-->
+<!--                <th>Cast</th>-->
+<!--                <th>Withdrawn</th>-->
+<!--                <th>Mobile</th>-->
+<!--                <th>Medals</th>-->
+            </tr>
+
+            </thead>
+            <tbody>
+            
+            <tr>
+                <th>1</th>
+                <th>1</th>
+            </tr>
+
+            
+            <tr>
+
+                <th>2</th>
+                <th>1</th>
+            </tr>
+
+            
+            <tr>
+                <th>3</th>
+                <th>1</th>
+
+            </tr>
+
+            
+            <tr>
+                <th>4</th>
+                <th>1</th>
+            </tr>
+
+            
+            <tr>
+                <th>5</th>
+
+                <th>1</th>
+            </tr>
+
+            
+            <tr>
+                <th>6</th>
+                <th>1</th>
+            </tr>
+
+            
+            <tr>
+                <th>7</th>
+                <th>1</th>
+            </tr>
+
+            
+            <tr>
+                <th>8</th>
+                <th>1</th>
+
+            </tr>
+
+            
+            <tr>
+                <th>9</th>
+                <th>1</th>
+            </tr>
+
+            
+            <tr>
+                <th>10</th>
+
+                <th>1</th>
+            </tr>
+
+            
+            <tr>
+                <th>11</th>
+                <th>1</th>
+            </tr>
+
+            
+            <tr>
+                <th>12</th>
+                <th>1</th>
+            </tr>
+
+            
+            <tr>
+                <th>13</th>
+                <th>1</th>
+
+            </tr>
+
+            
+            <tr>
+                <th>14</th>
+                <th>1</th>
+            </tr>
+
+            
+            <tr>
+                <th>15</th>
+
+                <th>1</th>
+            </tr>
+
+            </tbody>
+            </table>
+        </form>
+<!---->
+<!--<!--            -->--><!--            <tr>-->
+<!--<!--                <td><a-->-->
+<!--<!--                    href="-->--><!--<!--/blocks/ilp/view.php?courseid=-->--><!--<!--&id=-->--><!--<!--">-->--><!--<!--</a>-->-->
+
+<!--<!--                </td>-->-->
+<!--<!--                <td><a-->-->
+<!--<!--                    href="-->--><!--<!--/blocks/ilp/view.php?courseid=-->--><!--<!--&id=-->--><!--<!--">-->--><!--<!--</a>-->-->
+<!--<!--                </td>-->-->
+<!--                <td>--><!--</td>-->
+<!--                <td>--><!--</td>-->
+<!--                <td><input type="checkbox" class="checkbox" name="checkbox[]" value="--><!--"></td>-->
+<!--                <td>--><!--</td>-->
+<!--</tr>-->
+<!--                --><!--</tbody>-->
+<!--            </table>-->
+<!--        </form>-->
+<!---->
+
+<!---->
+<!--                <td></td>-->
+<!--                <td></td>-->
+<!--                <td></td>-->
+<!--                <td></td>-->
+<!--                <td></td>-->
+<!--                <td></td>-->
+<!--                <td></td>-->
+<!--                <td></td>-->
+<!--                <td></td>-->
+<!--                <td></td>-->
+<!--                <td></td>-->
+<!--                <td></td>-->
+<!--                <td></td>-->
+<!--                <td></td>-->
+<!--                <td></td>-->
+<!--                <td></td>-->
+
+<!--                <td></td>-->
+<!--                <td></td>-->
+<!--                <td></td>-->
+<!--                <td></td>-->
+<!--            </tr>-->
+<!--                --><!---->
+<!---->
+<!--            </tbody>-->
+<!--        </table>-->
+
+
+</div>
+</body>
+</html>
+
+<script>
+    $(function () {
+        $("table#students").tablesorter({ sortList:[
+            [1, 0]
+        ] });
+    });
+</script>

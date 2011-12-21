@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : dates.xml
+    Created on : 21 January 2010, 10:56
+    Author     : dattwood
+    Description:
+        Holds dates, logos and descriptions for the header of the midkent_newstyle theme
+-->
+
+<root>
+    <item>
+        <name>Midkent College Logo</name>
+        <date>default</date>
+        <logo>logo.png</logo>
+        <text>Midkent College</text>
+    </item>
+     <item>
+        <name>Birthday of Carole Hersee</name>
+        <date>23/Jan</date>
+        <logo>bbc.png</logo>
+        <text>Birthday of Carole Hersee of BBC Test Card Fame</text>
+    </item>
+     <item>
+     <name>Australiaday</name>
+        <date>26/Jan</date>
+        <logo>australia-day.png</logo>
+        <text>Australia Day</text>
+    </item>
+    <item>
+        <name>Chinese New Year</name>
+        <date>7/Feb</date>
+        <logo>chinese-new-year.png</logo>
+        <text>Chinese New Year - Year of the Rat</text>
+    </item>
+    <item>
+        <name>St Valentines</name>
+        <date>14/Feb</date>
+        <logo>st-valentines.png</logo>
+        <text>St Valentines Day - Patron saint of love</text>
+    </item>
+   <item>
+        <name>St Davids</name>
+        <date>1/Mar</date>
+        <logo>st-davids.png</logo>
+        <text>St Davids Day - Patron saint of Wales</text>
+    </item>
+     <item>
+        <name>Pi Day</name>
+        <date>14/Mar</date>
+        <logo>pi.png</logo>
+        <text>Pi Day - Celebration of the number 3.14159265358979323846...</text>
+    </item>
+     <item>
+        <name>St Patricks</name>
+        <date>15/Mar</date>
+        <logo>st-patricks.png</logo>
+        <text>St Patricks Day - Patron saint of Ireland</text>
+    </item>
+     <item>
+        <name>Earth Day</name>
+        <date>22/Apr</date>
+        <logo>earth-day.png</logo>
+        <text>Earth Day</text>
+    </item>
+     <item>
+        <name>St Georges Day</name>
+        <date>22/Apr</date>
+        <logo>st-george.png</logo>
+        <text>St Georges Day - Patron saint of England</text>
+    </item>
+     <item>
+        <name>International Star Wars Day</name>
+        <date>4/May</date>
+        <logo>jedi.png</logo>
+        <text>International Star Wars Day - May the force be with you</text>
+    </item>
+     <item>
+        <name>Summer Solstice</name>
+        <date>20/Jun</date>
+        <logo>summer-solstice.png</logo>
+        <text>Summer Solstice</text>
+    </item>
+     <item>
+        <name>American Independance Day</name>
+        <date>4/Jul</date>
+        <logo>independance-day.png</logo>
+        <text>4th of July - Celebration of independance in the US</text>
+    </item>
+     <item>
+        <name>Pi Approximationday</name>
+        <date>22/Jul</date>
+        <logo>pi.png</logo>
+        <text>Pi Approximation Day - Celebration of the number 3.14159265358979323846... which is created by the sum 22 divided by 7, which is 22/7 in computer form, like todays date</text>
+    </item>
+     <item>
+        <name>Summer Holidays</name>
+        <date>1/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+    <item>
+        <name>Summer Holidays</name>
+        <date>1/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+    <item>
+        <name>Summer Holidays</name>
+        <date>2/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+    <item>
+        <name>Summer Holidays</name>
+        <date>3/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+    <item>
+        <name>Summer Holidays</name>
+        <date>4/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+    <item>
+        <name>Summer Holidays</name>
+        <date>5/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+    <item>
+        <name>Summer Holidays</name>
+        <date>6/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+    <item>
+        <name>Summer Holidays</name>
+        <date>7/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+    <item>
+        <name>Summer Holidays</name>
+        <date>8/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+    <item>
+        <name>Summer Holidays</name>
+        <date>9/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+    <item>
+        <name>Summer Holidays</name>
+        <date>10/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+    <item>
+        <name>Summer Holidays</name>
+        <date>11/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item><item>
+        <name>Summer Holidays</name>
+        <date>12/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+    <item>
+        <name>Summer Holidays</name>
+        <date>13/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+    <item>
+        <name>Summer Holidays</name>
+        <date>14/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+    <item>
+        <name>Summer Holidays</name>
+        <date>15/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+
+    <item>
+        <name>Summer Holidays</name>
+        <date>16/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+    <item>
+        <name>Summer Holidays</name>
+        <date>1/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+    <item>
+        <name>Summer Holidays</name>
+        <date>17/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+    <item>
+        <name>Summer Holidays</name>
+        <date>18/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+    <item>
+        <name>Summer Holidays</name>
+        <date>19/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+    <item>
+        <name>Summer Holidays</name>
+        <date>20/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+    <item>
+        <name>Summer Holidays</name>
+        <date>21/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+    <item>
+        <name>Summer Holidays</name>
+        <date>22/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+    <item>
+        <name>Summer Holidays</name>
+        <date>23/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+    <item>
+        <name>Summer Holidays</name>
+        <date>24/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+    <item>
+        <name>Summer Holidays</name>
+        <date>25/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+    <item>
+        <name>Summer Holidays</name>
+        <date>26/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+    <item>
+        <name>Summer Holidays</name>
+        <date>27/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+    <item>
+        <name>Summer Holidays</name>
+        <date>28/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+    <item>
+        <name>Summer Holidays</name>
+        <date>29/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+    <item>
+        <name>Summer Holidays</name>
+        <date>30/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+    <item>
+        <name>Summer Holidays</name>
+        <date>31/Aug</date>
+        <logo>summer.png</logo>
+        <text>Summer holidays</text>
+    </item>
+     <item>
+        <name>Talk Like a Pirate Day</name>
+        <date>19/Sep</date>
+        <logo>tlak-like-a-pirate.png</logo>
+        <text>Argggh. It be the day to be tawkin' like a pirate me' hearties</text>
+    </item>
+    <item>
+        <name>Autumn</name>
+        <date>22/Sep</date>
+        <logo>autumn.png</logo>
+        <text>Start of Autumn</text>
+    </item>
+    <item>
+        <name>Autumn</name>
+        <date>23/Sep</date>
+        <logo>autumn.png</logo>
+        <text>Start of Autumn</text>
+    </item>
+    <item>
+        <name>Diwali</name>
+        <date>28/Oct</date>
+        <logo>diwali.png</logo>
+        <text>Diwali or Festival of Lights - Indian festival celebrating victory of good over evil</text>
+    </item>
+    <item>
+        <name>Halloween</name>
+        <date>31/Oct</date>
+        <logo>halloween.png</logo>
+        <text>Halloween - Pagan festival of Samhain, the new year</text>
+    </item>
+    <item>
+        <name>Guyfawkes</name>
+        <date>5/Nov</date>
+        <logo>fireworks.png</logo>
+        <text>Guy Fawkes Night - Leader of the failed Gunpowder Plot</text>
+    </item>
+    <item>
+        <name>St Andrews Day</name>
+        <date>30/Nov</date>
+        <logo>st-andrews.png</logo>
+        <text>St Andrews Day - Patron saint of Scotland</text>
+    </item>
+    <item>
+        <name>Winter Solstice</name>
+        <date>21/Dec</date>
+        <logo>winter-solstice.png</logo>
+        <text>Winter Solstice</text>
+    </item>
+    <item>
+        <name>Winter</name>
+        <date>22/Dec</date>
+        <logo>winter.png</logo>
+        <text>Winter Holiday</text>
+    </item>
+    <item>
+        <name>Winter</name>
+        <date>23/Dec</date>
+        <logo>winter.png</logo>
+        <text>Winter Holiday</text>
+    </item>
+    <item>
+        <name>Winter</name>
+        <date>24/Dec</date>
+        <logo>winter.png</logo>
+        <text>Winter Holiday</text>
+    </item>
+    <item>
+        <name>Christmas Day</name>
+        <date>25/Dec</date>
+        <logo>christmas.png</logo>
+        <text>Christmas - The Christian celebration of the birth of Christ</text>
+    </item>
+     <item>
+        <name>Boxing Day</name>
+        <date>26/Dec</date>
+        <logo>christmas.png</logo>
+        <text>Christmas - The Christian celebration of the birth of Christ</text>
+    </item>
+    <item>
+        <name>Winter</name>
+        <date>27/Dec</date>
+        <logo>winter.png</logo>
+        <text>Winter Holiday</text>
+    </item>
+    <item>
+        <name>Winter</name>
+        <date>28/Dec</date>
+        <logo>winter.png</logo>
+        <text>Winter Holiday</text>
+    </item>
+    <item>
+        <name>Winter</name>
+        <date>29/Dec</date>
+        <logo>winter.png</logo>
+        <text>Winter Holiday</text>
+    </item>
+    <item>
+        <name>Winter</name>
+        <date>30/Dec</date>
+        <logo>winter.png</logo>
+        <text>Winter Holiday</text>
+    </item>
+</root>

@@ -1,0 +1,306 @@
+ThemePath=C:\xampplite\moodle\theme\midkent\
+
+[26/Jan]
+logo.jpg = logos\australiaday-logo.jpg
+logo_small.jpg = logos\australiaday-logo-small.jpg
+TitleToolTip.txt = logos\australiaday.txt
+
+[7/Feb]
+logo.jpg = logos\chinesenewyear-logo.jpg
+logo_small.jpg = logos\chinesenewyear-logo-small.jpg
+TitleToolTip.txt = logos\chinesenewyear.txt
+
+[14/Feb]
+logo.jpg = logos\stvalentines-logo.jpg
+logo_small.jpg = logos\stvalentines-logo-small.jpg
+TitleToolTip.txt = logos\stvalentines.txt
+
+[1/Mar]
+logo.jpg = logos\stdavids-logo.jpg
+logo_small.jpg = logos\stdavids-logo-small.jpg
+TitleToolTip.txt = logos\stdavids.txt
+
+[14/Mar]
+logo.jpg = logos\piday-logo.jpg
+logo_small.jpg = logos\piday-logo-small.jpg
+TitleToolTip.txt = logos\piday.txt
+
+[15/Mar]
+logo.jpg = logos\stpatricks-logo.jpg
+logo_small.jpg = logos\stpatricks-logo-small.jpg
+TitleToolTip.txt = logos\stpatricks.txt
+
+[22/Apr]
+logo.jpg = logos\earthday-logo.jpg
+logo_small.jpg = logos\earthday-logo-small.jpg
+TitleToolTip.txt = logos\earthday.txt
+
+[23/Apr]
+logo.jpg = logos\stgeorges-logo.jpg
+logo_small.jpg = logos\stgeorges-logo-small.jpg
+TitleToolTip.txt = logos\stgeorges.txt
+
+[4/May]
+logo.jpg = logos\may4th-logo.jpg
+logo_small.jpg = logos\may4th-logo-small.jpg
+TitleToolTip.txt = logos\may4th.txt
+
+[9/Jun]
+logo.jpg = logos\carshare-logo.jpg
+logo_small.jpg = logos\carshare-logo-small.jpg
+TitleToolTip.txt = logos\carshare.txt
+
+[20/Jun]
+logo.jpg = logos\summersolstice-logo.jpg
+logo_small.jpg = logos\summersolstice-logo-small.jpg
+TitleToolTip.txt = logos\summersolstice.txt
+
+[4/Jul]
+logo.jpg = logos\4thjuly-logo.jpg
+logo_small.jpg = logos\4thjuly-logo-small.jpg
+TitleToolTip.txt = logos\4thjuly.txt
+
+[22/Jul]
+logo.jpg = logos\piday-logo.jpg
+logo_small.jpg = logos\piday-logo-small.jpg
+TitleToolTip.txt = logos\piapproximationday.txt
+
+[1/Aug]
+logo.jpg = logos\summer-logo.jpg
+logo_small.jpg = logos\summer-logo-small.jpg
+TitleToolTip.txt = logos\summer.txt
+
+[2/Aug]
+logo.jpg = logos\summer-logo.jpg
+logo_small.jpg = logos\summer-logo-small.jpg
+TitleToolTip.txt = logos\summer.txt
+
+[3/Aug]
+logo.jpg = logos\summer-logo.jpg
+logo_small.jpg = logos\summer-logo-small.jpg
+TitleToolTip.txt = logos\summer.txt
+
+[4/Aug]
+logo.jpg = logos\summer-logo.jpg
+logo_small.jpg = logos\summer-logo-small.jpg
+TitleToolTip.txt = logos\summer.txt
+
+[5/Aug]
+logo.jpg = logos\summer-logo.jpg
+logo_small.jpg = logos\summer-logo-small.jpg
+TitleToolTip.txt = logos\summer.txt
+
+[6/Aug]
+logo.jpg = logos\summer-logo.jpg
+logo_small.jpg = logos\summer-logo-small.jpg
+TitleToolTip.txt = logos\summer.txt
+
+[7/Aug]
+logo.jpg = logos\summer-logo.jpg
+logo_small.jpg = logos\summer-logo-small.jpg
+TitleToolTip.txt = logos\summer.txt
+
+[8/Aug]
+logo.jpg = logos\summer-logo.jpg
+logo_small.jpg = logos\summer-logo-small.jpg
+TitleToolTip.txt = logos\summer.txt
+
+[9/Aug]
+logo.jpg = logos\summer-logo.jpg
+logo_small.jpg = logos\summer-logo-small.jpg
+TitleToolTip.txt = logos\summer.txt
+
+[10/Aug]
+logo.jpg = logos\summer-logo.jpg
+logo_small.jpg = logos\summer-logo-small.jpg
+TitleToolTip.txt = logos\summer.txt
+
+[11/Aug]
+logo.jpg = logos\summer-logo.jpg
+logo_small.jpg = logos\summer-logo-small.jpg
+TitleToolTip.txt = logos\summer.txt
+
+[12/Aug]
+logo.jpg = logos\summer-logo.jpg
+logo_small.jpg = logos\summer-logo-small.jpg
+TitleToolTip.txt = logos\summer.txt
+
+[13/Aug]
+logo.jpg = logos\summer-logo.jpg
+logo_small.jpg = logos\summer-logo-small.jpg
+TitleToolTip.txt = logos\summer.txt
+
+[14/Aug]
+logo.jpg = logos\summer-logo.jpg
+logo_small.jpg = logos\summer-logo-small.jpg
+TitleToolTip.txt = logos\summer.txt
+
+[15/Aug]
+logo.jpg = logos\summer-logo.jpg
+logo_small.jpg = logos\summer-logo-small.jpg
+TitleToolTip.txt = logos\summer.txt
+
+[16/Aug]
+logo.jpg = logos\summer-logo.jpg
+logo_small.jpg = logos\summer-logo-small.jpg
+TitleToolTip.txt = logos\summer.txt
+
+[17/Aug]
+logo.jpg = logos\summer-logo.jpg
+logo_small.jpg = logos\summer-logo-small.jpg
+TitleToolTip.txt = logos\summer.txt
+
+[18/Aug]
+logo.jpg = logos\summer-logo.jpg
+logo_small.jpg = logos\summer-logo-small.jpg
+TitleToolTip.txt = logos\summer.txt
+
+[19/Aug]
+logo.jpg = logos\summer-logo.jpg
+logo_small.jpg = logos\summer-logo-small.jpg
+TitleToolTip.txt = logos\summer.txt
+
+[20/Aug]
+logo.jpg = logos\summer-logo.jpg
+logo_small.jpg = logos\summer-logo-small.jpg
+TitleToolTip.txt = logos\summer.txt
+
+[21/Aug]
+logo.jpg = logos\summer-logo.jpg
+logo_small.jpg = logos\summer-logo-small.jpg
+TitleToolTip.txt = logos\summer.txt
+
+[22/Aug]
+logo.jpg = logos\summer-logo.jpg
+logo_small.jpg = logos\summer-logo-small.jpg
+TitleToolTip.txt = logos\summer.txt
+
+[23/Aug]
+logo.jpg = logos\summer-logo.jpg
+logo_small.jpg = logos\summer-logo-small.jpg
+TitleToolTip.txt = logos\summer.txt
+
+[24/Aug]
+logo.jpg = logos\summer-logo.jpg
+logo_small.jpg = logos\summer-logo-small.jpg
+TitleToolTip.txt = logos\summer.txt
+
+[25/Aug]
+logo.jpg = logos\summer-logo.jpg
+logo_small.jpg = logos\summer-logo-small.jpg
+TitleToolTip.txt = logos\summer.txt
+
+[26/Aug]
+logo.jpg = logos\summer-logo.jpg
+logo_small.jpg = logos\summer-logo-small.jpg
+TitleToolTip.txt = logos\summer.txt
+
+[27/Aug]
+logo.jpg = logos\summer-logo.jpg
+logo_small.jpg = logos\summer-logo-small.jpg
+TitleToolTip.txt = logos\summer.txt
+
+[28/Aug]
+logo.jpg = logos\summer-logo.jpg
+logo_small.jpg = logos\summer-logo-small.jpg
+TitleToolTip.txt = logos\summer.txt
+
+[29/Aug]
+logo.jpg = logos\summer-logo.jpg
+logo_small.jpg = logos\summer-logo-small.jpg
+TitleToolTip.txt = logos\summer.txt
+
+[30/Aug]
+logo.jpg = logos\summer-logo.jpg
+logo_small.jpg = logos\summer-logo-small.jpg
+TitleToolTip.txt = logos\summer.txt
+
+[19/Sep]
+logo.jpg = logos\talklikeapirate-logo.jpg
+logo_small.jpg = logos\talklikeapirate-logo-small.jpg
+TitleToolTip.txt = logos\talklikeapirate.txt
+
+[23/Sep]
+logo.jpg = logos\autumn-logo.jpg
+logo_small.jpg = logos\autumn-logo-small.jpg
+TitleToolTip.txt = logos\autumn.txt
+
+[24/Sep]
+logo.jpg = logos\autumn-logo.jpg
+logo_small.jpg = logos\autumn-logo-small.jpg
+TitleToolTip.txt = logos\autumn.txt
+
+[28/Oct]
+logo.jpg = logos\diwali-logo.jpg
+logo_small.jpg = logos\diwali-logo-small.jpg
+TitleToolTip.txt = logos\diwali.txt
+
+[31/Oct]
+logo.jpg = logos\halloween-logo.jpg
+logo_small.jpg = logos\halloween-logo-small.jpg
+TitleToolTip.txt = logos\halloween.txt
+
+[5/Nov]
+logo.jpg = logos\guyfawkes-logo.jpg
+logo_small.jpg = logos\guyfawkes-logo-small.jpg
+TitleToolTip.txt = logos\guyfawkes.txt
+
+[1/Dec]
+logo.jpg = logos\standrews-logo.jpg
+logo_small.jpg = logos\standrews-logo-small.jpg
+TitleToolTip.txt = logos\standrews.txt
+
+[21/Dec]
+logo.jpg = logos\wintersolstice-logo.jpg
+logo_small.jpg = logos\wintersolstice-logo-small.jpg
+TitleToolTip.txt = logos\wintersolstice.txt
+
+[22/Dec]
+logo.jpg = logos\christmas-logo.jpg
+logo_small.jpg = logos\christmas-logo-small.jpg
+TitleToolTip.txt = logos\christmas.txt
+
+[23/Dec]
+logo.jpg = logos\christmas-logo.jpg
+logo_small.jpg = logos\christmas-logo-small.jpg
+TitleToolTip.txt = logos\christmas.txt
+
+[24/Dec]
+logo.jpg = logos\christmas-logo.jpg
+logo_small.jpg = logos\christmas-logo-small.jpg
+TitleToolTip.txt = logos\christmas.txt
+
+[25/Dec]
+logo.jpg = logos\christmas-logo.jpg
+logo_small.jpg = logos\christmas-logo-small.jpg
+TitleToolTip.txt = logos\christmas.txt
+
+[26/Dec]
+logo.jpg = logos\christmas-logo.jpg
+logo_small.jpg = logos\christmas-logo-small.jpg
+TitleToolTip.txt = logos\christmas.txt
+
+[27/Dec]
+logo.jpg = logos\winter-logo.jpg
+logo_small.jpg = logos\winter-logo-small.jpg
+TitleToolTip.txt = logos\winter.txt
+
+[28/Dec]
+logo.jpg = logos\winter-logo.jpg
+logo_small.jpg = logos\winter-logo-small.jpg
+TitleToolTip.txt = logos\winter.txt
+
+[29/Dec]
+logo.jpg = logos\winter-logo.jpg
+logo_small.jpg = logos\winter-logo-small.jpg
+TitleToolTip.txt = logos\winter.txt
+
+[30/Dec]
+logo.jpg = logos\winter-logo.jpg
+logo_small.jpg = logos\winter-logo-small.jpg
+TitleToolTip.txt = logos\winter.txt
+
+[Default]
+logo.jpg = logos\default-logo.jpg
+logo_small.jpg = logos\default-logo-small.jpg
+TitleToolTip.txt = logos\default.txt

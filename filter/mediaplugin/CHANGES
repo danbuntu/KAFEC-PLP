@@ -1,0 +1,379 @@
+2007-01-08 Monday 19:55  moodler
+
+	* filter.php: 
+	
+	Flash-based filters are now strrrrrrrict AND accessible!     
+	MDL-7889
+	
+	Unfortunately this is only possible using Javascript to rewrite the
+	DOM, so this means Flash content won't work without Javascript on.
+	
+	   MDL-7861
+
+2006-11-23 Thursday 17:13  moodler
+
+	* filter.php: 
+	
+	Merged two-line deletes from stable (causing notices)
+
+2006-11-23 Thursday 17:09  moodler
+
+	* filter.php: 
+	
+	Removed two unenecessary lines from a cut-and-paste
+
+2006-10-22 Sunday 16:19  moodler
+
+	* filter.php: 
+	
+	Merged some fixes for & in XHTML
+
+2006-10-22 Sunday 16:18  moodler
+
+	* filter.php: 
+	
+	Fixed some HTML errors about &
+
+2006-08-07 Monday 22:53  skodak
+
+	* defaultsettings.php, filterconfig.html: 
+	
+	Swf now disabled by default in Mediaplugin and added explanation
+	SC#284; merged from MOODLE_16_STABLE
+
+2006-08-07 Monday 22:48  skodak
+
+	* defaultsettings.php, filterconfig.html: 
+	
+	Swf now disabled by default in Mediaplugin and added explanation
+	SC#284
+
+2006-05-29 Monday 04:19  wildgirl
+
+	* mp3player.fla.zip, mp3player.swf, mp3player.fla.zip,
+	mp3player.swf: 
+	
+	Updated small MP3 player to handle autoPlay (by Andrew Walker,
+	Alton College)
+
+2006-04-21 Friday 12:26  moodler
+
+	* filter.php: 
+	
+	Bug 5223 fix
+
+2006-04-20 Thursday 16:25  moodler
+
+	* filter.php: 
+	
+	Fix for bug 5223   - might need testing
+
+2006-03-13 Monday 15:21  ikawhero
+
+	* defaultsettings.php, filter.php, filterconfig.html: 
+	
+	Added another extension for Real Media. This should cover all the
+	file types for which you would want to embed a player or give you a
+	way to do it eg writing an ram or rpm file.
+
+2006-03-13 Monday 14:16  ikawhero
+
+	* defaultsettings.php, filter.php, filterconfig.html: 
+	
+	Added support for .ram files and added config settings.
+
+2006-02-28 Tuesday 07:48  ikawhero
+
+	* defaultsettings.php, filter.php: 
+	
+	Added realmedia support.
+
+2006-02-07 Tuesday 00:48  thepurpleblob
+
+	* defaultsettings.php: 
+	
+	Added provision for resetting values to default. Bug #4123
+
+2006-01-11 Wednesday 14:18  moodler
+
+	* filter.php: 
+	
+	Change solution for bug 4540. See:
+	http://moodle.org/mod/forum/discuss.php?d=29588
+
+2006-01-10 Tuesday 10:33  moodler
+
+	* filter.php: 
+	
+	Adding feature for resizeable flash object (Bug #: 4540)
+
+2005-12-14 Wednesday 12:13  patrickslee
+
+	* defaultsettings.php, filter.php, filterconfig.html,
+	flvplayer.README.txt, flvplayer.fla.zip, flvplayer.swf: 
+	
+	Merged with MOODLE_16_MULTIENROL_MP1
+
+2005-10-27 Thursday 14:33  moodler
+
+	* flvplayer.README.txt: 
+	
+	Updated license info :-)
+
+2005-10-27 Thursday 14:33  patrickslee
+
+	* flvplayer.README.txt: 
+	
+	file flvplayer.README.txt was added on branch MOODLE_16_MULTIENROL
+	on 2005-12-14 04:13:59 +0000
+
+2005-10-25 Tuesday 15:42  moodler
+
+	* flvplayer.fla.zip: 
+	
+	FLV player source
+
+2005-10-25 Tuesday 15:42  patrickslee
+
+	* flvplayer.fla.zip: 
+	
+	file flvplayer.fla.zip was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:13:59 +0000
+
+2005-10-25 Tuesday 15:40  moodler
+
+	* defaultsettings.php, filter.php, filterconfig.html,
+	flvplayer.README.txt, flvplayer.swf: 
+	
+	Added support for FLV.	Might need to replace the FLV player if we
+	don't get explicit permission for this one.
+	
+	Thanks to Julian Ridden for the code!
+
+2005-10-25 Tuesday 15:40  patrickslee
+
+	* flvplayer.swf: 
+	
+	file flvplayer.swf was added on branch MOODLE_16_MULTIENROL on
+	2005-12-14 04:13:59 +0000
+
+2005-09-07 Wednesday 17:51  thepurpleblob
+
+	* filterconfig.html: 
+	
+	Hard coded yes/no strings now properly looked up. Bug #3993
+
+2005-08-05 Friday 18:38  thepurpleblob
+
+	* defaultsettings.php, filterconfig.html: 
+	
+	Try again - adding new files for new settings screen.
+
+2005-08-05 Friday 18:37  thepurpleblob
+
+	* filter.php: 
+	
+	Added settings screen for mediaplugin filter.
+
+2005-07-20 Wednesday 09:55  moodler
+
+	* filter.php: 
+	
+	Merged multiline link fix from stable
+
+2005-07-20 Wednesday 09:55  moodler
+
+	* filter.php: 
+	
+	Fix for finding multi-line links in HTML code
+	
+	   Thanks German!  http://moodle.org/mod/forum/discuss.php?d=27630
+
+2005-06-05 Sunday 13:12  moodler
+
+	* filter.php: 
+	
+	Merged Flash script fix from stable
+
+2005-06-05 Sunday 11:31  moodler
+
+	* filter.php: 
+	
+	Turn off script access for autoembedded flash  SC126
+
+2005-03-16 Wednesday 16:15  moodler
+
+	* filter.php, mp3player.fla.zip, mp3player.swf: 
+	
+	Don't download MP3 files automatically.... download only when play
+	button is pressed.
+
+2005-03-16 Wednesday 16:00  moodler
+
+	* filter.php, mp3player.fla.zip, mp3player.swf: 
+	
+	Turn off the autoloading of sound files
+
+2005-02-28 Monday 21:30  moodler
+
+	* filter.php: 
+	
+	XHTML compliance, but also you can now set up colors to be passed
+	to the MP3 Flash player, using
+	
+	  $THEME->filter_mediaplugin_colors = 'blah...';
+
+2005-02-18 Friday 10:52  moodler
+
+	* filter.php, mp3player.fla.zip, mp3player.swf: 
+	
+	New MP3 filter is working well and is so much better, so merging
+	from 1.5
+
+2005-02-03 Thursday 19:12  moodler
+
+	* filter.php, mp3player.fla.zip, mp3player.swf: 
+	
+	Latest version - very nice!
+
+2005-02-01 Tuesday 11:24  moodler
+
+	* filter.php, mp3player.fla.zip, mp3player.swf: 
+	
+	Updates from Charlie Williams and "wild girl"s fantastic flash
+	friend
+	
+	MP3 player now has a slider with loading information, and is
+	slightly less high (15px instead of 18px) so it fits better inline.
+	
+	Source included.
+
+2004-10-19 Tuesday 18:33  moodler
+
+	* filter.php: 
+	
+	Some XHTML changes
+
+2004-09-13 Monday 05:09  gustav_delius
+
+	* filter.php: 
+	
+	towards XHTML compliance
+
+2004-08-08 Sunday 14:57  moodler
+
+	* filter.php: 
+	
+	Improvement to filters, providing speed boost AND better
+	compatibility with Turck MMCache.
+	
+	Filter function must now have a particular name
+	
+	   eg resource_filter
+	
+	where "resource" is the name of the directory that filter.php is
+	in.
+
+2004-08-02 Monday 22:39  moodler
+
+	* filter.php: 
+	
+	Added support for .mpg .mpeg and .avi files.
+
+2004-06-06 Sunday 22:28  moodler
+
+	* filter.php: 
+	
+	Merged bug fix from MOODLE_13_STABLE
+
+2004-06-06 Sunday 22:25  moodler
+
+	* filter.php: 
+	
+	Fixed problem with mediaplugins filter being too greedy when there
+	were multiple links in the same line of HTML code.
+
+2004-04-18 Sunday 18:01  moodler
+
+	* filter.php: 
+	
+	Added Flash and some cleanups in display
+
+2004-04-18 Sunday 13:15  moodler
+
+	* filter.php: 
+	
+	Better if autostart is off for the filter
+
+2004-04-17 Saturday 15:49  moodler
+
+	* filter.php: 
+	
+	QUicktime should use "aspect" for best results on different movies
+
+2004-04-17 Saturday 15:29  moodler
+
+	* filter.php: 
+	
+	Found the scale paramter for Quicktime
+
+2004-04-17 Saturday 14:59  moodler
+
+	* filter.php: 
+	
+	Added support for Quicktime and Media PLayer plugins
+
+2004-03-23 Tuesday 12:13  moodler
+
+	* mp3player.fla.zip, mp3player.swf: 
+	
+	Tinkered with this a bit to improve brightness of Play button on
+	darker screens
+
+2004-02-22 Sunday 10:51  moodler
+
+	* filter.php: 
+	
+	More robustness when dealing with links that may have HTML tags
+	within the link.
+
+2004-02-18 Wednesday 13:48  moodler
+
+	* filter.php: 
+	
+	FIxed a silly typo!
+
+2004-02-17 Tuesday 17:43  moodler
+
+	* filter.php, mp3player.swf: 
+	
+	A tiny MP# player.  :-)
+
+2004-02-17 Tuesday 13:22  moodler
+
+	* filter.php, mediaplugin.php: 
+	
+	Changed the name of all filters to be consistent.
+	
+	Removed texh filter
+
+2004-02-17 Tuesday 11:43  moodler
+
+	* mediaplugin.php: 
+	
+	More fixes
+
+2004-02-17 Tuesday 11:15  moodler
+
+	* mediaplugin.php: 
+	
+	Some fixes for multiple links
+
+2004-02-17 Tuesday 10:37  moodler
+
+	* mediaplugin.php: 
+	
+	Cool thing for the morning -  a new filter that will turn any link
+	to an MP3 into an embedded plugin.  It would be easy to add movies
+	and things later.
+

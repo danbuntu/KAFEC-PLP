@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="mod/easyvoter/db" VERSION="20090630" COMMENT="XMLDB file for Moodle mod/easyvoter"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="easyvoter" COMMENT="easyVoter instance database" NEXT="easyvoter_slides">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" ENUM="false" NEXT="course"/>
+        <FIELD NAME="course" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" ENUM="false" COMMENT="Course easyVoter activity belongs to" PREVIOUS="id" NEXT="name"/>
+        <FIELD NAME="name" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" ENUM="false" COMMENT="Name field for moodle instances" PREVIOUS="course" NEXT="intro"/>
+        <FIELD NAME="intro" TYPE="text" LENGTH="medium" NOTNULL="false" SEQUENCE="false" ENUM="false" COMMENT="General introduction of the easyVoter activity" PREVIOUS="name" NEXT="introformat"/>
+        <FIELD NAME="introformat" TYPE="int" LENGTH="4" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" ENUM="false" COMMENT="Format of the intro field (MOODLE, HTML, MARKDOWN...)" PREVIOUS="intro" NEXT="maxparticipants"/>
+		<FIELD NAME="maxparticipants" TYPE="int" LENGTH="4" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" ENUM="false" COMMENT="Total number of participants allowed for instance" PREVIOUS="introformat" NEXT="timecreated"/>
+		<FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" ENUM="false" PREVIOUS="maxparticipants" NEXT="timemodified"/>
+        <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" ENUM="false" PREVIOUS="timecreated"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" />
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="course" UNIQUE="false" FIELDS="course" />
+      </INDEXES>
+    </TABLE>
+    <TABLE NAME="easyvoter_slides" COMMENT="easyVoter slide table" PREVIOUS="easyvoter" NEXT="easyvoter_present">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" ENUM="false" NEXT="instance"/>
+		<FIELD NAME="instance" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" COMMENT="ID of easyVoter instance" PREVIOUS="id" NEXT="numeral"/>
+		<FIELD NAME="numeral" TYPE="int" LENGTH="4" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" ENUM="false" COMMENT="Slide number" PREVIOUS="instance" NEXT="name"/>
+		<FIELD NAME="name" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" ENUM="false" COMMENT="Slide name" PREVIOUS="numeral" NEXT="content"/>
+		<FIELD NAME="content" TYPE="text" LENGTH="medium" NOTNULL="true" SEQUENCE="false" ENUM="false" COMMENT="Slide content" PREVIOUS="name" NEXT="type"/>
+		<FIELD NAME="type" TYPE="char" LENGTH="4" NOTNULL="true" DEFAULT="info" SEQUENCE="false" ENUM="false" COMMENT="Slide type" PREVIOUS="content" NEXT="answer"/>
+		<FIELD NAME="answer" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" ENUM="false" COMMENT="Answer to slide if required" PREVIOUS="type" NEXT="control"/>
+		<FIELD NAME="control" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" ENUM="false" COMMENT="Additional control list of variables for slide type if required" PREVIOUS="answer" NEXT="timecreated"/>
+        <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" ENUM="false" PREVIOUS="control" NEXT="timemodified"/>
+        <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" ENUM="false" PREVIOUS="timecreated"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" />
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="instance" UNIQUE="false" FIELDS="instance" NEXT="numeral"/>
+		<INDEX NAME="numeral" UNIQUE="false" FIELDS="numeral" PREVIOUS="instance"/>
+      </INDEXES>
+    </TABLE>
+    <TABLE NAME="easyvoter_present" COMMENT="easyVoter present slides table" PREVIOUS="easyvoter_slides" NEXT="easyvoter_responses">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" ENUM="false" NEXT="instance"/>
+		<FIELD NAME="instance" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" COMMENT="ID of easyVoter instance" PREVIOUS="id" NEXT="presenter"/>
+		<FIELD NAME="presenter" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" COMMENT="User id of presenter" PREVIOUS="instance" NEXT="numeral"/>
+		<FIELD NAME="numeral" TYPE="int" LENGTH="4" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" ENUM="false" COMMENT="Current slide number" PREVIOUS="presenter" NEXT="presentanon"/>
+        <FIELD NAME="presentanon" TYPE="int" LENGTH="1" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" ENUM="false" COMMENT="Are responses shown as anonymous" PREVIOUS="numeral" NEXT="resultsanon"/>
+		<FIELD NAME="resultsanon" TYPE="int" LENGTH="1" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" ENUM="false" COMMENT="Are results stored as anonymous" PREVIOUS="presentanon" NEXT="timecreated"/>
+		<FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" ENUM="false" PREVIOUS="resultsanon" NEXT="timemodified"/>
+        <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" ENUM="false" PREVIOUS="timecreated"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" />
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="instance" UNIQUE="true" FIELDS="instance" NEXT="presenter" />
+		<INDEX NAME="presenter" UNIQUE="false" FIELDS="presenter" PREVIOUS="instance" NEXT="numeral" />
+		<INDEX NAME="numeral" UNIQUE="false" FIELDS="numeral" PREVIOUS="presenter" />
+      </INDEXES>
+    </TABLE>
+    <TABLE NAME="easyvoter_responses" COMMENT="easyVoter resonses from participants" PREVIOUS="easyvoter_present" NEXT="easyvoter_results">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" ENUM="false" NEXT="instance"/>
+		<FIELD NAME="instance" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" COMMENT="ID of easyvoter_present instance" PREVIOUS="id" NEXT="slideid"/>
+		<FIELD NAME="slideid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" COMMENT="ID of slide participant reponded to" PREVIOUS="instance" NEXT="participant"/>
+		<FIELD NAME="participant" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" COMMENT="User id of participant" PREVIOUS="slideid" NEXT="fullname"/>
+		<FIELD NAME="fullname" TYPE="char" LENGTH="201" NOTNULL="true" SEQUENCE="false" ENUM="false" COMMENT="Partcipants fullname" PREVIOUS="participant" NEXT="response"/>
+		<FIELD NAME="response" TYPE="char" LENGTH="50" NOTNULL="false" UNSIGNED="true" SEQUENCE="false" ENUM="false" COMMENT="Partcipants response" PREVIOUS="fullname" NEXT="timecreated"/>
+		<FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" ENUM="false" PREVIOUS="response" NEXT="timemodified"/>
+        <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" ENUM="false" PREVIOUS="timecreated"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" />
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="instance" UNIQUE="false" FIELDS="instance" NEXT="slideid" />
+		<INDEX NAME="slideid" UNIQUE="false" FIELDS="slideid" PREVIOUS="instance" NEXT="participant" />
+		<INDEX NAME="participant" UNIQUE="false" FIELDS="participant" PREVIOUS="slideid" />
+      </INDEXES>
+    </TABLE>
+    <TABLE NAME="easyvoter_results" COMMENT="easyVoter results table" PREVIOUS="easyvoter_responses">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" ENUM="false" NEXT="instance"/>
+		<FIELD NAME="instance" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" COMMENT="ID of easyVoter instance" PREVIOUS="id" NEXT="presenter"/>
+		<FIELD NAME="presenter" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" ENUM="false" COMMENT="User id of presenter" PREVIOUS="instance" NEXT="participants"/>
+		<FIELD NAME="participants" TYPE="int" LENGTH="4" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" ENUM="false" COMMENT="Total number of participants" PREVIOUS="presenter" NEXT="slides"/>
+		<FIELD NAME="slides" TYPE="int" LENGTH="4" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" ENUM="false" COMMENT="Total number of slides" PREVIOUS="participants" NEXT="resultsanon"/>
+		<FIELD NAME="resultsanon" TYPE="int" LENGTH="1" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" ENUM="false" COMMENT="Are results stored as anonymous" PREVIOUS="slides" NEXT="resultsfile"/>
+		<FIELD NAME="resultsfile" TYPE="char" LENGTH="32" NOTNULL="true" SEQUENCE="false" ENUM="false" COMMENT="Results csv file name" PREVIOUS="resultsanon" NEXT="timecreated"/>
+        <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" ENUM="false" PREVIOUS="resultsfile" NEXT="timemodified"/>
+        <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" ENUM="false" PREVIOUS="timecreated"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" />
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="instance" UNIQUE="false" FIELDS="instance" />
+      </INDEXES>
+    </TABLE>
+  </TABLES>
+  <STATEMENTS>
+    <STATEMENT NAME="insert log_display" TYPE="insert" TABLE="log_display" COMMENT="Initial insert of records on table log_display. Each record describes how data will be showed by log reports.">
+      <SENTENCES>
+        <SENTENCE TEXT="(module, action, mtable, field) VALUES ('easyvoter', 'add', 'easyvoter', 'name')" />
+        <SENTENCE TEXT="(module, action, mtable, field) VALUES ('easyvoter', 'update', 'easyvoter', 'name')" />
+        <SENTENCE TEXT="(module, action, mtable, field) VALUES ('easyvoter', 'view', 'easyvoter', 'name')" />
+      </SENTENCES>
+    </STATEMENT>
+  </STATEMENTS>
+</XMLDB>

@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head></head>
+<body><h3>Midkent_Newstyle</h3>
+<hr>
+
+<p>This theme is based on the new Midkent College website</p>
+
+<p>Orginal theme design by Nat Munckton</p>
+
+<p>Converted into a Moodle theme by Dan Attwood</p>
+
+<p>Menubar scripts from the Newbury College theme created by Shaun Daubney</p>
+
+<p>Date based logo change scripts by Dan Attwood</p>
+
+<p>Addtional icons from the Tango and Breathe Icon sets licensed under the GPL</p>
+
+<h3>Date changer notes</h3>
+
+<p>The date changer uses the code in datachange.php to actually change the logo based on the information in dates.xml.</p>
+
+<p>In order to add new dates you will need to copy and paste a block of xml (defined by <item> and </item>).</p>
+
+<p>You can alter the date, name and logo and text fields.</p>
+
+<p>Note: You will need to include multiple section for ranges of dates, Ie. one section for each date in the range</p>
+
+The logos must be stored in the 'logos' folder. Included in this folder
+is a photoshop file with all the layers and graphics used to build the
+default set of logos include in the theme. You can use this file to
+create branding for your own site.
+
+<p>To use the datechanger in your own custom theme you will need to copy datechange.php and dates.xml into your theme folder.</p>
+
+<p>You then need to add '<?php include 'datechange.php'; ?>' to your header.html file in the appropiate place.</p>
+
+<p>Note you will likly need to add this in two places, one for the fornt page and one for every other page in the site.</p><p></p>
+    
+<h3>Menu Bar notes</h3>
+
+<p>The menu bar is driven by menubar.php. You will need to edit this and alter all links to include your own</p>
+
+<p>You might also want to retheme it using styles_menubar.css</p>
+
